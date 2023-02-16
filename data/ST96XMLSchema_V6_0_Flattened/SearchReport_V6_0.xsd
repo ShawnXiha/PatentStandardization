@@ -1,0 +1,3529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common" xmlns:pat="http://www.wipo.int/standards/XMLSchema/ST96/Patent" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.wipo.int/standards/XMLSchema/ST96/Patent" elementFormDefault="qualified" attributeFormDefault="qualified" version="V6_0">
+	<xsd:import namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" schemaLocation="SearchReport_V6_0_Common.xsd"/>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<com:SchemaCreatedDate>2017-10-12</com:SchemaCreatedDate>
+			<com:SchemaLastModifiedDate>2022-10-03</com:SchemaLastModifiedDate>
+			<com:SchemaContactPoint>xml.standards@wipo.int</com:SchemaContactPoint>
+			<com:SchemaReleaseNoteURL>http://www.wipo.int/standards/XMLSchema/ST96/V6_0/ReleaseNotes.pdf</com:SchemaReleaseNoteURL>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="SearchReport" type="pat:SearchReportType">
+		<xsd:annotation>
+			<xsd:documentation>Search report data</xsd:documentation>
+		</xsd:annotation>
+		<xsd:unique name="BDComponentKey">
+			<xsd:selector xpath=".//*"/>
+			<xsd:field xpath="@com:id"/>
+		</xsd:unique>
+	</xsd:element>
+
+	<xsd:complexType name="SearchReportType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="pat:PageImage" maxOccurs="unbounded"/>
+			<xsd:element ref="pat:DocumentURI" maxOccurs="unbounded"/>
+			<xsd:sequence>
+				<xsd:element ref="com:CorrespondenceAddressBag" minOccurs="0"/>
+				<xsd:element ref="pat:ApplicationIdentification" maxOccurs="unbounded"/>
+				<xsd:element ref="pat:EarliestPriorityDate" minOccurs="0"/>
+				<xsd:element ref="pat:ApplicantBag"/>
+				<xsd:element ref="pat:SearchRequestDate" minOccurs="0"/>
+				<xsd:element ref="com:ExaminationRequestDate" minOccurs="0"/>
+				<xsd:element ref="pat:SearchRequestNumber" minOccurs="0"/>
+				<xsd:element ref="pat:SearchRequestReceiveDate" minOccurs="0"/>
+				<xsd:element ref="com:SignatureBag"/>
+				<xsd:element ref="pat:AuthorityContact" minOccurs="0"/>
+				<xsd:element ref="com:SearchStartDate" minOccurs="0"/>
+				<xsd:element ref="pat:SearchCompleteDate"/>
+				<xsd:element ref="com:MailDate"/>
+				<xsd:element ref="pat:ReportBasis"/>
+				<xsd:element ref="pat:UnsearchableClaimBag" minOccurs="0"/>
+				<xsd:element ref="pat:LackingInventionUnity" minOccurs="0"/>
+				<xsd:element ref="pat:EstablishedInventionTitle"/>
+				<xsd:element ref="pat:EstablishedAbstract" minOccurs="0"/>
+				<xsd:element ref="pat:EstablishedPublishFigure" minOccurs="0"/>
+				<xsd:element ref="pat:SearchReportCommentText" minOccurs="0"/>
+				<xsd:element ref="pat:SearchData"/>
+				<xsd:element ref="pat:EarlierSearchConsideredIndicator" minOccurs="0"/>
+				<xsd:element ref="pat:EarlierSearchBag" minOccurs="0"/>
+				<xsd:element ref="pat:SearchReportReplacementIndicator" minOccurs="0"/>
+				<xsd:element ref="pat:SearchReportRevisionIndicator" minOccurs="0"/>
+				<xsd:element ref="pat:CitedDocumentCopyBag" minOccurs="0"/>
+				<xsd:element ref="pat:SearchReportAppendixText" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:officeCode"/>
+		<xsd:attribute ref="com:languageCode"/>
+		<xsd:attribute ref="com:formVersion"/>
+		<xsd:attribute ref="pat:applicationStatusCategory"/>
+		<xsd:attribute ref="com:documentFileName"/>
+		<xsd:attribute ref="pat:searchDate"/>
+		<xsd:attribute ref="pat:searchKindCategory"/>
+		<xsd:attribute ref="com:st96Version" use="required"/>
+		<xsd:attribute ref="com:ipoVersion"/>
+	</xsd:complexType>
+	
+<xsd:element name="Abstract" type="pat:AbstractType">
+		<xsd:annotation>
+			<xsd:documentation>Part of the patent application that consists of a concise summary of the disclosure as contained in the description, the claims and any drawings. It provides technical information only and cannot be taken into account for determining the scope of protection sought. Refers to ST.9 INID Code 57.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="AbstractType">
+		<xsd:choice>
+<xsd:element ref="pat:PageImage" maxOccurs="unbounded"/>
+<xsd:element ref="pat:DocumentURI" maxOccurs="unbounded"/>
+<xsd:element ref="com:P" maxOccurs="unbounded"/>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:languageCode"/>
+	</xsd:complexType>
+	
+<xsd:element name="ActionDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date that the symbol was assigned to the patent document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="Addition" type="pat:DocumentRelationType">
+		<xsd:annotation>
+			<xsd:documentation>Earlier document to which this is an addition. Refers to ST.9 INID Code 61.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="AdditionalRelatedDocument" type="pat:AdditionalRelatedDocumentType">
+		<xsd:annotation>
+			<xsd:documentation>Information related to the receipt of supplementary document to the application filed earlier</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="AdditionalRelatedDocumentBag" type="pat:AdditionalRelatedDocumentBagType">
+		<xsd:annotation>
+			<xsd:documentation>Information related to the receipt of supplementary document to the application filed earlier</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="AdditionalRelatedDocumentBagType">
+		<xsd:sequence>
+			<xsd:element ref="pat:AdditionalRelatedDocument" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="AdditionalRelatedDocumentDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date of receipt of supplementary document to the application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="AdditionalRelatedDocumentType">
+		<xsd:sequence>
+<xsd:element ref="pat:ApplicationIdentification"/>
+<xsd:element ref="pat:AdditionalRelatedDocumentDate" minOccurs="0"/>
+		</xsd:sequence>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="AllClaimIndicator" type="xsd:boolean">
+					<xsd:annotation>
+					<xsd:documentation>Indicate whether this report covers all(searchable) claims in the application</xsd:documentation>
+				</xsd:annotation>
+				</xsd:element>
+	
+<xsd:element name="AmendedClaimConsideredIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>The amended claims have been taken into account</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="AmendedClaimNumber" type="pat:AmendedClaimNumberType">
+		<xsd:annotation>
+			<xsd:documentation>Claim number and date amendment was received</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="AmendedClaimNumberRange" type="pat:AmendedClaimNumberRangeType">
+		<xsd:annotation>
+			<xsd:documentation>Claim number range and the date amendment was received</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="AmendedClaimNumberRangeType">
+		<xsd:sequence>
+			<xsd:element ref="pat:ClaimNumberRange"/>
+			<xsd:element ref="com:DocumentReceivedDate"/>
+		</xsd:sequence>
+		<xsd:attribute ref="pat:internationalSearchAmendmentIndicator" default="false"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="AmendedClaimNumberType">
+		<xsd:sequence>
+			<xsd:element ref="pat:ClaimNumber"/>
+			<xsd:element ref="com:DocumentReceivedDate"/>
+		</xsd:sequence>
+		<xsd:attribute ref="pat:internationalSearchAmendmentIndicator" default="false"/>
+	</xsd:complexType>
+	
+<xsd:element name="Applicant" type="pat:ApplicantType">
+		<xsd:annotation>
+			<xsd:documentation>The individual or entity identified as the executors of the patent</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ApplicantBag" type="pat:ApplicantBagType">
+		<xsd:annotation>
+			<xsd:documentation>The collection of applicants. Refers to ST.9 INID Code 71, INID Code 75.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ApplicantBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:Applicant" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="ApplicantCategory" type="pat:ApplicantCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Defines the type of applicant</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="ApplicantCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Applicant_Inventor">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether the applicant is an inventor</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Applicant">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether an applicant is applicant only</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:attribute name="applicantSequenceNumberReference" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The sequence number ordering of successors to the rights of an inventor who is deceased, insane, or legally incapacitated</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+	<xsd:complexType name="ApplicantType">
+		<xsd:sequence>
+			<xsd:element ref="com:PartyIdentifier" minOccurs="0"/>
+			<xsd:choice maxOccurs="2">
+				<xsd:element ref="com:Contact"/>
+				<xsd:element ref="com:PublicationContact"/>
+			</xsd:choice>
+			<xsd:element ref="pat:ApplicantCategory" minOccurs="0"/>
+			<xsd:element ref="com:NationalityCode" minOccurs="0"/>
+			<xsd:element ref="pat:DesignationCategory" minOccurs="0"/>
+			<xsd:element ref="com:ResidenceCountryCode" minOccurs="0"/>
+			<xsd:element ref="pat:SuccessorRights" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:sequenceNumber"/>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="ApplicationFilingCategory" type="pat:ApplicationFilingCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Describes the filing type of application i.e. PCT, Regional or National</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="ApplicationFilingCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="PCT">
+				<xsd:annotation>
+					<xsd:documentation>PCT</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Regional">
+				<xsd:annotation>
+					<xsd:documentation>Regional</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National">
+				<xsd:annotation>
+					<xsd:documentation>National</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="ApplicationIdentification" type="pat:ApplicationIdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>Identification of patent application. Refers to ST.9 INID Code 20.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ApplicationIdentificationType">
+		<xsd:sequence>
+<xsd:element ref="com:IPOfficeCode"/>
+<xsd:element ref="com:ApplicationNumber"/>
+			<xsd:element ref="com:ApplicantFileReference" minOccurs="0"/>
+			<xsd:element ref="com:FilingLanguageCode" minOccurs="0"/>
+<xsd:element ref="pat:ApplicationFilingCategory" minOccurs="0"/>
+<xsd:element ref="pat:InventionSubjectMatterCategory" minOccurs="0"/>
+<xsd:element ref="pat:FilingDate" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="ApplicationModificationBasis" type="pat:ApplicationModificationBasisType">
+		<xsd:annotation>
+			<xsd:documentation>Information regarding correction or modification to the application.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ApplicationModificationBasisBag" type="pat:ApplicationModificationBasisBagType">
+		<xsd:annotation>
+			<xsd:documentation>A collection of correction or modification to the application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ApplicationModificationBasisBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:ApplicationModificationBasis" maxOccurs="unbounded"/>
+		</xsd:sequence>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:complexType name="ApplicationModificationBasisType">
+		<xsd:sequence>
+<xsd:element ref="pat:ApplicationModificationReasonCategory"/>
+<xsd:element ref="pat:ModificationDate" minOccurs="0"/>
+		</xsd:sequence>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="ApplicationModificationReasonCategory" type="pat:ApplicationModificationReasonCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Reason for the modification to the application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="ApplicationModificationReasonCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Correction of obvious mistakes">
+				<xsd:annotation>
+					<xsd:documentation>Indicates correction due to mistake</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Other reasons">
+				<xsd:annotation>
+					<xsd:documentation>Indicates correction due to other reasons</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:attribute name="applicationStatusCategory" type="pat:ApplicationStatusCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>status of the application; values: new = new application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:simpleType name="ApplicationStatusCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="New">
+				<xsd:annotation>
+					<xsd:documentation>New application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="AsFiledApprovalIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicates that the invention title is approved as submitted by the applicant</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="AttachedPriorityDocumentIndicator" type="xsd:boolean" fixed="true">
+		<xsd:annotation>
+			<xsd:documentation>The priority document is attached to the application.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="AuthorityContact" type="com:ContactType">
+		<xsd:annotation>
+			<xsd:documentation>International Search Authority; international search to be carried out by</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="BeginRangeNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Begin number of a range</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ChildDocument" type="pat:ChildDocumentType">
+		<xsd:annotation>
+			<xsd:documentation>Describes child of a parent document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ChildDocumentType">
+		<xsd:sequence>
+<xsd:element ref="pat:PatentDocumentIdentification"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="CitationCategoryCode" type="pat:CitationCategoryCodeType">
+		<xsd:annotation>
+			<xsd:documentation>A code given to a category that indicates the relevance of any document cited in the search report accompanying published patent applications</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="CitationCategoryCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="X">
+				<xsd:annotation>
+					<xsd:documentation>The claimed invention cannot be considered novel or cannot be considered to involve an inventive step when the document is taken alone.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Y">
+				<xsd:annotation>
+					<xsd:documentation>The claimed invention cannot be considered to involve an inventive step when the document is combined with one or more other such documents, such combination being obvious to a person skilled in the art.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="A">
+				<xsd:annotation>
+					<xsd:documentation>Document defining the general state of the art which is not considered to be of particular relevance</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="E">
+				<xsd:annotation>
+					<xsd:documentation>Earlier patent document as defined in Rule 33.1(c) of the Regulations under the PCT, but published on or after the international filing date</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="L">
+				<xsd:annotation>
+					<xsd:documentation>Document which may throw doubts on priority claim(s) or which is cited to establish the publication date of another citation or other special reason (the reason for citing the document shall be given)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="O">
+				<xsd:annotation>
+					<xsd:documentation>Document referring to an oral disclosure, use, exhibition or other means</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="P">
+				<xsd:annotation>
+					<xsd:documentation>Document published prior to the filing date (in the case of the PCT, the international filing date) but later than the priority date claimed in the application. Code "P" should always be accompanied by one of the categories "X", "Y" or "A"</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="T">
+				<xsd:annotation>
+					<xsd:documentation>Later document published after the filing date (in the case of the PCT, the international filing date) or priority date and not in conflict with the application but cited to understand the principle or theory underlying the invention</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Ampersand">
+				<xsd:annotation>
+					<xsd:documentation>The value Ampersand represents the symbol of &amp;. Document being a member of the same patent family or document whose contents have not been verified by the search examiner but are believed to be substantially identical to those of another document which the search examiner has inspected.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="D">
+				<xsd:annotation>
+					<xsd:documentation>Document cited by the applicant in the application and which document (reference) was referred to in the course of the search procedure. Code "D" should always be accompanied by one of the categories indicating the relevance of the cited document</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="CitedDocumentCopy" type="com:DocumentType">
+		<xsd:annotation>
+			<xsd:documentation>Cited document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="CitedDocumentCopyBag" type="pat:CitedDocumentCopyBagType">
+		<xsd:annotation>
+			<xsd:documentation>A collection of cited documents</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="CitedDocumentCopyBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:CitedPriorArtCopyIndicator"/>
+<xsd:element ref="pat:CitedDocumentCopy" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="CitedPassage" type="pat:CitedPassageType">
+		<xsd:annotation>
+			<xsd:documentation>Indication of a passage and its relevance to related claims</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="CitedPassageBag" type="pat:CitedPassageBagType">
+<xsd:annotation>
+	<xsd:documentation>Relevance within some passages of the cited document</xsd:documentation>
+</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="CitedPassageBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:CitedPassage" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="CitedPassageType">
+		<xsd:sequence>
+<xsd:element ref="pat:PassageRangeBag"/>
+<xsd:element ref="pat:PassageRelevanceBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="CitedPatentFamily" type="pat:CitedPatentFamilyType">
+		<xsd:annotation>
+			<xsd:documentation>Patent family citation</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="CitedPatentFamilyBag" type="pat:CitedPatentFamilyBagType">
+		<xsd:annotation>
+			<xsd:documentation>The details relating to the cited patent family.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="CitedPatentFamilyBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:CitedPatentFamily" maxOccurs="unbounded"/>
+		</xsd:sequence>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:complexType name="CitedPatentFamilyType">
+		<xsd:sequence>
+<xsd:element ref="com:CitedPatentDocumentIdentification"/>
+			<xsd:choice>
+<xsd:element ref="pat:PatentFamilyMember" minOccurs="0"/>
+<xsd:element ref="pat:PatentFamilyText" minOccurs="0"/>
+			</xsd:choice>
+		</xsd:sequence>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:attribute name="citedPhaseCategory" type="pat:CitedPhaseCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>The phase during which the citation was cited: on filing, in application, search, international search, supplementary international search, supplementary search, international examination, examination, opposition, limitation</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:simpleType name="CitedPhaseCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="In application">
+				<xsd:annotation>
+					<xsd:documentation>In application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Search">
+				<xsd:annotation>
+					<xsd:documentation>Search</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="International search">
+				<xsd:annotation>
+					<xsd:documentation>International search</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Supplementary international search">
+				<xsd:annotation>
+					<xsd:documentation>Supplementary international search</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="International type search">
+				<xsd:annotation>
+					<xsd:documentation>International type search</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National search">
+				<xsd:annotation>
+					<xsd:documentation>National search</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Supplementary national search">
+				<xsd:annotation>
+					<xsd:documentation>Supplementary national search</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="International examination">
+				<xsd:annotation>
+					<xsd:documentation>International examination</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Examination">
+				<xsd:annotation>
+					<xsd:documentation>Examination</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National examination">
+				<xsd:annotation>
+					<xsd:documentation>National examination</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Opposition">
+				<xsd:annotation>
+					<xsd:documentation>Opposition</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Limitation">
+				<xsd:annotation>
+					<xsd:documentation>Limitation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="CitedPriorArtCopyIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicates Prior Art document(s) exist</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:attribute name="citingPartyCategory" type="pat:CitingPartyCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>The provider of citation: applicant, examiner, third party, opponent</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:simpleType name="CitingPartyCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Applicant">
+				<xsd:annotation>
+					<xsd:documentation>Applicant</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Examiner">
+				<xsd:annotation>
+					<xsd:documentation>Examiner</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Opponent">
+				<xsd:annotation>
+					<xsd:documentation>Opponent</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Third party">
+				<xsd:annotation>
+					<xsd:documentation>Third party</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="ClaimNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Claim Number</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ClaimNumberBagType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:choice>
+				<xsd:element ref="pat:ClaimNumber"/>
+				<xsd:element ref="pat:ClaimNumberRange"/>
+			</xsd:choice>
+			<xsd:choice>
+				<xsd:element ref="pat:AmendedClaimNumber"/>
+				<xsd:element ref="pat:AmendedClaimNumberRange"/>
+			</xsd:choice>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="ClaimNumberRange" type="pat:ClaimNumberRangeType">
+		<xsd:annotation>
+			<xsd:documentation>Claim number range</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ClaimNumberRangeType">
+		<xsd:sequence>
+<xsd:element ref="pat:BeginRangeNumber"/>
+<xsd:element ref="pat:EndRangeNumber"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="Class" type="pat:ClassType">
+		<xsd:annotation>
+			<xsd:documentation>The second hierarchical level in the classification scheme</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClassificationVersionDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date when the classification symbol enters into force or the definition of the symbol is modified.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="ClassType">
+		<xsd:restriction base="xsd:token">
+			<xsd:length value="2"/>
+			<xsd:pattern value="[0-9][1-9]|[1-9][0-9]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="Continuation" type="pat:DocumentRelationType">
+		<xsd:annotation>
+			<xsd:documentation>Earlier application of which the present document is a continuation. Refers to ST.9 INID Code 63.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ContinuingReissue" type="pat:DocumentRelationType">
+		<xsd:annotation>
+			<xsd:documentation>Document of which this is a continuing reissue</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="Conversion" type="pat:ConversionType">
+		<xsd:annotation>
+			<xsd:documentation>Conversion</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ConversionCategory" type="pat:ConversionCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Defines the type of conversion</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="ConversionCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Utility model to patent">
+				<xsd:annotation>
+					<xsd:documentation>Conversion from a utility model application to a patent application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Design to patent">
+				<xsd:annotation>
+					<xsd:documentation>Conversion from a design application to a patent application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Patent to utility model">
+				<xsd:annotation>
+					<xsd:documentation>Conversion from a patent application to a utility model application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Design to utility model">
+				<xsd:annotation>
+					<xsd:documentation>Conversion from a design application to a utility model application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Patent to design">
+				<xsd:annotation>
+					<xsd:documentation>Conversion from a patent application to a design application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Utility model to design">
+				<xsd:annotation>
+					<xsd:documentation>Conversion from a utility model application to a design application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PCT to national patent">
+				<xsd:annotation>
+					<xsd:documentation>Conversion from a PCT application to a national patent application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Regional patent to national patent">
+				<xsd:annotation>
+					<xsd:documentation>Conversion from a regional patent application to a national patent application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:complexType name="ConversionType">
+		<xsd:sequence>
+	<xsd:element ref="pat:ParentDocument"/>
+	<xsd:element ref="pat:ChildDocument" minOccurs="0"/>
+	<xsd:element ref="pat:ConversionCategory" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="CorrectedDocument" type="pat:CorrectedDocumentType">
+		<xsd:annotation>
+			<xsd:documentation>Patent document information for the correction related document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="CorrectedDocumentType">
+		<xsd:sequence>
+<xsd:element ref="pat:PatentDocumentIdentification"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="Correction" type="pat:CorrectionType">
+		<xsd:annotation>
+			<xsd:documentation>Describes the correction for the related documents</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="CorrectionText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Free format text for correction</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="CorrectionType">
+		<xsd:sequence>
+<xsd:element ref="pat:CorrectedDocument"/>
+<xsd:element ref="pat:CorrectionTypeText" minOccurs="0"/>
+<xsd:element ref="pat:GazetteReference" minOccurs="0"/>
+<xsd:element ref="pat:CorrectionText" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="CorrectionTypeText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Type of correction.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="CPCClassification" type="pat:CPCClassificationType">
+		<xsd:annotation>
+			<xsd:documentation>Cooperative Patent Classification scheme</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="CPCClassificationBag" type="pat:CPCClassificationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of Classifications for CPC</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="CPCClassificationBagType">
+			<xsd:sequence>
+<xsd:element ref="pat:MainCPC"/>
+<xsd:element ref="pat:FurtherCPC" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="CPCClassificationStatusCode" type="pat:CPCClassificationStatusCodeType">
+		<xsd:annotation>
+			<xsd:documentation>The code that describes the circumstances under which the symbol was assigned to the patent document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="CPCClassificationStatusCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="B">
+				<xsd:annotation>
+					<xsd:documentation>Basic or original data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="R">
+				<xsd:annotation>
+					<xsd:documentation>Reclassified data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:complexType name="CPCClassificationType">
+		<xsd:sequence>
+<xsd:element ref="pat:ClassificationVersionDate"/>
+<xsd:element ref="pat:CPCSection"/>
+<xsd:element ref="pat:Class"/>
+<xsd:element ref="pat:Subclass"/>
+<xsd:element ref="pat:MainGroup"/>
+<xsd:element ref="pat:Subgroup"/>
+<xsd:element ref="com:SymbolPositionCode"/>
+<xsd:element ref="pat:CPCClassificationValueCode"/>
+<xsd:element ref="pat:ActionDate"/>
+<xsd:element ref="pat:GeneratingOfficeCode"/>
+<xsd:element ref="pat:CPCClassificationStatusCode" minOccurs="0"/>
+<xsd:element ref="pat:PatentClassificationDataSourceCode" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="CPCClassificationValueCode" type="pat:CPCClassificationValueCodeType">
+		<xsd:annotation>
+			<xsd:documentation>The code that describes the classification value which distinguishes between invention information and additional information.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="CPCClassificationValueCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="I">
+				<xsd:annotation>
+					<xsd:documentation>Inventive</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="A">
+				<xsd:annotation>
+					<xsd:documentation>Additional</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="CPCCombinationRank" type="pat:CPCCombinationRankType">
+		<xsd:annotation>
+			<xsd:documentation>A combination rank specifies the order of symbols within combination set.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="CPCCombinationRankType">
+		<xsd:sequence>
+<xsd:element ref="pat:CPCRankNumber"/>
+<xsd:element ref="pat:CPCClassification"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="CPCCombinationSet" type="pat:CPCCombinationSetType">
+		<xsd:annotation>
+			<xsd:documentation>A combination set is a group of CPC symbols that have one base symbol and one or more subsequent ranked symbols that are linked together to convey special classification information.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="CPCCombinationSetType">
+		<xsd:sequence>
+<xsd:element ref="pat:CPCGroupNumber"/>
+<xsd:element ref="pat:CPCCombinationRank" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="CPCGroupNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>A number that is used to identify a group of symbols, when allocating a combination set to a patent document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="CPCRankNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The sequential number that is used to identify the order of a symbol within a combination set. Order of the symbols is important.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="CPCSection" type="pat:CPCSectionType">
+		<xsd:annotation>
+			<xsd:documentation>The first or highest hierarchical level in the classification scheme</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="CPCSectionType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="A">
+				<xsd:annotation>
+					<xsd:documentation>Human Necessities</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B">
+				<xsd:annotation>
+					<xsd:documentation>Performing Operations, Transporting</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="C">
+				<xsd:annotation>
+					<xsd:documentation>Chemistry, Metallurgy</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="D">
+				<xsd:annotation>
+					<xsd:documentation>Textiles, Paper</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="E">
+				<xsd:annotation>
+					<xsd:documentation>Fixed Constructions</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="F">
+				<xsd:annotation>
+					<xsd:documentation>Mechanical Engineering, Lighting, Heating, Weapons, Blasting</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="G">
+				<xsd:annotation>
+					<xsd:documentation>Physics</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="H">
+				<xsd:annotation>
+					<xsd:documentation>Electricity</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Y">
+				<xsd:annotation>
+					<xsd:documentation>Cross Sectional Technologies (e.g. YOIN Nanotechnology)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="DatabaseName" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Name of database used to access the corresponding cited document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DatabaseQueryText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Database query text</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DeclarationSubjectMatterCategory" type="pat:DeclarationSubjectMatterCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>When it has been established that the subject matter of the international application falls into one of the exceptions set out in Rule 39, point 1. of Form PCT/ISA/203 (April 2005) is completed by selecting the exception.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="DeclarationSubjectMatterCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="scientific theories">
+				<xsd:annotation>
+					<xsd:documentation>Scientific theories</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="mathematic theories">
+				<xsd:annotation>
+					<xsd:documentation>Mathematic theories</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="plant varieties">
+				<xsd:annotation>
+					<xsd:documentation>Plant varieties</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="animal varieties">
+				<xsd:annotation>
+					<xsd:documentation>Animal varieties</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="bio processes">
+				<xsd:annotation>
+					<xsd:documentation>Bio processes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="business">
+				<xsd:annotation>
+					<xsd:documentation>Business</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="mental act">
+				<xsd:annotation>
+					<xsd:documentation>Mental act</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="games">
+				<xsd:annotation>
+					<xsd:documentation>Games</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="treatment human">
+				<xsd:annotation>
+					<xsd:documentation>Human treatment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="treatment animal">
+				<xsd:annotation>
+					<xsd:documentation>Animal treatment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="diagnostic methods">
+				<xsd:annotation>
+					<xsd:documentation>Diagnostic methods</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="presentation information">
+				<xsd:annotation>
+					<xsd:documentation>Information presentation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="computer program">
+				<xsd:annotation>
+					<xsd:documentation>Computer program</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="DesignationCategory" type="pat:DesignationCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Information that the person who is applicant or inventor for the purpose of all designated States or as indicated</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="DesignationCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="All">
+				<xsd:annotation>
+					<xsd:documentation>All designated States</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="All except US">
+				<xsd:annotation>
+					<xsd:documentation>All designated States except US</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="US only">
+				<xsd:annotation>
+					<xsd:documentation>US only</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="As indicated">
+				<xsd:annotation>
+					<xsd:documentation>The States indicated as in state designation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="Division" type="pat:DocumentRelationType">
+		<xsd:annotation>
+			<xsd:documentation>Earlier application from which the present document has been divided out. Refers to ST.9 INID Code 62.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DivisionalReissue" type="pat:DocumentRelationType">
+		<xsd:annotation>
+			<xsd:documentation>Document (parent) of which the document in hand (child) is a divisional reissue. If there is more than one divisional reissue, siblings are indicated by multiple occurrences of child.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DocumentRelationType">
+		<xsd:sequence>
+<xsd:element ref="pat:ParentDocument"/>
+<xsd:element ref="pat:ChildDocument" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:sequenceNumber"/>
+	</xsd:complexType>
+	
+<xsd:element name="DocumentRelevance" type="pat:RelevanceType">
+<xsd:annotation>
+<xsd:documentation>Indication for one set of claims of the category of relevance</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+	
+<xsd:element name="DocumentRelevanceBag" type="pat:DocumentRelevanceBagType">
+		<xsd:annotation>
+			<xsd:documentation>Relevance within the whole cited document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DocumentRelevanceBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:DocumentRelevance" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DocumentURI" type="pat:DocumentURIType">
+		<xsd:annotation>
+			<xsd:documentation>Page in other formats such as PDF. This is primarily to be used when data for the whole or major sections of an application are in other formats such as PDF.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DocumentURIType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:anyURI">
+				<xsd:attribute ref="com:id"/>
+				<xsd:attribute ref="com:documentFileName"/>
+				<xsd:attribute ref="pat:firstPageNumber"/>
+				<xsd:attribute ref="pat:lastPageNumber"/>
+				<xsd:attribute ref="pat:pageDocumentFormatCategory" use="required"/>
+				<xsd:attribute ref="pat:ocrIndicator"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+<xsd:element name="EarlierNoSearchDeclaration" type="pat:EarlierNoSearchDeclarationType">
+				<xsd:annotation>
+			<xsd:documentation>The Authority declares that no(supplementary) search report is established for this (international) application for some reasons</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="EarlierNoSearchDeclarationType">
+		<xsd:sequence>
+			<xsd:element ref="pat:AuthorityContact"/>
+			<xsd:element ref="com:MailDate" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="EarlierSearch" type="pat:EarlierSearchType">
+		<xsd:annotation>
+			<xsd:documentation>Information about earlier search report</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="EarlierSearchBag" type="pat:EarlierSearchBagType">
+		<xsd:annotation>
+			<xsd:documentation>A collection of earlier search reports</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="EarlierSearchBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:EarlierSearch" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="EarlierSearchConsideredIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicates that the search report has been established taking into account an earlier search report or a written opinion.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="EarlierSearchReportMailDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The earlier search report mail date</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="EarlierSearchType">
+		<xsd:sequence>
+<xsd:element ref="pat:ApplicationIdentification"/>
+<xsd:element ref="pat:AuthorityContact" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="pat:SearchCompleteDate"/>
+				<xsd:element ref="com:MailDate"/>
+			</xsd:choice>
+		</xsd:sequence>
+<xsd:attribute ref="com:id"/>
+<xsd:attribute ref="pat:searchKindCategory"/>
+<xsd:attribute ref="pat:searchReportEstablishedCategory"/>
+	</xsd:complexType>
+	
+<xsd:element name="EarliestPriorityDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date of earliest priority</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ECLAClassification" type="pat:ECLAClassificationType">
+		<xsd:annotation>
+			<xsd:documentation>ECLA Classification scheme</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ECLAClassificationBag" type="pat:ECLAClassificationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of Classifications for ECLA</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ECLAClassificationBagType">
+		<xsd:sequence>
+			<xsd:element ref="pat:MainECLA"/>
+			<xsd:element ref="pat:FurtherECLA" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="ECLAClassificationStatusCode" type="pat:ECLAClassificationStatusCodeType">
+		<xsd:annotation>
+			<xsd:documentation>The code that describes the circumstances under which the symbol was assigned to the patent document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="ECLAClassificationStatusCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="B">
+				<xsd:annotation>
+					<xsd:documentation>Basic or original data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="R">
+				<xsd:annotation>
+					<xsd:documentation>Reclassified data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="ECLAClassificationType">
+		<xsd:sequence>
+			<xsd:element ref="pat:ClassificationVersionDate"/>
+			<xsd:element ref="pat:ECLASection"/>
+			<xsd:element ref="pat:Class"/>
+			<xsd:element ref="pat:Subclass"/>
+			<xsd:element ref="pat:MainGroup"/>
+			<xsd:element ref="pat:Subgroup"/>
+			<xsd:element ref="com:SymbolPositionCode"/>
+			<xsd:element ref="pat:ECLAClassificationValueCode"/>
+			<xsd:element ref="pat:ActionDate"/>
+			<xsd:element ref="pat:GeneratingOfficeCode"/>
+			<xsd:element ref="pat:ECLAClassificationStatusCode" minOccurs="0"/>
+			<xsd:element ref="pat:PatentClassificationDataSourceCode" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="ECLAClassificationValueCode" type="pat:ECLAClassificationValueCodeType">
+		<xsd:annotation>
+			<xsd:documentation>The code that describes the classification value which distinguishes between invention information and additional information.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="ECLAClassificationValueCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="I">
+				<xsd:annotation>
+					<xsd:documentation>Inventive</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="N">
+				<xsd:annotation>
+					<xsd:documentation>Non-Inventive</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="ECLACombinationRank" type="pat:ECLACombinationRankType">
+		<xsd:annotation>
+			<xsd:documentation>A combination rank specifies the order of symbols within combination set.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ECLACombinationRankType">
+		<xsd:sequence>
+			<xsd:element ref="pat:ECLARankNumber"/>
+			<xsd:element ref="pat:ECLAClassification"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="ECLACombinationSet" type="pat:ECLACombinationSetType">
+		<xsd:annotation>
+			<xsd:documentation>A combination set is a group of ECLA symbols that have one base symbol and one or more subsequent ranked symbols that are linked together to convey special classification information.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ECLACombinationSetType">
+		<xsd:sequence>
+			<xsd:element ref="pat:ECLAGroupNumber"/>
+			<xsd:element ref="pat:ECLACombinationRank" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="ECLAGroupNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>A number that is used to identify a group of symbols, when allocating a combination set to a patent document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ECLARankNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The sequential number that is used to identify the order of a symbol within a combination set. Order of the symbols is important.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ECLASection" type="pat:ECLASectionType">
+		<xsd:annotation>
+			<xsd:documentation>The first or highest hierarchical level in the classification scheme</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="ECLASectionType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="A">
+				<xsd:annotation>
+					<xsd:documentation>Human Necessities</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B">
+				<xsd:annotation>
+					<xsd:documentation>Performing Operations, Transporting</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="C">
+				<xsd:annotation>
+					<xsd:documentation>Chemistry, Metallurgy</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="D">
+				<xsd:annotation>
+					<xsd:documentation>Textiles, Paper</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="E">
+				<xsd:annotation>
+					<xsd:documentation>Fixed Constructions</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="F">
+				<xsd:annotation>
+					<xsd:documentation>Mechanical Engineering, Lighting, Heating, Weapons, Blasting</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="G">
+				<xsd:annotation>
+					<xsd:documentation>Physics</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="H">
+				<xsd:annotation>
+					<xsd:documentation>Electricity</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Y">
+				<xsd:annotation>
+					<xsd:documentation>Cross Sectional Technologies (e.g. YOIN Nanotechnology)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="EndRangeNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>End number of a range</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="EntitlementApplication" type="pat:EntitlementApplicationType">
+		<xsd:annotation>
+			<xsd:documentation>The Office can order that a person may make a new patent application, claiming the filing date of a previous application or granted patent, in circumstances where there has been a dispute over the ownership of a patent application or a granted patent.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="EntitlementApplicationType">
+		<xsd:sequence>
+			<xsd:element ref="pat:ParentDocument"/>
+			<xsd:element ref="pat:ChildDocument" maxOccurs="unbounded"/>
+			<xsd:element ref="pat:LegislationReference" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="EstablishedAbstract" type="pat:EstablishedAbstractType">
+		<xsd:annotation>
+			<xsd:documentation>The details related to the establishment of the abstract.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="EstablishedAbstractType">
+		<xsd:choice>
+<xsd:element ref="pat:AsFiledApprovalIndicator"/>
+<xsd:element ref="pat:Abstract" minOccurs="0"/>
+		</xsd:choice>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="EstablishedInventionTitle" type="pat:EstablishedInventionTitleType">
+		<xsd:annotation>
+			<xsd:documentation>The details relating to the establishment of the invention title</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="EstablishedInventionTitleType">
+		<xsd:choice>
+<xsd:element ref="pat:AsFiledApprovalIndicator"/>
+<xsd:element ref="pat:InventionTitle" minOccurs="0"/>
+		</xsd:choice>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="EstablishedPublishFigure" type="pat:EstablishedPublishFigureType">
+		<xsd:annotation>
+			<xsd:documentation>The details related to the establishment of the publishing of the figure</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="EstablishedPublishFigureType">
+		<xsd:choice>
+<xsd:element ref="pat:NonePublishFigureIndicator"/>
+<xsd:element ref="pat:SearchReportPublishFigure"/>
+		</xsd:choice>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="FigureNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The figure number for the image</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="FilingDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date assigned by the Patent Office that identifies when an application meets certain criteria to qualify as having been filed. Refers to ST.9 INID Code 22.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="FilingLanguageIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>With regard to the language, the international search was carried out on the basis of the international application in the language in which it was filed.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:attribute name="firstPageNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>First page of the included document or page</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:element name="FoundDocumentQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>The Quantity of documents examined by the expert among the all found documents</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="FurtherClassification" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Further or secondary classification</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="FurtherCPC" type="pat:FurtherCPCType">
+		<xsd:annotation>
+			<xsd:documentation>Any CPC symbol that follows the first symbol on the document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="FurtherCPCType">
+		<xsd:choice maxOccurs="unbounded" >
+<xsd:element ref="pat:CPCClassification"/>
+<xsd:element ref="pat:CPCCombinationSet"/>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="FurtherECLA" type="pat:FurtherECLAType">
+		<xsd:annotation>
+			<xsd:documentation>Any ECLA symbol that follows the first symbol on the document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="FurtherECLAType">
+		<xsd:choice maxOccurs="unbounded" >
+			<xsd:element ref="pat:ECLAClassification"/>
+			<xsd:element ref="pat:ECLACombinationSet"/>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="FurtherNationalClassification" type="pat:MainFurtherNationalClassificationType">
+		<xsd:annotation>
+			<xsd:documentation>Further national classification</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="GazetteNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Gazette number</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="GazetteReference" type="pat:GazetteReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>Information about an office's gazette or bulletin where the details of the patent publication are given</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="GazetteReferenceText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Free format text for gazette reference</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="GazetteReferenceType">
+		<xsd:sequence>
+<xsd:element ref="pat:GazetteNumber"/>
+<xsd:element ref="com:PublicationDate"/>
+<xsd:element ref="pat:GazetteReferenceText" minOccurs="0"/>
+<xsd:element ref="com:IPOfficeCode" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="GeneratingOfficeCode" type="com:ExtendedWIPOST3CodeType">
+		<xsd:annotation>
+			<xsd:documentation>The code that specifies IP Office, based on ST.3, which assigned the classification symbol to the patent document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GrantDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date of grant</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="IncomplianceReasonRemark" type="com:PType">
+		<xsd:annotation>
+			<xsd:documentation>Incompliance reasons</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="IncompliantPartCategory" type="pat:IncompliantPartCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Indicates which part(s) of the application fail to comply with the prescribed requirements to such an extent that a meaningful search could not be carried out by the Authority</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="IncompliantPartCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="description">
+				<xsd:annotation>
+					<xsd:documentation>Description is subject to the issuance of the declaration under Article 17(2)(a).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="claims">
+				<xsd:annotation>
+					<xsd:documentation>Claims are subject to the issuance of the declaration under Article 17(2)(a).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="drawings">
+				<xsd:annotation>
+					<xsd:documentation>Drawings are subject to the issuance of the declaration under Article 17(2)(a).</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="IncorporationByReferenceIndicator" type="xsd:boolean" fixed="true">
+		<xsd:annotation>
+			<xsd:documentation>Indicate that an element or part is incorporated by reference in the (international) application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="IndicatedIPOfficeCode" type="com:ExtendedWIPOST3CodeType">
+		<xsd:annotation>
+			<xsd:documentation>Where the earlier application is a regional or international application, an ST.3 code identifying a country party to the Paris Convention or a member of the WTO for which the regional or international application was made and which is indicated in the priority claim. Refers to ST.9 INID Code 34.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+		<xsd:attribute name="internationalSearchAmendmentIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicates that amendments have been received during the International Search phase</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:element name="InventionClaimBag" type="pat:InventionClaimBagType">
+		<xsd:annotation>
+			<xsd:documentation>A group of claims per invention</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="InventionClaimBagType">
+		<xsd:sequence maxOccurs="unbounded">
+			<xsd:element ref="pat:InventionNumber"/>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="pat:ClaimNumber"/>
+				<xsd:element ref="pat:ClaimNumberRange"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="InventionClaimGroup" type="pat:InventionClaimGroupType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of groups of invention claims</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="InventionClaimGroupType">
+		<xsd:sequence>
+			<xsd:element ref="pat:InventionClaimBag" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="InventionNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The number assigned to an invention which is noted with other inventions in the application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="InventionSubjectMatterCategory" type="pat:InventionSubjectMatterCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Describes the type of invention i.e. Design, Utility or Plant</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="InventionSubjectMatterCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Design">
+				<xsd:annotation>
+					<xsd:documentation>Design</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Utility">
+				<xsd:annotation>
+					<xsd:documentation>Utility</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Plant">
+				<xsd:annotation>
+					<xsd:documentation>Plant</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="InventionTitle" type="pat:InventionTitleType">
+		<xsd:annotation>
+			<xsd:documentation>Title of the invention. Refers to ST.9 INID Code 54.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:attribute name="inventionTitleCategory" type="pat:InventionTitleCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Describes the type of invention title</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:simpleType name="InventionTitleCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="In application filed">
+				<xsd:annotation>
+					<xsd:documentation>The invention title as entered on the application form, which may equate to the application title</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="In application published">
+				<xsd:annotation>
+					<xsd:documentation>The invention title edited by the examiner from the title provided by the applicant, which may equate to the abstract title</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="In grant publication">
+				<xsd:annotation>
+					<xsd:documentation>The invention title displayed on the front page of the grant publication, which equate the IPO’s grant title</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:complexType name="InventionTitleType">
+		<xsd:complexContent>
+			<xsd:extension base="com:PhraseType">
+				<xsd:attribute ref="com:id"/>
+				<xsd:attribute ref="com:languageCode"/>
+				<xsd:attribute ref="pat:inventionTitleCategory"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+<xsd:element name="InventionTotalQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>Total number of inventions</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="InventionUnityComplianceIndicator" type="xsd:boolean">
+					<xsd:annotation>
+						<xsd:documentation>Indicate that the Authority considers that the requirement of unity of invention is complied with. </xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+	
+		<xsd:element name="InventionUnityIncomplianceReason" type="pat:InventionUnityIncomplianceReasonType">
+			<xsd:annotation>
+				<xsd:documentation>The reason why the Authority considers that the requirement of unity of invention is not complied with</xsd:documentation>
+			</xsd:annotation>
+		</xsd:element>
+	
+	<xsd:complexType name="InventionUnityIncomplianceReasonType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="pat:InventionTotalQuantity"/>
+			<xsd:element ref="pat:InventionClaimGroup"/>
+			<xsd:element ref="pat:IncomplianceReasonRemark"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:element name="IPCClassification" type="pat:IPCClassificationType">
+		<xsd:annotation>
+			<xsd:documentation>International Patent Classification used before 2006. Refers to ST.9 INID Code 51.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="IPCClassificationStatusCode" type="pat:IPCClassificationStatusCodeType">
+		<xsd:annotation>
+			<xsd:documentation>The code that describes the circumstances under which the symbol was assigned to the patent document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="IPCClassificationStatusCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="B">
+				<xsd:annotation>
+					<xsd:documentation>Basic or original data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="R">
+				<xsd:annotation>
+					<xsd:documentation>Reclassified data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="V">
+				<xsd:annotation>
+					<xsd:documentation>Various data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="D">
+				<xsd:annotation>
+					<xsd:documentation>Deleted data</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:complexType name="IPCClassificationType">
+		<xsd:annotation>
+			<xsd:documentation>International Patent Classification (IPC) data</xsd:documentation>
+		</xsd:annotation>
+			<xsd:sequence>
+<xsd:element ref="com:Edition"/>
+<xsd:element ref="pat:MainClassification"/>
+<xsd:element ref="pat:FurtherClassification" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="IPCClassificationValueCode" type="pat:IPCClassificationValueCodeType">
+		<xsd:annotation>
+			<xsd:documentation>The code that describes the classification value which distinguishes between invention information and additional information.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="IPCClassificationValueCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="I">
+				<xsd:annotation>
+					<xsd:documentation>Inventive</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="N">
+				<xsd:annotation>
+					<xsd:documentation>Non Inventive</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="IPCRClassification" type="pat:IPCRClassificationType">
+		<xsd:annotation>
+			<xsd:documentation>International Patent Classification Reform. Refers to ST.9 INID Code 51.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="IPCRClassificationBag" type="pat:IPCRClassificationBagType">
+		<xsd:annotation>
+			<xsd:documentation>A Collection of International Patent Classifications Reform</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="IPCRClassificationBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:IPCRClassification" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="IPCRClassificationType">
+		<xsd:choice>
+			<xsd:element ref="pat:PatentClassificationText"/>
+			<xsd:sequence>
+				<xsd:element ref="pat:ClassificationVersionDate"/>
+				<xsd:element ref="pat:PatentClassificationLevelCode" minOccurs="0"/>
+				<xsd:element ref="com:SymbolPositionCode" minOccurs="0"/>
+				<xsd:element ref="pat:IPCClassificationValueCode" minOccurs="0"/>
+				<xsd:element ref="pat:ActionDate" minOccurs="0"/>
+				<xsd:element ref="pat:IPCClassificationStatusCode" minOccurs="0"/>
+				<xsd:element ref="pat:PatentClassificationDataSourceCode" minOccurs="0"/>
+				<xsd:element ref="pat:GeneratingOfficeCode" minOccurs="0"/>
+				<xsd:choice>
+					<xsd:element ref="pat:PatentClassificationSymbolText"/>
+					<xsd:sequence>
+						<xsd:element ref="pat:Section"/>
+						<xsd:element ref="pat:Class"/>
+						<xsd:element ref="pat:Subclass"/>
+						<xsd:element ref="pat:MainGroup" minOccurs="0"/>
+						<xsd:element ref="pat:Subgroup" minOccurs="0"/>
+					</xsd:sequence>
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:sequenceNumber"/>
+	</xsd:complexType>
+	
+<xsd:element name="LackingInventionUnity" type="pat:LackingInventionUnityType">
+		<xsd:annotation>
+			<xsd:documentation>Information about the lack of unity of invention</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="LackingInventionUnityConsequenceCategory" type="pat:LackingInventionUnityConsequenceCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Consequence of the lack of unity of invention that the authority found in the application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="LackingInventionUnityConsequenceCategoryType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="FeesFullyPaid_ProtestFee_AllInventions">
+				<xsd:annotation>
+					<xsd:documentation>All additional fees were paid and this report covers all inventions that can be searched or examined. A protest was made and the protest fee was timely paid.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FeesFullyPaid_NoProtestFee_AllInventions">
+				<xsd:annotation>
+					<xsd:documentation>All additional fees were paid and this report covers all inventions that can be searched or examined. A protest was made but the protest fee was not timely paid.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FeesFullyPaid_NoProtest_AllInventions">
+				<xsd:annotation>
+					<xsd:documentation>All additional fees were paid and this report covers all inventions that can be searched or examined. No protest was made.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NoFeesInvited_AllInventions">
+				<xsd:annotation>
+					<xsd:documentation>The applicant was not invited to pay additional fees despite the finding of lack of unity of invention. This report covers all inventions that can be searched or examined.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FeesPartiallyPaid_ProtestFee_RestrictedInvention">
+				<xsd:annotation>
+					<xsd:documentation>Some but not all additional fees were paid and this report covers a restricted set of inventions. A protest was made and the protest fee was timely paid.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FeesPartiallyPaid_NoProtestFee_RestrictedInvention">
+				<xsd:annotation>
+					<xsd:documentation>Some but not all additional fees were paid and this report covers a restricted set of inventions. A protest was made but the protest fee was not timely paid.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FeesPartiallyPaid_NoProtest_RestrictedInvention">
+				<xsd:annotation>
+					<xsd:documentation>Some but not all additional fees were paid and this report covers a restricted set of inventions. No protest was made.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FeesNotPaid_MainInvention">
+				<xsd:annotation>
+					<xsd:documentation>No additional fees were timely paid and this report covers only the main invention, namely, the invention first mentioned in the claims.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Response_RestrictedInvention">
+				<xsd:annotation>
+					<xsd:documentation>The applicant has restricted the claims following the invitation to restrict or pay additional fees. If the restriction resolves the issue of lack of unity of invention in the application, this report covers all parts of the (amended) application. If the restriction is not sufficient to resolve the issue of lack of unity of invention in the application, this report covers the invention first mentioned in the claims after restriction and any invention for which additional fees have been paid.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NoResponse_MainInvention">
+				<xsd:annotation>
+					<xsd:documentation>Neither additional fees were timely paid nor claims were restricted and this report covers only the main invention, namely, the invention first mentioned in the claims.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SupplementarySearch_MainInvention">
+				<xsd:annotation>
+					<xsd:documentation>Following the finding of lack of unity of invention, this supplementary search report covers only the main invention, namely, the invention first mentioned in the claims.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SupplementarySearch_RestrictedInvention">
+				<xsd:annotation>
+					<xsd:documentation>At the request of the applicant, this supplementary search report covers only the invention specified by the applicant.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SupplementarySearch_EarlierSearchReport">
+				<xsd:annotation>
+					<xsd:documentation>The Authority agrees with the conclusions of the earlier search report regarding unity of invention.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="LackingInventionUnityType">
+		<xsd:sequence>
+			<xsd:element ref="pat:LackingInventionUnityConsequenceCategory" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:element ref="pat:InventionUnityComplianceIndicator"/>
+				<xsd:element ref="pat:InventionUnityIncomplianceReason" />
+			</xsd:choice>
+			<xsd:element ref="pat:ReportCoveredClaimBag"/>
+			<xsd:element ref="pat:OpinionReviewRequest" minOccurs="0"/>
+			<xsd:element ref="pat:EarlierSearchReportMailDate" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="LanguageBasis" type="pat:LanguageBasisType">
+		<xsd:annotation>
+			<xsd:documentation>Information regarding the language use in filing.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="LanguageBasisType">
+		<xsd:choice>
+<xsd:element ref="pat:FilingLanguageIndicator"/>
+<xsd:element ref="pat:TranslationLanguageCode"/>
+		</xsd:choice>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:attribute name="lastPageNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Last page of the included document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+	<xsd:element name="LegislationReference" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The section of the national regulation relevant to the type of entitlement application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:attribute name="libraryIdentifier" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>The library-identifier attribute is intended as an identifying code for the library containing priority documents - to be used where offices support the access of the documents from many such libraries. The recommended format of library-identifier should be composed of a WIPO Standard ST.3 code of the operating Office of service or digital library, together with service (or digital library) name (optional) separated by a hyphen to allow for the fact that some Office may operate more than one library. For example, "IB-DAS" for Digital Access Service for Priority Documents run by WIPO.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+	<xsd:element name="MainClassification" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Main classification.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="MainCPC" type="pat:MainCPCType">
+		<xsd:annotation>
+			<xsd:documentation>The first CPC classification symbol on the document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="MainCPCType">
+		<xsd:sequence>
+<xsd:element ref="pat:CPCClassification"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="MainECLA" type="pat:MainECLAType">
+		<xsd:annotation>
+			<xsd:documentation>The first ECLA classification symbol on the document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="MainECLAType">
+		<xsd:sequence>
+			<xsd:element ref="pat:ECLAClassification"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="MainFurtherNationalClassificationType">
+		<xsd:choice>
+			<xsd:element ref="pat:PatentClassificationText"/>
+			<xsd:sequence>
+				<xsd:element ref="pat:NationalClass"/>
+				<xsd:element ref="pat:NationalSubclass"/>
+			</xsd:sequence>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="MainGroup" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The fourth hierarchical level in the classification scheme</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="MainNationalClassification" type="pat:MainFurtherNationalClassificationType">
+		<xsd:annotation>
+			<xsd:documentation>Main national classification</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ModificationDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date that modification is made</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="NationalClass" type="xsd:string">
+			<xsd:annotation>
+				<xsd:documentation>First level national classification</xsd:documentation>
+			</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="NationalClassification" type="pat:NationalClassificationType">
+		<xsd:annotation>
+			<xsd:documentation>National patent classification. Refers to ST.9 INID Code 52.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="NationalClassificationType">
+			<xsd:sequence>
+<xsd:element ref="com:IPOfficeCode"/>
+<xsd:element ref="com:Edition" minOccurs="0"/>
+<xsd:element ref="pat:MainNationalClassification"/>
+<xsd:element ref="pat:FurtherNationalClassification" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="NationalSubclass" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Second level national classification</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="NonePublishFigureIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>With regard to the drawings, none of the figures is to be published with the abstract.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="NoSearchReportDeclaration" type="pat:NoSearchReportDeclarationType">
+		<xsd:annotation>
+			<xsd:documentation>The Authority declares that no (supplementary) search report is established for this (international) application for some reasons</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="NoSearchReportDeclarationType">
+		<xsd:choice>
+			<xsd:sequence>
+<xsd:element ref="pat:EarlierNoSearchDeclaration" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:choice maxOccurs="unbounded">
+<xsd:element ref="pat:DeclarationSubjectMatterCategory"/>
+<xsd:element ref="pat:IncompliantPartCategory"/>
+<xsd:element ref="pat:SEQLNotConsideredCategory"/>
+				</xsd:choice>
+<xsd:element ref="com:AdditionalRemark" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:sequence>
+<xsd:element ref="com:Heading" maxOccurs="unbounded"/>
+<xsd:element ref="com:P" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:attribute name="ocrIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicates if the included document or page is scanned using OCR (Optical character recognition) technique</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:element name="OnlineAvailablePriorityDocumentIndicator" type="pat:OnlineAvailablePriorityDocumentIndicatorType">
+		<xsd:annotation>
+			<xsd:documentation>Where the priority document is made available to the corresponding IPO (e.g., RO or the IB) from a digital library to obtain the priority document from such digital library</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="OnlineAvailablePriorityDocumentIndicatorType">
+		<xsd:simpleContent>
+			<xsd:extension base="pat:TrueType">
+				<xsd:attribute ref="pat:libraryIdentifier"/>
+				<xsd:attribute ref="com:officeCode"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:element name="OpinionReviewFeeAmount" type="com:AmountType">
+		<xsd:annotation>
+			<xsd:documentation>Review fee amount</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OpinionReviewRequest" type="pat:OpinionReviewRequestType">
+		<xsd:annotation>
+			<xsd:documentation>The applicant has a possibility to request the Authority to review its opinion within a fixed time and with or without additional fee for the review</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="OpinionReviewRequestType">
+		<xsd:sequence>
+			<xsd:element ref="pat:ReviewRequestDuePeriod"/>
+			<xsd:element ref="pat:OpinionReviewFeeAmount" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="OtherDocumentation" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Documentation searched other than minimum documentation</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:attribute name="pageDocumentFormatCategory" type="pat:PageDocumentFormatCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of document format of the page.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:simpleType name="PageDocumentFormatCategoryType">
+		<xsd:restriction base="com:DocumentFormatCategoryType">
+			<xsd:enumeration value="MS Word">
+				<xsd:annotation>
+					<xsd:documentation>MS Word</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="XML">
+				<xsd:annotation>
+					<xsd:documentation>XML</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Text">
+				<xsd:annotation>
+					<xsd:documentation>Text</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EPS">
+				<xsd:annotation>
+					<xsd:documentation>EPS</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PDF">
+				<xsd:annotation>
+					<xsd:documentation>PDF</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="HTML">
+				<xsd:annotation>
+					<xsd:documentation>HTML</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="PageImage" type="pat:PageImageType">
+		<xsd:annotation>
+			<xsd:documentation>Page in image format. This is primarily to be used when data for the whole or major sections of an application are in image format.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PageImageType">
+		<xsd:sequence>
+<xsd:element ref="com:ImageFormatCategory"/>
+<xsd:element ref="com:FileName"/>
+<xsd:element ref="com:HeightMeasure"/>
+<xsd:element ref="com:WidthMeasure"/>
+<xsd:element ref="com:Alt" minOccurs="0"/>
+<xsd:element ref="com:ColourModeCategory" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="pat:firstPageNumber"/>
+		<xsd:attribute ref="pat:lastPageNumber"/>
+		<xsd:attribute ref="com:fileLocationURI"/>
+		<xsd:attribute ref="com:orientationCategory" default="Portrait"/>
+	</xsd:complexType>
+	
+<xsd:element name="ParentDocument" type="pat:ParentDocumentType">
+		<xsd:annotation>
+			<xsd:documentation>Describes parent document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ParentDocumentStatusCode" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Status code for the parent document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ParentDocumentType">
+		<xsd:sequence>
+<xsd:element ref="pat:PatentDocumentIdentification"/>
+<xsd:element ref="pat:ParentDocumentStatusCode" minOccurs="0"/>
+<xsd:element ref="pat:PCTDocumentParent" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="PartialContinuation" type="pat:DocumentRelationType">
+		<xsd:annotation>
+			<xsd:documentation>Document of which this is a continuation-in-part.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PassageLocation" type="pat:PassageLocationType">
+<xsd:annotation>
+	<xsd:documentation>A location in a cited reference</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+	
+<xsd:complexType name="PassageLocationBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:PassageLocation" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:attribute name="passageLocationCategory" type="pat:PassageLocationCategoryType">
+<xsd:annotation>
+	<xsd:documentation>It identifies the unit of content of a passage: e.g. column, line, paragraph, etc.</xsd:documentation>
+</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:simpleType name="PassageLocationCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Line">
+				<xsd:annotation>
+					<xsd:documentation>Line</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Column">
+				<xsd:annotation>
+					<xsd:documentation>Column</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Page">
+				<xsd:annotation>
+					<xsd:documentation>Page</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Paragraph">
+				<xsd:annotation>
+					<xsd:documentation>Paragraph</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Computer listing">
+				<xsd:annotation>
+					<xsd:documentation>Computer listing</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Gene sequence">
+				<xsd:annotation>
+					<xsd:documentation>Gene sequence</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Mathematical formula">
+				<xsd:annotation>
+					<xsd:documentation>Mathematical formula</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Chemical formula">
+				<xsd:annotation>
+					<xsd:documentation>Chemical formula</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Table">
+				<xsd:annotation>
+					<xsd:documentation>Table</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Figure">
+				<xsd:annotation>
+					<xsd:documentation>Figure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Table heading">
+				<xsd:annotation>
+					<xsd:documentation>Table heading</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Special heading">
+				<xsd:annotation>
+					<xsd:documentation>Special heading</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Serial part">
+				<xsd:annotation>
+					<xsd:documentation>Serial part</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Serial section">
+				<xsd:annotation>
+					<xsd:documentation>Serial section</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Claim">
+				<xsd:annotation>
+					<xsd:documentation>Claim</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:complexType name="PassageLocationType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute ref="pat:passageLocationCategory"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+<xsd:element name="PassageRange" type="pat:PassageRangeType">
+		<xsd:annotation>
+			<xsd:documentation>A passage range</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PassageRangeBag" type="pat:PassageRangeBagType">
+		<xsd:annotation>
+			<xsd:documentation>Reference to one or many relevant parts of the citation.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PassageRangeBagType">
+		<xsd:choice maxOccurs="unbounded">
+<xsd:element ref="pat:PassageRangeText"/>
+<xsd:element ref="pat:PassageRange"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:element name="PassageRangeEnd" type="pat:PassageLocationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Location of the end of a passage</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PassageRangeStart" type="pat:PassageLocationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Location of the beginning of a passage</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PassageRangeText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Alternative to PassageRange if no structure</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PassageRangeType">
+		<xsd:sequence>
+<xsd:element ref="pat:PassageRangeStart"/>
+<xsd:element ref="pat:PassageRangeEnd" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="PassageRelevance" type="pat:RelevanceType">
+<xsd:annotation>
+<xsd:documentation>Relevant passage within the cited document</xsd:documentation>
+</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PassageRelevanceBag" type="pat:PassageRelevanceBagType">
+<xsd:annotation>
+<xsd:documentation>Indication for one passage of the relevance to related claims</xsd:documentation>
+</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PassageRelevanceBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:PassageRelevance" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="PatentClassificationBag" type="pat:PatentClassificationBagType">
+		<xsd:annotation>
+			<xsd:documentation>The collection of various standards used to classify novel subject matter</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="PatentClassificationBagType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="pat:CPCClassificationBag"/>
+			<xsd:element ref="pat:IPCClassification"/>
+			<xsd:element ref="pat:ECLAClassificationBag"/>
+			<xsd:element ref="pat:IPCRClassificationBag"/>
+			<xsd:element ref="pat:NationalClassification"/>
+			<xsd:element ref="com:LocarnoClassificationBag"/>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="PatentClassificationDataSourceCode" type="pat:PatentClassificationDataSourceCodeType">
+		<xsd:annotation>
+			<xsd:documentation>The code that describes the method of how the allocation of the symbol was applied to the patent document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="PatentClassificationDataSourceCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="H">
+				<xsd:annotation>
+					<xsd:documentation>Intellectual classification by person(Human)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="M">
+				<xsd:annotation>
+					<xsd:documentation>Machine classification by the propagation of earlier intellectual classification through the use of common priorities in the patent application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="G">
+				<xsd:annotation>
+					<xsd:documentation>Generated by automatic content analysis</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="PatentClassificationLevelCode" type="pat:PatentClassificationLevelCodeType">
+		<xsd:annotation>
+			<xsd:documentation>The code that describes level of classification.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="PatentClassificationLevelCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="A">
+				<xsd:annotation>
+					<xsd:documentation>Advanced</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="C">
+				<xsd:annotation>
+					<xsd:documentation>Core</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="S">
+				<xsd:annotation>
+					<xsd:documentation>Subclass</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="PatentClassificationSymbolText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Full Symbol for patent classification</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PatentClassificationText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Free format text for patent classification</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="PatentDocumentIdentification" type="pat:PatentDocumentIdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>Identification of patent document i.e., application, publication or grant</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PatentDocumentIdentificationType">
+		<xsd:choice maxOccurs="unbounded">
+<xsd:element ref="pat:ApplicationIdentification"/>
+<xsd:element ref="pat:PatentPublicationIdentification"/>
+<xsd:element ref="pat:PatentGrantIdentification"/>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="PatentFamilyMember" type="pat:PatentFamilyMemberType">
+		<xsd:annotation>
+			<xsd:documentation>Describes the family tree</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PatentFamilyMemberType">
+		<xsd:complexContent>
+			<xsd:extension base="pat:PatentDocumentIdentificationType">
+				<xsd:sequence>
+					<xsd:element ref="pat:PassageRange" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+</xsd:complexType>
+	
+<xsd:element name="PatentFamilyText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Free format text for patent family</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PatentGrantIdentification" type="pat:PatentGrantIdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>Identification of patent grant. Refers to ST.9 INID Code 10, INID Code 45.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="PatentGrantIdentificationType">
+		<xsd:sequence>
+			<xsd:element ref="com:IPOfficeCode"/>
+			<xsd:element ref="pat:PatentNumber"/>
+			<xsd:element ref="com:PublicationLanguageCode" minOccurs="0"/>
+			<xsd:element ref="com:PatentDocumentKindCode" minOccurs="0"/>
+			<xsd:element ref="pat:GrantDate" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="PatentNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Patent grant number</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PatentPublicationIdentification" type="pat:PatentPublicationIdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>Identification of published patent document. Refers to ST.9 INID Code 10.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PatentPublicationIdentificationType">
+		<xsd:sequence>
+<xsd:element ref="com:IPOfficeCode"/>
+<xsd:element ref="pat:PublicationNumber"/>
+			<xsd:element ref="com:PublicationLanguageCode" minOccurs="0"/>
+<xsd:element ref="com:PatentDocumentKindCode" minOccurs="0"/>
+<xsd:element ref="com:PublicationDate" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="PCTDocumentParent" type="pat:PCTDocumentParentType">
+		<xsd:annotation>
+			<xsd:documentation>Parent of the PCT document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PCTDocumentParentType">
+		<xsd:sequence>
+<xsd:element ref="pat:ApplicationIdentification"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="PriorityBasis" type="pat:PriorityBasisType">
+		<xsd:annotation>
+			<xsd:documentation>Basis of priority date</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PriorityBasisType">
+		<xsd:choice maxOccurs="unbounded">
+<xsd:element ref="pat:PriorityClaimBag"/>
+<xsd:element ref="pat:RelatedDocumentBag"/>
+<xsd:element ref="pat:AdditionalRelatedDocumentBag"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:element name="PriorityClaim" type="pat:PriorityClaimType">
+		<xsd:annotation>
+			<xsd:documentation>Priority claim information</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PriorityClaimBag" type="pat:PriorityClaimBagType">
+		<xsd:annotation>
+			<xsd:documentation>Applications in which priority is claimed. Refers to ST.9 INID Code 30.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PriorityClaimBagType">
+		<xsd:sequence>
+			<xsd:element ref="pat:PriorityClaim" maxOccurs="unbounded"/>
+			<xsd:element ref="pat:IncorporationByReferenceIndicator" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:complexType name="PriorityClaimType">
+		<xsd:sequence>
+<xsd:element ref="com:IPOfficeCode"/>
+<xsd:element ref="com:ApplicationNumber" minOccurs="0"/>
+<xsd:element ref="pat:FilingDate"/>
+<xsd:element ref="pat:IndicatedIPOfficeCode" minOccurs="0" maxOccurs="unbounded"/>
+<xsd:element ref="pat:ApplicationFilingCategory" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+<xsd:element ref="pat:RequestedPriorityDocumentIndicator"/>
+<xsd:element ref="pat:AttachedPriorityDocumentIndicator"/>
+<xsd:element ref="pat:OnlineAvailablePriorityDocumentIndicator"/>
+<xsd:element ref="com:DASAccessCode"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:sequenceNumber" use="required"/>
+	</xsd:complexType>
+	
+<xsd:element name="ProvisionalApplication" type="pat:ProvisionalApplicationType">
+		<xsd:annotation>
+			<xsd:documentation>Provisional application that is the basis of the document in hand</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ProvisionalApplicationStatusCode" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Status of the provisional application that is the basis of the document in hand.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ProvisionalApplicationType">
+		<xsd:sequence>
+<xsd:element ref="pat:PatentDocumentIdentification"/>
+<xsd:element ref="pat:ProvisionalApplicationStatusCode" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="PublicationNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Publication Number</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:attribute name="publishFigureCategory" type="pat:PublishFigureCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of the figure of the drawings to be published with the abstract</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+	<xsd:simpleType name="PublishFigureCategoryType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="As suggested by applicant">
+				<xsd:annotation>
+					<xsd:documentation>The figure of the drawings to be published with the abstract as suggested by the applicant</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="As suggested by Authority due to no suggestion by applicant">
+				<xsd:annotation>
+					<xsd:documentation>The figure of the drawings to be published as selected by this Authority, because the applicant failed to suggest a figure</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="As suggested by Authority for better characterization of the invention">
+				<xsd:annotation>
+<xsd:documentation>The figure of the drawings to be published with the abstract as selected by this Authority, because this figure better characterizes the invention.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="PublishFigureType">
+		<xsd:choice>
+			<xsd:element ref="pat:FigureNumber" maxOccurs="unbounded"/>
+			<xsd:element ref="com:FigureReference" maxOccurs="unbounded"/>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="pat:publishFigureCategory" use="required"/>
+	</xsd:complexType>
+	
+<xsd:element name="Reexamination" type="pat:DocumentRelationType">
+		<xsd:annotation>
+			<xsd:documentation>Document of which this is a reexamination.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ReexaminationReissueMerger" type="pat:DocumentRelationType">
+		<xsd:annotation>
+			<xsd:documentation>Present when a reissue application was merged with reexamination proceedings. The issuing document is a reissue patent which shows the following reexamination results statement on the reissue patent front page, immediately following the abstract.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ReferenceCitation" type="pat:ReferenceCitationType">
+		<xsd:annotation>
+			<xsd:documentation>Reference cited in support of the application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ReferenceCitationBag" type="pat:ReferenceCitationBagType">
+		<xsd:annotation>
+			<xsd:documentation>References cited in support of the application. Refers to ST.9 INID Code 56.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ReferenceCitationBagType">
+		<xsd:choice>
+<xsd:element ref="pat:ReferenceCitation" maxOccurs="unbounded"/>
+<xsd:element ref="pat:ReferenceCitationFreeFormat" maxOccurs="unbounded"/>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="ReferenceCitationFreeFormat" type="pat:ReferenceCitationFreeFormatType">
+		<xsd:annotation>
+			<xsd:documentation>Reference cited in support of the application in free format</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ReferenceCitationFreeFormatType">
+		<xsd:complexContent>
+			<xsd:extension base="com:PType">
+				<xsd:attribute ref="pat:citedPhaseCategory"/>
+				<xsd:attribute ref="pat:citingPartyCategory"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+<xsd:element name="ReferenceCitationSequenceNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Indication of which reference citation(s) have been searched in the database, i.e. the sequence number(s) assigned for each reference citation by pat:ReferenceCitation.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ReferenceCitationType">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element ref="com:PatentCitation"/>
+				<xsd:element ref="com:NPLCitation"/>
+			</xsd:choice>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="pat:CitedPassageBag"/>
+				<xsd:sequence>
+					<xsd:element ref="pat:DocumentRelevanceBag"/>
+					<xsd:element ref="pat:CitedPassageBag" minOccurs="0"/>
+					<xsd:element ref="pat:PatentClassificationBag" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:choice>
+			<xsd:element ref="com:CommentText" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:sequenceNumber"/>
+		<xsd:attribute ref="pat:citedPhaseCategory"/>
+		<xsd:attribute ref="pat:citingPartyCategory"/>
+	</xsd:complexType>
+	
+<xsd:element name="Reissue" type="pat:DocumentRelationType">
+		<xsd:annotation>
+			<xsd:documentation>Document being reissued. Refers to ST.9 INID Code 64.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="RelatedClaimBag" type="pat:ClaimNumberBagType">
+		<xsd:annotation>
+			<xsd:documentation>A citation within a search report must refer to one or many claims.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="RelatedDocumentBag" type="pat:RelatedDocumentBagType">
+		<xsd:annotation>
+			<xsd:documentation>Various relationships between the patent in hand and other patent grants or applications. Contains either an additional application, a divisional application, continuations, reissues, divisional reissues, reexamination, merged reissues reexamination. Refers to ST.9 INID Code 60.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="RelatedDocumentBagType">
+		<xsd:choice maxOccurs="unbounded">
+<xsd:element ref="pat:Addition"/>
+<xsd:element ref="pat:Division"/>
+<xsd:element ref="pat:Continuation"/>
+<xsd:element ref="pat:Conversion"/>
+<xsd:element ref="pat:EntitlementApplication"/>
+<xsd:element ref="pat:PartialContinuation"/>
+<xsd:element ref="pat:ContinuingReissue"/>
+<xsd:element ref="pat:Reissue"/>
+<xsd:element ref="pat:DivisionalReissue"/>
+<xsd:element ref="pat:Reexamination"/>
+<xsd:element ref="pat:ReexaminationReissueMerger"/>
+<xsd:element ref="pat:Substitution"/>
+<xsd:element ref="pat:ProvisionalApplication"/>
+<xsd:element ref="pat:UtilityModelBasis"/>
+<xsd:element ref="pat:Correction"/>
+<xsd:element ref="pat:RelatedPublication"/>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="RelatedPublication" type="pat:RelatedPublicationType">
+		<xsd:annotation>
+			<xsd:documentation>Related publication information for related documents. Refers to ST.9 INID Code 65.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="RelatedPublicationType">
+		<xsd:annotation>
+			<xsd:documentation>Previously published document concerning same application</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+<xsd:element ref="pat:PatentDocumentIdentification" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:complexType name="RelevanceType">
+		<xsd:sequence>
+<xsd:element ref="pat:CitationCategoryCode" maxOccurs="unbounded"/>
+<xsd:element ref="pat:RelatedClaimBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:attribute name="relevantSearchedField" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Searched technical field in which the terms were used to find priority art</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:element name="ReportBasis" type="pat:ReportBasisType">
+		<xsd:annotation>
+			<xsd:documentation>Basis of this search or examination report</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ReportBasisType">
+		<xsd:sequence>
+<xsd:element ref="pat:LanguageBasis"/>
+<xsd:element ref="pat:ApplicationModificationBasisBag" minOccurs="0"/>
+<xsd:element ref="pat:SEQLBasis" minOccurs="0"/>
+<xsd:element ref="pat:PriorityBasis" minOccurs="0"/>
+		</xsd:sequence>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+			<xsd:element name="ReportCoveredClaimBag" type="pat:ReportCoveredClaimBagType">
+				<xsd:annotation>
+					<xsd:documentation>Parts of the application that are covered by this report, either all parts or the parts relating to the claims indicated</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+	
+	<xsd:complexType name="ReportCoveredClaimBagType">
+		<xsd:choice>
+			<xsd:element ref="pat:AllClaimIndicator"/>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="pat:ClaimNumber"/>
+				<xsd:element ref="pat:ClaimNumberRange"/>
+			</xsd:choice>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:element name="RequestedPriorityDocumentIndicator" type="xsd:boolean" fixed="true">
+		<xsd:annotation>
+			<xsd:documentation>The receiving office is requested to prepare and transmit to the IB a certified copy of the earlier application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+			<xsd:element name="ReviewRequestDuePeriod" type="com:PeriodType">
+				<xsd:annotation>
+					<xsd:documentation>The time period that the applicant can request the Authority to review its opinion</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+	
+<xsd:element name="SearchCompleteDate" type="xsd:date">
+		<xsd:annotation>
+			<xsd:documentation>The date that the search report was completed</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SearchData" type="pat:SearchDataType">
+		<xsd:annotation>
+			<xsd:documentation>The details relating to the search.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="SearchDataType">
+		<xsd:choice>
+			<xsd:sequence>
+<xsd:element ref="pat:PatentClassificationBag"/>
+<xsd:element ref="pat:SearchFieldBag"/>
+<xsd:element ref="pat:ReferenceCitationBag" minOccurs="0"/>
+<xsd:element ref="pat:CitedPatentFamilyBag" minOccurs="0" maxOccurs="unbounded"/>
+<xsd:element ref="pat:SupplementarySearchScope" minOccurs="0"/>
+			</xsd:sequence>
+<xsd:element ref="pat:NoSearchReportDeclaration"/>
+		</xsd:choice>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:attribute name="searchDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date of search report</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:element name="SearchedDatabase" type="pat:SearchedDatabaseType">
+		<xsd:annotation>
+			<xsd:documentation>Database(s) searched</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="SearchedDatabaseType">
+		<xsd:sequence>
+<xsd:element ref="pat:DatabaseName" maxOccurs="unbounded"/>
+<xsd:element ref="pat:DatabaseQueryText" minOccurs="0"/>
+<xsd:element ref="pat:FoundDocumentQuantity" minOccurs="0"/>
+<xsd:element ref="pat:ViewedDocumentQuantity" minOccurs="0"/>
+<xsd:element ref="pat:SearchSystemName" minOccurs="0"/>
+<xsd:element ref="com:NPLCitationBag" minOccurs="0"/>
+<xsd:element ref="pat:SequenceListText" minOccurs="0"/>
+<xsd:element ref="pat:ReferenceCitationSequenceNumber" minOccurs="0"/>
+		</xsd:sequence>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="SearchedMinimumDocumentation" type="pat:SearchedMinimumDocumentationType">
+		<xsd:annotation>
+			<xsd:documentation>Minimum documentation searched</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="SearchedMinimumDocumentationType">
+		<xsd:choice maxOccurs="unbounded">
+<xsd:element ref="pat:IPCClassification"/>
+<xsd:element ref="pat:IPCRClassification"/>
+<xsd:element ref="pat:CPCClassification"/>
+<xsd:element ref="pat:NationalClassification"/>
+		</xsd:choice>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="SearchFieldBag" type="pat:SearchFieldBagType">
+		<xsd:annotation>
+			<xsd:documentation>Fields searched</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="SearchFieldBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:SearchedMinimumDocumentation" maxOccurs="unbounded"/>
+<xsd:element ref="pat:OtherDocumentation" minOccurs="0" maxOccurs="unbounded"/>
+<xsd:element ref="pat:SearchedDatabase" minOccurs="0" maxOccurs="unbounded"/>
+<xsd:element ref="pat:SearchFieldText" minOccurs="0"/>
+<xsd:element ref="pat:SearchTermBag" minOccurs="0"/>
+		</xsd:sequence>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="SearchFieldText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Field of search free format text</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:attribute name="searchKindCategory" type="pat:SearchKindCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Kind of search</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:simpleType name="SearchKindCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="International search">
+				<xsd:annotation>
+					<xsd:documentation>International search report</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Supplementary international search">
+				<xsd:annotation>
+					<xsd:documentation>Supplementary international search report</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="International type search">
+				<xsd:annotation>
+					<xsd:documentation>International type search report</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National search">
+				<xsd:annotation>
+					<xsd:documentation>National search report</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National supplementary search">
+				<xsd:annotation>
+					<xsd:documentation>Supplementary national search report</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="SearchReportAppendixText" type="com:PhraseType">
+		<xsd:annotation>
+			<xsd:documentation>Search report appendix text</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SearchReportCommentText" type="pat:SearchReportCommentTextType">
+		<xsd:annotation>
+			<xsd:documentation>Search report comment text</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="SearchReportCommentTextType">
+		<xsd:complexContent>
+			<xsd:extension base="com:PhraseType">
+<xsd:attribute ref="com:id"/>
+<xsd:attribute ref="com:languageCode"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:attribute name="searchReportEstablishedCategory" type="pat:SearchReportEstablishedCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category to identify whether a search report has been established after a search request has been made</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+	<xsd:simpleType name="SearchReportEstablishedCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Yes">
+				<xsd:annotation>
+					<xsd:documentation>A search report has been established</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="No">
+				<xsd:annotation>
+					<xsd:documentation>A search report has not been established</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Not determined">
+				<xsd:annotation>
+					<xsd:documentation>A search request has been made but the searching authority has not yet determined whether a search report will be established</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="SearchReportPublishFigure" type="pat:PublishFigureType">
+		<xsd:annotation>
+			<xsd:documentation>The figure of the drawings to be published with the search report suggested by applicant or the search authority</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SearchReportReplacementIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicates that this search report replaces the previous search report that was considered unsatisfactory</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SearchReportRevisionIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicate whether this report is a revised version of a previously issued (supplementary) search report</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="SearchRequestDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date upon which a prior art search for the application was requested by the applicant or the examiner </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SearchRequestNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>International-type search request number from PCT form 201.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SearchRequestReceiveDate" type="xsd:date">
+		<xsd:annotation>
+			<xsd:documentation>Date of reception of the request for (supplementary) search</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SearchSystemName" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Information system used for conducting the search</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SearchTerm" type="pat:SearchTermType">
+		<xsd:annotation>
+			<xsd:documentation>The terms used in prior art search</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SearchTermBag" type="pat:SearchTermBagType">
+		<xsd:annotation>
+			<xsd:documentation>List of one or more terms, phrases, sentences or Boolean expressions</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="SearchTermBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:SearchTerm" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="SearchTermType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+<xsd:attribute ref="com:sequenceNumber"/>
+<xsd:attribute ref="pat:relevantSearchedField"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:element name="Section" type="pat:SectionType">
+		<xsd:annotation>
+			<xsd:documentation>The first or highest hierarchical level in the classification scheme</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="SectionType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="A">
+				<xsd:annotation>
+					<xsd:documentation>Human Necessities</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="B">
+				<xsd:annotation>
+					<xsd:documentation>Performing Operations, Transporting</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="C">
+				<xsd:annotation>
+					<xsd:documentation>Chemistry, Metallurgy</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="D">
+				<xsd:annotation>
+					<xsd:documentation>Textiles, Paper</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="E">
+				<xsd:annotation>
+					<xsd:documentation>Fixed Constructions</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="F">
+				<xsd:annotation>
+					<xsd:documentation>Mechanical Engineering, Lighting, Heating, Weapons, Blasting</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="G">
+				<xsd:annotation>
+					<xsd:documentation>Physics</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="H">
+				<xsd:annotation>
+					<xsd:documentation>Electricity</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="SEQLBasis" type="pat:SEQLBasisType">
+		<xsd:annotation>
+			<xsd:documentation>Nucleotide and/or amino acid sequence(s)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="SEQLBasisType">
+		<xsd:sequence>
+<xsd:element ref="pat:SEQLSearchBasisCategory" maxOccurs="unbounded"/>
+<xsd:element ref="pat:SEQLStatementFurnishedIndicator" minOccurs="0"/>
+<xsd:element ref="com:AdditionalRemark" minOccurs="0"/>
+		</xsd:sequence>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="SEQLNotConsideredCategory" type="pat:SEQLNotConsideredCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Indicates deficiencies of the international application related to sequence listings which are subject to the issuance of the declaration under Article 17(2)(a) for non compliance with Rules 13ter.1(c) and (d).</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="SEQLNotConsideredCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="paper">
+				<xsd:annotation>
+					<xsd:documentation>The late furnishing or the non compliance with Annex C of the Administrative Instruction of a paper sequence-listing</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="electronic">
+				<xsd:annotation>
+					<xsd:documentation>The late furnishing or the non compliance with Annex C of the Administrative Instruction of an electronic sequence-listing</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="late furnishing fee">
+				<xsd:annotation>
+					<xsd:documentation>The late payment of the furnishing fees</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="table">
+				<xsd:annotation>
+					<xsd:documentation>The late furnishing or the non compliance with Annex C-bis of the Administrative Instruction of tables related to a sequence-listing</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="SEQLSearchBasisCategory" type="pat:SEQLSearchBasisCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>With regard to any nucleotide and/or amino acid sequence disclosed in the international application, the international search was carried out on the basis of a sequence listing</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="SEQLSearchBasisCategoryType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Forming part of application as text file">
+				<xsd:annotation>
+					<xsd:documentation>Forming part of the international application as filed in the form of a text file
+</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Forming part of application as paper or image file">
+				<xsd:annotation>
+					<xsd:documentation>Forming part of the international application as filed on paper or in the form of an image file</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Together with application as text file">
+				<xsd:annotation>
+					<xsd:documentation>Furnished together with the application for the purposes of search only in the form of a text file</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Subsequent to application as text file">
+				<xsd:annotation>
+					<xsd:documentation>Furnished subsequent to the filing date for the purposes of search only in the form of a text file
+</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Subsequent to application as paper or image file">
+				<xsd:annotation>
+					<xsd:documentation>Furnished subsequent to the filing date for the purposes of search only on paper or in the form of an image file
+</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Amendment as paper or image file">
+				<xsd:annotation>
+					<xsd:documentation>Forming part of the international application as filed on pager or in the form of an image file
+</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Amendment as text file">
+				<xsd:annotation>
+					<xsd:documentation>Furnished together with the application for the purposes of search only in the form of a text file
+</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="SEQLStatementFurnishedIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicate that if more than one version or copy of a sequence listing has been filed or furnished, the required statements that the information in the subsequent or additional copies is identical to that forming part of the application as filed or does not go beyond the application as filed, as appropriate, were furnished.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SequenceListText" type="com:ContentType">
+		<xsd:annotation>
+			<xsd:documentation>Sequence listings in free text</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="Subclass" type="pat:SubclassType">
+		<xsd:annotation>
+			<xsd:documentation>The third highest hierarchical level in the classification scheme</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="SubclassType">
+		<xsd:restriction base="xsd:token">
+			<xsd:length value="1"/>
+			<xsd:pattern value="[A-Z]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="Subgroup" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The fifth hierarchical level in the classification scheme</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="Substitution" type="pat:DocumentRelationType">
+		<xsd:annotation>
+			<xsd:documentation>Substitution type for related documents. Refers to ST.9 INID Code 66.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SuccessorCategory" type="pat:SuccessorCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of the successor e.g. executor, legal heir</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="SuccessorCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Administrator">
+				<xsd:annotation>
+					<xsd:documentation>Administrator</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Administratrix">
+				<xsd:annotation>
+					<xsd:documentation>Administratrix</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Estate">
+				<xsd:annotation>
+					<xsd:documentation>Estate</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Executor">
+				<xsd:annotation>
+					<xsd:documentation>Executor</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Executors">
+				<xsd:annotation>
+					<xsd:documentation>Executors</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Executrix">
+				<xsd:annotation>
+					<xsd:documentation>Executrix</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Heir">
+				<xsd:annotation>
+					<xsd:documentation>Heir</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Heiress">
+				<xsd:annotation>
+					<xsd:documentation>Heiress</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Heirs">
+				<xsd:annotation>
+					<xsd:documentation>Heirs</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Legal heirs">
+				<xsd:annotation>
+					<xsd:documentation>Legal heirs</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Legal representative">
+				<xsd:annotation>
+					<xsd:documentation>Legal representative</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Legal representatives">
+				<xsd:annotation>
+					<xsd:documentation>Legal representatives</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="SuccessorRights" type="pat:SuccessorRightsType">
+		<xsd:annotation>
+			<xsd:documentation>This person is successor to the rights of an inventor who is deceased, insane, or legally incapacitated</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="SuccessorRightsText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:appinfo>PII</xsd:appinfo>
+			<xsd:documentation>Text describing successor rights</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="SuccessorRightsType">
+		<xsd:sequence>
+<xsd:element ref="pat:SuccessorRightsText" minOccurs="0"/>
+<xsd:element ref="pat:SuccessorCategory"/>
+		</xsd:sequence>
+		<xsd:attribute ref="pat:applicantSequenceNumberReference"/>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:idref"/>
+	</xsd:complexType>
+	
+<xsd:element name="SupplementarySearchScope" type="com:ContentType">
+		<xsd:annotation>
+			<xsd:documentation>Explanations with regard to the citations and/or the scope of the search (Rule 45bis.7(e)(ii))</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="TranslationLanguageCode" type="pat:TranslationLanguageCodeType">
+		<xsd:annotation>
+			<xsd:documentation>With regard to the language, the international search was carried out on the basis of a translation of the international application into another language which is the language of a translation furnished for the purposes of international search (Rules 12.3(a) and 23.1(b)).</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="TranslationLanguageCodeType">
+		<xsd:simpleContent>
+			<xsd:extension base="com:ISOLanguageCodeType">
+<xsd:attribute ref="pat:translationPurposeCategory"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+<xsd:attribute name="translationPurposeCategory" type="pat:TranslationPurposeCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of the purpose of translation of patent document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+	<xsd:simpleType name="TranslationPurposeCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Search">
+				<xsd:annotation>
+					<xsd:documentation>Search</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Publication">
+				<xsd:annotation>
+					<xsd:documentation>Publication</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Supplementary search">
+				<xsd:annotation>
+					<xsd:documentation>Supplementary search</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Examination">
+				<xsd:annotation>
+					<xsd:documentation>Examination</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:simpleType name="TrueType">
+		<xsd:restriction base="xsd:boolean">
+			<xsd:pattern value="true"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="UnsearchableClaim" type="pat:UnsearchableClaimType">
+		<xsd:annotation>
+			<xsd:documentation>A description of reasons which the search report has not been established in respect of a certain claim </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="UnsearchableClaimBag" type="pat:UnsearchableClaimBagType">
+		<xsd:annotation>
+			<xsd:documentation>A description of reasons which the search report has not been established in respect of certain claims</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="UnsearchableClaimBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:UnsearchableClaim" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="UnsearchableClaimRemark" type="com:PType">
+		<xsd:annotation>
+			<xsd:documentation>A remark explaining the reason why the claim has not been searched</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="UnsearchableClaimType">
+		<xsd:sequence>
+<xsd:element ref="pat:UnsearchableReasonCategory" minOccurs="0"/>
+<xsd:element ref="pat:AmendedClaimConsideredIndicator" minOccurs="0"/>
+			<xsd:choice maxOccurs="unbounded">
+<xsd:element ref="pat:ClaimNumber"/>
+<xsd:element ref="pat:ClaimNumberRange"/>
+			</xsd:choice>
+<xsd:element ref="pat:UnsearchableClaimRemark" minOccurs="0"/>
+		</xsd:sequence>
+<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="UnsearchableReasonCategory" type="pat:UnsearchableReasonCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>The reason why the claim has not been searched</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="UnsearchableReasonCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Dependent claims">
+				<xsd:annotation>
+					<xsd:documentation>Claims Nos.: (insert value from claim-no) because they are dependent claims and are not drafted in accordance with the second and third sentences of PCT Rule 6.4(a)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Not comply with requirements">
+				<xsd:annotation>
+					<xsd:documentation>Claims Nos.: (insert value from claim-no) because they relate to parts of the international application that do not comply with the prescribed requirements to such an extent that no meaningful international search can be carried out, specifically:</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Not required to be searched">
+				<xsd:annotation>
+					<xsd:documentation>Claims Nos.: (insert value from claim-no) because they relate to subject matter not required to be searched by this Authority, namely:</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="UtilityModelBasis" type="pat:DocumentRelationType">
+		<xsd:annotation>
+			<xsd:documentation>Document on which utility model is based. Refers to ST.9 INID Code 67.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ViewedDocumentQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>The total Quantity of documents found by the expert during the search</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+</xsd:schema>

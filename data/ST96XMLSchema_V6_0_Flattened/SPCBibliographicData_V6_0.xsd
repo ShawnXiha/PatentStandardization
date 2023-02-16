@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common" xmlns:pat="http://www.wipo.int/standards/XMLSchema/ST96/Patent" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.wipo.int/standards/XMLSchema/ST96/Patent" elementFormDefault="qualified" attributeFormDefault="qualified" version="V6_0">
+	<xsd:import namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" schemaLocation="SPCBibliographicData_V6_0_Common.xsd"/>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<com:SchemaCreatedDate>2016-19-12</com:SchemaCreatedDate>
+			<com:SchemaLastModifiedDate>2022-10-03</com:SchemaLastModifiedDate>
+			<com:SchemaContactPoint>xml.standards@wipo.int</com:SchemaContactPoint>
+			<com:SchemaReleaseNoteURL>http://www.wipo.int/standards/XMLSchema/ST96/V6_0/ReleaseNotes.pdf</com:SchemaReleaseNoteURL>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="SPCBibliographicData" type="pat:SPCBibliographicDataType">
+		<xsd:annotation>
+			<xsd:documentation>An SPC is a Supplementary Protection Certificate. It must be based on a granted patent and a Marketing Authorisation must have been issued for it to be considered. If approved it provides an additional period of protection (for up to five years) of a medicinal or plant protection product containing an active ingredient covered by the patent on which it was based. This entity represents the application for and basic details of a supplementary protection certificate</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:complexType name="SPCBibliographicDataType">
+		<xsd:sequence>
+			<xsd:element ref="pat:SPCNumber"/>
+			<xsd:element ref="pat:RelatedSPCNumber" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="pat:SPCFilingDate"/>
+			<xsd:element ref="com:ProductDescriptionText" minOccurs="0"/>
+			<xsd:element ref="pat:ProductSearchTerm" minOccurs="0"/>
+			<xsd:element ref="pat:PatentNumber"/>
+			<xsd:element ref="pat:InventionTitle" minOccurs="0"/>
+			<xsd:element ref="pat:Claims" minOccurs="0"/>
+			<xsd:element ref="pat:GrantDate" minOccurs="0"/>
+			<xsd:element ref="com:ExaminationDate" minOccurs="0"/>
+			<xsd:element ref="com:FeeNotificationDate" minOccurs="0"/>
+			<xsd:element ref="com:FeeNotificationIssuedIndicator" minOccurs="0"/>
+			<xsd:element ref="com:PaymentDueDate" minOccurs="0"/>
+			<xsd:element ref="com:PaymentReminderDate" minOccurs="0"/>
+			<xsd:element ref="com:PaymentDate" minOccurs="0"/>
+			<xsd:element ref="pat:EnteredIntoForceDate" minOccurs="0"/>
+			<xsd:element ref="com:ReasonNotInForceCategory" minOccurs="0"/>
+			<xsd:element ref="com:NotInForceDate" minOccurs="0"/>
+			<xsd:element ref="com:ExpiryDate" minOccurs="0"/>
+			<xsd:element ref="com:LatestExpiryDate" minOccurs="0"/>
+			<xsd:element ref="pat:SPCTermExtensionBag" minOccurs="0"/>
+			<xsd:element ref="pat:SPCAuthorizationBag" minOccurs="0"/>
+			<xsd:element ref="pat:SPCCategory" minOccurs="0"/>
+			<xsd:element ref="pat:ApplicantBag" minOccurs="0"/>
+			<xsd:element ref="com:Representative" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:officeCode"/>
+		<xsd:attribute ref="com:st96Version" use="required"/>
+		<xsd:attribute ref="com:ipoVersion"/>
+	</xsd:complexType>
+	
+<xsd:element name="Applicant" type="pat:ApplicantType">
+		<xsd:annotation>
+			<xsd:documentation>The individual or entity identified as the executors of the patent</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ApplicantBag" type="pat:ApplicantBagType">
+		<xsd:annotation>
+			<xsd:documentation>The collection of applicants. Refers to ST.9 INID Code 71, INID Code 75.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ApplicantBagType">
+		<xsd:sequence>
+<xsd:element ref="pat:Applicant" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="ApplicantCategory" type="pat:ApplicantCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Defines the type of applicant</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="ApplicantCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Applicant_Inventor">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether the applicant is an inventor</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Applicant">
+				<xsd:annotation>
+					<xsd:documentation>Indicates whether an applicant is applicant only</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="ApplicantProvidedClaimNumberText" type="com:PhraseType">
+		<xsd:annotation>
+			<xsd:documentation>The free-form claim number text as provided by the applicant</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ApplicantProvidedClaimStatusText" type="com:PhraseType">
+		<xsd:annotation>
+			<xsd:documentation>The free-form claim status text as provided by the applicant</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:attribute name="applicantSequenceNumberReference" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The sequence number ordering of successors to the rights of an inventor who is deceased, insane, or legally incapacitated</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+	<xsd:complexType name="ApplicantType">
+		<xsd:sequence>
+			<xsd:element ref="com:PartyIdentifier" minOccurs="0"/>
+			<xsd:choice maxOccurs="2">
+				<xsd:element ref="com:Contact"/>
+				<xsd:element ref="com:PublicationContact"/>
+			</xsd:choice>
+			<xsd:element ref="pat:ApplicantCategory" minOccurs="0"/>
+			<xsd:element ref="com:NationalityCode" minOccurs="0"/>
+			<xsd:element ref="pat:DesignationCategory" minOccurs="0"/>
+			<xsd:element ref="com:ResidenceCountryCode" minOccurs="0"/>
+			<xsd:element ref="pat:SuccessorRights" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:sequenceNumber"/>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="BeginRangeNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Begin number of a range</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="Claim" type="pat:ClaimType">
+		<xsd:annotation>
+			<xsd:documentation>Matter for which protection is sought</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClaimNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Claim Number</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClaimNumberRange" type="pat:ClaimNumberRangeType">
+		<xsd:annotation>
+			<xsd:documentation>Claim number range</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ClaimNumberRangeType">
+		<xsd:sequence>
+<xsd:element ref="pat:BeginRangeNumber"/>
+<xsd:element ref="pat:EndRangeNumber"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="ClaimReference" type="pat:ClaimReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>A claim sometimes refers to one or more claims, which it identifies as its parents. Claim Reference should be used when a claim refers to other claims.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ClaimReferenceType" mixed="true">
+			<xsd:complexContent>
+			<xsd:extension base="com:PhraseType">
+		<xsd:attribute ref="com:idrefs"/>
+		<xsd:attribute ref="com:id"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+<xsd:element name="Claims" type="pat:ClaimsType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of claims. Use paragraph (P) for non-claim text.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClaimStatusCategory" type="pat:ClaimStatusCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Status of claim during Filing, Amendment, Examination, and Prosecution</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="ClaimStatusCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Original">
+				<xsd:annotation>
+					<xsd:documentation>A claim that is the same as originally submitted with the initial filing.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Currently amended">
+				<xsd:annotation>
+					<xsd:documentation>A modification to the claim text in the current amendment document.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cancelled by applicant">
+				<xsd:annotation>
+					<xsd:documentation>A claim that has been cancelled and is no longer under prosecution.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Withdrawn">
+				<xsd:annotation>
+					<xsd:documentation>A claim that is no longer being considered, but can be revived.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Previously presented">
+				<xsd:annotation>
+					<xsd:documentation>An unchanged copy of a previously amended claim.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="New">
+				<xsd:annotation>
+					<xsd:documentation>A new claim that has been added in the current amendment.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Not entered">
+				<xsd:annotation>
+					<xsd:documentation>A claim that is not under prosecution, however, may or may not be revived by the petition office or the examiner.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Unknown">
+				<xsd:annotation>
+					<xsd:documentation>When an applicant provides a claim status that does not map to the standard set.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Allowed">
+				<xsd:annotation>
+					<xsd:documentation>A claim that has been indicated as in condition for allowance by examiner of record</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Objected to">
+				<xsd:annotation>
+					<xsd:documentation>A claim that has been indicated as objected to by examiner of record</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Rejected">
+				<xsd:annotation>
+					<xsd:documentation>A claim that has been indicated as rejected by examiner of record</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Restricted">
+				<xsd:annotation>
+					<xsd:documentation>A claim that has been indicated as subject to a restriction requirement by examiner of record</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Non elected or withdrawn">
+				<xsd:annotation>
+					<xsd:documentation>A claim that is not being examined after restriction. It is withdrawn from further consideration until allowance of the application. A claim that has been indicated as withdrawn by examiner of record.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cancelled by examiner">
+				<xsd:annotation>
+					<xsd:documentation>A claim that has been indicated no longer available for examination by examiner of record</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Appealed">
+				<xsd:annotation>
+					<xsd:documentation>A claim that has been indicated as appealed to the Board by examiner of record</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Interference">
+				<xsd:annotation>
+					<xsd:documentation>A claim that has been indicated as subject to interference proceedings by examiner of record</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="None">
+				<xsd:annotation>
+					<xsd:documentation>The examiner has not yet taken action on the claim</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="ClaimsType">
+		<xsd:choice>
+			<xsd:element ref="pat:PageImage" maxOccurs="unbounded"/>
+			<xsd:element ref="pat:DocumentURI" maxOccurs="unbounded"/>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="pat:Claim"/>
+				<xsd:element ref="com:P"/>
+			</xsd:choice>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:languageCode"/>
+	</xsd:complexType>
+	
+<xsd:element name="ClaimText" type="pat:ClaimTextType">
+		<xsd:annotation>
+			<xsd:documentation>Content of the claim</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ClaimTextType" mixed="true">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element ref="pat:ClaimText"/>
+			<xsd:element ref="com:B"/>
+			<xsd:element ref="com:I"/>
+			<xsd:element ref="com:O"/>
+			<xsd:element ref="com:U"/>
+			<xsd:element ref="com:S"/>
+			<xsd:element ref="com:Sup"/>
+			<xsd:element ref="com:Sub"/>
+			<xsd:element ref="com:Image"/>
+			<xsd:element ref="com:SmallCapital"/>
+			<xsd:element ref="com:Br"/>
+			<xsd:element ref="com:UL"/>
+			<xsd:element ref="com:OL"/>
+			<xsd:element ref="com:Pre"/>
+			<xsd:element ref="com:DL"/>
+			<xsd:element ref="com:Math"/>
+			<xsd:element ref="com:ChemicalFormulae"/>
+			<xsd:element ref="com:Table"/>
+			<xsd:element ref="com:PatentCitation"/>
+			<xsd:element ref="com:NPLCitation"/>
+			<xsd:element ref="pat:ClaimReference"/>
+			<xsd:element ref="com:FigureReference"/>
+			<xsd:element ref="com:CrossReference"/>
+			<xsd:element ref="com:BioDeposit"/>
+			<xsd:element ref="pat:ApplicantProvidedClaimNumberText"/>
+			<xsd:element ref="pat:ApplicantProvidedClaimStatusText"/>
+			<xsd:element ref="com:Ins"/>
+			<xsd:element ref="com:Del"/>
+			<xsd:element ref="com:OCRConfidenceData"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:complexType name="ClaimType">
+		<xsd:sequence>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element ref="pat:ClaimNumber"/>
+					<xsd:element ref="pat:ClaimNumberRange"/>
+			</xsd:choice>
+			<xsd:element ref="pat:ClaimTypeCategory" minOccurs="0"/>
+			<xsd:element ref="pat:ClaimStatusCategory" minOccurs="0"/>
+			<xsd:element ref="pat:ClaimText" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+<xsd:element name="ClaimTypeCategory" type="pat:ClaimTypeCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Type of Claims</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="ClaimTypeCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Independent">
+				<xsd:annotation>
+					<xsd:documentation>Independent</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Dependent">
+				<xsd:annotation>
+					<xsd:documentation>Dependent</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="DesignationCategory" type="pat:DesignationCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Information that the person who is applicant or inventor for the purpose of all designated States or as indicated</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="DesignationCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="All">
+				<xsd:annotation>
+					<xsd:documentation>All designated States</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="All except US">
+				<xsd:annotation>
+					<xsd:documentation>All designated States except US</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="US only">
+				<xsd:annotation>
+					<xsd:documentation>US only</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="As indicated">
+				<xsd:annotation>
+					<xsd:documentation>The States indicated as in state designation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="DocumentURI" type="pat:DocumentURIType">
+		<xsd:annotation>
+			<xsd:documentation>Page in other formats such as PDF. This is primarily to be used when data for the whole or major sections of an application are in other formats such as PDF.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DocumentURIType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:anyURI">
+				<xsd:attribute ref="com:id"/>
+				<xsd:attribute ref="com:documentFileName"/>
+				<xsd:attribute ref="pat:firstPageNumber"/>
+				<xsd:attribute ref="pat:lastPageNumber"/>
+				<xsd:attribute ref="pat:pageDocumentFormatCategory" use="required"/>
+				<xsd:attribute ref="pat:ocrIndicator"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+<xsd:element name="EndRangeNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>End number of a range</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="EnteredIntoForceDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date entering into force of patent and utility model grants in cases while this data differs from the publication date of the document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ExtensionAuthorizationNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of the authorization containing the statement of compliance with an agreed completed paediatric investigation plan</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ExtensionTerminationReasonCategory" type="pat:ExtensionTerminationReasonCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>The reason why an Extension to an SPC is not in force, for cases where it has terminated by means other than expiry</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+		<xsd:simpleType name="ExtensionTerminationReasonCategoryType">
+			<xsd:restriction base="xsd:token">
+				<xsd:enumeration value="expired"/>
+				<xsd:enumeration value="refused"/>
+				<xsd:enumeration value="revoked"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	
+<xsd:attribute name="firstPageNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>First page of the included document or page</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+	<xsd:element name="GrantDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date of grant</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="InventionTitle" type="pat:InventionTitleType">
+		<xsd:annotation>
+			<xsd:documentation>Title of the invention. Refers to ST.9 INID Code 54.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:attribute name="inventionTitleCategory" type="pat:InventionTitleCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Describes the type of invention title</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:simpleType name="InventionTitleCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="In application filed">
+				<xsd:annotation>
+					<xsd:documentation>The invention title as entered on the application form, which may equate to the application title</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="In application published">
+				<xsd:annotation>
+					<xsd:documentation>The invention title edited by the examiner from the title provided by the applicant, which may equate to the abstract title</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="In grant publication">
+				<xsd:annotation>
+					<xsd:documentation>The invention title displayed on the front page of the grant publication, which equate the IPO’s grant title</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:complexType name="InventionTitleType">
+		<xsd:complexContent>
+			<xsd:extension base="com:PhraseType">
+				<xsd:attribute ref="com:id"/>
+				<xsd:attribute ref="com:languageCode"/>
+				<xsd:attribute ref="pat:inventionTitleCategory"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+<xsd:attribute name="lastPageNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Last page of the included document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+	<xsd:element name="MarketingAuthorizationGeographicCode" type="pat:MarketingAuthorizationGeographicCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Code of countries plus the European Union providing marketing authorization for products which are the subject of Supplementary Protection Certificate (SPC) applications</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="MarketingAuthorizationGeographicCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Code of countries and the European Union providing marketing authorisation for products which are the subject of Supplementary Protection Certificate applications</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="AT">
+				<xsd:annotation>
+					<xsd:documentation>AUSTRIA</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AZ">
+				<xsd:annotation>
+					<xsd:documentation>AZERBAIJAN</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BE">
+				<xsd:annotation>
+					<xsd:documentation>BELGIUM</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="BG">
+				<xsd:annotation>
+					<xsd:documentation>BULGARIA</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CH">
+				<xsd:annotation>
+					<xsd:documentation>SWITZERLAND</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CY">
+				<xsd:annotation>
+					<xsd:documentation>CYPRUS</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="CZ">
+				<xsd:annotation>
+					<xsd:documentation>CZECH REPUBLIC</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DE">
+				<xsd:annotation>
+					<xsd:documentation>GERMANY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DK">
+				<xsd:annotation>
+					<xsd:documentation>DENMARK</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EE">
+				<xsd:annotation>
+					<xsd:documentation>ESTONIA</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ES">
+				<xsd:annotation>
+					<xsd:documentation>SPAIN</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EU">
+				<xsd:annotation>
+					<xsd:documentation>EUROPEAN UNION</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FI">
+				<xsd:annotation>
+					<xsd:documentation>FINLAND</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="FR">
+				<xsd:annotation>
+					<xsd:documentation>FRANCE</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GB">
+				<xsd:annotation>
+					<xsd:documentation>UNITED KINGDOM</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GR">
+				<xsd:annotation>
+					<xsd:documentation>GREECE</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="HR">
+				<xsd:annotation>
+					<xsd:documentation>CROATIA</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="HU">
+				<xsd:annotation>
+					<xsd:documentation>HUNGARY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IE">
+				<xsd:annotation>
+					<xsd:documentation>IRELAND</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IS">
+				<xsd:annotation>
+					<xsd:documentation>ICELAND</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IT">
+				<xsd:annotation>
+					<xsd:documentation>ITALY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LI">
+				<xsd:annotation>
+					<xsd:documentation>LIECHTENSTEIN</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LT">
+				<xsd:annotation>
+					<xsd:documentation>LITHUANIA</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LU">
+				<xsd:annotation>
+					<xsd:documentation>LUXEMBOURG</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LV">
+				<xsd:annotation>
+					<xsd:documentation>LATVIA</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MT">
+				<xsd:annotation>
+					<xsd:documentation>MALTA</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NL">
+				<xsd:annotation>
+					<xsd:documentation>NETHERLANDS</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NO">
+				<xsd:annotation>
+					<xsd:documentation>NORWAY</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PL">
+				<xsd:annotation>
+					<xsd:documentation>POLAND</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PT">
+				<xsd:annotation>
+					<xsd:documentation>PORTUGAL</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="RO">
+				<xsd:annotation>
+					<xsd:documentation>ROMANIA</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SE">
+				<xsd:annotation>
+					<xsd:documentation>SWEDEN</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SI">
+				<xsd:annotation>
+					<xsd:documentation>SLOVENIA</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SK">
+				<xsd:annotation>
+					<xsd:documentation>SLOVAKIA</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:attribute name="ocrIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicates if the included document or page is scanned using OCR (Optical character recognition) technique</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:attribute name="pageDocumentFormatCategory" type="pat:PageDocumentFormatCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of document format of the page.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:simpleType name="PageDocumentFormatCategoryType">
+		<xsd:restriction base="com:DocumentFormatCategoryType">
+			<xsd:enumeration value="MS Word">
+				<xsd:annotation>
+					<xsd:documentation>MS Word</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="XML">
+				<xsd:annotation>
+					<xsd:documentation>XML</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Text">
+				<xsd:annotation>
+					<xsd:documentation>Text</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EPS">
+				<xsd:annotation>
+					<xsd:documentation>EPS</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PDF">
+				<xsd:annotation>
+					<xsd:documentation>PDF</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="HTML">
+				<xsd:annotation>
+					<xsd:documentation>HTML</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="PageImage" type="pat:PageImageType">
+		<xsd:annotation>
+			<xsd:documentation>Page in image format. This is primarily to be used when data for the whole or major sections of an application are in image format.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PageImageType">
+		<xsd:sequence>
+<xsd:element ref="com:ImageFormatCategory"/>
+<xsd:element ref="com:FileName"/>
+<xsd:element ref="com:HeightMeasure"/>
+<xsd:element ref="com:WidthMeasure"/>
+<xsd:element ref="com:Alt" minOccurs="0"/>
+<xsd:element ref="com:ColourModeCategory" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="pat:firstPageNumber"/>
+		<xsd:attribute ref="pat:lastPageNumber"/>
+		<xsd:attribute ref="com:fileLocationURI"/>
+		<xsd:attribute ref="com:orientationCategory" default="Portrait"/>
+	</xsd:complexType>
+	
+<xsd:element name="PatentNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Patent grant number</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ProductSearchTerm" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>The search term used to establish whether the product for which an SPC is being applied for has already had an SPC granted.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="RelatedSPCNumber" type="com:ApplicationNumberType">
+		<xsd:annotation>
+			<xsd:documentation>Related SPC numbers</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="SPCAuthorization" type="pat:SPCAuthorizationType">
+		<xsd:annotation>
+			<xsd:documentation>Authorization granted by a recognised body for the EEA or EU community state</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="SPCAuthorizationBag" type="pat:SPCAuthorizationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of Authorizations granted. The collection may include authorizations from other EEA or EU states prior to the current SPC application. The collection will include an authorization applicable to the state in which the SPC is being applied for</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="SPCAuthorizationBagType">
+		<xsd:sequence>
+			<xsd:element ref="pat:SPCAuthorization" maxOccurs="unbounded"/>
+			<xsd:element ref="pat:SPCFirstAuthorization" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SPCAuthorizationType">
+		<xsd:sequence>
+			<xsd:element ref="pat:MarketingAuthorizationGeographicCode"/>
+			<xsd:element ref="com:AuthorizationIdentifier"/>
+			<xsd:element ref="com:AuthorizationDate" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="SPCCategory" type="pat:SPCCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of the SPC (Medical, Plant)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+		<xsd:simpleType name="SPCCategoryType">
+			<xsd:restriction base="xsd:token">
+				<xsd:enumeration value="Plant"/>
+				<xsd:enumeration value="Medical"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	
+	<xsd:element name="SPCFilingDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date on which the SPC Request Form is filed, initiating the work that will lead to the grant, withdrawal or refusal of an SPC.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="SPCFirstAuthorization" type="pat:SPCFirstAuthorizationType">
+		<xsd:annotation>
+			<xsd:documentation>The first authorization to place the product in the market where this is not the country in which the authorization is sought</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="SPCFirstAuthorizationType">
+		<xsd:sequence>
+			<xsd:element ref="pat:MarketingAuthorizationGeographicCode"/>
+			<xsd:element ref="com:AuthorizationIdentifier"/>
+			<xsd:element ref="com:AuthorizationDate" minOccurs="0"/>
+			<xsd:element ref="com:ProductDescriptionText" minOccurs="0"/>
+			<xsd:element ref="com:LegalProvisionText" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="SPCNumber" type="com:ApplicationNumberType">
+		<xsd:annotation>
+			<xsd:documentation>The identifier allocated to the SPC.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="SPCTermExtension" type="pat:SPCTermExtensionType">
+		<xsd:annotation>
+			<xsd:documentation>This entity represents an application for an extension to the term of an SPC. It is only permitted for paediatric medicines and has a duration of six months (after the maximum of five years allowed for an SPC).</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="SPCTermExtensionBag" type="pat:SPCTermExtensionBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of extensions requested for the term of an SPC.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="SPCTermExtensionBagType">
+		<xsd:sequence>
+			<xsd:element ref="pat:SPCTermExtension" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="SPCTermExtensionType">
+		<xsd:sequence>
+			<xsd:element ref="com:ReceivingOfficeDate"/>
+			<xsd:element ref="com:ExtensionGrantDate" minOccurs="0"/>
+			<xsd:element ref="pat:ExtensionAuthorizationNumber" minOccurs="0"/>
+			<xsd:element ref="com:ExtensionAuthorizationDate" minOccurs="0"/>
+			<xsd:element ref="com:ExpiryDate" minOccurs="0"/>
+			<xsd:element ref="pat:ExtensionTerminationReasonCategory" minOccurs="0"/>
+			<xsd:element ref="com:ExtensionTerminationDate" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="SuccessorCategory" type="pat:SuccessorCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of the successor e.g. executor, legal heir</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="SuccessorCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Administrator">
+				<xsd:annotation>
+					<xsd:documentation>Administrator</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Administratrix">
+				<xsd:annotation>
+					<xsd:documentation>Administratrix</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Estate">
+				<xsd:annotation>
+					<xsd:documentation>Estate</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Executor">
+				<xsd:annotation>
+					<xsd:documentation>Executor</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Executors">
+				<xsd:annotation>
+					<xsd:documentation>Executors</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Executrix">
+				<xsd:annotation>
+					<xsd:documentation>Executrix</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Heir">
+				<xsd:annotation>
+					<xsd:documentation>Heir</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Heiress">
+				<xsd:annotation>
+					<xsd:documentation>Heiress</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Heirs">
+				<xsd:annotation>
+					<xsd:documentation>Heirs</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Legal heirs">
+				<xsd:annotation>
+					<xsd:documentation>Legal heirs</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Legal representative">
+				<xsd:annotation>
+					<xsd:documentation>Legal representative</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Legal representatives">
+				<xsd:annotation>
+					<xsd:documentation>Legal representatives</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="SuccessorRights" type="pat:SuccessorRightsType">
+		<xsd:annotation>
+			<xsd:documentation>This person is successor to the rights of an inventor who is deceased, insane, or legally incapacitated</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="SuccessorRightsText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:appinfo>PII</xsd:appinfo>
+			<xsd:documentation>Text describing successor rights</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="SuccessorRightsType">
+		<xsd:sequence>
+<xsd:element ref="pat:SuccessorRightsText" minOccurs="0"/>
+<xsd:element ref="pat:SuccessorCategory"/>
+		</xsd:sequence>
+		<xsd:attribute ref="pat:applicantSequenceNumberReference"/>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:idref"/>
+	</xsd:complexType>
+</xsd:schema>

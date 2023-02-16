@@ -1,0 +1,1548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common" xmlns:dgn="http://www.wipo.int/standards/XMLSchema/ST96/Design" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.wipo.int/standards/XMLSchema/ST96/Design" elementFormDefault="qualified" attributeFormDefault="qualified" version="V6_0">
+	<xsd:import namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" schemaLocation="HagueOfficeToIBTransaction_V6_0_Common.xsd"/>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<com:SchemaCreatedDate>2016-10-12</com:SchemaCreatedDate>
+			<com:SchemaLastModifiedDate>2022-10-03</com:SchemaLastModifiedDate>
+			<com:SchemaContactPoint>xml.standards@wipo.int</com:SchemaContactPoint>
+			<com:SchemaReleaseNoteURL>http://www.wipo.int/standards/XMLSchema/ST96/V6_0/ReleaseNotes.pdf</com:SchemaReleaseNoteURL>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="HagueOfficeToIBTransaction" type="dgn:HagueOfficeToIBTransactionType">
+		<xsd:annotation>
+			<xsd:documentation>Hague Office to IB Transaction</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:complexType name="HagueOfficeToIBTransactionType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:HagueOfficeTransactionHeader"/>
+			<xsd:element ref="dgn:HagueOfficeToIBBag"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:st96Version" use="required"/>
+		<xsd:attribute ref="com:ipoVersion"/>
+	</xsd:complexType>
+	
+	<xsd:element name="AffectedDesign" type="dgn:AffectedDesignType">
+		<xsd:annotation>
+			<xsd:documentation>Design affected by the decision, either all designs or enumeration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="AffectedDesignType">
+		<xsd:choice>
+<xsd:element ref="dgn:AllDesignsIndicator"/>
+<xsd:element ref="dgn:DesignIdentifierBag"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:element name="AllDesignsIndicator" type="xsd:boolean" fixed="true">
+		<xsd:annotation>
+			<xsd:documentation>Indicates that the transaction affects all the designs in the international registration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="Amendment" type="com:PhraseType">
+		<xsd:annotation>
+			<xsd:documentation>Indication of amendments when the design was amended in a procedure before the Office</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="Applicant" type="dgn:ApplicantType">
+		<xsd:annotation>
+			<xsd:documentation>Applicant or holder details</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ApplicantBag" type="dgn:ApplicantBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of applicants</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ApplicantBagType">
+		<xsd:choice>
+<xsd:element ref="com:PartyIdentifierBag" maxOccurs="unbounded"/>
+<xsd:element ref="dgn:Applicant" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:element name="ApplicantContractingParty" type="com:ExtendedWIPOST3CodeType">
+		<xsd:annotation>
+			<xsd:documentation>ST3 country code selected among the applicant's entitlement country codes. It may be necessary for some agreements such as the Hague agreement, 1999 Act, for the international registration of industrial designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ApplicantType">
+		<xsd:sequence>
+			<xsd:element ref="com:NationalityCode" minOccurs="0"/>
+			<xsd:element ref="com:LegalEntityName" minOccurs="0"/>
+			<xsd:element ref="com:IncorporationCountryCode" minOccurs="0"/>
+			<xsd:element ref="com:IncorporationState" minOccurs="0"/>
+			<xsd:element ref="com:CommentText" minOccurs="0"/>
+			<xsd:element ref="dgn:Entitlement" minOccurs="0"/>
+			<xsd:element ref="dgn:ApplicantContractingParty" minOccurs="0"/>
+			<xsd:element ref="com:Version" minOccurs="0"/>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="com:PartyIdentifier"/>
+				<xsd:element ref="com:Contact"/>
+				<xsd:element ref="com:PublicationContact"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute ref="com:operationCategory"/>
+		<xsd:attribute ref="com:sequenceNumber"/>
+	</xsd:complexType>
+	
+<xsd:element name="BlackWhiteViewTotalQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>Total number of views in black and white</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="BusinessEntityStatusClaim" type="dgn:BusinessEntityStatusClaimType">
+		<xsd:annotation>
+			<xsd:documentation>A claim made by an applicant to qualify for a reduction of fees based on their economic status</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="BusinessEntityStatusClaimBag" type="dgn:BusinessEntityStatusClaimBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of claims made by an applicant to qualify for a reduction of fees based on their economic status</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="BusinessEntityStatusClaimBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:BusinessEntityStatusClaim" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="BusinessEntityStatusClaimType">
+	<xsd:sequence>
+		<xsd:element ref="com:BusinessEntityStatusCategory"/>
+		<xsd:element ref="com:DesignatedCountryCode"/>
+	</xsd:sequence>
+</xsd:complexType>
+	
+<xsd:element name="ColourViewTotalQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>Total number of views in colour</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DecisionGrounds" type="dgn:DecisionGroundsType">
+		<xsd:annotation>
+			<xsd:documentation>Data which describes the grounds on which the decision has been made</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DecisionGroundsBag" type="dgn:DecisionGroundsBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of grounds for the decision</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="DecisionGroundsBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DecisionGrounds" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="DecisionGroundsCategory" type="dgn:DecisionGroundsCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Indicates the category of grounds for a particular decision. This information is not authoritative and serves only for statistics and classification purposes</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="DecisionGroundsCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Insufficient disclosure">
+				<xsd:annotation>
+					<xsd:documentation>The representation of the design does not disclose sufficiently or adequately the scope for which protection is sought</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Conflicting application or registration">
+				<xsd:annotation>
+					<xsd:documentation>A prior or concurrent application or a prior registration conflicts with the present application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Ambiguous product indication">
+				<xsd:annotation>
+					<xsd:documentation>The product indication is ambiguous</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Lack of novelty">
+				<xsd:annotation>
+					<xsd:documentation>The design does not meet the novelty criteria</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Lack of creativity">
+				<xsd:annotation>
+					<xsd:documentation>The design does not meet the creativity criteria</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Noncompliance with design definition">
+				<xsd:annotation>
+					<xsd:documentation>The represented subject does not meet the legal definition of a design</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Public order">
+				<xsd:annotation>
+					<xsd:documentation>The design is contrary to public order or morality</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Lack of unity">
+				<xsd:annotation>
+					<xsd:documentation>The design does not meet the criteria of unity (of design, of production, of use, etc.)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Other">
+				<xsd:annotation>
+					<xsd:documentation>The ground of refusal is not defined in the Decision Grounds Category</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+			<xsd:element name="DecisionGroundsText" type="com:OrderedTextType">
+				<xsd:annotation>
+							<xsd:appinfo>PII</xsd:appinfo>
+					<xsd:documentation>Text which describes the grounds on which the decision has been made</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+	
+	<xsd:complexType name="DecisionGroundsType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DecisionGroundsText" maxOccurs="unbounded"/>
+			<xsd:element ref="dgn:DecisionGroundsCategory" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DecisionRemedyText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Text which provides instructions on how to follow up on applying this decision</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DecisionRemedyTextBag" type="dgn:DecisionRemedyTextBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of decision remedy text elements</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DecisionRemedyTextBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DecisionRemedyText" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DefermentPeriod" type="com:PeriodType">
+		<xsd:annotation>
+			<xsd:documentation>Requested period of deferment of publication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignApplicationIdentifier" type="com:IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>Application identification number of the registration office</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignatedCountry" type="dgn:DesignatedCountryType">
+		<xsd:annotation>
+			<xsd:documentation>Designated contracting party for international designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignatedCountryBag" type="dgn:DesignatedCountryBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of designated countries for international designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignatedCountryBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignatedCountry" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="DesignatedCountryType">
+		<xsd:sequence>
+<xsd:element ref="com:DesignatedCountryCode"/>
+<xsd:element ref="dgn:HagueAgreementActCategory" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="DesignClaim" type="dgn:DesignClaimType">
+		<xsd:annotation>
+			<xsd:documentation>Matter for which design protection is sought</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DesignClaimBag" type="dgn:DesignClaimBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of design claims</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="DesignClaimBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignClaim" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignClaimText" type="com:OrderedTextType">
+				<xsd:annotation>
+					<xsd:documentation>Description of a claim sought for design protection provided in a particular language</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+	
+	<xsd:element name="DesignClaimTextBag" type="dgn:DesignClaimTextBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of multiple language descriptions for design claims</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="DesignClaimTextBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignClaimText" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="DesignClaimType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignClaimTextBag"/>
+			<xsd:element ref="com:DesignatedCountryCode" minOccurs="0"/>
+			<xsd:element ref="dgn:AffectedDesign" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignDescriptionText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Textual description of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DesignDescriptionTextBag" type="dgn:DesignDescriptionTextBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of design descriptions for multi-language entries</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignDescriptionTextBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignDescriptionText" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="Designer" type="dgn:DesignerType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding the designer or the team of designers</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignerBag" type="dgn:DesignerBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of designers</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignerBagType">
+			<xsd:choice>
+<xsd:element ref="com:PartyIdentifierBag" maxOccurs="unbounded"/>
+<xsd:element ref="dgn:Designer" maxOccurs="unbounded"/>
+			</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="DesignerType">
+		<xsd:sequence>
+			<xsd:element ref="com:NationalityCode" minOccurs="0"/>
+			<xsd:element ref="com:CommentText" minOccurs="0"/>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="com:PartyIdentifier"/>
+				<xsd:element ref="com:Contact"/>
+				<xsd:element ref="com:PublicationContact"/>
+			</xsd:choice>
+			<xsd:element ref="com:ConfidentialIndicator" minOccurs="0"/>
+			<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:operationCategory"/>
+		<xsd:attribute ref="com:sequenceNumber"/>
+	</xsd:complexType>
+	
+<xsd:element name="DesignIdentifier" type="com:IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DesignIdentifierBag" type="dgn:DesignIdentifierBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of identifiers identifying the designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="DesignIdentifierBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignIdentifier" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignRegistrationDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Registration date of the earlier design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignRegistrationIdentifier" type="com:IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of the earlier design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignRepresentation" type="dgn:DesignRepresentationType">
+		<xsd:annotation>
+			<xsd:documentation>Design's graphical representation</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignRepresentationBag" type="dgn:DesignRepresentationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of the design's graphical representation</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignRepresentationBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignRepresentation" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignRepresentationSheet" type="dgn:DesignRepresentationSheetType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding the representation sheet of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignRepresentationSheetBag" type="dgn:DesignRepresentationSheetBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of the design's graphical representation sheets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignRepresentationSheetBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignRepresentationSheet" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="DesignRepresentationSheetType">
+		<xsd:sequence>
+			<xsd:element ref="com:FileName"/>
+			<xsd:element ref="dgn:ViewReferenceText" minOccurs="0"/>
+			<xsd:element ref="com:ImageFormatCategory" minOccurs="0"/>
+			<xsd:element ref="com:ColourIndicator" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="DesignRepresentationType">
+		<xsd:choice>
+<xsd:element ref="dgn:DesignRepresentationSheetBag"/>
+<xsd:element ref="dgn:ViewBag"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:element name="DesignTotalQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>Total number of designs contained in the application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DivisionDesignIdentification" type="dgn:DivisionDesignIdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>Identification of the design that is excluded from the initial international registration, which the applicant decided to file as a separate national application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DivisionDesignIdentificationBag" type="dgn:DivisionDesignIdentificationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of division design identifications</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="DivisionDesignIdentificationBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DivisionDesignIdentification" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="DivisionDesignIdentificationType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignIdentifier"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="com:RegistrationNumber"/>
+				<xsd:element ref="com:ApplicationNumber"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DomesticApplicationRegistrationReference" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Reference to the domestic application or registration resulting from the division of the International Registration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="EarlierDesign" type="dgn:EarlierDesignType">
+		<xsd:annotation>
+			<xsd:documentation>Data on an earlier design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="EarlierDesignBag" type="dgn:EarlierDesignBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of earlier designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="EarlierDesignBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:EarlierDesign" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="EarlierDesignCategory" type="dgn:EarlierDesignCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of earlier design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="EarlierDesignCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Registered design">
+				<xsd:annotation>
+					<xsd:documentation>Registered design</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Unregistered design">
+				<xsd:annotation>
+					<xsd:documentation>Unregistered design</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="EarlierDesignCountryCode" type="com:ExtendedWIPOST3CodeType">
+		<xsd:annotation>
+			<xsd:documentation>Country code of the earlier design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="EarlierDesignType">
+		<xsd:sequence>
+<xsd:element ref="com:ApplicationDate" minOccurs="0"/>
+<xsd:element ref="dgn:DesignRepresentationBag" minOccurs="0"/>
+			<xsd:choice maxOccurs="5">
+<xsd:element ref="dgn:DesignApplicationIdentifier"/>
+<xsd:element ref="dgn:DesignRegistrationIdentifier"/>
+<xsd:element ref="dgn:DesignRegistrationDate"/>
+<xsd:element ref="dgn:EarlierDesignCountryCode"/>
+<xsd:element ref="dgn:EarlierDesignCategory"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="Entitlement" type="dgn:EntitlementType">
+		<xsd:annotation>
+			<xsd:documentation>Information on the nationality, establishment, or domicile of a party</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="EntitlementType">
+		<xsd:choice maxOccurs="unbounded">
+<xsd:element ref="com:EntitlementNationalityCode"/>
+<xsd:element ref="dgn:HabitualResidence"/>
+<xsd:element ref="com:EntitlementEstablishment"/>
+<xsd:element ref="com:EntitlementDomiciled"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:element name="ExceptionLackNoveltyDeclaration" type="dgn:ExceptionLackNoveltyDeclarationType">
+		<xsd:annotation>
+			<xsd:documentation>Declaration concerning exception to lack of novelty</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ExceptionLackNoveltyDeclarationBag" type="dgn:ExceptionLackNoveltyDeclarationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of exception lack novelty declarations</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ExceptionLackNoveltyDeclarationBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:ExceptionLackNoveltyDeclaration" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ExceptionLackNoveltyDeclarationType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignatedCountryBag"/>
+			<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="HabitualResidence" type="dgn:HabitualResidenceType">
+		<xsd:annotation>
+			<xsd:documentation>Data on the Habitual residence of the applicant, transferee or holder</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="HabitualResidenceCode" type="com:ExtendedWIPOST3CodeType">
+		<xsd:annotation>
+			<xsd:documentation>Country code of the habitual residence of the applicant, transferee or holder</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="HabitualResidenceType">
+		<xsd:choice maxOccurs="2">
+<xsd:element ref="dgn:HabitualResidenceCode"/>
+<xsd:element ref="com:Contact"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:element name="HagueAgreementActCategory" type="dgn:HagueAgreementActCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of different Acts of the Hague Agreement concerning the international registration of industrial design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="HagueAgreementActCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Act1999">
+				<xsd:annotation>
+					<xsd:documentation>Hague agreement 1999 Act</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Act1960">
+				<xsd:annotation>
+					<xsd:documentation>Hague agreement 1960 Act</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Act1934">
+				<xsd:annotation>
+					<xsd:documentation>Hague agreement 1934 Act</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="HagueApplication" type="dgn:HagueApplicationType">
+	<xsd:annotation>
+		<xsd:documentation>Application for international registration of industrial design(s) under the Hague System</xsd:documentation>
+	</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="HagueApplicationType">
+		<xsd:sequence>
+			<xsd:element ref="com:IPOfficeCode" minOccurs="0"/>
+			<xsd:element ref="com:ReceivingOfficeDate" minOccurs="0"/>
+			<xsd:element ref="com:ApplicationDateTime" minOccurs="0"/>
+			<xsd:element ref="com:ApplicationLanguageCode"/>
+			<xsd:element ref="com:OfficeReferenceIdentifier" minOccurs="0"/>
+			<xsd:element ref="com:ApplicantFileReference" minOccurs="0"/>
+			<xsd:element ref="dgn:ApplicantBag"/>
+			<xsd:element ref="com:CorrespondenceAddress" minOccurs="0"/>
+			<xsd:element ref="com:Representative" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignTotalQuantity"/>
+			<xsd:element ref="dgn:ViewTotalQuantity"/>
+			<xsd:element ref="dgn:ColourViewTotalQuantity" minOccurs="0"/>
+			<xsd:element ref="dgn:BlackWhiteViewTotalQuantity" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignatedCountryBag"/>
+			<xsd:element ref="dgn:HagueDesignBag"/>
+			<xsd:element ref="dgn:DesignClaimBag" minOccurs="0"/>
+			<xsd:element ref="dgn:ImmediatePublicationIndicator"/>
+			<xsd:element ref="dgn:PublicationDefermentIndicator"/>
+			<xsd:element ref="dgn:DefermentPeriod" minOccurs="0"/>
+			<xsd:element ref="com:LatePaymentRequestIndicator"/>
+			<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+			<xsd:element ref="dgn:BusinessEntityStatusClaimBag" minOccurs="0"/>
+			<xsd:element ref="com:SignatureBag" minOccurs="0"/>
+			<xsd:element ref="com:PaymentBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="HagueCancellationNonPaymentRequest" type="dgn:HagueCancellationNonPaymentRequestType">
+		<xsd:annotation>
+			<xsd:documentation>Request for cancellation of an international registration for non-payment of the second part of the designation fee</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+		<xsd:complexType name="HagueCancellationNonPaymentRequestType">
+			<xsd:sequence>
+<xsd:element ref="com:InternationalRegistrationNumber"/>
+<xsd:element ref="com:OfficeReferenceIdentifier" minOccurs="0"/>
+<xsd:element ref="com:DecisionDate" minOccurs="0"/>
+<xsd:element ref="dgn:AffectedDesign" minOccurs="0"/>
+<xsd:element ref="dgn:HagueDesignBag" minOccurs="0"/>
+<xsd:element ref="com:OfficeSpecificContent" minOccurs="0"/>
+<xsd:element ref="com:SignatureBag" minOccurs="0"/>
+<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	
+	<xsd:element name="HagueDesign" type="dgn:HagueDesignType">
+		<xsd:annotation>
+			<xsd:documentation>Hague data regarding the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="HagueDesignBag" type="dgn:HagueDesignBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="HagueDesignBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:HagueDesign" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="HagueDesignType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignIdentifier"/>
+			<xsd:element ref="dgn:ViewTotalQuantity" minOccurs="0"/>
+<xsd:element ref="com:LocarnoClassificationBag"/>
+<xsd:element ref="com:ProductDescriptionTextBag"/>
+			<xsd:element ref="dgn:DesignDescriptionTextBag" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignerBag" minOccurs="0"/>
+<xsd:element ref="dgn:PriorityBag" minOccurs="0"/>
+			<xsd:element ref="com:ExhibitionPriorityBag" minOccurs="0"/>
+			<xsd:element ref="dgn:ExceptionLackNoveltyDeclarationBag" minOccurs="0"/>
+			<xsd:element ref="dgn:PrincipalDesignRelationBag" minOccurs="0"/>
+			<xsd:element ref="dgn:ViewBag"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="HagueDivision" type="dgn:HagueDivisionType">
+		<xsd:annotation>
+			<xsd:documentation>Reference to the domestic application or registration resulting from the division of the International Registration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="HagueDivisionType">
+		<xsd:sequence>
+			<xsd:element ref="com:InternationalRegistrationNumber"/>
+			<xsd:element ref="com:OfficeReferenceIdentifier" minOccurs="0"/>
+			<xsd:element ref="dgn:AffectedDesign"/>
+			<xsd:element ref="dgn:DivisionDesignIdentificationBag"/>
+			<xsd:element ref="dgn:HagueDesignBag" minOccurs="0"/>
+			<xsd:element ref="dgn:DomesticApplicationRegistrationReference" minOccurs="0"/>
+			<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+			<xsd:element ref="com:OfficeSpecificContent" minOccurs="0"/>
+			<xsd:element ref="com:SignatureBag" minOccurs="0"/>
+			<xsd:element ref="com:CommentText" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="HagueGenericOfficeCommunication" type="dgn:HagueGenericOfficeCommunicationType">
+		<xsd:annotation>
+			<xsd:documentation>Generic communication to allow IP Offices to send to IB when dedicated transactions cannot be used or are not defined</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="HagueGenericOfficeCommunicationCategory" type="dgn:HagueGenericOfficeCommunicationCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>List of communications from Office to IB. A value can be added, on demand, if the required value is missing</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="HagueGenericOfficeCommunicationCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Application">
+				<xsd:annotation>
+					<xsd:documentation>International design application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Grant protection">
+				<xsd:annotation>
+					<xsd:documentation>Statement of grant of protection to indicate that the international registration produces legal effects</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Refusal">
+				<xsd:annotation>
+					<xsd:documentation>Notification of refusal of the effects of an international registration</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Refusal withdrawal">
+				<xsd:annotation>
+					<xsd:documentation>Refusal withdrawal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Invalidation">
+				<xsd:annotation>
+					<xsd:documentation>Notification that the effects of an international registration are invalidated and that the invalidation is no longer subject to any review or appeal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Division">
+				<xsd:annotation>
+					<xsd:documentation>Notification that the international registration is divided before the Office in order to overcome a ground of refusal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Second part fee payable">
+				<xsd:annotation>
+					<xsd:documentation>Second part fee payable</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Second part fee paid">
+				<xsd:annotation>
+					<xsd:documentation>Second part fee paid</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cancellation non payment">
+				<xsd:annotation>
+					<xsd:documentation>Cancellation non payment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Refusal owner change">
+				<xsd:annotation>
+					<xsd:documentation>Declaration that a change in ownership (transfer/assignment) recorded in the International Register has no effect with respect to the Contracting Party</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Refusal withdrawal owner change">
+				<xsd:annotation>
+					<xsd:documentation>Withdrawal of a refusal of change in ownership (transfer/assignment)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Refusal correction">
+				<xsd:annotation>
+					<xsd:documentation>Notification of refusal of the effects of a correction recorded in the International Register</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Refusal correction withdrawal">
+				<xsd:annotation>
+					<xsd:documentation>Withdrawal of a refusal of correction to allow a correction previously refused to finally take effect</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Other">
+				<xsd:annotation>
+					<xsd:documentation>Other</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="HagueGenericOfficeCommunicationType">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element ref="com:InternationalRegistrationNumber"/>
+				<xsd:element ref="com:OfficeReferenceIdentifier"/>
+			</xsd:choice>
+			<xsd:element ref="dgn:HagueGenericOfficeCommunicationCategory"/>
+			<xsd:element ref="dgn:AffectedDesign" minOccurs="0"/>
+			<xsd:element ref="dgn:HagueDesignBag" minOccurs="0"/>
+			<xsd:element ref="com:DecisionEffectiveDate" minOccurs="0"/>
+			<xsd:element ref="dgn:DecisionGroundsBag" minOccurs="0"/>
+			<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+			<xsd:element ref="com:OfficeSpecificContent" minOccurs="0"/>
+			<xsd:element ref="com:SignatureBag" minOccurs="0"/>
+			<xsd:element ref="com:CommentText" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="HagueGrantProtectionRequest" type="dgn:HagueGrantProtectionRequestType">
+		<xsd:annotation>
+			<xsd:documentation>Statement to the effect that protection is granted to some or all of the designs contained in the international registration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="HagueGrantProtectionRequestType">
+		<xsd:sequence>
+			<xsd:element ref="com:InternationalRegistrationNumber"/>
+			<xsd:element ref="com:InternationalFilingDate" minOccurs="0"/>
+			<xsd:element ref="com:RecordIdentifier" minOccurs="0"/>
+			<xsd:element ref="com:OfficeReferenceIdentifier" minOccurs="0"/>
+			<xsd:element ref="com:DecisionDate"/>
+			<xsd:element ref="com:DecisionEffectiveDate"/>
+			<xsd:element ref="dgn:AffectedDesign"/>
+			<xsd:element ref="dgn:HagueDesignBag" minOccurs="0"/>
+			<xsd:element ref="dgn:HolderBag" minOccurs="0"/>
+			<xsd:element ref="dgn:Amendment" minOccurs="0"/>
+			<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+			<xsd:element ref="com:OfficeSpecificContent" minOccurs="0"/>
+			<xsd:element ref="com:SignatureBag" minOccurs="0"/>
+			<xsd:element ref="com:CommentText" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="dgn:priorRefusalIndicator"/>
+	</xsd:complexType>
+	
+	<xsd:element name="HagueInvalidationRequest" type="dgn:HagueInvalidationRequestType">
+		<xsd:annotation>
+			<xsd:documentation>Invalidation of international registration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+		<xsd:complexType name="HagueInvalidationRequestType">
+			<xsd:sequence>
+<xsd:element ref="com:InternationalRegistrationNumber"/>
+<xsd:element ref="com:RecordIdentifier" minOccurs="0"/>
+<xsd:element ref="com:OfficeReferenceIdentifier" minOccurs="0"/>
+<xsd:element ref="com:DecisionDate"/>
+<xsd:element ref="com:DecisionEffectiveDate"/>
+<xsd:element ref="dgn:AffectedDesign"/>
+<xsd:element ref="dgn:HagueDesignBag" minOccurs="0"/>
+<xsd:element ref="dgn:DecisionRemedyTextBag" minOccurs="0"/>
+<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+<xsd:element ref="com:OfficeSpecificContent" minOccurs="0"/>
+<xsd:element ref="com:SignatureBag" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	
+<xsd:element name="HagueOfficeToIBBag" type="dgn:HagueOfficeToIBBagType">
+		<xsd:annotation>
+			<xsd:documentation>Electronic communication under Hague system from Office to IB</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="HagueOfficeToIBBagType">
+			<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="dgn:HagueApplication"/>
+			<xsd:element ref="dgn:HagueGrantProtectionRequest"/>
+			<xsd:element ref="dgn:HagueRefusalRequest"/>
+			<xsd:element ref="dgn:HagueRefusalWithdrawalRequest"/>
+			<xsd:element ref="dgn:HagueInvalidationRequest"/>
+			<xsd:element ref="dgn:HagueDivision"/>
+			<xsd:element ref="dgn:HagueSecondPartFeePayable"/>
+			<xsd:element ref="dgn:HagueSecondPartFeePaid"/>
+			<xsd:element ref="dgn:HagueCancellationNonPaymentRequest"/>
+			<xsd:element ref="dgn:HagueGenericOfficeCommunication"/>
+			</xsd:choice>
+		</xsd:complexType>
+	
+	<xsd:element name="HagueOfficeTransactionCategory" type="dgn:HagueOfficeTransactionCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>List of Hague transaction from Office to IB</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="HagueOfficeTransactionCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Application">
+				<xsd:annotation>
+					<xsd:documentation>Application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Grant protection">
+				<xsd:annotation>
+					<xsd:documentation>Grant protection</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Refusal">
+				<xsd:annotation>
+					<xsd:documentation>Refusal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+				<xsd:enumeration value="Refusal withdrawal">
+				<xsd:annotation>
+					<xsd:documentation>Refusal withdrawal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Invalidation">
+				<xsd:annotation>
+					<xsd:documentation>Invalidation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Division">
+				<xsd:annotation>
+					<xsd:documentation>Division</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Second part fee payable">
+				<xsd:annotation>
+					<xsd:documentation>Second part fee payable</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Second part fee paid">
+				<xsd:annotation>
+					<xsd:documentation>Second part fee paid</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cancellation non payment">
+				<xsd:annotation>
+					<xsd:documentation>Cancellation non payment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Generic office communication">
+				<xsd:annotation>
+					<xsd:documentation>Generic office communication</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="HagueOfficeTransactionCount" type="dgn:HagueOfficeTransactionCountType">
+		<xsd:annotation>
+			<xsd:documentation>Hague office to IB transaction count</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="HagueOfficeTransactionCountBag" type="dgn:HagueOfficeTransactionCountBagType">
+		<xsd:annotation>
+			<xsd:documentation>A collection of transaction count</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="HagueOfficeTransactionCountBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:HagueOfficeTransactionCount" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="HagueOfficeTransactionCountType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:HagueOfficeTransactionCategory"/>
+			<xsd:element ref="com:TransactionTotalQuantity" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="HagueOfficeTransactionHeader" type="dgn:HagueOfficeTransactionHeaderType">
+			<xsd:annotation>
+			<xsd:documentation>Data concerning the entire Hague Office to IB transaction</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="HagueOfficeTransactionHeaderType">
+		<xsd:sequence>
+			<xsd:element ref="com:IPOfficeCode" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:element ref="com:RequestDate"/>
+				<xsd:element ref="com:RequestDateTime"/>
+			</xsd:choice>
+			<xsd:element ref="com:TransactionTotalQuantity"/>
+			<xsd:element ref="dgn:HagueOfficeTransactionCountBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="HagueRefusalRequest" type="dgn:HagueRefusalRequestType">
+		<xsd:annotation>
+			<xsd:documentation>Notification of refusal of the effects of an international registration with regards to some or all of the designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="HagueRefusalRequestType">
+		<xsd:sequence>
+			<xsd:element ref="com:InternationalRegistrationNumber"/>
+			<xsd:element ref="com:InternationalFilingDate" minOccurs="0"/>
+			<xsd:element ref="com:RecordIdentifier" minOccurs="0"/>
+			<xsd:element ref="com:OfficeReferenceIdentifier" minOccurs="0"/>
+			<xsd:element ref="com:DecisionDate"/>
+			<xsd:element ref="dgn:AffectedDesign"/>
+			<xsd:element ref="dgn:HagueDesignBag" minOccurs="0"/>
+			<xsd:element ref="dgn:DecisionGroundsBag" minOccurs="0"/>
+			<xsd:element ref="dgn:EarlierDesignBag" minOccurs="0"/>
+			<xsd:element ref="com:LegalProvisionText" minOccurs="0"/>
+			<xsd:element ref="dgn:DecisionRemedyTextBag" minOccurs="0"/>
+			<xsd:element ref="com:DocumentIncludedBag"/>
+			<xsd:element ref="com:OfficeSpecificContent" minOccurs="0"/>
+			<xsd:element ref="com:SignatureBag" minOccurs="0"/>
+			<xsd:element ref="com:CommentText" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="HagueRefusalWithdrawalRequest" type="dgn:HagueRefusalWithdrawalRequestType">
+		<xsd:annotation>
+			<xsd:documentation>Withdrawal of a refusal of the effects of an international registration with regards to some or all of the designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+		<xsd:complexType name="HagueRefusalWithdrawalRequestType">
+		<xsd:sequence>
+<xsd:element ref="com:InternationalRegistrationNumber"/>
+<xsd:element ref="com:RecordIdentifier" minOccurs="0"/>
+<xsd:element ref="com:OfficeReferenceIdentifier" minOccurs="0"/>
+<xsd:element ref="dgn:AffectedDesign"/>
+<xsd:element ref="dgn:HagueDesignBag" minOccurs="0"/>
+<xsd:element ref="com:DecisionDate"/>
+<xsd:element ref="com:DecisionEffectiveDate"/>
+<xsd:element ref="dgn:Amendment" minOccurs="0"/>
+<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+<xsd:element ref="com:OfficeSpecificContent" minOccurs="0"/>
+<xsd:element ref="com:SignatureBag" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	
+<xsd:element name="HagueSecondPartFeePaid" type="dgn:HagueSecondPartFeePaidType">
+		<xsd:annotation>
+			<xsd:documentation>Notification that the second part of the designation fee has been paid to the Office with respect to an international registration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+		<xsd:complexType name="HagueSecondPartFeePaidType">
+			<xsd:sequence>
+<xsd:element ref="com:InternationalRegistrationNumber"/>
+<xsd:element ref="com:RecordIdentifier" minOccurs="0"/>
+<xsd:element ref="com:OfficeReferenceIdentifier" minOccurs="0"/>
+<xsd:element ref="dgn:DesignatedCountry"/>
+<xsd:element ref="com:PaymentDate"/>
+<xsd:element ref="com:FeeCalculationDate"/>
+<xsd:element ref="dgn:AffectedDesign" minOccurs="0"/>
+<xsd:element ref="dgn:HagueDesignBag" minOccurs="0"/>
+<xsd:element ref="com:OfficeSpecificContent" minOccurs="0"/>
+<xsd:element ref="com:SignatureBag" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	
+<xsd:element name="HagueSecondPartFeePayable" type="dgn:HagueSecondPartFeePayableType">
+		<xsd:annotation>
+			<xsd:documentation>Notification that the second part of the designation fee is ready to be paid with respect to an international registration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+		<xsd:complexType name="HagueSecondPartFeePayableType">
+			<xsd:sequence>
+<xsd:element ref="com:InternationalRegistrationNumber"/>
+<xsd:element ref="com:OfficeReferenceIdentifier" minOccurs="0"/>
+<xsd:element ref="dgn:AffectedDesign" minOccurs="0"/>
+<xsd:element ref="com:PaymentDueDate" minOccurs="0"/>
+<xsd:element ref="dgn:HagueDesignBag" minOccurs="0"/>
+<xsd:element ref="com:DecisionEffectiveDate"/>
+<xsd:element ref="com:BusinessEntityStatusCategory" minOccurs="0"/>
+<xsd:element ref="com:OfficeSpecificContent" minOccurs="0"/>
+<xsd:element ref="com:SignatureBag" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	
+<xsd:element name="Holder" type="dgn:ApplicantType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding the holder of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="HolderBag" type="dgn:HolderBagType">
+		<xsd:annotation>
+			<xsd:documentation>A collection of the holders of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="HolderBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:Holder" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="ImmediatePublicationIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication of requesting the immediate publication of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="PrincipalDesignCategory" type="dgn:PrincipalDesignCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Types of documents in which the principal design can be found</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="PrincipalDesignCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Current application">
+				<xsd:annotation>
+					<xsd:documentation>Current application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="International application">
+				<xsd:annotation>
+					<xsd:documentation>International application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="International registration">
+				<xsd:annotation>
+					<xsd:documentation>International registration</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National or regional application">
+				<xsd:annotation>
+					<xsd:documentation>National or regional application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National or regional registration">
+				<xsd:annotation>
+					<xsd:documentation>National or regional registration</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="PrincipalDesignReference" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Reference to the specific design contained in the document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="PrincipalDesignRelation" type="dgn:PrincipalDesignRelationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Type of relation to a principal design. When the principal design is set to "Current application" in a dgn:HagueApplication, the value of com:OfficeReferenceIdentifier should be used to as the value for com:DocumentIdentifier. When the principal design is set to "Current application" in a dgn:HagueRegistration, the value of com:InternationalRegistrationNumber should be used as the value for com:DocumentIdentifier
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="PrincipalDesignRelationBag" type="dgn:PrincipalDesignRelationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of principal design relations</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="PrincipalDesignRelationBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:PrincipalDesignRelation" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PrincipalDesignRelationType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignatedCountryBag" maxOccurs="unbounded"/>
+			<xsd:element ref="dgn:PrincipalDesignCategory"/>
+			<xsd:element ref="com:DocumentIdentifier"/>
+			<xsd:element ref="dgn:PrincipalDesignReference" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="Priority" type="dgn:PriorityType">
+		<xsd:annotation>
+			<xsd:documentation>Priority claimed under the Paris Convention</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PriorityBag" type="dgn:PriorityBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of priorities</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PriorityBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:Priority" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="PriorityType">
+		<xsd:sequence>
+<xsd:element ref="com:PriorityCountryCode"/>
+<xsd:element ref="com:ApplicationNumber" minOccurs="0"/>
+<xsd:element ref="com:PriorityApplicationFilingDate"/>
+			<xsd:element ref="com:DASAccessCode" minOccurs="0"/>
+<xsd:element ref="com:PriorityHolderName" minOccurs="0"/>
+<xsd:element ref="com:PriorityStatusCategory" minOccurs="0"/>
+<xsd:element ref="com:PriorityStatusDate" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+<xsd:element ref="com:PriorityDocument" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:attribute name="priorRefusalIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication of whether the decision follows a refusal or not. If true, the decision follows a refusal, if false, the decision does not follow a refusal</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:element name="PublicationDefermentIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication of deferment of publication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="RepresentationFormCategory" type="dgn:RepresentationFormCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of view such as image, drawing or photograph</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="RepresentationFormCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Image">
+				<xsd:annotation>
+					<xsd:documentation>Image</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Drawing">
+				<xsd:annotation>
+					<xsd:documentation>Drawing</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Photograph">
+				<xsd:annotation>
+					<xsd:documentation>Photograph</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="View" type="dgn:ViewType">
+		<xsd:annotation>
+			<xsd:documentation>A view, representation or reproduction of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ViewBag" type="dgn:ViewBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of design views</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ViewBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:View" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="ViewClassification" type="dgn:ViewClassificationType">
+		<xsd:annotation>
+			<xsd:documentation>List of figurative elements to which the design view belongs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ViewClassificationType">
+		<xsd:sequence>
+			<xsd:element ref="com:FigurativeElementClassificationBag" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="ViewFileFormatCategory" type="dgn:ViewFileFormatCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Kind of digital file format of the design view</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="ViewFileFormatCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="JPEG">
+				<xsd:annotation>
+					<xsd:documentation>JPEG</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TIFF">
+				<xsd:annotation>
+					<xsd:documentation>TIFF</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PNG">
+				<xsd:annotation>
+					<xsd:documentation>PNG</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GIF">
+				<xsd:annotation>
+					<xsd:documentation>GIF</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SVG">
+				<xsd:annotation>
+					<xsd:documentation>Scalable vector graphics image</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ThreeDS">
+				<xsd:annotation>
+					<xsd:documentation>3D Studio</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DWG">
+				<xsd:annotation>
+					<xsd:documentation>Drawing</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DWF">
+				<xsd:annotation>
+					<xsd:documentation>Design Web Format</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IGES">
+				<xsd:annotation>
+					<xsd:documentation>Initial Graphic Exchange Specification</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ThreeDM">
+				<xsd:annotation>
+					<xsd:documentation>Three-Dimensional Modeling</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SWF">
+				<xsd:annotation>
+					<xsd:documentation>Small Web Format</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MPEG">
+				<xsd:annotation>
+					<xsd:documentation>Moving Picture Experts Group</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="WMV">
+				<xsd:annotation>
+					<xsd:documentation>Windows Media Video</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="ViewIdentifier" type="com:IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>View identification number</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ViewReferenceText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Reference to views which are contained in the representation sheet, such as numbering of representation and type of view of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ViewTotalQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>Total number of views (reproductions) representing a design or that are contained in a design application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ViewType">
+		<xsd:sequence>
+			<xsd:element ref="com:FileName"/>
+			<xsd:element ref="com:ThumbnailFileName" minOccurs="0"/>
+			<xsd:element ref="dgn:ViewIdentifier"/>
+			<xsd:element ref="dgn:ViewFileFormatCategory" minOccurs="0"/>
+			<xsd:element ref="com:Caption" minOccurs="0"/>
+			<xsd:element ref="com:ColourIndicator" minOccurs="0"/>
+			<xsd:element ref="dgn:RepresentationFormCategory" minOccurs="0"/>
+			<xsd:element ref="dgn:ViewClassification" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="dgn:ViewTypeCategory"/>
+				<xsd:element ref="dgn:ViewTypeTextBag"/>
+			</xsd:choice>
+			<xsd:element ref="com:HeightMeasure" minOccurs="0"/>
+			<xsd:element ref="com:WidthMeasure" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="ViewTypeCategory" type="dgn:ViewTypeCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category to indicate a type of view of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="ViewTypeCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Perspective">
+			<xsd:annotation>
+			<xsd:documentation>This is the view of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person in a direction that is not aligned with any of the axes of a chosen 3-dimension Cartesian coordinate system. The image should have been obtained by perspective projection or orthographic projection.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Front">
+			<xsd:annotation>
+			<xsd:documentation>This is one of the principal views of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person in front of the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is the positive direction of the x-axis of a chosen 3-dimension Cartesian coordinate system.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Back">
+			<xsd:annotation>
+			<xsd:documentation>This is one of the principal views of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person behind the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is the negative direction of the x-axis of a chosen 3-dimension Cartesian coordinate system.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Top">
+			<xsd:annotation>
+			<xsd:documentation>This is one of the principal views of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person above the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is the positive direction of the z-axis of a chosen 3-dimension Cartesian coordinate system.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Bottom">
+			<xsd:annotation>
+			<xsd:documentation>This is one of the principal views of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person below the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is the negative direction of the z-axis of a chosen 3-dimension Cartesian coordinate system.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Left">
+			<xsd:annotation>
+			<xsd:documentation>This is one of the principal views of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person on the left side of the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is the negative direction of the y-axis of a chosen 3-dimension Cartesian coordinate system.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Right">
+			<xsd:annotation>
+			<xsd:documentation>This is one of the principal views of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person on the right side of the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is the positive direction of the y-axis of a chosen 3-dimension Cartesian coordinate system.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Isometric">
+			<xsd:annotation>
+			<xsd:documentation>This is an orthographic view of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person in a special direction. The projection direction is such that the three axes of the chosen 3-dimension Cartesian coordinate system would be projected into three vectors with the same origin and 120-degree from each other on the projection plane.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Reference">
+			<xsd:annotation>
+			<xsd:documentation>This is a view used for understanding, which generally includes matter for which protection is not sought.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Unfolded">
+			<xsd:annotation>
+			<xsd:documentation>This is a 2-dimensional view of the 3-dimensional object as if it had been unfolded into a 2-dimensional object.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Exploded"> 
+			<xsd:annotation>
+			<xsd:documentation>This is a view that displays the components of a 3-dimensional object separated by an equal distance, as if a controlled explosion had separated them from their initial position.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cross sectional">
+			<xsd:annotation>
+			<xsd:documentation>This is a view of a 3-dimensional object from the position of a plane through the object, commonly used to show internal features of a design</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Enlarged"> 
+			<xsd:annotation>
+			<xsd:documentation>This is a view representing a detail of the design displayed in a different scale from that of main views.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Front Surface">
+			<xsd:annotation>
+			<xsd:documentation>This is the view of a 2-dimensional object, representing the 2-dimensional image that could be sensed by a person in front of the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is perpendicular to the object plane.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Back Surface">
+			<xsd:annotation>
+			<xsd:documentation>This is the view of a 2-dimensional object, representing the 2-dimensional image that could be sensed by a person behind the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is perpendicular to the object plane.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Representative typeface">
+			<xsd:annotation>
+			<xsd:documentation>Representative characters, numbers and/or symbols that best represent the characteristics of the typeface</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Example typeface">
+			<xsd:annotation>
+			<xsd:documentation>Example words, expressions, sentences and/or drawings composed of characters, numbers and/or symbols in the typeface</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Typeface set">
+			<xsd:annotation>
+			<xsd:documentation>The set of designated characters, numbers and/or symbols in the corresponding typeface that forms the typeface design</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="ViewTypeText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Text identifying a view type which does not fit into a known view type category</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ViewTypeTextBag" type="dgn:ViewTypeTextBagType">
+		<xsd:annotation>
+			<xsd:documentation>A collection of view type text for multiple language support</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ViewTypeTextBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:ViewTypeText" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

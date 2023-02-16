@@ -1,0 +1,2270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common" xmlns:gin="http://www.wipo.int/standards/XMLSchema/ST96/GeographicalIndication" xmlns:tmk="http://www.wipo.int/standards/XMLSchema/ST96/Trademark" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.wipo.int/standards/XMLSchema/ST96/GeographicalIndication" elementFormDefault="qualified" attributeFormDefault="qualified" version="V6_0">
+	<xsd:import namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" schemaLocation="GIN_TransactionContentBag_V6_0_Common.xsd"/>
+	<xsd:import namespace="http://www.wipo.int/standards/XMLSchema/ST96/Trademark" schemaLocation="GIN_TransactionContentBag_V6_0_Trademark.xsd"/>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<com:SchemaCreatedDate>2017-08-17</com:SchemaCreatedDate>
+			<com:SchemaLastModifiedDate>2022-10-03</com:SchemaLastModifiedDate>
+			<com:SchemaContactPoint>xml.standards@wipo.int</com:SchemaContactPoint>
+			<com:SchemaReleaseNoteURL>http://www.wipo.int/standards/XMLSchema/ST96/V6_0/ReleaseNotes.pdf</com:SchemaReleaseNoteURL>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="TransactionContentBag" type="gin:TransactionContentBagType">
+		<xsd:annotation>
+			<xsd:documentation>Details of the contents of a geographical indication transaction</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:complexType name="TransactionContentBagType">
+		<xsd:sequence>
+			<xsd:element ref="com:TransactionIdentifier"/>
+			<xsd:element ref="com:TransactionCategory"/>
+			<xsd:element ref="com:TransactionSubCode"/>
+			<xsd:element ref="gin:TransactionData"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:st96Version" use="required"/>
+		<xsd:attribute ref="com:ipoVersion"/>
+	</xsd:complexType>
+	
+	<xsd:element name="AccreditationCategory" type="gin:AccreditationCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Indicates the type of accreditation</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="AccreditationCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Accreditation type">
+				<xsd:annotation>
+					<xsd:documentation>Accreditation type</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="AccreditationDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Accreditation date</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="AffectedProductText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Heading in the product specification affected by the amendment</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="AnimalOriginDescriptionText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Additional information related to animal origin</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="AnimalOriginOnlyIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Product of animal origin only indicator</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="Applicant" type="gin:ApplicantType">
+		<xsd:annotation>
+			<xsd:documentation>Applicant</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+		<xsd:element name="ApplicantBag" type="gin:ApplicantBagType">
+		<xsd:annotation>
+			<xsd:documentation>A collection of Applicants</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ApplicantBagType">
+		<xsd:sequence>
+			<xsd:element ref="gin:Applicant" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ApplicantType">
+		<xsd:sequence>
+			<xsd:element ref="com:PartyIdentifier" minOccurs="0"/>
+			<xsd:choice maxOccurs="2">
+				<xsd:element ref="com:Contact"/>
+				<xsd:element ref="com:PublicationContact"/>
+			</xsd:choice>
+			<xsd:element ref="com:NationalityCode" minOccurs="0"/>
+			<xsd:element ref="com:ResidenceCountryCode" minOccurs="0"/>
+			<xsd:element ref="gin:InterestedPartyJustificationText" minOccurs="0"/>
+			<xsd:sequence>
+				<xsd:element ref="gin:ProducerIdentifier" minOccurs="0"/>
+				<xsd:element ref="gin:ProcessorIdentifier" minOccurs="0"/>
+				<xsd:element ref="gin:GroupIdentifier" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:sequence minOccurs="0">
+				<xsd:element ref="gin:AccreditationCategory"/>
+				<xsd:element ref="gin:AccreditationDate"/>
+			</xsd:sequence>
+		</xsd:sequence>
+		<xsd:attribute ref="com:sequenceNumber"/>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="AuthorizedUser" type="gin:AuthorizedUserType">
+		<xsd:annotation>
+			<xsd:documentation>The authorized user is considered to be the beneficiary or the holder of the geographical indication.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="AuthorizedUserCategory" type="gin:AuthorizedUserCategoryType">
+							<xsd:annotation>
+								<xsd:documentation>Authorized user category.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+	
+	<xsd:simpleType name="AuthorizedUserCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Producer">
+				<xsd:annotation>
+					<xsd:documentation>Producer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Dealer">
+				<xsd:annotation>
+					<xsd:documentation>Dealer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Manufacturer">
+				<xsd:annotation>
+					<xsd:documentation>Manufacturer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Trader">
+				<xsd:annotation>
+					<xsd:documentation>Trader</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Exporter">
+				<xsd:annotation>
+					<xsd:documentation>Exporter</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Other">
+				<xsd:annotation>
+					<xsd:documentation>Other</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="AuthorizedUserStatusCategory" type="gin:AuthorizedUserStatusCategoryType">
+							<xsd:annotation>
+								<xsd:documentation>Authorized user status category.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+	
+	<xsd:simpleType name="AuthorizedUserStatusCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Pending">
+				<xsd:annotation>
+					<xsd:documentation>Pending</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Valid">
+				<xsd:annotation>
+					<xsd:documentation>Valid</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Ended">
+				<xsd:annotation>
+					<xsd:documentation>Ended</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+				<xsd:complexType name="AuthorizedUserType">
+					<xsd:sequence>
+						<xsd:element ref="com:Contact"/>
+						<xsd:element ref="gin:AuthorizedUserStatusCategory" minOccurs="0"/>
+						<xsd:element ref="gin:AuthorizedUserCategory" minOccurs="0"/>
+					</xsd:sequence>
+					<xsd:attribute ref="com:id"/>
+				</xsd:complexType>
+	
+	<xsd:element name="CancellationCategory" type="gin:CancellationCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>GI cancellation category.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="CancellationCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Full">
+				<xsd:annotation>
+					<xsd:documentation>Full</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Partial">
+				<xsd:annotation>
+					<xsd:documentation>Partial</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Other">
+				<xsd:annotation>
+					<xsd:documentation>Other</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="CancellationDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Cancellation date</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="CausalInteractionText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Geographic area causal interaction</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="Certificate" type="gin:CertificateType">
+		<xsd:annotation>
+			<xsd:documentation>Document issued by an authority, which confirms the characteristic qualities of the geographical environment, including natural or human factors or both.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="CertificateBag" type="gin:CertificateBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of documents, issued by an authority, which confirms the characteristic qualities of the geographical environment, including natural or human factors or both</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="CertificateBagType">
+		<xsd:sequence>
+			<xsd:element ref="gin:Certificate" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="CertificateType">
+		<xsd:sequence>
+			<xsd:element ref="com:DocumentIdentifier"/>
+			<xsd:element ref="com:DocumentDate"/>
+			<xsd:element ref="com:DocumentName"/>
+			<xsd:element ref="com:OrganizationName"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="CertifiedCopyIndicator" type="xsd:boolean">
+				<xsd:annotation>
+					<xsd:documentation>Indicates if the map is a certified copy</xsd:documentation>
+				</xsd:annotation>
+				</xsd:element>
+	
+	<xsd:element name="ChangeRecordCategory" type="gin:ChangeRecordCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of the recorded changes</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="ChangeRecordCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Name and_or address change">
+				<xsd:annotation>
+					<xsd:documentation>Name and/or address change</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Transfer">
+				<xsd:annotation>
+					<xsd:documentation>Transfer of rights</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Other changes">
+				<xsd:annotation>
+					<xsd:documentation>Other changes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="ChangeSourceCategory" type="gin:ChangeSourceCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Initiator or source of the recorded changes</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="ChangeSourceCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Judicial action">
+				<xsd:annotation>
+					<xsd:documentation>Based on judicial action</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Office">
+				<xsd:annotation>
+					<xsd:documentation>Initiated by the IPO</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Applicant">
+				<xsd:annotation>
+					<xsd:documentation>Based on applicant's request</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Holder">
+				<xsd:annotation>
+					<xsd:documentation>Based on holder's request</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Other">
+				<xsd:annotation>
+					<xsd:documentation>Other</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="CompetentAuthorityText" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>Competent Authority</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+	
+	<xsd:element name="ConformityDeclarationText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Declaration of conformity in Member States of an international or regional union (i.e. EU)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ContractingPartyOriginCode" type="com:ExtendedWIPOST3CodeType">
+		<xsd:annotation>
+			<xsd:documentation>Country of origin or contracting party of origin</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="CrossBorderIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication of a cross border and multiple countries GI</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DelimitedGeographicAreaSpecificProcessingRuleIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Slicing, bottling, grating or packaging to take place only in the delimited geographical area indicator</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DemarcatedAreaDescriptionText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Demarcated area(s)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="FeatureDescription" type="gin:FeatureDescriptionType">
+		<xsd:annotation>
+			<xsd:documentation>Description of the features of product or service</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="FeatureDescriptionBag" type="gin:FeatureDescriptionBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of descriptions of the features of product or service</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="FeatureDescriptionBagType">
+		<xsd:sequence>
+			<xsd:element ref="gin:FeatureDescription" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="FeatureDescriptionText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>General description of unique features of the product (special characteristics and quality)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="FeatureDescriptionType">
+		<xsd:sequence>
+			<xsd:sequence>
+				<xsd:choice>
+					<xsd:sequence>
+						<xsd:element ref="gin:MainFeatureDescriptionText"/>
+						<xsd:element ref="gin:ProductionDescriptionText"/>
+					</xsd:sequence>
+					<xsd:element ref="gin:FeatureDescriptionText"/>
+				</xsd:choice>
+				<xsd:element ref="gin:UniquenessText" minOccurs="0"/>
+				<xsd:element ref="gin:OriginProofText" minOccurs="0"/>
+				<xsd:element ref="gin:ProductPhysicalCharacteristicText" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="gin:ProductOrganolepticCharacteristicText" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="gin:ProductChemicalCharacteristicText" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="gin:ProductMaterialText" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="gin:ProductProcessingRuleText" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="gin:ProductLabelingRuleText" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element ref="gin:SpecificProcessingRuleIndicator" minOccurs="0"/>
+				<xsd:element ref="gin:SpecificLabelingRuleIndicator" minOccurs="0"/>
+				<xsd:element ref="gin:DelimitedGeographicAreaSpecificProcessingRuleIndicator" minOccurs="0"/>
+				<xsd:element ref="gin:MountainProductIndicator" minOccurs="0"/>
+				<xsd:element ref="gin:AnimalOriginOnlyIndicator" minOccurs="0"/>
+				<xsd:element ref="gin:AnimalOriginDescriptionText" minOccurs="0"/>
+				<xsd:element ref="gin:FoodFeedSourceIndicator" minOccurs="0"/>
+				<xsd:element ref="gin:FeedDescriptionText" minOccurs="0"/>
+				<xsd:element ref="gin:ProductAnalyticCharacteristicText" minOccurs="0"/>
+				<xsd:element ref="gin:ProductOenologicalPracticeText" minOccurs="0"/>
+				<xsd:element ref="gin:ProductMaximumAcidity" minOccurs="0"/>
+				<xsd:element ref="gin:ProductMinimumAcidity" minOccurs="0"/>
+				<xsd:element ref="gin:ProductMaximumAlcoholStrength" minOccurs="0"/>
+				<xsd:element ref="gin:ProductMinimumAlcoholStrength" minOccurs="0"/>
+				<xsd:element ref="gin:ProductionMaximumAmount" minOccurs="0"/>
+				<xsd:element ref="gin:ProductSpecificationPublication" minOccurs="0"/>
+				<xsd:element ref="gin:ProductSpiritRequirementText" minOccurs="0"/>
+				<xsd:element ref="gin:RawMaterialDescriptionText" minOccurs="0"/>
+				<xsd:element ref="gin:RawMaterialOnlySourceIndicator" minOccurs="0"/>
+				<xsd:element ref="gin:RawMaterialOriginRestrictionIndicator" minOccurs="0"/>
+				<xsd:element ref="gin:RawMaterialQualityRequirementIndicator" minOccurs="0"/>
+				<xsd:element ref="gin:SameCategoryProductSpecificCharacteristicText" minOccurs="0"/>
+				<xsd:element ref="gin:QualityProduct" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:element ref="com:Image" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Collection of the images describing the geographical indication</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute ref="com:languageCode"/>
+	</xsd:complexType>
+	
+	<xsd:element name="FeedDescriptionText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Feed description (for products of animal origin only)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="FoodFeedSourceIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Food feed sourced in the geographical area indicator</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="GeographicRegionDescription" type="gin:GeographicRegionDescriptionType">
+		<xsd:annotation>
+			<xsd:documentation>Description of geographic region</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GeographicRegionDescriptionBag" type="gin:GeographicRegionDescriptionBagType">
+		<xsd:annotation>
+			<xsd:documentation>Description of the geographic region</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GeographicRegionDescriptionBagType">
+		<xsd:sequence>
+			<xsd:element ref="gin:GeographicRegionDescription" maxOccurs="unbounded"/>
+			<xsd:element ref="gin:Map" minOccurs="0"/>
+			<xsd:element ref="gin:CausalInteractionText" minOccurs="0"/>
+			<xsd:element ref="gin:ReputationFactorText" minOccurs="0"/>
+			<xsd:element ref="gin:QualityFactorText" minOccurs="0"/>
+			<xsd:element ref="gin:ReservationNameText" minOccurs="0"/>
+			<xsd:element ref="gin:DemarcatedAreaDescriptionText" minOccurs="0"/>
+			<xsd:element ref="gin:CrossBorderIndicator" minOccurs="0"/>
+			<xsd:element ref="gin:NUTSDocument" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:attribute name="geographicRegionDescriptionCategory" type="gin:GeographicRegionDescriptionCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of geographic region description</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+<xsd:simpleType name="GeographicRegionDescriptionCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Coordinates">
+				<xsd:annotation>
+					<xsd:documentation>Geographic region is described by a list of geographic coordinates</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Natural boundaries">
+				<xsd:annotation>
+					<xsd:documentation>Geographic region is described by a set of natural boundaries, e.g. rivers, mountains, etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Administrative boundaries">
+				<xsd:annotation>
+					<xsd:documentation>Geographic region is described by a set of administrative boundaries, e.g. countries, states, cantons, etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Mixed">
+				<xsd:annotation>
+					<xsd:documentation>Geographic region is described by a combination of different means (coordinates, natural and administrative boundaries) or in other form.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="GeographicRegionDescriptionText" type="gin:GeographicRegionDescriptionTextType">
+		<xsd:annotation>
+			<xsd:documentation>Description of a part of geographic region</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="GeographicRegionDescriptionTextType">
+		<xsd:simpleContent>
+			<xsd:extension base="com:OrderedTextType">
+				<xsd:attribute ref="gin:geographicRegionDescriptionCategory"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:element name="GeographicRegionDescriptionTransliterationText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Transliteration of the geographic region description into another writing system</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GeographicRegionDescriptionType">
+		<xsd:sequence>
+			<xsd:sequence>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element ref="gin:GeographicRegionDescriptionText"/>
+					<xsd:element ref="gin:GeographicRegionExclusionDescriptionText" minOccurs="0"/>
+				</xsd:choice>
+				<xsd:element ref="gin:GeographicRegionDescriptionTransliterationText" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="GeographicRegionExclusionDescriptionText" type="gin:GeographicRegionDescriptionTextType">
+		<xsd:annotation>
+			<xsd:documentation>Description of the excluded part of a geographic region</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:annotation>
+		<xsd:appinfo>
+			<com:SchemaCreatedDate>2017-08-17</com:SchemaCreatedDate>
+			<com:SchemaLastModifiedDate>2022-10-03</com:SchemaLastModifiedDate>
+			<com:SchemaContactPoint>xml.standards@wipo.int</com:SchemaContactPoint>
+			<com:SchemaReleaseNoteURL>http://www.wipo.int/standards/XMLSchema/ST96/V6_0/ReleaseNotes.pdf</com:SchemaReleaseNoteURL>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="GIApplication" type="gin:GIApplicationType">
+		<xsd:annotation>
+			<xsd:documentation>Details of a geographical indication application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIApplicationType">
+		<xsd:sequence>
+			<xsd:element ref="com:ApplicationNumber" minOccurs="0"/>
+			<xsd:element ref="com:ApplicationDate" minOccurs="0"/>
+			<xsd:element ref="gin:ContractingPartyOriginCode" minOccurs="0"/>
+			<xsd:element ref="gin:GIData"/>
+			<xsd:element ref="gin:AuthorizedUser" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="gin:GIGrantProtectionLegalBasis" minOccurs="0"/>
+			<xsd:element ref="gin:ParentApplicationNumber" minOccurs="0"/>
+			<xsd:element ref="gin:ApplicantBag"/>
+			<xsd:element ref="com:RepresentativeBag" minOccurs="0"/>
+			<xsd:element ref="com:PaymentBag" minOccurs="0"/>
+			<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+			<xsd:element ref="com:SignatureBag" minOccurs="0"/>
+			<xsd:element ref="com:CorrespondenceAddress" minOccurs="0"/>
+			<xsd:element ref="gin:GIPublicationBag" minOccurs="0"/>
+			<xsd:element ref="gin:GIPriorityBag" minOccurs="0"/>
+			<xsd:element ref="gin:GIDisclaimerBag" minOccurs="0"/>
+			<xsd:element ref="gin:ConformityDeclarationText" minOccurs="0"/>
+			<xsd:element ref="gin:NationalProtectionDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="gin:TSGClaim" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="gin:TraditionalUseIndicator" minOccurs="0"/>
+			<xsd:element ref="gin:TraditionalUseDescriptionText" minOccurs="0"/>
+			<xsd:element ref="com:RecordIdentifier" minOccurs="0"/>
+			<xsd:element ref="com:RecordEventDate" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:officeCode"/>
+		<xsd:attribute ref="com:languageCode"/>
+		<xsd:attribute ref="com:st96Version" use="required"/>
+		<xsd:attribute ref="com:ipoVersion"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="GIBasicRecordType">
+		<xsd:sequence>
+			<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+			<xsd:element ref="gin:GIPublicationBag" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:choice>
+					<xsd:element ref="gin:GIReferenceIdentifier"/>
+					<xsd:element ref="gin:GIData"/>
+				</xsd:choice>
+				<xsd:choice>
+					<xsd:element ref="gin:GIUserCertificateReference"/>
+					<xsd:element ref="gin:GIUserCertificate"/>
+				</xsd:choice>
+			</xsd:choice>
+			<xsd:element ref="com:RecordEventDate"/>
+			<xsd:element ref="com:RecordIdentifier"/>
+			<xsd:choice>
+				<xsd:element ref="gin:GIRecordReasonText"/>
+				<xsd:element ref="tmk:ReasonDocument"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:officeCode"/>
+		<xsd:attribute ref="com:languageCode"/>
+	</xsd:complexType>
+	
+	<xsd:element name="GICancellationRecord" type="gin:GICancellationRecordType">
+		<xsd:annotation>
+			<xsd:documentation>Geographical Indication cancellation record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GICancellationRecordType">
+		<xsd:complexContent>
+			<xsd:extension base="gin:GIBasicRecordType">
+				<xsd:sequence>
+					<xsd:element ref="gin:CancellationDate"/>
+					<xsd:element ref="gin:CancellationCategory" minOccurs="0"/>
+					<xsd:element ref="tmk:FactDecisionText"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="GICategory" type="gin:GICategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Indicates the particular appellation of origin or geographical indication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="GICategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Geographical Indication">
+				<xsd:annotation>
+					<xsd:documentation>Geographical indications are indications which identify a good as originating in the territory of a country, or region or locality in that territory, where a given quality, reputation or other characteristic of the good is essentially attributable to its geographical origin. [Note: This definition is equivalent to the definition of a geographical indication given by Article 22.1 of the TRIPS Agreement and Article 2(1)(ii) of the Geneva Act of the Lisbon Agreement on Appellations of Origin and Geographical Indications. In order to work as a geographical indication, a sign must identify a product as originating in a given place. In addition, the quality, reputation or other characteristic of the product should be essentially due to the place of origin. Since the quality, reputation or other characteristic of the product depend on the geographical place of production, there is a link between the product and its original place of production.]</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Protected Geographical Indication">
+				<xsd:annotation>
+					<xsd:documentation>A Protected Geographical Indication in EU is a GI where the product must be produced OR processed in the geographical area, or both.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Protected Designation of Origin">
+				<xsd:annotation>
+					<xsd:documentation>A Protected Designation of Origin in EU is a designation where the product must be produced AND processed within the defined geographical area, exhibiting qualities or characteristics essentially due to that area.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Traditional Specialty Guaranteed">
+				<xsd:annotation>
+					<xsd:documentation>A Traditional Specialty Guaranteed in EU means that a product must be traditional, or established by custom for at least one generation or 25 years and have characteristics that distinguish it clearly from other similar agri-food products. It may have geographic affiliations but their production can take place anywhere in the world, subject to appropriate controls. Examples: Haggis, Mozzarella, Lambic, Eiswein, Icewine, ...</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Appellation of Origin">
+				<xsd:annotation>
+					<xsd:documentation>Appellations of origin are the geographical denomination of a country, region or locality, which serves to designate a product originating therein, the quality or characteristics of which are due exclusively or essentially to the geographical environment, including natural and human factors. [Note: This definition is equivalent to the definition of an appellation of origin given by Article 2 of the Lisbon Agreement and Article 2(1)(i) of the Geneva Act of the Lisbon Agreement on Appellations of Origin and Geographical Indications. Appellations of Origin and Geographical Indications both require a qualitative link between the product to which they refer and its place of origin. The basic difference between the two terms is that the link with the place of origin must be stronger in the case of an appellation of origin. The quality or characteristics of a product protected as an appellation of origin must result exclusively or essentially from its geographical origin. This generally means that the raw materials should be sourced in the place of origin and that the processing of the product should also happen there.]</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="GIChangeRecord" type="gin:GIChangeRecordType">
+		<xsd:annotation>
+			<xsd:documentation>Geographical Indication (GI) record describing various changes (authorized entities name and address change, transfer of rights, changes of GI properties)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIChangeRecordType">
+		<xsd:complexContent>
+			<xsd:extension base="gin:GIBasicRecordType">
+				<xsd:sequence>
+					<xsd:element ref="gin:ChangeRecordCategory"/>
+					<xsd:choice>
+						<xsd:sequence>
+							<xsd:element ref="gin:ChangeSourceCategory"/>
+							<xsd:element ref="tmk:FactDecisionText"/>
+							<xsd:element ref="gin:AffectedProductText" minOccurs="0"/>
+							<xsd:element ref="gin:TemporaryAmendmentIndicator" minOccurs="0"/>
+							<xsd:choice minOccurs="0">
+								<xsd:element ref="gin:GIData"/>
+								<xsd:element ref="gin:GIUserCertificate"/>
+							</xsd:choice>
+						</xsd:sequence>
+						<xsd:choice maxOccurs="2">
+							<xsd:element ref="com:CorrespondenceAddress"/>
+							<xsd:sequence>
+								<xsd:element ref="gin:PreviousAuthorizedUser" minOccurs="0" maxOccurs="unbounded"/>
+								<xsd:element ref="gin:NewAuthorizedUser" maxOccurs="unbounded"/>
+							</xsd:sequence>
+						</xsd:choice>
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="GICorrectContent" type="gin:GICorrectContentType">
+		<xsd:annotation>
+			<xsd:documentation>Correction correct content</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GICorrectContentCategory" type="gin:GICorrectContentCategoryType">
+							<xsd:annotation>
+								<xsd:documentation>Geographical Indication transaction correct content category</xsd:documentation>
+							</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="GICorrectContentCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Transaction category corrected">
+				<xsd:annotation>
+					<xsd:documentation>The type of transaction has been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Correspondence address corrected">
+				<xsd:annotation>
+					<xsd:documentation>The correspondence address details of the authorized user have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Representative corrected">
+				<xsd:annotation>
+					<xsd:documentation>The details of the representative of the applicant have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Applicant corrected">
+				<xsd:annotation>
+					<xsd:documentation>The applicants details recorded for the geographical indication have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Authorized users corrected">
+				<xsd:annotation>
+					<xsd:documentation>The authorized users of the geographical indication has been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GI data corrected">
+				<xsd:annotation>
+					<xsd:documentation>The details regarding the geographical indication have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Renewal record corrected">
+				<xsd:annotation>
+					<xsd:documentation>The details of the renewal record, including expiration date, have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Change record corrected">
+				<xsd:annotation>
+					<xsd:documentation>The details of the change recorded against either the geographical indication itself or else the user certificate have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="User certificate application corrected">
+				<xsd:annotation>
+					<xsd:documentation>The details of the user certificate application have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Registration record corrected">
+				<xsd:annotation>
+					<xsd:documentation>The details of the geographical indication registration record have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Transfer record corrected">
+				<xsd:annotation>
+					<xsd:documentation>The details of the transfer record, from the current authorized user to the new authorized user, have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cancellation record corrected">
+				<xsd:annotation>
+					<xsd:documentation>The details of the cancellation of the geographical indication have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Invalidation record corrected">
+				<xsd:annotation>
+					<xsd:documentation>The details of the invalidation of the geographical indication have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Refusal record corrected">
+				<xsd:annotation>
+					<xsd:documentation>The details of the refusal of the geographical indication have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Opposition record corrected">
+				<xsd:annotation>
+					<xsd:documentation>The details of the opposition against the geographical indication have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Transaction cancelled">
+				<xsd:annotation>
+					<xsd:documentation>The transaction has been cancelled</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Public inquiry record corrected">
+				<xsd:annotation>
+					<xsd:documentation>The details of the public inquiry record have been corrected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="GICorrectContentType">
+		<xsd:sequence>
+			<xsd:element ref="gin:GICorrectContentCategory" maxOccurs="unbounded"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="gin:GIData"/>
+				<xsd:element ref="gin:GIUserCertificateApplication"/>
+				<xsd:element ref="gin:GIRegistrationRecord"/>
+				<xsd:element ref="gin:GITransferRecord"/>
+				<xsd:element ref="gin:GICancellationRecord"/>
+				<xsd:element ref="gin:GIInvalidationRecord"/>
+				<xsd:element ref="gin:GIRefusalRecord"/>
+				<xsd:element ref="gin:GIChangeRecord"/>
+				<xsd:element ref="gin:GIOppositionRecord"/>
+				<xsd:element ref="gin:GIRenewalRecord"/>
+				<xsd:element ref="gin:GIPublicInquiryRecord"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="GICorrectionRecord" type="gin:GICorrectionRecordType">
+		<xsd:annotation>
+			<xsd:documentation>Geographical Indication correction record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GICorrectionRecordType">
+		<xsd:complexContent>
+			<xsd:extension base="gin:GIBasicRecordType">
+				<xsd:sequence>
+					<xsd:element ref="gin:IncorrectPublication" minOccurs="0"/>
+					<xsd:element ref="com:IncorrectRecordIdentifier"/>
+					<xsd:element ref="com:CorrectionDescriptionTextBag" minOccurs="0"/>
+					<xsd:element ref="gin:GIIncorrectContent" minOccurs="0"/>
+					<xsd:element ref="gin:GICorrectContent"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="GIData" type="gin:GIDataType">
+		<xsd:annotation>
+			<xsd:documentation>Information related to a particular geographical indication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIDataType">
+		<xsd:sequence>
+			<xsd:sequence minOccurs="0">
+				<xsd:element ref="com:ApplicationNumber"/>
+				<xsd:element ref="com:ApplicationDate"/>
+			</xsd:sequence>
+			<xsd:sequence minOccurs="0">
+				<xsd:element ref="com:RegistrationNumber"/>
+				<xsd:element ref="com:RegistrationDate" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:element ref="gin:GINameBag"/>
+			<xsd:element ref="gin:ProductIndicationBag"/>
+			<xsd:element ref="gin:FeatureDescriptionBag"/>
+			<xsd:element ref="gin:GeographicRegionDescriptionBag"/>
+			<xsd:element ref="gin:GICategory"/>
+			<xsd:element ref="gin:OriginCertificateBag" minOccurs="0"/>
+			<xsd:element ref="com:CommentText" minOccurs="0"/>
+			<xsd:element ref="gin:AuthorizedUser" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="com:RecordIdentifier" minOccurs="0"/>
+			<xsd:element ref="com:RecordEventDate" minOccurs="0"/>
+			<xsd:element ref="gin:GIPublicationBag" minOccurs="0"/>
+			<xsd:element ref="gin:GIStatusCategory" minOccurs="0"/>
+			<xsd:element ref="gin:WithdrawalDate" minOccurs="0"/>
+			<xsd:element ref="com:ExpiryDate" minOccurs="0"/>
+			<xsd:element ref="com:WebURI" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:officeCode" use="required"/>
+		<xsd:attribute ref="com:languageCode" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:element name="GIDisclaimerBag" type="gin:GIDisclaimerBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of disclaimers made in regards to a geographical indication application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIDisclaimerBagType">
+		<xsd:sequence>
+			<xsd:element ref="gin:GIDisclaimerText" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="GIDisclaimerText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Disclaimer made in regards to a geographical indication application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GIGrantProtectionLegalBasis" type="gin:GIGrantProtectionLegalBasisType">
+		<xsd:annotation>
+			<xsd:documentation>Legal basis for the grant of protection of the Geographic Indication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIGrantProtectionLegalBasisType">
+		<xsd:choice>
+			<xsd:element ref="gin:GILegalBasisLegislativeProvision"/>
+			<xsd:element ref="gin:GILegalBasisJudicialDecision"/>
+			<xsd:element ref="gin:GILegalBasisRegistrationOffice"/>
+		</xsd:choice>
+		<xsd:attribute ref="com:documentFileName"/>
+	</xsd:complexType>
+	
+	<xsd:element name="GIIncorrectContent" type="gin:GIIncorrectContentType">
+		<xsd:annotation>
+			<xsd:documentation>Correction incorrect content</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIIncorrectContentType">
+		<xsd:choice>
+			<xsd:element ref="gin:GIData"/>
+			<xsd:element ref="gin:GIUserCertificateApplication"/>
+			<xsd:element ref="gin:GIRegistrationRecord"/>
+			<xsd:element ref="gin:GITransferRecord"/>
+			<xsd:element ref="gin:GICancellationRecord"/>
+			<xsd:element ref="gin:GIInvalidationRecord"/>
+			<xsd:element ref="gin:GIRefusalRecord"/>
+			<xsd:element ref="gin:GIChangeRecord"/>
+			<xsd:element ref="gin:GIOppositionRecord"/>
+			<xsd:element ref="gin:GIRenewalRecord"/>
+			<xsd:element ref="gin:GIPublicInquiryRecord"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:element name="GIInvalidationRecord" type="gin:GIInvalidationRecordType">
+		<xsd:annotation>
+			<xsd:documentation>Geographical Indication invalidation record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIInvalidationRecordType">
+		<xsd:complexContent>
+			<xsd:extension base="gin:GIBasicRecordType">
+				<xsd:sequence>
+					<xsd:element ref="tmk:FactDecisionText"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="GILegalBasisJudicialDecision" type="gin:GILegalBasisJudicialDecisionType">
+	<xsd:annotation>
+		<xsd:documentation>Used to capture the legal basis under which the grant of protection is sought. Optionally includes a copy of the provisions, decision or registration referred to.</xsd:documentation>
+	</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GILegalBasisJudicialDecisionType">
+		<xsd:sequence>
+			<xsd:element ref="com:Contact"/>
+			<xsd:element ref="com:DecisionDate"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="GILegalBasisLegislativeProvision" type="gin:GILegalBasisLegislativeProvisionType">
+	<xsd:annotation>
+		<xsd:documentation>Legislative or regulatory provisions which form the legal basis for the grant of protection in the country of origin. The titles and dates must be provided.</xsd:documentation>
+	</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GILegalBasisLegislativeProvisionType">
+		<xsd:sequence>
+			<xsd:element ref="com:LegalProvisionText"/>
+			<xsd:element ref="com:DocumentDate"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="GILegalBasisRegistrationOffice" type="gin:GILegalBasisRegistrationOfficeType">
+	<xsd:annotation>
+		<xsd:documentation>National or Registration office which form the legal basis for the grant of protection in the country of origin. The name of the office which the registration was made as well as the date and registration number must be provided.</xsd:documentation>
+	</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GILegalBasisRegistrationOfficeType">
+		<xsd:sequence>
+			<xsd:element ref="com:Contact"/>
+			<xsd:element ref="com:ApplicationNumber"/>
+			<xsd:element ref="com:ApplicationDate"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="GINameBag" type="gin:GINameBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of information related to geographical indication name</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GINameBagType">
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element ref="gin:GINameText" maxOccurs="unbounded"/>
+				<xsd:element ref="gin:GINameRichText" maxOccurs="unbounded"/>
+			</xsd:choice>
+			<xsd:element ref="gin:GINameTransliterationText" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="gin:GINameTranslationText" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="GINameRichText" type="com:PType">
+		<xsd:annotation>
+			<xsd:documentation>Name of the geographical indication in rich-text format.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GINameText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Name of the geographical indication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GINameTranslationText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Translation of the GI name</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GINameTransliterationText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Transliteration of the GI name into another writing system</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GINationalOppositionPeriodEndDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>End date for the GI National Opposition Period</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GINationalOppositionPeriodStartDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Start date for the GI National Opposition Period</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GIOppositionRecord" type="gin:GIOppositionRecordType">
+		<xsd:annotation>
+			<xsd:documentation>Geographical Indication opposition record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIOppositionRecordType">
+		<xsd:complexContent>
+			<xsd:extension base="gin:GIBasicRecordType">
+				<xsd:sequence>
+					<xsd:element ref="com:OppositionReference" minOccurs="0"/>
+					<xsd:element ref="gin:OppositionJustificationText" minOccurs="0"/>
+					<xsd:element ref="gin:OppositionLegitimateInterestText" minOccurs="0"/>
+					<xsd:element ref="gin:OppositionConsultationResultText" minOccurs="0"/>
+					<xsd:element ref="gin:OppositionProductSpecificationAmendmentText" minOccurs="0"/>
+					<xsd:element ref="gin:OppositionSingleDocumentAmendmentText" minOccurs="0"/>
+					<xsd:element ref="gin:ThirdPartyBag" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="GIPriority" type="gin:GIPriorityType">
+		<xsd:annotation>
+			<xsd:documentation>Priority claimed under the Paris Convention</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GIPriorityBag" type="gin:GIPriorityBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of priorities for a geographical indication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIPriorityBagType">
+		<xsd:sequence>
+			<xsd:element ref="gin:GIPriority" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="GIPriorityType">
+								<xsd:sequence>
+									<xsd:element ref="com:PriorityCountryCode"/>
+									<xsd:element ref="com:ApplicationNumber" minOccurs="0"/>
+									<xsd:element ref="com:PriorityApplicationFilingDate"/>
+								</xsd:sequence>
+		</xsd:complexType>
+	
+	<xsd:element name="GIPublication" type="gin:GIPublicationType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding one geographical indication publication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GIPublicationBag" type="gin:GIPublicationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of publications</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIPublicationBagType">
+		<xsd:sequence>
+			<xsd:element ref="gin:GIPublication" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="GIPublicationType">
+		<xsd:sequence>
+			<xsd:element ref="com:PublicationIdentifier"/>
+			<xsd:element ref="com:PublicationDate" minOccurs="0"/>
+			<xsd:element ref="com:PublicationSubsection" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="com:PublicationPage" maxOccurs="unbounded"/>
+				<xsd:sequence>
+					<xsd:element ref="gin:PublicationStartPageText"/>
+					<xsd:element ref="gin:PublicationEndPageText" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:choice>
+			<xsd:element ref="gin:PublicationAmendmentReasonText" minOccurs="0"/>
+			<xsd:element ref="com:WebAddressURI" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>URL text and link of the entry in the Official Journal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="GIPublicInquiryRecord" type="gin:GIPublicInquiryRecordType">
+		<xsd:annotation>
+			<xsd:documentation>Geographical Indication record to capture information related to a public inquiry where parties can provide comments on the application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	
+	<xsd:complexType name="GIPublicInquiryRecordType">
+		<xsd:complexContent>
+			<xsd:extension base="gin:GIBasicRecordType">
+				<xsd:sequence>
+					<xsd:element ref="gin:GINationalOppositionPeriodStartDate"/>
+					<xsd:element ref="gin:GINationalOppositionPeriodEndDate"/> 
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="GIRecord" type="gin:GIRecordType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding a GI record such as renewals, transfers of right and licences</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GIRecordBag" type="gin:GIRecordBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of records related to the Geographical Indication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIRecordBagType">
+		<xsd:sequence>
+			<xsd:element ref="gin:GIRecord" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="GIRecordReasonText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Description of the reason for actions described by the record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIRecordType">
+		<xsd:choice>
+			<xsd:element ref="gin:GIRegistrationRecord"/>
+			<xsd:element ref="gin:GICancellationRecord"/>
+			<xsd:element ref="gin:GIInvalidationRecord"/>
+			<xsd:element ref="gin:GIRefusalRecord"/>
+			<xsd:element ref="gin:GIChangeRecord"/>
+			<xsd:element ref="gin:GICorrectionRecord"/>
+			<xsd:element ref="gin:GIOppositionRecord"/>
+			<xsd:element ref="gin:GIRenewalRecord"/>
+			<xsd:element ref="gin:GIPublicInquiryRecord"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:element name="GIReferenceIdentifier" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Reference to the GI, for which authorized use is requested</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GIRefusalRecord" type="gin:GIRefusalRecordType">
+		<xsd:annotation>
+			<xsd:documentation>Geographical Indication refusal record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIRefusalRecordType">
+	<xsd:complexContent>
+			<xsd:extension base="gin:GIBasicRecordType">
+				<xsd:sequence>
+					<xsd:element ref="gin:RefusalCategory"/>
+					<xsd:element ref="gin:RefusalGroundText" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="GIRegistrationRecord" type="gin:GIRegistrationRecordType">
+		<xsd:annotation>
+			<xsd:documentation>Geographical Indication registration record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIRegistrationRecordType">
+		<xsd:complexContent>
+			<xsd:extension base="gin:GIBasicRecordType">
+				<xsd:sequence>
+					<xsd:element ref="com:RegistrationNumber"/>
+					<xsd:element ref="com:RegistrationDate"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="GIRenewalRecord" type="gin:GIRenewalRecordType">
+		<xsd:annotation>
+			<xsd:documentation>Geographical Indication renewal record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIRenewalRecordType">
+	<xsd:complexContent>
+			<xsd:extension base="gin:GIBasicRecordType">
+				<xsd:sequence>
+					<xsd:element ref="com:ExpiryDate"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="GIStatusCategory" type="gin:GIStatusCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Indicates the different status of a geographical indication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="GIStatusCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Filing">
+				<xsd:annotation>
+					<xsd:documentation>Filing</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Published">
+				<xsd:annotation>
+					<xsd:documentation>Published</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Registered">
+				<xsd:annotation>
+					<xsd:documentation>Registered</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Ended">
+				<xsd:annotation>
+					<xsd:documentation>Ended</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="GITransferRecord" type="gin:GITransferRecordType">
+		<xsd:annotation>
+			<xsd:documentation>Geographical Indication transfer record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GITransferRecordType">
+		<xsd:complexContent>
+			<xsd:extension base="gin:GIBasicRecordType">
+				<xsd:sequence>
+					<xsd:element ref="gin:NewAuthorizedUser"/>
+					<xsd:element ref="com:CorrespondenceAddress" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:element name="GIUserCertificate" type="gin:GIUserCertificateType">
+		<xsd:annotation>
+			<xsd:documentation>Certificate asserting the right to use the geographical indication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="GIUserCertificateApplication" type="gin:GIUserCertificateApplicationType">
+		<xsd:annotation>
+			<xsd:documentation>Application for a geographical indication user certificate</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIUserCertificateApplicationType">
+		<xsd:sequence>
+			<xsd:element ref="com:ApplicationNumber" minOccurs="0"/>
+			<xsd:element ref="com:ApplicationDate" minOccurs="0"/>
+			<xsd:element ref="gin:ApplicantBag"/>
+			<xsd:element ref="gin:AuthorizedUser" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="com:RepresentativeBag" minOccurs="0"/>
+			<xsd:element ref="com:PaymentBag"/>
+			<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+			<xsd:element ref="com:SignatureBag"/>
+			<xsd:element ref="com:CorrespondenceAddress" minOccurs="0"/>
+			<xsd:element ref="gin:GIPublicationBag" minOccurs="0"/>
+			<xsd:element ref="com:RecordIdentifier" minOccurs="0"/>
+			<xsd:element ref="com:RecordEventDate" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+				<xsd:choice>
+					<xsd:element ref="gin:GIReferenceIdentifier"/>
+					<xsd:element ref="gin:GIData"/>
+				</xsd:choice>
+				<xsd:choice>
+					<xsd:element ref="gin:GIUserCertificateReference" maxOccurs="unbounded"/>
+					<xsd:element ref="gin:GIUserCertificate" maxOccurs="unbounded"/>
+				</xsd:choice>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:officeCode"/>
+		<xsd:attribute ref="com:languageCode"/>
+	</xsd:complexType>
+	
+	<xsd:element name="GIUserCertificateReference" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Reference to the GI user certificate</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GIUserCertificateType">
+		<xsd:sequence>
+			<xsd:sequence minOccurs="0">
+				<xsd:element ref="com:ApplicationNumber"/>
+				<xsd:element ref="com:ApplicationDate"/>
+			</xsd:sequence>
+			<xsd:sequence minOccurs="0">
+				<xsd:element ref="com:RegistrationNumber"/>
+				<xsd:element ref="com:RegistrationDate" minOccurs="0"/>
+			</xsd:sequence>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="gin:GIReferenceIdentifier"/>
+				<xsd:element ref="gin:GIData"/>
+			</xsd:choice>
+			<xsd:element ref="gin:GIPublicationBag" minOccurs="0"/>
+			<xsd:element ref="gin:AuthorizedUser" maxOccurs="unbounded"/>
+			<xsd:element ref="com:RecordIdentifier" minOccurs="0"/>
+			<xsd:element ref="com:RecordEventDate" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+		<xsd:attribute ref="com:officeCode"/>
+		<xsd:attribute ref="com:languageCode"/>
+	</xsd:complexType>
+	
+<xsd:element name="GroupIdentifier" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Group ID</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="IncorrectPublication" type="gin:GIPublicationType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding publication of an incorrect record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+						<xsd:element name="InspectionBodyText" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>Details of the inspection/control body to monitor the quality, integrity and consistency as well as the genuine use of the GI</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+	
+<xsd:element name="InterestedPartyJustificationText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Justification of the interested party</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="MainFeatureDescriptionText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Description of main characteristics or features of the product</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="Map" type="gin:MapType">
+				<xsd:annotation>
+					<xsd:documentation>Map depicting the GI Location / Area</xsd:documentation>
+				</xsd:annotation>
+				</xsd:element>
+	
+<xsd:element name="MapIssueDate" type="com:DateType">
+							<xsd:annotation>
+								<xsd:documentation>Date of map issue</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+	
+<xsd:element name="MapPublisherData" type="com:ContactType" >
+							<xsd:annotation>
+								<xsd:documentation>Map publisher details</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+	
+	<xsd:element name="MapTitleText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Map title</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="MapType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="gin:MapIssueDate"/>
+			<xsd:element ref="gin:MapTitleText"/>
+			<xsd:element ref="gin:MapPublisherData"/>
+			<xsd:element ref="gin:CertifiedCopyIndicator"/>
+			<xsd:element ref="com:FileName"/>
+		</xsd:choice>
+		<xsd:attribute ref="com:id" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:element name="MountainProductIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Mountain product indicator</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="NationalProtectionDescriptionText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>A description of the national protection/s provided</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="NewAuthorizedUser" type="gin:AuthorizedUserType">
+		<xsd:annotation>
+			<xsd:documentation>New authorized GI user.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="NUTSDocument" type="com:DocumentType">
+		<xsd:annotation>
+			<xsd:documentation>Nomenclature of Territorial Units for Statistics (NUTS) ID</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OppositionConsultationResultText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Result of consultations</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OppositionJustificationText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Duly substantiated reasons and justification for the opposition</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OppositionLegitimateInterestText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Statement explaining the legitimate interest of the opposition</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OppositionProductSpecificationAmendmentText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Amendment of the product specification and indicator</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OppositionSingleDocumentAmendmentText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Amendment of the single document and indicator</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OriginCertificateBag" type="gin:OriginCertificateBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of information required to certify an appellation of origin by an authority, in the country of origin, as possessing specific properties</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="OriginCertificateBagType">
+		<xsd:sequence>
+			<xsd:element ref="gin:CertificateBag"/>
+			<xsd:element ref="gin:ProductTerritoryLinkDescriptionText" minOccurs="0"/>
+			<xsd:element ref="gin:CompetentAuthorityText" minOccurs="0"/>
+			<xsd:element ref="gin:InspectionBodyText" minOccurs="0"/>
+			<xsd:element ref="gin:PresentMarketText" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="OriginProofText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Historic proof in the form of documentary evidence for clearly bringing out the historic development of the GI</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ParentApplicationNumber" type="com:ApplicationNumberType">
+		<xsd:annotation>
+			<xsd:documentation>Parent application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PresentMarketText" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>Description of the present market with the details of exports, if any, total turnover, and the activities undertaken in development and promotion of the GI</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+	
+	<xsd:element name="PreviousAuthorizedUser" type="gin:AuthorizedUserType">
+		<xsd:annotation>
+			<xsd:documentation>Previous authorized GI user.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ProcessorIdentifier" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Processor ID</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ProducerIdentifier" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Producer ID</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ProductAnalyticCharacteristicText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Analytic characteristics</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ProductCategory" type="gin:ProductCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of product/s under which the geographical indication is classified</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="ProductCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Beer">
+				<xsd:annotation>
+					<xsd:documentation>Beer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Chocolate and derived products">
+				<xsd:annotation>
+					<xsd:documentation>Chocolate and derived products</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Bakers wares">
+				<xsd:annotation>
+					<xsd:documentation>Bread, pastry, cakes, confectionery, biscuits and other baker’s wares</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Beverages made from plant extracts">
+				<xsd:annotation>
+					<xsd:documentation>Beverages made from plant extracts</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Pasta">
+				<xsd:annotation>
+					<xsd:documentation>Pasta</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Mustard paste">
+				<xsd:annotation>
+					<xsd:documentation>Mustard paste</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Natural gums and resins">
+				<xsd:annotation>
+					<xsd:documentation>Natural gums and resins</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Essential oils">
+				<xsd:annotation>
+					<xsd:documentation>Essential oils</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Hay">
+				<xsd:annotation>
+					<xsd:documentation>Hay</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cork">
+				<xsd:annotation>
+					<xsd:documentation>Cork</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cochineal">
+				<xsd:annotation>
+					<xsd:documentation>Cochineal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Flowers and ornamental plants">
+				<xsd:annotation>
+					<xsd:documentation>Flowers and ornamental plants</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cotton">
+				<xsd:annotation>
+					<xsd:documentation>Cotton</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Wool">
+				<xsd:annotation>
+					<xsd:documentation>Wool</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Wicker">
+				<xsd:annotation>
+					<xsd:documentation>Wicker</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Scutched flax">
+				<xsd:annotation>
+					<xsd:documentation>Scutched flax</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Leather">
+				<xsd:annotation>
+					<xsd:documentation>Leather</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Fur">
+				<xsd:annotation>
+					<xsd:documentation>Fur</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Feather">
+				<xsd:annotation>
+					<xsd:documentation>Feather</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Prepared meals">
+				<xsd:annotation>
+					<xsd:documentation>Prepared meals</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Wine">
+				<xsd:annotation>
+					<xsd:documentation>Wines and wine products</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Spirits">
+				<xsd:annotation>
+					<xsd:documentation>Spirits</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Agricultural Product or Food">
+				<xsd:annotation>
+					<xsd:documentation>Agricultural Product or Food</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Diary">
+				<xsd:annotation>
+					<xsd:documentation>Dairy and dairy produce</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Fish">
+				<xsd:annotation>
+					<xsd:documentation>Fresh fish, molluscs, and crustaceans and products derived therefrom</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Fruit">
+				<xsd:annotation>
+					<xsd:documentation>Fruits and fruit products</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Game">
+				<xsd:annotation>
+					<xsd:documentation>Games, playthings and sporting articles</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Glass">
+				<xsd:annotation>
+					<xsd:documentation>Glass and crystal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Meat">
+				<xsd:annotation>
+					<xsd:documentation>Fresh meat (and offal), dry-cured meats, meat products (cooked, salted, smoked, etc.)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Music">
+				<xsd:annotation>
+					<xsd:documentation>Musical instruments</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NonAlcohol">
+				<xsd:annotation>
+					<xsd:documentation>Non-alcoholic beverages</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Other alcohol">
+				<xsd:annotation>
+					<xsd:documentation>Other alcoholic beverages</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Religious">
+				<xsd:annotation>
+					<xsd:documentation>Religious, ornamental and handicraft objects</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Salt">
+				<xsd:annotation>
+					<xsd:documentation>Salts and minerals</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Stone">
+				<xsd:annotation>
+					<xsd:documentation>Stones and ceramic objects</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Textile">
+				<xsd:annotation>
+					<xsd:documentation>Textile products</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Vegetable">
+				<xsd:annotation>
+					<xsd:documentation>Vegetables and vegetable products</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Mineral water">
+				<xsd:annotation>
+					<xsd:documentation>Mineral water</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Crafts">
+				<xsd:annotation>
+					<xsd:documentation>Traditional crafts</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cheese">
+				<xsd:annotation>
+					<xsd:documentation>Cheeses</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Butter">
+				<xsd:annotation>
+					<xsd:documentation>Butter</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Spices">
+				<xsd:annotation>
+					<xsd:documentation>Spices</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cereals">
+				<xsd:annotation>
+					<xsd:documentation>Cereals</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Products of the milling industry">
+				<xsd:annotation>
+					<xsd:documentation>Products of the milling industry</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Oilseeds">
+				<xsd:annotation>
+					<xsd:documentation>Oilseeds</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Oils and fats">
+				<xsd:annotation>
+					<xsd:documentation>Oils and fats (butter, margarine, oil, etc.)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Confectionery and baked products">
+				<xsd:annotation>
+					<xsd:documentation>Confectionery and baked products</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Sugars and syrups">
+				<xsd:annotation>
+					<xsd:documentation>Sugars and syrups</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Table and processed olives">
+				<xsd:annotation>
+					<xsd:documentation>Table and processed olives</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Vinegar">
+				<xsd:annotation>
+					<xsd:documentation>Vinegar</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Honey">
+				<xsd:annotation>
+					<xsd:documentation>Honey</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Gingerbread">
+				<xsd:annotation>
+					<xsd:documentation>Honey</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Tea">
+				<xsd:annotation>
+					<xsd:documentation>Tea</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Coffee">
+				<xsd:annotation>
+					<xsd:documentation>Coffee</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Clothing">
+				<xsd:annotation>
+					<xsd:documentation>Clothing</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Endemic species">
+				<xsd:annotation>
+					<xsd:documentation>Endemic species</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Forest product">
+				<xsd:annotation>
+					<xsd:documentation>Forest product</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Hops">
+				<xsd:annotation>
+					<xsd:documentation>Hops</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Ginseng">
+				<xsd:annotation>
+					<xsd:documentation>Ginseng</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Manufactured products">
+				<xsd:annotation>
+					<xsd:documentation>Manufactured products</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Natural goods">
+				<xsd:annotation>
+					<xsd:documentation>Natural goods</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Other">
+				<xsd:annotation>
+					<xsd:documentation>Other</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="ProductChemicalCharacteristicText" type="xsd:string">
+								<xsd:annotation>
+									<xsd:documentation>Chemical characteristics of the product</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+	
+	<xsd:element name="ProductIndicationBag" type="gin:ProductIndicationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of information related to the indication of goods and services protected under the geographical indication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ProductIndicationBagType">
+		<xsd:sequence>
+			<xsd:element ref="tmk:GoodsServices" maxOccurs="unbounded"/>
+			<xsd:element ref="gin:ProductCategory" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:attribute name="productionAmountUnitCategory" type="gin:ProductionAmountUnitCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>units of the production amount</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+	<xsd:simpleType name="ProductionAmountUnitCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Litre">
+				<xsd:annotation>
+					<xsd:documentation>Litre, equal to 1000 cubic centimetres</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Tonne">
+				<xsd:annotation>
+					<xsd:documentation>Metric tonne, equal to 1000 kilograms</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="ProductionDescriptionText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Description of production or processing of the product</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ProductionMaximumAmount" type="gin:ProductionMaximumAmountType">
+		<xsd:annotation>
+			<xsd:documentation>Maximum yield / amount produced and unit</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ProductionMaximumAmountType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:token">
+				<xsd:attribute ref="gin:productionAmountUnitCategory"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+<xsd:element name="ProductLabelingRuleText" type="xsd:string">
+								<xsd:annotation>
+									<xsd:documentation>Specific rules concerning labelling of the product the registered name refers to </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+	
+<xsd:element name="ProductMaterialText" type="xsd:string">
+								<xsd:annotation>
+									<xsd:documentation>Feed and raw materials of the product</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+	
+	<xsd:element name="ProductMaximumAcidity" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Maximum acidity</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ProductMaximumAlcoholStrength" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Maximum alcohol strength</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ProductMinimumAcidity" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Minimum acidity</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ProductMinimumAlcoholStrength" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Minimum alcohol strength</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ProductOenologicalPracticeText" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Oenological practice and type</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ProductOrganolepticCharacteristicText" type="xsd:string">
+								<xsd:annotation>
+									<xsd:documentation>Organoleptic characteristics of the product</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+	
+<xsd:element name="ProductPhysicalCharacteristicText" type="xsd:string">
+								<xsd:annotation>
+									<xsd:documentation>Physical characteristics of the product</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+	
+<xsd:element name="ProductProcessingRuleText" type="xsd:string">
+	<xsd:annotation>
+		<xsd:documentation>Specific rules concerning slicing, grating, packaging</xsd:documentation>
+	</xsd:annotation>
+</xsd:element>
+	
+	<xsd:element name="ProductSpecificationPublication" type="gin:GIPublicationType">
+		<xsd:annotation>
+			<xsd:documentation>Reference to publication of the product specification</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ProductSpiritRequirementText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Spirit requirements</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ProductTerritoryLinkDescriptionText" type="xsd:string">
+							<xsd:annotation>
+								<xsd:documentation>Description of the link between the product or service and the geographic region of production or processing of the product</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+	
+<xsd:element name="PublicationAmendmentReasonText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Reason of the amendment or change in a publication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="PublicationEndPageText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Identification or number of the last page of publication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="PublicationStartPageText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Identification or number of the first page of publication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="QualityFactorText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Geographic area quality factor</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="QualityProduct" type="gin:QualityProductType">
+		<xsd:annotation>
+			<xsd:documentation>Quality products information</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="QualityProductNameText" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Quality product type</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="QualityProductPropertyText" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Quality product properties</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="QualityProductType">
+		<xsd:sequence>
+			<xsd:element ref="gin:QualityProductNameText"/>
+			<xsd:element ref="gin:QualityProductPropertyText"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="RawMaterialDescriptionText" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Description of raw materials (for processed products only)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="RawMaterialOnlySourceIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Raw material entirely sourced in the geographical area indicator</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="RawMaterialOriginRestrictionIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Restriction of origin of the raw materials indicator</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="RawMaterialQualityRequirementIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Quality required applies to the raw materials indicator</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="RefusalCategory" type="gin:RefusalCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Scope of the (Partial or Total) Refusal</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="RefusalCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Partial">
+				<xsd:annotation>
+					<xsd:documentation>Partial refusal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Total">
+				<xsd:annotation>
+					<xsd:documentation>Total refusal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="RefusalGroundText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Grounds of the refusal</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ReputationFactorText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Geographic area reputation factor</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ReservationNameText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Reservation name</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="SameCategoryProductSpecificCharacteristicText" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Specific characteristics of spirit drinks of the same category</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="SpecificCharacterKeyElementText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Description of key elements establishing the product’s specific character, for a TSG claim</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="SpecificLabelingRuleIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Any specific rules on labelling indicator</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="SpecificProcessingRuleIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicates whether there are specific rules on slicing, bottling, grating or packaging</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="TemporaryAmendmentIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Temporary amendment indicator</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ThirdPartyBag" type="gin:ThirdPartyBagType">
+		<xsd:annotation>
+			<xsd:documentation>Identity of the Third Parties</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ThirdPartyBagType">
+		<xsd:sequence>
+			<xsd:element ref="com:Contact" maxOccurs="unbounded"/>
+			<xsd:element ref="gin:ThirdPartyGrantedPeriodStartDate"/>
+			<xsd:element ref="gin:ThirdPartyGrantedPeriodEndDate" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="ThirdPartyGrantedPeriodEndDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date on which the Period Granted to the Third Parties ends</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ThirdPartyGrantedPeriodStartDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date on which the Period Granted to the Third Parties begins</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="TraditionalCharacterKeyElementText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Description of key elements establishing the product’s traditional character, for a TSG claim</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="TraditionalUseDescriptionText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Explanation of the traditional use</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="TraditionalUseIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicates that this geographical indication has a traditional use</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:annotation>
+		<xsd:appinfo>
+			<com:SchemaCreatedDate>2017-08-17</com:SchemaCreatedDate>
+			<com:SchemaLastModifiedDate>2022-10-03</com:SchemaLastModifiedDate>
+			<com:SchemaContactPoint>xml.standards@wipo.int</com:SchemaContactPoint>
+			<com:SchemaReleaseNoteURL>http://www.wipo.int/standards/XMLSchema/ST96/V6_0/ReleaseNotes.pdf</com:SchemaReleaseNoteURL>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="TransactionData" type="gin:TransactionDataType">
+		<xsd:annotation>
+			<xsd:documentation>Content of one geographical indication request or transaction</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="TransactionDataType">
+		<xsd:choice>
+			<xsd:element ref="gin:GIApplication"/>
+			<xsd:element ref="gin:GIUserCertificateApplication"/>
+			<xsd:element ref="gin:GIData"/>
+			<xsd:element ref="gin:GIUserCertificate"/>
+			<xsd:element ref="gin:GIRecordBag"/>
+			<xsd:element ref="gin:ApplicantBag"/>
+			<xsd:element ref="com:RepresentativeBag"/>
+		</xsd:choice>
+		<xsd:attribute ref="com:st96Version" use="required"/>
+		<xsd:attribute ref="com:ipoVersion"/>
+	</xsd:complexType>
+	
+	<xsd:element name="TSGClaim" type="gin:TSGClaimType">
+		<xsd:annotation>
+			<xsd:documentation>Claim(s) made for traditional specialities guaranteed</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="TSGClaimType">
+		<xsd:sequence>
+			<xsd:element ref="gin:TSGReservedIndicator"/>
+			<xsd:element ref="gin:TSGDescriptionText"/>
+			<xsd:element ref="gin:TSGMethodText"/>
+			<xsd:element ref="gin:TraditionalCharacterKeyElementText"/>
+			<xsd:element ref="gin:SpecificCharacterKeyElementText"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="TSGDescriptionText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Description of the product, with an indication of its main properties, for a TSG claim</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="TSGMethodText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Description of the production method to be applied by producers, for a TSG claim</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="TSGReservedIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicates whether the application for registration for a TSG claim is made with or without reservation of the name</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="UniquenessText" type="xsd:string">
+								<xsd:annotation>
+									<xsd:documentation>Comparison with other similar products to establish its uniqueness.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+	
+<xsd:element name="WithdrawalDate" type="com:DateType">
+				<xsd:annotation>
+					<xsd:documentation>Withdrawal Date </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+</xsd:schema>

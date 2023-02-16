@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common" xmlns:cpy="http://www.wipo.int/standards/XMLSchema/ST96/Copyright" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.wipo.int/standards/XMLSchema/ST96/Copyright" attributeFormDefault="qualified" version="V6_0" elementFormDefault="qualified">
+	<xsd:import namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" schemaLocation="Common_V6_0.xsd"/>
+	
+	<xsd:element name="AdaptedUseDescriptionText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Description of how an orphan work has been adapted for use</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="AdaptedUseIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>
+				Indication of whether the work has been adapted for use</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:attribute name="alternativeTitleSourceCategory" type="cpy:AlternativeTitleSourceCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category which clarifies the source or nature of the alternative title provided</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+	<xsd:simpleType name="AlternativeTitleSourceCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Based on">
+				<xsd:annotation>
+					<xsd:documentation>Title of the work on whcih the orphan work is based</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Derived from">
+				<xsd:annotation>
+					<xsd:documentation>Title of the work frmo which the orphan work is derived</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Inserted">
+				<xsd:annotation>
+					<xsd:documentation>Title of the work inserted in the orphan work</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="Applicant" type="cpy:ApplicantType">
+		<xsd:annotation>
+			<xsd:documentation>Individual or organization applying to use a creative work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ApplicantBag" type="cpy:ApplicantBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of applicants for an orphan work </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ApplicantBagType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:Applicant" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ApplicantType">
+		<xsd:sequence>
+			<xsd:element ref="com:PartyIdentifier" minOccurs="0"/>
+			<xsd:element ref="com:Contact"/>
+			<xsd:element ref="com:NationalityCode" minOccurs="0"/>
+			<xsd:element ref="com:ResidenceCountryCode" minOccurs="0"/>
+			<xsd:element ref="cpy:UserCategory" minOccurs="0"/>
+			<xsd:element ref="com:ConfidentialIndicator"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:sequenceNumber"/>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="ContactCategory" type="cpy:ContactCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category for person or organization contacted or consulted as part of the diligence search for an orphan work licence application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="ContactCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Collective Management Organization">
+				<xsd:annotation>
+					<xsd:documentation>Collective Management Organization (CMO) or collective society e.g., SOCAN, CMRRA, Access Copyright etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Publisher">
+				<xsd:annotation>
+					<xsd:documentation>A natural person or legal entity responsible for publishing, releasing or issuing a resource</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Website">
+				<xsd:annotation>
+					<xsd:documentation>An online publication</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Individual">
+				<xsd:annotation>
+					<xsd:documentation>A natural person</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Organization">
+				<xsd:annotation>
+					<xsd:documentation>A company or group</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Company">
+				<xsd:annotation>
+					<xsd:documentation>A company</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Other Source">
+				<xsd:annotation>
+					<xsd:documentation>An alternative source consulted as part of the diligence search </xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Producer">
+				<xsd:annotation>
+					<xsd:documentation>A natural person or legal entity responsible for most of the business aspects of a production for screen, audio recording, television, webcast, etc. The producer is generally responsible for fund raising, managing the production, hiring key personnel, arranging for distributors, etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="CopyrightExpiry" type="cpy:CopyrightExpiryType">
+		<xsd:annotation>
+			<xsd:documentation>Copyright expiry data relevant to the associated orphan work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="CopyrightExpiryType">
+		<xsd:sequence>
+			<xsd:element ref="com:ExpiryDate"/>
+			<xsd:element ref="com:CountryCode" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="CreativeWorkIdentification" type="cpy:CreativeWorkIdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>An internationally recognized identifier for a creative work and/or its recording such as a literary work, an audio-visual production, a sound recording, etc.; or for a marketed product which includes a creative work and its possible recording, such as a book, a DVD, etc.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="CreativeWorkIdentificationBag" type="cpy:CreativeWorkIdentificationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of international standard identifiers for a creative work and/or its recording, or for a marketed product which includes a creative work and its possible recording</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="CreativeWorkIdentificationBagType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:CreativeWorkIdentification" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="CreativeWorkIdentificationType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:CreativeWorkIdentifier"/>
+			<xsd:element ref="cpy:CreativeWorkIdentifierCategory"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="CreativeWorkIdentifier" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The identifier of the creative work and/or its recording, or of the marketed product which includes a creative work and its possible recording, which is assigned by an internationally recognized body</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="CreativeWorkIdentifierCategory" type="cpy:CreativeWorkIdentifierCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category for internationally recognized identifiers of creative works and their possible recordings such as ISTC for identifying text-based works, ISWC for identifying musical works, EIDR for identifying audio-visual productions, etc.; and for internationally recognized identifiers for a marketed product which includes a creative work and its possible recording such ISBN for books, UPC/EAN for CDs, etc.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="CreativeWorkIdentifierCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="DOI">
+				<xsd:annotation>
+					<xsd:documentation>The Digital Object Identifier uniquely identifies an object of any material form or an abstraction</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EAN">
+				<xsd:annotation>
+					<xsd:documentation>The European (or International) Article Number is a Global Trade Item Number (GTIN) technically specified by GS1, which is uniquely assigned to a trade item</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EIDR">
+				<xsd:annotation>
+					<xsd:documentation>Identifier system for movie and television assets (Entertainment ID Registry). It is an implementation of a Digital Object Identifier (DOI)</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GRID">
+				<xsd:annotation>
+					<xsd:documentation>The Global Release Identifier uniquely identifies a “release” of music over electronic networks, a release being understood as a collection of recordings or other media that are grouped together for commerce</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="V_ISAN">
+				<xsd:annotation>
+					<xsd:documentation>International Standard Audiovisual Number is numbering system for audiovisual works and versions thereof including films, shorts, documentaries, television programs, sports events, advertising, etc. Through the V-ISAN Version, which additionally includes a version identifier, it is possible to identify all related versions of a work such as variants (expressions, manifestations), language, editions, clips, media embodiments, digital encodings, etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IDA">
+				<xsd:annotation>
+					<xsd:documentation>The International Documentation on Audiovisual works index is a CISAC’s centralized database within which each audiovisual work is uniquely identified by an IDA code</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ISBN">
+				<xsd:annotation>
+					<xsd:documentation>International Standard Book Number, 13 digits (Nation based) to identify book</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ISMN">
+				<xsd:annotation>
+					<xsd:documentation>International Standard Music Number, 13 digits (Nation based) to identify printed music</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ISRC">
+				<xsd:annotation>
+					<xsd:documentation>International Standard Recording Code, 12 digits for the identification of sound recordings and music video recordings</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ISSN">
+				<xsd:annotation>
+					<xsd:documentation>International Standard Serial Number, 8-digit number to identify a periodical publication at a specific media type </xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ISTC">
+				<xsd:annotation>
+					<xsd:documentation>International Standard Text Code for the identification of text-based works</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ISWC">
+				<xsd:annotation>
+					<xsd:documentation>International Standard Musical Work Code for the identification of musical works. Format begins with the letter "T" followed by nine-digit unique number (from 00000001 to 999999999), and additional check digit at the end - format: T-345246800-1</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="JAN">
+				<xsd:annotation>
+					<xsd:documentation>The Japanese Article Number is a Global Trade Item Number (GTIN) technically specified by GS1, which is uniquely assigned to a trade item and exclusively used in Japan</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SOC">
+				<xsd:annotation>
+					<xsd:documentation>Society code uniquely identifies Collective Management Organisations</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TISA">
+				<xsd:annotation>
+					<xsd:documentation>Identifier for country names, based on ISO 3166-1 alpha codes and extended for groups of countries</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TISN">
+				<xsd:annotation>
+					<xsd:documentation>Identifier for country names, based on ISO 3166-1 numeric codes and extended for groups of countries</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="UPC">
+				<xsd:annotation>
+					<xsd:documentation>The Universal Product Code is a Global Trade Item Number (GTIN) technically specified by GS1, which is uniquely assigned to a trade item and mainly used in the US</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="DiligenceSearch" type="cpy:DiligenceSearchType">
+		<xsd:annotation>
+			<xsd:documentation>Details of diligence searches carried out for an orphan work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DiligenceSearchDocument" type="com:DocumentType">
+		<xsd:annotation>
+			<xsd:documentation>Identifies the document holding details of the diligence search</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DiligenceSearchDocumentContact" type="cpy:DiligenceSearchDocumentContactType">
+		<xsd:annotation>
+			<xsd:documentation>Details of CMOs, publishers, producers, websites, individuals, organizations, companies and other sources contacted or consulted as part of a diligence search to locate the copyright owner for an orphan work, as captured by the reference document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="DiligenceSearchDocumentContactType">
+		<xsd:sequence>
+			<xsd:element ref="com:Contact"/>
+			<xsd:element ref="com:ContactDate"/>
+			<xsd:element ref="cpy:ContactCategory"/>
+			<xsd:element ref="cpy:DiligenceSearchDocument"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="DiligenceSearchIdentifier" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Identifier for a diligence search</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DiligenceSearchStatusCategory" type="cpy:DiligenceSearchStatusCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Defines the status of the orphan work in the last diligence search</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="DiligenceSearchStatusCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Orphan Work">
+				<xsd:annotation>
+					<xsd:documentation>A work has been accepted as an orphan work</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Partial Orphan Work">
+				<xsd:annotation>
+					<xsd:documentation>A work has been accepted as a partial orphan work</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Not Orphan Work">
+				<xsd:annotation>
+					<xsd:documentation>A work has been declared not an orphan work</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Status Change Claimed ">
+				<xsd:annotation>
+					<xsd:documentation>A claim has been made to challenge the status of the orphan work</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="DiligenceSearchType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:DiligenceSearchIdentifier" minOccurs="0"/>
+			<xsd:element ref="cpy:DiligenceSearchStatusCategory" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:element ref="cpy:DiligenceSearchDocument"/>
+				<xsd:element ref="cpy:DiligenceSearchDocumentContact"/>
+			</xsd:choice>
+			<xsd:element ref="cpy:ProvenanceCategory" minOccurs="0"/>
+			<xsd:element ref="com:SearchStartDate" minOccurs="0"/>
+			<xsd:element ref="com:SearchEndDate" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="InterestedParty" type="cpy:InterestedPartyType">
+		<xsd:annotation>
+			<xsd:documentation>Interested party name and address</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="InterestedPartyBag" type="cpy:InterestedPartyBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of interested parties</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="InterestedPartyBagType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:InterestedParty" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="InterestedPartyBaseNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Interested Party Information Base Number is used to uniquely identify copyright owners</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="InterestedPartyNameCategory" type="com:PersonOtherNameCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category for the type of name registered e.g., patronym, pseudonym etc.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="InterestedPartyNameNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Interested Party Name Number is a code used to uniquely identify names, for example patronym or pseudonym.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="InterestedPartyOtherName" type="cpy:InterestedPartyOtherNameType">
+		<xsd:annotation>
+			<xsd:documentation>Alternative name(s) of an interested party</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="InterestedPartyOtherNameType">
+		<xsd:sequence>
+			<xsd:element ref="com:PersonName"/>
+			<xsd:element ref="cpy:InterestedPartyNameCategory" minOccurs="0"/>
+			<xsd:element ref="cpy:InterestedPartyNameNumber" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="InterestedPartyType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:InterestJustificationText"/>
+			<xsd:element ref="com:Contact"/>
+			<xsd:element ref="com:ConfidentialIndicator"/>
+			<xsd:element ref="cpy:InterestedPartyBaseNumber" minOccurs="0"/>
+			<xsd:element ref="cpy:ISNI" minOccurs="0"/>
+			<xsd:element ref="cpy:InterestedPartyOtherName" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="InterestJustificationText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Justification from an interested party into their claim to an orphan work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ISNI" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>International Standard Name Identifier (INSI) is used to assign unique identifiers to names</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="LicenceStartDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Requested start date for an orphan work licence</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OrphanWorkAlternativeTitle" type="cpy:OrphanWorkAlternativeTitleType">
+		<xsd:annotation>
+			<xsd:documentation>Alternative title of the orphan work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OrphanWorkAlternativeTitleBag" type="cpy:OrphanWorkAlternativeTitleBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of alternative titles of the orphan work, and/or collection of titles of works on which/from orphan works are based/derived, and/or titles of works included in orphan works</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="OrphanWorkAlternativeTitleBagType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:OrphanWorkAlternativeTitle" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="OrphanWorkAlternativeTitleType">
+		<xsd:simpleContent>
+			<xsd:extension base="com:OrderedTextType">
+				<xsd:attribute ref="cpy:alternativeTitleSourceCategory"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+	<xsd:element name="OrphanWorkApplicationStatus" type="cpy:OrphanWorkApplicationStatusType">
+		<xsd:annotation>
+			<xsd:documentation>Defines the status of the orphan work application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="OrphanWorkApplicationStatusType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Application Received">
+				<xsd:annotation>
+					<xsd:documentation>An orphan work application has been received</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Licence Granted">
+				<xsd:annotation>
+					<xsd:documentation>A licence has been granted for an orphan work</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Application Refused">
+				<xsd:annotation>
+					<xsd:documentation>An orphan work application has been refused</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Application Withdrawn">
+				<xsd:annotation>
+					<xsd:documentation>An orphan work application has been withdrawn</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Licence Renewed">
+				<xsd:annotation>
+					<xsd:documentation>An orphan work licence has been renewed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Licence Expired">
+				<xsd:annotation>
+					<xsd:documentation>An orphan work licence has expired</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Awaiting Further Information">
+				<xsd:annotation>
+					<xsd:documentation>Further information is awaited regarding the licence application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="No Longer Orphan">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work is no longer considered an orphan work</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Copyright Expired">
+				<xsd:annotation>
+					<xsd:documentation>Copyright has expired for the work and therefore it is no longer an orphan work</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="OrphanWorkCommercialUsageCategory" type="cpy:OrphanWorkCommercialUsageCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category which identifies whether the use of the orphan work will be for commercial, non-commercial or commercial and non-commercial purposes</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="OrphanWorkCommercialUsageCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Commercial">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work will be used for commercial purposes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NonCommercial">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work will be used for non-commercial purposes </xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Commercial and NonCommercial">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work will be used for commercial and non-commercial purposes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="OrphanWorkDescriptionText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>A textual description of the creative work under consideration as an orphan work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OrphanWorkDescriptionTextBag" type="cpy:OrphanWorkDescriptionTextBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of text which describes an orphan work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="OrphanWorkDescriptionTextBagType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:OrphanWorkDescriptionText" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="OrphanWorkIdentifier" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Identifier for an orphan work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OrphanWorkKindCode" type="cpy:OrphanWorkKindCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Code list which identifies a kind of orphan works</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="OrphanWorkKindCodeType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="AC">
+				<xsd:annotation>
+					<xsd:documentation>Architectural Works - A work such as a building, including its related concepts, plans and models</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="AV">
+				<xsd:annotation>
+					<xsd:documentation>Audiovisual Works - A work that consists of a series of related images which are intrinsically intended to be shown by the use of machines or devices such as projectors, viewers or electronic equipment, together with accompanying music, dialogue and/or sound effects, if any, regardless of the nature of the material objects, such as films or tapes, in which the work is embodied</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DW">
+				<xsd:annotation>
+					<xsd:documentation>Dramatic Works - A written or spoken work composed of a combination of words, containing connected actions and discourses of one or usually more persons, in a dramatic context</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="LW">
+				<xsd:annotation>
+					<xsd:documentation>Literary Works - A written or spoken work composed of a combination of words, not intended for a dramatic context, e.g. a novel, non-fiction book, manuscript, journal article and poem</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MM">
+				<xsd:annotation>
+					<xsd:documentation>Multimedia Works - The combined use of digitalised information representing text, sound and still or video images or the media so used. The term can refer to any interactive system and any data storage medium</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MW">
+				<xsd:annotation>
+					<xsd:documentation>Musical Works - A work composed of a combination of sounds with or without lyrics to be performed by instruments and/or the human voice, not intended for a dramatic context, e.g. sheet music, song or nursery rhyme</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PH">
+				<xsd:annotation>
+					<xsd:documentation>Photographic Works - A still image produced on surfaces sensitive to light or other radiation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SR">
+				<xsd:annotation>
+					<xsd:documentation>Sound Recordings - A sound recording is an electrical, mechanical, electronic or digital inscription and re-creation of sound waves, such as spoken voice, singing, instrumental music, or sound effects</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="WA">
+				<xsd:annotation>
+					<xsd:documentation>Work of Art - A graphic or visual art work, including painting, sculpture etc</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="OrphanWorkLicence" type="cpy:OrphanWorkLicenceType">
+		<xsd:annotation>
+			<xsd:documentation>Details of the orphan work licence</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OrphanWorkLicenceRequest" type="cpy:OrphanWorkLicenceRequestType">
+		<xsd:annotation>
+			<xsd:documentation>Details of the orphan work licence request</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="OrphanWorkLicenceRequestType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:LicenceStartDate"/>
+			<xsd:element ref="com:LicenceDurationQuantity"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="OrphanWorkLicenceType">
+		<xsd:choice maxOccurs="2">
+			<xsd:element ref="com:LicenceNumber"/>
+			<xsd:element ref="com:DocumentIncluded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:element name="OrphanWorkLicensee" type="cpy:OrphanWorkLicenseeType">
+		<xsd:annotation>
+			<xsd:documentation>Licensee name and address</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OrphanWorkLicenseeBag" type="cpy:OrphanWorkLicenseeBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of licensees for an orphan work </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="OrphanWorkLicenseeBagType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:OrphanWorkLicensee" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="OrphanWorkLicenseeType">
+		<xsd:sequence>
+			<xsd:element ref="com:Contact"/>
+			<xsd:element ref="cpy:UserCategory" minOccurs="0"/>
+			<xsd:element ref="com:ConfidentialIndicator"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="OrphanWorkPartyBag" type="cpy:OrphanWorkPartyBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of parties relating to an orphan work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="OrphanWorkPartyBagType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="cpy:ApplicantBag"/>
+			<xsd:element ref="cpy:OrphanWorkLicenseeBag"/>
+			<xsd:element ref="com:Representative"/>
+			<xsd:element ref="cpy:RightsHolderBag"/>
+			<xsd:element ref="cpy:InterestedPartyBag"/>
+		</xsd:choice>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="OrphanWorkPublicationCategory" type="cpy:OrphanWorkPublicationCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category identifying if the orphan work has been made publicly known, where this information is made available</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="OrphanWorkPublicationCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Publicly known">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work has been published or has been made publicly known</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Not publicly known">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work has not been published or been made publicly known</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Public availability unknown">
+				<xsd:annotation>
+					<xsd:documentation>Whether or not the work has been published or has been made known to the public is unknown</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="OrphanWorkPublicationData" type="cpy:OrphanWorkPublicationDataType">
+		<xsd:annotation>
+			<xsd:documentation>Details of the availability of the orphan work to the public</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="OrphanWorkPublicationDataType">
+		<xsd:sequence>
+			<xsd:element ref="com:PublisherName" minOccurs="0"/>
+			<xsd:element ref="cpy:ProducerName" minOccurs="0"/>
+			<xsd:element ref="cpy:PublishIndicator"/>
+			<xsd:element ref="com:PublicationYear" minOccurs="0"/>
+			<xsd:element ref="com:CommentText"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="OrphanWorkTitleText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Title of the orphan work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OrphanWorkTitleTextBag" type="cpy:OrphanWorkTitleTextBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of titles for an orphan work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="OrphanWorkTitleTextBagType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:OrphanWorkTitleText" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="OrphanWorkUsage" type="cpy:OrphanWorkUsageType">
+		<xsd:annotation>
+			<xsd:documentation>Usage data for an orphan work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="OrphanWorkUsageBag" type="cpy:OrphanWorkUsageBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of data concerning the category the orphan work is to be used for and whether it has been adapted</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="OrphanWorkUsageBagType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:OrphanWorkUsage" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="OrphanWorkUsageCategory" type="cpy:OrphanWorkUsageCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category which identifies the usage category of an orphan work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="OrphanWorkUsageCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Radio_Audio_Sound_Music production or distribution">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work will be used as part of radio, audio, sound and music production or distribution</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Corporate external communication">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work will be used as part of a corporate external communication</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Corporate internal communication">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work will be used as part of a corporate internal communication</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Editorial">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work will be used as part of an editorial article for a newspaper, magazine, journal or website</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Exhibition">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work will be used as part of an exhibition</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Promotional and advertising">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work will be used for promotional and advertising purposes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Public performance production">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work will be used as part of a public performance production</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Publications">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work will be used as part of a publication, book, anthology or educational materials</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Retailing and merchandising">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work will be used for retailing and merchandising purposes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TV_Film_Gaming production or distribution">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work will be used for TV, film or gaming production or distribution</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="OrphanWorkUsageLocationText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Text describing the location where an orphan work project will be distributed</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="OrphanWorkUsageType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:AdaptedUseIndicator"/>
+			<xsd:element ref="cpy:AdaptedUseDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cpy:OrphanWorkUsageCategory"/>
+			<xsd:element ref="cpy:OrphanWorkCommercialUsageCategory" minOccurs="0"/>
+			<xsd:element ref="cpy:OrphanWorkUsageLocationText" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="com:AdditionalRemark" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="ProducerName" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Name of the producer of the work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ProvenanceCategory" type="cpy:ProvenanceCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category for where the orphan work was found e.g. attic or museum</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="ProvenanceCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Museum">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work was found in a museum</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Attic">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work was found in an attic</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Manuscript">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work was found in a manuscript</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National Archive">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work was found in the national archive</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="PublishIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication of whether the work should be made available in a country's applicable register or database</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="RightsHolder" type="cpy:RightsHolderType">
+		<xsd:annotation>
+			<xsd:documentation>Rights holder name and address</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="RightsHolderBag" type="cpy:RightsHolderBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of rights holders </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="RightsHolderBagType">
+		<xsd:sequence>
+			<xsd:element ref="cpy:RightsHolder" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:id"/>
+	</xsd:complexType>
+	
+	<xsd:element name="RightsHolderCategory" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Category which identifies the type of rights holder</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="RightsHolderLocatedIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication of whether the rights holder for the orphan work has been found</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="RightsHolderType">
+		<xsd:sequence>
+			<xsd:element ref="com:Contact"/>
+			<xsd:element ref="cpy:RightsHolderCategory"/>
+			<xsd:element ref="cpy:InterestedPartyBaseNumber" minOccurs="0"/>
+			<xsd:element ref="cpy:ISNI" minOccurs="0"/>
+			<xsd:element ref="com:DeceasedDate" minOccurs="0"/>
+			<xsd:element ref="com:NationalityCode" minOccurs="0"/>
+			<xsd:element ref="com:ConfidentialIndicator"/>
+			<xsd:element ref="cpy:RightsHolderLocatedIndicator"/>
+			<xsd:element ref="cpy:InterestedPartyOtherName" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="UserCategory" type="cpy:UserCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category which identifies the user of the orphan work</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="UserCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Archive">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work is to be used for archive purposes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cultural">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work is to be used for cultural purposes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Educational">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work is to be used for educational purposes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Library">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work is to be used for library purposes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Museum">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work is to be used for museum purposes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Religious">
+				<xsd:annotation>
+					<xsd:documentation>Orphan work is to be used for religious purposes</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+</xsd:schema>

@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common" xmlns:tmk="http://www.wipo.int/standards/XMLSchema/ST96/Trademark" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.wipo.int/standards/XMLSchema/ST96/Trademark" elementFormDefault="qualified" attributeFormDefault="qualified" version="V6_0">
+	<xsd:import namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" schemaLocation="GITransactionBody_V6_0_Common.xsd"/>
+	
+<xsd:element name="ActiveClassTotalQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>The total number of active classes in a trademark application or registration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="AmendedBasis" type="tmk:AmendedBasisType">
+		<xsd:annotation>
+			<xsd:documentation>A container that holds indicators about any filing or registration bases that have been amended.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="AmendedBasisType">
+		<xsd:sequence>
+<xsd:element ref="tmk:BasisForeignApplicationIndicator"/>
+<xsd:element ref="tmk:BasisForeignRegistrationIndicator"/>
+<xsd:element ref="tmk:BasisUseIndicator"/>
+<xsd:element ref="tmk:BasisIntentToUseIndicator"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="AnotherFormFirstUsedAnywhereText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>A statement of the name of the other trademark and when it was first used anywhere in another form</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="AnotherFormFirstUsedCommerceText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>A statement of the name of the other trademark and when it was first used in another form in commerce.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="BasisForeignApplicationIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>The indication that a basis for the national trademark application is a foreign trademark application.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="BasisForeignRegistrationIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>The indication that a basis for the national trademark application or registration is a foreign trademark registration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="BasisIntentToUseIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>The indication that a basis for the national trademark application is the intent to use the trademark in commerce to identify goods and services</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="BasisInternationalRegistrationIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>The registration basis is based upon an international registration that was extended into the designated contracting party. This indicates that the basis for the national trademark application or registration is an extension of protection into the national office of an international registration.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="BasisUseIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>The indication that a basis for the national trademark application or registration is use of the trademark in commerce to identify goods and services.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClassDescription" type="tmk:ClassDescriptionType">
+		<xsd:annotation>
+			<xsd:documentation>Details of one Goods and Services class and description</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClassDescriptionBag" type="tmk:ClassDescriptionBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of Goods and Services classes and descriptions</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ClassDescriptionBagType">
+		<xsd:sequence>
+<xsd:element ref="tmk:ClassDescription" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="ClassDescriptionType">
+		<xsd:sequence>
+<xsd:element ref="com:ClassificationVersion" minOccurs="0"/>
+<xsd:element ref="tmk:ClassNumber" minOccurs="0"/>
+<xsd:element ref="tmk:ClassNumberStatusCategory" minOccurs="0"/>
+<xsd:element ref="tmk:NationalStatusBag" minOccurs="0"/>
+<xsd:element ref="tmk:GoodsServicesDescriptionText" maxOccurs="unbounded"/>
+<xsd:element ref="tmk:UseNiceHeadingIndicator" minOccurs="0"/>
+<xsd:element ref="tmk:ClassificationTermBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:simpleType name="ClassificationKindCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Primary">
+				<xsd:annotation>
+					<xsd:documentation>The classification code that is primarily in the national office or the country of origin</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Nice">
+				<xsd:annotation>
+					<xsd:documentation>Nice International classification of goods and services</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Domestic">
+				<xsd:annotation>
+					<xsd:documentation>Domestic classification system used</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Pseudo mark">
+				<xsd:annotation>
+					<xsd:documentation>Nice International Class number(s) that equate to the identified goods and/or services in class that is nationally classified.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Other">
+				<xsd:annotation>
+					<xsd:documentation>Those not captured by the other permissible values.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="ClassificationKindCode" type="tmk:ClassificationKindCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Type of Classification. A value can be added, on demand, if the required value is missing</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="ClassificationKindCodeType">
+		<xsd:union memberTypes="com:ExtendedWIPOST3CodeType xsd:token tmk:ClassificationKindCategoryType"/>
+	</xsd:simpleType>
+	
+<xsd:element name="ClassificationTerm" type="tmk:ClassificationTermType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding a classification term for goods and services</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClassificationTermBag" type="tmk:ClassificationTermBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of the classification terms</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ClassificationTermBagType">
+		<xsd:sequence>
+<xsd:element ref="tmk:ClassificationTerm" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="ClassificationTermEntryDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date of entry of the classification term</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClassificationTermEquivalentGroup" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Group of terms that are equivalent to the classification term</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClassificationTermIdentifier" type="com:IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of the classification term</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClassificationTermOfficeCode" type="com:ExtendedWIPOST3CodeType">
+		<xsd:annotation>
+			<xsd:documentation>Office defining the classification term</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClassificationTermOfficeIdentification" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Key identifying the Office defining the classification term</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClassificationTermReferenceGroup" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Group of terms that are a reference for the classification term</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClassificationTermSourceCategory" type="tmk:ClassificationTermSourceCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Source of the classification term</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="ClassificationTermSourceCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Nice">
+				<xsd:annotation>
+					<xsd:documentation>Nice</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Office">
+				<xsd:annotation>
+					<xsd:documentation>Office</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EM_JP_US">
+				<xsd:annotation>
+					<xsd:documentation>EM_JP_US</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="EM_US">
+				<xsd:annotation>
+					<xsd:documentation>EM_US</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="ClassificationTermStatus" type="tmk:ClassificationTermStatusType">
+		<xsd:annotation>
+			<xsd:documentation>Validity status of the classification term</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="ClassificationTermStatusCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Requested">
+				<xsd:annotation>
+					<xsd:documentation>Requested</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Accepted">
+				<xsd:annotation>
+					<xsd:documentation>Accepted</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Refused">
+				<xsd:annotation>
+					<xsd:documentation>Refused</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="No longer in use">
+				<xsd:annotation>
+					<xsd:documentation>No longer in use</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:complexType name="ClassificationTermStatusType">
+		<xsd:simpleContent>
+			<xsd:extension base="tmk:ClassificationTermStatusCategoryType">
+				<xsd:attribute ref="com:officeCode"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	
+<xsd:element name="ClassificationTermText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Text regarding the classification term</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClassificationTermTranslationGroup" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Group of terms that are a translation of the classification term</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ClassificationTermType">
+		<xsd:sequence>
+<xsd:element ref="tmk:ClassificationTermIdentifier" minOccurs="0"/>
+<xsd:element ref="tmk:ClassificationTermOfficeCode" minOccurs="0"/>
+<xsd:element ref="tmk:ClassificationTermOfficeIdentification" minOccurs="0"/>
+<xsd:element ref="tmk:ClassificationTermSourceCategory" minOccurs="0"/>
+<xsd:element ref="tmk:ClassificationTermEntryDate" minOccurs="0"/>
+<xsd:element ref="tmk:ClassNumber" minOccurs="0"/>
+<xsd:element ref="tmk:ClassificationTermText"/>
+<xsd:element ref="tmk:ClassificationTermEquivalentGroup" minOccurs="0"/>
+<xsd:element ref="tmk:ClassificationTermReferenceGroup" minOccurs="0"/>
+<xsd:element ref="tmk:ClassificationTermTranslationGroup" minOccurs="0"/>
+<xsd:element ref="tmk:ClassificationTermStatus" minOccurs="0"/>
+<xsd:element ref="tmk:WIPOBasicNumber" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:operationCategory"/>
+	</xsd:complexType>
+	
+<xsd:element name="ClassNumber" type="tmk:NiceClassNumberType">
+		<xsd:annotation>
+			<xsd:documentation>Classification number</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClassNumberStatusCategory" type="tmk:ClassNumberStatusCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of status of the class number of the goods and services assigned to a mark.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="ClassNumberStatusCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Provisional">
+				<xsd:annotation>
+					<xsd:documentation>Provisional</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National">
+				<xsd:annotation>
+					<xsd:documentation>National status</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="ClassTitleText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>A short title for the class number in free format.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="CurrentBasis" type="tmk:FilingBasisType">
+		<xsd:annotation>
+			<xsd:documentation>The bases that currently exist for the trademark application or registration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="FactDecisionText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:appinfo>PII</xsd:appinfo>
+			<xsd:documentation>Text regarding the fact decision</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="FilingBasis" type="tmk:FilingBasisType">
+		<xsd:annotation>
+			<xsd:documentation>The filing bases that were claimed by the applicant when the trademark application was filed</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="FilingBasisType">
+		<xsd:complexContent>
+			<xsd:extension base="tmk:AmendedBasisType">
+				<xsd:sequence>
+<xsd:element ref="tmk:NoBasisIndicator"/>
+<xsd:element ref="tmk:BasisInternationalRegistrationIndicator" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+<xsd:element name="FirstUsedCommerceDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date the mark was first used in commerce.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="FirstUsedDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date the mark was first used.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="GoodsServices" type="tmk:GoodsServicesType">
+		<xsd:annotation>
+			<xsd:documentation>Goods and Services</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="GoodsServicesClassification" type="tmk:GoodsServicesClassificationType">
+		<xsd:annotation>
+			<xsd:documentation>A single type of classification for good(s) or service(s) identifications or terms</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="GoodsServicesClassificationBag" type="tmk:GoodsServicesClassificationBagType">
+		<xsd:annotation>
+			<xsd:documentation>The collection of classifications for good(s) or service(s) identifications or terms</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="GoodsServicesClassificationBagType">
+		<xsd:sequence>
+<xsd:element ref="tmk:GoodsServicesClassification" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="GoodsServicesClassificationType">
+		<xsd:sequence>
+			<xsd:element ref="tmk:ClassificationKindCode"/>
+			<xsd:element ref="com:ClassificationVersion" minOccurs="0"/>
+			<xsd:element ref="com:CommentText" minOccurs="0"/>
+			<xsd:element ref="tmk:ClassNumber" minOccurs="0"/>
+			<xsd:element ref="tmk:NationalClassNumber" minOccurs="0"/>
+			<xsd:element ref="tmk:ClassTitleText" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="GoodsServicesDescriptionText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Description of goods or services within the Nice class</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="GoodsServicesType">
+		<xsd:sequence>
+			<xsd:element ref="tmk:GoodsServicesClassificationBag"/>
+			<xsd:element ref="tmk:NationalGoodsServices" minOccurs="0"/>
+			<xsd:element ref="tmk:NationalFilingBasis" minOccurs="0"/>
+			<xsd:element ref="tmk:ClassificationKindCode" minOccurs="0"/>
+			<xsd:element ref="com:ClassificationVersion" minOccurs="0"/>
+			<xsd:element ref="com:CommentTextBag" minOccurs="0"/>
+			<xsd:element ref="tmk:ProposedLeadingClassNumber" minOccurs="0"/>
+			<xsd:element ref="tmk:ClassDescriptionBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="NationalClassNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The national classification number or the primary classification used by the national office</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="NationalClassTotalQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>The total number of classes associated with the goods or services</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="NationalFilingBasis" type="tmk:NationalFilingBasisType">
+		<xsd:annotation>
+			<xsd:documentation>The national filing bases for trademark applications and registrations.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="NationalFilingBasisType">
+		<xsd:choice maxOccurs="unbounded">
+<xsd:element ref="tmk:FilingBasis"/>
+<xsd:element ref="tmk:CurrentBasis"/>
+<xsd:element ref="tmk:AmendedBasis"/>
+<xsd:element ref="tmk:FirstUsedDate"/>
+<xsd:element ref="tmk:FirstUsedCommerceDate"/>
+<xsd:element ref="tmk:AnotherFormFirstUsedCommerceText"/>
+<xsd:element ref="tmk:AnotherFormFirstUsedAnywhereText"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:element name="NationalGoodsServices" type="tmk:NationalGoodsServicesType">
+		<xsd:annotation>
+			<xsd:documentation>A container to hold different types of classifications for good(s) or service(s) identifications or terms</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="NationalGoodsServicesType">
+		<xsd:sequence>
+			<xsd:element ref="tmk:ActiveClassTotalQuantity" minOccurs="0"/>
+			<xsd:element ref="tmk:NationalClassTotalQuantity"/>
+			<xsd:element ref="com:CommentText" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="NationalStatus" type="tmk:NationalStatusType">
+		<xsd:annotation>
+			<xsd:documentation>The status of a single trademark trial and or appeal board proceedings.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="NationalStatusBag" type="tmk:NationalStatusBagType">
+		<xsd:annotation>
+			<xsd:documentation>The collection of statuses used by national offices. These could pertain to the mark itself, classes or terms in the good or services descriptions, or the status of trademark trial or board proceedings.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="NationalStatusBagType">
+		<xsd:sequence>
+<xsd:element ref="tmk:NationalStatus" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="NationalStatusCategory" type="tmk:NationalStatusCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>The category of status being sent.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="NationalStatusCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="National trademark status">
+				<xsd:annotation>
+					<xsd:documentation>The national status of a trademark</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National class status">
+				<xsd:annotation>
+					<xsd:documentation>The national status for a class in a trademark</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National term status">
+				<xsd:annotation>
+					<xsd:documentation>The national status for a good or service term in a trademark</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National legal proceeding status">
+				<xsd:annotation>
+					<xsd:documentation>The national status for legal proceedings concerning a trademark</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="NationalStatusCode" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>The code that represents the national status for the trademark, class term status.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="NationalStatusDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>The date the national Status was set to its current value</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="NationalStatusExternalDescriptionText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The description of the national status presented externally</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="NationalStatusInternalDescriptionText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The description of the national status presented internally</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="NationalStatusType">
+		<xsd:sequence>
+<xsd:element ref="tmk:ClassNumberStatusCategory" minOccurs="0"/>
+<xsd:element ref="tmk:NationalStatusCategory"/>
+<xsd:element ref="tmk:NationalStatusCode" minOccurs="0"/>
+<xsd:element ref="tmk:NationalStatusDate" minOccurs="0"/>
+<xsd:element ref="tmk:NationalStatusInternalDescriptionText" minOccurs="0"/>
+<xsd:element ref="tmk:NationalStatusExternalDescriptionText" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:simpleType name="NiceClassNumberType">
+		<xsd:union memberTypes="xsd:string tmk:NiceClassStrictNumberType"/>
+	</xsd:simpleType>
+	
+<xsd:simpleType name="NiceClassStrictNumberType">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:maxInclusive value="45"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="NoBasisIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>The indication that there is no basis for the national trademark application.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ProposedLeadingClassNumber" type="tmk:NiceClassNumberType">
+		<xsd:annotation>
+			<xsd:documentation>Leading class suggested by the applicant</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ReasonDocument" type="tmk:ReasonDocumentType">
+		<xsd:annotation>
+			<xsd:documentation>The document under which a legally significant act takes place</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ReasonDocumentCategory" type="tmk:ReasonDocumentCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of document under which a legally significant act takes place</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="ReasonDocumentCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Decision of registration">
+				<xsd:annotation>
+					<xsd:documentation>Decision of registration</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Request of the holder">
+				<xsd:annotation>
+					<xsd:documentation>Request of the holder</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Non Renewal">
+				<xsd:annotation>
+					<xsd:documentation>The cancellation at Non renewal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Decision of correction">
+				<xsd:annotation>
+					<xsd:documentation>Decision of correction</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Decision of registration licensee">
+				<xsd:annotation>
+					<xsd:documentation>Decision of registration licensee</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Decision of non contracted transfer">
+				<xsd:annotation>
+					<xsd:documentation>Decision of non contracted transfer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Decision of transfer">
+				<xsd:annotation>
+					<xsd:documentation>Decision of transfer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Decision of partial transfer">
+				<xsd:annotation>
+					<xsd:documentation>Decision of partial transfer</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Decision of pledge">
+				<xsd:annotation>
+					<xsd:documentation>Decision of pledge</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Decision of subsequent pledge">
+				<xsd:annotation>
+					<xsd:documentation>Decision of subsequent pledge</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Decision of change in contract">
+				<xsd:annotation>
+					<xsd:documentation>Decision of change in contract</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Judicial action">
+				<xsd:annotation>
+					<xsd:documentation>Judicial action</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="ReasonDocumentDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date of the document under which a legally significant act takes place</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ReasonDocumentNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Number of the document under which a legally significant act takes place</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ReasonDocumentSource" type="xsd:token">
+		<xsd:annotation>
+			<xsd:documentation>Source of the document under which a legally significant act takes place</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ReasonDocumentType">
+		<xsd:sequence>
+<xsd:element ref="tmk:ReasonDocumentNumber" minOccurs="0"/>
+<xsd:element ref="tmk:ReasonDocumentDate" minOccurs="0"/>
+<xsd:element ref="tmk:ReasonDocumentSource" minOccurs="0"/>
+<xsd:element ref="com:Signature" minOccurs="0"/>
+<xsd:element ref="tmk:ReasonDocumentCategory" minOccurs="0"/>
+<xsd:element ref="com:RecordDocumentBag"/>
+<xsd:element ref="tmk:FactDecisionText" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="UseNiceHeadingIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication whether the class description uses the Nice heading</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="WIPOBasicNumber" type="tmk:WIPOBasicNumberType">
+		<xsd:annotation>
+			<xsd:documentation>Basic Number of the classification term assigned by WIPO. The basic number is the same for every language version of the Classification that has been published by, or in collaboration with, WIPO. The basic number enables the user of the Classification to find the equivalent product or service in the alphabetical lists of other language versions of the Classification.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="WIPOBasicNumberType">
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="\d{6}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

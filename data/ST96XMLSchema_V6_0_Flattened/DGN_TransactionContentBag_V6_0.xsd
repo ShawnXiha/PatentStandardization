@@ -1,0 +1,2495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common" xmlns:dgn="http://www.wipo.int/standards/XMLSchema/ST96/Design" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.wipo.int/standards/XMLSchema/ST96/Design" elementFormDefault="qualified" attributeFormDefault="qualified" version="V6_0">
+	<xsd:import namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" schemaLocation="DGN_TransactionContentBag_V6_0_Common.xsd"/>
+
+	<xsd:annotation>
+		<xsd:appinfo>
+			<com:SchemaCreatedDate>2012-07-13</com:SchemaCreatedDate>
+			<com:SchemaLastModifiedDate>2022-10-03</com:SchemaLastModifiedDate>
+			<com:SchemaContactPoint>xml.standards@wipo.int</com:SchemaContactPoint>
+			<com:SchemaReleaseNoteURL>http://www.wipo.int/standards/XMLSchema/ST96/V6_0/ReleaseNotes.pdf</com:SchemaReleaseNoteURL>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="TransactionContentBag" type="dgn:TransactionContentBagType">
+		<xsd:annotation>
+			<xsd:documentation>Details of the contents of a transaction</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:complexType name="TransactionContentBagType">
+		<xsd:sequence>
+			<xsd:element ref="com:TransactionIdentifier"/>
+			<xsd:element ref="com:TransactionCategory"/>
+			<xsd:element ref="com:TransactionSubCode"/>
+			<xsd:element ref="dgn:TransactionData"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:st96Version" use="required"/>
+		<xsd:attribute ref="com:ipoVersion"/>
+	</xsd:complexType>
+	
+	<xsd:element name="AffectedDesign" type="dgn:AffectedDesignType">
+		<xsd:annotation>
+			<xsd:documentation>Design affected by the decision, either all designs or enumeration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="AffectedDesignType">
+		<xsd:choice>
+<xsd:element ref="dgn:AllDesignsIndicator"/>
+<xsd:element ref="dgn:DesignIdentifierBag"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:element name="AllDesignsIndicator" type="xsd:boolean" fixed="true">
+		<xsd:annotation>
+			<xsd:documentation>Indicates that the transaction affects all the designs in the international registration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="Applicant" type="dgn:ApplicantType">
+		<xsd:annotation>
+			<xsd:documentation>Applicant or holder details</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ApplicantBag" type="dgn:ApplicantBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of applicants</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ApplicantBagType">
+		<xsd:choice>
+<xsd:element ref="com:PartyIdentifierBag" maxOccurs="unbounded"/>
+<xsd:element ref="dgn:Applicant" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:element name="ApplicantContractingParty" type="com:ExtendedWIPOST3CodeType">
+		<xsd:annotation>
+			<xsd:documentation>ST3 country code selected among the applicant's entitlement country codes. It may be necessary for some agreements such as the Hague agreement, 1999 Act, for the international registration of industrial designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ApplicantType">
+		<xsd:sequence>
+			<xsd:element ref="com:NationalityCode" minOccurs="0"/>
+			<xsd:element ref="com:LegalEntityName" minOccurs="0"/>
+			<xsd:element ref="com:IncorporationCountryCode" minOccurs="0"/>
+			<xsd:element ref="com:IncorporationState" minOccurs="0"/>
+			<xsd:element ref="com:CommentText" minOccurs="0"/>
+			<xsd:element ref="dgn:Entitlement" minOccurs="0"/>
+			<xsd:element ref="dgn:ApplicantContractingParty" minOccurs="0"/>
+			<xsd:element ref="com:Version" minOccurs="0"/>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="com:PartyIdentifier"/>
+				<xsd:element ref="com:Contact"/>
+				<xsd:element ref="com:PublicationContact"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute ref="com:operationCategory"/>
+		<xsd:attribute ref="com:sequenceNumber"/>
+	</xsd:complexType>
+	
+<xsd:element name="BlackWhiteViewTotalQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>Total number of views in black and white</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="Claimant" type="dgn:ClaimantType">
+		<xsd:annotation>
+			<xsd:documentation>Individual/Organization that claims a design record (transfer, licence, change of name or address, etc.)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ClaimantBag" type="dgn:ClaimantBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of the claimants of a design record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ClaimantBagType">
+		<xsd:choice>
+<xsd:element ref="com:PartyIdentifierBag" maxOccurs="unbounded"/>
+<xsd:element ref="dgn:Claimant" maxOccurs="unbounded"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:complexType name="ClaimantType">
+		<xsd:sequence>
+<xsd:element ref="com:NationalityCode" minOccurs="0"/>
+<xsd:element ref="com:LegalEntityName" minOccurs="0"/>
+<xsd:element ref="com:IncorporationCountryCode" minOccurs="0"/>
+<xsd:element ref="com:IncorporationState" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+<xsd:element ref="dgn:Entitlement" minOccurs="0"/>
+			<xsd:choice maxOccurs="unbounded">
+<xsd:element ref="com:PartyIdentifier"/>
+<xsd:element ref="com:Contact"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute ref="com:operationCategory"/>
+		<xsd:attribute ref="com:sequenceNumber"/>
+	</xsd:complexType>
+	
+<xsd:element name="ClassDescription" type="dgn:ClassDescriptionType">
+		<xsd:annotation>
+			<xsd:documentation>Description of the class to which a product, in relation to which the design is used, belongs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ClassDescriptionType">
+		<xsd:sequence>
+<xsd:element ref="dgn:ClassNumber"/>
+<xsd:element ref="com:ProductDescriptionText" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="ClassNumber" type="dgn:LocarnoClassNumberType">
+		<xsd:annotation>
+			<xsd:documentation>Classification number of the product to which the design it is to be used</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ColourViewTotalQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>Total number of views in colour</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DefermentPeriod" type="com:PeriodType">
+		<xsd:annotation>
+			<xsd:documentation>Requested period of deferment of publication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DescriptionPublicationIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication requesting the publication of the design's description</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="Design" type="dgn:DesignType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:annotation>
+		<xsd:appinfo>
+			<com:SchemaCreatedDate>2012-07-13</com:SchemaCreatedDate>
+			<com:SchemaLastModifiedDate>2022-10-03</com:SchemaLastModifiedDate>
+			<com:SchemaContactPoint>xml.standards@wipo.int</com:SchemaContactPoint>
+			<com:SchemaReleaseNoteURL>http://www.wipo.int/standards/XMLSchema/ST96/V6_0/ReleaseNotes.pdf</com:SchemaReleaseNoteURL>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="DesignApplication" type="dgn:DesignApplicationType">
+		<xsd:annotation>
+			<xsd:documentation>Details on a design application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:annotation>
+		<xsd:appinfo>
+			<com:SchemaCreatedDate>2012-07-13</com:SchemaCreatedDate>
+			<com:SchemaLastModifiedDate>2022-10-03</com:SchemaLastModifiedDate>
+			<com:SchemaContactPoint>xml.standards@wipo.int</com:SchemaContactPoint>
+			<com:SchemaReleaseNoteURL>http://www.wipo.int/standards/XMLSchema/ST96/V6_0/ReleaseNotes.pdf</com:SchemaReleaseNoteURL>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="DesignApplicationBag" type="dgn:DesignApplicationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of design applications</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="DesignApplicationBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignApplication" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:st96Version" use="required"/>
+		<xsd:attribute ref="com:ipoVersion"/>
+	</xsd:complexType>
+	
+<xsd:element name="DesignApplicationCurrentStatusCategory" type="dgn:DesignApplicationCurrentStatusCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of current legal status of the design application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="DesignApplicationCurrentStatusCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Filed">
+				<xsd:annotation>
+					<xsd:documentation>Filed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Withdrawn">
+				<xsd:annotation>
+					<xsd:documentation>Withdrawn</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Rejected">
+				<xsd:annotation>
+					<xsd:documentation>Rejected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="DesignApplicationCurrentStatusDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date of current legal status of the design application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignApplicationEvent" type="dgn:DesignApplicationEventType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding an event or action on the design application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignApplicationEventBag" type="dgn:DesignApplicationEventBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of events or actions on the design application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignApplicationEventBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignApplicationEvent" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignApplicationEventCategory" type="dgn:DesignApplicationEventCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of the event or action on the design application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="DesignApplicationEventCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Filed">
+				<xsd:annotation>
+					<xsd:documentation>Filed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Withdrawn">
+				<xsd:annotation>
+					<xsd:documentation>Withdrawn</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Rejected">
+				<xsd:annotation>
+					<xsd:documentation>Rejected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Undefined">
+				<xsd:annotation>
+					<xsd:documentation>Undefined</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="DesignApplicationEventDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date of the event on the design application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignApplicationEventDateTime" type="xsd:dateTime">
+		<xsd:annotation>
+			<xsd:documentation>Date and time of the event on the design application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignApplicationEventResponseDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date of the response of the event on the design application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignApplicationEventType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignApplicationEventCategory"/>
+<xsd:element ref="dgn:DesignApplicationEventResponseDate" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+<xsd:element ref="dgn:DesignApplicationEventDate"/>
+<xsd:element ref="dgn:DesignApplicationEventDateTime"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignApplicationFormName" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Name or code of the application form the receiving office has defined within the regulations for an application request.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignApplicationIdentifier" type="com:IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>Application identification number of the registration office</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignApplicationLanguageCode" type="com:ExtendedISOLanguageCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Code of (first) language of the design application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignApplicationStatementBag" type="dgn:DesignApplicationStatementBagType">
+		<xsd:annotation>
+			<xsd:documentation>Details on statements of the design application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignApplicationStatementBagType">
+		<xsd:choice maxOccurs="2">
+<xsd:element ref="dgn:DesignApplicationStatementText"/>
+<xsd:element ref="dgn:DesignApplicationStatementDocument"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:element name="DesignApplicationStatementDocument" type="com:DocumentType">
+		<xsd:annotation>
+			<xsd:documentation>Document containing the application statement</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignApplicationStatementText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Text describing the application statement</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="DesignApplicationType">
+		<xsd:sequence>
+			<xsd:element ref="com:RequestSoftware" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignApplicationFormName" minOccurs="0"/>
+			<xsd:element ref="com:RequestExamination" minOccurs="0"/>
+			<xsd:element ref="com:RegistrationOfficeCode"/>
+			<xsd:element ref="com:ReceivingOfficeCode" minOccurs="0"/>
+			<xsd:element ref="com:ReceivingOfficeDate" minOccurs="0"/>
+			<xsd:element ref="dgn:ReceiptNumber" minOccurs="0"/>
+			<xsd:element ref="dgn:SealedDepositIndicator" minOccurs="0"/>
+			<xsd:element ref="com:ApplicationNumber" minOccurs="0"/>
+			<xsd:element ref="com:InternationalRegistrationNumber" minOccurs="0"/>
+			<xsd:element ref="com:FilingPlace" minOccurs="0"/>
+			<xsd:element ref="com:ApplicantFileReference" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignApplicationLanguageCode" minOccurs="0"/>
+			<xsd:element ref="com:SecondLanguageCode" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignTotalQuantity" minOccurs="0"/>
+			<xsd:element ref="com:CorrespondenceLanguageCode" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignApplicationCurrentStatusCategory" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignApplicationCurrentStatusDate" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignatedCountryBag" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignBag"/>
+			<xsd:element ref="dgn:ApplicantBag"/>
+			<xsd:element ref="com:RepresentativeBag" minOccurs="0"/>
+			<xsd:element ref="com:Authorization" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignApplicationEventBag" minOccurs="0"/>
+			<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignApplicationStatementBag" minOccurs="0"/>
+			<xsd:element ref="com:PaymentBag" minOccurs="0"/>
+			<xsd:element ref="com:ReimbursementBag" minOccurs="0"/>
+			<xsd:element ref="com:SignatureBag" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:element ref="com:ApplicationDate" minOccurs="0"/>
+				<xsd:element ref="com:ApplicationDateTime"/>
+			</xsd:choice>
+			<xsd:element ref="com:CorrespondenceAddress" minOccurs="0"/>
+			<xsd:element ref="com:BusinessEntityStatusCategory" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:operationCategory"/>
+		<xsd:attribute ref="com:st96Version" use="required"/>
+		<xsd:attribute ref="com:ipoVersion"/>
+	</xsd:complexType>
+	
+<xsd:element name="DesignatedCountry" type="dgn:DesignatedCountryType">
+		<xsd:annotation>
+			<xsd:documentation>Designated contracting party for international designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignatedCountryBag" type="dgn:DesignatedCountryBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of designated countries for international designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignatedCountryBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignatedCountry" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="DesignatedCountryType">
+		<xsd:sequence>
+<xsd:element ref="com:DesignatedCountryCode"/>
+<xsd:element ref="dgn:HagueAgreementActCategory" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignBag" type="dgn:DesignBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:Design" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignBasicRecord" type="dgn:DesignBasicRecordType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding a basic record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignBasicRecordCategory" type="dgn:DesignBasicRecordCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of basic record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="DesignBasicRecordCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Registration">
+				<xsd:annotation>
+					<xsd:documentation>Registration</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Protection granted">
+				<xsd:annotation>
+					<xsd:documentation>Protection granted</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Judicial action">
+				<xsd:annotation>
+					<xsd:documentation>Judicial action</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Renunciation">
+				<xsd:annotation>
+					<xsd:documentation>Renunciation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Transfer refusal">
+				<xsd:annotation>
+					<xsd:documentation>Transfer refusal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Representative appointment">
+				<xsd:annotation>
+					<xsd:documentation>Representative appointment</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Appeal withdrawn">
+				<xsd:annotation>
+					<xsd:documentation>Appeal withdrawn</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Total invalidation">
+				<xsd:annotation>
+					<xsd:documentation>Total invalidation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Partial invalidation">
+				<xsd:annotation>
+					<xsd:documentation>Partial invalidation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Total cancellation">
+				<xsd:annotation>
+					<xsd:documentation>Total cancellation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Partial cancellation">
+				<xsd:annotation>
+					<xsd:documentation>Partial cancellation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Total refusal">
+				<xsd:annotation>
+					<xsd:documentation>Total refusal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Partial refusal">
+				<xsd:annotation>
+					<xsd:documentation>Partial refusal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Final total refusal">
+				<xsd:annotation>
+					<xsd:documentation>Final total refusal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Final confirmation refusal">
+				<xsd:annotation>
+					<xsd:documentation>Final confirmation refusal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Final other decision">
+				<xsd:annotation>
+					<xsd:documentation>Final other decision</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Complementary renewal">
+				<xsd:annotation>
+					<xsd:documentation>Complementary renewal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Renewal">
+				<xsd:annotation>
+					<xsd:documentation>Renewal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Renewal certain parties">
+				<xsd:annotation>
+					<xsd:documentation>Renewal certain parties</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Non renewal">
+				<xsd:annotation>
+					<xsd:documentation>Non renewal</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Limitation">
+				<xsd:annotation>
+					<xsd:documentation>Limitation</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Correction">
+				<xsd:annotation>
+					<xsd:documentation>Correction</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:complexType name="DesignBasicRecordType">
+		<xsd:sequence>
+<xsd:element ref="com:RecordIdentifier"/>
+<xsd:element ref="com:RecordFilingDate" minOccurs="0"/>
+<xsd:element ref="com:RecordNotificationDate" minOccurs="0"/>
+<xsd:element ref="com:RecordEffectiveDate" minOccurs="0"/>
+<xsd:element ref="dgn:DesignBasicRecordCategory" minOccurs="0"/>
+<xsd:element ref="com:RecordReference" minOccurs="0"/>
+<xsd:element ref="com:RecordLanguageCode" minOccurs="0"/>
+<xsd:element ref="dgn:DesignIdentifierBag" minOccurs="0"/>
+<xsd:element ref="dgn:RecordPublicationBag" minOccurs="0"/>
+<xsd:element ref="dgn:ClaimantBag" minOccurs="0"/>
+<xsd:element ref="com:RepresentativeBag" minOccurs="0"/>
+<xsd:element ref="com:RecordEventBag" minOccurs="0"/>
+<xsd:element ref="com:RecordDocumentBag" minOccurs="0"/>
+<xsd:element ref="com:RecordCurrentStatusCategory" minOccurs="0"/>
+<xsd:element ref="com:RecordCurrentStatusDate" minOccurs="0"/>
+<xsd:element ref="com:RecordInterestedOfficeCode" minOccurs="0"/>
+<xsd:element ref="com:RecordDesignatedCountryCodeBag" minOccurs="0"/>
+<xsd:element ref="dgn:LimitationBag" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="DesignClaim" type="dgn:DesignClaimType">
+		<xsd:annotation>
+			<xsd:documentation>Matter for which design protection is sought</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignClaimText" type="com:OrderedTextType">
+				<xsd:annotation>
+					<xsd:documentation>Description of a claim sought for design protection provided in a particular language</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+	
+	<xsd:element name="DesignClaimTextBag" type="dgn:DesignClaimTextBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of multiple language descriptions for design claims</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="DesignClaimTextBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignClaimText" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="DesignClaimType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignClaimTextBag"/>
+			<xsd:element ref="com:DesignatedCountryCode" minOccurs="0"/>
+			<xsd:element ref="dgn:AffectedDesign" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignCurrentStatusCategory" type="dgn:DesignCurrentStatusCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of current status of the design protection</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="DesignCurrentStatusCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Filed">
+				<xsd:annotation>
+					<xsd:documentation>Filed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Withdrawn">
+				<xsd:annotation>
+					<xsd:documentation>Withdrawn</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Rejected">
+				<xsd:annotation>
+					<xsd:documentation>Rejected</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Registered">
+				<xsd:annotation>
+					<xsd:documentation>Registered</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cancelled">
+				<xsd:annotation>
+					<xsd:documentation>Cancelled</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Expired">
+				<xsd:annotation>
+					<xsd:documentation>Expired</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Undefined">
+				<xsd:annotation>
+					<xsd:documentation>Undefined</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="DesignCurrentStatusDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date of the current status of the design protection</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignDescriptionText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Textual description of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="Designer" type="dgn:DesignerType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding the designer or the team of designers</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignerBag" type="dgn:DesignerBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of designers</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignerBagType">
+			<xsd:choice>
+<xsd:element ref="com:PartyIdentifierBag" maxOccurs="unbounded"/>
+<xsd:element ref="dgn:Designer" maxOccurs="unbounded"/>
+			</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:complexType name="DesignerType">
+		<xsd:sequence>
+			<xsd:element ref="com:NationalityCode" minOccurs="0"/>
+			<xsd:element ref="com:CommentText" minOccurs="0"/>
+			<xsd:choice maxOccurs="unbounded">
+				<xsd:element ref="com:PartyIdentifier"/>
+				<xsd:element ref="com:Contact"/>
+				<xsd:element ref="com:PublicationContact"/>
+			</xsd:choice>
+			<xsd:element ref="com:ConfidentialIndicator" minOccurs="0"/>
+			<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute ref="com:operationCategory"/>
+		<xsd:attribute ref="com:sequenceNumber"/>
+	</xsd:complexType>
+	
+<xsd:element name="DesignerWaiverIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication that the designer has waived the right to be cited</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignEvent" type="dgn:DesignEventType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding an event or action on the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignEventBag" type="dgn:DesignEventBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of events or actions on the design protection</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignEventBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignEvent" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignEventCategory" type="dgn:DesignEventCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of the event or action on the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="DesignEventCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Withdrawn">
+				<xsd:annotation>
+					<xsd:documentation>Withdrawn</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Registered">
+				<xsd:annotation>
+					<xsd:documentation>Registered</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Expired">
+				<xsd:annotation>
+					<xsd:documentation>Expired</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Undefined">
+				<xsd:annotation>
+					<xsd:documentation>Undefined</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="DesignEventDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date of the event on the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignEventDateTime" type="xsd:dateTime">
+		<xsd:annotation>
+			<xsd:documentation>Date and time of the event on the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignEventResponseDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Date of response of the design event</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignEventType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignEventCategory"/>
+<xsd:element ref="dgn:DesignEventResponseDate" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+<xsd:element ref="dgn:DesignEventDate"/>
+<xsd:element ref="dgn:DesignEventDateTime"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignIdentifier" type="com:IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DesignIdentifierBag" type="dgn:DesignIdentifierBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of identifiers identifying the designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="DesignIdentifierBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignIdentifier" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignOpenToLicensingIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication that the design's applicant shows interest in granting licences so potential licensees are informed of this</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="DesignPublicationCategory" type="dgn:DesignPublicationCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of section of/ reason for design publication before or after registration</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="DesignPublicationCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="PreRegistration publication">
+				<xsd:annotation>
+					<xsd:documentation>Publication before registration</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PostRegistration publication">
+				<xsd:annotation>
+					<xsd:documentation>Publication after registration</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="DesignRecord" type="dgn:DesignRecordType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding a design record such as renewals, transfers of right, changes of name and address and licences</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignRecordBag" type="dgn:DesignRecordBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of design records such as renewals and transfers of right</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignRecordBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignRecord" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignRecordRelation" type="dgn:DesignRecordRelationType">
+		<xsd:annotation>
+			<xsd:documentation>Element to relate a design and a record to that design by means of their keys</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignRecordRelationBag" type="dgn:DesignRecordRelationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of design record relations</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignRecordRelationBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignRecordRelation" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="DesignRecordRelationType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignIdentifierBag"/>
+<xsd:element ref="com:RecordIdentifierBag"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="DesignRecordType">
+		<xsd:sequence>
+<xsd:element ref="com:StaffBag" minOccurs="0"/>
+			<xsd:choice>
+<xsd:element ref="dgn:DesignBasicRecord"/>
+<xsd:element ref="dgn:RecordTransfer"/>
+<xsd:element ref="dgn:RecordChangeNameAddress"/>
+<xsd:element ref="dgn:RecordLicence"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignReference" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>External reference for the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignRegistrationDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Registration date of the earlier design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignRegistrationIdentifier" type="com:IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier of the earlier design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignRepresentation" type="dgn:DesignRepresentationType">
+		<xsd:annotation>
+			<xsd:documentation>Design's graphical representation</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignRepresentationBag" type="dgn:DesignRepresentationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of the design's graphical representation</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignRepresentationBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignRepresentation" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignRepresentationSheet" type="dgn:DesignRepresentationSheetType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding the representation sheet of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignRepresentationSheetBag" type="dgn:DesignRepresentationSheetBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of the design's graphical representation sheets</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignRepresentationSheetBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignRepresentationSheet" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="DesignRepresentationSheetType">
+		<xsd:sequence>
+			<xsd:element ref="com:FileName"/>
+			<xsd:element ref="dgn:ViewReferenceText" minOccurs="0"/>
+			<xsd:element ref="com:ImageFormatCategory" minOccurs="0"/>
+			<xsd:element ref="com:ColourIndicator" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="DesignRepresentationType">
+		<xsd:choice>
+<xsd:element ref="dgn:DesignRepresentationSheetBag"/>
+<xsd:element ref="dgn:ViewBag"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:element name="DesignSpecimen" type="dgn:DesignSpecimenType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding a specimen of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignSpecimenBag" type="dgn:DesignSpecimenBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of design specimens</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="DesignSpecimenBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:DesignSpecimen" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignSpecimenCategory" type="dgn:DesignSpecimenCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of specimen</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="DesignSpecimenCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Object">
+				<xsd:annotation>
+					<xsd:documentation>Object</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Model">
+				<xsd:annotation>
+					<xsd:documentation>Model</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Sample">
+				<xsd:annotation>
+					<xsd:documentation>Sample</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="DesignSpecimenType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:SpecimenIdentifier"/>
+			<xsd:element ref="dgn:DesignSpecimenCategory" minOccurs="0"/>
+			<xsd:element ref="dgn:SpecimenDescriptionText" minOccurs="0"/>
+			<xsd:element ref="com:FileName" minOccurs="0"/>
+			<xsd:element ref="com:ImageFormatCategory" minOccurs="0"/>
+			<xsd:element ref="com:ColourIndicator" minOccurs="0"/>
+			<xsd:element ref="com:CommentText" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="DesignTitleText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Title of design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="DesignTotalQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>Total number of designs contained in the application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="DesignType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignIdentifier" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignReference" minOccurs="0"/>
+			<xsd:element ref="com:RightEffectiveDate" minOccurs="0"/>
+			<xsd:element ref="com:RegistrationNumber" minOccurs="0"/>
+			<xsd:element ref="com:RegistrationDate" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignTitleText" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignDescriptionText" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="dgn:DesignClaim" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="dgn:PublicationKindDescription" minOccurs="0"/>
+			<xsd:element ref="dgn:NoveltyStatementText" minOccurs="0"/>
+			<xsd:element ref="dgn:PartialDesignIndicator" minOccurs="0"/>
+			<xsd:element ref="dgn:PartialDisclaimerText" minOccurs="0"/>
+			<xsd:element ref="dgn:PublicationDefermentIndicator" minOccurs="0"/>
+			<xsd:element ref="dgn:DefermentPeriod" minOccurs="0"/>
+			<xsd:element ref="com:ColourIndicator" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignerWaiverIndicator" minOccurs="0"/>
+			<xsd:element ref="dgn:PublicationInColourIndicator" minOccurs="0"/>
+			<xsd:element ref="dgn:ImmediatePublicationIndicator" minOccurs="0"/>
+			<xsd:element ref="dgn:DescriptionPublicationIndicator" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignOpenToLicensingIndicator" minOccurs="0"/>
+			<xsd:element ref="dgn:SpecimenTotalQuantity" minOccurs="0"/>
+			<xsd:element ref="dgn:RepresentationSheetTotalQuantity" minOccurs="0"/>
+			<xsd:element ref="dgn:ColourViewTotalQuantity" minOccurs="0"/>
+			<xsd:element ref="dgn:BlackWhiteViewTotalQuantity" minOccurs="0"/>
+			<xsd:element ref="com:ExpiryDate" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignCurrentStatusCategory" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignCurrentStatusDate" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignSpecimenBag" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignRepresentationBag" minOccurs="0"/>
+			<xsd:element ref="com:DesignClassificationBag"/>
+			<xsd:element ref="dgn:PriorityBag" minOccurs="0"/>
+			<xsd:element ref="com:ExhibitionPriorityBag" minOccurs="0"/>
+			<xsd:element ref="dgn:RelatedApplicationBag" minOccurs="0"/>
+			<xsd:element ref="com:StaffBag" minOccurs="0"/>
+			<xsd:element ref="dgn:PublicationBag" minOccurs="0"/>
+			<xsd:element ref="dgn:PatentIdentificationBag" minOccurs="0"/>
+			<xsd:element ref="dgn:ApplicantBag"/>
+			<xsd:element ref="com:RepresentativeBag" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignerBag" minOccurs="0"/>
+			<xsd:element ref="dgn:DesignEventBag" minOccurs="0"/>
+			<xsd:element ref="dgn:OppositionBag" minOccurs="0"/>
+			<xsd:element ref="dgn:ExceptionLackNoveltyDeclarationBag" minOccurs="0"/>
+			<xsd:element ref="dgn:PrincipalDesignRelationBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="EarlierDesign" type="dgn:EarlierDesignType">
+		<xsd:annotation>
+			<xsd:documentation>Data on an earlier design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="EarlierDesignBag" type="dgn:EarlierDesignBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of earlier designs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="EarlierDesignBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:EarlierDesign" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="EarlierDesignCategory" type="dgn:EarlierDesignCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of earlier design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="EarlierDesignCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Registered design">
+				<xsd:annotation>
+					<xsd:documentation>Registered design</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Unregistered design">
+				<xsd:annotation>
+					<xsd:documentation>Unregistered design</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="EarlierDesignCountryCode" type="com:ExtendedWIPOST3CodeType">
+		<xsd:annotation>
+			<xsd:documentation>Country code of the earlier design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="EarlierDesignType">
+		<xsd:sequence>
+<xsd:element ref="com:ApplicationDate" minOccurs="0"/>
+<xsd:element ref="dgn:DesignRepresentationBag" minOccurs="0"/>
+			<xsd:choice maxOccurs="5">
+<xsd:element ref="dgn:DesignApplicationIdentifier"/>
+<xsd:element ref="dgn:DesignRegistrationIdentifier"/>
+<xsd:element ref="dgn:DesignRegistrationDate"/>
+<xsd:element ref="dgn:EarlierDesignCountryCode"/>
+<xsd:element ref="dgn:EarlierDesignCategory"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="Entitlement" type="dgn:EntitlementType">
+		<xsd:annotation>
+			<xsd:documentation>Information on the nationality, establishment, or domicile of a party</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="EntitlementType">
+		<xsd:choice maxOccurs="unbounded">
+<xsd:element ref="com:EntitlementNationalityCode"/>
+<xsd:element ref="dgn:HabitualResidence"/>
+<xsd:element ref="com:EntitlementEstablishment"/>
+<xsd:element ref="com:EntitlementDomiciled"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+	<xsd:element name="ExceptionLackNoveltyDeclaration" type="dgn:ExceptionLackNoveltyDeclarationType">
+		<xsd:annotation>
+			<xsd:documentation>Declaration concerning exception to lack of novelty</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="ExceptionLackNoveltyDeclarationBag" type="dgn:ExceptionLackNoveltyDeclarationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of exception lack novelty declarations</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ExceptionLackNoveltyDeclarationBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:ExceptionLackNoveltyDeclaration" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ExceptionLackNoveltyDeclarationType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignatedCountryBag"/>
+			<xsd:element ref="com:DocumentIncludedBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="HabitualResidence" type="dgn:HabitualResidenceType">
+		<xsd:annotation>
+			<xsd:documentation>Data on the Habitual residence of the applicant, transferee or holder</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="HabitualResidenceCode" type="com:ExtendedWIPOST3CodeType">
+		<xsd:annotation>
+			<xsd:documentation>Country code of the habitual residence of the applicant, transferee or holder</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="HabitualResidenceType">
+		<xsd:choice maxOccurs="2">
+<xsd:element ref="dgn:HabitualResidenceCode"/>
+<xsd:element ref="com:Contact"/>
+		</xsd:choice>
+	</xsd:complexType>
+	
+<xsd:element name="HagueAgreementActCategory" type="dgn:HagueAgreementActCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of different Acts of the Hague Agreement concerning the international registration of industrial design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="HagueAgreementActCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Act1999">
+				<xsd:annotation>
+					<xsd:documentation>Hague agreement 1999 Act</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Act1960">
+				<xsd:annotation>
+					<xsd:documentation>Hague agreement 1960 Act</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Act1934">
+				<xsd:annotation>
+					<xsd:documentation>Hague agreement 1934 Act</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="Holder" type="dgn:ApplicantType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding the holder of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="HolderBag" type="dgn:HolderBagType">
+		<xsd:annotation>
+			<xsd:documentation>A collection of the holders of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="HolderBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:Holder" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="HolderChangeBag" type="dgn:HolderChangeBagType">
+		<xsd:annotation>
+			<xsd:documentation>Details of the previous and new holder of the design or of the previous name/address and the new name/address, in case of change in the name/address of the holder</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="HolderChangeBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:PreviousHolderBag"/>
+<xsd:element ref="dgn:HolderBag"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="ImmediatePublicationIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication of requesting the immediate publication of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="Licence" type="dgn:LicenceType">
+		<xsd:annotation>
+			<xsd:documentation>Data concerning a licence</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="LicenceBag" type="dgn:LicenceBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of licences</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="LicenceBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:Licence" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="LicenceType">
+		<xsd:sequence>
+<xsd:element ref="com:LicenceIdentifier" minOccurs="0"/>
+<xsd:element ref="com:LicenceDate" minOccurs="0"/>
+<xsd:element ref="com:LicenceNumber" minOccurs="0"/>
+<xsd:element ref="com:LicenceReference" minOccurs="0"/>
+<xsd:element ref="com:LicenceCategory" minOccurs="0"/>
+<xsd:element ref="com:SublicenceIndicator" minOccurs="0"/>
+<xsd:element ref="com:RelatedLicenceIdentifier" minOccurs="0"/>
+<xsd:element ref="dgn:LimitationIndicator"/>
+<xsd:element ref="dgn:Limitation" minOccurs="0"/>
+<xsd:element ref="com:TerritoryLimitationIndicator" minOccurs="0"/>
+<xsd:element ref="com:TerritoryLimitationText" minOccurs="0"/>
+<xsd:element ref="com:PeriodLimitationIndicator" minOccurs="0"/>
+<xsd:element ref="com:PeriodLimitationText" minOccurs="0"/>
+<xsd:element ref="com:PeriodLimitationStartDate" minOccurs="0"/>
+<xsd:element ref="com:PeriodLimitationEndDate" minOccurs="0"/>
+<xsd:element ref="com:LicenceStatusCategory" minOccurs="0"/>
+<xsd:element ref="dgn:LicenseeBag"/>
+<xsd:element ref="com:RepresentativeBag" minOccurs="0"/>
+<xsd:element ref="com:LicenceEventBag" minOccurs="0"/>
+<xsd:element ref="com:LicenceDocumentBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="Licensee" type="dgn:LicenseeType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding a licensee</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="LicenseeBag" type="dgn:LicenseeBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of the licensees</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="LicenseeBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:Licensee" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="LicenseeType">
+		<xsd:sequence>
+<xsd:element ref="com:NationalityCode" minOccurs="0"/>
+<xsd:element ref="com:LegalEntityName" minOccurs="0"/>
+<xsd:element ref="com:IncorporationCountryCode" minOccurs="0"/>
+<xsd:element ref="com:IncorporationState" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+<xsd:element ref="dgn:Entitlement" minOccurs="0"/>
+			<xsd:choice maxOccurs="unbounded">
+<xsd:element ref="com:PartyIdentifier"/>
+<xsd:element ref="com:Contact"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute ref="com:operationCategory"/>
+		<xsd:attribute ref="com:sequenceNumber"/>
+	</xsd:complexType>
+	
+<xsd:element name="Limitation" type="dgn:LimitationType">
+		<xsd:annotation>
+			<xsd:documentation>Data on a limitation of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="LimitationBag" type="dgn:LimitationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of limitations of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="LimitationBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:Limitation" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="LimitationClassDescriptionBag" type="dgn:LimitationClassDescriptionBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of the product classes to which the design is limited</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="LimitationClassDescriptionBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:ClassDescription" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="LimitationIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication whether the licence is for a limitation in the list of products</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="LimitationType">
+		<xsd:sequence>
+<xsd:element ref="com:LimitationCountryCodeBag"/>
+<xsd:element ref="com:LimitationCategory"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+<xsd:element ref="dgn:LimitationClassDescriptionBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:simpleType name="LocarnoClassNumberType">
+		<xsd:union memberTypes="xsd:string dgn:LocarnoClassStrictNumberType"/>
+	</xsd:simpleType>
+	
+<xsd:simpleType name="LocarnoClassStrictNumberType">
+		<xsd:restriction base="xsd:token">
+		<xsd:pattern value="[0-9][0-9]\-[0-9][0-9]|[0-9][0-9]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="NoveltyStatementText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Statement of novelty for the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="Opponent" type="dgn:OpponentType">
+		<xsd:annotation>
+			<xsd:documentation>Holder of an earlier design who objects to a new design application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="OpponentBag" type="dgn:OpponentBagType">
+		<xsd:annotation>
+			<xsd:documentation>Address book details</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="OpponentBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:Opponent" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="OpponentType">
+		<xsd:sequence>
+<xsd:element ref="com:NationalityCode" minOccurs="0"/>
+<xsd:element ref="com:LegalEntityName" minOccurs="0"/>
+<xsd:element ref="com:IncorporationCountryCode" minOccurs="0"/>
+<xsd:element ref="com:IncorporationState" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+<xsd:element ref="dgn:Entitlement" minOccurs="0"/>
+			<xsd:choice maxOccurs="unbounded">
+<xsd:element ref="com:PartyIdentifier"/>
+<xsd:element ref="com:Contact"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="Opposition" type="dgn:OppositionType">
+		<xsd:annotation>
+			<xsd:documentation>Opposition to the application of a design by the holder of an earlier design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="OppositionBag" type="dgn:OppositionBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of oppositions</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="OppositionBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:Opposition" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="OppositionBasisCategory" type="dgn:OppositionBasisCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of basis of opposition</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="OppositionBasisCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Design application">
+				<xsd:annotation>
+					<xsd:documentation>Design application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Registered design">
+				<xsd:annotation>
+					<xsd:documentation>Registered design</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="NonRegistered design">
+				<xsd:annotation>
+					<xsd:documentation>Nonregistered design</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Trademark">
+				<xsd:annotation>
+					<xsd:documentation>Trademark</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Patent">
+				<xsd:annotation>
+					<xsd:documentation>Patent</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Utility model">
+				<xsd:annotation>
+					<xsd:documentation>Utility model</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Undefined">
+				<xsd:annotation>
+					<xsd:documentation>Undefined</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="OppositionCurrentStatusCategory" type="dgn:OppositionCurrentStatusCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of current legal status of the opposition</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="OppositionCurrentStatusCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Opposition filed">
+				<xsd:annotation>
+					<xsd:documentation>Opposition filed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Admissibility checked">
+				<xsd:annotation>
+					<xsd:documentation>Admissibility checked</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Agreement between parties">
+				<xsd:annotation>
+					<xsd:documentation>Agreement between parties</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Final decision">
+				<xsd:annotation>
+					<xsd:documentation>Final decision</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Undefined">
+				<xsd:annotation>
+					<xsd:documentation>Undefined</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="OppositionEvent" type="dgn:OppositionEventType">
+		<xsd:annotation>
+			<xsd:documentation>Details on one action or event on an opposition</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="OppositionEventBag" type="dgn:OppositionEventBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of events or actions on an opposition</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="OppositionEventBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:OppositionEvent" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="OppositionEventCategory" type="dgn:OppositionEventCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Event or action code on an opposition</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="OppositionEventCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Opposition filed">
+				<xsd:annotation>
+					<xsd:documentation>Opposition filed</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Admissibility checked">
+				<xsd:annotation>
+					<xsd:documentation>Admissibility checked</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Agreement between parties">
+				<xsd:annotation>
+					<xsd:documentation>Agreement between parties</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Final decision">
+				<xsd:annotation>
+					<xsd:documentation>Final decision</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Undefined">
+				<xsd:annotation>
+					<xsd:documentation>Undefined</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:complexType name="OppositionEventType">
+		<xsd:sequence>
+<xsd:element ref="dgn:OppositionEventCategory"/>
+<xsd:element ref="com:OppositionEventResponseDate" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+<xsd:element ref="com:OppositionEventDate"/>
+<xsd:element ref="com:OppositionEventDateTime"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="OppositionType">
+		<xsd:sequence>
+<xsd:element ref="com:OppositionIdentifier" minOccurs="0"/>
+<xsd:element ref="com:OppositionDate" minOccurs="0"/>
+<xsd:element ref="com:OppositionReference" minOccurs="0"/>
+<xsd:element ref="com:OppositionLanguageCode" minOccurs="0"/>
+<xsd:element ref="com:ProceedingLanguageCode" minOccurs="0"/>
+<xsd:element ref="com:EarlierRightDate" minOccurs="0"/>
+<xsd:element ref="com:EarlierRightCategory" minOccurs="0"/>
+<xsd:element ref="dgn:OppositionBasisCategory" minOccurs="0"/>
+<xsd:element ref="com:OppositionGroundsText" minOccurs="0"/>
+<xsd:element ref="com:OppositionExtentText" minOccurs="0"/>
+<xsd:element ref="dgn:OppositionCurrentStatusCategory" minOccurs="0"/>
+<xsd:element ref="com:OppositionCurrentStatusDate" minOccurs="0"/>
+<xsd:element ref="dgn:EarlierDesignBag"/>
+<xsd:element ref="dgn:OpponentBag" minOccurs="0"/>
+<xsd:element ref="dgn:OppositionEventBag" minOccurs="0"/>
+<xsd:element ref="com:OppositionDocumentBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="PartialDesignIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicator for partial design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PartialDisclaimerText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Partial disclaimer</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PatentIdentificationBag" type="dgn:PatentIdentificationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of identifications of patent citations</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PatentIdentificationBagType">
+		<xsd:sequence>
+<xsd:element ref="com:CitedPatentDocumentIdentification" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="PreviousHolder" type="dgn:ApplicantType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding the previous holder of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="PreviousHolderBag" type="dgn:PreviousHolderBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of the previous design holders</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="PreviousHolderBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:PreviousHolder" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="PrincipalDesignCategory" type="dgn:PrincipalDesignCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Types of documents in which the principal design can be found</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="PrincipalDesignCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Current application">
+				<xsd:annotation>
+					<xsd:documentation>Current application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="International application">
+				<xsd:annotation>
+					<xsd:documentation>International application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="International registration">
+				<xsd:annotation>
+					<xsd:documentation>International registration</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National or regional application">
+				<xsd:annotation>
+					<xsd:documentation>National or regional application</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="National or regional registration">
+				<xsd:annotation>
+					<xsd:documentation>National or regional registration</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:element name="PrincipalDesignReference" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Reference to the specific design contained in the document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="PrincipalDesignRelation" type="dgn:PrincipalDesignRelationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Type of relation to a principal design. When the principal design is set to "Current application" in a dgn:HagueApplication, the value of com:OfficeReferenceIdentifier should be used to as the value for com:DocumentIdentifier. When the principal design is set to "Current application" in a dgn:HagueRegistration, the value of com:InternationalRegistrationNumber should be used as the value for com:DocumentIdentifier
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="PrincipalDesignRelationBag" type="dgn:PrincipalDesignRelationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of principal design relations</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="PrincipalDesignRelationBagType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:PrincipalDesignRelation" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PrincipalDesignRelationType">
+		<xsd:sequence>
+			<xsd:element ref="dgn:DesignatedCountryBag" maxOccurs="unbounded"/>
+			<xsd:element ref="dgn:PrincipalDesignCategory"/>
+			<xsd:element ref="com:DocumentIdentifier"/>
+			<xsd:element ref="dgn:PrincipalDesignReference" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="Priority" type="dgn:PriorityType">
+		<xsd:annotation>
+			<xsd:documentation>Priority claimed under the Paris Convention</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PriorityBag" type="dgn:PriorityBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of priorities</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PriorityBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:Priority" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:complexType name="PriorityType">
+		<xsd:sequence>
+<xsd:element ref="com:PriorityCountryCode"/>
+<xsd:element ref="com:ApplicationNumber" minOccurs="0"/>
+<xsd:element ref="com:PriorityApplicationFilingDate"/>
+			<xsd:element ref="com:DASAccessCode" minOccurs="0"/>
+<xsd:element ref="com:PriorityHolderName" minOccurs="0"/>
+<xsd:element ref="com:PriorityStatusCategory" minOccurs="0"/>
+<xsd:element ref="com:PriorityStatusDate" minOccurs="0"/>
+<xsd:element ref="com:CommentText" minOccurs="0"/>
+<xsd:element ref="com:PriorityDocument" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="Publication" type="dgn:PublicationType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding a publication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PublicationBag" type="dgn:PublicationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of publications</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="PublicationBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:Publication" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="PublicationDefermentIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication of deferment of publication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PublicationInColourIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indication of requesting the publication in colour of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PublicationKindDescription" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Plain language designation of the kind of published document</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="PublicationSectionCategory" type="dgn:PublicationSectionCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of section of / reason for publication</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="PublicationSectionCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Applications">
+				<xsd:annotation>
+					<xsd:documentation>Applications</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Amendments to applications">
+				<xsd:annotation>
+					<xsd:documentation>Amendments to applications</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Correction of errors on applications">
+				<xsd:annotation>
+					<xsd:documentation>Correction of errors on applications</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Withdrawals">
+				<xsd:annotation>
+					<xsd:documentation>Withdrawals</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Limitations">
+				<xsd:annotation>
+					<xsd:documentation>Limitations</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Total refusals">
+				<xsd:annotation>
+					<xsd:documentation>Total refusals</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Partial refusals">
+				<xsd:annotation>
+					<xsd:documentation>Partial refusals</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Registrations with no amendments">
+				<xsd:annotation>
+					<xsd:documentation>Registrations with no amendments</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Registrations with amendments">
+				<xsd:annotation>
+					<xsd:documentation>Registrations with amendments</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Correction of errors on registrations">
+				<xsd:annotation>
+					<xsd:documentation>Registrations publishing to correct errors</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Total transfers">
+				<xsd:annotation>
+					<xsd:documentation>Total transfers</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Partial transfers">
+				<xsd:annotation>
+					<xsd:documentation>Partial transfers</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Change of name and address of proprietor">
+				<xsd:annotation>
+					<xsd:documentation>Change of name and address of proprietor</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Change of name and professional address of representative">
+				<xsd:annotation>
+					<xsd:documentation>Change of name and professional address of representative</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Replacement of representative">
+				<xsd:annotation>
+					<xsd:documentation>Replacement of representative</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Appointment of a new representative">
+				<xsd:annotation>
+					<xsd:documentation>Appointment of a new representative</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Deletion of the representative">
+				<xsd:annotation>
+					<xsd:documentation>Deletion of the representative</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Total surrender of designs">
+				<xsd:annotation>
+					<xsd:documentation>Total surrender of designs</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Partial surrender of designs">
+				<xsd:annotation>
+					<xsd:documentation>Partial surrender of designs</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		 <xsd:enumeration value="Registrations with restrictions">
+					<xsd:annotation>
+							<xsd:documentation>Registrations that are publishing again with restrictions</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+		 <xsd:enumeration value="Registrations no longer in effect">
+					<xsd:annotation>
+				<xsd:documentation>Trademark registrations publishing that are being cancelled and are no longer in effect</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+		 <xsd:enumeration value="Registrations renewed">
+					<xsd:annotation>
+							<xsd:documentation>Trademark registrations that are being renewed</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+		 <xsd:enumeration value="Applications publishing for opposition">
+					<xsd:annotation>
+							<xsd:documentation>Trademark applications that are publishing for opposition</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+		 <xsd:enumeration value="Registrations publishing">
+					<xsd:annotation>
+			<xsd:documentation>Trademark registrations that are publishing for the first time</xsd:documentation>
+							</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="Registration republished">
+					<xsd:annotation>
+			<xsd:documentation>Trademark registrations that are republishing for reasons other than correction or amendment</xsd:documentation>
+					 </xsd:annotation>
+	</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:complexType name="PublicationType">
+		<xsd:sequence>
+<xsd:element ref="com:PublicationIdentifier"/>
+			<xsd:element ref="dgn:DesignPublicationCategory" minOccurs="0"/>
+<xsd:element ref="dgn:PublicationSectionCategory" minOccurs="0"/>
+<xsd:element ref="com:PublicationSubsection" minOccurs="0"/>
+<xsd:element ref="com:PublicationDate" minOccurs="0"/>
+<xsd:element ref="com:PublicationPage" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="ReceiptNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Number of receipt at the reception Office</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="RecordChangeNameAddress" type="dgn:RecordChangeNameAddressType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding a record of change of name or address</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="RecordChangeNameAddressType">
+		<xsd:sequence>
+<xsd:element ref="com:RecordIdentifier" minOccurs="0"/>
+<xsd:element ref="com:RecordFilingDate" minOccurs="0"/>
+<xsd:element ref="com:RecordNotificationDate" minOccurs="0"/>
+<xsd:element ref="com:RecordEffectiveDate" minOccurs="0"/>
+<xsd:element ref="com:RecordChangeNameAddressCategory"/>
+<xsd:element ref="com:RecordReference" minOccurs="0"/>
+<xsd:element ref="com:RecordLanguageCode" minOccurs="0"/>
+<xsd:element ref="dgn:DesignIdentifierBag" minOccurs="0"/>
+<xsd:element ref="dgn:RecordPublicationBag" minOccurs="0"/>
+<xsd:element ref="dgn:ClaimantBag" minOccurs="0"/>
+<xsd:element ref="com:RepresentativeBag" minOccurs="0"/>
+<xsd:element ref="com:RecordEventBag" minOccurs="0"/>
+<xsd:element ref="com:RecordDocumentBag" minOccurs="0"/>
+<xsd:element ref="com:RecordCurrentStatusCategory" minOccurs="0"/>
+<xsd:element ref="com:RecordCurrentStatusDate" minOccurs="0"/>
+<xsd:element ref="com:CorrespondenceAddress" minOccurs="0"/>
+<xsd:element ref="dgn:HolderChangeBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="RecordLicence" type="dgn:RecordLicenceType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding a licence record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="RecordLicenceType">
+		<xsd:sequence>
+<xsd:element ref="com:RecordIdentifier" minOccurs="0"/>
+<xsd:element ref="com:RecordFilingDate" minOccurs="0"/>
+<xsd:element ref="com:RecordNotificationDate" minOccurs="0"/>
+<xsd:element ref="com:RecordEffectiveDate" minOccurs="0"/>
+<xsd:element ref="com:RecordLicenceCategory"/>
+<xsd:element ref="com:RecordReference" minOccurs="0"/>
+<xsd:element ref="com:RecordLanguageCode" minOccurs="0"/>
+<xsd:element ref="dgn:DesignIdentifierBag" minOccurs="0"/>
+<xsd:element ref="dgn:RecordPublicationBag" minOccurs="0"/>
+<xsd:element ref="dgn:ClaimantBag" minOccurs="0"/>
+<xsd:element ref="com:RepresentativeBag" minOccurs="0"/>
+<xsd:element ref="com:RecordEventBag" minOccurs="0"/>
+<xsd:element ref="com:RecordDocumentBag" minOccurs="0"/>
+<xsd:element ref="com:RecordCurrentStatusCategory" minOccurs="0"/>
+<xsd:element ref="com:RecordCurrentStatusDate" minOccurs="0"/>
+<xsd:element ref="com:RecordInterestedOfficeCode" minOccurs="0"/>
+<xsd:element ref="com:RecordDesignatedCountryCodeBag" minOccurs="0"/>
+<xsd:element ref="dgn:LicenceBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="RecordPublication" type="dgn:PublicationType">
+		<xsd:annotation>
+			<xsd:documentation>Data on the publication of the record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="RecordPublicationBag" type="dgn:RecordPublicationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Details on the record publications</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="RecordPublicationBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:RecordPublication" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="RecordTransfer" type="dgn:RecordTransferType">
+		<xsd:annotation>
+			<xsd:documentation>Data regarding a transfer record</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="RecordTransferType">
+		<xsd:sequence>
+<xsd:element ref="com:RecordIdentifier" minOccurs="0"/>
+<xsd:element ref="com:RecordFilingDate" minOccurs="0"/>
+<xsd:element ref="com:RecordNotificationDate" minOccurs="0"/>
+<xsd:element ref="com:RecordEffectiveDate" minOccurs="0"/>
+<xsd:element ref="com:RecordTransferCategory"/>
+<xsd:element ref="com:RecordReference" minOccurs="0"/>
+<xsd:element ref="com:RecordLanguageCode" minOccurs="0"/>
+<xsd:element ref="dgn:DesignIdentifierBag" minOccurs="0"/>
+<xsd:element ref="dgn:RecordPublicationBag" minOccurs="0"/>
+<xsd:element ref="dgn:ClaimantBag" minOccurs="0"/>
+<xsd:element ref="com:RepresentativeBag" minOccurs="0"/>
+<xsd:element ref="com:RecordEventBag" minOccurs="0"/>
+<xsd:element ref="com:RecordDocumentBag" minOccurs="0"/>
+<xsd:element ref="com:RecordCurrentStatusCategory" minOccurs="0"/>
+<xsd:element ref="com:RecordCurrentStatusDate" minOccurs="0"/>
+<xsd:element ref="com:CorrespondenceAddress" minOccurs="0"/>
+<xsd:element ref="dgn:HolderChangeBag" minOccurs="0"/>
+<xsd:element ref="dgn:LimitationBag" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="RelatedApplication" type="dgn:RelatedApplicationType">
+		<xsd:annotation>
+			<xsd:documentation>Data on a related application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="RelatedApplicationBag" type="dgn:RelatedApplicationBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of related applications</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="RelatedApplicationBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:RelatedApplication" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="RelatedApplicationCategory" type="dgn:RelatedApplicationCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of related application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="RelatedApplicationCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Division">
+				<xsd:annotation>
+					<xsd:documentation>Division</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Related design">
+				<xsd:annotation>
+					<xsd:documentation>Related design</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Design application based on patent or utility model">
+				<xsd:annotation>
+					<xsd:documentation>Design application based on patent or utility model</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="New application for amended design">
+				<xsd:annotation>
+					<xsd:documentation>New application for amended design</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="RelatedApplicationDate" type="com:DateType">
+		<xsd:annotation>
+			<xsd:documentation>Application date of the related application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="RelatedApplicationNumber" type="com:ApplicationNumberType">
+		<xsd:annotation>
+			<xsd:documentation>Related application number</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="RelatedApplicationReference" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Reference to the related application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="RelatedApplicationRegistrationNumber" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Registration number of the related application</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="RelatedApplicationType">
+		<xsd:sequence>
+<xsd:element ref="dgn:RelatedApplicationCategory"/>
+<xsd:element ref="dgn:RelatedApplicationNumber" minOccurs="0"/>
+<xsd:element ref="dgn:RelatedApplicationDate" minOccurs="0"/>
+<xsd:element ref="dgn:RelatedApplicationReference" minOccurs="0"/>
+<xsd:element ref="dgn:RelatedApplicationRegistrationNumber" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="RepresentationFormCategory" type="dgn:RepresentationFormCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category of view such as image, drawing or photograph</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="RepresentationFormCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Image">
+				<xsd:annotation>
+					<xsd:documentation>Image</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Drawing">
+				<xsd:annotation>
+					<xsd:documentation>Drawing</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Photograph">
+				<xsd:annotation>
+					<xsd:documentation>Photograph</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="RepresentationSheetTotalQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>Total number of representation sheets containing the views representing graphically the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SealedDepositIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Indicator whether the application has been deposited sealed</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SpecimenDescriptionText" type="com:LocalizedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Text describing the specimen</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SpecimenIdentifier" type="com:IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>Identifier for specimen</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="SpecimenTotalQuantity" type="xsd:nonNegativeInteger">
+		<xsd:annotation>
+			<xsd:documentation>Total number of specimens of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:annotation>
+		<xsd:appinfo>
+			<com:SchemaCreatedDate>2012-07-13</com:SchemaCreatedDate>
+			<com:SchemaLastModifiedDate>2022-10-03</com:SchemaLastModifiedDate>
+			<com:SchemaContactPoint>xml.standards@wipo.int</com:SchemaContactPoint>
+			<com:SchemaReleaseNoteURL>http://www.wipo.int/standards/XMLSchema/ST96/V6_0/ReleaseNotes.pdf</com:SchemaReleaseNoteURL>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:element name="TransactionData" type="dgn:TransactionDataType">
+		<xsd:annotation>
+			<xsd:documentation>Content of one request or transaction</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="TransactionDataType">
+		<xsd:choice>
+			<xsd:element ref="dgn:DesignApplicationBag"/>
+			<xsd:element ref="dgn:DesignBag"/>
+			<xsd:element ref="dgn:ApplicantBag"/>
+			<xsd:element ref="com:RepresentativeBag"/>
+			<xsd:element ref="dgn:DesignRecordBag"/>
+			<xsd:element ref="dgn:DesignRecordRelationBag"/>
+		</xsd:choice>
+		<xsd:attribute ref="com:st96Version" use="required"/>
+		<xsd:attribute ref="com:ipoVersion"/>
+	</xsd:complexType>
+	
+	<xsd:element name="View" type="dgn:ViewType">
+		<xsd:annotation>
+			<xsd:documentation>A view, representation or reproduction of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ViewBag" type="dgn:ViewBagType">
+		<xsd:annotation>
+			<xsd:documentation>Collection of design views</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ViewBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:View" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="ViewClassification" type="dgn:ViewClassificationType">
+		<xsd:annotation>
+			<xsd:documentation>List of figurative elements to which the design view belongs</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ViewClassificationType">
+		<xsd:sequence>
+			<xsd:element ref="com:FigurativeElementClassificationBag" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+<xsd:element name="ViewFileFormatCategory" type="dgn:ViewFileFormatCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Kind of digital file format of the design view</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:simpleType name="ViewFileFormatCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="JPEG">
+				<xsd:annotation>
+					<xsd:documentation>JPEG</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="TIFF">
+				<xsd:annotation>
+					<xsd:documentation>TIFF</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="PNG">
+				<xsd:annotation>
+					<xsd:documentation>PNG</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="GIF">
+				<xsd:annotation>
+					<xsd:documentation>GIF</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SVG">
+				<xsd:annotation>
+					<xsd:documentation>Scalable vector graphics image</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ThreeDS">
+				<xsd:annotation>
+					<xsd:documentation>3D Studio</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DWG">
+				<xsd:annotation>
+					<xsd:documentation>Drawing</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="DWF">
+				<xsd:annotation>
+					<xsd:documentation>Design Web Format</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="IGES">
+				<xsd:annotation>
+					<xsd:documentation>Initial Graphic Exchange Specification</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="ThreeDM">
+				<xsd:annotation>
+					<xsd:documentation>Three-Dimensional Modeling</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="SWF">
+				<xsd:annotation>
+					<xsd:documentation>Small Web Format</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="MPEG">
+				<xsd:annotation>
+					<xsd:documentation>Moving Picture Experts Group</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="WMV">
+				<xsd:annotation>
+					<xsd:documentation>Windows Media Video</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="ViewIdentifier" type="com:IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>View identification number</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ViewReferenceText" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Reference to views which are contained in the representation sheet, such as numbering of representation and type of view of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:complexType name="ViewType">
+		<xsd:sequence>
+			<xsd:element ref="com:FileName"/>
+			<xsd:element ref="com:ThumbnailFileName" minOccurs="0"/>
+			<xsd:element ref="dgn:ViewIdentifier"/>
+			<xsd:element ref="dgn:ViewFileFormatCategory" minOccurs="0"/>
+			<xsd:element ref="com:Caption" minOccurs="0"/>
+			<xsd:element ref="com:ColourIndicator" minOccurs="0"/>
+			<xsd:element ref="dgn:RepresentationFormCategory" minOccurs="0"/>
+			<xsd:element ref="dgn:ViewClassification" minOccurs="0"/>
+			<xsd:choice minOccurs="0">
+				<xsd:element ref="dgn:ViewTypeCategory"/>
+				<xsd:element ref="dgn:ViewTypeTextBag"/>
+			</xsd:choice>
+			<xsd:element ref="com:HeightMeasure" minOccurs="0"/>
+			<xsd:element ref="com:WidthMeasure" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:element name="ViewTypeCategory" type="dgn:ViewTypeCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>Category to indicate a type of view of the design</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:simpleType name="ViewTypeCategoryType">
+		<xsd:restriction base="xsd:token">
+			<xsd:enumeration value="Perspective">
+			<xsd:annotation>
+			<xsd:documentation>This is the view of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person in a direction that is not aligned with any of the axes of a chosen 3-dimension Cartesian coordinate system. The image should have been obtained by perspective projection or orthographic projection.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Front">
+			<xsd:annotation>
+			<xsd:documentation>This is one of the principal views of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person in front of the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is the positive direction of the x-axis of a chosen 3-dimension Cartesian coordinate system.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Back">
+			<xsd:annotation>
+			<xsd:documentation>This is one of the principal views of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person behind the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is the negative direction of the x-axis of a chosen 3-dimension Cartesian coordinate system.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Top">
+			<xsd:annotation>
+			<xsd:documentation>This is one of the principal views of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person above the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is the positive direction of the z-axis of a chosen 3-dimension Cartesian coordinate system.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Bottom">
+			<xsd:annotation>
+			<xsd:documentation>This is one of the principal views of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person below the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is the negative direction of the z-axis of a chosen 3-dimension Cartesian coordinate system.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Left">
+			<xsd:annotation>
+			<xsd:documentation>This is one of the principal views of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person on the left side of the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is the negative direction of the y-axis of a chosen 3-dimension Cartesian coordinate system.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Right">
+			<xsd:annotation>
+			<xsd:documentation>This is one of the principal views of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person on the right side of the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is the positive direction of the y-axis of a chosen 3-dimension Cartesian coordinate system.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Isometric">
+			<xsd:annotation>
+			<xsd:documentation>This is an orthographic view of a 3-dimensional object, representing the 2-dimensional image that could be sensed by a person in a special direction. The projection direction is such that the three axes of the chosen 3-dimension Cartesian coordinate system would be projected into three vectors with the same origin and 120-degree from each other on the projection plane.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Reference">
+			<xsd:annotation>
+			<xsd:documentation>This is a view used for understanding, which generally includes matter for which protection is not sought.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Unfolded">
+			<xsd:annotation>
+			<xsd:documentation>This is a 2-dimensional view of the 3-dimensional object as if it had been unfolded into a 2-dimensional object.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Exploded"> 
+			<xsd:annotation>
+			<xsd:documentation>This is a view that displays the components of a 3-dimensional object separated by an equal distance, as if a controlled explosion had separated them from their initial position.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Cross sectional">
+			<xsd:annotation>
+			<xsd:documentation>This is a view of a 3-dimensional object from the position of a plane through the object, commonly used to show internal features of a design</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Enlarged"> 
+			<xsd:annotation>
+			<xsd:documentation>This is a view representing a detail of the design displayed in a different scale from that of main views.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Front Surface">
+			<xsd:annotation>
+			<xsd:documentation>This is the view of a 2-dimensional object, representing the 2-dimensional image that could be sensed by a person in front of the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is perpendicular to the object plane.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Back Surface">
+			<xsd:annotation>
+			<xsd:documentation>This is the view of a 2-dimensional object, representing the 2-dimensional image that could be sensed by a person behind the object. The image should have been obtained by either orthographic projection or perspective projection, where the projection direction is perpendicular to the object plane.</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Representative typeface">
+			<xsd:annotation>
+			<xsd:documentation>Representative characters, numbers and/or symbols that best represent the characteristics of the typeface</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Example typeface">
+			<xsd:annotation>
+			<xsd:documentation>Example words, expressions, sentences and/or drawings composed of characters, numbers and/or symbols in the typeface</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+			<xsd:enumeration value="Typeface set">
+			<xsd:annotation>
+			<xsd:documentation>The set of designated characters, numbers and/or symbols in the corresponding typeface that forms the typeface design</xsd:documentation>
+			</xsd:annotation>
+			</xsd:enumeration>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+<xsd:element name="ViewTypeText" type="com:OrderedTextType">
+		<xsd:annotation>
+			<xsd:documentation>Text identifying a view type which does not fit into a known view type category</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:element name="ViewTypeTextBag" type="dgn:ViewTypeTextBagType">
+		<xsd:annotation>
+			<xsd:documentation>A collection of view type text for multiple language support</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+<xsd:complexType name="ViewTypeTextBagType">
+		<xsd:sequence>
+<xsd:element ref="dgn:ViewTypeText" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

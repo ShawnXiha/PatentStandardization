@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tbl="http://www.oasis-open.org/tables/exchange/1.0" targetNamespace="http://www.oasis-open.org/tables/exchange/1.0" elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xsd:element name="row" type="tbl:row"/>
+	<xsd:complexType name="row">
+		<xsd:attribute name="rowsep" type="xsd:boolean"/>
+		<xsd:attribute name="valign">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:enumeration value="top"/>
+					<xsd:enumeration value="middle"/>
+					<xsd:enumeration value="bottom"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="OASISTableType">
+		<xsd:attribute name="frame">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:enumeration value="top"/>
+					<xsd:enumeration value="bottom"/>
+					<xsd:enumeration value="topbot"/>
+					<xsd:enumeration value="all"/>
+					<xsd:enumeration value="sides"/>
+					<xsd:enumeration value="none"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="colsep" type="xsd:boolean"/>
+		<xsd:attribute name="rowsep" type="xsd:boolean"/>
+	</xsd:complexType>
+	<xsd:complexType name="tgroup">
+		<xsd:sequence>
+			<xsd:element ref="tbl:colspec" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="tbl:thead" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="cols" type="xsd:integer" use="required"/>
+		<xsd:attribute name="colsep" type="xsd:boolean"/>
+		<xsd:attribute name="rowsep" type="xsd:boolean"/>
+		<xsd:attribute name="align">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:enumeration value="left"/>
+					<xsd:enumeration value="right"/>
+					<xsd:enumeration value="center"/>
+					<xsd:enumeration value="justify"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="colspec">
+		<xsd:complexContent>
+			<xsd:restriction base="xsd:anyType">
+				<xsd:attribute name="colnum" type="xsd:integer"/>
+				<xsd:attribute name="colname" type="xsd:NMTOKEN"/>
+				<xsd:attribute name="colwidth" type="xsd:string"/>
+				<xsd:attribute name="colsep" type="xsd:boolean"/>
+				<xsd:attribute name="rowsep" type="xsd:boolean"/>
+				<xsd:attribute name="align">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:token">
+							<xsd:enumeration value="left"/>
+							<xsd:enumeration value="right"/>
+							<xsd:enumeration value="center"/>
+							<xsd:enumeration value="justify"/>
+							<xsd:enumeration value="char"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="char" type="xsd:string"/>
+				<xsd:attribute name="charoff" type="xsd:NMTOKEN"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+		<!-- EMPTY -->
+	</xsd:complexType>
+	<xsd:complexType name="thead">
+		<xsd:choice>
+			<xsd:element ref="tbl:row" maxOccurs="unbounded"/>
+		</xsd:choice>
+		<xsd:attribute name="valign">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:enumeration value="top"/>
+					<xsd:enumeration value="middle"/>
+					<xsd:enumeration value="bottom"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="tbody">
+		<xsd:attribute name="valign">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:enumeration value="top"/>
+					<xsd:enumeration value="middle"/>
+					<xsd:enumeration value="bottom"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="OASISEntryType">
+		<xsd:attribute name="colname" type="xsd:NMTOKEN"/>
+		<xsd:attribute name="namest" type="xsd:NMTOKEN"/>
+		<xsd:attribute name="nameend" type="xsd:NMTOKEN"/>
+		<xsd:attribute name="morerows" type="xsd:integer"/>
+		<xsd:attribute name="colsep" type="xsd:boolean"/>
+		<xsd:attribute name="rowsep" type="xsd:boolean"/>
+		<xsd:attribute name="align">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:enumeration value="left"/>
+					<xsd:enumeration value="right"/>
+					<xsd:enumeration value="center"/>
+					<xsd:enumeration value="justify"/>
+					<xsd:enumeration value="char"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="char" type="xsd:string"/>
+		<xsd:attribute name="charoff" type="xsd:NMTOKEN"/>
+		<xsd:attribute name="valign">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:token">
+					<xsd:enumeration value="top"/>
+					<xsd:enumeration value="middle"/>
+					<xsd:enumeration value="bottom"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:element name="tgroup" type="tbl:tgroup"/>
+	<xsd:element name="colspec" type="tbl:colspec"/>
+	<xsd:element name="thead" type="tbl:thead"/>
+	<xsd:element name="tbody" type="tbl:tbody"/>
+</xsd:schema>
