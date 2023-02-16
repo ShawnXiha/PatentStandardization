@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<!DOCTYPE Application-body [
+<!ELEMENT Application-body (Document+)>
+<!ATTLIST Application-body id CDATA #REQUIRED>
+<!ATTLIST Application-body country CDATA #REQUIRED>
+<!ATTLIST Application-body kind CDATA #REQUIRED>
+<!ATTLIST Application-body appnum CDATA #IMPLIED>
+<!ATTLIST Application-body mainipc CDATA #IMPLIED>
+<!ATTLIST Application-body pubdate CDATA #REQUIRED>
+<!ATTLIST Application-body dtd CDATA #REQUIRED>
+<!ATTLIST Application-body lang CDATA #REQUIRED>
+<!ATTLIST Application-body status CDATA #REQUIRED>
+<!ELEMENT Document (StartPage?, Pages?, Package?, ExtRef+)>
+<!ELEMENT StartPage (#PCDATA)>
+<!ELEMENT Pages (#PCDATA)>
+<!ELEMENT Package (#PCDATA)>
+<!ELEMENT ExtRef (#PCDATA)>
+<!ATTLIST ExtRef FileName CDATA #REQUIRED>
+]>
+<Application-body id="1599469" country="EP" kind="B1" appnum="04818324"  ipc="A61K003141 C07D040304 C07D049104 C07D049504" pubdate="2006/06/07" dtd="v0.01" lang="FR" status="">
+<Document>
+<ExtRef FileName="DOC00001.xml"/>
+<ExtRef FileName="DOCUMENT.PDF"/>
+<ExtRef FileName="imgb0001.tif"/>
+<ExtRef FileName="imgb0002.tif"/>
+<ExtRef FileName="imgb0003.tif"/>
+<ExtRef FileName="imgb0004.tif"/>
+<ExtRef FileName="imgb0005.tif"/>
+<ExtRef FileName="imgb0006.tif"/>
+<ExtRef FileName="imgb0007.tif"/>
+<ExtRef FileName="imgb0008.tif"/>
+<ExtRef FileName="imgb0009.tif"/>
+<ExtRef FileName="imgb0010.tif"/>
+<ExtRef FileName="imgb0011.tif"/>
+<ExtRef FileName="imgb0012.tif"/>
+<ExtRef FileName="imgb0013.tif"/>
+<ExtRef FileName="imgb0014.tif"/>
+<ExtRef FileName="imgb0015.tif"/>
+<ExtRef FileName="imgb0016.tif"/>
+<ExtRef FileName="imgb0017.tif"/>
+<ExtRef FileName="imgb0018.tif"/>
+<ExtRef FileName="imgb0019.tif"/>
+<ExtRef FileName="imgb0020.tif"/>
+<ExtRef FileName="imgb0021.tif"/>
+<ExtRef FileName="imgb0022.tif"/>
+<ExtRef FileName="imgb0023.tif"/>
+<ExtRef FileName="imgb0024.tif"/>
+<ExtRef FileName="imgb0025.tif"/>
+<ExtRef FileName="imgb0026.tif"/>
+<ExtRef FileName="imgb0027.tif"/>
+<ExtRef FileName="imgb0028.tif"/>
+<ExtRef FileName="imgb0029.tif"/>
+<ExtRef FileName="imgb0030.tif"/>
+<ExtRef FileName="imgb0031.tif"/>
+<ExtRef FileName="imgb0032.tif"/>
+<ExtRef FileName="imgb0033.tif"/>
+<ExtRef FileName="imgb0034.tif"/>
+<ExtRef FileName="imgb0035.tif"/>
+<ExtRef FileName="imgb0036.tif"/>
+<ExtRef FileName="imgb0037.tif"/>
+<ExtRef FileName="imgb0038.tif"/>
+<ExtRef FileName="imgb0039.tif"/>
+<ExtRef FileName="imgb0040.tif"/>
+<ExtRef FileName="imgb0041.tif"/>
+<ExtRef FileName="imgb0042.tif"/>
+<ExtRef FileName="imgb0043.tif"/>
+<ExtRef FileName="imgb0044.tif"/>
+<ExtRef FileName="imgb0045.tif"/>
+<ExtRef FileName="imgb0046.tif"/>
+<ExtRef FileName="imgb0047.tif"/>
+<ExtRef FileName="imgb0048.tif"/>
+<ExtRef FileName="imgb0049.tif"/>
+<ExtRef FileName="imgb0050.tif"/>
+<ExtRef FileName="imgb0051.tif"/>
+<ExtRef FileName="imgb0052.tif"/>
+<ExtRef FileName="imgb0053.tif"/>
+<ExtRef FileName="imgb0054.tif"/>
+<ExtRef FileName="imgb0055.tif"/>
+<ExtRef FileName="imgb0056.tif"/>
+<ExtRef FileName="imgb0057.tif"/>
+<ExtRef FileName="imgb0058.tif"/>
+<ExtRef FileName="imgb0059.tif"/>
+<ExtRef FileName="imgb0060.tif"/>
+<ExtRef FileName="imgb0061.tif"/>
+<ExtRef FileName="imgb0062.tif"/>
+<ExtRef FileName="imgb0063.tif"/>
+<ExtRef FileName="imgb0064.tif"/>
+<ExtRef FileName="imgb0065.tif"/>
+<ExtRef FileName="imgb0066.tif"/>
+<ExtRef FileName="imgb0067.tif"/>
+<ExtRef FileName="imgb0068.tif"/>
+<ExtRef FileName="imgb0069.tif"/>
+<ExtRef FileName="imgb0070.tif"/>
+<ExtRef FileName="imgb0071.tif"/>
+<ExtRef FileName="imgb0072.tif"/>
+<ExtRef FileName="imgb0073.tif"/>
+<ExtRef FileName="imgb0074.tif"/>
+<ExtRef FileName="imgb0075.tif"/>
+<ExtRef FileName="imgb0076.tif"/>
+<ExtRef FileName="imgb0077.tif"/>
+<ExtRef FileName="imgb0078.tif"/>
+<ExtRef FileName="imgb0079.tif"/>
+<ExtRef FileName="imgb0080.tif"/>
+<ExtRef FileName="imgb0081.tif"/>
+<ExtRef FileName="imgb0082.tif"/>
+<ExtRef FileName="imgb0083.tif"/>
+<ExtRef FileName="imgb0084.tif"/>
+<ExtRef FileName="imgb0085.tif"/>
+<ExtRef FileName="imgb0086.tif"/>
+<ExtRef FileName="imgb0087.tif"/>
+<ExtRef FileName="imgb0088.tif"/>
+<ExtRef FileName="imgb0089.tif"/>
+<ExtRef FileName="imgb0090.tif"/>
+<ExtRef FileName="imgb0091.tif"/>
+<ExtRef FileName="imgb0092.tif"/>
+<ExtRef FileName="imgb0093.tif"/>
+<ExtRef FileName="imgb0094.tif"/>
+<ExtRef FileName="imgb0095.tif"/>
+<ExtRef FileName="imgb0096.tif"/>
+<ExtRef FileName="imgb0097.tif"/>
+<ExtRef FileName="imgb0098.tif"/>
+<ExtRef FileName="imgb0099.tif"/>
+<ExtRef FileName="imgb0100.tif"/>
+<ExtRef FileName="imgb0101.tif"/>
+<ExtRef FileName="imgb0102.tif"/>
+<ExtRef FileName="imgb0103.tif"/>
+<ExtRef FileName="imgb0104.tif"/>
+<ExtRef FileName="imgb0105.tif"/>
+<ExtRef FileName="imgb0106.tif"/>
+<ExtRef FileName="imgb0107.tif"/>
+<ExtRef FileName="imgb0108.tif"/>
+<ExtRef FileName="imgb0109.tif"/>
+<ExtRef FileName="imgb0110.tif"/>
+<ExtRef FileName="imgb0111.tif"/>
+<ExtRef FileName="imgb0112.tif"/>
+<ExtRef FileName="imgb0113.tif"/>
+<ExtRef FileName="imgb0114.tif"/>
+<ExtRef FileName="imgb0115.tif"/>
+<ExtRef FileName="imgb0116.tif"/>
+<ExtRef FileName="imgb0117.tif"/>
+<ExtRef FileName="imgb0118.tif"/>
+<ExtRef FileName="imgb0119.tif"/>
+<ExtRef FileName="imgb0120.tif"/>
+<ExtRef FileName="imgb0121.tif"/>
+<ExtRef FileName="imgb0122.tif"/>
+<ExtRef FileName="imgb0123.tif"/>
+<ExtRef FileName="imgb0124.tif"/>
+<ExtRef FileName="imgb0125.tif"/>
+<ExtRef FileName="imgb0126.tif"/>
+<ExtRef FileName="imgb0127.tif"/>
+</Document>
+</Application-body>

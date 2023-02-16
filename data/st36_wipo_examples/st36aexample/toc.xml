@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE Application-body [
+<!ELEMENT Application-body (Document+)>
+<!ATTLIST Application-body id CDATA #REQUIRED>
+<!ATTLIST Application-body country CDATA #REQUIRED>
+<!ATTLIST Application-body kind CDATA #REQUIRED>
+<!ATTLIST Application-body appnum CDATA #IMPLIED>
+<!ATTLIST Application-body mainipc CDATA #IMPLIED>
+<!ATTLIST Application-body pubdate CDATA #REQUIRED>
+<!ATTLIST Application-body dtd CDATA #REQUIRED>
+<!ATTLIST Application-body lang CDATA #REQUIRED>
+<!ATTLIST Application-body status CDATA #REQUIRED>
+<!ELEMENT Document (StartPage?, Pages?, Package?, ExtRef+)>
+<!ELEMENT StartPage (#PCDATA)>
+<!ELEMENT Pages (#PCDATA)>
+<!ELEMENT Package (#PCDATA)>
+<!ELEMENT ExtRef (#PCDATA)>
+<!ATTLIST ExtRef FileName CDATA #REQUIRED>
+]>
+<Application-body id="1667425" country="EP" kind="A1" appnum="05255002"  ipc="H04N000140" pubdate="2006/06/07" dtd="v0.01" lang="FR" status="">
+<Document>
+<ExtRef FileName="DOC00001.xml"/>
+<ExtRef FileName="DOCUMENT.PDF"/>
+<ExtRef FileName="imgaf001.tif"/>
+<ExtRef FileName="imgf0001.tif"/>
+<ExtRef FileName="imgf0002.tif"/>
+<ExtRef FileName="imgf0003.tif"/>
+<ExtRef FileName="imgf0004.tif"/>
+<ExtRef FileName="imgf0005.tif"/>
+<ExtRef FileName="imgf0006.tif"/>
+<ExtRef FileName="imgf0007.tif"/>
+<ExtRef FileName="imgf0008.tif"/>
+<ExtRef FileName="srep0001.tif"/>
+<ExtRef FileName="srep0002.tif"/>
+</Document>
+</Application-body>
