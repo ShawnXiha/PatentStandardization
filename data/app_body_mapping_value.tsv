@@ -1,0 +1,20 @@
+type	com:ImageFormatCategory	jpg	JPEG
+type	com:ImageFormatCategory	tif	TIFF
+type	com:ImageFormatCategory	pdf	GIF
+color	com:ColourModeCategory	bw	Black and white
+color	com:ColourModeCategory	color	Colour
+orientation	com:orientationCategory	portrait	Portrait
+orientation	com:orientationCategory	landscape	Landscape
+img-content	com:imageContentCategory	drawing	Drawing
+img-content	com:imageContentCategory	photograph	Photograph
+img-content	com:imageContentCategory	character	Character
+img-content	com:imageContentCategory	dna	DNA
+img-content	com:imageContentCategory	chem	Chemistry
+img-content	com:imageContentCategory	math	Math
+img-content	com:imageContentCategory	table	Table
+img-content	com:imageContentCategory	program-listing	Program listing
+img-content	com:imageContentCategory	flowchart	Flowchart
+img-content	com:imageContentCategory	graph	Graph
+img-format	com:ImageFormatCategory	jpg	JPEG
+img-format	com:ImageFormatCategory	tif	TIFF
+inline	com:imageWrappingStyleCategory	yes	Inline
