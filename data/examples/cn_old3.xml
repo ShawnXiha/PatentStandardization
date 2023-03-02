@@ -1,0 +1,177 @@
+<?xml version="1.0" standalone="yes"?> <cn-patent-document><cn-bibliographic-data><cn-publication-reference><document-id><country>CN</country><doc-number>104245682</doc-number><kind>A</kind><date>20141224</date></document-id><gazette-reference><gazette-num>30-52</gazette-num><date>20141224</date></gazette-reference></cn-publication-reference><application-reference appl-type="发明专利"><document-id><country>CN</country><doc-number>201480000788.4</doc-number><date>20140331</date></document-id></application-reference><classifications-ipcr><classification-ipcr><text>C07D  251/18    (2006.01)</text></classification-ipcr></classifications-ipcr><invention-title>马来酸伊索拉定的制造方法</invention-title><abstract><p num="1">本发明提供减少副产物的生成，高收率且高纯度的马来酸伊索拉定的制造方法。通过使2,4-二氨基-6-(2,5-二氯苯基)-1,3,5-三嗪于有机溶剂中在加热搅拌下溶解而形成溶液后加入马来酸溶解，冷却至室温，可抑制结晶的着色，高效地获得结晶。</p></abstract><cn-related-publication /><cn-related-documents /><cn-parties><cn-applicants cn-representative-is="日本京都府"><cn-applicant sequence="1"><addressbook lang="ZH"><name>日本新药株式会社</name><address><text>日本京都府</text></address></addressbook></cn-applicant></cn-applicants><cn-inventors><cn-inventor sequence="1" cn-not-to-be-published-request-by-inventor="no"><name>服部正之</name></cn-inventor></cn-inventors><cn-agents><cn-agent sequence="1" rep-type="agent"><cn-agency><name>上海专利商标事务所有限公司 31100</name></cn-agency><name>侯莉</name></cn-agent></cn-agents></cn-parties><date-pct-article-22-39-fulfilled><date>20140828</date></date-pct-article-22-39-fulfilled><pct-or-regional-filing-data><document-id><country>JP</country><doc-number>PCT/JP2014/059529</doc-number><date>20140331</date></document-id></pct-or-regional-filing-data></cn-bibliographic-data><application-body lang="CN" country="CN"><description><invention-title id="tilte1">马来酸伊索拉定的制造方法</invention-title><p id="p0001" num="0001">技术领域
+		</p><p id="p0002" num="0002">本发明涉及2,4-二氨基-6-(2,5-二氯苯基)-1,3,5-三嗪马来酸盐的制
+		造方法。
+		</p><p id="p0003" num="0003">背景技术
+		</p><p id="p0004" num="0004">2,4-二氨基-6-(2,5-二氯苯基)-1,3,5-三嗪(以下称为伊索拉定)以下
+		面的式(Ⅰ)表示，伊索拉定或其医药上允许的盐可用作粘膜防御性胃炎、
+		胃溃疡治疗剂(专利文献1)。其中，伊索拉定的马来酸盐已经作为ガスロン
+		N(注册商标)上市。
+		</p><p id="p0005" num="0005">[化1]
+		</p><p id="p0006" num="0006"><img file="BDA0000561377940000011.TIF" wi="350" he="452" img-content="drawing" img-format="tif" orientation="portrait" inline="no" /></p><p id="p0007" num="0007">马来酸伊索拉定可通过在伊索拉定和马来酸的共存下于甲基溶纤剂等
+		极性溶剂中加热溶解后冷却来制造。为了以商业规模制造，重要的是以高
+		收率高效地获得高纯度的目标物。另一方面，马来酸伊索拉定的制造中，
+		伊索拉定对于溶剂的溶解性低，溶解需要长时间加热，如果通过上述的方
+		法制造，则不仅马来酸伊索拉定的收量根据加热溶解的时间而经时减少，
+		而且结晶的着色显著，因此很难充分满足商业上的需要，希望开发出更好
+		的马来酸伊索拉定的制造方法。
+		</p><p id="p0008" num="0008">现有技术文献
+		</p><p id="p0009" num="0009">专利文献
+		</p><p id="p0010" num="0010">专利文献1:日本专利第1249105号
+		</p><p id="p0011" num="0011">发明的概要
+		</p><p id="p0012" num="0012">发明所要解决的技术问题
+		</p><p id="p0013" num="0013">本发明的目的在于提供高收率且高纯度的马来酸伊索拉定的制造方
+		法。
+		</p><p id="p0014" num="0014">解决技术问题所采用的技术方案
+		</p><p id="p0015" num="0015">本发明人为了解决上述问题进行认真研究后，首次发现通过将伊索拉
+		定在甲基溶纤剂等极性溶剂中加热的同时，暂时溶解后向该加热溶液中加
+		入马来酸而制成均匀溶液，然后冷却，可抑制结晶的着色，高收率地获得
+		结晶，即该方法能够以商业化规模进行制造，基于这些发现完成了本发明。
+		</p><p id="p0016" num="0016">即，本发明可举出以下的(Ⅰ)～(Ⅳ)的发明。
+		</p><p id="p0017" num="0017">(Ⅰ)2,4-二氨基-6-(2,5-二氯苯基)-1,3,5-三嗪的马来酸盐的结晶的
+		制造方法，其中，包括下述(A)、(B)和(C)的工序：
+		</p><p id="p0018" num="0018">(A)使2,4-二氨基-6-(2,5-二氯苯基)-1,3,5-三嗪于有机溶剂中在加
+		热搅拌下溶解，暂时形成溶液的工序；
+		</p><p id="p0019" num="0019">(B)向上述(A)的溶液中加入马来酸，形成均匀溶液的工序；
+		</p><p id="p0020" num="0020">(C)将该溶液冷却至室温，分离析出的结晶的工序。
+		</p><p id="p0021" num="0021">(Ⅱ)如上述(Ⅰ)所述的制造方法，其中，使用的有机溶剂为甲基溶纤
+		剂。
+		</p><p id="p0022" num="0022">(Ⅲ)如上述(Ⅰ)或(Ⅱ)所述的制造方法，其中，使用的马来酸相对于
+		2,4-二氨基-6-(2,5-二氯苯基)-1,3,5-三嗪以摩尔计为0.8倍～5.0倍当
+		量。
+		</p><p id="p0023" num="0023">(Ⅳ)如(Ⅰ)～(Ⅲ)中的任一项所述的制造方法，其中，对于上述(A)
+		的溶液，加热搅拌时的温度为50℃～100℃。
+		</p><p id="p0024" num="0024">(Ⅴ)如上述(Ⅰ)所述的制造方法，其中，使用的有机溶剂为甲基溶纤
+		剂，使用的马来酸相对于2,4-二氨基-6-(2,5-二氯苯基)-1,3,5-三嗪以摩
+		尔计为0.8倍～5.0倍当量，对于上述(A)的溶液，加热搅拌时的温度为50
+		℃～100℃。
+		</p><p id="p0025" num="0025">发明的效果
+		</p><p id="p0026" num="0026">如果采用本发明，则可抑制伊索拉定的经时减少，获得无着色的高纯
+		度的马来酸伊索拉定。
+		</p><p id="p0027" num="0027">附图的简单说明
+		</p><p id="p0028" num="0028">图1是表示马来酸和伊索拉定的甲基溶纤剂溶液的加温时间与马来酸
+		伊索拉定的生成收率的关系的图，纵轴表示收率，横轴表示溶液的加热搅
+		拌时间。点划线表示使用1.0摩尔当量马来酸时的马来酸伊索拉定的收率
+		(参考例1和2)，虚线表示使用1.2摩尔当量马来酸时的马来酸伊索拉定的收
+		率(参考例3和4)，实线表示将伊索拉定加热溶解后加入1.2摩尔当量马来酸
+		时的收率(实施例1和2)。
+		</p><p id="p0029" num="0029">实施发明的方式
+		</p><p id="p0030" num="0030">作为本发明中使用的起始原料的伊索拉定可通过专利文献1中记载的
+		方法制造。
+		</p><p id="p0031" num="0031">实施本发明，提供制造马来酸伊索拉定的方法。该方法是2,4-二氨基
+		-6-(2,5-二氯苯基)-1,3,5-三嗪马来酸盐的结晶的制造方法，其中，包括
+		下述(A)、(B)和(C)的工序：
+		</p><p id="p0032" num="0032">(A)使2,4-二氨基-6-(2,5-二氯苯基)-1,3,5-三嗪于有机溶剂中在加
+		热搅拌下溶解，暂时形成均匀溶液的工序；
+		</p><p id="p0033" num="0033">(B)向上述(A)的溶液中加入马来酸，形成均匀溶液的工序；
+		</p><p id="p0034" num="0034">(C)将该溶液冷却至室温，分离析出的结晶的工序。
+		</p><p id="p0035" num="0035">本发明中使用的溶剂只要溶解起始物质且不阻碍反应即可，无特别限
+		定，可例举例如甲醇、乙醇、甲基溶纤剂(也称为2-甲氧基乙醇)等醇类溶
+		剂。其中，较好是甲基溶纤剂或乙醇，更好是甲基溶纤剂。溶剂的使用量
+		相对于1g作为原料的伊索拉定，通常较好是5mL～50mL，更好是5mL～15mL，
+		最好是10mL。
+		</p><p id="p0036" num="0036">从防止伊索拉定析出而使反应效率提高的观点来看，溶解伊索拉定和
+		马来酸的温度理想的是保持于80℃。
+		</p><p id="p0037" num="0037">本发明中的马来酸的使用量相对于1摩尔伊索拉定，通常较好是0.8摩
+		尔～5.0摩尔，更好是1.0摩尔～1.4摩尔，最好是1.0～1.2摩尔。
+		</p><p id="p0038" num="0038">加入马来酸时，可以一次性全部加入，也可以分数次～十数次左右加
+		入。
+		</p><p id="p0039" num="0039">结晶化时，可添加晶种。为了使添加晶种而产生的效果进一步提高，
+						较好是晶种在伊索拉定完全溶解后添加，更理想的是在80℃添加。
+		</p><p id="p0040" num="0040">晶种的添加量相对于上述工序(1)中使用的伊索拉定较好是0.1重量
+		％～10重量％。
+		</p><p id="p0041" num="0041">实施例
+		</p><p id="p0042" num="0042">以下，例举实施例来对本发明进行更详细的说明，但本发明并不仅限
+		于这些实施例。
+		</p><p id="p0043" num="0043">参考例1
+		</p><p id="p0044" num="0044">向反应容器中注入甲基溶纤剂(200mL)，加热至80℃。向其中加入伊索
+		拉定(20.0g，78.1mmol)和马来酸(9.1g，78.1mmol，相对于伊索拉定的摩
+		尔比1.0)，在80℃搅拌5小时，使上述的混合物完全溶解。从反应液分取其
+		一部分，使马来酸伊索拉定从分取的反应液结晶，用甲基溶纤剂清洗后干
+		燥，获得马来酸伊索拉定(58％)。
+		</p><p id="p0045" num="0045">参考例2
+		</p><p id="p0046" num="0046">向反应容器中注入甲基溶纤剂(200mL)，加热至80℃。向其中加入伊索
+		拉定(20.0g，78.1mmol)和马来酸(9.1g，78.1mmol，相对于伊索拉定的摩
+		尔比1.0)，在80℃搅拌7小时，使上述的混合物完全溶解。从反应液分取其
+		一部分，使马来酸伊索拉定从分取的反应液结晶，用甲基溶纤剂清洗后干
+		燥，获得马来酸伊索拉定(47％)。
+		</p><p id="p0047" num="0047">参考例3
+		</p><p id="p0048" num="0048">向反应容器中注入甲基溶纤剂(200mL)，加热至80℃。向其中加入伊索
+		拉定(20.0g，78.1mmol)和马来酸(10.9g，93.7mmol，相对于伊索拉定的摩
+		尔比1.2)，在80℃搅拌5小时，使上述的混合物完全溶解。从反应液分取其
+		一部分，使马来酸伊索拉定从分取的反应液结晶，用甲基溶纤剂清洗后干
+		燥，获得马来酸伊索拉定(55％)。
+		</p><p id="p0049" num="0049">参考例4
+		</p><p id="p0050" num="0050">向反应容器中注入甲基溶纤剂(200mL)，加热至80℃。向其中加入伊索
+		拉定(20.0g，78.1mmol)和马来酸(10.9g，93.7mmol，相对于伊索拉定的摩
+						尔比1.2)，在80℃搅拌7小时，使上述的混合物完全溶解。从反应液分取其
+		一部分，使马来酸伊索拉定从分取的反应液结晶，用甲基溶纤剂清洗后干
+		燥，获得马来酸伊索拉定(48％)。
+		</p><p id="p0051" num="0051">实施例1
+		</p><p id="p0052" num="0052">将伊索拉定(2.0g，7.8mmol)在甲基溶纤剂(20mL)中搅拌的同时，加热
+		至80℃搅拌5小时，使上述的混合物完全溶解后，加入马来酸(1.1g，
+		9.4mmol)，在80℃搅拌15分钟。将反应液在室温下放置40小时，分离生成
+		的结晶。用甲基溶纤剂清洗后干燥，获得马来酸伊索拉定(62％)。
+		</p><p id="p0053" num="0053">实施例2
+		</p><p id="p0054" num="0054">将伊索拉定(2.0g，7.8mmol)在甲基溶纤剂(20mL)中搅拌的同时，加热
+		至80℃搅拌7小时，使上述的混合物完全溶解后，加入马来酸(1.1g，
+		9.4mmol)，在80℃搅拌15分钟。将反应液在室温下放置40小时，分离生成
+		的结晶。用甲基溶纤剂清洗后干燥，获得马来酸伊索拉定(64％)。
+		</p><p id="p0055" num="0055">参考例1～4和实施例1、2中使用的马来酸的量和加热搅拌时间、收率、
+		结晶的着色示于下述的表1。
+		</p><p id="p0056" num="0056">[表1]
+		</p><p id="p0057" num="0057"><tables num="0001"><table><tgroup cols="5"><colspec colname="c001" colwidth="15%" /><colspec colname="c002" colwidth="28%" /><colspec colname="c003" colwidth="25%" /><colspec colname="c004" colwidth="15%" /><colspec colname="c005" colwidth="17%" /><tbody><row><entry morerows="1"> 
+		</entry><entry morerows="1">马来酸的添加量*
+		</entry><entry morerows="1">加热时间(小时)
+		</entry><entry morerows="1">收率(％)
+		</entry><entry morerows="1">颜色
+		</entry></row><row><entry morerows="1">参考例1
+		</entry><entry morerows="1">1.0
+		</entry><entry morerows="1">5
+		</entry><entry morerows="1">58
+		</entry><entry morerows="1">黄色
+		</entry></row><row><entry morerows="1">参考例2
+		</entry><entry morerows="1">1.0
+		</entry><entry morerows="1">7
+		</entry><entry morerows="1">47
+		</entry><entry morerows="1">浓黄色
+		</entry></row><row><entry morerows="1">参考例3
+		</entry><entry morerows="1">1.2
+		</entry><entry morerows="1">5
+		</entry><entry morerows="1">55
+		</entry><entry morerows="1">黄色
+		</entry></row><row><entry morerows="1">参考例4
+		</entry><entry morerows="1">1.2
+		</entry><entry morerows="1">7
+		</entry><entry morerows="1">48
+		</entry><entry morerows="1">浓黄色
+		</entry></row><row><entry morerows="1">实施例1
+		</entry><entry morerows="1">1.2
+		</entry><entry morerows="1">5
+		</entry><entry morerows="1">62
+		</entry><entry morerows="1">白色
+		</entry></row><row><entry morerows="1">实施例2
+		</entry><entry morerows="1">1.2
+		</entry><entry morerows="1">7
+		</entry><entry morerows="1">64
+		</entry><entry morerows="1">白色
+		</entry></row></tbody></tgroup></table></tables></p><p id="p0058" num="0058">*表示相对于使用的伊索拉定的摩尔当量
+		</p><p id="p0059" num="0059">如图1所示，与使伊索拉定和马来酸的混合物加热溶解于甲基溶纤剂的
+		情况相比，如果将伊索拉定加热溶解于甲基溶纤剂后加入马来酸，则没有
+		经时的收率下降，可高效地获得马来酸伊索拉定的结晶。
+		</p></description><claims><claim id="cl0001" num="0001"><claim-text>1.2,4-二氨基-6-(2,5-二氯苯基)-1,3,5-三嗪马来酸盐的结晶的制造方
+			法，其特征在于，包括下述(ⅰ)～(ⅲ)的工序：
+			</claim-text><claim-text>(ⅰ)使2,4-二氨基-6-(2,5-二氯苯基)-1,3,5-三嗪于有机溶剂中在加热
+			搅拌下溶解，形成均匀溶液的工序；
+			</claim-text><claim-text>(ⅱ)向上述(ⅰ)的溶液中加入马来酸，形成均匀溶液的工序；
+			</claim-text><claim-text>(ⅲ)包括将该溶液冷却至室温，分离析出的结晶的工序。
+			</claim-text></claim><claim id="cl0002" num="0002"><claim-text>2.如权利要求1所述的制造方法，其特征在于，使用的有机溶剂为甲基溶
+			纤剂。
+			</claim-text></claim><claim id="cl0003" num="0003"><claim-text>3.如权利要求1或2所述的制造方法，其特征在于，使用的马来酸相对于
+			2,4-二氨基-6-(2,5-二氯苯基)-1,3,5-三嗪以摩尔计为1.0倍～5.0倍当量。
+			</claim-text></claim><claim id="cl0004" num="0004"><claim-text>4.如权利要求1～3中的任一项所述的制造方法，其特征在于，对于上
+			述(ⅰ)的溶液，加热搅拌时的温度为50℃～100℃。
+			</claim-text></claim><claim id="cl0005" num="0005"><claim-text>5.如权利要求1所述的制造方法，其特征在于，使用的有机溶剂为甲
+			基溶纤剂，使用的马来酸相对于2,4-二氨基-6-(2,5-二氯苯基)-1,3,5-三
+			嗪以摩尔计为1.0倍～5.0倍当量，对于上述(ⅰ)的溶液，加热搅拌时的温
+			度为50℃～100℃。
+			</claim-text></claim></claims><drawings><figure id="f0001" num="0001" figure-labels="图1"><img id="ifi0001" file="HDA0000561377950000011.TIF" wi="700" he="465" img-content="drawing" img-format="tif" orientation="portrait" inline="no" /></figure></drawings></application-body></cn-patent-document>

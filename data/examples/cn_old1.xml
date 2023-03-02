@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/showxml/xsl/XSL0117new.xsl"?>
+<cn-patent-document lang="ZH" country="CN">
+  <cn-bibliographic-data>
+    <cn-publication-reference>
+      <document-id>
+        <country>CN</country>
+        <doc-number>104223352</doc-number>
+        <kind>A</kind>
+        <date>20141224</date>
+      </document-id>
+      <gazette-reference>
+        <gazette-num>30-52</gazette-num>
+        <date>20141224</date>
+      </gazette-reference>
+    </cn-publication-reference>
+    <application-reference appl-type="发明专利">
+      <document-id>
+        <country>CN</country>
+        <doc-number>201410408762.5</doc-number>
+        <date>20140819</date>
+      </document-id>
+    </application-reference>
+    <classifications-ipcr>
+      <classification-ipcr>
+        <text>A24B   15/18    (2006.01)</text>
+      </classification-ipcr>
+      <classification-ipcr>
+        <text>C11B    9/00    (2006.01)</text>
+      </classification-ipcr>
+      <classification-ipcr>
+        <text>C12P    1/02    (2006.01)</text>
+      </classification-ipcr>
+      <classification-ipcr>
+        <text>C12R    1/645   (2006.01)</text>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <invention-title>一种甘草发酵所得烟用香料及其应用</invention-title>
+    <abstract>
+      <p num="1">本发明公开了一种甘草发酵所得烟用香料及其应用。从烤烟新鲜烟叶中分离了一株优势微生物，分类命名为长孢洛德酵母(Lodderomyces elongisporus).CGMCC 6645。将该酵母接种到以甘草为原料的培养基中进行发酵培养。培养之后的发酵产物具有天然香味，含有2,4-二羟基苯乙酮、2,4,5-三甲基苯酚、3,4-二甲基苯甲醇、苯乙醇等多种致香成分。将该烟用香料添加到烟丝中，可以增加卷烟的香气质和保润效果，改善卷烟品质。烟气的甜韵感丰富，地方性杂气和木质气减少，喉部舒适性增加，余味较为舒适，口腔收敛较强。整个生产工艺简单、实用，具有良好的应用前景。</p>
+      <p num="bio">
+        <bio-deposit num="biod0001">
+          <depositary>CGMCC No.6645</depositary>
+          <bio-accno>2012.10.08</bio-accno>
+        </bio-deposit>
+      </p>
+    </abstract>
+    <cn-related-publication />
+    <cn-related-documents />
+    <cn-parties>
+      <cn-applicants cn-representative-is="650231 云南省昆明市五华区红锦路367号云烟科技园C区">
+        <cn-applicant sequence="1">
+          <addressbook lang="ZH">
+            <name>云南中烟工业有限责任公司</name>
+            <address>
+              <text>650231 云南省昆明市五华区红锦路367号云烟科技园C区</text>
+            </address>
+          </addressbook>
+        </cn-applicant>
+      </cn-applicants>
+      <cn-inventors>
+        <cn-inventor sequence="1" cn-not-to-be-published-request-by-inventor="no">
+          <name>段焰青</name>
+        </cn-inventor>
+        <cn-inventor sequence="2" cn-not-to-be-published-request-by-inventor="no">
+          <name>者为</name>
+        </cn-inventor>
+        <cn-inventor sequence="3" cn-not-to-be-published-request-by-inventor="no">
+          <name>李青青</name>
+        </cn-inventor>
+        <cn-inventor sequence="4" cn-not-to-be-published-request-by-inventor="no">
+          <name>叶灵</name>
+        </cn-inventor>
+        <cn-inventor sequence="5" cn-not-to-be-published-request-by-inventor="no">
+          <name>张伟</name>
+        </cn-inventor>
+        <cn-inventor sequence="6" cn-not-to-be-published-request-by-inventor="no">
+          <name>夏建军</name>
+        </cn-inventor>
+        <cn-inventor sequence="7" cn-not-to-be-published-request-by-inventor="no">
+          <name>党立志</name>
+        </cn-inventor>
+        <cn-inventor sequence="8" cn-not-to-be-published-request-by-inventor="no">
+          <name>王文元</name>
+        </cn-inventor>
+      </cn-inventors>
+      <cn-agents>
+        <cn-agent sequence="1" rep-type="agent">
+          <cn-agency>
+            <name>昆明协立知识产权代理事务所(普通合伙) 53108</name>
+          </cn-agency>
+          <name>谢嘉</name>
+        </cn-agent>
+        <cn-agent sequence="2" rep-type="agent">
+          <cn-agency>
+            <name>昆明协立知识产权代理事务所(普通合伙) 53108</name>
+          </cn-agency>
+          <name>旃习涵</name>
+        </cn-agent>
+      </cn-agents>
+    </cn-parties>
+  </cn-bibliographic-data>
+  <application-body lang="CN" country="CN">
+    <description>
+      <invention-title id="tilte1">一种甘草发酵所得烟用香料及其应用</invention-title>
+      <p id="p0001" num="0001">技术领域
+	</p>
+      <p id="p0002" num="0002">本发明属于卷烟香精香料技术领域，具体是涉及一种用酵母菌发酵甘草后得到的烟用香料。同时，本发明还涉及该烟用香料在卷烟生产中的具体应用。 
+	</p>
+      <p id="p0003" num="0003">背景技术
+	</p>
+      <p id="p0004" num="0004">在烟草行业中，香精香料对卷烟产品的口味起着决定性作用。现今生产的香料、香精中约85％的产品是通过化学合成方法得到的。但是用化学法合成的香料不仅合成较困难、且大量的使用会给人们的健康造成影响。随着人们生活水平的提高，对香料的需求趋向于天然、健康、安全、营养和多功能性。 
+	</p>
+      <p id="p0005" num="0005">天然香精香料是高价值的精细化工产品，而原来从天然动、植物提取的天然香料，由于原料有限，提取成本高，远远满足不了卷烟香料市场的需求。利用微生物发酵技术可以制备香料或进行香料的转化，制备得到的香料为天然级产品，在提高香料产品质量的同时，节约能源、降低成本，实现了天然香料加工技术的革命。因此，人们对香料的生物合成越来越感兴趣，生物技术将在天然香精香料研究和制备中发挥越来越大的作用。 
+	</p>
+      <p id="p0006" num="0006">甘草为豆科植物甘草的根，是常用中药之一，有补脾益气、清热解毒、润肺止咳、缓急止痛、调和诸药之功效。现有技术中，以甘草为底物，以产香酵母菌进行发酵，制备烟用香料添加剂的研究尚未见报道。 
+	</p>
+      <p id="p0007" num="0007">发明内容
+	</p>
+      <p id="p0008" num="0008">本发明的目的在于针对现有技术的不足，提供一种以特殊的产香酵母发酵甘草后制备得到的烟用香料，该香料符合天然香料的要求，能够与烟香形成良好的配伍。 
+	</p>
+      <p id="p0009" num="0009">本发明的目的还在于提供所述烟用香料在卷烟生产中的具体应用。 
+	</p>
+      <p id="p0010" num="0010">本发明的目的通过下述技术方案予以实现。 
+	</p>
+      <p id="p0011" num="0011">除非另有说明，本发明中所采用的百分数均为质量百分数。 
+	</p>
+      <p id="p0012" num="0012">本发明从烤烟新鲜烟叶中分离了一株优势微生物OF-08作为试验菌种，对其进行了26SrDNA分析，鉴定结果表明该细菌属于长孢洛德酵母，其分类命名为Lodderomyces elongisporus，保藏号为CGMCC No.6645。 
+	</p>
+      <p id="p0013" num="0013">本发明所述的长孢洛德酵母(Lodderomyces elongisporus)菌株的形态学特征为：菌落较大，呈卵球形，奶白色凸起，菌落比较粗糙，边缘整齐；在液体培养基中，培养液澄清有沉淀，且有菌蹼。 
+	</p>
+      <p id="p0014" num="0014">本发明所述的长孢洛德酵母OF-08的分子鉴定特征为：利用通用引物NL-1(5'CATATCAATAAGCGGAGGAAAAG3')和NL-4(5'GGTCCGTGTTTCAAGACGG3')，以长孢洛德酵母OF-08的基因组DNA作为模板扩增得到600bp左右的PCR产物，回收测序、校正之后得到的OF-08菌株的部分26SrDNA基因序列578bp,该序列已经提交国际核苷酸序列数据库(GenBank)，序列索引号为：JQ916053。 
+	</p>
+      <p id="p0015" num="0015">利用所述长孢洛德酵母菌发酵甘草，制备得到一种烟用香料，其特征在于：将甘草片或甘草粉与水按1:5～1:50的质量比配制成发酵培养基，高压灭菌后按1％的质量比接种长孢洛德酵母CGMCC6645，发酵培养2天后对发酵液进行过滤浓缩，即得所需烟用香料。 
+	</p>
+      <p id="p0016" num="0016">所述的甘草物料与水的质量比优选为1:20。 
+	</p>
+      <p id="p0017" num="0017">所述甘草发酵所得烟用香料在卷烟生产中的应用，具体为：在卷烟制丝加料阶段，将所述烟用香料喷洒在预先平衡好的烟丝上，添加量为8～12g/箱烟丝；其中，烟丝平衡的条件为：温度22±2℃,相对湿度60％±2％，平衡时间24h。 
+	</p>
+      <p id="p0018" num="0018">与现有技术相比，本发明具有以下突出的优点： 
+	</p>
+      <p id="p0019" num="0019">(1)通过长孢洛德酵母菌发酵甘草得到的烟用香料，具有天然香料的香味，通过GC-MS检测，结果表明发酵液中含有2,4-二羟基苯乙酮、2,4,5- 三甲基苯酚、3,4-二甲基苯甲醇、苯乙醇等物质成分；将该香料添加到卷烟中进行评吸，评吸结果表明香气量较为充足，甜韵感丰富，地方性杂气、木质气减少，喉部舒适性增加，余味较为舒适，口腔收敛较强。 
+	</p>
+      <p id="p0020" num="0020">(2)本发明合理利用甘草的药用功效，而且可以增加卷烟的香气质和保润效果，改善卷烟品质。 
+	</p>
+      <p id="p0021" num="0021">(3)原料价格低廉，来源丰富；所用菌株易于保存，易于活化和发酵； 
+	</p>
+      <p id="p0022" num="0022">(4)生产工艺简单、操作性、规范性及可控性强，便于实现大规模工业化生产，具有良好的开发应用前景。 
+	</p>
+      <p id="p0023" num="0023">保藏生物材料的说明 
+	</p>
+      <p id="p0024" num="0024">本发明的菌株，已于2012年10月08日，保藏在中国微生物菌种保藏管理委员会普通微生物中心(CGMCC)；该中心地址：中国北京市朝阳区大屯路，中国科学院微生物研究所。该菌株分类命名为长孢洛德酵母(Lodderomyces elongisporus)；保藏号为CGMCC No.6645。 
+	</p>
+      <p id="p0025" num="0025">具体实施方式
+	</p>
+      <p id="p0026" num="0026">为了使本发明的目的、技术方案及优点更加清楚明白，以下通过实施例及试验数据，对本发明作进一步的详细说明。应当理解，此处所描述的具体实施例仅仅用以解释本发明，并不用于限定本发明。 
+	</p>
+      <p id="p0027" num="0027">实施例1 
+	</p>
+      <p id="p0028" num="0028">——长孢洛德酵母菌OF-08(L.elongisporus OF-08)的筛选方法。 
+	</p>
+      <p id="p0029" num="0029">烟叶样品用自来水冲洗3-5min并用细毛刷清除叶片表面污垢。叶片自然晾干后，随机选5片叶子，在健康部位(无病斑)用无菌剪刀随机取下3×3cm<sup>2</sup>的组织块3-5片，混合后用无菌水漂洗5min并用无菌滤纸吸干水分。称取10g叶块，按下述程序进行表面消毒：75％的无菌酒精浸泡1min，无菌水 清洗3次，并用无菌滤纸吸干水分，避免酒精残留；再用有效氯含量为3％的NaClO溶液浸泡2min，无菌水清洗后吸干水分，置于超净工作台中备用。取200μL最后一次洗涤组织的无菌水涂布在YPD培养基平板，28℃培养2d后无酵母菌菌落出现，表明消毒彻底。将经过表面消毒的组织块放在无菌研钵中研磨至浆状，加入10mL无菌水，混匀后用3层无菌擦镜纸过滤，获得的滤液用无菌水稀释至10<sup>-1</sup>、10<sup>-2</sup>、10<sup>-3</sup>。每一稀释度取200μL涂布一个YPD培养基平板，每个浓度设定3个重复，三个浓度共9皿。涂布平板在超净工作台中放置5h后于32℃下倒置培养2d，统计每平板的微生物菌落数，并对所得的内生酵母进行纯化、保存和鉴定，得到长孢洛德酵母(L.elongisporus OF-08)。 
+	</p>
+      <p id="p0030" num="0030">实施例2 
+	</p>
+      <p id="p0031" num="0031">——发酵甘草材料 
+	</p>
+      <p id="p0032" num="0032">取适量甘草材料(包括甘草片、甘草粉等)，分别用蒸馏水稀释5倍、10倍、15倍、20倍、30倍和50倍，高压灭菌后按1％的接种量接入长孢洛德酵母菌CGMCC6645对其进行发酵，培养两天后观察发酵液变化情况，结果表明，发酵液具有天然香味。通过比较不同的甘草材料发酵情况，结果表明，发酵甘草粉所得的香料，甜韵感丰富，香气比较浓厚。并且，发酵材料和水的比例不同，发酵液的变化情况不一样，产香效果也不一样。甘草材料和水的比例为1:20时，发酵效果比较明显。 
+	</p>
+      <p id="p0033" num="0033">实施例3 
+	</p>
+      <p id="p0034" num="0034">——发酵液的萃取 
+	</p>
+      <p id="p0035" num="0035">将实施例2所得的发酵液过滤除渣后，用二氯甲烷溶剂同时蒸馏萃取3h，萃取液用无水硫酸钠干燥，置于4℃过夜，过滤，滤液导入浓缩瓶中用Vigreux株浓缩至约1ml，浓缩液用于GC-MS分析。对照为不接种酵母菌的培养基。 
+	</p>
+      <p id="p0036" num="0036">——发酵液物质成分测定 
+	</p>
+      <p id="p0037" num="0037">发酵液物质成分检测结果如下(详见表1)。在经长孢洛德酵母菌CGMCC6645处理过的发酵液中，含量较多的成分为3,4-二甲基苯甲醇，为7.66％， 其次为苯乙醇，在物质总成分含量中占7.21％。结果表明，长孢洛德酵母菌CGMCC6645对甘草材料的发酵可以产生多种香料物质成分，在香料行业具有应用前景。 
+	</p>
+      <p id="p0038" num="0038">表1 甘草材料发酵液物质成分含量检测结果 
+	</p>
+      <p id="p0039" num="0039">
+        <tables num="0001">
+          <table>
+            <tgroup cols="3">
+              <colspec colname="c001" colwidth="13%" />
+              <colspec colname="c002" colwidth="45%" />
+              <colspec colname="c003" colwidth="40%" />
+              <tbody>
+                <row>
+                  <entry morerows="1">序号 </entry>
+                  <entry morerows="1">化合物名称 </entry>
+                  <entry morerows="1">百分比含量(％) </entry>
+                </row>
+                <row>
+                  <entry morerows="1">1 </entry>
+                  <entry morerows="1">3,4-二甲基苯甲醇 </entry>
+                  <entry morerows="1">7.66 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">2 </entry>
+                  <entry morerows="1">邻苯二甲酸二丁酯 </entry>
+                  <entry morerows="1">6.69 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">3 </entry>
+                  <entry morerows="1">3-羟基-2-丁酮 </entry>
+                  <entry morerows="1">4.96 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">4 </entry>
+                  <entry morerows="1">苯乙醇 </entry>
+                  <entry morerows="1">7.21 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">5 </entry>
+                  <entry morerows="1">10-十一烯醛 </entry>
+                  <entry morerows="1">3.89 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">6 </entry>
+                  <entry morerows="1">2,4,5-三甲基苯酚 </entry>
+                  <entry morerows="1">7.03 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">7 </entry>
+                  <entry morerows="1">4-甲基苯甲醇 </entry>
+                  <entry morerows="1">4.33 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">8 </entry>
+                  <entry morerows="1">乙酸苯甲酯 </entry>
+                  <entry morerows="1">5.97 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">9 </entry>
+                  <entry morerows="1">2,4-二羟基苯乙酮 </entry>
+                  <entry morerows="1">5.88 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">10 </entry>
+                  <entry morerows="1">3-甲基苯酚 </entry>
+                  <entry morerows="1">4.76 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">11 </entry>
+                  <entry morerows="1">2-甲基-苯甲醛 </entry>
+                  <entry morerows="1">4.52 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">12 </entry>
+                  <entry morerows="1">3-甲基-1-丁醇 </entry>
+                  <entry morerows="1">3.85 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">13 </entry>
+                  <entry morerows="1">酞酸二乙酯 </entry>
+                  <entry morerows="1">2.59 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">14 </entry>
+                  <entry morerows="1">6-氟-2-甲基喹啉 </entry>
+                  <entry morerows="1">2.38 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">15 </entry>
+                  <entry morerows="1">2,3-丁二醇 </entry>
+                  <entry morerows="1">2.75 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">16 </entry>
+                  <entry morerows="1">乳酸丁酯 </entry>
+                  <entry morerows="1">2.58 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">17 </entry>
+                  <entry morerows="1">2-甲氧基苯酚 </entry>
+                  <entry morerows="1">4.92 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">18 </entry>
+                  <entry morerows="1">苯甲醇 </entry>
+                  <entry morerows="1">4.76 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">19 </entry>
+                  <entry morerows="1">苯甲醛 </entry>
+                  <entry morerows="1">4.61 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">20 </entry>
+                  <entry morerows="1">糠醇 </entry>
+                  <entry morerows="1">2.53 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">21 </entry>
+                  <entry morerows="1">噻吩-2-碳酸酯 </entry>
+                  <entry morerows="1">2.92 </entry>
+                </row>
+                <row>
+                  <entry morerows="1">22 </entry>
+                  <entry morerows="1">4-羟基-苯乙酸 </entry>
+                  <entry morerows="1">3.21 </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p0040" num="0040">实施例5 
+	</p>
+      <p id="p0041" num="0041">——处理烟样感官评吸: 
+	</p>
+      <p id="p0042" num="0042">称取预先平衡水分至13％的烟丝200g，喷施OF-08(S.cescerevisiae OF-08)菌剂40mL，对照组喷施等量无菌水。将处理组和对照组的烟丝制成烟支，放入恒温恒湿箱内，在湿度60％，温度22℃条件下平衡24h后，由卷烟专业评吸专家组成的评吸小组进行评吸。 
+	</p>
+      <p id="p0043" num="0043">经专家评吸认为：利用长孢洛德酵母菌CGMCC6645处理后的烟叶样品，香气量较为充足，甜韵感丰富，地方性杂气、木质气减少，喉部舒适性增加，余味较为舒适，口腔收敛感较强。 
+	</p>
+      <p id="p0044" num="0044">以上所述仅为本发明的较佳实施例而已，并不用以限制本发明，凡在本发明的精神和原则之内所作的任何修改、等同替换和改进等，均应包含在本发明的保护范围之内。 
+	</p>
+    </description>
+    <claims>
+      <claim id="cl0001" num="0001">
+        <claim-text>1.一种甘草发酵所得烟用香料，其特征在于：将甘草片或甘草粉与水
+			<br />按1:5～1:50的质量比配制成发酵培养基，高压灭菌后按1％的质量比接种长
+			<br />孢洛德酵母CGMCC6645，发酵培养2天后对发酵液进行过滤浓缩，即得所需
+			<br />烟用香料。
+			<br /></claim-text>
+      </claim>
+      <claim id="cl0002" num="0002">
+        <claim-text>2.根据权利要求1所述的甘草发酵所得烟用香料，其特征在于：所述
+			<br />的甘草物料与水的质量比优选为1:20。
+			<br /></claim-text>
+      </claim>
+      <claim id="cl0003" num="0003">
+        <claim-text>3.权利要求1所述甘草发酵所得烟用香料在卷烟生产中的应用，具体
+			<br />为：在卷烟制丝加料阶段，将所述烟用香料喷洒在预先平衡好的烟丝上，添
+			<br />加量为8～12g/箱烟丝；其中，平衡的条件为：温度22±2℃,相对湿度60％±2％，
+			<br />平衡时间24h。
+			<br /></claim-text>
+      </claim>
+    </claims>
+  </application-body>
+</cn-patent-document>

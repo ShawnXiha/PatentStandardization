@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<business:PatentDocumentAndRelated xmlns:base="http://www.sipo.gov.cn/XMLSchema/base" xmlns:business="http://www.sipo.gov.cn/XMLSchema/business" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:tbl="http://oasis-open.org/specs/soextblx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sipo.gov.cn/XMLSchema/business /DTDS/PatentDocument/Elements/OtherElements.xsd" xsdVersion="V2.2.1" file="CN102021000991218CN00001137839490AFULZH20211210CN00Y.XML" dateProduced="20211205" status="C" lang="zh" country="CN" docNumber="113783949" kind="A" datePublication="20211210">
+  <business:BibliographicData>
+    <business:PublicationReference dataFormat="original" sequence="1" sourceDB="national office">
+      <base:DocumentID>
+        <base:WIPOST3Code>CN</base:WIPOST3Code>
+        <base:DocNumber>113783949</base:DocNumber>
+        <base:Kind>A</base:Kind>
+        <base:Date>20211210</base:Date>
+      </base:DocumentID>
+    </business:PublicationReference>
+    <business:PublicationReference dataFormat="standard" sequence="1">
+      <base:DocumentID>
+        <base:WIPOST3Code>CN</base:WIPOST3Code>
+        <base:DocNumber>113783949</base:DocNumber>
+        <base:Kind>A</base:Kind>
+        <base:Date>20211210</base:Date>
+      </base:DocumentID>
+    </business:PublicationReference>
+    <business:PublicAvailabilityDate>
+      <business:GazetteReference>
+        <business:GazetteNumber>37-5002</business:GazetteNumber>
+        <base:Date>20211210</base:Date>
+      </business:GazetteReference>
+    </business:PublicAvailabilityDate>
+    <business:ApplicationReference applType="10" dataFormat="original" sequence="1" sourceDB="national office">
+      <base:DocumentID>
+        <base:WIPOST3Code>CN</base:WIPOST3Code>
+        <base:DocNumber>202110991218.8</base:DocNumber>
+        <base:Date>20210826</base:Date>
+      </base:DocumentID>
+    </business:ApplicationReference>
+    <business:ApplicationReference applType="10" dataFormat="standard" sequence="1">
+      <base:DocumentID>
+        <base:WIPOST3Code>CN</base:WIPOST3Code>
+        <base:DocNumber>102021000991218</base:DocNumber>
+        <base:Date>20210826</base:Date>
+      </base:DocumentID>
+    </business:ApplicationReference>
+    <business:ClassificationIPCRDetails creator="03" processingType="original">
+      <business:ClassificationIPCR sequence="1">
+        <business:IPCVersionDate>20060101</business:IPCVersionDate>
+        <business:Section>H</business:Section>
+        <business:MainClass>04</business:MainClass>
+        <business:Subclass>L</business:Subclass>
+        <business:MainGroup>29</business:MainGroup>
+        <business:Subgroup>08</business:Subgroup>
+        <business:GeneratingOffice>
+          <base:WIPOST3Code>CN</base:WIPOST3Code>
+        </business:GeneratingOffice>
+        <business:ClassificationDataSource>H</business:ClassificationDataSource>
+        <base:Text>H04L   29/08    (2006.01)</base:Text>
+      </business:ClassificationIPCR>
+      <business:ClassificationIPCR sequence="2">
+        <business:IPCVersionDate>20060101</business:IPCVersionDate>
+        <business:Section>H</business:Section>
+        <business:MainClass>04</business:MainClass>
+        <business:Subclass>L</business:Subclass>
+        <business:MainGroup>29</business:MainGroup>
+        <business:Subgroup>06</business:Subgroup>
+        <business:GeneratingOffice>
+          <base:WIPOST3Code>CN</base:WIPOST3Code>
+        </business:GeneratingOffice>
+        <business:ClassificationDataSource>H</business:ClassificationDataSource>
+        <base:Text>H04L   29/06    (2006.01)</base:Text>
+      </business:ClassificationIPCR>
+      <business:ClassificationIPCR sequence="3">
+        <business:IPCVersionDate>20060101</business:IPCVersionDate>
+        <business:Section>H</business:Section>
+        <business:MainClass>04</business:MainClass>
+        <business:Subclass>L</business:Subclass>
+        <business:MainGroup>9</business:MainGroup>
+        <business:Subgroup>32</business:Subgroup>
+        <business:GeneratingOffice>
+          <base:WIPOST3Code>CN</base:WIPOST3Code>
+        </business:GeneratingOffice>
+        <business:ClassificationDataSource>H</business:ClassificationDataSource>
+        <base:Text>H04L    9/32    (2006.01)</base:Text>
+      </business:ClassificationIPCR>
+      <business:ClassificationIPCR sequence="4">
+        <business:IPCVersionDate>20120101</business:IPCVersionDate>
+        <business:Section>G</business:Section>
+        <business:MainClass>06</business:MainClass>
+        <business:Subclass>Q</business:Subclass>
+        <business:MainGroup>40</business:MainGroup>
+        <business:Subgroup>04</business:Subgroup>
+        <business:GeneratingOffice>
+          <base:WIPOST3Code>CN</base:WIPOST3Code>
+        </business:GeneratingOffice>
+        <business:ClassificationDataSource>H</business:ClassificationDataSource>
+        <base:Text>G06Q   40/04    (2012.01)</base:Text>
+      </business:ClassificationIPCR>
+      <business:ClassificationIPCR sequence="5">
+        <business:IPCVersionDate>20190101</business:IPCVersionDate>
+        <business:Section>G</business:Section>
+        <business:MainClass>06</business:MainClass>
+        <business:Subclass>F</business:Subclass>
+        <business:MainGroup>16</business:MainGroup>
+        <business:Subgroup>27</business:Subgroup>
+        <business:GeneratingOffice>
+          <base:WIPOST3Code>CN</base:WIPOST3Code>
+        </business:GeneratingOffice>
+        <business:ClassificationDataSource>H</business:ClassificationDataSource>
+        <base:Text>G06F   16/27    (2019.01)</base:Text>
+      </business:ClassificationIPCR>
+    </business:ClassificationIPCRDetails>
+    <business:InventionTitle lang="zh" dataFormat="original" sourceDB="national office" processingType="original" creator="03">一种基于合约管理的跨链去中心化方法</business:InventionTitle>
+    <business:Parties>
+      <business:ApplicantDetails representative="1">
+        <business:Applicant sequence="1" appType="applicant" dataFormat="original" sourceDB="national office" lang="zh" creator="03" processingType="original">
+          <base:AddressBook lang="zh">
+            <base:Name>浙商银行股份有限公司</base:Name>
+            <base:Address>
+              <base:AddressLine>0</base:AddressLine>
+              <base:AddressMailCode>0</base:AddressMailCode>
+              <base:PostBox>0</base:PostBox>
+              <base:AddressRoom>0</base:AddressRoom>
+              <base:AddressFloor>0</base:AddressFloor>
+              <base:AddressBuilding>0</base:AddressBuilding>
+              <base:Street>0</base:Street>
+              <base:AddressCity>0</base:AddressCity>
+              <base:County>萧山区</base:County>
+              <base:City>杭州市</base:City>
+              <base:Province>浙江省</base:Province>
+              <base:PostCode>311200</base:PostCode>
+              <base:WIPOST3Code>CN</base:WIPOST3Code>
+              <base:Text>311200 浙江省杭州市萧山区鸿宁路1788号</base:Text>
+            </base:Address>
+          </base:AddressBook>
+          <business:OrganizationCode createDate="00000000" creator="00">0000000000</business:OrganizationCode>
+        </business:Applicant>
+      </business:ApplicantDetails>
+      <business:InventorDetails>
+        <business:Inventor sequence="1" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+          <base:AddressBook lang="zh">
+            <base:Name>陈嘉俊</base:Name>
+          </base:AddressBook>
+        </business:Inventor>
+        <business:Inventor sequence="2" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+          <base:AddressBook lang="zh">
+            <base:Name>臧铖</base:Name>
+          </base:AddressBook>
+        </business:Inventor>
+        <business:Inventor sequence="3" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+          <base:AddressBook lang="zh">
+            <base:Name>郭东升</base:Name>
+          </base:AddressBook>
+        </business:Inventor>
+      </business:InventorDetails>
+      <business:AgentDetails>
+        <business:CustomerNumber>33200</business:CustomerNumber>
+        <business:Agent sequence="1" lang="zh" dataFormat="original" sourceDB="national office" repType="agent" processingType="original" creator="03">
+          <business:Agency>
+            <base:AddressBook lang="zh">
+              <base:OrganizationName>杭州求是专利事务所有限公司 33200</base:OrganizationName>
+            </base:AddressBook>
+          </business:Agency>
+          <base:AddressBook lang="zh">
+            <base:Name>刘静</base:Name>
+          </base:AddressBook>
+        </business:Agent>
+      </business:AgentDetails>
+    </business:Parties>
+  </business:BibliographicData>
+  <business:Abstract dataFormat="original" lang="zh" sourceDB="national office" processingType="original" creator="03">
+    <base:Paragraphs num="0001">本发明公开了一种基于合约管理的跨链去中心化方法，该方法中跨链通信部分包括三个链路：来源链节点与代理节点通信、代理节点之间通信、代理节点与目的链节点通信；跨链代理节点负责跨链注册、跨链身份管理、跨链验证、跨链路由、跨链去中心化策略管理等；跨链管理合约部署在区块链节点上，负责共识验证代理节点与区块链节点之间通信的去中心化策略；在跨链注册时包含去中心化策略，当发送跨链交易时，需要满足去中心化策略才能进行下一步交易；代理节点之间，以及代理节点与区块链节点之间通信均需要满足去中心化策略。本发明方法能够实现跨链交易去中心化，防止单点作恶风险，确保了跨链的高可用性及高安全性，对区块链生态的建设具有重要意义。</base:Paragraphs>
+    <business:AbstractFigure>
+      <base:Figure num="0001">
+        <base:Image he="430" wi="1000" file="202110991218.JPG" imgContent="undefined" imgFormat="JPEG" />
+      </base:Figure>
+    </business:AbstractFigure>
+  </business:Abstract>
+  <business:Description lang="zh" dataFormat="original" sourceDB="national office" creator="03">
+    <business:InventionTitle id="title1">一种基于合约管理的跨链去中心化方法</business:InventionTitle>
+    <business:TechnicalField id="technical-field001">
+      <base:Paragraphs id="p0001">技术领域</base:Paragraphs>
+      <base:Paragraphs id="p0002" num="n0001">本发明涉及区块链技术领域，特别涉及一种基于合约管理的跨链去中心化方法。</base:Paragraphs>
+    </business:TechnicalField>
+    <business:BackgroundArt id="background-art001">
+      <base:Paragraphs id="p0003">背景技术</base:Paragraphs>
+      <base:Paragraphs id="p0004" num="n0002">区块链最大价值是实现信息价值的传递，但是大多区块链平台具有很强的排他性，导致在如今的区块链网络中，存在许多价值孤岛，区块链之间不能够价值互联。跨链技术能够打通区块链之间的壁垒，但是目前现存的跨链技术，例如中继链、公证人等技术方案存在中心化风险。当采用中继链方案，来源链向目的链进行跨链交易时，一般来源链的一个节点发送跨链消息到中继链，中继链做身份验证，跨链路由，将跨链交易发送到目的链，这个过程中，跨链交易由来源链发送到中继链就存在单节点通信这样的中心化问题，同理中继链到目的链这个通信链路也存在单点通信的中心化问题。这就会导致在跨链价值交换时可能存在通信节点作恶进行攻击造成资产损失，整个跨链方案也就失去了高可用、高安全、防作恶的特性。一种能够实现区块链跨链去中心化的方案对跨链而言具有十分重要的意义。</base:Paragraphs>
+    </business:BackgroundArt>
+    <business:Disclosure id="disclosure001">
+      <base:Paragraphs id="p0005">发明内容</base:Paragraphs>
+      <base:Paragraphs id="p0006" num="n0003">本发明针对以上技术问题，提出了一种基于合约管理的区块链跨链去中心化方法，能够实现跨链交易去中心化，防止单点作恶风险，确保了跨链的高可用性及高安全性，对区块链生态的建设具有重要意义。</base:Paragraphs>
+      <base:Paragraphs id="p0007" num="n0004">本发明的目的是通过以下技术方案实现的：一种基于合约管理的跨链去中心化方法，该方法包括：</base:Paragraphs>
+      <base:Paragraphs id="p0008" num="n0005">区块链跨链通信包括三个链路：来源链节点与代理节点之间通信、来源链代理节点与目的链代理节点之间通信、代理节点与目的链节点之间通信，每条跨链链路根据去中心化策略可配置多条通信连接；</base:Paragraphs>
+      <base:Paragraphs id="p0009" num="n0006">跨链代理节点负责跨链注册、跨链身份管理、跨链验证、跨链路由、跨链标准化通信、跨链去中心化策略管理；</base:Paragraphs>
+      <base:Paragraphs id="p0010" num="n0007">跨链管理合约部署在区块链节点上，用于区块链节点与代理节点的跨链通信、跨链交易验证、去中心化策略验证、提交跨链交易到目的链业务合约、接收跨链交易的业务合约执行结果、将执行结果发送到代理节点；</base:Paragraphs>
+      <base:Paragraphs id="p0011" num="n0008">跨链管理合约负责共识验证代理节点与区块链节点之间通信的去中心化策略；在跨链注册时包含去中心化策略，当发送跨链交易时，需要满足去中心化策略才能进行下一步交易；代理节点之间，以及代理节点与区块链节点之间通信均需要满足去中心化策略。</base:Paragraphs>
+      <base:Paragraphs id="p0012" num="n0009">进一步地，跨链流程包括以下步骤：</base:Paragraphs>
+      <base:Paragraphs id="p0013" num="n0010">(1)源链发起跨链注册：根据对端签发的跨链证书进行签名，把身份信息、验证规则、去中心化策略向目的链进行注册，源链代理节点进行验证签名，并签名发送到目的链代理节点验证签名并签名，根据跨链证书进行验证，验证通过后进行跨链授权，并将注册信息进行上链存储及代理节点本地存储；</base:Paragraphs>
+      <base:Paragraphs id="p0014" num="n0011">(2)目的链向源链进行注册；</base:Paragraphs>
+      <base:Paragraphs id="p0015" num="n0012">(3)源链发送跨链交易，通过代理节点进行通信消息标准化处理，并进行签名发送到对端代理节点；</base:Paragraphs>
+      <base:Paragraphs id="p0016" num="n0013">(4)目的链代理节点接收跨链交易，进行签名验证、身份验证、权限验证、去中心化策略验证，验证通过后将标准消息转换为目的链消息格式，向目的链提交跨链交易；</base:Paragraphs>
+      <base:Paragraphs id="p0017" num="n0014">(5)目的链跨链管理合约处理跨链交易，验证身份及交易的去中心化策略，验证通过后提交跨链交易到目的链业务合约；</base:Paragraphs>
+      <base:Paragraphs id="p0018" num="n0015">(6)目的链返回业务合约执行的跨链交易结果。</base:Paragraphs>
+      <base:Paragraphs id="p0019" num="n0016">进一步地，所述去中心化策略包括：ANY、MAJORITY、ALL、NOUTOF；</base:Paragraphs>
+      <base:Paragraphs id="p0020" num="n0017">ANY：收到任何一个代理节点发送的消息即可验证通过；</base:Paragraphs>
+      <base:Paragraphs id="p0021" num="n0018">MAJORITY：收到大多数代理节点发送的消息才能验证通过；</base:Paragraphs>
+      <base:Paragraphs id="p0022" num="n0019">ALL：收到所有代理节点发送的消息才能通过验证；</base:Paragraphs>
+      <base:Paragraphs id="p0023" num="n0020">NOUTOF：收到指定的N个代理节点发送的消息才能通过验证。</base:Paragraphs>
+      <base:Paragraphs id="p0024" num="n0021">进一步地，源链向目的链进行跨链注册时的注册信息结构如下：</base:Paragraphs>
+      <base:Paragraphs id="p0025" num="n0022">
+        <base:TableDetails num="0001">
+          <base:Table>
+            <base:Title />
+            <tbl:tgroup cols="2">
+              <tbl:colspec colname="c001" colwidth="34%" />
+              <tbl:colspec colname="c002" colwidth="65%" />
+              <tbl:tbody>
+                <tbl:row>
+                  <tbl:entry morerows="1">字段</tbl:entry>
+                  <tbl:entry morerows="1">含义</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Version</tbl:entry>
+                  <tbl:entry morerows="1">链注册信息版本</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">ChainID</tbl:entry>
+                  <tbl:entry morerows="1">源链的ID</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">P2CPolicy</tbl:entry>
+                  <tbl:entry morerows="1">区块链节点和代理节点之间去中心化策略</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">C2CPolicy</tbl:entry>
+                  <tbl:entry morerows="1">代理节点与代理节点之间去中心化策略</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Validators</tbl:entry>
+                  <tbl:entry morerows="1">验证规则信息</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">ConsensuType</tbl:entry>
+                  <tbl:entry morerows="1">源链的共识类型</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Status</tbl:entry>
+                  <tbl:entry morerows="1">状态信息</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">ChainType</tbl:entry>
+                  <tbl:entry morerows="1">源链的类型</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">PublicKey</tbl:entry>
+                  <tbl:entry morerows="1">公钥信息</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Description</tbl:entry>
+                  <tbl:entry morerows="1">描述信息</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Extra</tbl:entry>
+                  <tbl:entry morerows="1">自定义扩展字段</tbl:entry>
+                </tbl:row>
+              </tbl:tbody>
+            </tbl:tgroup>
+          </base:Table>
+        </base:TableDetails>
+      </base:Paragraphs>
+      <base:Paragraphs id="p0026" num="n0023">进一步地，在跨链注册时，获取两个链路的去中心化策略，并在跨链管理合约账本与代理节点中进行持久化存储；区块链节点到代理节点之间的策略，通过跨链管理合约获取注册消息中的区块链节点和代理节点之间去中心化策略并记录到区块链账本；代理节点与代理节点之间的策略通过注册消息获取，并记录在代理节点中。</base:Paragraphs>
+      <base:Paragraphs id="p0027" num="n0024">进一步地，源链向目的链进行跨链注册，主要包括源链的身份信息、验证规则、去中心化策略，注册成功后，目的链的验证引擎生成对该链的验证规则，后续按照这个验证规则对跨链交易的合法性进行验证、对去中心化策略进行验证；针对不同架构的区块链生成不同的验证规则，根据不同注册信息生成不同的去中心化策略；把源链的身份信息和注册信息进行持久化存储；目的链代理节点的验证引擎对源链的注册信息进行核对，根据生成的验证规则验证交易，根据去中心化策略保证交易的正确性。</base:Paragraphs>
+      <base:Paragraphs id="p0028" num="n0025">进一步地，当进行跨链交易时，代理节点首先收到对端代理节点发来的跨链交易，目的链代理节点根据注册时的去中心化策略进行验证，如果满足策略则将跨链交易提交到目的链跨链管理合约上，跨链管理合约根据注册时的去中心化策略进行验证，如果满足策略则通过验证，进行链内的跨链交易共识，共识完成后执行写入账本；目的链执行跨链交易，并将结果返回，通过跨链管理合约发送到目的链代理节点然后发送到源链代理节点。</base:Paragraphs>
+      <base:Paragraphs id="p0029" num="n0026">进一步地，所述代理节点之间的去中心化策略验证具体为：目的链代理节点收集对端链发来的跨链交易；验证跨链消息摘要与签名信息，若消息摘要相同并且验签通过则认为收到不同代理节点背书的消息；在限定时间T内，针对同一跨链交易，将不同代理节点背书消息与去中心化策略进行验证，若验证通过则提交到目的链的跨链管理合约上。</base:Paragraphs>
+      <base:Paragraphs id="p0030" num="n0027">进一步地，所述代理节点与区块链节点之间的去中心化策略验证具体为：跨链管理合约接收代理节点发来的跨链交易；验证跨链消息摘要与签名信息，若消息摘要相同并且验签通过则认为收到不同代理节点背书的消息；在限定时间T内，针对同一跨链交易，将不同代理节点背书消息与去中心化策略进行验证，若验证通过则进行共识执行。</base:Paragraphs>
+      <base:Paragraphs id="p0031" num="n0028">进一步地，该方法支持去中心化策略升级，在满足当前去中心化策略的前提下发送去中心化策略升级交易，然后升级更新去中心化策略，并进行持久化存储。</base:Paragraphs>
+      <base:Paragraphs id="p0032" num="n0029">本发明的有益效果是：本发明设计了跨链管理合约及去中心化策略，跨链管理合约部署在区块链节点上，负责共识验证代理节点与区块链节点之间通信的去中心化策略；在跨链注册时包含去中心化策略，当发送跨链交易时，需要满足去中心化策略才能进行下一步交易；整个跨链通信链路：crossagent之间，crossagent与区块链节点之间的通信均需要满足去中心化策略。本发明方法能够实现跨链交易去中心化，防止单点作恶风险，确保了跨链的高可用性及高安全性，对区块链生态的建设具有重要意义。</base:Paragraphs>
+    </business:Disclosure>
+    <business:DrawingsDescription id="description-of-drawings001">
+      <base:Paragraphs id="p0033">附图说明</base:Paragraphs>
+      <base:Paragraphs id="p0034" num="n0030">图1是本发明实施例提供的区块链跨链去中心化方法整体架构图；</base:Paragraphs>
+      <base:Paragraphs id="p0035" num="n0031">图2是本发明实施例提供的跨链流程图；</base:Paragraphs>
+      <base:Paragraphs id="p0036" num="n0032">图3是本发明实施例提供的crossagent之间的去中心化策略验证流程图；</base:Paragraphs>
+      <base:Paragraphs id="p0037" num="n0033">图4是本发明实施例提供的crossagent与区块链节点之间的去中心化策略验证流程图；</base:Paragraphs>
+      <base:Paragraphs id="p0038" num="n0034">图5是本发明实施例提供的跨链注册流程图；</base:Paragraphs>
+      <base:Paragraphs id="p0039" num="n0035">图6是本发明实施例提供的跨链交易流程图；</base:Paragraphs>
+      <base:Paragraphs id="p0040" num="n0036">图7是本发明实施例提供的策略升级流程图；</base:Paragraphs>
+      <base:Paragraphs id="p0041" num="n0037">图8是本发明实施例提供的跨链管理合约设计流程图。</base:Paragraphs>
+    </business:DrawingsDescription>
+    <business:InventionMode id="mode-for-invention001">
+      <base:Paragraphs id="p0042">具体实施方式</base:Paragraphs>
+      <base:Paragraphs id="p0043" num="n0038">为了更好的理解本申请的技术方案，下面结合附图对本申请实施例进行详细描述。</base:Paragraphs>
+      <base:Paragraphs id="p0044" num="n0039">应当明确，所描述的实施例仅仅是本申请一部分实施例，而不是全部的实施例。基于本申请中的实施例，本领域普通技术人员在没有作出创造性劳动前提下所获得的所有其它实施例，都属于本申请保护的范围。</base:Paragraphs>
+      <base:Paragraphs id="p0045" num="n0040">在本申请实施例中使用的术语是仅仅出于描述特定实施例的目的，而非旨在限制本申请。在本申请实施例和所附权利要求书中所使用的单数形式的“一种”、“所述”和“该”也旨在包括多数形式，除非上下文清楚地表示其他含义。</base:Paragraphs>
+      <base:Paragraphs id="p0046" num="n0041">本发明提供的基于合约管理的跨链去中心化方法整体架构如图1所示。</base:Paragraphs>
+      <base:Paragraphs id="p0047" num="n0042">跨链通信部分包括三个链路：跨链链路1即来源链区块链节点与代理节点之间通信、跨链链路2即来源链代理节点与目的链代理节点之间通信、跨链链路3即代理节点与目的链区块链节点之间通信，每条跨链链路根据去中心化策略可配置多条通信连接。</base:Paragraphs>
+      <base:Paragraphs id="p0048" num="n0043">跨链代理节点crossagent负责跨链注册、跨链身份管理、跨链验证、跨链路由、跨链标准化通信、跨链去中心化策略管理等。</base:Paragraphs>
+      <base:Paragraphs id="p0049" num="n0044">跨链管理合约部署在区块链节点上，主要用于区块链节点与跨链代理节点的跨链通信、跨链交易验证、去中心化策略验证、提交跨链交易到目的链业务合约、接收跨链交易的业务合约执行结果、将执行结果发送到跨链代理节点等。</base:Paragraphs>
+      <base:Paragraphs id="p0050" num="n0045">跨链管理合约负责共识验证crossagent与区块链节点之间通信的去中心化策略；在跨链注册时包含去中心化策略，当发送跨链交易时，需要满足去中心化策略才能进行下一步交易，例如来源链向crossagent注册需要满足两个节点及以上的跨链交易背书才能满足去中心化策略。crossagent之间通信也需要满足去中心化策略，crossagent到目的链的通信也需要满足去中心化策略，根据注册时的策略，crossagent会验证对端链crossagent发送的消息的个数，例如当去中心化策略为满足两个及以上crossagent的消息，那么需要收到对端链crossagent两个及以上背书的相同摘要的消息才认为这个交易是有效的。这样整个跨链通信链路：crossagent之间，crossagent与区块链节点之间均实现了去中心化策略，防止了单点作恶的可能，提高了跨链的高可用性及高安全性。</base:Paragraphs>
+      <base:Paragraphs id="p0051" num="n0046">本发明跨链流程如图2所示，包括以下步骤：</base:Paragraphs>
+      <base:Paragraphs id="p0052" num="n0047">1、源链发起跨链注册，根据证书管理模块相互颁发的跨链证书进行签名，把身份信息、验证规则、去中心化策略等信息向目的链进行注册，源链的crossagent进行验证签名，并签名发送到目的链的crossagent验证签名并签名，并根据跨链证书进行验证，验证通过后进行跨链授权，并将注册信息进行上链存储及crossagent本地数据库存储。</base:Paragraphs>
+      <base:Paragraphs id="p0053" num="n0048">2、目的链向源链进行注册，流程与正向流程一致。</base:Paragraphs>
+      <base:Paragraphs id="p0054" num="n0049">3、发送跨链交易，通过crossagent进行通信消息标准化处理，并进行签名发送到对端crossagent。</base:Paragraphs>
+      <base:Paragraphs id="p0055" num="n0050">4、目的链crossagent接收跨链交易，进行签名验证、身份验证、权限验证、去中心化策略验证即收到多个对端crossagent发过来的跨链交易，如果在门限时间内满足策略则验证通过，否则验证失败，验证通过后将标准消息转换为目的链消息格式，向目的链提交跨链交易。具体的去中心化策略验证流程包括：crossagent之间的验证、crossagent与区块链节点之间的验证。</base:Paragraphs>
+      <base:Paragraphs id="p0056" num="n0051">crossagent之间的验证流程如图3所示，包括：目的链crossagent收集对端链发来的跨链交易；验证跨链消息摘要与签名信息，若消息摘要相同并且验签通过则认为收到不同crossagent背书的消息；在限定时间T内，针对同一跨链交易，将不同crossagent背书消息与去中心化策略进行验证，若验证通过则提交到目的链的跨链管理合约上，否则判断是否超时，若超时则返回超时信息，否则目的链crossagent继续收集对端链发来的跨链交易。</base:Paragraphs>
+      <base:Paragraphs id="p0057" num="n0052">crossagent与区块链节点之间的验证流程如图4所示，包括：跨链管理合约接收crossagent发来的跨链交易；验证跨链消息摘要与签名信息，若消息摘要相同并且验签通过则认为收到不同crossagent背书的消息；在限定时间T内，针对同一跨链交易，将不同crossagent背书消息与去中心化策略进行验证，若验证通过则进行共识执行，否则判断是否超时，若超时则返回超时信息，否则跨链管理合约继续接收crossagent发来的跨链交易。</base:Paragraphs>
+      <base:Paragraphs id="p0058" num="n0053">5、目的链跨链管理合约处理跨链交易，验证身份及交易的去中心化策略，如果验证通过则提交跨链交易到目的链业务合约。</base:Paragraphs>
+      <base:Paragraphs id="p0059" num="n0054">6、目的链将业务合约执行的跨链交易结果返回，返回流程与正向流程一致。</base:Paragraphs>
+      <base:Paragraphs id="p0060" num="n0055">以下详细介绍跨链的各部分实现流程。</base:Paragraphs>
+      <base:Paragraphs id="p0061" num="n0056">(1)证书颁发</base:Paragraphs>
+      <base:Paragraphs id="p0062" num="n0057">证书管理模块给跨链代理节点颁发跨链根证书和公私钥对。具体颁发规则为：假设链A与链B之间相互通信，那么A链根证书会采用B链公钥给B链颁发跨链证书；B链根证书用A链公钥给A链颁发跨链证书，并把证书及公私钥对部署在跨链代理节点crossagent上。那么B链可以用根证书去验证A链发送过来的消息的跨链证书，同样A链可以用根证书去验证B链发送过来的消息的跨链证书；同时也会对消息摘要签名进行验证，进而达到身份验证以及保证通信安全。</base:Paragraphs>
+      <base:Paragraphs id="p0063" num="n0058">(2)跨链注册</base:Paragraphs>
+      <base:Paragraphs id="p0064" num="n0059">源链会向目的链进行跨链注册，主要包括源链的身份信息、验证规则、去中心化策略等，注册成功后，目的链的验证引擎会生成对该链的验证规则，后续按照这个验证规则对跨链交易的合法性进行验证、对去中心化策略进行验证等。针对不同架构的区块链，会生成不同的验证规则，根据不同注册信息生成不同去中心化策略。把源链的身份信息和注册信息进行持久化存储。目的链crossagent的验证引擎会对源链的注册信息进行核对，根据生成的验证规则去验证交易，根据去中心化策略去保证交易的正确性。</base:Paragraphs>
+      <base:Paragraphs id="p0065" num="n0060">(3)身份及权限管理</base:Paragraphs>
+      <base:Paragraphs id="p0066" num="n0061">权限管控模块提供了证书签发、多链注册、权限管控等功能。具体来讲，当源链和目的链需要互通通信时，需要互相签发跨链证书，然后根据权限管理要求，例如链的访问权限，智能合约访问权限，合约方法权限，相关字段访问权限，以及数据读写权限等进行注册，然后对方会进行审核，如果注册成功，则在通信时会对通信信息进行权限验证，对于其他链进行访问需要其他链的授权验证，满足对数据的隔离与保护。</base:Paragraphs>
+      <base:Paragraphs id="p0067" num="n0062">(4)跨链标准化通信</base:Paragraphs>
+      <base:Paragraphs id="p0068" num="n0063">跨链通信标准总线主要包括跨链通信接口和跨链标准通信协议，其中通信协议为CSCP(crosschain standard communication protocol)，主要用于区块链跨链间网络通信，将不同区块链平台消息进行标准化，可以实现异构平台区块链底层的通信。总线上定义了标准接口，用于区块链之间的信息交互，主要有：</base:Paragraphs>
+      <base:Paragraphs id="p0069" num="n0064">交易转换接口，能够将交易消息与总线标准协议CSCP相互转换，在通信过程中可以利用总线上统一标准接口；</base:Paragraphs>
+      <base:Paragraphs id="p0070" num="n0065">交易发送接口，用于源链向目的链发送信息；</base:Paragraphs>
+      <base:Paragraphs id="p0071" num="n0066">交易接收接口，用于目的链接收跨链交易；</base:Paragraphs>
+      <base:Paragraphs id="p0072" num="n0067">交易验证接口，用于验证交易信息；</base:Paragraphs>
+      <base:Paragraphs id="p0073" num="n0068">注册链接口，用于身份注册；</base:Paragraphs>
+      <base:Paragraphs id="p0074" num="n0069">更新链接口，用于更新链身份信息；</base:Paragraphs>
+      <base:Paragraphs id="p0075" num="n0070">注销链接口，用于注销链身份信息。</base:Paragraphs>
+      <base:Paragraphs id="p0076" num="n0071">(5)去中心化策略管理</base:Paragraphs>
+      <base:Paragraphs id="p0077" num="n0072">(a)跨链注册：获取两个链路的去中心化策略，并在跨链管理合约账本与crossagent中进行持久化存储。</base:Paragraphs>
+      <base:Paragraphs id="p0078" num="n0073">去中心化策略主要包括：ANY、MAJORITY、ALL、NOUTOF；</base:Paragraphs>
+      <base:Paragraphs id="p0079" num="n0074">ANY：收到任何一个crossagent发送的消息即可验证通过；</base:Paragraphs>
+      <base:Paragraphs id="p0080" num="n0075">MAJORITY：收到大多数crossagent发送的消息才能验证通过；</base:Paragraphs>
+      <base:Paragraphs id="p0081" num="n0076">ALL：收到所有crossagent发送的消息才能通过验证；</base:Paragraphs>
+      <base:Paragraphs id="p0082" num="n0077">NOUTOF：收到指定的N个crossagent发送的消息才能通过验证。</base:Paragraphs>
+      <base:Paragraphs id="p0083" num="n0078">去中心化策略包括整个跨链链路：区块链节点到crossagent、crossagent到crossagent。区块链节点到crossagnet之间的策略，通过跨链管理合约获取注册消息中的节点到crossagent策略并记录到账本；crossagent与crossagent之间的策略通过注册消息获取，并记录在crossagent中。跨链注册流程如图5所示。</base:Paragraphs>
+      <base:Paragraphs id="p0084" num="n0079">当链发起跨链交易时，需要构建链的注册信息，其结构如下表所示，该信息用于源链向目的链进行跨链注册时的信息结构：</base:Paragraphs>
+      <base:Paragraphs id="p0085" num="n0080">
+        <base:TableDetails num="0002">
+          <base:Table>
+            <base:Title />
+            <tbl:tgroup cols="2">
+              <tbl:colspec colname="c001" colwidth="33%" />
+              <tbl:colspec colname="c002" colwidth="66%" />
+              <tbl:tbody>
+                <tbl:row>
+                  <tbl:entry morerows="1">字段</tbl:entry>
+                  <tbl:entry morerows="1">含义</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Version</tbl:entry>
+                  <tbl:entry morerows="1">链注册信息版本</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">ChainID</tbl:entry>
+                  <tbl:entry morerows="1">源链的ID</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">P2CPolicy</tbl:entry>
+                  <tbl:entry morerows="1">区块链节点和crossagent之间去中心化策略</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">C2CPolicy</tbl:entry>
+                  <tbl:entry morerows="1">Crossagent与crossagent之间去中心化策略</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Validators</tbl:entry>
+                  <tbl:entry morerows="1">验证规则信息</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">ConsensuType</tbl:entry>
+                  <tbl:entry morerows="1">源链的共识类型</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Status</tbl:entry>
+                  <tbl:entry morerows="1">状态信息</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">ChainType</tbl:entry>
+                  <tbl:entry morerows="1">源链的类型</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">PublicKey</tbl:entry>
+                  <tbl:entry morerows="1">公钥信息</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Description</tbl:entry>
+                  <tbl:entry morerows="1">描述信息</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Extra</tbl:entry>
+                  <tbl:entry morerows="1">自定义扩展字段</tbl:entry>
+                </tbl:row>
+              </tbl:tbody>
+            </tbl:tgroup>
+          </base:Table>
+        </base:TableDetails>
+      </base:Paragraphs>
+      <base:Paragraphs id="p0086" num="n0081">(b)跨链交易</base:Paragraphs>
+      <base:Paragraphs id="p0087" num="n0082">当进行跨链交易时，crossagent首先收到对端crossagent发来的跨链交易，目的链的crossagnet根据注册时的去中心化策略验证跨链交易个数，如果满足策略则将跨链交易提交到目的链的跨链管理合约上；经过crossagent验证的跨链交易会发送到区块链节点上，此时跨链管理合约会收到crossagent发来的跨链交易，跨链管理合约根据注册的去中心化策略进行验证，当收到足够多的crossagen背书的具有相同摘要的跨链交易则通过验证，进行链内的跨链交易共识，共识完成后执行写入账本。目的链执行跨链交易，并将结果返回，通过跨链管理合约发送到crossagent然后发送到源链的crossagent，其去中心化策略与正向流程一致。跨链交易流程如图6所示。</base:Paragraphs>
+      <base:Paragraphs id="p0088" num="n0083">(c)策略升级</base:Paragraphs>
+      <base:Paragraphs id="p0089" num="n0084">支持去中心化策略的升级，升级流程为满足当前的去中心化策略的前提下发送去中心化策略升级交易，然后升级更新去中心化策略。例如要升级crossagent之间的策略，则策略升级交易发送到对端的crossagent上，当满足crossagent之间的去中心化策略时，则更新crossagent的去中心化策略，并进行持久化存储。策略升级流程如图7所示。</base:Paragraphs>
+      <base:Paragraphs id="p0090" num="n0085">(6)跨链管理合约设计</base:Paragraphs>
+      <base:Paragraphs id="p0091" num="n0086">主要用于区块链节点与跨链代理节点的跨链通信、跨链交易验证、去中心化策略验证、提交跨链交易到目的链业务合约、接收跨链交易的业务合约执行结果、将执行结果发送到跨链代理节点等。跨链管理合约设计流程如图8所示。</base:Paragraphs>
+      <base:Paragraphs id="p0092" num="n0087">跨链管理合约接口设计主要包括：</base:Paragraphs>
+      <base:Paragraphs id="p0093" num="n0088">Init：用于跨链管理合约初始化；</base:Paragraphs>
+      <base:Paragraphs id="p0094" num="n0089">recvCrossTx：用于接收跨链交易；</base:Paragraphs>
+      <base:Paragraphs id="p0095" num="n0090">verifyCrossTx：用于验证跨链交易；</base:Paragraphs>
+      <base:Paragraphs id="p0096" num="n0091">CommitCrossTx：用于提交跨链交易到目的链；</base:Paragraphs>
+      <base:Paragraphs id="p0097" num="n0092">RecvCrossTxResponse：用于接收跨链交易执行结果；</base:Paragraphs>
+      <base:Paragraphs id="p0098" num="n0093">SendCrossTxResponse：用于发送跨链交易回执；</base:Paragraphs>
+      <base:Paragraphs id="p0099" num="n0094">Query：用于查询跨链交易。</base:Paragraphs>
+      <base:Paragraphs id="p0100" num="n0095">以上所述仅为本说明书一个或多个实施例的较佳实施例而已，并不用以限制本说明书一个或多个实施例，凡在本说明书一个或多个实施例的精神和原则之内，所做的任何修改、等同替换、改进等，均应包含在本说明书一个或多个实施例保护的范围之内。</base:Paragraphs>
+    </business:InventionMode>
+  </business:Description>
+  <business:Drawings lang="zh" sourceDB="national office">
+    <base:Figure id="f0001" num="0001" figureLabels="图1">
+      <base:Image id="if0001" he="430" wi="1000" file="HDA0003232473180000011.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0002" num="0002" figureLabels="图2">
+      <base:Image id="if0002" he="1000" wi="705" file="HDA0003232473180000021.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0003" num="0003" figureLabels="图3">
+      <base:Image id="if0003" he="1000" wi="713" file="HDA0003232473180000031.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0004" num="0004" figureLabels="图4">
+      <base:Image id="if0004" he="1000" wi="731" file="HDA0003232473180000041.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0005" num="0005" figureLabels="图5">
+      <base:Image id="if0005" he="790" wi="1000" file="HDA0003232473180000051.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0006" num="0006" figureLabels="图6">
+      <base:Image id="if0006" he="942" wi="1000" file="HDA0003232473180000061.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0007" num="0007" figureLabels="图7">
+      <base:Image id="if0007" he="1000" wi="328" file="HDA0003232473180000071.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0008" num="0008" figureLabels="图8">
+      <base:Image id="if0008" he="1000" wi="407" file="HDA0003232473180000081.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+  </business:Drawings>
+  <business:Claims lang="zh" dataFormat="original" sourceDB="national office" creator="03">
+    <business:Claim id="cl0001" num="0001">
+      <business:ClaimText>1.一种基于合约管理的跨链去中心化方法，其特征在于，该方法包括：</business:ClaimText>
+      <business:ClaimText>区块链跨链通信包括三个链路：来源链节点与代理节点之间通信、来源链代理节点与目的链代理节点之间通信、代理节点与目的链节点之间通信，每条跨链链路根据去中心化策略可配置多条通信连接；</business:ClaimText>
+      <business:ClaimText>跨链代理节点负责跨链注册、跨链身份管理、跨链验证、跨链路由、跨链标准化通信、跨链去中心化策略管理；</business:ClaimText>
+      <business:ClaimText>跨链管理合约部署在区块链节点上，用于区块链节点与代理节点的跨链通信、跨链交易验证、去中心化策略验证、提交跨链交易到目的链业务合约、接收跨链交易的业务合约执行结果、将执行结果发送到代理节点；</business:ClaimText>
+      <business:ClaimText>跨链管理合约负责共识验证代理节点与区块链节点之间通信的去中心化策略；在跨链注册时包含去中心化策略，当发送跨链交易时，需要满足去中心化策略才能进行下一步交易；代理节点之间，以及代理节点与区块链节点之间通信均需要满足去中心化策略。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0002" num="0002">
+      <business:ClaimText>2.根据权利要求1所述的方法，其特征在于，跨链流程包括以下步骤：</business:ClaimText>
+      <business:ClaimText>(1)源链发起跨链注册：根据对端签发的跨链证书进行签名，把身份信息、验证规则、去中心化策略向目的链进行注册，源链代理节点进行验证签名，并签名发送到目的链代理节点验证签名并签名，根据跨链证书进行验证，验证通过后进行跨链授权，并将注册信息进行上链存储及代理节点本地存储；</business:ClaimText>
+      <business:ClaimText>(2)目的链向源链进行注册；</business:ClaimText>
+      <business:ClaimText>(3)源链发送跨链交易，通过代理节点进行通信消息标准化处理，并进行签名发送到对端代理节点；</business:ClaimText>
+      <business:ClaimText>(4)目的链代理节点接收跨链交易，进行签名验证、身份验证、权限验证、去中心化策略验证，验证通过后将标准消息转换为目的链消息格式，向目的链提交跨链交易；</business:ClaimText>
+      <business:ClaimText>(5)目的链跨链管理合约处理跨链交易，验证身份及交易的去中心化策略，验证通过后提交跨链交易到目的链业务合约；</business:ClaimText>
+      <business:ClaimText>(6)目的链返回业务合约执行的跨链交易结果。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0003" num="0003">
+      <business:ClaimText>3.根据权利要求1所述的方法，其特征在于，所述去中心化策略包括：ANY、MAJORITY、ALL、NOUTOF；</business:ClaimText>
+      <business:ClaimText>ANY：收到任何一个代理节点发送的消息即可验证通过；</business:ClaimText>
+      <business:ClaimText>MAJORITY：收到大多数代理节点发送的消息才能验证通过；</business:ClaimText>
+      <business:ClaimText>ALL：收到所有代理节点发送的消息才能通过验证；</business:ClaimText>
+      <business:ClaimText>NOUTOF：收到指定的N个代理节点发送的消息才能通过验证。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0004" num="0004">
+      <business:ClaimText>4.根据权利要求1所述的方法，其特征在于，源链向目的链进行跨链注册时的注册信息结构如下：</business:ClaimText>
+      <business:ClaimText>
+        <base:TableDetails num="0001">
+          <base:Table>
+            <base:Title />
+            <tbl:tgroup cols="2">
+              <tbl:colspec colname="c001" colwidth="34%" />
+              <tbl:colspec colname="c002" colwidth="65%" />
+              <tbl:tbody>
+                <tbl:row>
+                  <tbl:entry morerows="1">字段</tbl:entry>
+                  <tbl:entry morerows="1">含义</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Version</tbl:entry>
+                  <tbl:entry morerows="1">链注册信息版本</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">ChainID</tbl:entry>
+                  <tbl:entry morerows="1">源链的ID</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">P2CPolicy</tbl:entry>
+                  <tbl:entry morerows="1">区块链节点和代理节点之间去中心化策略</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">C2CPolicy</tbl:entry>
+                  <tbl:entry morerows="1">代理节点与代理节点之间去中心化策略</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Validators</tbl:entry>
+                  <tbl:entry morerows="1">验证规则信息</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">ConsensuType</tbl:entry>
+                  <tbl:entry morerows="1">源链的共识类型</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Status</tbl:entry>
+                  <tbl:entry morerows="1">状态信息</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">ChainType</tbl:entry>
+                  <tbl:entry morerows="1">源链的类型</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">PublicKey</tbl:entry>
+                  <tbl:entry morerows="1">公钥信息</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Description</tbl:entry>
+                  <tbl:entry morerows="1">描述信息</tbl:entry>
+                </tbl:row>
+                <tbl:row>
+                  <tbl:entry morerows="1">Extra</tbl:entry>
+                  <tbl:entry morerows="1">自定义扩展字段</tbl:entry>
+                </tbl:row>
+              </tbl:tbody>
+            </tbl:tgroup>
+          </base:Table>
+        </base:TableDetails>
+      </business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0005" num="0005">
+      <business:ClaimText>5.根据权利要求1所述的方法，其特征在于，在跨链注册时，获取两个链路的去中心化策略，并在跨链管理合约账本与代理节点中进行持久化存储；区块链节点到代理节点之间的策略，通过跨链管理合约获取注册消息中的区块链节点和代理节点之间去中心化策略并记录到区块链账本；代理节点与代理节点之间的策略通过注册消息获取，并记录在代理节点中。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0006" num="0006">
+      <business:ClaimText>6.根据权利要求1所述的方法，其特征在于，源链向目的链进行跨链注册，主要包括源链的身份信息、验证规则、去中心化策略，注册成功后，目的链的验证引擎生成对该链的验证规则，后续按照这个验证规则对跨链交易的合法性进行验证、对去中心化策略进行验证；针对不同架构的区块链生成不同的验证规则，根据不同注册信息生成不同的去中心化策略；把源链的身份信息和注册信息进行持久化存储；目的链代理节点的验证引擎对源链的注册信息进行核对，根据生成的验证规则验证交易，根据去中心化策略保证交易的正确性。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0007" num="0007">
+      <business:ClaimText>7.根据权利要求1所述的方法，其特征在于，当进行跨链交易时，代理节点首先收到对端代理节点发来的跨链交易，目的链代理节点根据注册时的去中心化策略进行验证，如果满足策略则将跨链交易提交到目的链跨链管理合约上，跨链管理合约根据注册时的去中心化策略进行验证，如果满足策略则通过验证，进行链内的跨链交易共识，共识完成后执行写入账本；目的链执行跨链交易，并将结果返回，通过跨链管理合约发送到目的链代理节点然后发送到源链代理节点。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0008" num="0008">
+      <business:ClaimText>8.根据权利要求1所述的方法，其特征在于，所述代理节点之间的去中心化策略验证具体为：目的链代理节点收集对端链发来的跨链交易；验证跨链消息摘要与签名信息，若消息摘要相同并且验签通过则认为收到不同代理节点背书的消息；在限定时间T内，针对同一跨链交易，将不同代理节点背书消息与去中心化策略进行验证，若验证通过则提交到目的链的跨链管理合约上。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0009" num="0009">
+      <business:ClaimText>9.根据权利要求1所述的方法，其特征在于，所述代理节点与区块链节点之间的去中心化策略验证具体为：跨链管理合约接收代理节点发来的跨链交易；验证跨链消息摘要与签名信息，若消息摘要相同并且验签通过则认为收到不同代理节点背书的消息；在限定时间T内，针对同一跨链交易，将不同代理节点背书消息与去中心化策略进行验证，若验证通过则进行共识执行。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0010" num="0010">
+      <business:ClaimText>10.根据权利要求1所述的方法，其特征在于，该方法支持去中心化策略升级，在满足当前去中心化策略的前提下发送去中心化策略升级交易，然后升级更新去中心化策略，并进行持久化存储。</business:ClaimText>
+    </business:Claim>
+  </business:Claims>
+</business:PatentDocumentAndRelated>

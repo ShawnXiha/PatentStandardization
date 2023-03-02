@@ -2,6 +2,7 @@ import csv
 
 from lxml import etree
 
+
 def parse_value_mapping(tsv_path):
     with open(tsv_path, newline='', encoding='utf-8') as csvfile:
         value_mapping_reader = csv.reader(csvfile, delimiter='\t')
@@ -10,6 +11,7 @@ def parse_value_mapping(tsv_path):
             st36_value, st96_value = row[2:]
             value_mapping[st36_value] = st96_value
     return value_mapping
+
 
 def parse_tsv_mapping(tsv_path):
     element_mapping = {}
@@ -37,36 +39,43 @@ def generate_xslt(element_mapping, attribute_mapping, value_mapping):
     # Define the namespaces used in the XSLT document
     namespaces = {
         None: XSL_NAMESPACE,
+        
         'xsl': 'http://www.w3.org/1999/XSL/Transform',
-        'com': 'http://www.wipo.int/standards/XMLSchema/CommonSchema',
-        'pat': 'http://www.wipo.int/standards/XMLSchema/Patent',
+        'com': 'http://www.wipo.int/standards/XMLSchema/ST96/Common',
+        'pat': "http://www.wipo.int/standards/XMLSchema/ST96/Patent"
     }
 
     # Create the XSLT document
     stylesheet = etree.Element('{http://www.w3.org/1999/XSL/Transform}stylesheet', version='3.0', nsmap=namespaces)
 
     # Add the identity transform
-    identity_transform = etree.SubElement(stylesheet, '{http://www.w3.org/1999/XSL/Transform}template', match='@* | node()')
+    identity_transform = etree.SubElement(stylesheet, '{http://www.w3.org/1999/XSL/Transform}template',
+                                          match='@* | node()')
     identity_transform_copy = etree.SubElement(identity_transform, '{http://www.w3.org/1999/XSL/Transform}copy')
-    identity_transform_copy_apply = etree.SubElement(identity_transform_copy, '{http://www.w3.org/1999/XSL/Transform}apply-templates')
+    identity_transform_copy_apply = etree.SubElement(identity_transform_copy,
+                                                     '{http://www.w3.org/1999/XSL/Transform}apply-templates')
     identity_transform_copy_apply.set('select', '@* | node()')
 
     # Add templates for element mapping
     for st36_element, st96_element in element_mapping.items():
-        element_template = etree.SubElement(stylesheet, '{http://www.w3.org/1999/XSL/Transform}template', match=st36_element)
-        element_apply_templates = etree.SubElement(element_template, '{http://www.w3.org/1999/XSL/Transform}apply-templates')
+        element_template = etree.SubElement(stylesheet, '{http://www.w3.org/1999/XSL/Transform}template',
+                                            match=st36_element)
+        element_apply_templates = etree.SubElement(element_template,
+                                                   '{http://www.w3.org/1999/XSL/Transform}apply-templates')
         element_apply_templates.set('select', st96_element)
 
     # Add templates for attribute mapping
     for st36_attribute, st96_attribute in attribute_mapping.items():
-        attribute_template = etree.SubElement(stylesheet, '{http://www.w3.org/1999/XSL/Transform}template', match=f'*[@{st36_attribute}]')
+        attribute_template = etree.SubElement(stylesheet, '{http://www.w3.org/1999/XSL/Transform}template',
+                                              match=f'*[@{st36_attribute}]')
         attribute_set_value = etree.SubElement(attribute_template, '{http://www.w3.org/1999/XSL/Transform}attribute')
         attribute_set_value.set('name', st96_attribute)
         attribute_set_value.set('select', f'@{st36_attribute}')
 
     # Add templates for value mapping
     for st36_value, st96_value in value_mapping.items():
-        value_template = etree.SubElement(stylesheet, '{http://www.w3.org/1999/XSL/Transform}template', match=f'*[text()="{st36_value}"]')
+        value_template = etree.SubElement(stylesheet, '{http://www.w3.org/1999/XSL/Transform}template',
+                                          match=f'*[text()="{st36_value}"]')
         value_set_value = etree.SubElement(value_template, '{http://www.w3.org/1999/XSL/Transform}element')
         value_set_value.set('name', st96_value)
         value_set_value.text = st96_value
@@ -74,10 +83,11 @@ def generate_xslt(element_mapping, attribute_mapping, value_mapping):
     # Return the XSLT document
     return stylesheet
 
+
 def generate_xslt_from_tsv_to_file(element_tsv, value_tsv, xslt_file):
     element_mapping, attribute_mapping = parse_tsv_mapping(element_tsv)
     value_mapping = parse_value_mapping(value_tsv)
-    stylesheet =  generate_xslt(element_mapping, attribute_mapping, value_mapping)
+    stylesheet = generate_xslt(element_mapping, attribute_mapping, value_mapping)
     etree.ElementTree(stylesheet).write(xslt_file, pretty_print=True, encoding='utf-8')
 
 

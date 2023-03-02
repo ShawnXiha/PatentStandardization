@@ -1,0 +1,6 @@
+<!ELEMENT root (child1, child2)>
+<!ELEMENT child1 (#PCDATA)>
+<!ATTLIST child1 attr1 CDATA #IMPLIED>
+<!ELEMENT child2 (grandchild)>
+<!ELEMENT grandchild (#PCDATA)>
+<!ATTLIST grandchild attr2 CDATA #IMPLIED>

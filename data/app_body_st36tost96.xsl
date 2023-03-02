@@ -1,4 +1,7 @@
-<stylesheet xmlns="http://www.w3.org/1999/XSL/Transform" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:com="http://www.wipo.int/standards/XMLSchema/CommonSchema" xmlns:pat="http://www.wipo.int/standards/XMLSchema/Patent" version="3.0">
+<stylesheet xmlns="http://www.w3.org/1999/XSL/Transform"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+            xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common"
+            xmlns:pat="http://www.wipo.int/standards/XMLSchema/ST96/Patent" version="3.0">
   <template match="@* | node()">
     <copy>
       <apply-templates select="@* | node()"/>

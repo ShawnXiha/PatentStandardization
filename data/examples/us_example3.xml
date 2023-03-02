@@ -1,0 +1,455 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<us-patent-application lang="EN" dtd-version="v4.4 2014-04-03" file="US20210045410A1-20210218.XML" status="PRODUCTION" id="us-patent-application" country="US" date-produced="20210203" date-publ="20210218">
+<us-bibliographic-data-application lang="EN" country="US">
+<publication-reference>
+<document-id>
+<country>US</country>
+<doc-number>20210045410</doc-number>
+<kind>A1</kind>
+<date>20210218</date>
+</document-id>
+</publication-reference>
+<application-reference appl-type="utility">
+<document-id>
+<country>US</country>
+<doc-number>16991488</doc-number>
+<date>20200812</date>
+</document-id>
+</application-reference>
+<us-application-series-code>16</us-application-series-code>
+<classifications-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>A</section>
+<class>23</class>
+<subclass>J</subclass>
+<main-group>3</main-group>
+<subgroup>22</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>C</section>
+<class>12</class>
+<subclass>N</subclass>
+<main-group>1</main-group>
+<subgroup>14</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>A</section>
+<class>23</class>
+<subclass>L</subclass>
+<main-group>31</main-group>
+<subgroup>00</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>A</section>
+<class>23</class>
+<subclass>L</subclass>
+<main-group>5</main-group>
+<subgroup>42</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>A</section>
+<class>23</class>
+<subclass>L</subclass>
+<main-group>3</main-group>
+<subgroup>00</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+</classifications-ipcr>
+<classifications-cpc>
+<main-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>A</section>
+<class>23</class>
+<subclass>J</subclass>
+<main-group>3</main-group>
+<subgroup>227</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+</main-cpc>
+<further-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>C</section>
+<class>12</class>
+<subclass>N</subclass>
+<main-group>1</main-group>
+<subgroup>14</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>A</section>
+<class>23</class>
+<subclass>V</subclass>
+<main-group>2002</main-group>
+<subgroup>00</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>A</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20160801</date></cpc-version-indicator>
+<section>A</section>
+<class>23</class>
+<subclass>L</subclass>
+<main-group>5</main-group>
+<subgroup>42</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>A</section>
+<class>23</class>
+<subclass>L</subclass>
+<main-group>3</main-group>
+<subgroup>00</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20160801</date></cpc-version-indicator>
+<section>A</section>
+<class>23</class>
+<subclass>L</subclass>
+<main-group>31</main-group>
+<subgroup>00</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+</further-cpc>
+</classifications-cpc>
+<invention-title id="d2e43">METHODS OF BINDING TEXTURED SUBSTRATES USING MYCELIUM-PRODUCING FUNGI AND FOOD PRODUCTS FORMED THEREFROM</invention-title>
+<us-related-documents>
+<us-provisional-application>
+<document-id>
+<country>US</country>
+<doc-number>62885392</doc-number>
+<date>20190812</date>
+</document-id>
+</us-provisional-application>
+</us-related-documents>
+<us-parties>
+<us-applicants>
+<us-applicant sequence="00" app-type="applicant" designation="us-only" applicant-authority-category="assignee">
+<addressbook>
+<orgname>TERRAMINO INC.</orgname>
+<address>
+<city>Berkeley</city>
+<state>CA</state>
+<country>US</country>
+</address>
+</addressbook>
+<residence>
+<country>US</country>
+</residence>
+</us-applicant>
+</us-applicants>
+<inventors>
+<inventor sequence="00" designation="us-only">
+<addressbook>
+<last-name>Le</last-name>
+<first-name>Kimberlie</first-name>
+<address>
+<city>Berkeley</city>
+<state>CA</state>
+<country>US</country>
+</address>
+</addressbook>
+</inventor>
+<inventor sequence="01" designation="us-only">
+<addressbook>
+<last-name>Nixon</last-name>
+<first-name>Joshua</first-name>
+<address>
+<city>Berkeley</city>
+<state>CA</state>
+<country>US</country>
+</address>
+</addressbook>
+</inventor>
+<inventor sequence="02" designation="us-only">
+<addressbook>
+<last-name>Yang</last-name>
+<first-name>Marisa</first-name>
+<address>
+<city>Berkeley</city>
+<state>CA</state>
+<country>US</country>
+</address>
+</addressbook>
+</inventor>
+<inventor sequence="03" designation="us-only">
+<addressbook>
+<last-name>Frelka</last-name>
+<first-name>John</first-name>
+<address>
+<city>Berkeley</city>
+<state>CA</state>
+<country>US</country>
+</address>
+</addressbook>
+</inventor>
+</inventors>
+</us-parties>
+</us-bibliographic-data-application>
+<abstract id="abstract">
+<p id="p-0001" num="0000">Described herein are various embodiments of methods for binding together textured substrates using mycelium-producing fungi. The method can generally include providing a textured substrate, such as a textured protein substrate, that may or may not be subjected to various pre-processing steps used to help promote mycelium growth inside, outside or inside and outside of the textured substrate, inoculating the textured substrate with mycelium-producing fungi, and growing mycelium inside, outside, or inside and outside of the textured substrate to bind the textured substrate. The bound textured substrate can be used as a high protein food, such as meat substitutes, meat analogues, or seafood analogues. In some embodiments, the mycelium-producing fungi is used to bind together multiple textured substrates to form larger composite food products.</p>
+</abstract>
+<drawings id="DRAWINGS">
+<figure id="Fig-EMI-D00000" num="00000">
+<img id="EMI-D00000" he="82.38mm" wi="158.75mm" file="US20210045410A1-20210218-D00000.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00001" num="00001">
+<img id="EMI-D00001" he="145.97mm" wi="87.63mm" file="US20210045410A1-20210218-D00001.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00002" num="00002">
+<img id="EMI-D00002" he="160.02mm" wi="88.22mm" file="US20210045410A1-20210218-D00002.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00003" num="00003">
+<img id="EMI-D00003" he="145.97mm" wi="87.63mm" file="US20210045410A1-20210218-D00003.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00004" num="00004">
+<img id="EMI-D00004" he="160.02mm" wi="88.22mm" file="US20210045410A1-20210218-D00004.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00005" num="00005">
+<img id="EMI-D00005" he="201.25mm" wi="88.39mm" file="US20210045410A1-20210218-D00005.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00006" num="00006">
+<img id="EMI-D00006" he="117.01mm" wi="168.91mm" file="US20210045410A1-20210218-D00006.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+</drawings>
+<description id="description">
+<cross-reference>
+<heading id="h-0001" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+<p id="p-0002" num="0001">The present application claims priority under 35 U.S.C. &#xa7; 119(e) to U.S. Provisional Patent Application No. 62/864,946, filed Aug. 12, 2019, the entirety of which is hereby incorporated by reference.</p>
+</cross-reference>
+<summary-of-invention>
+<heading id="h-0002" level="1">TECHNICAL FIELD</heading>
+<p id="p-0003" num="0002">The present application relates to methods of binding textured substrates, such as textured protein substrates, using fungal mycelium growth. The bound textured substrates formed by the methods described herein can be used as a high protein food, such as meat substitutes, meat analogues, or seafood analogues.</p>
+<heading id="h-0003" level="1">BACKGROUND</heading>
+<p id="p-0004" num="0003">In the formation of meat and seafood alternatives, gums and/or gelling agents are often used to hold together the base component (e.g., protein component) of the food product. For example, some meat alternatives use potato and egg white protein as a gelling agent, while other meat alternatives use starches or gums as binding agents. Less protein-rich foods often use sugars as binding agents.</p>
+<p id="p-0005" num="0004">However, use of gums and/or gelling proteins in meat and seafood alternatives can present several disadvantages. For example, the use of gums and/or gelling proteins results in a food product including more ingredients, which can raise issues with consumers looking for limited-ingredient and/or minimally processed foods. The use of these additional ingredients can also complicate the manufacturing process, which thereby increases the cost of production. Additionally, gums and/or gelling agents provide minimally effective binding of base components. Furthermore, the gums and/or gelling agents generally don't add to the overall protein content of the food product, but will instead add less desirable carbohydrates.</p>
+<p id="p-0006" num="0005">Accordingly, a need exists for improved binding components and improved methods of manufacturing food products using the improved binding components.</p>
+<heading id="h-0004" level="1">SUMMARY</heading>
+<p id="p-0007" num="0006">Described herein are various embodiments of methods for binding together textured substrates using mycelium-producing fungi. The method can generally include providing a textured substrate, such as a textured protein substrate, that may or may not be subjected to various pre-processing steps used to help promote mycelium growth inside, outside or inside and outside of the textured substrate, inoculating the textured substrate with mycelium-producing fungi, and growing mycelium inside, outside, or inside and outside of the textured substrate to bind the textured substrate. The bound textured substrate can be used as a high protein food, such as meat substitutes, meat analogues, or seafood analogues. In some embodiments, the mycelium-producing fungi is used to bind together multiple textured substrates to form larger composite food products.</p>
+</summary-of-invention>
+<description-of-drawing>
+<description-of-drawings>
+<heading id="h-0005" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+<p id="p-0008" num="0007"><figref idref="DRAWINGS">FIG. 1A</figref> is a flow diagram illustrating a method for forming a bound textured substrate according to various embodiments described herein.</p>
+<p id="p-0009" num="0008"><figref idref="DRAWINGS">FIG. 1B</figref> is a flow diagram illustrating a method for forming a bound textured substrate according to various embodiments described herein.</p>
+<p id="p-0010" num="0009"><figref idref="DRAWINGS">FIG. 1C</figref> is a flow diagram illustrating a method for forming a bound textured substrate according to various embodiments described herein.</p>
+<p id="p-0011" num="0010"><figref idref="DRAWINGS">FIG. 1D</figref> is a flow diagram illustrating a method for forming a bound textured substrate according to various embodiments described herein.</p>
+<p id="p-0012" num="0011"><figref idref="DRAWINGS">FIG. 1E</figref> is a flow diagram illustrating a method for forming a bound textured substrate according to various embodiments described herein.</p>
+<p id="p-0013" num="0012"><figref idref="DRAWINGS">FIG. 2</figref> is a schematic illustration of a method of binding together two or more textures substrates according to various embodiments described herein.</p>
+</description-of-drawings>
+</description-of-drawing>
+<detailed-description>
+<heading id="h-0006" level="1">DETAILED DESCRIPTION</heading>
+<p id="p-0014" num="0013">With reference to <figref idref="DRAWINGS">FIG. 1</figref>, a method <b>100</b> for forming a bound textured substrate generally comprises a step <b>110</b> of providing a textured substrate, a step <b>120</b> of inoculating the textured substrate with mycelium-producing fungi, and a step <b>130</b> of growing mycelium within and/or around the textured substrate to bind the substrate. Generally speaking, the method <b>100</b> provides a means for taking a substrate, such as a protein substrate, that is textured at a local level, and binding the substrate through the growth of mycelium in and/or around the substrate to thereby create a matrix within and/or around the substrate. The matrix created in and/or around the substrate binds the substrate and creates texturization at a macro level. The manner in which the mycelium is grown in and/or around the substrate may be controlled to achieve desired end results with respect to, for example, texturization, stability, and dimensionality. The method <b>100</b> generally allows for the creation of food products that are high in protein and can serve as, for example, meat substitutes, while also providing a food product having improved binding, stability, texture, and a wider range of sizes and shapes.</p>
+<p id="p-0015" num="0014">In step <b>110</b>, a textured substrate is provided. Any textured substrate suitable for use in food products and which has a structure suitable for receiving mycelium growth can be used. In some embodiments, the textured substrate is a textured protein substrate. One non-limiting example of a suitable textured protein substrate is textured vegetable protein (TVP), while other non-limiting examples include plant-based textured substrates. TVP is formed using an extrusion process by which a pressurized molten protein mixture is extruded to cause rapid expansion into a fibrous, spongy matrix. As such, the TVP has a generally porous network into which mycelium can grow to form a matrix in and around the TVP to improve the overall binding of the TVP substrate. The extrusion process used to form the fibrous spongy matrix, TVP provides the texturing to the TVP substrate, and similar or other processing methods can be used to provide texture to other types of substrates. Generally speaking, the term textured as used herein when describing substrates generally means having a texture similar to the texture of TVP wherein texturing is obtained via processing, or similar texturing to TVP that may occur naturally in the substrate (such as in naturally fibrous material), or to texturing similar to TVP provided by the mycelium growth itself.</p>
+<p id="p-0016" num="0015">In some embodiments, the textured substrate is fungi-based. For example, the textured substrate can be a fungal biomass. The textured substrate may also be a processed fungal fermented composition. As used herein, the term &#x201c;fungal-fermented composition&#x201d; generally includes any food or beverage composition that uses fungus to ferment one or more ingredients of the food or beverage composition during the process of making the food or beverage composition. Reference to &#x201c;fungal-fermented composition&#x201d; includes both alcoholic and non-alcoholic compositions. Non-limiting examples of fungal-fermented beverages include, but are not limited to: Sake, Mirin, Sochu, Soju, Dansul, Jiuniang, Cheongju, Amazake, Awamori, Doburoku, Shaosing-chu, Takju, Yakju, Makgeolli, Samsu, Tapai, Tapuy, Thai rice wine, Ruhi, Pachwai, and Brem Bali. More generally, the fungal fermented beverage can be any alcoholic beverage produced by saccharifying a plant material with a filamentous fungus in which a byproduct containing said filamentous fungus is produced. Non-limiting examples of fungal-fermented foods include, but are not limited to, soy sauce, tempeh and miso. The fungal-fermented composition serving as the textured substrate may be in a finished product state (i.e., suitable for sale, distribution, human consumption, etc.), a pre-finished product state (i.e., where further processing steps are to be carried out prior to the composition being sold, distributed, consumed, etc.), or may be a byproduct formed during the production of another composition. For example, the fungal fermented composition can be obtained from sake kasu, either as whole sake kasu, sake kasu subjected to processing aimed at increasing the concentration of fungal material, or a fungal biomass separated from sake kasu. Processed or grown fungal protein biomass in the form of a substrate can also be used. Crushed or ground fungal material, such as crushed or ground mushrooms, can also be used as the substrate material.</p>
+<p id="p-0017" num="0016">The size and shape of the substrate provided in step <b>110</b> is generally not limited. In some embodiments, the substrate is in the form of blocks, flakes, chunks, nuggets, strips or the like. The size of the substrate provided in step <b>110</b> is generally increased via the mycelium growth step <b>130</b> discussed in greater detail below, either by forming a matrix within and/or around the base substrate, or by binding together two or more substrates into a composite material.</p>
+<p id="p-0018" num="0017">In step <b>120</b>, the textured substrate provided in step <b>110</b> is inoculated with a mycelium-producing fungi. The inoculation step <b>120</b> generally includes any manner of adding the mycelium-producing fungi to the textured substrate so that subsequent steps can be carried out to grow the mycelium and form a matrix within and/or around the substrate. Generally speaking, mycelium-producing fungi is added to the substrate through the addition of spores into and/or on the substrate, though mycelium can also be added directly into the substrate. In some embodiments, inoculation is carried out so that the mycelium-forming fungi is located throughout the substrate, both within the substrate (i.e., within pores and void spaces in the substrate) and on the surfaces of the substrate. Alternatively, selective inoculation can also be used such that spores are introduced only to specific areas or regions of the substrate.</p>
+<p id="p-0019" num="0018">Any manner of inoculating the substrate with spores of the mycelium-producing fungi can be used. In some embodiments, the spores are in a suspension and the suspension is introduced into and on the substrate to deliver spores to different portions of the substrate. As discussed in greater detail below with respect to pre-processing steps that may be carried out on the substrate, spores can be introduced into the substrate via a spear used to poke holes in the substrate. In such embodiments, the spear can be coated with spores so that as the spear penetrates the substrate, spores are introduced into the interior portion of the substrate. Sprinkling dry spores into or onto the substrate can also be used.</p>
+<p id="p-0020" num="0019">Any fungal material can be used in step <b>120</b> provided that the fungal material is capable of growing mycelium that will serve to bind the substrate. Exemplary though non-limiting examples of fungi that can be used include those from the <i>Rhizopus, Aspergillus</i>, or <i>Pleurotus </i>genus of fungi. Specific examples of species of fungi that can be used include, but are not limited to <i>Rhiszopus oligosporus, Rhizopus oryzae </i>and <i>Aspergillus oryzae</i>. Other filamentous microorganisms and fungi may also be used. In some embodiments, the fungi selected for binding the substrate is of a strain that consumes fat during fermentation (rather than carbohydrates) such that the growth process is simplified. For example, in such embodiments, it may be unnecessary to add carbohydrates to the substrate prior to mycelium growth, which makes the growth process simpler for a low carbohydrate food product.</p>
+<p id="p-0021" num="0020">Where the textured substrate is fungal biomass, processed fungal protein, or some other fungi-based substrate material, the fungal spores inoculated into the substrate may be either the same fungus as the substrate or different fungi. Regardless of the substrate material, the substrate can be inoculated with one fungus or multiple types of fungi.</p>
+<p id="p-0022" num="0021">In step <b>130</b>, mycelium is grown so as to form a matrix in and around the substrate to bind the substrate. More specifically, the mycelium grows in a network that binds to itself and the material of the substrate. Mycelium growth is generally carried out via fermentation of the fungal material inoculated into the substrate in step <b>120</b>. As such, step <b>130</b> is generally carried out under conditions that promote fermentation of the fungal material, such as providing an oxygen environment and/or providing carbohydrates and/or providing fats. For example, an oxygen-enriched environment can be provided to promote mycelium growth. In some embodiments, an oxygen-enriched environment helps to produce denser fungal mycelium growth, which may create a stronger bound material that has a higher protein concentration. As discussed in greater detail below, pre-processing of the substrate can be also carried out in order to improve conditions for fermentation and/or promote fermentation.</p>
+<p id="p-0023" num="0022">As the mycelium grows in step <b>130</b>, the size of the substrate increases via the matrix of mycelium formed in and around the substrate. Additionally, the growth of the mycelium in step <b>130</b> may generally carry forward the local texturization such that the enlarged substrate has similar texturization, but on a macro scale. As described in greater detail below, mycelium growth can also be carried out to bind together two or more substrates.</p>
+<p id="p-0024" num="0023">While <figref idref="DRAWINGS">FIG. 1A</figref> illustrate a general method <b>100</b> for binding substrates with mycelium, the method can be altered and improved via various additional processing steps carried out during the method shown in <figref idref="DRAWINGS">FIG. 1</figref>. For example, with respect to <figref idref="DRAWINGS">FIG. 1B</figref>, an additional substrate pre-processing step <b>115</b> can be carried out in order to condition the substrate in ways that may promote mycelium growth. Substrate pre-processing step <b>115</b> is generally not limited, and may include any manner of treating or otherwise conditioning the substrate to improve mycelium growth.</p>
+<p id="p-0025" num="0024">In some embodiments, substrate pre-processing step <b>115</b> includes compacting the substrate prior to inoculating the substrate. Any manner of compacting the substrate can be used. An aim of compacting the substrate prior to inoculation can be to densify the substrate, align fibers in the substrate, and/or shape and direct the micromorphology of growth of the fungi.</p>
+<p id="p-0026" num="0025">In some embodiments, the substrate is aerated in order to improve oxygen flow through the substrate, which can therefore promote improved fermentation in step <b>130</b>. Any manner of aerating the substrate can be used. In some embodiments, the substrate is poked repeatedly in different locations with a spear, needle or the like. Selective poking of the substrate can channel oxygen to specific zones or areas of the substrate where increased and/or improved fermentation is desired. Modification of the substrate to create enclose oxygen (i.e., trap oxygen within voids within the substrate) can also be carried out as part of pre-processing step <b>115</b>.</p>
+<p id="p-0027" num="0026">Additionally, and as mentioned previously, a spear, needle, or the like used to aerate the substrate can be coated with mycelium-producing fungal spores such that the pre-processing step <b>115</b> also serves as at least part of the inoculation step <b>120</b>. As with selectively poking the substrate to create channels for oxygen flow to specific areas within the substrate, the use of the spear, needle or the like to inoculate the substrate can also be carried out selectively to ensure specific placement of spores within specified zones in the substrate.</p>
+<p id="p-0028" num="0027">In some embodiments, a fat and/or oil component is added to the substrate as part of pre-processing step <b>115</b>. Any manner of adding the fat and/or oil component to the substrate can be used, such as via injection. The fat and/or oil component can be added throughout the substrate or selectively to specified zones within the substrate. When added to the substrate, the fat and/or oil component can be adsorbed into the substrate. The fat and/or oil component can be added in order to add desirable components to the resulting food product formed from the substrate.</p>
+<p id="p-0029" num="0028">Similar to the preceding paragraph, pre-processing step <b>115</b> may include adding carbohydrates to the substrate. Any manner of adding the carbohydrates to the substrate can be used. The carbohydrates can be added throughout the substrate or selectively to specified zones within the substrate. An aim of adding carbohydrates to the substrate can be to provide the fungi with additional energy to grow during the growth stage (in addition to carbohydrates that may be naturally occurring within the substrate). In some embodiments, the amount of carbohydrates added to the substrate is a specified amount pre-determined to be the exact amount needed for mycelium growth such that little to no carbohydrates are left in the substrate after the fungal growth step.</p>
+<p id="p-0030" num="0029">In some embodiments, a nitrogen source, such as protein or amino acids or an ammonia compound, for instance in the form of a protein isolate, is added to the substrate as part of pre-processing step <b>115</b>. Any manner of adding the protein to the substrate can be used. The protein can be added throughout the substrate or selectively to specified zones within the substrate. The protein component can be added in order to add desirable components to the resulting food product formed from the substrate.</p>
+<p id="p-0031" num="0030">Flavoring and/or coloring may also be added to the substrate as part of a pre-processing step <b>115</b>. Any type and combination of flavors and/or colors can be added to the substrate using any suitable methods, including injection. Flavoring and/or coloring can be added throughout the substrate, or selectively to specific zones of the substrate. Subsequently during growth, the fungi may uptake the color and/or flavor, in which case such coloring and/or flavoring becomes part of the grown mycelium.</p>
+<p id="p-0032" num="0031">In some embodiments, pre-processing step <b>115</b> may include sterilizing the substrate prior to inoculation and mycelium growth.</p>
+<p id="p-0033" num="0032">The above-described processes that may be carried out as pre-processing step <b>115</b> can be carried out individually or in any combination and in any order.</p>
+<p id="p-0034" num="0033">With reference now to <figref idref="DRAWINGS">FIG. 1C</figref>, the method <b>100</b> may also be modified from the base method <b>100</b> shown in <figref idref="DRAWINGS">FIG. 1A</figref> by adding a processing step <b>135</b> carried out concurrently with the mycelium growth step <b>130</b>. The in-growth processing step <b>135</b> can be carried out throughout the mycelium growth step <b>130</b>, at a specified time during the mycelium growth step <b>130</b>, or at different intervals during the mycelium growth step <b>130</b>. An objective of the in-growth processing step <b>135</b> may be, e.g., to promote continued mycelium growth and/or to condition the substrate for subsequent use as a food product.</p>
+<p id="p-0035" num="0034">In some embodiments, in-growth processing step <b>135</b> includes compacting the substrate during mycelium growth. Because mycelium growth is occurring during compaction, compaction will serve to compact both the original substrate and any mycelium grown at the point of compaction. Any manner of compacting the substrate can be used. In some embodiments, compaction is carried out continuously throughout the mycelium growth, or at intervals during mycelium growth. An aim of compacting the substrate during mycelium growth is to densify the entire mass and to make the macrotextures more similar to meat and other food products. For example, compacting can be carried out to align the fibers in the substrate or to create distinct layering patterns.</p>
+<p id="p-0036" num="0035">In some embodiments, a fat and/or oil component is added to the substrate as part of in-growth processing step <b>135</b>. As with step <b>115</b>, any manner of adding the fat and/or oil component to the substrate during mycelium growth can be used, such as via injection. The fat and/or oil component can be added throughout the substrate or selectively to specified zones within the substrate. When added to the substrate, the fat and/or oil component can be adsorbed into the substrate. The fat and/or oil component can be added in order to add desirable components to the resulting food product formed from the substrate.</p>
+<p id="p-0037" num="0036">Carbohydrates may also be added during growth of mycelium as part of processing step <b>135</b>. When carbohydrates are added during mycelium growth, such as via injection, the carbohydrates can be added at intervals during growth or continuously throughout the mycelium growth step.</p>
+<p id="p-0038" num="0037">Flavoring or coloring, or both flavoring and coloring, may also be added during the growth of mycelium as part of processing step <b>135</b>. The flavoring and/or coloring can be added to the substrate, for example, via injection, with an aim of preparing the substrate being bound together by the mycelium for use as a food product. The fungi may uptake the color or flavor, in which case coloring and/or flavoring become part of the grown mycelium.</p>
+<p id="p-0039" num="0038">Protein may also be added during the growth of the mycelium as part of the processing step <b>135</b>. The protein can be added to the substrate in any suitable manner, with an aim of adding desirable components to the substrate they may subsequently be used as a food product.</p>
+<p id="p-0040" num="0039">With reference now to <figref idref="DRAWINGS">FIG. 1D</figref>, the method <b>100</b> may also be modified from the base method <b>100</b> shown in <figref idref="DRAWINGS">FIG. 1A</figref> by adding a post-processing step <b>145</b> carried out after the mycelium growth step <b>130</b>. An objective of the post-processing step <b>135</b> may be, e.g., to condition the substrate for subsequent use as a food product.</p>
+<p id="p-0041" num="0040">In some embodiments, in-growth processing step <b>135</b> includes compacting the substrate after mycelium growth. Because mycelium growth has been completed, compaction will serve to compact both the original substrate and the grown mycelium that has formed a matrix within and around the substrate. Any manner of compacting the substrate can be used. An aim of compacting the substrate after mycelium growth is to create a denser material for food consumption that has more nutrients and more favorable texture and which can therefore be used as a, e.g., meat substitute.</p>
+<p id="p-0042" num="0041">In some embodiments, a fat and/or oil component is added to the substrate as part of post processing step <b>145</b>. As with steps <b>115</b> and <b>135</b>, any manner of adding the fat and/or oil component to the substrate after mycelium growth can be used, such as via injection. The fat and/or oil component can be added throughout the substrate or selectively to specified zones within the substrate. When added to the substrate, the fat and/or oil component can be adsorbed into the substrate and/or adsorbed into the now created fungal matrix. The fat and/or oil component can be added in order to add desirable components to the resulting food product formed from the substrate.</p>
+<p id="p-0043" num="0042">Flavoring and/or coloring may also be added after growth of mycelium as part of processing step <b>145</b>. The flavoring and/or coloring can be added to the substrate, for example, via injection, with an aim of preparing the substrate bound together by the mycelium for use as a food product.</p>
+<p id="p-0044" num="0043">While <figref idref="DRAWINGS">FIGS. 1A-1D</figref> generally utilize a step <b>110</b> in which a generic textured substrate is provided, the methods show in <figref idref="DRAWINGS">FIG. 1A-1D</figref> can also include embodiments where the substrate provided has already been modified to accomplish some or all of the processing described in processing steps <b>115</b>, <b>135</b>, and <b>145</b>. For example, in some embodiments, the manner in which the textured substrate is made includes the incorporation of inoculant, fat, oil, carbohydrates, protein, coloring, and/or flavoring into the material being processed into a textured substrate such that the textured substrate provided in step <b>110</b> already has incorporated therein one or more of inoculant, fat, oil carbohydrates, protein, coloring, and flavoring.</p>
+<p id="p-0045" num="0044">As described above with respect to step <b>130</b> in <figref idref="DRAWINGS">FIGS. 1A-1D</figref> where mycelium growth is carried out, fermentation is used to grow fungi, and more specifically, fungal mycelium. With reference to <figref idref="DRAWINGS">FIG. 1E</figref>, a modification to the general method <b>100</b> of <figref idref="DRAWINGS">FIG. 1A</figref> is to carry out a portion of mycelium growth via liquid-state fermentation <b>128</b> (during which the substrate is grown) followed by a filtration step <b>129</b> in which the liquid is removed, and then solid-state fermentation <b>130</b> is carried out for further mycelium growth. In this embodiment, filtration is carried out to remove liquid from the substrate grown during the liquid fermentation step <b>128</b>. The specific manner of filtering the liquid is not limited, provided that the fungi is not killed via the filtration process. Because the fungi remain alive after filtration step <b>129</b>, additional solid-state fermentation can be carried out in step <b>130</b> to continue the growth of the mycelium. In order to further promote this solid-state fermentation step <b>130</b>, the filtration may be carried out in such a way as to leave behind in the substrate the nutrients need to continue fungal growth. Additionally or in the alternative, it may also be useful to provide additional nutrients (e.g., oil, fats, carbohydrates, etc.) to continue fungal growth in solid state. In an alternative embodiment, a new species or the same species again is introduced to the substrate after the liquid state fermentation, and the inoculant is used to carry out the solid-state fermentation. A benefit of this alternative is that it is no longer necessary to take steps to ensure that the initial fungi (i.e., the fungi responsible for the liquid state fermentation) remains alive after filtration. In either embodiment, the process by which liquid state and solid-state fermentation are carried out as part of the mycelium growth can help to ensure that the fungi grow in close proximity to one another, thereby creating a substrate bound by a compact and dense mycelium network.</p>
+<p id="p-0046" num="0045">As discussed briefly above, the methods described herein can be used to bind a substrate of textured protein or to bind together two or more substrates of textured protein. With reference to <figref idref="DRAWINGS">FIG. 2</figref>, a schematic illustration of binding together multiple substrates <b>210</b>, <b>220</b>, <b>230</b> is shown. Each substrate <b>210</b>, <b>220</b>, <b>230</b> may be separately inoculated with mycelium-producing fungi, after which mycelium growth is carried out to bind each substrate individually. As shown in <figref idref="DRAWINGS">FIG. 2</figref>, the substrates <b>210</b>, <b>220</b>, <b>230</b> can then be layered, after which further inoculant is added to the composite structure <b>240</b> and further mycelium growth is carried out. This second round of mycelium growth leads to a matrix forming around all of the substrates <b>210</b>, <b>220</b>, <b>230</b> such that they are bound together into composite structure <b>240</b>. While <figref idref="DRAWINGS">FIG. 2</figref> shows a substrate layering configuration, the substrates can also be placed in any type of touching arrangement.</p>
+<p id="p-0047" num="0046">While <figref idref="DRAWINGS">FIG. 2</figref> shows three substrates <b>210</b>, <b>220</b>, <b>230</b> in the form of sheets that are then bound together in sandwich-type configuration, any number of substrates can be bound together using this method, and the substrates being bound together can have any shape and size. In one alternate example, the substrates are in the form of crumbles and are bound together into agglomerates. Furthermore, the substrates bound together in a composite can have a relatively uniform size and/or shape, or the composite can include substrates each having a different size and/or shape.</p>
+<p id="p-0048" num="0047"><figref idref="DRAWINGS">FIG. 2</figref> shows bringing together three substrate and inoculating the stack to bind together all three substrates at the same time. In an alternative to the embodiment shown in <figref idref="DRAWINGS">FIG. 2</figref>, the substrates <b>210</b> and <b>220</b> are stacked together, inoculated and bound together by mycelium growth between substrates <b>210</b> and <b>220</b> to form composite stack <b>210</b>/<b>220</b>. Subsequently, substrate <b>230</b> can be stacked on top of the composite stack <b>210</b>/<b>220</b>, followed by inoculating the substrates and growing mycelium so that composite stack <b>210</b>/<b>220</b> is bound together with substrate <b>230</b>. This method can be considered a method by which the composite is formed via a series of inoculating and growing steps, one for each substrate added to the previous composite stack.</p>
+<p id="p-0049" num="0048">The method illustrated in <figref idref="DRAWINGS">FIG. 2</figref> allows for a high degree of variety in preparing the bound composite material. For example, each substrate used in the stack can have a different composition. In one embodiment, substrates <b>210</b> and <b>230</b> can be substrate of textured vegetable protein, while substrate <b>220</b> is a substrate of fungal biomass, such that when the three substrates are bound together, they form a sandwich-type configuration with potentially different flavors, nutrition contents, colors/pigmentation, ingredients (fats, oils, etc.) and/or textures. Each substrate can also be prepared separately from others, such as where some substrates undergoing one or more of processing steps <b>115</b>, <b>135</b>, <b>145</b> and other substrates either undergo none of processing steps <b>115</b>, <b>135</b>, <b>145</b> or different version of processing steps <b>115</b>, <b>135</b>, <b>145</b>. Ultimately, a non-homogenous combination of substrates can be created, wherein the non-homogenous combination has a more complex macro texture.</p>
+<p id="p-0050" num="0049"><figref idref="DRAWINGS">FIG. 2</figref> also clearly illustrates how larger food products can be produced from smaller substrate units. Using the binding technology described herein, these larger composite products have stability and provide food products that may be more suited for mimicking meat or seafood products based on their similarity in size to, e.g., a filet of meat or fish.</p>
+<p id="p-0051" num="0050">Once composite materials are formed, such as via the method illustrated in <figref idref="DRAWINGS">FIG. 2</figref> and described above, further processing can be carried out to achieve still further complex textures not previously achievable. For example, a crumble product can be created by binding together small substrates using the methods described herein, followed by grounding, crumbling or pulling apart the larger composite product to form crumbles or shreds.</p>
+<p id="p-0052" num="0051">From the foregoing, it will be appreciated that specific embodiments of the invention have been described herein for purposes of illustration, but that various modifications may be made without deviating from the scope of the invention. Accordingly, the invention is not limited except as by the appended claims.</p>
+</detailed-description>
+</description>
+<us-claim-statement>I/We claim:</us-claim-statement>
+<claims id="claims">
+<claim id="CLM-00001" num="00001">
+<claim-text><b>1</b>. A method of forming a bound textured substrate comprising:
+<claim-text>inoculating a textured substrate with at least one mycelium-producing fungi; and</claim-text>
+<claim-text>growing the mycelium-forming fungi to form a matrix of mycelium inside, outside, or inside and outside of the textured substrate.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00002" num="00002">
+<claim-text><b>2</b>. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the textured substrate is a textured protein substrate.</claim-text>
+</claim>
+<claim id="CLM-00003" num="00003">
+<claim-text><b>3</b>. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the textured substrate is a fungal biomass substrate.</claim-text>
+</claim>
+<claim id="CLM-00004" num="00004">
+<claim-text><b>4</b>. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the textured substrate is a processed fungal fermented composition.</claim-text>
+</claim>
+<claim id="CLM-00005" num="00005">
+<claim-text><b>5</b>. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the at least one mycelium-producing fungi comprises a fungi selected from the <i>Rhizopus </i>genus or the <i>Aspergillus </i>genus.</claim-text>
+</claim>
+<claim id="CLM-00006" num="00006">
+<claim-text><b>6</b>. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein growing the mycelium-forming fungi to form a matrix of mycelium comprises a two-stage fermentation process, the first stage comprising a liquid state fermentation process and the second stage comprising a solid state fermentation process.</claim-text>
+</claim>
+<claim id="CLM-00007" num="00007">
+<claim-text><b>7</b>. The method of <claim-ref idref="CLM-00006">claim 6</claim-ref>, wherein the liquid state fermentation process, the solid state fermentation process or both are carried out in an oxygen-enriched environment.</claim-text>
+</claim>
+<claim id="CLM-00008" num="00008">
+<claim-text><b>8</b>. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein prior to growing the mycelium-forming fungi to form a matrix of mycelium, the method further comprises:
+<claim-text>compacting, aerating or compacting and aerating the textured substrate.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00009" num="00009">
+<claim-text><b>9</b>. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein prior to, during, or prior to and during growth of the mycelium-forming fungi to form a matrix of mycelium, the method further comprises:
+<claim-text>adding any combination of fat, oil, and carbohydrates to the textured substrate in such a way that the fat, oil and carbohydrates or any combination thereof serve as a feedstock for the mycelium-forming fungi to grow and bind the textured substrate.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00010" num="00010">
+<claim-text><b>10</b>. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein prior to, during, or prior to and during growth of the mycelium-forming fungi to form a matrix of mycelium, the method further comprises:
+<claim-text>adding any combination of color and flavoring to the textured substrate in such a way that the color and flavoring or any combination thereof is taken up by the fungi and becomes a part of the mycelium during growth.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00011" num="00011">
+<claim-text><b>11</b>. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein prior to growing the mycelium-forming fungi to form a matrix of mycelium, the method further comprises:
+<claim-text>sterilizing the textured substrate.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00012" num="00012">
+<claim-text><b>12</b>. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein during growing the mycelium-forming fungi to form a matrix of mycelium, the method further comprises:
+<claim-text>compacting, aerating, or compacting and aerating some or all of the textured, some or all of the grown mycelium, or both.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00013" num="00013">
+<claim-text><b>13</b>. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein after growing the mycelium-forming fungi to form a matrix of mycelium, the method further comprises:
+<claim-text>compacting some or all of the textured substrate, some or all of the grown mycelium or both.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00014" num="00014">
+<claim-text><b>14</b>. The method of <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the textured substrate is a first textured substrate and the method further comprises:
+<claim-text>providing a second textured substrate;</claim-text>
+<claim-text>wherein growing the mycelium-forming fungi to form a matrix of mycelium comprises growing the mycelium-forming fungi inside, outside, or both inside and outside of the first and second textured substrates to bind the first substrate and second substrate together.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00015" num="00015">
+<claim-text><b>15</b>. A bound textured protein substrate comprising:
+<claim-text>at least one textured substrate; and</claim-text>
+<claim-text>a matrix of fungal mycelium grown inside, outside, or both inside and outside of the textured substrate.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00016" num="00016">
+<claim-text><b>16</b>. The bound textured protein substrate of <claim-ref idref="CLM-00015">claim 15</claim-ref>, wherein the textured substrate is a textured protein substrate.</claim-text>
+</claim>
+<claim id="CLM-00017" num="00017">
+<claim-text><b>17</b>. The bound textured protein substrate of <claim-ref idref="CLM-00015">claim 15</claim-ref>, wherein the textured substrate is a fungal biomass substrate.</claim-text>
+</claim>
+<claim id="CLM-00018" num="00018">
+<claim-text><b>18</b>. The bound textured protein substrate of <claim-ref idref="CLM-00015">claim 15</claim-ref>, wherein the textured substrate is a processed fungal fermented composition.</claim-text>
+</claim>
+<claim id="CLM-00019" num="00019">
+<claim-text><b>19</b>. The bound textured protein substrate of <claim-ref idref="CLM-00015">claim 15</claim-ref>, wherein the fungal mycelium-comprises a fungi selected from the <i>Rhizopus </i>genus or the <i>Aspergillus </i>genus.</claim-text>
+</claim>
+<claim id="CLM-00020" num="00020">
+<claim-text><b>20</b>. The bound textured protein substrate of <claim-ref idref="CLM-00015">claim 15</claim-ref>, wherein the bound textured protein substrate is compacted.</claim-text>
+</claim>
+<claim id="CLM-00021" num="00021">
+<claim-text><b>21</b>. The bound textured protein substrate of <claim-ref idref="CLM-00015">claim 15</claim-ref>, wherein the bound textured protein substrate comprises two or more textured protein substrates and the matrix of fungal mycelium is grown inside, outside, or inside and outside the two or more textured protein substrates to bind together the two or more textured protein substrates.</claim-text>
+</claim>
+<claim id="CLM-00022" num="00022">
+<claim-text><b>22</b>. The bound textured protein substrate of <claim-ref idref="CLM-00021">claim 21</claim-ref>, wherein the two or more textured protein substrate are in the form of layers, and the layers are bound together in a sandwich configuration.</claim-text>
+</claim>
+<claim id="CLM-00023" num="00023">
+<claim-text><b>23</b>. The bound textured protein substrate of <claim-ref idref="CLM-00021">claim 21</claim-ref>, wherein different material is used for at least two of the two or more textured protein substrates.</claim-text>
+</claim>
+</claims>
+</us-patent-application>

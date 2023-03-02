@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<business:PatentDocumentAndRelated xmlns:base="http://www.sipo.gov.cn/XMLSchema/base" xmlns:business="http://www.sipo.gov.cn/XMLSchema/business" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:tbl="http://oasis-open.org/specs/soextblx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sipo.gov.cn/XMLSchema/business /DTDS/PatentDocument/Elements/OtherElements.xsd" xsdVersion="V2.2.1" file="CN102021001286633CN00001137819740AFULZH20211210CN00G.XML" dateProduced="20211205" status="C" lang="zh" country="CN" docNumber="113781974" kind="A" datePublication="20211210">
+  <business:BibliographicData>
+    <business:PublicationReference dataFormat="original" sequence="1" sourceDB="national office">
+      <base:DocumentID>
+        <base:WIPOST3Code>CN</base:WIPOST3Code>
+        <base:DocNumber>113781974</base:DocNumber>
+        <base:Kind>A</base:Kind>
+        <base:Date>20211210</base:Date>
+      </base:DocumentID>
+    </business:PublicationReference>
+    <business:PublicationReference dataFormat="standard" sequence="1">
+      <base:DocumentID>
+        <base:WIPOST3Code>CN</base:WIPOST3Code>
+        <base:DocNumber>113781974</base:DocNumber>
+        <base:Kind>A</base:Kind>
+        <base:Date>20211210</base:Date>
+      </base:DocumentID>
+    </business:PublicationReference>
+    <business:PublicAvailabilityDate>
+      <business:GazetteReference>
+        <business:GazetteNumber>37-5002</business:GazetteNumber>
+        <base:Date>20211210</base:Date>
+      </business:GazetteReference>
+    </business:PublicAvailabilityDate>
+    <business:ApplicationReference applType="10" dataFormat="original" sequence="1" sourceDB="national office">
+      <base:DocumentID>
+        <base:WIPOST3Code>CN</base:WIPOST3Code>
+        <base:DocNumber>202111286633.X</base:DocNumber>
+        <base:Date>20170424</base:Date>
+      </base:DocumentID>
+    </business:ApplicationReference>
+    <business:ApplicationReference applType="10" dataFormat="standard" sequence="1">
+      <base:DocumentID>
+        <base:WIPOST3Code>CN</base:WIPOST3Code>
+        <base:DocNumber>102021001286633</base:DocNumber>
+        <base:Date>20170424</base:Date>
+      </base:DocumentID>
+    </business:ApplicationReference>
+    <business:PriorityDetails>
+      <business:Priority kind="international" dataFormat="original" sourceDB="national office" sequence="1">
+        <base:WIPOST3Code>KR</base:WIPOST3Code>
+        <base:DocNumber>10-2016-0063019</base:DocNumber>
+        <base:Date>20160523</base:Date>
+      </business:Priority>
+      <business:Priority kind="international" dataFormat="standard" sequence="1">
+        <base:WIPOST3Code>KR</base:WIPOST3Code>
+        <base:DocNumber>102016000063019</base:DocNumber>
+        <base:Date>20160523</base:Date>
+      </business:Priority>
+    </business:PriorityDetails>
+    <business:ClassificationIPCRDetails creator="03" processingType="original">
+      <business:ClassificationIPCR sequence="1">
+        <business:IPCVersionDate>20060101</business:IPCVersionDate>
+        <business:Section>G</business:Section>
+        <business:MainClass>09</business:MainClass>
+        <business:Subclass>G</business:Subclass>
+        <business:MainGroup>3</business:MainGroup>
+        <business:Subgroup>36</business:Subgroup>
+        <business:GeneratingOffice>
+          <base:WIPOST3Code>CN</base:WIPOST3Code>
+        </business:GeneratingOffice>
+        <business:ClassificationDataSource>H</business:ClassificationDataSource>
+        <base:Text>G09G    3/36    (2006.01)</base:Text>
+      </business:ClassificationIPCR>
+      <business:ClassificationIPCR sequence="2">
+        <business:IPCVersionDate>20160101</business:IPCVersionDate>
+        <business:Section>G</business:Section>
+        <business:MainClass>09</business:MainClass>
+        <business:Subclass>G</business:Subclass>
+        <business:MainGroup>3</business:MainGroup>
+        <business:Subgroup>3208</business:Subgroup>
+        <business:GeneratingOffice>
+          <base:WIPOST3Code>CN</base:WIPOST3Code>
+        </business:GeneratingOffice>
+        <business:ClassificationDataSource>H</business:ClassificationDataSource>
+        <base:Text>G09G    3/3208  (2016.01)</base:Text>
+      </business:ClassificationIPCR>
+      <business:ClassificationIPCR sequence="3">
+        <business:IPCVersionDate>20060101</business:IPCVersionDate>
+        <business:Section>G</business:Section>
+        <business:MainClass>09</business:MainClass>
+        <business:Subclass>G</business:Subclass>
+        <business:MainGroup>3</business:MainGroup>
+        <business:Subgroup>34</business:Subgroup>
+        <business:GeneratingOffice>
+          <base:WIPOST3Code>CN</base:WIPOST3Code>
+        </business:GeneratingOffice>
+        <business:ClassificationDataSource>H</business:ClassificationDataSource>
+        <base:Text>G09G    3/34    (2006.01)</base:Text>
+      </business:ClassificationIPCR>
+    </business:ClassificationIPCRDetails>
+    <business:InventionTitle lang="zh" dataFormat="original" sourceDB="national office" processingType="original" creator="03">显示设备</business:InventionTitle>
+    <business:RelatedDocuments>
+      <business:Division>
+        <business:DocumentsRelation>
+          <business:ParentDocument>
+            <base:DocumentID sequence="1">
+              <base:WIPOST3Code>CN</base:WIPOST3Code>
+              <base:DocNumber>201710269973.9</base:DocNumber>
+              <base:Date>20170424</base:Date>
+            </base:DocumentID>
+          </business:ParentDocument>
+          <business:ChildDocument>
+            <base:DocumentID>
+              <base:Date>00000000</base:Date>
+            </base:DocumentID>
+          </business:ChildDocument>
+        </business:DocumentsRelation>
+      </business:Division>
+    </business:RelatedDocuments>
+    <business:Parties>
+      <business:ApplicantDetails representative="1">
+        <business:Applicant sequence="1" appType="applicant" dataFormat="original" sourceDB="national office" lang="zh" creator="03" processingType="original">
+          <base:AddressBook lang="zh">
+            <base:Name>三星显示有限公司</base:Name>
+            <base:Address>
+              <base:AddressLine>0</base:AddressLine>
+              <base:AddressMailCode>0</base:AddressMailCode>
+              <base:PostBox>0</base:PostBox>
+              <base:AddressRoom>0</base:AddressRoom>
+              <base:AddressFloor>0</base:AddressFloor>
+              <base:AddressBuilding>0</base:AddressBuilding>
+              <base:Street>0</base:Street>
+              <base:AddressCity>0</base:AddressCity>
+              <base:County>0</base:County>
+              <base:City>0</base:City>
+              <base:Province>0</base:Province>
+              <base:PostCode>0</base:PostCode>
+              <base:WIPOST3Code>KR</base:WIPOST3Code>
+              <base:Text>韩国京畿道</base:Text>
+            </base:Address>
+          </base:AddressBook>
+          <business:OrganizationCode createDate="00000000" creator="00">0000000000</business:OrganizationCode>
+        </business:Applicant>
+      </business:ApplicantDetails>
+      <business:InventorDetails>
+        <business:Inventor sequence="1" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+          <base:AddressBook lang="zh">
+            <base:Name>金驲柱</base:Name>
+          </base:AddressBook>
+        </business:Inventor>
+        <business:Inventor sequence="2" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+          <base:AddressBook lang="zh">
+            <base:Name>田武经</base:Name>
+          </base:AddressBook>
+        </business:Inventor>
+        <business:Inventor sequence="3" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+          <base:AddressBook lang="zh">
+            <base:Name>李安洙</base:Name>
+          </base:AddressBook>
+        </business:Inventor>
+      </business:InventorDetails>
+      <business:AgentDetails>
+        <business:CustomerNumber>11204</business:CustomerNumber>
+        <business:Agent sequence="1" lang="zh" dataFormat="original" sourceDB="national office" repType="agent" processingType="original" creator="03">
+          <business:Agency>
+            <base:AddressBook lang="zh">
+              <base:OrganizationName>北京英赛嘉华知识产权代理有限责任公司 11204</base:OrganizationName>
+            </base:AddressBook>
+          </business:Agency>
+          <base:AddressBook lang="zh">
+            <base:Name>王达佐</base:Name>
+          </base:AddressBook>
+        </business:Agent>
+        <business:Agent sequence="2" lang="zh" dataFormat="original" sourceDB="national office" repType="agent" processingType="original" creator="03">
+          <business:Agency>
+            <base:AddressBook lang="zh">
+              <base:OrganizationName>北京英赛嘉华知识产权代理有限责任公司 11204</base:OrganizationName>
+            </base:AddressBook>
+          </business:Agency>
+          <base:AddressBook lang="zh">
+            <base:Name>刘铮</base:Name>
+          </base:AddressBook>
+        </business:Agent>
+      </business:AgentDetails>
+    </business:Parties>
+  </business:BibliographicData>
+  <business:Abstract dataFormat="original" lang="zh" sourceDB="national office" processingType="original" creator="03">
+    <base:Paragraphs num="0001">公开了一种显示设备。显示设备包括排列成多行和多列的多个像素、处于第一方向且连接至像素的多条栅线以及连接至像素的多条数据线。一定数量的数据线处于一行中的像素之间以及处于第一区域中的每个中，第一区域与位于第一列和最后一列中的一个列中的像素的一侧相邻。</base:Paragraphs>
+    <business:AbstractFigure>
+      <base:Figure num="0001">
+        <base:Image he="1000" wi="853" file="202111286633.JPG" imgContent="undefined" imgFormat="JPEG" />
+      </base:Figure>
+    </business:AbstractFigure>
+  </business:Abstract>
+  <business:Description lang="zh" dataFormat="original" sourceDB="national office" creator="03">
+    <business:InventionTitle id="title1">显示设备</business:InventionTitle>
+    <base:Paragraphs id="p0001" num="n0001">相关申请的交叉引用</base:Paragraphs>
+    <base:Paragraphs id="p0002" num="n0002">于2016年5月23日提交的发明名称为“显示设备”的第10-2016-0063019号韩国专利申请通过引用整体地并入本文中。</base:Paragraphs>
+    <business:TechnicalField id="technical-field001">
+      <base:Paragraphs id="p0003">技术领域</base:Paragraphs>
+      <base:Paragraphs id="p0004" num="n0003">本文中描述的一个或多个实施方式涉及显示设备。</base:Paragraphs>
+    </business:TechnicalField>
+    <business:BackgroundArt id="background-art001">
+      <base:Paragraphs id="p0005">背景技术</base:Paragraphs>
+      <base:Paragraphs id="p0006" num="n0004">已经研发了各种显示器。示例包括液晶显示器、有机发光显示器、电润湿显示器、等离子显示器和电泳显示器。所有这些显示器均已被制作成具有矩形形状，矩形形状确定了它们信号线的排列。</base:Paragraphs>
+      <base:Paragraphs id="p0007" num="n0005">例如，具有矩形形状的显示器可包括在行方向上延伸的多条栅线(或扫描线)、在列方向上延伸的多条数据线以及连接至栅线和数据线的多个像素。像素基于经由栅线接收到的栅信号通过数据线接收数据电压，并然后发出具有相应灰度的光。</base:Paragraphs>
+    </business:BackgroundArt>
+    <business:Disclosure id="disclosure001">
+      <base:Paragraphs id="p0008">发明内容</base:Paragraphs>
+      <base:Paragraphs id="p0009" num="n0006">根据一个或多个实施方式，显示设备包括显示面板，显示面板包括多个像素、多条栅线和多条数据线，其中，多个像素排列成多行和多列，多条栅线处于第一方向上并且连接至多个像素，多条数据线连接至多个像素，其中，k个像素位于多行中的第a行中，n个像素位于多行中的第一行与作为最后一行的第m行之间的第e行至第f行中的每个中，并且数量多于k且少于n的像素处于其它或剩余行中的每个中，其中a、k、e、f、m和n为自然数并且f等于或大于e，以及其中，L条数据线处于第a行中的像素之间以及处于第一区域中的每个中，其中第一区域与第a行的第一列和最后一列中的一列中的像素的一侧相邻，其中L基于通过将n除以k获得的值，并且其中L为自然数。k个像素可位于第m行中。显示面板可具有圆形形状。a的值可为1。</base:Paragraphs>
+      <base:Paragraphs id="p0010" num="n0007">在第一行与第e行之间的行中，当前行中的像素的数量等于或多于前一行中的像素的数量，以及在第f行与第m行之间的行中，当前行中的像素的数量等于或少于前一行中的像素的数量。</base:Paragraphs>
+      <base:Paragraphs id="p0011" num="n0008">数据线包括多个数据线组，多个数据线组分别包括L条数据线，多个数据线组中的每个的第一数据线为直数据线，并且除了直数据线以外的数据线为弯曲数据线，以及L条数据线在第一区域中在与第一方向交叉的第二方向上延伸，直数据线在第二方向上延伸，弯曲数据线在第一行至第e行中在第二方向、第一方向和第二方向上延伸以从第e行在第二方向上延伸，第一方向对应于行方向，并且第二方向对应于列方向。</base:Paragraphs>
+      <base:Paragraphs id="p0012" num="n0009">位于第一行中的k个像素处于多列中的第一列与作为最后一列的第n列之间的第g列至第p列中，并且直数据线中的每个连接至位于第g列至第p列中的相应列中的像素，其中g、p和n为自然数。第一区域处于位于第一行中的像素之间并且与第一行的第p列的右侧相邻。</base:Paragraphs>
+      <base:Paragraphs id="p0013" num="n0010">弯曲数据线从第二方向朝着第一方向接连地延伸，同时弯曲数据线的序号从第一弯曲数据线开始增加，以及弯曲数据线从第二方向朝着第一方向接连地延伸，同时弯曲数据线的序号从作为最后一条弯曲数据线的第v弯曲数据线开始减小。在第一方向上延伸的弯曲数据线从第一弯曲数据线开始接连地从第一方向延伸至第二方向，并且从第v弯曲数据线开始接连地从第一方向朝着第二方向延伸，以及从第一方向朝着第二方向延伸的弯曲数据线中的每个连接至位于第一列至第g-1列以及第p+1列至第n列中的相应列中的像素。</base:Paragraphs>
+      <base:Paragraphs id="p0014" num="n0011">从第一方向朝着第二方向延伸的弯曲数据线从第一弯曲数据线开始以列为单位接连地连接至位于第g-1列至第一列中的像素，并且从第v弯曲数据线开始以列为单位接连地连接至位于第p+1列至第n列中的像素。在第一行至第e行中，当位于第h行中的像素的数量和布置在第h+1行中的像素的数量彼此不同时，弯曲数据线中的、具有与位于第h行中的像素的数量与位于第h+1行中的像素的数量之间的差值相同的数量的弯曲数据线在位于第h行中的像素与位于第h+1行中的像素之间在第一方向上延伸，其中h为自然数。</base:Paragraphs>
+      <base:Paragraphs id="p0015" num="n0012">在显示面板的左侧区域中且在第一行至第e行中，当位于第h+1行中的像素的数量比位于第h行中的像素的数量多c时，c条弯曲数据线在位于第h行中的像素与位于第h+1行中的像素之间在第一方向上延伸，其中左侧区域为显示面板的、在第一方向上相对于显示面板的中心部分的左侧处的区域，以及在显示面板的右侧区域中且在第一行至第e行中，当位于第h+1行中的像素的数量比位于第h行中的像素的数量多d时，d条弯曲数据线在位于第h行中的像素与位于第h+1行中的像素之间在第一方向上延伸，其中右侧区域为显示面板的、在第一方向上相对于显示面板的中心部分的右侧处的区域。</base:Paragraphs>
+      <base:Paragraphs id="p0016" num="n0013">在第一区域中的每个中L条数据线中的彼此相邻的数据线在第一方向上彼此相隔开第一距离，并且在第一方向上具有预定宽度，以及与彼此相邻的数据线的侧边之间的距离对应的间距是通过将宽度加上第一距离而获得的值来确定的。</base:Paragraphs>
+      <base:Paragraphs id="p0017" num="n0014">在显示面板中在第二方向上彼此相邻的像素之间的第二距离等于或大于以下的值，即通过将位于显示面板的左侧区域上且在第一行至第e行中彼此相邻的行中的像素的数量的差值、和位于显示面板的右侧区域中且在第一行至第e行中彼此相邻的行中的像素的数量的差值中的最大值乘以间距而获得的值。第二方向上的一条数据线与第一方向上的至少一条数据线交叉。</base:Paragraphs>
+      <base:Paragraphs id="p0018" num="n0015">第一方向上的至少一条数据线包括桥接电极以及第一子线和第二子线，其中，桥接电极与第二方向上的一条数据线彼此相隔开，其中桥接电极与第二方向上的数据线之间设置有绝缘层；以及第一子线和第二子线彼此相隔开，其中第一子线与第二子线之间设置有在第二方向上延伸的一条数据线，其中桥接电极将第一子线与第二子线电连接。</base:Paragraphs>
+      <base:Paragraphs id="p0019" num="n0016">显示设备包括栅驱动器和数据驱动器，其中，栅驱动器连接至栅线以将多个栅信号施加到栅线，并且数据驱动器与第一行相邻并且连接至数据线以将多个数据电压施加到数据线。当a＝1时，数量多于k的像素处于第m行中，在第一行与第e行之间的行中的每个中像素的数量多于k且少于n，并且在第f行与第m行之间的行中的每个中像素的数量少于n且多于r，其中r为自然数。</base:Paragraphs>
+      <base:Paragraphs id="p0020" num="n0017">显示面板包括第一侧部、第二侧部、第三侧部和第四侧部，其中，第一侧部在第一方向上延伸，第二侧部在第一方向上延伸、与第一侧部相对且长度短于第一侧部的长度，第三侧部将第一侧部的一侧连接至第二侧部的一侧，并且第四侧部将第一侧部的另一侧连接至第二侧部的另一侧，其中，第三侧部的不同侧中的每个的预定区域和第四侧部的不同侧中的每个的预定区域中的每个具有向显示面板的外侧突出的弯曲形状。第a行包括第一行与第m行之间的行。</base:Paragraphs>
+      <base:Paragraphs id="p0021" num="n0018">n个像素位于第一行与第a行之间的行中的第e行至第f行中以及位于第a行与第m行之间的行中的第q行至第u行中，在第一行和第m行中的每个中像素的数量比k多r，数量多于k且少于n的像素在第a行与第q行之间的行以及第a行与第f行之间的行中的每个中，并且数量多于r且少于n的像素在第一行与第e行之间的行中以及在第u行与第m行之间的行中的每个中，其中，q、u、r为自然数，并且u等于q。</base:Paragraphs>
+      <base:Paragraphs id="p0022" num="n0019">在第一行与第e行之间的行中，当前行中的像素的数量等于或多于前一行中的像素的数量，并且在第f行与第a行之间的行中，当前行中的像素的数量等于或少于前一行中的像素的数量，在第a行与第q行之间的行中，当前行中的像素的数量等于或多于前一行中的像素的数量，并且在第u行与第m行之间的行中，当前行中的像素的数量等于或少于前一行中的像素的数量，并且像素相对于第a行彼此竖直对称。</base:Paragraphs>
+      <base:Paragraphs id="p0023" num="n0020">在显示面板的右侧区域上的行中的像素的数量具有相同的数量，右侧区域为显示面板的相对于显示面板的中心部分位于第一方向上的右侧处的区域。数据线包括多个数据线组，多个数据线组分别包括L条数据线，多个数据线组中的每个的第一数据线为直数据线，并且除了直数据线以外的数据线为弯曲数据线，以及L条数据线在第一区域中在与第一方向交叉的第二方向上延伸，直数据线在第二方向上延伸并且连接至多行中的相应行中的像素，弯曲数据线连接至多行中的相应行中的像素，同时弯曲数据线从第二方向朝着第一方向以及从第一方向朝着第二方向弯曲至少两次。</base:Paragraphs>
+      <base:Paragraphs id="p0024" num="n0021">在第一行至第q行中，当位于第h行中的像素的数量与位于第h+1行中的像素的数量之间的差值为z时，z条弯曲数据线在位于第h行中的像素与位于第h+1行中的像素之间在第一方向上延伸，其中h和z为自然数。在第f行至第a行中，当位于第h行中的像素的数量与位于第h+1行中的像素的数量之间的差值为z时，z条弯曲数据线在位于第h行中的像素与位于第h+1行中的像素之间在第一方向上延伸，并且z条弯曲数据线中的每个从第一方向延伸至第二方向并且连接至相对应的列中的像素。</base:Paragraphs>
+      <base:Paragraphs id="p0025" num="n0022">在第e行至第一行中，位于第h行中的像素的数量与位于第h+1行中的像素的数量之间的差值为z时，z条弯曲数据线在位于第h行中的像素与位于第h+1行中的像素之间在第一方向上延伸，在第一方向上延伸的z条弯曲数据线在与位于第a行中的弯曲数据线对应的位置处在第二方向上延伸，并且弯曲数据线从位于最左侧的弯曲数据线开始接连地在第一方向上延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0026" num="n0023">在第a行至第q行中，当位于第h行中的像素的数量与位于第h+1行中的像素的数量之间的差值为z时，z条弯曲数据线在位于第h行中的像素与位于第h+1行中的像素之间在第一方向上延伸，并且在第一方向上延伸的z条弯曲数据线中的每个在第二方向上延伸并且连接至相对应的列中的像素。位于第一区域中的每个中L条数据线中的彼此相邻的数据线在第一方向上彼此相隔开第一距离，并且在第一方向上具有预定宽度，以及与彼此相邻的数据线的侧边之间的距离对应的间距是通过将宽度加上第一距离而获得的值来确定的，以及在显示面板中在第二方向上彼此相邻的像素之间的第二距离等于或大于通过将位于第一行至第q行中彼此相邻的行中的像素的数量的差值的最大值乘以间距获得的值。</base:Paragraphs>
+      <base:Paragraphs id="p0027" num="n0024">当a＝1时，k个像素位于第m行中，数据线在与第一方向交叉的第二方向上延伸，数据线中的中间数据线在第二方向上延伸，除了中间数据线以外的、与其它或剩余数据线对应的弯曲数据线从第二方向朝着第一方向以及从第一方向朝着第二方向弯曲至少两次以延伸，以及在第一行至第e行中，随着行的数量增加，在第一方向上弯曲以延伸的弯曲数据线的数量增加，弯曲数据线从第e行开始在第二方向上延伸以及弯曲数据线相对于中间数据线彼此对称。</base:Paragraphs>
+      <base:Paragraphs id="p0028" num="n0025">在第一行至第e-1行中，像素中的每个连接至弯曲数据线中的相对应的弯曲数据线，并且在第e行至第m行中，数据线中的每个连接至位于多个行中相对应的行中的像素。在作为显示面板的相对于显示面板的中心部分位于第一方向上的左侧处的区域的、显示面板的左侧区域中且在第一行至第e行中，位于第h+1行中的像素的数量比位于第h行中的像素的数量多c；在作为显示面板的相对于显示面板的中心部分位于第一方向上的右侧处的区域的、显示面板的右侧区域中且在第一行至第e行中，位于第h+1行中的像素的数量比布置在第h行中的像素的数量多d，当c与d相等时，在第一行至第e行中，具有与在c和d中的一个值加上1而获得的值相等的数量的线路路由部处于第h行中的像素与第h+1行中的像素之间，当c与d不同时，具有与在c和d中的一个值加上1而获得的值相等的数量的线路路由部限定在位于第h行中的像素与位于第h+1行中的像素之间，并且在第一行至第e行中，在位于第h行中的像素与位于第h+1行中的像素之间在第一方向上延伸的弯曲数据线经由线路路由部延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0029" num="n0026">位于第一区域中的每个上的L条数据线中彼此相邻的数据线在第一方向上彼此相隔开第一距离，并且在第一方向上具有预定宽度，以及与彼此相邻的数据线的侧边之间的距离对应的间距是通过将宽度加上第一距离而获得的值来确定的，以及在显示面板中在第二方向上彼此相邻的像素之间的第二距离等于或大于以下的值，即通过将位于显示面板的左侧区域上且在第一行至第e行中彼此相邻的行中的像素的数量的差值、和位于显示面板的右侧区域中且在第一行至第e行中彼此相邻的行中的像素的数量的差值中的最大值乘以间距而获得的值。</base:Paragraphs>
+      <base:Paragraphs id="p0030" num="n0027">根据一个或多个其它实施方式，显示设备包括显示面板，显示面板包括多个像素、多条栅线和多条数据线，其中，多个像素排列成多行和多列，多条栅线在第一方向上延伸并且连接至像素，多条数据线连接至像素，其中，k个像素位于多行中的第a行中，n个像素位于第一行与作为最后一行的第m行之间的多行中的第e行至第f行中的每个中，并且数量多于k且少于n的像素在其它或剩余的行中的每个中，其中a、k、e、f、m和n为自然数并且f等于或大于e，以及通过将n除以k获得的a值为L，余值为b，L+1条数据线处于第一区域中的b个第一区域的每个中，其中第一区域中的b个第一区域中的每个对应于位于第a行中的像素之间的并且与位于第a行的第一列至最后一列中的一列中的像素的一侧相邻的区域。L+1条数据线从最左侧开始接连地布置在w个第一区域中，并且从第一区域的最右侧开始接连地布置在b-w个第一区域中，其中w为等于或大于0的整数，并且等于或小于b。</base:Paragraphs>
+      <base:Paragraphs id="p0031" num="n0028">根据一个或多个其它实施方式，显示设备包括显示面板，显示面板包括多个像素、多条栅线和多条数据线，其中，多个像素排列成多行和多列，多条栅线在第一方向上延伸并且连接至像素，多条数据线连接至像素，其中，k个像素位于多行中的第a行中，n个像素位于第一行与作为最后一行的第m行之间的多行中的第e行至第f行中的每个中，并且数量多于k且少于n的像素在其它或剩余的行中的每个中，其中a、k、e、f、m和n为自然数并且f等于或大于e，L条数据线处于第一区域中的每个中，其中第一区域中的每个对应于位于第一行中的像素之间的并且与位于第a行的第一列至最后一列中的一列中的像素的一侧相邻的区域，并且在第一行至第e行中，数量等于第h行中的像素的数量与数据线的第h+1行中的像素的数量之间的差值的数据线在位于第h行中的像素与位于第h+1行中的像素之间在第一方向上延伸，其中L和h为自然数。L为通过n除以k获得的值，其中L为自然数。</base:Paragraphs>
+      <base:Paragraphs id="p0032" num="n0029">数据线包括多个数据线组，多个数据线组分别包括L条数据线，数据线组中的第一数据线为直数据线，并且除了直数据线以外的数据线为弯曲数据线，其中，L条数据线在第一区域上在与第一方向交叉的第二方向上延伸，直数据线在第二方向上延伸，弯曲数据线在第一行至第e行中在第二方向、第一方向和第二方向上延伸以从第e行在第二方向上延伸，第一方向对应于行方向，并且第二方向对应于列方向。</base:Paragraphs>
+      <base:Paragraphs id="p0033" num="n0030">在作为显示面板的相对于显示面板的中心部分位于第一方向上的左侧处的区域的、显示面板的左侧区域中且在第一行至第e行中，当位于第h+1行中的像素的数量比位于第h行中的像素的数量多c时，在显示面板的左侧区域和第一行至第e行中，c条弯曲数据线在位于第h行中的像素与位于第h+1行中的像素之间在第一方向上延伸，以及在作为显示面板的相对于显示面板的中心部分位于第一方向上的右侧处的区域的、显示面板的右侧区域中且在第一行至第e行中，当位于第h+1行中的像素的数量比位于第h行中的像素的数量多d时，在显示面板的右侧区域和第一行至第e行中，d条弯曲数据线在位于第h行中的像素与位于第h+1行中的像素之间在第一方向上延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0034" num="n0031">位于第一区域中的每个中的L条数据线中彼此相邻的数据线在第一方向上彼此相隔开第一距离，并且在第一方向上具有预定宽度，以及与彼此相邻的数据线的侧边之间的距离对应的间距是通过将宽度加上第一距离而获得的值来确定的，以及在显示面板中在第二方向上彼此相邻的像素之间的第二距离等于或大于以下的值，即通过将位于显示面板的左侧区域上且在第一行至第e行中彼此相邻的行中的像素的数量的差值、和位于显示面板的右侧区域中且在第一行至第e行中彼此相邻的行中的像素的数量的差值中的最大值乘以间距而获得的值。</base:Paragraphs>
+    </business:Disclosure>
+    <business:DrawingsDescription id="description-of-drawings001">
+      <base:Paragraphs id="p0035">附图说明</base:Paragraphs>
+      <base:Paragraphs id="p0036" num="n0032">通过参照附图详细描述的示例性实施方式，特征将对于本领域技术人员而言变得明显，在附图中：</base:Paragraphs>
+      <base:Paragraphs id="p0037" num="n0033">图1示出了显示设备的实施方式；</base:Paragraphs>
+      <base:Paragraphs id="p0038" num="n0034">图2示出了像素的实施方式；</base:Paragraphs>
+      <base:Paragraphs id="p0039" num="n0035">图3示出了像素的另一实施方式；</base:Paragraphs>
+      <base:Paragraphs id="p0040" num="n0036">图4A和图4B示出了数据线与像素之间的连接的实施方式；</base:Paragraphs>
+      <base:Paragraphs id="p0041" num="n0037">图5示出了一个第一区域中的L条数据线的实施方式；</base:Paragraphs>
+      <base:Paragraphs id="p0042" num="n0038">图6至图8示出了多个行中的像素之间的距离的实施方式；</base:Paragraphs>
+      <base:Paragraphs id="p0043" num="n0039">图9示出了图4A中的区域B1的视图；</base:Paragraphs>
+      <base:Paragraphs id="p0044" num="n0040">图10A和图10B示出了数据线与像素之间的连接的另一实施方式；</base:Paragraphs>
+      <base:Paragraphs id="p0045" num="n0041">图11示出了显示设备的另一实施方式；</base:Paragraphs>
+      <base:Paragraphs id="p0046" num="n0042">图12示出了像素和数据线的另一实施方式；</base:Paragraphs>
+      <base:Paragraphs id="p0047" num="n0043">图13示出了显示设备的另一实施方式；</base:Paragraphs>
+      <base:Paragraphs id="p0048" num="n0044">图14示出了像素和数据线的另一实施方式；</base:Paragraphs>
+      <base:Paragraphs id="p0049" num="n0045">图15A和图15B示出了数据线与像素之间的连接的实施方式；以及</base:Paragraphs>
+      <base:Paragraphs id="p0050" num="n0046">图16至图18示出了多个行中的像素之间的距离的另一实施方式。</base:Paragraphs>
+    </business:DrawingsDescription>
+    <business:InventionMode id="mode-for-invention001">
+      <base:Paragraphs id="p0051">具体实施方式</base:Paragraphs>
+      <base:Paragraphs id="p0052" num="n0047">现在将参照附图对示例性实施方式进行描述，然而示例性实施方式可以表现为不同的形式，并且不应被解释为受本文中所记载的实施方式的限制。相反，这些实施方式被提供以使得本公开将是彻底且完整的，并且将示例性实现方式完全地传达给本领域技术人员。多个实施方式(或多个实施方式的各部分)可被结合以形成另外的实施方式。</base:Paragraphs>
+      <base:Paragraphs id="p0053" num="n0048">在附图中，为了图示的清晰性，层和区域的尺寸可被夸大。还将理解，当层或元件被称为位于另一层或衬底“上”时，该层或元件可直接位于另一层或衬底上，或者也可存在中间层。另外，将理解，当层被称为位于另一层“下”时，该层可直接位于另一层之下，并且也可存在一个或多个中间层。此外，还将理解，当层被称为位于两个层“之间”时，该层可为两个层之间的唯一层，或者也可存在有一个或多个中间层。贯穿整体，相同的附图标记指示相同的元件。</base:Paragraphs>
+      <base:Paragraphs id="p0054" num="n0049">当元件被称为“连接”或“联接”至另一元件时，该元件可直接连接或联接至另一元件，或者经由插置于它们之间的一个或多个中间元件间接地连接或联接至另一元件。此外，当元件被称为“包括”部件时，除非另有不同的公开，否则这指示元件还可包括另一部件、而不是排除另一部件。</base:Paragraphs>
+      <base:Paragraphs id="p0055" num="n0050">图1示出了显示设备100的实施方式，显示设备100包括显示面板110、栅驱动器120、数据驱动器130和柔性电路板140。栅驱动器120可为例如扫描驱动单元。显示面板110可具有各种形状，例如，如图1中的圆形或另一非矩形形状。</base:Paragraphs>
+      <base:Paragraphs id="p0056" num="n0051">显示面板110可以是包括有机发光器件的有机发光显示面板，或者包括液晶层的液晶显示面板。在另一实施方式中，显示面板110可为包括电润湿层的电润湿显示面板，或包括电泳层的电泳显示面板。</base:Paragraphs>
+      <base:Paragraphs id="p0057" num="n0052">显示面板110的平面上的区域可包括显示区域DA和非显示区域NDA，显示区域DA具有圆形形状，并且非显示区域NDA与显示区域DA相邻或围绕显示区域DA。非显示区域NDA的外部部分可为圆形。</base:Paragraphs>
+      <base:Paragraphs id="p0058" num="n0053">显示面板110包括多个像素PX、多条栅线GL1至GLm和多条数据线DL1至DLn，其中，m和n为自然数。像素PX以行和列的方式排列在显示区域DA中，并且连接至栅线GL1至GLm和数据线DL1至DLn。像素PX可排列在显示区域DA中以允许显示区域DA具有圆形形状。</base:Paragraphs>
+      <base:Paragraphs id="p0059" num="n0054">像素PX中的每个可显示预定数量的颜色中的一种，其中预定数量的颜色为例如红色、绿色和蓝色或颜色的另一种组合。例如，在一个实施方式中，颜色可为白色、黄色、青色和品红色。</base:Paragraphs>
+      <base:Paragraphs id="p0060" num="n0055">栅线GL1至GLm在第一方向DR1上延伸，并且连接至栅驱动器120。栅线GL1至GLm和数据线DL1至DLn彼此绝缘且彼此交叉。数据线DL1至DLn连接至数据驱动器130。并且，预定数量的数据线DL1至DLn可在与第一方向DR1交叉的第二方向DR2上延伸。其它数据线或剩余数据线可在第二方向DR2、第一方向DR1及第二方向DR2上延伸。各行中的像素PX连接至数据线DL1至DLn中的对应数据线。</base:Paragraphs>
+      <base:Paragraphs id="p0061" num="n0056">栅驱动器120可位于非显示区域NDA中，并且连接至栅线GL1至GLm。栅驱动器120可例如与像素PX的晶体管同时并且使用相同的工艺形成在显示面板110的非显示区域NDA中。</base:Paragraphs>
+      <base:Paragraphs id="p0062" num="n0057">栅驱动器120可安装在显示面板110的非显示区域NDA中，并且可为例如非晶硅TFT栅驱动电路(ASG)或氧化硅TFT栅驱动电路(OSG)。在另一实施方式中，栅驱动器120可例如通过玻璃上芯片(chip-on-glass；COG)的方式实施在安装于显示面板110的非显示区域NDA中的多个驱动芯片内。</base:Paragraphs>
+      <base:Paragraphs id="p0063" num="n0058">数据驱动器130可为安装在柔性电路板140上的驱动芯片中的实施方式。柔性电路板140连接至显示面板110的非显示区域NDA。数据驱动器130可例如经由柔性电路板140连接至显示面板110的非显示区域NDA。在一个实施方式中，数据驱动器130可通过COG的方式安装在显示面板110的非显示区域NDA中。</base:Paragraphs>
+      <base:Paragraphs id="p0064" num="n0059">栅驱动器120生成多个栅信号(或扫描信号)并且将多个栅信号(或扫描信号)依次施加到栅线GL1至GLm。数据驱动器130生成多个模拟型数据电压，以将所生成的数据电压施加到数据线DL1至DLn。栅信号经由栅线GL1至GLm提供至像素PX。数据电压经由数据线DL1至DLn提供至像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0065" num="n0060">像素PX基于经由栅线GL1至GLm接收到的栅信号而经由数据线DL1至DLn接收数据电压。像素PX发出具有与数据电压对应的灰度值的光，以显示图像。</base:Paragraphs>
+      <base:Paragraphs id="p0066" num="n0061">显示设备100可包括时序控制器，时序控制器向栅驱动器120提供栅控制信号并且向数据驱动器130提供数据控制信号和图像信号。时序控制器可安装在例如印刷电路板上，并且连接至柔性电路板140。栅驱动器120基于栅控制信号生成栅信号。数据驱动器130基于数据控制信号生成与图像信号对应的数据电压。</base:Paragraphs>
+      <base:Paragraphs id="p0067" num="n0062">图2和图3示出了像素的不同实施方式，其例如可为显示设备100中的像素的代表。参照图2，像素PX包括发光器件OLED、驱动器件DT、电容器件C和开关器件ST。当显示面板110为有机发光显示面板时，显示面板110可包括多个像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0068" num="n0063">发光器件OLED可为包括有机发光层的有机发光器件。电容器件C可为电容器。驱动器件DT和开关器件ST可为P型晶体管。在另一实施方式中，驱动器件DT和开关器件ST可为N型晶体管。</base:Paragraphs>
+      <base:Paragraphs id="p0069" num="n0064">驱动器件DT包括输入端子、输出端子和控制端子，其中输入端子连接至电容器件C的第一电极以接收第一电源电压ELVDD，输出端子连接至发光器件OLED的输入端子(或阳极)，并且控制端子连接至开关器件ST的输出端子。电容器件C的第二电极连接至驱动器件DT的控制端子。发光器件OLED的输出端子(或阴极)接收第二电源电压ELVSS。</base:Paragraphs>
+      <base:Paragraphs id="p0070" num="n0065">开关器件ST包括输入端子、输出端子和控制端子，其中输入端子连接至数据线DL1至DLn中的对应数据线DLj，输出端子连接至驱动器件DT的控制端子，并且控制端子连接至栅线GL1至GLm中的对应栅线GLi，并且i和j为自然数。</base:Paragraphs>
+      <base:Paragraphs id="p0071" num="n0066">栅信号经由栅线GLi施加至开关器件ST的控制端子。开关器件ST基于栅信号而被导通。被导通的开关器件ST将经由数据线DLj接收到的数据电压提供到第一节点N1。电容器件C充电有提供到第一节点N1的数据电压，从而即使在开关器件ST被关断之后也保持被充电的数据电压。</base:Paragraphs>
+      <base:Paragraphs id="p0072" num="n0067">驱动器件DT接收充电在电容器件C中的数据电压，并且随后被导通。驱动器件DT可被导通，直至充电在电容器件C中的数据电压被完全放电。被导通的驱动器件DT接收第一电源电压ELVDD。由此，电流经由驱动器件DT提供到发光器件OLED以允许发光器件OLED发光。发光器件OLED可发光以显示与数据电压对应的图像。</base:Paragraphs>
+      <base:Paragraphs id="p0073" num="n0068">参照图3，在另一实施方式中，显示面板110可为液晶显示面板，其包括第一衬底111、面对第一衬底111的第二衬底112、以及位于第一衬底111与第二衬底112之间的液晶层LC。</base:Paragraphs>
+      <base:Paragraphs id="p0074" num="n0069">像素PX中的每个包括连接至液晶电容器Clc的、晶体管TR和存储电容器Cst。晶体管TR连接至栅线GL1至GLm中的相应栅线GLi以及数据线DL1至DLn中的相应数据线DLj。液晶电容器Clc连接至晶体管TR。存储电容器Cst并联连接至液晶电容器Clc。在一个实施方式中，存储电容器Cst可被省略。</base:Paragraphs>
+      <base:Paragraphs id="p0075" num="n0070">栅线GLi、数据线DLj和晶体管TR可位于第一衬底111上。晶体管TR包括连接至栅线GLi的栅电极、连接至数据线DLj的源电极以及连接至液晶电容器Clc和存储电容器Cst的漏电极。</base:Paragraphs>
+      <base:Paragraphs id="p0076" num="n0071">液晶电容器Clc包括位于第一衬底111上的像素电极PE、位于第二衬底112上以与像素电极PE相对的公共电极CE、以及位于像素电极PE与公共电极CE之间的液晶层LC。液晶层LC可用作电介质。像素电极PE连接至晶体管TR的漏电极。</base:Paragraphs>
+      <base:Paragraphs id="p0077" num="n0072">在图3中，像素电极PE具有无缝结构。在另一实施方式中，像素电极PE可具有缝隙结构，其中缝隙结构包括例如具有十字形状的茎部和从茎部径向延伸的多个分枝部。公共电极CE可布置在第二衬底112的整个表面上方。在一个实施方式中，公共电极CE可位于第一衬底111上。在这种情况下，像素电极PE和公共电极CE中的至少一个可具有缝隙结构。</base:Paragraphs>
+      <base:Paragraphs id="p0078" num="n0073">存储电容器Cst可包括像素电极PE、从存储线分枝的存储电极以及位于像素电极PE与存储电极之间的绝缘层。存储线位于第一衬底111上。并且，存储线和栅线GLi可同时位于同一层上。存储电极可与像素电极PE部分重叠。</base:Paragraphs>
+      <base:Paragraphs id="p0079" num="n0074">像素PX还可包括滤色器CF以发出例如红色、绿色或蓝色的光。作为示例性实施方式，滤色器CF可位于第二衬底112上，例如，如图3中那样。在另一实施方式中，滤色器CF可位于第一衬底111上。</base:Paragraphs>
+      <base:Paragraphs id="p0080" num="n0075">晶体管TR基于经由栅线GLi提供的栅信号被导通。经由数据线DLj接收到的数据电压经由被导通的晶体管TR提供到液晶电容器Clc的像素电极PE。公共电压被施加到公共电极CE。</base:Paragraphs>
+      <base:Paragraphs id="p0081" num="n0076">基于数据电压与公共电压之间的电压电平之差，像素电极PE与公共电极CE之间形成电场。通过像素电极PE与公共电极CE之间的电场来控制液晶层LC中的液晶分子以发光，从而形成图像。</base:Paragraphs>
+      <base:Paragraphs id="p0082" num="n0077">具有均匀的电压电平的存储电压可被施加到存储线。在一个实施方式中，公共电压可被施加到存储线。存储电容器Cst可补充在液晶电容器Clc中被充电的电压。</base:Paragraphs>
+      <base:Paragraphs id="p0083" num="n0078">图4A和图4B示出了例如与图1的显示面板对应的、数据线与像素之间的连接的实施方式。图4A示出了位于显示面板110的中心部和左侧区域LA上的像素PX。图4B示出了位于显示面板110的右侧区域RA上的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0084" num="n0079">参照图4A和图4B，像素PX排列成多行ROW_1至ROW_m和多列COL_1至COL_n。行ROW_1至ROW_m在第一方向DR1上延伸。列COL_1至COL_n在第二方向DR2上延伸。在图4A和图4B中，行ROW_1至ROW_m的编号向上逐渐增加。列COL_1至COL_n的编号在向右方向上逐渐增加。</base:Paragraphs>
+      <base:Paragraphs id="p0085" num="n0080">像素PX可包括多个红色像素以发出红光、多个绿色像素以发出绿光、以及多个蓝色像素以发出蓝光。在一个实施方式中，像素PX可包括多个白色像素、多个黄色像素、多个青色像素和多个品红色像素。像素PX可在行ROW_1至ROW_m中的每个中以红色像素、绿色像素和蓝色像素的顺序排列，或者在另一实施方式中以不同的顺序排列。</base:Paragraphs>
+      <base:Paragraphs id="p0086" num="n0081">K个像素PX可位于行ROW_1至ROW_m中的第a行中，其中a和k为自然数。例如，当a为1时，如图4A和图4B中所示的k个像素PX可位于第一行ROW_1中。在另一实施方式中，第a行可位于第一行ROW_1与作为最后一行的第m行ROW_m之间。行ROW_1至ROW_m中的第一行ROW_1可与数据驱动器130相邻。位于第一行ROW_1中的k个像素PX可位于第一列COL_1与作为最后一列的第n列COL_n之间的、第g列COL_g至第p列COL_p中。值g和p为自然数，其中g大于1，p大于g，并且n大于p。</base:Paragraphs>
+      <base:Paragraphs id="p0087" num="n0082">参照图4A和图4B，具有与位于第一行ROW_1中的像素PX相同数量的k个像素PX可位于第m行ROW_m中。在一个实施方式中，数量比位于第一行ROW_1中的像素PX的数量更多的像素PX可位于第m行ROW_m中。</base:Paragraphs>
+      <base:Paragraphs id="p0088" num="n0083">位于第一行ROW_1中的k个像素PX可为行ROW_1至ROW_m中减少数量的或最少数量的像素。在图4A和图4B中，k＝9，但是在另一实施方式中，k在第一行ROW_1中可为不同的数量。</base:Paragraphs>
+      <base:Paragraphs id="p0089" num="n0084">n个像素PX可位于第一行ROW_1与第m行ROW_m之间的行中的第e行ROW_e至第f行ROW_f中的每个中。在一个实施方式中，数n大于k，e和f为自然数，e大于1，f等于或大于e，并且m大于f。</base:Paragraphs>
+      <base:Paragraphs id="p0090" num="n0085">位于第e行ROW_e至第f行ROW_f中的每个中的n个像素PX可为行ROW_1至ROW_m中的像素PX的、较大数量或最大数量的像素PX。在图4A和图4B中，n＝27，但是在另一实施方式中n可在第e行ROW_e至第f行ROW_f中的每个中为不同的数量。在一个实施方式中，大于k且小于n的数量的像素PX可位于剩余行的每个中，除了第一行ROW_1、第m行ROW_m和第e行ROW_e外。</base:Paragraphs>
+      <base:Paragraphs id="p0091" num="n0086">在第一行ROW_1与第e行ROW_e之间的行中的当前行中像素PX的数量可等于或大于前一行中像素PX的数量。在一个实施方式中，当前行中的像素PX的数量可与前一行中的像素PX的数量相同。</base:Paragraphs>
+      <base:Paragraphs id="p0092" num="n0087">第f行ROW_f与第m行ROW_m之间的行中的当前行中像素PX的数量可等于或小于前一行中像素PX的数量。例如，布置在第f+2行中的像素PX的数量可与第f+1行中的像素PX的数量相同，并且第f+3行中的像素PX的数量可小于布置在第f+2行中的像素PX的数量。</base:Paragraphs>
+      <base:Paragraphs id="p0093" num="n0088">L条数据线可位于第一区域A1中的每个中，第一区域A1对应于第一行ROW_1中的相邻像素PX之间的区域、以及与位于第一行ROW_1的第一列和最后一列中的一列中像素PX的一侧相邻的区域，其中L为自然数。例如，与作为第一行ROW_1的最后一列的第p列COL_p中的像素PX的右侧相邻的区域可为第一区域A1或者包括第一区域A1。</base:Paragraphs>
+      <base:Paragraphs id="p0094" num="n0089">数L可为基于在行ROW_1至ROW_m中的像素PX中的、像素PX的最大数量除以像素PX的最小数量的值。例如，L可为基于n除以k的值。在这种情况下，数L对应于通过将n除以k获得的值的商。如果当n除以k时不存在余值，则L条数据线可位于第一区域A1中的每个中。然而，如果当n除以k时存在余值，则其它或剩余的数据线可附加地位于第一区域A1中。</base:Paragraphs>
+      <base:Paragraphs id="p0095" num="n0090">数据线DL1至DLn可包括多个数据线组DLG，数据线组DLG各自包括L条数据线。例如，如图4A和图4B中所示，当n＝27并且k＝9时，L可确定为3。由此，3条数据线可位于第一区域A1中的每个中。</base:Paragraphs>
+      <base:Paragraphs id="p0096" num="n0091">数据线DL1至DLn在第一区域A1中在第二方向DR2上延伸。第一区域A1中的数据线DL1至DLn在第二方向DR2上延伸至数据驱动器130并连接至数据驱动器130。</base:Paragraphs>
+      <base:Paragraphs id="p0097" num="n0092">数据线组DLG包括多个直数据线SDL和多个弯曲数据线BDL。直数据线SDL可为数据线组DLG中的每个的L条数据线中的第一数据线。弯曲数据线BDL可为除直数据线SDL以外的数据线。</base:Paragraphs>
+      <base:Paragraphs id="p0098" num="n0093">直数据线SDL可在第二方向DR2上延伸，并且连接至位于第g列COL_g至第p列COL_p中的相应列中的像素PX。在第一行ROW_1至第e行ROW_e中，弯曲数据线BDL可弯曲两次以在第二方向DR2、第一方向DR1和第二方向DR2上延伸。弯曲数据线BDL从第e行ROW_e开始在第二方向DR2上延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0099" num="n0094">弯曲数据线BDL可延伸为关于显示面板110的中心部分的预定区域彼此成两侧对称。弯曲数据线BDL可包括第一弯曲数据线BDL1至第v弯曲数据线至BDLv，并且连接至未与直数据线SDL连接的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0100" num="n0095">显示面板110的、相对于显示面板110的中心部分在第一方向DR1上布置在左侧的区域可对应于显示面板110的左侧区域LA。显示面板110的、相对于显示面板110的中心部分在第一方向DR1上布置在右侧的区域可对应于显示面板110的右侧区域RA。</base:Paragraphs>
+      <base:Paragraphs id="p0101" num="n0096">显示面板110的左侧区域LA的实施方式在图4A中，并且显示面板110的右侧区域RA的实施方式在图4B中。位于显示面板110的中心部分中的像素PX可排列成矩阵的形式，并且可为位于第g+3列至第g+5列中的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0102" num="n0097">在第一行ROW_1至第e行ROW_e中，位于第h行中的像素PX的数量可不同于位于第h+1行中的像素PX的数量，其中h为自然数。在这种情况下，数量与位于第h行中像素PX的数量和位于第h+1行中像素PX的数量之差相同的弯曲数据线BDL可在位于第h行中的像素PX与位于第h+1行中的像素PX之间在第一方向DR1上延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0103" num="n0098">从第二方向DR2弯曲至第一方向DR1以延伸的弯曲数据线BDL可从第一方向DR1弯曲至第二方向DR2以延伸。从第一方向DR1延伸至第二方向DR2的弯曲数据线BDL中的每个可连接至位于列COL_1至COL_n中的相应列中的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0104" num="n0099">第一区域A1中的弯曲数据线BDL接连地从第二方向DR2延伸至第一方向DR1，同时弯曲数据线BDL的序号从第一弯曲数据线BDL1开始增加。并且，第一区域A1中的弯曲数据线BDL接连地从第二方向DR2延伸至第一方向DR1，同时弯曲数据线BDL的序号从第v弯曲数据线BDLv开始减少。</base:Paragraphs>
+      <base:Paragraphs id="p0105" num="n0100">当显示面板110的左侧区域LA和第一行ROW_1至第e行ROW_e中的、位于第h+1行中的像素PX的数量比位于第h行中的像素PX的数量多c时，c个弯曲数据线BDL可在显示面板110的左侧区域LA和第一行ROW_1至第e行ROW_e中在第一方向DR1上、在位于第h行中的像素PX与位于第h+1行中的像素PX之间延伸，其中c为自然数。</base:Paragraphs>
+      <base:Paragraphs id="p0106" num="n0101">当在显示面板110的右侧区域RA和第一行ROW_1至第e行ROW_e中的、位于第h+1行中的像素PX的数量比位于第h行中的像素PX的数量多d时，d个弯曲数据线BDL可在显示面板110的右侧区域RA和第一行ROW_1至第e行ROW_e中在第一方向DR1上、在位于第h行中的像素PX与位于第h+1行中的像素PX之间延伸，其中d为自然数。</base:Paragraphs>
+      <base:Paragraphs id="p0107" num="n0102">例如，位于第一行ROW_1中的像素PX的数量可为9，并且位于第二行中的像素PX的数量可为15。位于第一行ROW_1中的像素PX的数量与位于第二行中的像素PX的数量之间的差值为6。因此，6个弯曲数据线BDL可在位于第一行ROW_1中的像素PX与位于第二行中的像素PX之间在第一方向DR1上延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0108" num="n0103">因为在图4A和图4B中像素PX彼此成两侧对称，所以c和d可具有相同的值，例如值3。在一个实施方式中，当像素PX彼此不成两侧对称时，c和d可具有不同的值。</base:Paragraphs>
+      <base:Paragraphs id="p0109" num="n0104">当c和d具有相同的值(例如，3)时，3个弯曲数据线BDL可接连地弯曲以从第二方向DR2延伸至第一方向DR1，同时弯曲数据线BDL的序号从第一弯曲数据线BDL1开始增加。并且，3个弯曲数据线BDL可接连地弯曲以从第二方向DR2延伸至第一方向DR1，同时弯曲数据线BDL的序号从第v弯曲数据线BDLv开始减小。</base:Paragraphs>
+      <base:Paragraphs id="p0110" num="n0105">在显示面板110的左侧区域LA中，在第一区域A1中在第二方向DR2上延伸的弯曲数据线BDL中的第一弯曲数据线BDL1、第二弯曲数据线和第三弯曲数据线在位于第一行ROW_1中的像素PX与布置在第二行中的像素PX之间、在第一方向DR1上接连地弯曲以延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0111" num="n0106">在显示面板110的右侧区域RA中，在第一区域A1中在第二方向DR2上延伸的弯曲数据线BDL中的第v弯曲数据线BDLv、第v-1弯曲数据线和第v-2弯曲数据线在布置于第一行ROW_1中的像素PX与布置于第二行中的像素PX之间、在第一方向DR1上接连地弯曲以延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0112" num="n0107">因为位于第二行中的像素PX的数量为15并且位于第三行中的像素PX的数量为19，所以位于第二行中的像素PX的数量与位于第三行中的像素PX的数量之间的差值为4。在显示面板110的左侧区域LA和右侧区域RA中，第四和第五弯曲数据线以及第v-3弯曲数据线和第v-4弯曲数据线可在位于第二行中的像素PX与位于第三行中的像素PX之间在第一方向DR1上接连地弯曲以延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0113" num="n0108">弯曲数据线BDL可在第一行ROW_1至第e行ROW_e中通过先前的方式从第二方向DR2弯曲以延伸至第一方向DR1。在第一方向DR1上延伸的弯曲数据线BDL从第一弯曲数据线BDL1和第v弯曲数据线BDLv接连地从第一方向DR1弯曲以延伸至第二方向DR2。</base:Paragraphs>
+      <base:Paragraphs id="p0114" num="n0109">从第一方向DR1弯曲以延伸至第二方向DR2的弯曲数据线BDL中的每个连接至位于第一列COL_1至第g-1列以及第p+1列至第n列COL_n中的相应列中的像素PX。从第一方向DR1弯曲以延伸至第二方向DR2的弯曲数据线BDL以列为单位连接至从第一弯曲数据线BDL1开始接连地布置在第g-1列至第一列COL_1中的像素PX，以及以列为单位连接至从第v弯曲数据线BDLv接连地布置在第p+1列至第n列COL_n中的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0115" num="n0110">例如，在显示面板110的左侧区域LA中，在排列在第一行ROW_1中的像素PX与位于第二行中的像素PX之间在第一方向DR1上延伸的第一弯曲数据线BDL1、第二弯曲数据线和第三弯曲数据线接连地从第一方向DR1弯曲以延伸至第二方向DR2。在显示面板110的左侧区域LA中，从第一方向DR1延伸至第二方向DR2的第一弯曲数据线BDL1、第二弯曲数据线和第三弯曲数据线以列为单位接连地连接至位于第e-1列至第e-3列中的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0116" num="n0111">第一弯曲数据线BDL1从第一方向DR1延伸至第二方向DR2，并且连接至排列在第一列COL_1至第e-1列中的相应的第e-1列中的像素PX。第二弯曲数据线从第一方向DR1延伸至第二方向DR2，并且连接至排列在第一列COL_1至第e-1列中的相应的第e-2列中的像素PX。第三弯曲数据线从第一方向DR1延伸至第二方向DR2，并且连接至排列在第一列COL_1至第e-1列中的相应的第e-3列中的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0117" num="n0112">在显示面板110的右侧区域RA中，第v弯曲数据线BDLv、第v-1弯曲数据线和第v-2弯曲数据线可以相同的方式延伸，并且以列为单位接连地连接至位于第p+1、第p+2和第p+3列中的像素PX。弯曲数据线BDL中的其它或剩余的弯曲数据线可以相同的方式连接至像素PX中的其它或剩余的像素。</base:Paragraphs>
+      <base:Paragraphs id="p0118" num="n0113">例如，弯曲数据线BDL可从第一弯曲数据线BDL1和第v弯曲数据线BDLv开始接连地在第二方向DR2、第一方向DR1和第二方向DR2上延伸。在一个实施方式中，弯曲数据线BDL可在第二方向DR2、第一方向DR1和第二方向DR2上延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0119" num="n0114">图5示出了位于图4A的一个第一区域中的L条数据线的实施方式。图6至图8为示出图4A和图4B中位于相邻行中的像素之间的距离的示例的视图。图6至图8中的每个示出了位于显示面板110的左侧区域LA中且位于第一行ROW_1至第e行ROW_e中的两行中的像素的示例。</base:Paragraphs>
+      <base:Paragraphs id="p0120" num="n0115">参照图5，位于第一行ROW_1的第一区域A1中的L条数据线DLj、DLj+1和DLj+2在第二方向DR2上延伸，并且在第一方向DR1上彼此相距相同的距离。数据线DLj、DLj+1和DLj+2中彼此相邻的数据线在第一区域A1中在第一方向DR1上可彼此相隔开第一距离GP1。</base:Paragraphs>
+      <base:Paragraphs id="p0121" num="n0116">数据线DLj、DLj+1和DLj+2中的每个在第一方向DR1上具有预定宽度WD。L条数据线DLj、DLj+1和DLj+2中在第一方向DR1上彼此相邻的数据线的侧边的距离对应于间距PT。间距PT可基于第一距离GP1与宽度WD之和。</base:Paragraphs>
+      <base:Paragraphs id="p0122" num="n0117">参照图6至图8，像素PX具有相同的大小。位于第h行中的像素PX和位于第h+1行中的像素PX在第一方向DR1上排列。在显示面板110上位于在第二方向DR2上相邻的行中的像素PX之间的距离可对应于第二距离GP2。</base:Paragraphs>
+      <base:Paragraphs id="p0123" num="n0118">第二距离GP2可等于或大于间距PT与以下差值中的最大值的乘积，即在左侧区域LA上且位于第一行ROW_1至第e行ROW_e中彼此相邻的行中的像素PX的数量的差值、和在右侧区域RA上且位于第一行ROW_1至第e行ROW_e中彼此相邻的行中的像素PX的数量的差值。</base:Paragraphs>
+      <base:Paragraphs id="p0124" num="n0119">如参照图4A和图4B所描述的，当像素PX彼此成两侧对称时，c和d可具有相同的值。在显示面板110的左侧区域LA和第一行ROW_1至第e行ROW_e中，位于彼此相邻的行中的像素PX的数量的差值可为1至3。在显示面板110的右侧区域RA和第一行ROW_1至第e行ROW_e中，位于彼此相邻的行中的像素PX的数量的差值可为1至3。</base:Paragraphs>
+      <base:Paragraphs id="p0125" num="n0120">在显示面板110的左侧区域LA上且在第一行ROW_1至第e行ROW_e中彼此相邻的行中的像素PX的数量的差值、以及在显示面板110的右侧区域RA上且在第一行ROW_1至第e行ROW_e中彼此相邻的行中的像素PX的数量的差值中的最大值为3。因此，第二距离GP2可等于或大于间距PT与值3的乘积。</base:Paragraphs>
+      <base:Paragraphs id="p0126" num="n0121">当h＝1时，如图6中所示，位于第一行ROW_1中的像素PX与位于第二行ROW_2中的像素PX之间的第二距离GP2可等于或大于间距PT与值3的乘积，例如，GP2≥PT x 3。当h＝2时，如图7中所示，位于第二行ROW_2中的像素PX与位于第三行ROW_3中的像素PX之间的第二距离GP2可等于或大于间距PT与值3的乘积。</base:Paragraphs>
+      <base:Paragraphs id="p0127" num="n0122">当h为e-1时，如图8中所示，位于第e-1行ROW_e-1中的像素PX与位于第e行ROW_e中的像素PX之间的第二距离GP2可等于或大于间距PT与值3的乘积。相邻的行和其它或剩余的行中的像素PX之间的第二距离GP2也可等于或大于通过间距PT乘以3所获得的值。</base:Paragraphs>
+      <base:Paragraphs id="p0128" num="n0123">像素PX可不布置成彼此成两侧对称。例如，在显示面板110的左侧区域LA和第一行ROW_1至第e行ROW_e中，相邻的行中的像素PX的数量的差值可为1至4。在显示面板110的右侧区域RA和第一行ROW_1至第e行ROW_e中，相邻的行中的像素PX的数量的差值可为1至3。在这种情况下，第二距离GP2可等于或大于间距PT与值4的乘积。</base:Paragraphs>
+      <base:Paragraphs id="p0129" num="n0124">当数量为L条数据线DL1至DLn没有位于第一行ROW_1的像素PX之间，而是一条一条地布置在第一行ROW_1的像素PX之间时，不位于像素PX之间的数据线可经由其上没有布置有像素PX的非显示区域NDA延伸。因为确保了非显示区域NDA中的、布置有未设置在像素PX之间的数据线的空间，所以非显示区域NDA的边框区域可增加。</base:Paragraphs>
+      <base:Paragraphs id="p0130" num="n0125">在实施方式中，L条数据线DL1至DLn位于第一行ROW_1的像素PX之间。其结果，边框区域可减小。因此，显示设备100可实现窄的边框。</base:Paragraphs>
+      <base:Paragraphs id="p0131" num="n0126">图9示出了根据一个实施方式的图4A的区域B1的剖视图。参照图9，在第二方向DR2上延伸的一条数据线可与在第一方向DR1上延伸的至少一条数据线交叉。在第一方向DR1和第二方向DR2上延伸的且交叉的数据线可彼此绝缘。例如，在第二方向DR2上延伸的第j数据线DLj可与在第一方向DR1上延伸的第j+1数据线DLj+1交叉。彼此交叉的第j数据线DLj和第j+1数据线DLj+1中的第j+1数据线DLj+1可包括桥接电极BE、第一子线SL1和第二子线SL2。</base:Paragraphs>
+      <base:Paragraphs id="p0132" num="n0127">第一绝缘层INS1位于第一衬底111上，并且第j数据线DLj和第j+1数据线DLj+1位于第一绝缘层INS1上。第j+1数据线DLj+1的第一子线SL1和第二子线SL2布置成使第j数据线DLj位于第一子线SL1与第二子线SL2之间。第二绝缘层INS2位于第一绝缘层INS1上并且覆盖第j数据线DLj和第j+1数据线DLj+1。</base:Paragraphs>
+      <base:Paragraphs id="p0133" num="n0128">第j+1数据线DLj+1的桥接电极BE位于第二绝缘层INS2上。桥接电极BE和第j数据线DLj可布置成使第二绝缘层INS2位于桥接电极BE与第j数据线DLj之间。桥接电极BE穿过第二绝缘层INS2并且经由接触孔CH连接至第一子线SL1和第二子线SL2，接触孔CH暴露第一子线SL1和第二子线SL2的预定区域。</base:Paragraphs>
+      <base:Paragraphs id="p0134" num="n0129">因为第一子线SL1和第二子线SL2经由桥接电极BE彼此电连接，所以在第二方向DR2上延伸的第j数据线DLj和在第一方向DR1上延伸的第j+1数据线DLj+1彼此绝缘，即使它们交叉。</base:Paragraphs>
+      <base:Paragraphs id="p0135" num="n0130">图10A和图10B示出了显示面板的数据线与像素之间的连接的实施方式。将对用于图4A和图4B中的数据线DL1至DLn与像素PX之间的连接与用于图10A和图10B中的数据线DL1至DLn与像素PX之间的连接的不同点进行描述。例如，图10A示出了显示面板110_1的中心部分和左侧区域LA中的像素PX。图10B示出了显示面板110_1的右侧区域RA中的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0136" num="n0131">参照图10A和图10B，像素PX排列成行ROW_1至ROW_m和列COL_1至COL_n。第一行ROW_1至第m行ROW_m中的每个中的每个像素PX连接至数据线DL1至DLn中的相应数据线。位于第一行ROW_1至第m行ROW_m中的每个中的像素PX的数量为k。位于第e行ROW_e至第f行ROW_f中的每个中的像素PX的数量为n。其它和剩余行中的每个中的像素PX的数量可小于n且大于k。在图10A和图10B的示例中，k＝9并且n＝25。</base:Paragraphs>
+      <base:Paragraphs id="p0137" num="n0132">位于第一行ROW_1与第e行ROW_e之间的行中的当前行中像素PX的数量可等于或大于前一行中像素PX的数量。位于第f行ROW_f与第m行ROW_m之间的行中的当前行中像素PX的数量可等于或小于前一行中像素PX的数量。</base:Paragraphs>
+      <base:Paragraphs id="p0138" num="n0133">与n除以k获得的值对应的数量为L条数据线可分别位于第一区域A1中。余值可通过n除以k获得，例如，n除以k的余值为b，其中b条数据线可附加地一条一条地布置在b个第一区域A1中，其中b为自然数。</base:Paragraphs>
+      <base:Paragraphs id="p0139" num="n0134">数量L+1条数据线可位于第一区域A1的b个第一区域A1中的每个中，并且L条数据线可位于其它或剩余的第一区域A1中的每个中。数量L+1条数据线从第一区域A1的最左侧开始接连地布置在w个第一区域A1中，并且从最右侧开始接连地布置在b-w个第一区域A1中，其中w为等于或大于0且等于或小于b的整数。</base:Paragraphs>
+      <base:Paragraphs id="p0140" num="n0135">例如，在图10A和图10B的示例中，因为n＝25并且k＝9，所以通过n除以k获得的值为2并且余值为7。因此，L为2并且b为7。并且，两条数据线位于第一区域A1中的每个中。当w为4时，7条数据线中的4条数据线从第一区域A1的最左侧开始一条一条地接连布置在4个第一区域A1中。7条数据线中的其它或剩余3条数据线可从第一区域A1的最右侧开始一条一条地接连布置在3个第一区域A1中。</base:Paragraphs>
+      <base:Paragraphs id="p0141" num="n0136">数据线DL1至DLn的延伸方式和位于第h行中的像素与位于第h+1行中的像素之间的距离可与例如参照图4A、图4B和图5至图8描述的那些基本上相同。</base:Paragraphs>
+      <base:Paragraphs id="p0142" num="n0137">例如，如图4A和图4B中所示，位于第一区域A1中的直数据线SDL可在第二方向DR2上延伸，并且连接至位于第一列COL_1至第n列COL_n中的相应列中的像素PX。弯曲数据线BDL可在第二方向DR2、第一方向DR1和第二方向DR2上延伸，并且连接至位于第一列COL_1至第n列COL_n中的相应列中的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0143" num="n0138">如图6至图8中所示，位于显示面板110_1上的在第二方向DR2上彼此相邻的行中的像素PX之间的第二距离GP2可等于或大于以下的值，即通过将位于显示面板110_1的左侧区域LA上且在第一行ROW_1至第e行ROW_e中彼此相邻的行中的像素PX的数量的差值、和位于显示面板110_1的右侧区域RA上且在第一行ROW_1至第e行ROW_e中彼此相邻的行中的像素PX的数量的差值之中的最大值乘以间距PT所获得的值。</base:Paragraphs>
+      <base:Paragraphs id="p0144" num="n0139">在图10A和图10B的包括显示面板110_1的显示设备中，因为L条或者L+1条数据线可位于第一行ROW_1的像素PX之间，所以边框区域可减小。</base:Paragraphs>
+      <base:Paragraphs id="p0145" num="n0140">图11示出了显示设备200的另一实施方式，并且图12示出了图11的显示面板的区域A2中的像素与数据线的实施方式。例如，图12示出了位于相对于显示面板210的中心区域的左侧中的、显示面板210的左侧区域中的像素PX和数据线。显示面板210可具有两侧对称的结构，例如，位于显示面板210的右侧区域中的像素PX和数据线可与位于显示面板210的左侧区域中的像素PX和数据线对称。位于显示面板210的中心区域中的像素PX可排列成矩阵形式。</base:Paragraphs>
+      <base:Paragraphs id="p0146" num="n0141">参照图11和图12，显示设备200包括显示面板210、栅驱动器220、数据驱动器230和柔性电路板240。显示面板210包括多个像素PX、连接至像素PX的多条栅线GL1至GLm以及多条数据线DL1至DLn。</base:Paragraphs>
+      <base:Paragraphs id="p0147" num="n0142">栅线GL1至GLm在第一方向DR1上延伸并且连接至位于显示面板210的左侧处的非显示区域NDA中的栅驱动器220。数据线DL1至DLn连接至数据驱动器230。数据驱动器230安装在柔性电路板240上，并且连接至位于显示面板210的下端处的非显示区域NDA。</base:Paragraphs>
+      <base:Paragraphs id="p0148" num="n0143">除了显示面板210的形状以及根据显示面板210的形状的像素PX的排列以外，显示设备200可具有与图1的显示设备100相同的构成元件。</base:Paragraphs>
+      <base:Paragraphs id="p0149" num="n0144">显示面板210可具有与车辆的后视镜相似的形状。显示面板210包括在第一方向DR1上延伸的第一侧部S1、在第一方向DR1上延伸且与第一侧部S1相对且长度小于第一侧部S1的长度的第二侧部S2、将第一侧部S1的一侧与第二侧部S2的一侧连接的第三侧部S3以及将第一侧部S1的另一侧与第二侧部S2的另一侧连接的第四侧部S4。第三侧部S3的两侧中的每个的预定区域和第四侧部S4的两侧中的每个的预定区域中的每个具有朝着外部突出的弯曲形状。</base:Paragraphs>
+      <base:Paragraphs id="p0150" num="n0145">显示面板210包括显示区域DA和围绕显示区域DA的非显示区域NDA。像素PX可在显示区域DA中排列成多行和多列。第a行可为第一行ROW_1，并且k个像素PX可位于第一行ROW_1中。n个像素PX可位于第一行ROW_1与第m行ROW_m之间的行中的、第e行ROW_e至第f行ROW_f中的每个中。</base:Paragraphs>
+      <base:Paragraphs id="p0151" num="n0146">数量大于数k的r个像素PX可位于第m行ROW_m中，其中r为大于k且小于n的自然数。具有大于k且小于n的数量的像素PX可位于第一行ROW_1与第e行ROW_e之间的行中的每个中。数量小于n且多于r的像素PX可位于第f行ROW_f与第m行ROW_m之间的行中的每个中。</base:Paragraphs>
+      <base:Paragraphs id="p0152" num="n0147">在第一行ROW_1与第e行ROW_e之间的行中位于当前行中的像素PX的数量可等于或多于位于前一行中的像素PX的数量。第f行ROW_f与第m行ROW_m之间的行中位于当前行中的像素PX的数量可等于或小于前一行中的像素PX的数量。</base:Paragraphs>
+      <base:Paragraphs id="p0153" num="n0148">除了显示面板210的形状以外，数据线DL1至DLn的排列、数据线DL1至DLn的延伸方式和位于第h行中的像素PX与位于第h+1行中的像素PX之间的距离可与如图4A、图4B、图5至图8、图10A和图10B中的基本上相同。</base:Paragraphs>
+      <base:Paragraphs id="p0154" num="n0149">例如，与图4A和图4B中的数据线DL1至DLn的排列相似，与通过n除以k获得的值对应的L条数据线可位于第一行ROW_1的第一区域A1中的每个中。然而，当通过n除以k获得的余值存在时，与图10A和图10B中的数据线DL1至DLn的排列相似，与余值对应的b条数据线可一条一条地附加地布置在第一区域A1中的每个中。</base:Paragraphs>
+      <base:Paragraphs id="p0155" num="n0150">直数据线SDL可在第二方向DR2上延伸并且连接至位于列的相应列中的像素PX。弯曲数据线BDL可在第二方向DR2、第一方向DR1和第二方向DR2上延伸，并且可连接至位于列的相应列中的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0156" num="n0151">如图6至图9中所示，位于显示面板210上在第二方向DR2上彼此相邻的行中的像素PX之间的第二距离GP2可等于或大于以下的值，即通过位于显示面板210的左侧区域LA中且在第一行ROW_1至第e行ROW_e中彼此相邻的行中像素PX的数量的差值、和位于显示面板210的右侧区域RA上且在第一行ROW_1至第e行ROW_e中布置在彼此相邻的行中的像素PX的数量的差值中的最大值乘以间距PT获得的值。</base:Paragraphs>
+      <base:Paragraphs id="p0157" num="n0152">在显示设备200中，L条数据线位于第一行ROW_1的像素PX之间。其结果，边框区域可减小。</base:Paragraphs>
+      <base:Paragraphs id="p0158" num="n0153">图13示出了显示设备300的另一实施方式，并且图14示出了图13的显示面板中的像素与数据线的实施方式。参照图13和图14，显示设备300包括显示面板310、栅驱动器320、数据驱动器330和柔性电路板340。显示面板310包括多个像素PX、连接至像素PX的多条栅线GL1至GLm以及多条数据线DL1至DLn。</base:Paragraphs>
+      <base:Paragraphs id="p0159" num="n0154">栅线GL1至GLm在第一方向DR1上延伸并且连接至位于显示面板310的右侧处的非显示区域NDA中的栅驱动器320。数据线DL1至DLn连接至数据驱动器330。数据驱动器330安装在柔性电路板340上并且连接至位于显示面板310的下端处的非显示区域NDA。</base:Paragraphs>
+      <base:Paragraphs id="p0160" num="n0155">除了显示面板310的形状以及根据显示面板310的形状的像素PX的排列以外，显示设备300可具有与图1的显示设备100相同的构成元件。</base:Paragraphs>
+      <base:Paragraphs id="p0161" num="n0156">显示面板310可具有与护目镜的形状相似的形状。例如，显示面板310包括在第二方向DR2上延伸的第一侧部S1_1、连接至第一侧部S1_1的不同侧以在第一方向DR1上延伸的两个第二侧部S1_2以及与第一侧部S1_1相对的两个弯曲侧部CS1，其中两个弯曲侧部CS1中的每个具有弯曲形状。弯曲侧部CS1具有彼此连接的侧边。弯曲侧部CS1中的每个具有连接至第二侧部S1_2中的相应第二侧部S1_2的端部的一个侧边。弯曲侧部CS1中的每个具有朝着显示面板310的外部突出的弯曲形状。</base:Paragraphs>
+      <base:Paragraphs id="p0162" num="n0157">像素PX可排列成多行ROW_1至ROW_m和多列COL_1至COL_n。第a行ROW_a可为第一行ROW_1与第m行ROW_m之间的行。k个像素PX可位于第a行ROW_a中。n个像素PX可位于第一行ROW_1与第a行ROW_a之间的行中的、第e行ROW_e至第f行ROW_f中的每个中。n个像素PX可位于第a行ROW_a与第m行ROW_m之间的行中的、第q行ROW_q至第u行ROW_u中的每个中。数q和u为自然数，u大于q，并且m大于u。</base:Paragraphs>
+      <base:Paragraphs id="p0163" num="n0158">位于第一行ROW_1和第m行ROW_m中的像素PX的数量可为大于k的r个。具有多于k且小于n的数量的像素PX可位于第a行ROW_a与第q行ROW_q之间的行以及第a行ROW_a与第f行ROW_f之间的行中的每个中。具有多于r且小于n的数量的像素PX可位于第一行ROW_1与第e行ROW_e之间的行以及第u行ROW_u与第m行ROW_m之间的行中的每个中。在图14中，k＝7并且n＝14。</base:Paragraphs>
+      <base:Paragraphs id="p0164" num="n0159">在第一行ROW_1与第e行ROW_e之间的行中位于当前行中的像素PX的数量可等于或多于前一行中的像素PX的数量。在第f行ROW_f与第a行ROW_a之间的行中位于当前行中的像素PX的数量可等于或少于前一行中的像素PX的数量。</base:Paragraphs>
+      <base:Paragraphs id="p0165" num="n0160">在第a行ROW_a与第q行ROW_q之间的行中位于当前行中的像素PX的数量可等于或多于前一行中的像素PX的数量。在第u行ROW_u与第m行ROW_m中位于当前行中的像素PX的数量可等于或少于位于前一行中的像素PX的数量。像素PX可相对于第a行ROW_a在第二方向DR2上彼此竖直对称。</base:Paragraphs>
+      <base:Paragraphs id="p0166" num="n0161">L条数据线可位于第a行ROW_a的第一区域A1中的每个中。直数据线SDL可在第二方向DR2上延伸并且连接至列COL_1至COL_n中的相应列中的像素PX。弯曲数据线BDL可弯曲至少两次，并且可从第二方向DR2延伸至第一方向DR1，并从第一方向DR1延伸至第二方向DR2并连接至列COL_1至COL_n中的相应列中的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0167" num="n0162">因为k＝7并且n＝14，所以L为2。两条数据线可位于第a行ROW_a的第一区域A1中的每个中，并且数据线可在第一区域A1上在第二方向DR2上延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0168" num="n0163">像素PX可以彼此不成两侧对称。例如，位于显示面板310的右侧区域上的行中的像素PX可具有相同的数量，并且位于显示面板310的左侧区域上的行中的像素可具有彼此不同的数量。因此，在图4A和图4B中作为示例提供的值d可不存在，并且仅可存在值c。</base:Paragraphs>
+      <base:Paragraphs id="p0169" num="n0164">在这种情况下，在第一行ROW_1至第q行ROW_q中，具有与位于第h行中的像素PX的数量和位于第h+1行中的像素PX的数量之差z相同的数量的数据线可在位于第h行中的像素PX与位于第h+1行中的像素PX之间在第一方向DR1上延伸，其中z为自然数。</base:Paragraphs>
+      <base:Paragraphs id="p0170" num="n0165">位于第一区域A1中的弯曲数据线BDL从弯曲数据线BDL中的第一弯曲数据线BDL1开始接连地从第二方向DR2延伸至第一方向DR1。从第二方向DR2朝着第一方向DR1弯曲的弯曲数据线BDL可接连地从第一方向DR1朝着第二方向DR2弯曲。</base:Paragraphs>
+      <base:Paragraphs id="p0171" num="n0166">例如，在第f行ROW_f至第a行ROW_a中，当位于第h行中的像素PX的数量与位于第h+1行中的像素PX的数量之间的差值为z时，z条弯曲数据线BDL可在位于第h行中的像素PX与位于第h+1行中的像素PX之间在第一方向DR1上延伸。在第一方向DR1上延伸的z条弯曲数据线BDL中的每个可从第一方向DR1延伸至第二方向DR2，并且连接至位于列COL_1至COL_n中的相应列中的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0172" num="n0167">例如，位于第a-1行中的像素PX的数量与位于第a行ROW_a中的像素PX的数量之差可为3。弯曲数据线BDL中的在第一区域A1上在第二方向DR2上延伸的第一至第三弯曲数据线可在位于第a-1行和第a行ROW_a中的像素PX之间接连地在第一方向DR1上延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0173" num="n0168">在第一方向DR1上延伸的第一至第三弯曲数据线BDL可接连地从第一方向DR1延伸至第二方向DR2。从第一方向DR1延伸至第二方向DR2的第一至第三弯曲数据线BDL中的每个可连接至相对应的列中的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0174" num="n0169">位于第a-2行中的像素PX的数量和位于第a-1行中的像素PX的数量可相同。因此，位于第a-2行中的像素PX与位于第a-1行中的像素PX之间在第一方向DR1上延伸的弯曲数据线BDL不存在。</base:Paragraphs>
+      <base:Paragraphs id="p0175" num="n0170">在其它或剩余的行中，除了第f行ROW_f至第a行ROW_a中的第a行至第a-2行以外，除了第一至第三弯曲数据线以外的弯曲数据线BDL可以相同的方式从第二方向DR2延伸至第一方向DR1，并且随后在第二方向DR2上延伸。这种方式可与参照图4A和图4B描述的数据线DL1至DLn的延伸方式基本上相同。</base:Paragraphs>
+      <base:Paragraphs id="p0176" num="n0171">并且，在第e行ROW_e至第一行ROW_1中，当位于第h行中的像素PX的数量与位于第h+1行中的像素PX的数量之间的差值为z时，弯曲数据线BDL在位于第h行中的像素PX与位于第h+1行中的像素PX之间在第一方向DR1上延伸。例如，因为位于第e-1行和第e行ROW_e中的像素PX的数量与位于第e-2行和第e-1行中的像素PX的数量之差为1，所以一条弯曲数据线BDL在位于第e-1行中的像素PX与位于第e行ROW_e中的像素PX之间以及在位于第e-2行中的像素PX与位于第e-1行中的像素PX之间在第一方向DR1上延伸。其它弯曲数据线BDL可以相同的方式连接。</base:Paragraphs>
+      <base:Paragraphs id="p0177" num="n0172">在第e行ROW_e至第一行ROW_1中，弯曲数据线BDL可从位于最左侧处的弯曲数据线BDL开始接连地从第二方向DR2延伸至第一方向DR1。例如，在位于第e行ROW_e的第一列COL_1中的像素PX与位于第二列中的像素PX之间在第二方向DR2上延伸的弯曲数据线BDL可在位于第e-1行中的像素PX与位于第e行ROW_e中的像素PX之间在第一方向DR1上延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0178" num="n0173">接着，在位于第e行ROW_e的第二列中的像素PX与位于第三列中的像素PX之间在第二方向DR2上延伸的弯曲数据线BDL可在位于第e-2行中的像素PX与位于第e-1行中的像素PX之间在第一方向DR1上延伸。其它弯曲数据线BDL可以相同的方式连接。</base:Paragraphs>
+      <base:Paragraphs id="p0179" num="n0174">在第e行ROW_e至第一行ROW_1中，在第一方向DR1上延伸的弯曲数据线BDL可在与第a行ROW_a中的弯曲数据线BDL的位置对应的位置处在第二方向DR2上延伸。例如，第v弯曲数据线BDLv与第a行ROW_a的第n列COL_n的像素PX的右侧相邻。</base:Paragraphs>
+      <base:Paragraphs id="p0180" num="n0175">在第e行ROW_e至第一行ROW_1中，在第一方向DR1上延伸的第v弯曲数据线BDLv可与位于第e-1行ROW_e-1至第一行ROW_1的第n列COL_n中的像素PX的右侧相邻以在第二方向DR2上延伸。其它的弯曲数据线BDL可以相同的方式连接。在一个实施方式中，在第e行ROW_e至第一行ROW_1中，在第一方向DR1上延伸的弯曲数据线BDL可位于第e行ROW_e至第一行ROW_1的各个列中以在第二方向DR2上延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0181" num="n0176">在第a行ROW_a至第q行ROW_q中，当位于第h行中的像素PX的数量与位于第h+1行中的像素PX的数量之间的差值为z时，z条弯曲数据线BDL可在位于第h行中的像素PX与位于第h+1行中的像素PX之间在第一方向DR1延伸。随后，直数据线SDL可在第二方向DR2上延伸并且连接至位于相对应的行中的像素PX。这种方式可与参照图4A和图4描述的方式基本上相同。</base:Paragraphs>
+      <base:Paragraphs id="p0182" num="n0177">位于显示面板310上在第二方向DR2上彼此相邻的行中的像素PX之间的第二距离GP2等于或大于以下的值，即通过位于显示面板310的第一行ROW_1至第q行ROW_q中彼此相邻的行中的像素PX的数量的差值中的最大值乘以间距PT获得的值。例如，在第一行ROW_1至第q行ROW_q中，因为位于彼此相邻的行中的像素PX的数量的差值的最大值为3，所以第二距离GP2等于或大于通过间距PT乘以3获得的值。</base:Paragraphs>
+      <base:Paragraphs id="p0183" num="n0178">来自第q行ROW_q至第m行ROW_m的数据线DL1至DLn在第二方向DR2上延伸。然而，在第e行ROW_e至第一行ROW_1中，弯曲数据线BDL从第二方向DR2延伸至第一方向DR1，并且然后从第二方向DR2延伸至第一方向DR1。数据线DL1至DLn可经由第一行ROW_1的像素PX之间的空间连接至与第一行ROW_1相邻的数据驱动器330。</base:Paragraphs>
+      <base:Paragraphs id="p0184" num="n0179">具有预定数量的数据线DL1至DLn可位于第一行ROW_1的像素PX之间并且连接至数据驱动器330，以减小显示设备300的边框区域。</base:Paragraphs>
+      <base:Paragraphs id="p0185" num="n0180">图15A和图15B示出了显示面板的数据线与像素之间的连接的另一实施方式。图16至图18示出了图15A和图15B中位于在第二方向上彼此相邻的行中的像素之间的距离的示例。图15A示出了位于显示面板410的中心部分和左侧区域LA中的像素PX。图15B示出了位于显示面板410的右侧区域RA中的像素PX。图16至图18中的每个示出了位于显示面板410的左侧区域LA和第一行ROW_1至第e行ROW_e中的两行中的像素PX的示例。</base:Paragraphs>
+      <base:Paragraphs id="p0186" num="n0181">参照图15A和图15B，像素PX排列成多行ROW_1至ROW_m和多列COL_1至COL_n。像素PX的排列可与图4A和图4B中的像素PX基本上相同。</base:Paragraphs>
+      <base:Paragraphs id="p0187" num="n0182">L条数据线可位于第一行ROW_1的第一区域A1中的每个中。在图15A和图15B中，因为k＝9并且n＝28，所以L可为3。数据线DL1至DLn在第一区域A1上在第二方向DR2上延伸。数据线DL1至DLn中的中间数据线DLc在第二方向DR2上延伸。除了中间数据线DLc以外，其它或剩余的数据线可为弯曲数据线BDL。</base:Paragraphs>
+      <base:Paragraphs id="p0188" num="n0183">在第一行ROW_1至第e行ROW_e中，弯曲数据线BDL可弯曲至少两次，并且可从第二方向DR2延伸至第一方向DR1，并且然后从第一方向DR1延伸至第二方向DR2。弯曲数据线BDL在第二方向DR2上从第e行ROW_e延伸。弯曲数据线BDL可具有相对于中间数据线DLc彼此对称的弯曲形状。</base:Paragraphs>
+      <base:Paragraphs id="p0189" num="n0184">例如，在第一行ROW_1至第e行ROW_e中，与中间数据线DLc的左侧相邻的弯曲数据线BDL可从第二方向DR2的向上方向弯曲以延伸至第一方向DR1的向左方向，并且然后从第一方向DR1的向左方向弯曲以延伸至第二方向DR2的向上方向。在第一行ROW_1至第e行ROW_e中，与中间数据线DLc的右侧相邻的弯曲数据线BDL可从第二方向DR2的向上方向弯曲以延伸至第一方向DR1的向右方向，并且然后从第一方向DR1的向右方向弯曲并延伸至第二方向DR2的向上方向。</base:Paragraphs>
+      <base:Paragraphs id="p0190" num="n0185">在第一行ROW_1至第e行ROW_e中，第一弯曲数据线BDL1可在第二方向DR2的向上方向、第一方向DR1的向左方向和第二方向DR2的向上方向上重复地延伸。在第一行ROW_1至第e行ROW_e中，第v弯曲数据线BDLv可在第二方向DR2的向上方向、第一方向DR1的向右方向和第二方向DR2的向上方向上重复地延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0191" num="n0186">因此，与中间数据线DLc的左侧相邻的弯曲数据线BDL以及与中间数据线DLc的右侧相邻的弯曲数据线BDL的弯曲配置可为彼此对称的。并且，第一弯曲数据线BDL1和第v弯曲数据线BDLv的弯曲配置可为彼此对称的。并且，其它的弯曲数据线BDL的弯曲配置可为相对于中间数据线DLc彼此对称的。</base:Paragraphs>
+      <base:Paragraphs id="p0192" num="n0187">在第一行ROW_1至第e行ROW_e中，具有预定数量的弯曲数据线BDL可在位于第h行和第h+1行中的像素PX之间在第一方向DR1上延伸。在第一行ROW_1至第e行ROW_e中，随着行的数量增加，从第二方向DR2延伸至第一方向DR1的弯曲数据线BDL的数量可增加。例如，虽然在位于第一行ROW_1中的像素PX与位于第二行中的像素PX之间在第一方向DR1上延伸的弯曲数据线BDL的数量为8，但是在位于第二行中的像素PX与位于第三行中的像素PX之间在第一方向DR1上延伸的弯曲数据线BDL的数量为14。</base:Paragraphs>
+      <base:Paragraphs id="p0193" num="n0188">随着行的数量增加，在第一方向DR1上延伸的弯曲数据线BDL的数量可增加。在位于第e-1行中的像素PX与位于第e行ROW_e中的像素PX之间在第一方向DR1上延伸的弯曲数据线BDL的数量可增加或被最大化。</base:Paragraphs>
+      <base:Paragraphs id="p0194" num="n0189">在位于第h行中的像素PX与位于第h+1行中的像素PX之间在第一方向DR1上延伸的弯曲数据线BDL中的每个可连接至相对应的第t列中的像素PX，以在第h+1行的相对应的第t列与第t+1列之间在第二方向DR2上延伸。例如，在位于第一行ROW_1中的像素PX与位于第二行中的像素PX之间在第一方向DR1上延伸的四个弯曲数据线BDL可分别布置在第二行的列中的第一列与第二列之间、第二列与第三列之间、第三列与第四列之间以及第四列与第五列之间以在第二方向DR2上延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0195" num="n0190">在第二方向DR2上延伸的弯曲数据线BDL分别连接至位于第二行的列中的第一列中的像素PX、位于第二列中的像素PX、位于第三列中的像素PX和位于第四列中的像素PX。其它的弯曲数据线BDL也可以相同的方式延伸并且连接至像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0196" num="n0191">位于第一行ROW_1至第e-1行中的多个行中的每行中的每个像素PX可连接至弯曲数据线BDL中的相应的弯曲数据线BDL。中间数据线DLc可不连接至位于第一行ROW_1至第e-1行中的像素PX。在第e行ROW_e至第m行ROW_m中，数据线DL1至DLn在第二方向DR2上延伸，并且连接至位于列COL_1至COL_n中的相对应列中的像素PX。</base:Paragraphs>
+      <base:Paragraphs id="p0197" num="n0192">参照图16至图18，位于显示面板410上在第二方向DR2上彼此相邻的行中的像素PX之间的第二距离GP2可等于或大于以下的值，即通过将位于显示面板410的左侧区域LA上且在第一行ROW_1至第e行ROW_e中彼此相邻的行中的像素PX的数量的差值、和位于显示面板410的右侧区域RA上且在第一行ROW_1至第e行ROW_e中彼此相邻的行中的像素PX的数量的差值中的最大值加上1而算出的值乘以间距PT所获得的值。</base:Paragraphs>
+      <base:Paragraphs id="p0198" num="n0193">位于显示面板410的左侧区域LA上且在第一行ROW_1至第e行ROW_e中彼此相邻的行中像素PX的数量的差值、以及位于显示面板410的右侧区域RA上且在第一行ROW_1至第e行ROW_e中彼此相邻的行中的像素PX的数量的差值的最大值为3。因此，第二距离GP2等于或大于通过将间距PT乘以4获得的值。</base:Paragraphs>
+      <base:Paragraphs id="p0199" num="n0194">当h＝1时，如图16中所示，位于第一行ROW_1中的像素PX与位于第二行ROW_2中的像素PX之间的第二距离GP2可等于或大于通过间距PT乘以4获得的值。当h＝2时，如图17中所示，位于第二行ROW_2中的像素PX与位于第三行ROW_3中的像素PX之间的第二距离GP2可等于或大于通过间距PT乘以4获得的值。</base:Paragraphs>
+      <base:Paragraphs id="p0200" num="n0195">当h为e-1时，如图18中所示，位于第e-1行ROW_e-1中的像素PX与位于第e行ROW_e中的像素PX之间的第二距离GP2可等于或大于通过间距PT乘以4获得的值。位于显示面板410的其它或剩余行中彼此相邻的行中的像素PX之间的第二距离GP2也可等于或大于通过间距PT乘以4获得的值。</base:Paragraphs>
+      <base:Paragraphs id="p0201" num="n0196">如图4A和图4B中所描述，位于显示面板410的第一行ROW_1至第e行ROW_e中且位于左侧区域LA上的第h行中的像素PX的数量与位于第h+1行中的像素PX的数量之间的差值、和位于显示面板410的第一行ROW_1至第e行ROW_e中且位于右侧区域RA上的第h行中的像素PX的数量与位于第h+1行中的像素PX的数量之间的差值可分别为c和d。在图15A和图15B中，因为像素PX彼此成两侧对称，所以c和d可具有相同的值。</base:Paragraphs>
+      <base:Paragraphs id="p0202" num="n0197">在这种情况下，具有与通过c和d中的一个值加上1而获得的值相同数量的线路路由部LRP可被限定在位于第h行中的像素PX与位于第h+1行中的像素PX之间。线路路由部LRP在第一方向DR1上延伸。(为描述的便利，在图16和图18中线路路由部LRP以虚点线示出)。线路路由部LRP中的每个可具有例如与数据线中的每个的宽度WD相同的宽度。</base:Paragraphs>
+      <base:Paragraphs id="p0203" num="n0198">如图16中所示，在显示面板410的左侧区域LA上位于第一行ROW_1中的像素PX的数量与位于第二行ROW_2中的像素PX的数量之间的差值为3。因此，四个线路路由部LRP可处于位于第一行ROW_1中的像素PX与位于第二行ROW_2中的像素PX之间。</base:Paragraphs>
+      <base:Paragraphs id="p0204" num="n0199">如图17中所示，在显示面板410的左侧区域LA上位于第二行ROW_2中的像素PX的数量与位于第三行ROW_3中的像素PX的数量之间的差值为2。因此，三个线路路由部LRP可处于位于第二行ROW_2中的像素PX与位于第三行ROW_3中的像素PX之间。</base:Paragraphs>
+      <base:Paragraphs id="p0205" num="n0200">如图18中所示，在显示面板410的左侧区域LA上位于第e-1行ROW_e-1中的像素PX的数量与位于第e行ROW_e中的像素PX的数量之间的差值为1。因此，两个线路路由部LRP可处于位于第e-1行ROW_e-1中的像素PX与位于第e行ROW_e中的像素PX之间。</base:Paragraphs>
+      <base:Paragraphs id="p0206" num="n0201">当像素PX不为彼此两侧对称时，c和d可具有彼此不同的值。在这种情况下，具有与通过将c和d中相对更大的值加上1而获得的值相同的数量的线路路由部LRP可处于位于第h行中的像素PX与位于第h+1行中的像素PX之间。</base:Paragraphs>
+      <base:Paragraphs id="p0207" num="n0202">在第一方向DR1上延伸的弯曲数据线BDL经由线路路由部LRP延伸。例如，如图16中所示，在位于第一行ROW_1中的像素PX与位于第二行ROW_2中的像素PX之间在第一方向DR1上延伸的弯曲数据线BDL可经由四个线路路由部LRP延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0208" num="n0203">如图17中所示，在位于第二行ROW_2中的像素PX与位于第三行ROW_3中的像素PX之间在第一方向DR1上延伸的弯曲数据线BDL可经由三个线路路由部LRP延伸。如图18中所示，在位于第e-1行ROW_e-1中的像素PX与位于第e行ROW_e中的像素PX之间在第一方向DR1上延伸的弯曲数据线BDL可经由两个线路路由部LRP延伸。</base:Paragraphs>
+      <base:Paragraphs id="p0209" num="n0204">在图15A和图15B的显示面板410中，因为L条数据线DL1至DLn位于第一行ROW_1的像素PX之间，所以边框区域可减小。</base:Paragraphs>
+      <base:Paragraphs id="p0210" num="n0205">本文中已公开了示例性实施方式，并且虽然采用了具体术语，但是这些术语仅以一般且描述性的含义使用和解释，而不是出于限制的目的。在一些情况下，本领域的普通技术人员将明确，除非另有明确指示，否则随着本申请的提交，结合特定实施方式描述的特征、特性和/或元件可单独地使用或者以与结合其它实施方式描述的特征、特性和/或元件结合的方式使用。相应地，在不背离权利要求书中记载的实施方式的精神和范围的情况下，可对形式和细节进行各种改变。</base:Paragraphs>
+    </business:InventionMode>
+  </business:Description>
+  <business:Drawings lang="zh" sourceDB="national office">
+    <base:Figure id="f0001" num="0001" figureLabels="图1">
+      <base:Image id="if0001" he="1000" wi="853" file="HDA0003333239630000011.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0002" num="0002" figureLabels="图2">
+      <base:Image id="if0002" he="986" wi="971" file="HDA0003333239630000021.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0003" num="0003" figureLabels="图3">
+      <base:Image id="if0003" he="1000" wi="833" file="HDA0003333239630000031.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0004" num="0004" figureLabels="图4A">
+      <base:Image id="if0004" he="1000" wi="652" file="HDA0003333239630000041.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0005" num="0005" figureLabels="图4B">
+      <base:Image id="if0005" he="1000" wi="559" file="HDA0003333239630000051.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0006" num="0006" figureLabels="图5">
+      <base:Image id="if0006" he="864" wi="1000" file="HDA0003333239630000061.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0007" num="0007" figureLabels="图6">
+      <base:Image id="if0007" he="497" wi="1000" file="HDA0003333239630000071.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0008" num="0008" figureLabels="图7">
+      <base:Image id="if0008" he="567" wi="1000" file="HDA0003333239630000072.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0009" num="0009" figureLabels="图8">
+      <base:Image id="if0009" he="658" wi="1000" file="HDA0003333239630000081.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0010" num="0010" figureLabels="图9">
+      <base:Image id="if0010" he="697" wi="1000" file="HDA0003333239630000082.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0011" num="0011" figureLabels="图10A">
+      <base:Image id="if0011" he="1000" wi="628" file="HDA0003333239630000091.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0012" num="0012" figureLabels="图10B">
+      <base:Image id="if0012" he="1000" wi="555" file="HDA0003333239630000101.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0013" num="0013" figureLabels="图11">
+      <base:Image id="if0013" he="1000" wi="683" file="HDA0003333239630000111.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0014" num="0014" figureLabels="图12">
+      <base:Image id="if0014" he="1000" wi="884" file="HDA0003333239630000121.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0015" num="0015" figureLabels="图13">
+      <base:Image id="if0015" he="1000" wi="558" file="HDA0003333239630000131.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0016" num="0016" figureLabels="图14">
+      <base:Image id="if0016" he="1000" wi="640" file="HDA0003333239630000141.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0017" num="0017" figureLabels="图15A">
+      <base:Image id="if0017" he="1000" wi="606" file="HDA0003333239630000151.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0018" num="0018" figureLabels="图15B">
+      <base:Image id="if0018" he="1000" wi="516" file="HDA0003333239630000161.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0019" num="0019" figureLabels="图16">
+      <base:Image id="if0019" he="484" wi="1000" file="HDA0003333239630000171.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0020" num="0020" figureLabels="图17">
+      <base:Image id="if0020" he="483" wi="1000" file="HDA0003333239630000172.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0021" num="0021" figureLabels="图18">
+      <base:Image id="if0021" he="486" wi="1000" file="HDA0003333239630000181.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+  </business:Drawings>
+  <business:Claims lang="zh" dataFormat="original" sourceDB="national office" creator="03">
+    <business:Claim id="cl0001" num="0001">
+      <business:ClaimText>1.显示设备，包括：</business:ClaimText>
+      <business:ClaimText>显示面板，所述显示面板包括：</business:ClaimText>
+      <business:ClaimText>多个像素，所述多个像素排列成多行和多列；</business:ClaimText>
+      <business:ClaimText>多条栅线，所述多条栅线处于第一方向上并且连接至所述多个像素；以及</business:ClaimText>
+      <business:ClaimText>多条数据线，所述多条数据线连接至所述多个像素，其中，</business:ClaimText>
+      <business:ClaimText>k个像素位于所述多行中的第a行中，n个像素位于所述多行中在第一行与作为最后一行的第m行之间的第e行至第f行中的每个中，并且数量等于或多于k且少于n的像素处于剩余行中的每个中，其中a、k、e、f、m和n为自然数并且f等于或大于e，其中，n&gt;k，以及</business:ClaimText>
+      <business:ClaimText>其中，L条数据线排列在所述第a行的每个第一区域中，所述第一区域是k-1个区域，所述k-1个区域中的每个被定义为所述第a行中的彼此相邻的两个像素之间的区域，其中L是基于通过将n除以k获得的值的自然数，使得n＝k*Q+b，b和Q是自然数，其中：</business:ClaimText>
+      <business:ClaimText>当b＝0时，L＝n/k，并且</business:ClaimText>
+      <business:ClaimText>当b大于0时，L等于Q和Q+1之一，其中Q+1个数据线排列在b个第一区域中，Q个数据线排列在剩余第一区域中。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0002" num="0002">
+      <business:ClaimText>2.如权利要求1所述的显示设备，其中，所述k个像素位于所述第m行中。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0003" num="0003">
+      <business:ClaimText>3.如权利要求1所述的显示设备，其中，所述显示面板具有圆形形状。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0004" num="0004">
+      <business:ClaimText>4.如权利要求1所述的显示设备，其中，所述a为1。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0005" num="0005">
+      <business:ClaimText>5.如权利要求4所述的显示设备，其中，</business:ClaimText>
+      <business:ClaimText>在所述第一行与所述第e行之间的行中，当前行中的像素的数量等于或多于前一行中的像素的数量，以及</business:ClaimText>
+      <business:ClaimText>在所述第f行与所述第m行之间的行中，当前行中的像素的数量等于或少于前一行中的像素的数量。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0006" num="0006">
+      <business:ClaimText>6.如权利要求4所述的显示设备，其中，</business:ClaimText>
+      <business:ClaimText>所述数据线包括多个数据线组，所述多个数据线组分别包括所述L条数据线，</business:ClaimText>
+      <business:ClaimText>所述多个数据线组中的每个的第一数据线为直数据线；</business:ClaimText>
+      <business:ClaimText>除了所述直数据线以外的数据线为弯曲数据线，以及</business:ClaimText>
+      <business:ClaimText>所述L条数据线在所述第一区域中在与所述第一方向交叉的第二方向上延伸，所述直数据线在所述第二方向上延伸，所述弯曲数据线在所述第一行至所述第e行中在所述第二方向和所述第一方向上延伸以从所述第e行开始在所述第二方向上延伸，所述第一方向对应于行方向，并且所述第二方向对应于列方向。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0007" num="0007">
+      <business:ClaimText>7.如权利要求6所述的显示设备，其中，</business:ClaimText>
+      <business:ClaimText>位于所述第一行中的所述k个像素处于所述多列中的第一列与作为最后一列的第n列之间的第g列至第p列中，以及</business:ClaimText>
+      <business:ClaimText>所述直数据线中的每个连接至位于所述第g列至所述第p列中的相应列中的像素，其中g、p和n为自然数。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0008" num="0008">
+      <business:ClaimText>8.如权利要求7所述的显示设备，其中，所述第一区域处于位于所述第一行中的所述像素之间并且与所述第一行的所述第p列的一侧相邻。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0009" num="0009">
+      <business:ClaimText>9.如权利要求7所述的显示设备，其中，所述弯曲数据线：</business:ClaimText>
+      <business:ClaimText>从所述第二方向接连地延伸至所述第一方向，同时所述弯曲数据线的序号从所述显示面板的左侧区域中的最远弯曲数据线开始增加，以及</business:ClaimText>
+      <business:ClaimText>同时所述弯曲数据线的所述序号从作为所述显示面板的右侧区域中的最远左侧弯曲数据线的第v弯曲数据线开始减小，其中，所述显示面板的所述左侧区域是在所述第一方向上相对于所述显示面板的中心部分处于一侧的所述显示面板的区域，并且其中，所述显示面板的所述右侧区域是在所述第一方向上相对于所述显示面板的中心部分处于另一侧的所述显示面板的区域。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0010" num="0010">
+      <business:ClaimText>10.如权利要求9所述的显示设备，其中，</business:ClaimText>
+      <business:ClaimText>在所述第一方向上延伸的所述弯曲数据线在所述显示面板的所述左侧区域中从所述第一弯曲数据线开始接连地延伸，并在所述显示面板的所述右侧区域中从第v弯曲数据线开始接连地从所述第一方向延伸至所述第二方向，以及</business:ClaimText>
+      <business:ClaimText>从所述第一方向延伸至所述第二方向的所述弯曲数据线中的每个连接至位于所述第一列至第g-1列以及第p+1列至所述第n列中的相应列中的像素。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0011" num="0011">
+      <business:ClaimText>11.如权利要求10所述的显示设备，其中，</business:ClaimText>
+      <business:ClaimText>从所述第一方向延伸至所述第二方向的所述弯曲数据线从所述第一弯曲数据线开始以列为单位接连地连接至位于所述第g-1列至所述第一列中的像素，并且从所述第v弯曲数据线开始以列为单位接连地连接至位于所述第p+1列至所述第n列中的像素。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0012" num="0012">
+      <business:ClaimText>12.如权利要求6所述的显示设备，其中，</business:ClaimText>
+      <business:ClaimText>在所述第一行至所述第e行中，当位于第h行中的所述像素的数量和布置在第h+1行中的所述像素的数量彼此不同时，所述弯曲数据线中的、具有与位于所述第h行中的所述像素的数量与位于所述第h+1行中的所述像素的数量之间的差值相同的数量的所述弯曲数据线在位于所述第h行中的所述像素与位于所述第h+1行中的所述像素之间在所述第一方向上延伸，其中h为自然数。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0013" num="0013">
+      <business:ClaimText>13.如权利要求6所述的显示设备，其中，</business:ClaimText>
+      <business:ClaimText>在所述显示面板的左侧区域中且在所述第一行至所述第e行中，当位于第h+1行中的像素的数量比位于第h行中的像素的数量多c时，c条弯曲数据线在位于所述第h行中的所述像素与位于所述第h+1行中的所述像素之间在所述第一方向上延伸，其中所述左侧区域为所述显示面板的、在所述第一方向上相对于所述显示面板的中心部分的左侧处的区域，以及</business:ClaimText>
+      <business:ClaimText>在所述显示面板的右侧区域中且在所述第一行至所述第e行中，当位于所述第h+1行中的像素的数量比位于所述第h行中的像素的数量多d时，d条弯曲数据线在位于所述第h行中的所述像素与位于所述第h+1行中的所述像素之间在所述第一方向上延伸，其中所述右侧区域为所述显示面板的、在所述第一方向上相对于所述显示面板的所述中心部分的右侧处的区域。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0014" num="0014">
+      <business:ClaimText>14.如权利要求13所述的显示设备，其中，</business:ClaimText>
+      <business:ClaimText>在所述第一区域中的每个中所述L条数据线中的彼此相邻的数据线在所述第一方向上彼此相隔开第一距离，并且在所述第一方向上具有预定宽度，以及</business:ClaimText>
+      <business:ClaimText>与彼此相邻的所述数据线的侧边之间的距离对应的间距是通过将所述宽度加上所述第一距离获得的值来确定的。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0015" num="0015">
+      <business:ClaimText>15.如权利要求14所述的显示设备，其中，</business:ClaimText>
+      <business:ClaimText>在所述显示面板中在所述第二方向上彼此相邻的像素之间的第二距离等于或大于以下的值，即通过将位于所述显示面板的所述左侧区域上且在所述第一行至所述第e行中彼此相邻的行中的像素的数量的差值、和位于所述显示面板的所述右侧区域中且在所述第一行至所述第e行中彼此相邻的行中的像素的数量的差值中的最大值乘以所述间距而获得的值。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0016" num="0016">
+      <business:ClaimText>16.如权利要求6所述的显示设备，其中，所述第二方向上的一条数据线与所述第一方向上的至少另一条数据线交叉。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0017" num="0017">
+      <business:ClaimText>17.如权利要求16所述的显示设备，其中，所述第一方向上的所述至少一条数据线包括：</business:ClaimText>
+      <business:ClaimText>桥接电极，所述桥接电极与所述第二方向上的所述一条数据线相隔开，其中所述桥接电极与所述第二方向上的所述一条数据线之间设置有绝缘层；以及</business:ClaimText>
+      <business:ClaimText>第一子线和第二子线，所述第一子线和所述第二子线彼此相隔开，其中所述第一子线与所述第二子线之间设置有在所述第二方向上延伸的所述一条数据线，其中所述桥接电极将所述第一子线电连接至所述第二子线。</business:ClaimText>
+    </business:Claim>
+  </business:Claims>
+</business:PatentDocumentAndRelated>

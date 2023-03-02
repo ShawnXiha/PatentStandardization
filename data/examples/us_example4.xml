@@ -1,0 +1,836 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<us-patent-application lang="EN" dtd-version="v4.4 2014-04-03" file="US20210048778A1-20210218.XML" status="PRODUCTION" id="us-patent-application" country="US" date-produced="20210203" date-publ="20210218">
+<us-bibliographic-data-application lang="EN" country="US">
+<publication-reference>
+<document-id>
+<country>US</country>
+<doc-number>20210048778</doc-number>
+<kind>A1</kind>
+<date>20210218</date>
+</document-id>
+</publication-reference>
+<application-reference appl-type="utility">
+<document-id>
+<country>US</country>
+<doc-number>17089879</doc-number>
+<date>20201105</date>
+</document-id>
+</application-reference>
+<us-application-series-code>17</us-application-series-code>
+<priority-claims>
+<priority-claim sequence="01" kind="national">
+<country>JP</country>
+<doc-number>2008-281991</doc-number>
+<date>20081031</date>
+</priority-claim>
+<priority-claim sequence="02" kind="national">
+<country>JP</country>
+<doc-number>2008-281992</doc-number>
+<date>20081031</date>
+</priority-claim>
+<priority-claim sequence="03" kind="national">
+<country>JP</country>
+<doc-number>2008-281993</doc-number>
+<date>20081031</date>
+</priority-claim>
+</priority-claims>
+<classifications-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>21</main-group>
+<subgroup>18</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>15</main-group>
+<subgroup>00</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>21</main-group>
+<subgroup>16</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>15</main-group>
+<subgroup>01</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+</classifications-ipcr>
+<classifications-cpc>
+<main-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>21</main-group>
+<subgroup>1853</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+</main-cpc>
+<further-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>21</main-group>
+<subgroup>1842</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>15</main-group>
+<subgroup>5008</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>15</main-group>
+<subgroup>757</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>21</main-group>
+<subgroup>1867</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>21</main-group>
+<subgroup>1652</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>15</main-group>
+<subgroup>0178</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>A</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>15</main-group>
+<subgroup>0194</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>21</main-group>
+<subgroup>1647</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>2221</main-group>
+<subgroup>1684</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>A</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>2221</main-group>
+<subgroup>1869</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>A</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>2221</main-group>
+<subgroup>166</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>A</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>G</section>
+<class>03</class>
+<subclass>G</subclass>
+<main-group>21</main-group>
+<subgroup>1825</subgroup>
+<symbol-position>L</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20210218</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+</further-cpc>
+</classifications-cpc>
+<invention-title id="d2e98">IMAGE FORMING APPARATUS INCLUDING COUPLING MEMBER SELECTIVELY COUPLED TO PHOTOSENSITIVE DRUM</invention-title>
+<us-related-documents>
+<continuation>
+<relation>
+<parent-doc>
+<document-id>
+<country>US</country>
+<doc-number>16573094</doc-number>
+<date>20190917</date>
+</document-id>
+<parent-grant-document>
+<document-id>
+<country>US</country>
+<doc-number>10831152</doc-number>
+</document-id>
+</parent-grant-document>
+</parent-doc>
+<child-doc>
+<document-id>
+<country>US</country>
+<doc-number>17089879</doc-number>
+</document-id>
+</child-doc>
+</relation>
+</continuation>
+<continuation>
+<relation>
+<parent-doc>
+<document-id>
+<country>US</country>
+<doc-number>16130438</doc-number>
+<date>20180913</date>
+</document-id>
+<parent-grant-document>
+<document-id>
+<country>US</country>
+<doc-number>10444700</doc-number>
+</document-id>
+</parent-grant-document>
+</parent-doc>
+<child-doc>
+<document-id>
+<country>US</country>
+<doc-number>16573094</doc-number>
+</document-id>
+</child-doc>
+</relation>
+</continuation>
+<continuation>
+<relation>
+<parent-doc>
+<document-id>
+<country>US</country>
+<doc-number>15275905</doc-number>
+<date>20160926</date>
+</document-id>
+<parent-grant-document>
+<document-id>
+<country>US</country>
+<doc-number>10082766</doc-number>
+</document-id>
+</parent-grant-document>
+</parent-doc>
+<child-doc>
+<document-id>
+<country>US</country>
+<doc-number>16130438</doc-number>
+</document-id>
+</child-doc>
+</relation>
+</continuation>
+<continuation>
+<relation>
+<parent-doc>
+<document-id>
+<country>US</country>
+<doc-number>14948591</doc-number>
+<date>20151123</date>
+</document-id>
+<parent-grant-document>
+<document-id>
+<country>US</country>
+<doc-number>9477202</doc-number>
+</document-id>
+</parent-grant-document>
+</parent-doc>
+<child-doc>
+<document-id>
+<country>US</country>
+<doc-number>15275905</doc-number>
+</document-id>
+</child-doc>
+</relation>
+</continuation>
+<continuation>
+<relation>
+<parent-doc>
+<document-id>
+<country>US</country>
+<doc-number>14053143</doc-number>
+<date>20131014</date>
+</document-id>
+<parent-grant-document>
+<document-id>
+<country>US</country>
+<doc-number>9201370</doc-number>
+</document-id>
+</parent-grant-document>
+</parent-doc>
+<child-doc>
+<document-id>
+<country>US</country>
+<doc-number>14948591</doc-number>
+</document-id>
+</child-doc>
+</relation>
+</continuation>
+<division>
+<relation>
+<parent-doc>
+<document-id>
+<country>US</country>
+<doc-number>12606660</doc-number>
+<date>20091027</date>
+</document-id>
+<parent-grant-document>
+<document-id>
+<country>US</country>
+<doc-number>8577255</doc-number>
+</document-id>
+</parent-grant-document>
+</parent-doc>
+<child-doc>
+<document-id>
+<country>US</country>
+<doc-number>14053143</doc-number>
+</document-id>
+</child-doc>
+</relation>
+</division>
+</us-related-documents>
+<us-parties>
+<us-applicants>
+<us-applicant sequence="00" app-type="applicant" designation="us-only" applicant-authority-category="assignee">
+<addressbook>
+<orgname>BROTHER KOGYO KABUSHIKI KAISHA</orgname>
+<address>
+<city>Nagoya-shi</city>
+<country>JP</country>
+</address>
+</addressbook>
+<residence>
+<country>JP</country>
+</residence>
+</us-applicant>
+</us-applicants>
+<inventors>
+<inventor sequence="00" designation="us-only">
+<addressbook>
+<last-name>Okabe</last-name>
+<first-name>Yasushi</first-name>
+<address>
+<city>Nagoya-shi</city>
+<country>JP</country>
+</address>
+</addressbook>
+</inventor>
+<inventor sequence="01" designation="us-only">
+<addressbook>
+<last-name>Hashimoto</last-name>
+<first-name>Junichi</first-name>
+<address>
+<city>Toyohashi-shi</city>
+<country>JP</country>
+</address>
+</addressbook>
+</inventor>
+</inventors>
+</us-parties>
+<assignees>
+<assignee>
+<addressbook>
+<orgname>BROTHER KOGYO KABUSHIKI KAISHA</orgname>
+<role>03</role>
+<address>
+<city>Nagoya-shi</city>
+<country>JP</country>
+</address>
+</addressbook>
+</assignee>
+</assignees>
+</us-bibliographic-data-application>
+<abstract id="abstract">
+<p id="p-0001" num="0000">An image forming apparatus includes a main body, endless belt, photosensitive drums, setting unit, contacting/separating mechanism, transmitting mechanism, and coupling members. The photosensitive drums are disposed in confrontation with the endless belt and are arranged in a first direction. Each photosensitive drum has an axis extending in a second direction perpendicular to the first direction. The setting unit sets the image forming apparatus to a monochrome mode or color mode. The contacting/separating mechanism controls at least one photosensitive drum to contact or separate from the endless in accordance with the set mode. The transmitting mechanism selectively transmits drive power to photosensitive drums. Each coupling member is selectively coupled to the corresponding photosensitive drum and has a coupling axis extending in the second direction. Each coupling member is uncoupled from the corresponding photosensitive drum when the contacting/separating mechanism controls the corresponding photosensitive drum to separate from the endless belt.</p>
+</abstract>
+<drawings id="DRAWINGS">
+<figure id="Fig-EMI-D00000" num="00000">
+<img id="EMI-D00000" he="105.58mm" wi="158.75mm" file="US20210048778A1-20210218-D00000.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00001" num="00001">
+<img id="EMI-D00001" he="181.61mm" wi="123.36mm" orientation="landscape" file="US20210048778A1-20210218-D00001.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00002" num="00002">
+<img id="EMI-D00002" he="204.55mm" wi="136.82mm" orientation="landscape" file="US20210048778A1-20210218-D00002.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00003" num="00003">
+<img id="EMI-D00003" he="163.58mm" wi="135.04mm" orientation="landscape" file="US20210048778A1-20210218-D00003.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00004" num="00004">
+<img id="EMI-D00004" he="203.54mm" wi="122.51mm" orientation="landscape" file="US20210048778A1-20210218-D00004.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00005" num="00005">
+<img id="EMI-D00005" he="198.88mm" wi="145.29mm" orientation="landscape" file="US20210048778A1-20210218-D00005.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00006" num="00006">
+<img id="EMI-D00006" he="184.40mm" wi="136.06mm" orientation="landscape" file="US20210048778A1-20210218-D00006.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00007" num="00007">
+<img id="EMI-D00007" he="222.50mm" wi="112.69mm" orientation="landscape" file="US20210048778A1-20210218-D00007.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00008" num="00008">
+<img id="EMI-D00008" he="182.20mm" wi="130.89mm" orientation="landscape" file="US20210048778A1-20210218-D00008.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00009" num="00009">
+<img id="EMI-D00009" he="205.49mm" wi="107.95mm" orientation="landscape" file="US20210048778A1-20210218-D00009.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00010" num="00010">
+<img id="EMI-D00010" he="204.30mm" wi="112.01mm" orientation="landscape" file="US20210048778A1-20210218-D00010.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00011" num="00011">
+<img id="EMI-D00011" he="201.51mm" wi="111.25mm" orientation="landscape" file="US20210048778A1-20210218-D00011.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00012" num="00012">
+<img id="EMI-D00012" he="190.92mm" wi="136.91mm" orientation="landscape" file="US20210048778A1-20210218-D00012.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00013" num="00013">
+<img id="EMI-D00013" he="195.07mm" wi="143.43mm" file="US20210048778A1-20210218-D00013.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00014" num="00014">
+<img id="EMI-D00014" he="186.86mm" wi="131.57mm" orientation="landscape" file="US20210048778A1-20210218-D00014.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00015" num="00015">
+<img id="EMI-D00015" he="199.47mm" wi="133.69mm" orientation="landscape" file="US20210048778A1-20210218-D00015.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00016" num="00016">
+<img id="EMI-D00016" he="183.05mm" wi="135.04mm" orientation="landscape" file="US20210048778A1-20210218-D00016.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00017" num="00017">
+<img id="EMI-D00017" he="185.42mm" wi="139.28mm" file="US20210048778A1-20210218-D00017.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00018" num="00018">
+<img id="EMI-D00018" he="214.97mm" wi="140.89mm" orientation="landscape" file="US20210048778A1-20210218-D00018.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00019" num="00019">
+<img id="EMI-D00019" he="195.92mm" wi="141.22mm" orientation="landscape" file="US20210048778A1-20210218-D00019.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00020" num="00020">
+<img id="EMI-D00020" he="181.02mm" wi="136.65mm" orientation="landscape" file="US20210048778A1-20210218-D00020.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00021" num="00021">
+<img id="EMI-D00021" he="182.20mm" wi="138.35mm" file="US20210048778A1-20210218-D00021.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00022" num="00022">
+<img id="EMI-D00022" he="191.52mm" wi="147.66mm" orientation="landscape" file="US20210048778A1-20210218-D00022.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+</drawings>
+<description id="description">
+<cross-reference>
+<heading id="h-0001" level="1">CROSS REFERENCE TO RELATED APPLICATION</heading>
+<p id="p-0002" num="0001">This application is a continuation of U.S. application Ser. No. 16/573,094, filed Sep. 17, 2019, which is a continuation of U.S. application Ser. No. 16/130,438 filed Sep. 13, 2018, which is a continuation of U.S. application Ser. No. 15/275,905 filed Sep. 26, 2016, issued as U.S. Pat. No. 10,082,766 on Sep. 25, 2018, which is a continuation of U.S. application Ser. No. 14/948,591 filed Nov. 23, 2015, issued as U.S. Pat. No. 9,477,202 on Oct. 25, 2016, which is a continuation of U.S. application Ser. No. 14/053,143 filed Oct. 14, 2013, issued as U.S. Pat. No. 9,201,370 on Dec. 1, 2015, which is a divisional of U.S. application Ser. No. 12/606,660, filed Oct. 27, 2009, issued as U.S. Pat. No. 8,577,255 on Nov. 5, 2013, which claims priority from Japanese Patent Application No. 2008-281992 filed Oct. 31, 2008, Japanese Patent Application No. 2008-281993 filed Oct. 31, 2008, and Japanese Patent Application No. 2008-281991 filed Oct. 31, 2008. The entire contents of the above noted applications are incorporated herein by reference.</p>
+</cross-reference>
+<summary-of-invention>
+<heading id="h-0002" level="1">TECHNICAL FIELD</heading>
+<p id="p-0003" num="0002">The present invention relates to an image forming apparatus.</p>
+<heading id="h-0003" level="1">BACKGROUND</heading>
+<p id="p-0004" num="0003">One image forming apparatus known in the art is an electrophotographic color printer having a conveying belt disposed in confrontation with four photosensitive members corresponding to the four colors black, yellow, magenta, and cyan. However, the photosensitive members in this image-forming device are constantly in contact with the conveying belt. Therefore, even during operations to form images using only black, for example, the photosensitive members corresponding to the remaining colors yellow, magenta, and cyan remain in contact with the conveying belt and, consequently, wear more quickly.</p>
+<p id="p-0005" num="0004">Therefore, color image recorders have been proposed as image-forming devices capable of preventing such unnecessary wear and deterioration of the photosensitive members. For example, a color image recorder configures yellow, magenta, and cyan image-forming parts as a single color image-forming unit, and a black image-forming part as a single image-forming unit. With this image recorder, the color image-forming unit is separated from the conveying belt when forming black images.</p>
+<p id="p-0006" num="0005">However, in the color image recorder described above, the black image-forming part and color image-forming unit are operated independently. This configuration can potentially lead to fluctuations in the gap between the black image-forming part and the color image-forming unit during operations, making it difficult to maintain a uniform interval between neighboring photosensitive members. Maintaining this uniform interval between neighboring photosensitive members is extremely important for preventing color registration problems in color printers.</p>
+<heading id="h-0004" level="1">SUMMARY</heading>
+<p id="p-0007" num="0006">In view of the foregoing, it is an object of the present invention to provide an image-forming apparatus capable of separating photosensitive members from an endless belt while preserving the interval between adjacent photosensitive members.</p>
+<p id="p-0008" num="0007">In order to attain the above and other objects, the invention provides an image forming apparatus including a main body, an endless belt, a plurality of photosensitive drums, a mode setting unit, a contacting/separating mechanism, a transmitting mechanism, and a plurality of coupling members. The plurality of photosensitive drums is disposed in confrontation with the endless belt and is arranged in a first direction. Each photosensitive drum has an axis extending in a second direction perpendicular to the first direction. The mode setting unit sets the image forming apparatus to one of a monochrome printing mode and a color printing mode. The contacting/separating mechanism controls at least one of the plurality of photosensitive drums to contact or separate from the endless in accordance with the set mode. The transmitting mechanism selectively transmits drive power to the plurality of photosensitive drums. The plurality of coupling members correspond respectively to the plurality of photosensitive drums. Each coupling member is selectively coupled to the corresponding photosensitive drum and has a coupling axis extending in the second direction of the corresponding photosensitive drum. Each coupling member is uncoupled from the corresponding photosensitive drum when the contacting/separating mechanism controls the corresponding photosensitive drum to separate from the endless belt.</p>
+</summary-of-invention>
+<description-of-drawing>
+<description-of-drawings>
+<heading id="h-0005" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+<p id="p-0009" num="0008">The particular features and advantages of the invention as well as other objects will become apparent from the following description taken in connection with the accompanying drawings, in which:</p>
+<p id="p-0010" num="0009"><figref idref="DRAWINGS">FIG. 1</figref> is a side cross-sectional view of an image forming apparatus according to a preferred embodiment of the present invention;</p>
+<p id="p-0011" num="0010"><figref idref="DRAWINGS">FIG. 2</figref> is a perspective view of a drum unit provided in the image forming apparatus;</p>
+<p id="p-0012" num="0011"><figref idref="DRAWINGS">FIG. 3</figref> is an exploded perspective view of the drum unit shown in <figref idref="DRAWINGS">FIG. 2</figref>;</p>
+<p id="p-0013" num="0012"><figref idref="DRAWINGS">FIG. 4</figref> is a perspective view of the drum unit when color photosensitive drums are mounted in a process frame;</p>
+<p id="p-0014" num="0013"><figref idref="DRAWINGS">FIG. 5</figref> is a perspective view of the drum unit when a black photosensitive drum is mounted in the process frame shown in <figref idref="DRAWINGS">FIG. 4</figref>;</p>
+<p id="p-0015" num="0014"><figref idref="DRAWINGS">FIG. 6</figref> is an explanatory diagram showing how to position the black photosensitive drum;</p>
+<p id="p-0016" num="0015"><figref idref="DRAWINGS">FIG. 7</figref> is a perspective view illustrating an operation for mounting the drum unit in a main body of the image forming apparatus;</p>
+<p id="p-0017" num="0016"><figref idref="DRAWINGS">FIG. 8</figref> is an explanatory diagram illustrating an interior of the main body shown in <figref idref="DRAWINGS">FIG. 7</figref>;</p>
+<p id="p-0018" num="0017"><figref idref="DRAWINGS">FIG. 9</figref> is a perspective view illustrating an operation for mounting the drum unit in the main body;</p>
+<p id="p-0019" num="0018"><figref idref="DRAWINGS">FIG. 10</figref> is an explanatory diagram illustrating an operation for mounting the drum unit in the main body;</p>
+<p id="p-0020" num="0019"><figref idref="DRAWINGS">FIG. 11</figref> is an explanatory diagram illustrating the interior of the main body in a state shown in <figref idref="DRAWINGS">FIG. 10</figref>;</p>
+<p id="p-0021" num="0020"><figref idref="DRAWINGS">FIG. 12</figref> is a perspective view illustrating the operation for mounting the drum unit from the state shown in <figref idref="DRAWINGS">FIG. 10</figref>, where the drum unit has been completely mounted in the main body;</p>
+<p id="p-0022" num="0021"><figref idref="DRAWINGS">FIG. 13</figref> is a base view illustrating the image forming apparatus in the state shown in <figref idref="DRAWINGS">FIG. 12</figref>;</p>
+<p id="p-0023" num="0022"><figref idref="DRAWINGS">FIG. 14</figref> is an explanatory diagram illustrating the interior of the main body shown in <figref idref="DRAWINGS">FIG. 12</figref>;</p>
+<p id="p-0024" num="0023"><figref idref="DRAWINGS">FIG. 15(<i>a</i>)</figref> is a perspective view illustrating the drum unit and the main body in the state shown in <figref idref="DRAWINGS">FIG. 12</figref>;</p>
+<p id="p-0025" num="0024"><figref idref="DRAWINGS">FIG. 15(<i>b</i>)</figref> is a side view illustrating the drum unit and the main body in the state shown in <figref idref="DRAWINGS">FIG. 12</figref>;</p>
+<p id="p-0026" num="0025"><figref idref="DRAWINGS">FIG. 16</figref> is a perspective view illustrating the image forming apparatus when the image forming apparatus is set to a monochrome mode;</p>
+<p id="p-0027" num="0026"><figref idref="DRAWINGS">FIG. 17</figref> is a base view illustrating the image forming apparatus when the image forming apparatus is set to the monochrome mode;</p>
+<p id="p-0028" num="0027"><figref idref="DRAWINGS">FIG. 18</figref> is an explanatory diagram illustrating the interior of the main body when the image forming apparatus is set to the monochrome mode;</p>
+<p id="p-0029" num="0028"><figref idref="DRAWINGS">FIG. 19(<i>a</i>)</figref> is a perspective view illustrating the drum unit and the main body when the image forming apparatus is set to the monochrome mode;</p>
+<p id="p-0030" num="0029"><figref idref="DRAWINGS">FIG. 19(<i>b</i>)</figref> is a side view illustrating the drum unit and the main body when the image forming apparatus is set to the monochrome mode;</p>
+<p id="p-0031" num="0030"><figref idref="DRAWINGS">FIG. 20</figref> is a perspective view illustrating the image forming apparatus when the image forming apparatus is set to a color mode;</p>
+<p id="p-0032" num="0031"><figref idref="DRAWINGS">FIG. 21</figref> is a base view illustrating the image forming apparatus when the image forming apparatus is set to the color mode; and</p>
+<p id="p-0033" num="0032"><figref idref="DRAWINGS">FIG. 22</figref> is an explanatory diagram illustrating the interior of the main body when the image forming apparatus is set to the color mode.</p>
+</description-of-drawings>
+</description-of-drawing>
+<detailed-description>
+<heading id="h-0006" level="1">DETAILED DESCRIPTION</heading>
+<p id="p-0034" num="0033">As shown in <figref idref="DRAWINGS">FIG. 1</figref>, a printer <b>1</b> serving as a preferred embodiment of the image-forming apparatus according to the present invention is a horizontal tandem-type color laser printer that includes a main casing <b>2</b> as the main body of the printer, and, within the main casing <b>2</b>, a feeding unit <b>3</b> for supplying sheets of a paper P to be printed, and an image-forming unit <b>4</b> for forming images on the sheets of paper P supplied from the feeding unit <b>3</b>. The terms &#x201c;up&#x201d;, &#x201c;down&#x201d;, &#x201c;upper&#x201d;, &#x201c;lower&#x201d;, &#x201c;above&#x201d;, &#x201c;below&#x201d;, &#x201c;beneath&#x201d;, &#x201c;right&#x201d;, &#x201c;left&#x201d;, &#x201c;front&#x201d;, &#x201c;rear&#x201d; and the like will be used throughout the description assuming that the printer <b>1</b> is disposed in an orientation in which it is intended to be used. In use, the printer <b>1</b> is disposed as shown in <figref idref="DRAWINGS">FIG. 1</figref>.</p>
+<p id="p-0035" num="0034">The main casing <b>2</b> has a box shape that is substantially rectangular in a side view. The image-forming unit <b>4</b> is accommodated in the main casing <b>2</b>. A front cover <b>5</b> is provided on one side wall of the main casing <b>2</b> for exposing the inside of the main casing <b>2</b> in order to mount or remove a process frame <b>12</b> described later.</p>
+<p id="p-0036" num="0035">In the following description, the side of the color laser printer <b>1</b> on which the front cover <b>5</b> is provided (right side in <figref idref="DRAWINGS">FIG. 1</figref>) will be referred to as the front side, and the opposite side (left side in <figref idref="DRAWINGS">FIG. 1</figref>) as the rear side. The left and right sides of the color laser printer <b>1</b> will be based on a user's perspective when viewing the color laser printer <b>1</b> from the front. Hence, the near side of the color laser printer <b>1</b> in <figref idref="DRAWINGS">FIG. 1</figref> is the left side, and the far side is the right side.</p>
+<p id="p-0037" num="0036">The feeding unit <b>3</b> includes a paper tray <b>6</b> for accommodating sheets of the paper P. The paper tray <b>6</b> is detachably mounted in the bottom section of the main casing <b>2</b>. A feeding roller <b>7</b> is disposed above the front end of the paper tray <b>6</b> for feeding sheets of paper P from the paper tray <b>6</b> to the image-forming unit <b>4</b> along a U-shaped feeding path (not shown).</p>
+<p id="p-0038" num="0037">The feeding roller <b>7</b> rotates to feed sheets of paper P accommodated in the paper tray <b>6</b> onto the feeding path one sheet at a time. The sheets of paper P are subsequently conveyed from the feeding path to the image-forming unit <b>4</b> so as to pass between four photosensitive drums <b>16</b> and a conveying belt <b>24</b> described later.</p>
+<p id="p-0039" num="0038">The image-forming unit <b>4</b> includes a scanning unit <b>8</b>, a process unit <b>9</b>, a transfer unit <b>10</b>, and a fixing unit <b>11</b>. The scanning unit <b>8</b> is disposed above the main casing <b>2</b>. The scanning unit <b>8</b> irradiates laser beams toward the four photosensitive drums <b>16</b> based on image data to expose the surfaces of the corresponding photosensitive drums <b>16</b>.</p>
+<p id="p-0040" num="0039">The process unit <b>9</b> is disposed below the scanning unit <b>8</b> and above the feeding unit <b>3</b>. The process unit <b>9</b> is detachably mounted on the main casing <b>2</b>. The process unit <b>9</b> includes the single process frame <b>12</b>, and four process cartridges <b>13</b> corresponding to the four printing colors.</p>
+<p id="p-0041" num="0040">The process frame <b>12</b> is slidably supported in the main casing <b>2</b> and can be slid into or out of the main casing <b>2</b> in the front-to-rear direction. The process cartridges <b>13</b> are mounted in the process frame <b>12</b> in a juxtaposed arrangement in the front-to-rear direction (mounting direction). More specifically, the process cartridges <b>13</b> support a black process cartridge <b>13</b>K, a yellow process cartridge <b>13</b>Y, a magenta process cartridge <b>13</b>M, and a cyan process cartridge <b>13</b>C arranged from the front side to the rear side in the sequence given. Each process cartridge <b>13</b> is provided with a drum unit <b>14</b>, and a developer cartridge <b>15</b>.</p>
+<p id="p-0042" num="0041">Each drum unit <b>14</b> includes a photosensitive drum <b>16</b>, a Scorotron charger <b>17</b>, and a cleaning blade <b>18</b>. The photosensitive drum <b>16</b> is oriented with its axis along the left-to-right direction. Specifically, the photosensitive drum <b>16</b> of the black process cartridges <b>13</b>K has an axis extending in a first axial direction parallel to the left-to-right direction. Each of photosensitive drums <b>16</b> of the yellow process cartridge <b>13</b>Y, the magenta process cartridge <b>13</b>M, and the cyan process cartridge <b>13</b>C has an axis extending in a second axial direction parallel to the first axial direction. The black photosensitive drum <b>16</b> is disposed at a position nearest to one end of the process unit <b>9</b> that is upstream in the mounting direction.</p>
+<p id="p-0043" num="0042">The Scorotron charger <b>17</b> is disposed diagonally above and rearward of the photosensitive drum <b>16</b> and confronts but does not contact the photosensitive drum <b>16</b>. The cleaning blade <b>18</b> is disposed to the rear of the photosensitive drum <b>16</b> and confronts and contacts the photosensitive drum <b>16</b>.</p>
+<p id="p-0044" num="0043">The developer cartridge <b>15</b> is disposed on the front side of the corresponding drum unit <b>14</b> and includes a supply roller <b>19</b>, a developing roller <b>20</b>, and a thickness-regulating blade <b>21</b>.</p>
+<p id="p-0045" num="0044">The developing roller <b>20</b> is disposed so as to contact the front side of the photosensitive drum <b>16</b>. The supply roller <b>19</b> is disposed on the front side of the developing roller <b>20</b>. The thickness-regulating blade <b>21</b> is disposed above the developing roller <b>20</b>. The space formed in the developer cartridge <b>15</b> above these components serves to accommodate toner in the corresponding color.</p>
+<p id="p-0046" num="0045">With the process cartridge <b>13</b>, toner accommodated in the developer cartridge <b>15</b> is supplied onto the supply roller <b>19</b>, which in turn supplies toner to the developing roller <b>20</b>. At the same time, the toner is positively tribocharged between the supply roller <b>19</b> and developing roller <b>20</b>.</p>
+<p id="p-0047" num="0046">As the developing roller <b>20</b> rotates, the thickness-regulating blade <b>21</b> regulates the toner carried on the surface of the developing roller <b>20</b> to a prescribed thickness so that the developing roller <b>20</b> carries a uniform thin layer of toner.</p>
+<p id="p-0048" num="0047">In the meantime, the Scorotron charger <b>17</b> applies a uniform charge of positive polarity to the surface of the photosensitive drum <b>16</b> while the photosensitive drum <b>16</b> rotates. Subsequently, the scanning unit <b>8</b> irradiates a laser beam (indicated by dash-line in <figref idref="DRAWINGS">FIG. 1</figref>) through the gap formed between the photosensitive drum unit <b>14</b> and developer cartridge <b>15</b> to expose the surface of the photosensitive drum <b>16</b> in a high-speed scan. In this way, the scanning unit <b>8</b> forms an electrostatic latent image on the surface of the photosensitive drum <b>16</b> corresponding to an image to be formed on the paper P.</p>
+<p id="p-0049" num="0048">As the photosensitive drum <b>16</b> continues to rotate, the positively charged toner carried on the surface of the developing roller <b>20</b> is supplied to the electrostatic latent image formed on the surface of the photosensitive drum <b>16</b>, thereby developing the electrostatic latent image into a visible toner image through reverse development.</p>
+<p id="p-0050" num="0049">The transfer unit <b>10</b> is disposed in the main casing <b>2</b> above the feeding unit <b>3</b> and below the process unit <b>9</b> and extends in the front-to-rear direction. The transfer unit <b>10</b> includes a drive roller <b>22</b>, a follow roller <b>23</b>, the conveying belt <b>24</b>, and four transfer rollers <b>25</b>.</p>
+<p id="p-0051" num="0050">The drive roller <b>22</b> and follow roller <b>23</b> are parallel to each other and separated in the front-to-rear direction. The endless conveying belt <b>24</b> and is mounted around the drive roller <b>22</b> and follow roller <b>23</b>. The transfer rollers <b>25</b> are disposed inside the conveying belt <b>24</b> at positions opposing the photosensitive drums <b>16</b> with the conveying belt <b>24</b> interposed therebetween. Positions between each photosensitive drum <b>16</b> and the corresponding transfer roller <b>25</b> are referred to as transfer positions.</p>
+<p id="p-0052" num="0051">The upper portion of the conveying belt <b>24</b> moves rearward for conveying a sheet of paper P supplied from the feeding unit <b>3</b> sequentially through each transfer position between the photosensitive drums <b>16</b> and transfer rollers <b>25</b>. As the sheet is conveyed on the conveying belt <b>24</b>, toner images in each color carried on the respective photosensitive drums <b>16</b> are sequentially transferred onto the sheet to form a color image.</p>
+<p id="p-0053" num="0052">The fixing unit <b>11</b> is disposed to the rear of the transfer unit <b>10</b> and includes a heating roller <b>26</b>, and a pressure roller <b>27</b> in confrontation with the heating roller <b>26</b>. After a color image has been transferred onto the sheet of paper P in the transfer unit <b>10</b>, the image is fixed to the sheet by a combination of heat and pressure as the sheet passes between the heating roller <b>26</b> and pressure roller <b>27</b> in the fixing unit <b>11</b>.</p>
+<p id="p-0054" num="0053">After the toner image has been fixed to the paper P, the sheet is conveyed along a U-shaped discharge path (not shown) toward a pair of discharge rollers <b>28</b> disposed at the downstream end of the path. The discharge rollers <b>28</b> discharge the sheet onto a discharge tray <b>29</b> formed on the top surface of the main casing <b>2</b>.</p>
+<p id="p-0055" num="0054">As shown in <figref idref="DRAWINGS">FIGS. 2 and 3</figref>, each process cartridge <b>13</b> is provided with a pair of left and right side walls <b>31</b> disposed substantially parallel to each other but separated in the left-to-right direction, the photosensitive drum unit <b>14</b> spanning between the side walls <b>31</b>, and the developer cartridge <b>15</b> detachably supported in the side walls <b>31</b>.</p>
+<p id="p-0056" num="0055">Each of the side walls <b>31</b> is a flat plate that is rectangular in a side view and has a thickness in the left-to-right direction. Hereinafter, when distinguishing between the side walls <b>31</b> disposed on the left and right sides, the side wall <b>31</b> on the left side will be referred to as the left side wall <b>31</b>L, while the side wall <b>31</b> on the right side will be referred to as the right side wall <b>31</b>R. Developer guide grooves <b>32</b> are formed in the inner surfaces of both side walls <b>31</b> for receiving both left and right ends of the developer cartridges <b>15</b>. Further, stoppers <b>33</b> are provided on the outer surfaces of both side walls <b>31</b>, while protrusions <b>34</b> are formed on the top edges of the side walls <b>31</b>.</p>
+<p id="p-0057" num="0056">The developer guide grooves <b>32</b> are formed as cutouts in the front portions of both side walls <b>31</b> and are substantially rectangular in shape in a side view, extending from the top edges of the side walls <b>31</b> to a point near the bottom edges.</p>
+<p id="p-0058" num="0057">The stoppers <b>33</b> are cylindrical ribs that protrude outward from the outer surfaces of both side walls <b>31</b> in the respective left and right directions. The stoppers <b>33</b> are positioned near the front edges of the side walls <b>31</b> and in substantially the vertical center thereof.</p>
+<p id="p-0059" num="0058">The protrusions <b>34</b> are plates extending upward from the top edges of the side walls <b>31</b>. Each protrusion <b>34</b> is arc-shaped in a side view, sharing a central axis with the respective photosensitive drum <b>16</b>. Laterally, the protrusions <b>34</b> extend from the rear edges of the side walls <b>31</b> to the centers thereof.</p>
+<p id="p-0060" num="0059">In addition, a drum coupling <b>35</b> is provided near the lower rear corner of the left side wall <b>31</b>L for inputting a drive force from the main casing <b>2</b> side. A developer coupling support groove <b>36</b> is formed in the top edge of the left side wall <b>31</b>L near the front side thereof for receiving a developer coupling (described later).</p>
+<p id="p-0061" num="0060">The drum coupling <b>35</b> includes a drum coupling cover <b>38</b>, and a female drum coupling member <b>37</b> rotatably supported by the drum coupling cover <b>38</b>. The drum coupling cover <b>38</b> is cylindrically shaped and protrudes leftward from the left surface of the left side wall <b>31</b>L. The female drum coupling member <b>37</b> is coupled to the left end of the photosensitive drum <b>16</b> so as to be unable to rotate relative to the photosensitive drum <b>16</b>.</p>
+<p id="p-0062" num="0061">The developer coupling support groove <b>36</b> is a cutout formed in the top edge of the left side wall <b>31</b>L at a position overlapping the developer guide grooves <b>32</b> when projected from left to right. The developer coupling support groove <b>36</b> has a U-shape in a side view with an open top.</p>
+<p id="p-0063" num="0062">A drum support member (not shown) is also provided on the right side wall <b>31</b>R for supporting the right end of the photosensitive drum <b>16</b> so as to be incapable of rotating relative to the photosensitive drum <b>16</b>. The drum support member has the same cylindrical shape as the drum coupling cover <b>38</b> and protrudes rightward from the right surface of the right side wall <b>31</b>R.</p>
+<p id="p-0064" num="0063">A plurality of electrodes <b>39</b> is provided on the right side wall <b>31</b>R. Body-side electrodes (not shown) provided in the main casing <b>2</b> are connected to the electrodes <b>39</b> for supplying power to the process cartridge <b>13</b>.</p>
+<p id="p-0065" num="0064">Each of the drum units <b>14</b> includes the photosensitive drum <b>16</b>, Scorotron charger <b>17</b>, cleaning blade <b>18</b>, and a drum partition <b>41</b> accommodating these components. The photosensitive drum <b>16</b> is rotatably supported between the corresponding side walls <b>31</b>. The Scorotron charger <b>17</b> spans between the side walls <b>31</b> at a position diagonally above and rearward of the corresponding photosensitive drum <b>16</b> (see <figref idref="DRAWINGS">FIG. 1</figref>). The cleaning blade <b>18</b> also spans between the corresponding side walls <b>31</b> on the rear side of the photosensitive drum <b>16</b> (see <figref idref="DRAWINGS">FIG. 1</figref>).</p>
+<p id="p-0066" num="0065">Each drum partition <b>41</b> has a cylindrical shape that is open on the bottom. The drum partition <b>41</b> spans between the corresponding side walls <b>31</b> and is formed integrally therewith. The side walls <b>31</b> and the drum partition <b>41</b> for covering the photosensitive drum <b>16</b>. A grip part <b>40</b> is integrally formed on the top surface of each drum unit <b>14</b>.</p>
+<p id="p-0067" num="0066">The developer cartridge <b>15</b> includes the supply roller <b>19</b>, the developing roller <b>20</b>, and a developer frame <b>42</b> for accommodating these components. The supply roller <b>19</b> and developing roller <b>20</b> are disposed adjacent to each other in the bottom end of the developer frame <b>42</b>, with the supply roller <b>19</b> on the front side and the developing roller <b>20</b> on the rear side, and are rotatably supported in the developer frame <b>42</b> (see <figref idref="DRAWINGS">FIG. 1</figref>).</p>
+<p id="p-0068" num="0067">The developer frame <b>42</b> extends in the left-to-right direction and is box-shaped, with an opening formed in the lower rear side at a position confronting the developing roller <b>20</b>.</p>
+<p id="p-0069" num="0068">A developer coupling <b>43</b> is provided on the left end of the developer frame <b>42</b> in the vertical center thereof for inputting a drive force from the main casing <b>2</b> side to the supply roller <b>19</b> and developing roller <b>20</b>.</p>
+<p id="p-0070" num="0069">The developer coupling <b>43</b> includes a developer coupling cover <b>45</b>, and a female developer coupling member <b>44</b> rotatably supported by the developer coupling cover <b>45</b>. The developer coupling cover <b>45</b> has a cylindrical shape and protrudes leftward from the left endface of the developer frame <b>42</b>. The female developer coupling member <b>44</b> is coupled with a gear part (not shown) for driving the supply roller <b>19</b> and developing roller <b>20</b>.</p>
+<p id="p-0071" num="0070">In order to mount the developer cartridge <b>15</b> in the photosensitive drum unit <b>14</b>, the operator grips the top of the developer frame <b>42</b> so that the developing roller <b>20</b> is positioned on the bottom of the developer cartridge <b>15</b> and the developer coupling <b>43</b> is positioned on the left. The operator aligns the developer cartridge <b>15</b> above the photosensitive drum unit <b>14</b> for fitting the left and right ends of the developer cartridge <b>15</b> into the developer guide grooves <b>32</b> of the side walls <b>31</b> and for fitting the developer coupling <b>43</b> into the developer coupling support groove <b>36</b>, and inserts the developer cartridge <b>15</b> downward into the photosensitive drum unit <b>14</b>.</p>
+<p id="p-0072" num="0071">At this time, the left and right ends of the developer cartridge <b>15</b> are fitted into the developer guide grooves <b>32</b> and guided downward therein. The lower edges of the left and right ends of the developer cartridge <b>15</b> contact the lower edges of the developer guide grooves <b>32</b> while the developer coupling <b>43</b> is fitted into the developer coupling support groove <b>36</b>. This completes mounting of the developer cartridge <b>15</b> in the photosensitive drum unit <b>14</b>.</p>
+<p id="p-0073" num="0072">Next, details of the process frame <b>12</b> will be described. The process frame <b>12</b> includes a cartridge support frame <b>51</b> for supporting all four of the process cartridges <b>13</b> from the bottom thereof, and a pair of side plates <b>52</b> provided on the left and right sides of the cartridge support frame <b>51</b>.</p>
+<p id="p-0074" num="0073">The cartridge support frame <b>51</b> is a framework formed to encompass the peripheries of the four process cartridges <b>13</b>. The cartridge support frame <b>51</b> is integrally provided with a pair of left and right frame side walls <b>53</b>, a front beam <b>54</b>, and a rear beam <b>55</b>. The cartridge support frame <b>51</b> also has a black partitioning plate <b>61</b> spanning between the frame side walls <b>53</b> at a position between the front beam <b>54</b> and rear beam <b>55</b>.</p>
+<p id="p-0075" num="0074">The black partitioning plate <b>61</b> serves to partition the space between the front beam <b>54</b> and the rear beam <b>55</b> in the cartridge support frame <b>51</b> into a black mounting portion <b>62</b> for the black process cartridge <b>13</b>K, and a color mounting portion <b>63</b> to the rear of the black mounting portion <b>62</b> for the three remaining process cartridges <b>13</b>. In other words, the black mounting portion <b>62</b> is defined by the frame side walls <b>53</b>, the front beam <b>54</b>, and the black partitioning plate <b>61</b>, while the color mounting portion <b>63</b> is defined by the frame side walls <b>53</b>, the rear beam <b>55</b>, and the black partitioning plate <b>61</b>.</p>
+<p id="p-0076" num="0075">As shown in <figref idref="DRAWINGS">FIG. 3</figref>, two partitioning plates <b>59</b> span in the left-to-right direction between the frame side walls <b>53</b> at positions over the color mounting portion <b>63</b>. Each partitioning plates <b>59</b> also extends vertically with the left and right ends thereof connected to the corresponding frame side walls <b>53</b> at positions between neighboring drum support grooves <b>56</b> (described later). Hence, the space encompassed by the front beam <b>54</b>, rear beam <b>55</b>, and the pair of left and right frame side walls <b>53</b> is divided into four substantially equal intervals in the front-to-rear direction by the black partitioning plate <b>61</b> and the partitioning plates <b>59</b>.</p>
+<p id="p-0077" num="0076">The side walls <b>31</b>, developer guide grooves <b>32</b>, and the black partitioning plate <b>61</b> all extend farther upward than the partitioning plates <b>59</b>. The frame side walls <b>53</b> are arranged parallel to each other and are separated in the left-to-right direction. Hereinafter, the frame side wall <b>53</b> on the left side will be referred to as the left frame side wall <b>53</b>L, and the frame side wall <b>53</b> on the right side the right frame side wall <b>53</b>R when it is necessary to distinguish between the two.</p>
+<p id="p-0078" num="0077">Four drum support grooves <b>56</b> are formed at substantially regular intervals in the front-to-rear direction in each of the frame side walls <b>53</b>. The drum support grooves <b>56</b> are substantially U-shaped in a side view so as to be open on the top and are formed at positions corresponding to the drum couplings <b>35</b> of the process cartridges <b>13</b> or drum support members (not shown). The drum support grooves <b>56</b> formed in the left frame side wall <b>53</b>L are formed in a shape for receiving the drum coupling covers <b>38</b>, while the drum support grooves <b>56</b> in the right frame side wall <b>53</b>R are formed in a shape for receiving the drum support members.</p>
+<p id="p-0079" num="0078">A stopper support groove <b>64</b> is formed in each of the frame side walls <b>53</b> in the portion of the frame side walls <b>53</b> adjacent to the black mounting portion <b>62</b>. The stopper support grooves <b>64</b> are formed in front of the corresponding drum support grooves <b>56</b> at positions aligned with the stoppers <b>33</b> of the black process cartridge <b>13</b>K. The stopper support grooves <b>64</b> are substantially U-shaped in a side view with an open top for receiving the stoppers <b>33</b>.</p>
+<p id="p-0080" num="0079">A cartridge support rail <b>65</b> is formed across the entire front-to-rear length on the lower edge of each frame side wall <b>53</b> and protrudes inward therefrom. The cartridge support rails <b>65</b> are formed at positions for receiving contact from the side walls <b>31</b> of the process cartridges <b>13</b> when the process cartridges <b>13</b> are mounted in the process frame <b>12</b>.</p>
+<p id="p-0081" num="0080">The front beam <b>54</b> spans between the front ends of the frame side walls <b>53</b> in the left-to-right direction and has a substantially U-shaped cross section. A first frame handle <b>57</b> is integrally formed on the front surface of the front beam <b>54</b>.</p>
+<p id="p-0082" num="0081">Similarly, the rear beam <b>55</b> spans between the rear ends of the frame side walls <b>53</b> in the left-to-right direction and has a substantially U-shaped cross section. A second frame handle <b>58</b> is integrally formed on the top surface of the front side of the rear beam <b>55</b>.</p>
+<p id="p-0083" num="0082">The side plates <b>52</b> are configured of metal plates formed through punching and pressing processes. Hereinafter, the side plate <b>52</b> on the left side will be referred to as a left side plate <b>52</b>L and the side plate <b>52</b> on the right side the right side plate <b>52</b>R when distinguishing between the two. The left side plate <b>52</b>L and right side plate <b>52</b>R are disposed parallel to each other. The side plates <b>52</b> extend in the front-to-rear direction and are substantially rectangular in a side view. The front and rear ends of the side plates <b>52</b> confront the front beam <b>54</b> and rear beam <b>55</b>, respectively, in the left-to-right direction.</p>
+<p id="p-0084" num="0083">The side plates <b>52</b> are bent at a vertical midpoint in substantially the shape of a crank in a front view, with the top portion positioned farther outside the bottom portion in the left-to-right direction. Specifically, when projected downward, the top portions of the side plates <b>52</b> are positioned farther outside the left and right ends of the drum couplings <b>35</b> and the drum support members (not shown) of the process cartridges <b>13</b> in the respective left and right directions.</p>
+<p id="p-0085" num="0084">A black support hole <b>71</b> is formed in the lower portion of each side plate <b>52</b> in the region adjacent to the black mounting portion <b>62</b> and in a position corresponding to the drum support groove <b>56</b> of the respective frame side wall <b>53</b>. Each black support hole <b>71</b> is substantially U-shaped in a side view with an open top. The black support hole <b>71</b> spans from the lower part of the side plate <b>52</b> to the bent portion thereof.</p>
+<p id="p-0086" num="0085">A black support part <b>72</b> is formed on the bottom edge of each black support hole <b>71</b>. Each black support part <b>72</b> follows an arcing shape and extends outward from the black support hole <b>71</b> in the respective left and right direction. The black support part <b>72</b> is formed integrally with the respective side plate <b>52</b> and functions to support the left and right ends of the respective drum coupling <b>35</b> and drum support member (not shown) from the bottom thereof.</p>
+<p id="p-0087" num="0086">Three drum retaining holes <b>73</b> that are circular in a side view are formed in the lower regions of both side plates <b>52</b> in the portion adjacent to the color mounting portion <b>63</b> and at positions corresponding to the drum support grooves <b>56</b> of the frame side walls <b>53</b>.</p>
+<p id="p-0088" num="0087">The black support hole <b>71</b> and drum retaining holes <b>73</b> in each side plate <b>52</b> are juxtaposed at substantially regular intervals in the front-to-rear direction and are formed so as to receive the drum coupling covers <b>38</b> and drum support members (not shown).</p>
+<p id="p-0089" num="0088">Stopper fitting holes <b>74</b> are formed in each of the side plates <b>52</b> for receiving the stoppers <b>33</b> provided on the process cartridges <b>13</b>. Four of the stopper fitting holes <b>74</b> are formed in each side plate <b>52</b> at regular intervals in the front-to-rear direction. The forwardmost stopper fitting hole <b>74</b> is a cutout that extends from the lower portion of the side plate <b>52</b> to the bent portion and is rectangular in a side view. This stopper fitting hole <b>74</b> corresponds to the stopper <b>33</b> of the black process cartridge <b>13</b>K. The remaining stopper fitting holes <b>74</b> corresponding to the other process cartridges <b>13</b>, i.e., the non-black (color) process cartridges <b>13</b>Y, <b>13</b>C, and <b>13</b>M, are elongated holes extending in the front-to-rear direction in a side view.</p>
+<p id="p-0090" num="0089">Each side plate <b>52</b> includes a protruding part <b>75</b> on the top portion thereof, protruding outward in the left or right direction, and a rail part <b>76</b> extending along the bottom edge of the side plate <b>52</b> in the front-to-rear direction.</p>
+<p id="p-0091" num="0090">The protruding parts <b>75</b> constitute a contacting/separating mechanism (a drum unit pivoting mechanism) together with a pivot lever <b>83</b> (described later) in the main casing <b>2</b>. The drum unit pivoting mechanism pivots the process frame <b>12</b> between an initial position and a pivot position. The protruding parts <b>75</b> are formed in a columnar shape and are disposed near the upper rear edges of the side plates <b>52</b>. The protruding parts <b>75</b> protrude outward from the rear end of the process unit <b>12</b> in the axial direction of the photosensitive drums <b>16</b>.</p>
+<p id="p-0092" num="0091">The rail parts <b>76</b> are formed continuously with the bottom edges of the side plates <b>52</b>, protruding inward in the left or right direction. The front end of each rail part <b>76</b> is bent so as to slope upward toward the front.</p>
+<p id="p-0093" num="0092">Cutout parts <b>77</b> are formed in the left side plate <b>52</b>L at positions corresponding to the developer guide grooves <b>32</b> of the left side walls <b>31</b>L, and cutout parts <b>78</b> are formed in the right side plate <b>52</b>R at positions corresponding to the electrodes <b>39</b> provided on the right side walls <b>31</b>R.</p>
+<p id="p-0094" num="0093">The cutout parts <b>77</b> formed in the left side plate <b>52</b>L are U-shaped in a side view and are open on the top. The shape of the cutout parts <b>77</b> conforms to the peripheral surfaces of the developing rollers <b>20</b>. The cutout parts <b>78</b> formed in the right side plate <b>52</b>R are substantially rectangular-shaped in a side view with a front-to-rear dimension long enough to expose all electrodes <b>39</b> on the respective right side walls <b>31</b>R when viewed from the side.</p>
+<p id="p-0095" num="0094">When mounting the process cartridges <b>13</b> in the process frame <b>12</b>, first the yellow process cartridge <b>13</b>Y, magenta process cartridge <b>13</b>M, and cyan process cartridge <b>13</b>C, i.e., the non-black process cartridges <b>13</b>, are mounted in the color mounting portion <b>63</b> of the cartridge support frame <b>51</b>.</p>
+<p id="p-0096" num="0095">The operator mounts the non-black process cartridges <b>13</b> in the color mounting portion <b>63</b> by gripping the grip part <b>40</b> of each process cartridge <b>13</b>, positioning the process cartridge <b>13</b> so that the front and/or rear edges of the process cartridge <b>13</b> are flush with the partitioning plates <b>59</b> while the drum couplings <b>35</b> are aligned with the drum support grooves <b>56</b>, and inserts the process cartridge <b>13</b> downward into the color mounting portion <b>63</b> so that the drum couplings <b>35</b> are fitted into the drum support grooves <b>56</b>.</p>
+<p id="p-0097" num="0096">At this time, the process cartridge <b>13</b> is positioned in the color mounting portion <b>63</b> so that the bottom edges of both side walls <b>31</b> of the process cartridge <b>13</b> contact the cartridge support rails <b>65</b> on both frame side walls <b>53</b>. After sequentially mounting each non-black process cartridge <b>13</b> in the color mounting portion <b>63</b>, the left and right side plates <b>52</b> are assembled on the process frame <b>12</b>.</p>
+<p id="p-0098" num="0097">The operator assembles the left and right side plates <b>52</b> on the process frame <b>12</b> by positioning each side plate <b>52</b> relative to the cartridge support frame <b>51</b> so that the drum couplings <b>35</b> or drum support members (not shown) on the non-black process cartridges <b>13</b> are fitted into the drum retaining holes <b>73</b> formed in the side plates <b>52</b> and so that the drum support grooves <b>56</b> formed in the cartridge support frame <b>51</b> are aligned with the drum retaining holes <b>73</b> and the black support hole <b>71</b> formed in each side plate <b>52</b>.</p>
+<p id="p-0099" num="0098">Consequently, the non-black process cartridges <b>13</b> are non-detachably supported in the process frame <b>12</b>, as shown in <figref idref="DRAWINGS">FIG. 4</figref>. Accordingly, the photosensitive drums <b>16</b> provided in the non-black process cartridges <b>13</b> are non-detachably supported between the side plates <b>52</b> and capable of rotating relative to the side plates <b>52</b>. That is, the photosensitive drums <b>16</b> provided in the non-black process cartridges <b>13</b> are fixed in the process frame <b>12</b>.</p>
+<p id="p-0100" num="0099">Further, the stoppers <b>33</b> provided on each process cartridge <b>13</b> are inserted into the corresponding stopper fitting holes <b>74</b> in a direction from the inside of the side plate <b>52</b> toward the outside. Further, the cutout parts <b>77</b> formed in the left side plate <b>52</b>L are aligned with the developer couplings <b>43</b> of the process cartridges <b>13</b> in the left-to-right direction, while the cutout parts <b>78</b> formed in the right side plate <b>52</b>R are aligned with the electrodes <b>39</b> on the process cartridges <b>13</b> in the left-to-right direction. Accordingly, the developer couplings <b>43</b> and electrodes <b>39</b> are exposed on the left and right sides of the left side plate <b>52</b>L and right side plate <b>52</b>R, respectively.</p>
+<p id="p-0101" num="0100">Next, the black process cartridge <b>13</b>K is mounted in the black mounting portion <b>62</b>. As shown in <figref idref="DRAWINGS">FIG. 5</figref>, the black process cartridge <b>13</b>K is mounted in the black mounting portion <b>62</b> in a manner similar to that used for mounting the non-black process cartridges <b>13</b> in the color mounting portion <b>63</b>. Specifically, the operator grips the grip part <b>40</b> of the black process cartridge <b>13</b>K and positions the black process cartridge <b>13</b>K so that the front end of the black process cartridge <b>13</b>K is aligned with the front beam <b>54</b> and the rear end is aligned with the black partitioning plate <b>61</b>, and so that the drum couplings <b>35</b> are aligned with the black support holes <b>71</b> and the stoppers <b>33</b> with the stopper fitting holes <b>74</b> (see <figref idref="DRAWINGS">FIG. 6</figref>). Next, the operator inserts the black process cartridge <b>13</b>K downward into the black mounting portion <b>62</b>, fitting the drum couplings <b>35</b> into the black support holes <b>71</b> and the stoppers <b>33</b> into the stopper fitting holes <b>74</b>.</p>
+<p id="p-0102" num="0101">Since the black support holes <b>71</b> and stopper fitting holes <b>74</b> are open on the top, the black process cartridge <b>13</b>K is detachably supported in the process frame <b>12</b>. Consequently, the photosensitive drum <b>16</b> provided in the black process cartridge <b>13</b>K is detachably supported between the side plates <b>52</b> and is capable of rotating relative to the side plates <b>52</b>. In other words, the photosensitive drum <b>16</b> of the black process cartridge <b>13</b>K is detachably provided in the process frame <b>12</b>. At this time, mounting of all process cartridges <b>13</b> in the process frame <b>12</b> is completed.</p>
+<p id="p-0103" num="0102">As shown in <figref idref="DRAWINGS">FIGS. 7 and 8</figref>, the main casing <b>2</b> includes a pair of left and right casing side walls <b>81</b> disposed parallel to each other on either side of the conveying belt <b>24</b>, a reference shaft <b>82</b> spanning between the casing side walls <b>81</b>, the pivot lever <b>83</b> spanning between the casing side walls <b>81</b>, pressing members <b>103</b>, and a translation cam mechanism <b>84</b> disposed on the left side of the left casing side wall <b>81</b>. Hereinafter the casing side wall <b>81</b> on the left side will be referred to as the left casing side wall <b>81</b>L and the casing side wall <b>81</b> on the right side the right casing side wall <b>81</b>R. The reference shaft <b>82</b> adjusts a position of the drum unit in the main casing <b>2</b>.</p>
+<p id="p-0104" num="0103">As shown in <figref idref="DRAWINGS">FIG. 8</figref>, each of the casing side walls <b>81</b> includes a frame support part <b>85</b>, and a black positioning plate <b>86</b>. A frame guide groove <b>87</b> is also formed in each casing side wall <b>81</b>. The frame support parts <b>85</b> are provided along the lower edge of both casing side walls <b>81</b> in the front-to-rear direction and protrude inward from the inner surfaces of the casing side walls <b>81</b> in the respective left and right directions. A protrusion <b>88</b> is formed on the front end of each frame support part <b>85</b>. The protrusion <b>88</b> has an arc shape in a side cross-sectional view and protrudes upward.</p>
+<p id="p-0105" num="0104">Each black positioning plate <b>86</b> is a flat plate that is substantially rectangular in a side view. The black positioning plate <b>86</b> is disposed rearward of the corresponding protrusion <b>88</b> and protrudes upward from the top surface of the corresponding frame support part <b>85</b>. A portion is cut out from the top edge of each black positioning plate <b>86</b> to form a shallow V-shape in a side view so that the top edge of the black positioning plate <b>86</b> is lower in the center than the front and rear edges. The black positioning plates <b>86</b> are disposed in positions for receiving the black support parts <b>72</b> of the side plates <b>52</b> when the process frame <b>12</b> is mounted in the main casing <b>2</b> (see <figref idref="DRAWINGS">FIG. 6</figref>).</p>
+<p id="p-0106" num="0105">The frame guide grooves <b>87</b> extend in the front-to-rear direction through substantially the vertical center of the casing side walls <b>81</b> and are shaped for receiving the protruding parts <b>75</b> provided on the process frame <b>12</b>. A step part <b>108</b> formed substantially in a crank-shape when viewed from the side is formed in the front end of each frame guide groove <b>87</b>. A pivot guide groove <b>89</b> that is wider vertically than the frame guide groove <b>87</b> is formed in the rear end of each frame guide groove <b>87</b>.</p>
+<p id="p-0107" num="0106">The pivot guide groove <b>89</b> has a rectangular shape in a side view. As will be described later in greater detail, the pivot guide grooves <b>89</b> function to receive the protruding parts <b>75</b> when the process frame <b>12</b> is mounted in the main casing <b>2</b> and to guide vertical movement of the protruding parts <b>75</b> when the process frame <b>12</b> is pivoted, thereby restricting the pivoting range of the process frame <b>12</b>.</p>
+<p id="p-0108" num="0107">As shown in <figref idref="DRAWINGS">FIGS. 7 and 8</figref>, through-holes <b>90</b> are formed in both casing side walls <b>81</b> at positions corresponding to the developer couplings <b>43</b> or electrodes <b>39</b>. The through-holes <b>90</b> formed in the left casing side wall <b>81</b>L are formed in a circular shape in a side view that corresponds to the shape of the developer couplings <b>43</b>, while the through-holes <b>90</b> formed in the right casing side wall <b>81</b>R are rectangular-shaped in a side view and are large enough to expose all electrodes <b>39</b>.</p>
+<p id="p-0109" num="0108">As shown in <figref idref="DRAWINGS">FIG. 8</figref>, the reference shaft <b>82</b> is formed of metal or the like in a rod shape and extends between the lower rear ends of the casing side walls <b>81</b>. The bottom surface on the rear end of the process frame <b>12</b> contacts the reference shaft <b>82</b> when the process frame <b>12</b> is completely mounted in the main casing <b>2</b>.</p>
+<p id="p-0110" num="0109">As shown in <figref idref="DRAWINGS">FIG. 7</figref>, the pivot lever <b>83</b> constitutes a contacting/separating mechanism together with the protruding parts <b>75</b> of the process frame <b>12</b>. The pivot lever <b>83</b> is pivotable in a plane perpendicular to the axial directions of photosensitive drums <b>16</b>. The pivot lever <b>83</b> includes a pivot shaft <b>91</b>, and a pair of lever members <b>92</b> coupled one with each end of the pivot shaft <b>91</b> so as to be incapable of rotating relative to the pivot shaft <b>91</b>.</p>
+<p id="p-0111" num="0110">As shown in <figref idref="DRAWINGS">FIG. 8</figref>, the pivot shaft <b>91</b> has a rod shape and is disposed in substantially the vertical center of the casing side walls <b>81</b> toward the rear ends thereof. Both ends of the pivot shaft <b>91</b> are rotatably inserted through through-holes <b>93</b> penetrating the casing side walls <b>81</b> and protrude outward from the casing side walls <b>81</b> in the left and right directions.</p>
+<p id="p-0112" num="0111">The lever members <b>92</b> are formed in arm-like shapes. The rear ends of the lever members <b>92</b> are coupled with the pivot shaft <b>91</b> at a point outside the casing side walls <b>81</b> relative to the left and right directions. Through this construction, the front ends of the lever members <b>92</b> pivot vertically, i.e., in a direction orthogonal to the left-to-right direction, about the pivot shaft <b>91</b>.</p>
+<p id="p-0113" num="0112">As shown in <figref idref="DRAWINGS">FIG. 8</figref>, the pressing member <b>103</b> is disposed on the inner side of each casing side wall <b>81</b>. Each pressing member <b>103</b> includes a rib <b>104</b> supported on the main casing <b>2</b>, a pressing protrusion <b>105</b> capable of sliding vertically, and a compression spring <b>106</b> disposed between the rib <b>104</b> and pressing protrusion <b>105</b>.</p>
+<p id="p-0114" num="0113">The rib <b>104</b> is disposed above and slightly forward of the black positioning plate <b>86</b> and is fixed in position relative to the main casing <b>2</b> by a support frame (not shown). The pressing protrusion <b>105</b> is disposed directly below the rib <b>104</b> while separated therefrom. The pressing protrusion <b>105</b> is positioned to contact and apply pressure to the tops of the protrusions <b>34</b> formed on the process cartridge <b>13</b> when the process frame <b>12</b> is mounted in the main casing <b>2</b>.</p>
+<p id="p-0115" num="0114">As shown in <figref idref="DRAWINGS">FIG. 7</figref>, the translation cam mechanism <b>84</b> is disposed on the outer surface of the left casing side wall <b>81</b>L. The translation cam mechanism <b>84</b> selectively transmits drive power to each of photosensitive drums <b>16</b>. The translation cam mechanism <b>84</b> includes a translation cam <b>94</b> serving as a switching member, and four drive transmission gear parts <b>95</b> for transmitting a drive force to each of the photosensitive drums <b>16</b>.</p>
+<p id="p-0116" num="0115">The translation cam <b>94</b> is formed from a flat plate having a substantially rectangular shape in a side view. While the function of the translation cam <b>94</b> will be described later in greater detail, the translation cam <b>94</b> is capable of moving in the front-to-rear direction.</p>
+<p id="p-0117" num="0116">A protruding part <b>107</b> is formed on the top edge of the translation cam <b>94</b> near the rear end thereof. The protruding part <b>107</b> is substantially triangular in a side view and protrudes upward from the top edge of the translation cam <b>94</b>. In other words, the protruding part <b>107</b> protrudes toward the pivot lever <b>83</b>. The top of the protruding part <b>107</b> is formed level. The protruding part <b>107</b> is disposed so as to push the left lever member <b>92</b> of the pivot lever <b>83</b> upward when the top end of the protruding part <b>107</b> contacts this lever member <b>92</b>.</p>
+<p id="p-0118" num="0117">As shown in <figref idref="DRAWINGS">FIG. 12</figref>, an elongated hole is formed in the translation cam <b>94</b>. The hole is elongated in the front-to-rear direction and has a front-to-rear length nearly equivalent to the front-to-rear length of the process frame <b>12</b>. A cylindrical part <b>96</b> is integrally formed with the translation cam <b>94</b> around the elongated hole, protruding leftward from the peripheral edge of the elongated hole.</p>
+<p id="p-0119" num="0118">As shown in <figref idref="DRAWINGS">FIG. 13</figref>, the cylindrical part <b>96</b> is integrally formed with four retracting parts <b>97</b> corresponding to the four drive transmission gear parts <b>95</b> that protrude leftward from the left edge of the cylindrical part <b>96</b>, and sloped parts <b>98</b> formed continuously with the rear edges of the retracting parts <b>97</b>. The front-to-rear dimension of the forwardmost retracting part <b>97</b> (i.e., the retracting part <b>97</b> corresponding to the black process cartridge <b>13</b>K) is shorter than the same dimension of the other three retracting parts <b>97</b>. The protruding length of each of the sloped parts <b>98</b> grows gradually shorter in the direction rearward from the rear edge of the corresponding retracting parts <b>97</b>.</p>
+<p id="p-0120" num="0119">Each drive transmission gear part <b>95</b> includes a gear <b>99</b>, a shaft <b>100</b>, and a male drum coupling member <b>101</b>. A drive force generated by a motor (not shown) provided in the main casing <b>2</b> is inputted into the gears <b>99</b>. The shaft <b>100</b> is integrally formed with the corresponding gear <b>99</b> and extends rightward from the same.</p>
+<p id="p-0121" num="0120">The right end of the male drum coupling member <b>101</b> is formed to mate with the female drum coupling member <b>37</b> of drum coupling <b>35</b>, while the left end is formed in a cylindrical shape for receiving the shaft <b>100</b> so that the shaft <b>100</b> cannot rotate relative to the male drum coupling member <b>101</b>. A bridge part <b>102</b> having a diameter longer than the vertical length of the cylindrical part <b>96</b> is formed on the left end of the male drum coupling member <b>101</b>.</p>
+<p id="p-0122" num="0121">A compression spring (not shown) is also mounted between the gear <b>99</b> and the bridge part <b>102</b> for urging the male drum coupling member <b>101</b> rightward.</p>
+<p id="p-0123" num="0122">Next, an operation for mounting the process frame <b>12</b> in the main casing <b>2</b> will be described with referred to <figref idref="DRAWINGS">FIGS. 9-12</figref>. When mounting the process frame <b>12</b> in the main casing <b>2</b>, the operator first grips the first frame handle <b>57</b> and second frame handle <b>58</b> on the process frame <b>12</b> and inserts the protruding parts <b>75</b> on the process frame <b>12</b> into the front ends of the frame guide grooves <b>87</b> formed in the main casing <b>2</b>. While gripping the first frame handle <b>57</b>, the operator pushes the process frame <b>12</b> rearward.</p>
+<p id="p-0124" num="0123">At this point, the protruding parts <b>75</b> are guided along the frame guide grooves <b>87</b> and contact the step parts <b>108</b> formed in the frame guide grooves <b>87</b>, as shown in <figref idref="DRAWINGS">FIG. 9</figref>. In this state, the process frame <b>12</b> is oriented along a slant, with the rear end positioned lower than the front end, and the rail parts <b>76</b> along the lower edges of the process frame <b>12</b> are positioned outside the main casing <b>2</b>.</p>
+<p id="p-0125" num="0124">Next, while continuing to grip the first frame handle <b>57</b>, the operator grips the second frame handle <b>58</b> and lifts the second frame handle <b>58</b> upward. As a consequence, the protruding parts <b>75</b> move upward in the step parts <b>108</b> of the frame guide grooves <b>87</b>, as shown in <figref idref="DRAWINGS">FIG. 10</figref>. When the process frame <b>12</b> is brought to a level state, the bottom edge of the process frame <b>12</b> on the rear end thereof is inserted into the main casing <b>2</b>.</p>
+<p id="p-0126" num="0125">At this time, the rail parts <b>76</b> on the process frame <b>12</b> are in contact with the protrusions <b>88</b> of the main casing <b>2</b> so that the protrusions <b>88</b> support the rear ends of the process frame <b>12</b> on the bottom thereof, as shown in <figref idref="DRAWINGS">FIG. 11</figref>.</p>
+<p id="p-0127" num="0126">Next, the operator continues to push the process frame <b>12</b> rearward, while the protruding parts <b>75</b> are guided rearward along the frame guide grooves <b>87</b>. When the protruding parts <b>75</b> arrive in the pivot guide grooves <b>89</b> formed at the rear ends of the frame guide grooves <b>87</b>, the operation for mounting the process frame <b>12</b> is complete, as shown in <figref idref="DRAWINGS">FIG. 12</figref>.</p>
+<p id="p-0128" num="0127">Next, an operation of process unit <b>9</b> will be described with referred to <figref idref="DRAWINGS">FIGS. 12-21</figref>. The printer <b>1</b> includes a control unit (not shown) that sets the printer <b>1</b> to one among the monochrome mode, the color mode, and the drum detachable mounting mode. Details of each mode will be described below.</p>
+<p id="p-0129" num="0128">When the process frame <b>12</b> is completely mounted in the main casing <b>2</b> as shown in <figref idref="DRAWINGS">FIG. 12</figref>, the protruding parts <b>75</b> are positioned on the lower edges of the pivot guide grooves <b>89</b> and protrude outward from the casing side walls <b>81</b> in the respective left and right directions. Also at this time, the translation cam <b>94</b> is in a first position, which is a drum detachable mounting position, and the protruding part <b>107</b> is positioned on the rear side of the left lever member <b>92</b>. When the process frame <b>12</b> is completely mounted in the main casing <b>2</b>, the control unit (not shown) sets the printer <b>1</b> to the drum detachable mounting mode.</p>
+<p id="p-0130" num="0129">Further, the drum couplings <b>35</b> are in confrontation with the cylindrical part <b>96</b> of the translation cam <b>94</b> in the left-to-right direction so that the drum couplings <b>35</b> are exposed through the cylindrical part <b>96</b> on the left side of the main casing <b>2</b>.</p>
+<p id="p-0131" num="0130">Similarly, the developer couplings <b>43</b> are in confrontation with the through-holes <b>90</b> formed in the left casing side wall <b>81</b>L in the left-to-right direction, whereby the developer couplings <b>43</b> are exposed through the through-holes <b>90</b> on the left side of the main casing <b>2</b>. By inserting male coupling members (not shown) into the through-holes <b>90</b> to be coupled with the female developer coupling members <b>44</b>, a drive force can be transmitted to the developer couplings <b>43</b>.</p>
+<p id="p-0132" num="0131">Similarly, the electrodes <b>39</b> are in confrontation with the through-holes <b>90</b> formed in the right casing side wall <b>81</b>R in the left-to-right direction, whereby the electrodes <b>39</b> are exposed through the through-holes <b>90</b> on the right side of the main casing <b>2</b>.</p>
+<p id="p-0133" num="0132">Further, as shown in <figref idref="DRAWINGS">FIG. 13</figref>, the bridge parts <b>102</b> of all the male drum coupling members <b>101</b> are in contact with the corresponding retracting parts <b>97</b> of the translation cam <b>94</b>, so that all male drum coupling members <b>101</b> are retracted leftward. In other words, the translation cam <b>94</b> has uncoupled the female drum coupling members <b>37</b> (<figref idref="DRAWINGS">FIG. 14</figref>) of all photosensitive drums <b>16</b> from all male drum coupling members <b>101</b>.</p>
+<p id="p-0134" num="0133">Further, the rail parts <b>76</b> are no longer in contact with the protrusions <b>88</b>, as shown in FIG. <b>14</b>. Consequently, the black support parts <b>72</b> are in contact with and supported by the black positioning plates <b>86</b>. The rear end of the process frame <b>12</b> also contacts the reference shaft <b>82</b> and is supported thereon. With this configuration, the process frame <b>12</b> is disposed in a level orientation in the main casing <b>2</b>.</p>
+<p id="p-0135" num="0134">As shown in <figref idref="DRAWINGS">FIG. 15(<i>a</i>)</figref>, all of the photosensitive drums <b>16</b> are in contact with the conveying belt <b>24</b>. As shown in <figref idref="DRAWINGS">FIG. 15(<i>b</i>)</figref>, the pressing protrusions <b>105</b> of the pressing members <b>103</b> are in contact with the tops of the protrusions <b>34</b>, applying a downward pressure to the protrusions <b>34</b>. More specifically, the pressing members <b>103</b> press both side walls <b>31</b> and the drum partition <b>41</b> of the black process cartridge <b>13</b>K downward toward a position between the corresponding photosensitive drum <b>16</b> and stopper <b>33</b>.</p>
+<p id="p-0136" num="0135">Further, the rail parts <b>76</b> are disposed in confrontation with but are separated from the frame support parts <b>85</b> vertically. Consequently, the printer <b>1</b> is in the drum detachable mounting mode in which the photosensitive drums <b>16</b> can be detached from the main casing <b>2</b>.</p>
+<p id="p-0137" num="0136">When the control unit (not shown) sets the printer <b>1</b> to the monochrome mode, the translation cam <b>94</b> is subsequently moved forward as shown in <figref idref="DRAWINGS">FIG. 16</figref>, and then the protruding part <b>107</b> contacts the left lever member <b>92</b> and the lever member <b>92</b> pivots upward along the front sloped surface of the protruding part <b>107</b>. The right lever member <b>92</b> consequently pivots upward together with the left lever member <b>92</b>. As the lever members <b>92</b> pivot, the upper edges of the lever members <b>92</b> contact the bottoms of the protruding parts <b>75</b> and lift the protruding parts <b>75</b> upward. In other words, the lever member <b>92</b> pivots from the initial position shown in <figref idref="DRAWINGS">FIG. 12</figref> to the pivot position shown in <figref idref="DRAWINGS">FIG. 16</figref>.</p>
+<p id="p-0138" num="0137">At the same time, the bridge part <b>102</b> of the male drum coupling member <b>101</b> corresponding to the black process cartridge <b>13</b>K is released from its contact with the retracting part <b>97</b> of the cylindrical part <b>96</b> and advances rightward along the sloped part <b>98</b>, as shown in <figref idref="DRAWINGS">FIG. 17</figref>.</p>
+<p id="p-0139" num="0138">When the translation cam <b>94</b> reaches a second position, which is a monochrome image-forming position, the front end of the lever member <b>92</b> is in contact with the top of the protruding part <b>107</b>, as shown in <figref idref="DRAWINGS">FIG. 16</figref>. At this point, the lever members <b>92</b> have lifted the protruding parts <b>75</b> to the top ends of the pivot guide grooves <b>89</b>.</p>
+<p id="p-0140" num="0139">Through this operation, the process frame <b>12</b> is pivoted about the central axis of the photosensitive drum <b>16</b> in the black process cartridge <b>13</b>K, with the rear end of the process frame <b>12</b> rising upward, as illustrated in <figref idref="DRAWINGS">FIGS. 18 and 19</figref>(<i>b</i>).</p>
+<p id="p-0141" num="0140">Further, the photosensitive drum <b>16</b> of the black process cartridge <b>13</b>K is in contact with the conveying belt <b>24</b>, while the photosensitive drums <b>16</b> of the non-black process cartridges <b>13</b> confront the conveying belt <b>24</b> vertically but are separated therefrom, as shown in <figref idref="DRAWINGS">FIG. 19(<i>a</i>)</figref>.</p>
+<p id="p-0142" num="0141">At the same time, the male drum coupling member <b>101</b> corresponding to the black process cartridge <b>13</b>K is coupled with the female drum coupling member <b>37</b> of the black process cartridge <b>13</b>K so as to share the same central axis, as shown in <figref idref="DRAWINGS">FIG. 17</figref>. The male drum coupling members <b>101</b> corresponding to the non-black process cartridges <b>13</b> are still retracted leftward and are therefore not coupled with the corresponding female drum coupling members <b>37</b>.</p>
+<p id="p-0143" num="0142">In this state, the printer <b>1</b> is in the monochrome mode for forming monochromatic images. When a drive force is inputted into each of the gears <b>99</b> in this monochrome mode, the drive force is transmitted to the black photosensitive drum <b>16</b>, but not to the non-black photosensitive drums <b>16</b>, enabling the formation of images in black only. At this time, the male drum coupling members <b>101</b> corresponding to the non-black photosensitive drums <b>16</b> rotate while remaining disengaged from the photosensitive drums <b>16</b>.</p>
+<p id="p-0144" num="0143">When the control unit (not shown) sets the printer <b>1</b> to the color mode, the translation cam <b>94</b> is moved farther forward as shown in <figref idref="DRAWINGS">FIG. 20</figref>, and then the lever member <b>92</b> pivots downward along the sloped rear surface of the protruding part <b>107</b>, and consequently both lever members <b>92</b> pivot downward. As the lever members <b>92</b> pivot downward, the protruding parts <b>75</b> also drop downward.</p>
+<p id="p-0145" num="0144">At the same time, as shown in <figref idref="DRAWINGS">FIG. 21</figref>, the bridge parts <b>102</b> of all male drum coupling members <b>101</b> are disengaged from the retracting parts <b>97</b> of the cylindrical part <b>96</b> and advance rightward along the sloped parts <b>98</b>.</p>
+<p id="p-0146" num="0145">When the translation cam <b>94</b> reaches a third position, which is the color image-forming position, the front end of the left lever member <b>92</b> no longer contacts the protruding part <b>107</b>, as shown in <figref idref="DRAWINGS">FIG. 20</figref>. At this time, the protruding parts <b>75</b> are once again disposed in the bottom part of the pivot guide grooves <b>89</b>. Accordingly, as shown in <figref idref="DRAWINGS">FIG. 22</figref>, the rear end of the process frame <b>12</b> again contacts the reference shaft <b>82</b> so that the process frame <b>12</b> is in a level orientation. In addition, as in the drum detachable mode, all of the photosensitive drums <b>16</b> are in contact with the conveying belt <b>24</b>.</p>
+<p id="p-0147" num="0146">Further, all of the male drum coupling members <b>101</b> are coupled with the corresponding female drum coupling members <b>37</b> and share the central axis of the female drum coupling members <b>37</b>, as shown in <figref idref="DRAWINGS">FIG. 21</figref>. Thus, the printer <b>1</b> is in a color mode for forming color images. When a drive force is inputted into the gears <b>99</b> in the color mode, the drive force is transmitted to all photosensitive drums <b>16</b> in order to form a color image.</p>
+<p id="p-0148" num="0147">As shown in <figref idref="DRAWINGS">FIG. 5</figref>, the color laser printer <b>1</b> is provided with four photosensitive drums <b>16</b>. The photosensitive drums <b>16</b> provided in the non-black process cartridges <b>13</b> are fixed to the process frame <b>12</b>, while the photosensitive drum <b>16</b> provided in the black process cartridge <b>13</b>K is detachably provided in the process frame <b>12</b>.</p>
+<p id="p-0149" num="0148">Accordingly, the black photosensitive drum <b>16</b> can be removed and replaced while the non-black photosensitive drums <b>16</b> remain fixed to the process frame <b>12</b>. As a result, when the non-black photosensitive drums <b>16</b> are used with low frequency while the black photosensitive drum <b>16</b> is used with high frequency, this construction allows the user to efficiently maintain the frequently used black photosensitive drum <b>16</b> while preserving the relative positioning of the infrequently used non-black photosensitive drums <b>16</b>. Hence, the printer <b>1</b> allows efficient maintenance of the photosensitive drums <b>16</b> based on usage frequency while ensuring high-quality image formation.</p>
+<p id="p-0150" num="0149">In the printer <b>1</b>, as shown in <figref idref="DRAWINGS">FIG. 5</figref>, the non-black photosensitive drums <b>16</b> are non-detachably supported between the side plates <b>52</b> of the process frame <b>12</b>. Accordingly, the pitch between neighboring non-black photosensitive drums <b>16</b> can be preserved with greater precision.</p>
+<p id="p-0151" num="0150">Further, in the printer <b>1</b>, as shown in <figref idref="DRAWINGS">FIG. 5</figref>, the black photosensitive drum <b>16</b> is detachably supported between the side plates <b>52</b> of the process frame <b>12</b>. Accordingly, the black photosensitive drum <b>16</b> can be removed from the process frame <b>12</b> while preserving the pitch between neighboring photosensitive drums <b>16</b> with precision.</p>
+<p id="p-0152" num="0151">In the printer <b>1</b>, the black photosensitive drum <b>16</b> is disposed in the front side of the process frame <b>12</b>, as shown in <figref idref="DRAWINGS">FIG. 1</figref>. Hence, when the user is mounting and removing the process frame <b>12</b> on the front side, the black photosensitive drum <b>16</b> is positioned nearest the user. This construction makes it easy to remove the black photosensitive drum <b>16</b> from the process frame <b>12</b>, facilitating replacement operations.</p>
+<p id="p-0153" num="0152">As illustrated in <figref idref="DRAWINGS">FIG. 19</figref>, the black photosensitive drum <b>16</b> is provided in the front end of the process frame <b>12</b> according to the printer <b>1</b>, and the non-black photosensitive drums <b>16</b> can be separated from the conveying belt <b>24</b> by pivoting the rear end of the process frame <b>12</b> upward about the axis of the black photosensitive drum <b>16</b>.</p>
+<p id="p-0154" num="0153">With this configuration, all non-black photosensitive drums <b>16</b> provided in the process frame <b>12</b> can be separated from the conveying belt <b>24</b> as a unit, while preserving the relative positioning of all photosensitive drums <b>16</b>. In other words, the non-black photosensitive drums <b>16</b> can be separated from the conveying belt <b>24</b> while maintaining the pitch between neighboring photosensitive drums <b>16</b>. Therefore, this construction ensures high-quality image formation while suitably reducing wear on the photosensitive drums <b>16</b>.</p>
+<p id="p-0155" num="0154">In the printer <b>1</b> according to the preferred embodiment, the process frame <b>12</b> can slide in the front-to-rear direction. In this way, the four photosensitive drums <b>16</b> can be operated as a unit.</p>
+<p id="p-0156" num="0155">With the printer <b>1</b>, the pivot lever <b>83</b> and protruding parts <b>75</b> (contacting/separating mechanism) for pivoting the process frame <b>12</b> are disposed on the rear side of the process frame <b>12</b>, as shown in <figref idref="DRAWINGS">FIG. 14</figref>. Hence, this construction makes it easy to apply the contacting/separating mechanism to the rear end of the process frame <b>12</b>. Consequently, the process frame <b>12</b> can easily be pivoted.</p>
+<p id="p-0157" num="0156">More specifically, as illustrated in <figref idref="DRAWINGS">FIGS. 19(<i>a</i>) and 19(<i>b</i>)</figref>, the printer <b>1</b> has the pivot lever <b>83</b> that can pivot in a direction orthogonal to the left-to-right direction, and protruding parts <b>75</b> protruding outward from the rear end of the process frame <b>12</b> in the left and right directions. The process frame <b>12</b> can be pivoted when the pivot lever <b>83</b> contacts and moves the protruding part <b>75</b>. Hence, the process frame <b>12</b> can be pivoted through a simple contacting/separating mechanism.</p>
+<p id="p-0158" num="0157">Further, when all photosensitive drums <b>16</b> are in contact with the conveying belt <b>24</b>, as illustrated in <figref idref="DRAWINGS">FIGS. 15 (<i>a</i>) and 15(<i>b</i>)</figref>, the rear end of the process frame <b>12</b> is in contact with the reference shaft <b>82</b>, thereby positioning the process frame <b>12</b> relative to the conveying belt <b>24</b>. Accordingly, the photosensitive drums <b>16</b> can be positioned relative to the conveying belt <b>24</b> in order to reliably maintain suitable contact between the photosensitive drums <b>16</b> and the conveying belt <b>24</b>.</p>
+<p id="p-0159" num="0158">Further, the pressing members <b>103</b> press downward on the arc-shaped protrusions <b>34</b> formed on the side walls <b>31</b> of the black process cartridge <b>13</b>K, as shown in <figref idref="DRAWINGS">FIG. 15</figref>. Further, the protrusions <b>34</b> share a central axis with the photosensitive drums <b>16</b>, as shown in <figref idref="DRAWINGS">FIG. 6</figref>. Accordingly, when pressed against the protrusions <b>34</b>, the pressing members <b>103</b> constantly apply a force to the black photosensitive drum <b>16</b> toward the central axis thereof. This force is constantly applied toward the black photosensitive drum <b>16</b>, even when the position of contact between the pressing members <b>103</b> and protrusions <b>34</b> changes as the process frame <b>12</b> is pivoted.</p>
+<p id="p-0160" num="0159">More specifically, as shown in <figref idref="DRAWINGS">FIG. 15</figref>, the pressing members <b>103</b> press the side walls <b>31</b> toward a position between the black photosensitive drum <b>16</b> and the corresponding stoppers <b>33</b> separated from the black photosensitive drum <b>16</b>. Accordingly, the pressing members <b>103</b> can apply pressure to both the photosensitive drum <b>16</b> and the stoppers <b>33</b>. Consequently, the black photosensitive drum <b>16</b> is always fixed in position, even when the process frame <b>12</b> is pivoted.</p>
+<p id="p-0161" num="0160">Further, in the printer <b>1</b>, each of the male drum coupling members <b>101</b> is coaxially coupled with a corresponding photosensitive drum <b>16</b> when in the color mode. By sharing the same axis as the corresponding photosensitive drums <b>16</b>, the male drum coupling members <b>101</b> can input a drive force to the photosensitive drums <b>16</b>. As a result, a drive force can be precisely transmitted from the male drum coupling members <b>101</b> to the photosensitive drums <b>16</b>.</p>
+<p id="p-0162" num="0161">The male drum coupling members <b>101</b> are uncoupled from the non-black photosensitive drums <b>16</b> in the monochrome mode when the non-black photosensitive drums <b>16</b> are separated from the conveying belt <b>24</b>. Hence, when the male drum coupling members <b>101</b> are uncoupled from the non-black photosensitive drums <b>16</b>, the rotation of the non-black photosensitive drums <b>16</b> is halted when the photosensitive drums <b>16</b> are separated from the conveying belt <b>24</b>, even though the male drum coupling members <b>101</b> continue to rotate. Accordingly, the translation cam mechanism <b>84</b> can be provided in a simple structure for coupling or uncoupling the male drum coupling members <b>101</b> from the photosensitive drums <b>16</b>.</p>
+<p id="p-0163" num="0162">The printer <b>1</b> also has a drum detachable mounting mode in which the photosensitive drums <b>16</b> is allowed to be mounted on or separated from the main casing <b>2</b>. Accordingly, the process frame <b>12</b> having the photosensitive drums <b>16</b> can be removed in the drum detachable mounting mode, which is different from the modes for forming images (the color mode and monochrome mode). As a result, the process frame <b>12</b> can be removed while image-forming operations are not being performed.</p>
+<p id="p-0164" num="0163">With the printer <b>1</b>, the translation cam <b>94</b> provided in the translation cam mechanism <b>84</b> is selectively movable to one of the first position corresponding to the drum detachable mounting mode, the second position corresponding to the monochrome mode, and the third position corresponding to the color mode. Hence, the modes of the printer <b>1</b> can be switched through a simple operation of sliding the translation cam <b>94</b>.</p>
+<p id="p-0165" num="0164">By placing the translation cam <b>94</b> in the first position, all male drum coupling members <b>101</b> can be uncoupled from all photosensitive drums <b>16</b>, while all photosensitive drums <b>16</b> are placed in contact with the conveying belt <b>24</b>. Through this operation, the process frame <b>12</b> can be removed while the rotation of all photosensitive drums <b>16</b> is halted.</p>
+<p id="p-0166" num="0165">By placing the translation cam <b>94</b> in the second position, the male drum coupling member <b>101</b> corresponding to the black photosensitive drum <b>16</b> is coupled to this photosensitive drum <b>16</b>, while the other male drum coupling members <b>101</b> are uncoupled from the non-black photosensitive drums <b>16</b>, and the black photosensitive drum <b>16</b> is placed in contact with the conveying belt <b>24</b> while the non-black photosensitive drums <b>16</b> are separated from the conveying belt <b>24</b>. Accordingly, the black photosensitive drum <b>16</b> in contact with the conveying belt <b>24</b> can be used for image formation, while the rotation of the non-black photosensitive drums <b>16</b> separated from the conveying belt <b>24</b> is halted.</p>
+<p id="p-0167" num="0166">By placing the translation cam <b>94</b> in the third position, all male drum coupling members <b>101</b> are coupled with all corresponding photosensitive drums <b>16</b>, and all of the photosensitive drums <b>16</b> are placed in contact with the conveying belt <b>24</b>. In this mode, all photosensitive drums <b>16</b> can be used for image formation.</p>
+<p id="p-0168" num="0167">In other words, movement of the translation cam <b>94</b> among the first, second, and third positions associates operations of the translation cam <b>94</b> for coupling or uncoupling the male drum coupling members <b>101</b> from corresponding photosensitive drums <b>16</b> with the operations of the contacting/separating mechanism (the pivot lever <b>83</b> and protruding parts <b>75</b>) for placing the photosensitive drums <b>16</b> in contact with or separating the photosensitive drums <b>16</b> from the conveying belt <b>24</b>. Hence, through a simple construction, the translation cam <b>94</b> can associate operations of the translation cam mechanism <b>84</b> with operations of the contacting/separating mechanism.</p>
+<p id="p-0169" num="0168">Further, when the translation cam <b>94</b> is placed in the first position, the top of the protruding part <b>107</b> is out of contact in the pivot lever <b>83</b> and, hence, the pivot lever <b>83</b> is not pivoted upward. Consequently, the photosensitive drums <b>16</b> are not separated from the conveying belt <b>24</b>.</p>
+<p id="p-0170" num="0169">When the translation cam <b>94</b> is placed in the second position, the top of the protruding part <b>107</b> is contacting the pivot lever <b>83</b>, which contact applies a force to the pivot lever <b>83</b> that pivots the pivot lever <b>83</b> upward. At this time, the non-black photosensitive drums <b>16</b> are separated from the conveying belt <b>24</b>.</p>
+<p id="p-0171" num="0170">When the translation cam <b>94</b> is placed in the third position, the top of the protruding part <b>107</b> no longer contacts the pivot lever <b>83</b>, as in the first position. Hence, the pivot lever <b>83</b> is not pivoted upward and the photosensitive drums <b>16</b> are not separated from the conveying belt <b>24</b>.</p>
+<p id="p-0172" num="0171">In other words, switching the translation cam <b>94</b> between the first, second, and third positions determines whether the top of the protruding part <b>107</b> in the translation cam <b>94</b> is contacting or not contacting the pivot lever <b>83</b>. The pivot lever <b>83</b> is pivoted upward when the top of the protruding part <b>107</b> contacts the pivot lever <b>83</b>. The non-black photosensitive drums <b>16</b> are separated from the conveying belt <b>24</b> only when the pivot lever <b>83</b> is pivoted upward. As a result, the position of the translation cam <b>94</b> determines whether the non-black photosensitive drums <b>16</b> are in contact with or separated from the conveying belt <b>24</b>.</p>
+</detailed-description>
+</description>
+<us-claim-statement>What is claimed is:</us-claim-statement>
+<claims id="claims">
+<claim id="CLM-00001" num="00001">
+<claim-text><b>1</b>. An image forming apparatus comprising:
+<claim-text>a main casing;</claim-text>
+<claim-text>a process frame movable into and out of the main casing in a first direction, the process frame including:</claim-text>
+<claim-text>a first wall; and</claim-text>
+<claim-text>a second wall spaced apart from the first wall in a second direction;</claim-text>
+<claim-text>a first cartridge detachably mountable to the process frame, the first cartridge being positioned between the first wall and second wall in the second direction in a state where the first cartridge is mounted to the process frame, the first cartridge including:</claim-text>
+<claim-text>a first developing roller rotatable about a first axis extending in the second direction; and</claim-text>
+<claim-text>a first electrode for supplying power to the first cartridge,</claim-text>
+<claim-text>wherein the first cartridge is mountable to the process frame in a third direction, and</claim-text>
+<claim-text>wherein a portion of the first wall aligns with the electrode in the third direction.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00002" num="00002">
+<claim-text><b>2</b>. The image forming apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>,
+<claim-text>wherein the first wall extends in the first direction, and</claim-text>
+<claim-text>wherein the second wall extends in the first direction.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00003" num="00003">
+<claim-text><b>3</b>. The image forming apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>,
+<claim-text>wherein a top edge of the first wall at the portion in the third direction is lower than a lowest point of the first electrode in the third direction in a state where the first cartridge is mounted to the process frame.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00004" num="00004">
+<claim-text><b>4</b>. The image forming apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>,
+<claim-text>wherein the first process frame further includes a third wall extending in the second direction, the third wall connects the first wall and the second wall, and</claim-text>
+<claim-text>wherein a top edge of the first electrode in the third direction is lower than a top edge of the third wall in the third direction.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00005" num="00005">
+<claim-text><b>5</b>. The image forming apparatus according to <claim-ref idref="CLM-00004">claim 4</claim-ref>,
+<claim-text>wherein the process frame further includes a handle positioned at the third wall.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00006" num="00006">
+<claim-text><b>6</b>. The image forming apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>,
+<claim-text>wherein the first cartridge includes:</claim-text>
+<claim-text>a first side wall; and</claim-text>
+<claim-text>a second side wall spaced apart from the first side wall in the second direction,</claim-text>
+<claim-text>wherein the first developing roller is positioned between the first side wall and the second side wall in the second direction,</claim-text>
+<claim-text>wherein the first electrode is positioned at the first side wall, and</claim-text>
+<claim-text>wherein the first cartridge further includes a coupling positioned at the second side wall.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00007" num="00007">
+<claim-text><b>7</b>. The image forming apparatus according to <claim-ref idref="CLM-00006">claim 6</claim-ref>,
+<claim-text>wherein the coupling is configured to input a drive force from the main body to the developing roller.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00008" num="00008">
+<claim-text><b>8</b>. The image forming apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, further comprising a second cartridge detachably mountable to the process frame, the second cartridge being positioned between the first wall and second wall in the second direction in a state where the second cartridge is mounted to the process frame, the second cartridge being spaced apart from the first cartridge in the first direction, the second cartridge including:
+<claim-text>a second developing roller rotatable about a second axis extending in the second direction; and</claim-text>
+<claim-text>a second electrode for supplying power to the second cartridge.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00009" num="00009">
+<claim-text><b>9</b>. The image forming apparatus according to <claim-ref idref="CLM-00008">claim 8</claim-ref>,
+<claim-text>wherein the process frame further includes a first partitioning plate extending in the second direction, the first partitioning plate is positioned between the first wall and the second wall in the second direction, and</claim-text>
+<claim-text>wherein the first partitioning plate is positioned between the first cartridge and the second cartridge in a state where the first cartridge and the second cartridge are mounted to the process frame.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00010" num="00010">
+<claim-text><b>10</b>. The image forming apparatus according to <claim-ref idref="CLM-00009">claim 9</claim-ref>,
+<claim-text>wherein a top edge of the first partitioning plate in the third direction is lower than a lowest point of the first electrode in the third direction.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00011" num="00011">
+<claim-text><b>11</b>. The image forming apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>,
+<claim-text>wherein the first cartridge further includes a plurality of the first electrodes, and</claim-text>
+<claim-text>wherein a top edge of the portion in the third direction is lower than each of lowest points of the plurality of the first electrodes in the third direction in a state where the first cartridge is mounted to the process frame.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00012" num="00012">
+<claim-text><b>12</b>. The image forming apparatus according to <claim-ref idref="CLM-00001">claim 1</claim-ref>,
+<claim-text>wherein the first cartridge further includes a photosensitive drum.</claim-text>
+</claim-text>
+</claim>
+</claims>
+</us-patent-application>
