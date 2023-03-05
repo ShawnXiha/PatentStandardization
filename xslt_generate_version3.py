@@ -24,21 +24,23 @@ def generate_xslt(xml_element_mapping_file, value_mapping_file, xslt_output_file
         for row in reader:
             from_xpath = row['xpath_from']
             to_xpath = row['xpath_to']
-            to_xpath = to_xpath.replace("pat:", "{http://www.wipo.int/standards/XMLSchema/ST96/Patent}")
-            to_xpath = to_xpath.replace("com:", "{http://www.wipo.int/standards/XMLSchema/ST96/Common}")
+            # to_xpath = to_xpath.replace("pat:", "{http://www.wipo.int/standards/XMLSchema/ST96/Patent}")
+            # to_xpath = to_xpath.replace("com:", "{http://www.wipo.int/standards/XMLSchema/ST96/Common}")
             # create the template element for the from_xpath expression
             template = etree.SubElement(root, '{http://www.w3.org/1999/XSL/Transform}template', match=from_xpath)
-
+            tag_name = to_xpath.split("/")[-1]
+            tag_name = tag_name.replace("pat:", "{http://www.wipo.int/standards/XMLSchema/ST96/Patent}")
+            tag_name = tag_name.replace("com:", "{http://www.wipo.int/standards/XMLSchema/ST96/Common}")
             # create the new element for the to_xpath expression
-            new_element = etree.Element(to_xpath)
+            new_element = etree.Element(tag_name)
 
             # add all child elements to the new element
             for child in template.iterchildren():
                 new_element.append(child)
 
-            # add all attributes to the new element
-            for attr, value in child.items():
-                new_element.set(attr, value)
+                # add all attributes to the new element
+                for attr, value in child.items():
+                    new_element.set(attr, value)
 
             # add the new element to the template
             template.append(new_element)
