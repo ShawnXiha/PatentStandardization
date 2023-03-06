@@ -420,9 +420,9 @@
 		<xsl:param name="examiners" select="()"/>
 		<xsl:variable name="var14_authorized_officer" as="node()*" select="$examiners/authorized-officer"/>
 		<pat:PartyBag>
-			<xsl:for-each select="$parties/*:applicants[fn:namespace-uri() eq '']">
+			<xsl:for-each select="$parties/*:applicants">
 				<ApplicantBag>
-					<xsl:for-each select="*:applicant[fn:namespace-uri() eq '']">
+					<xsl:for-each select="*:applicant">
 						<xsl:variable name="var4_sequence" as="node()?" select="@sequence"/>
 						<Applicant>
 							<xsl:for-each select="$var4_sequence">
@@ -501,7 +501,7 @@
 					</xsl:for-each>
 				</ApplicantBag>
 			</xsl:for-each>
-			<xsl:for-each select="$parties/*:inventors[fn:namespace-uri() eq '']">
+			<xsl:for-each select="$parties/*:inventors">
 				<InventorBag>
 					<xsl:for-each select="*:inventor[fn:namespace-uri() eq '']">
 						<xsl:variable name="var6_cur" as="node()" select="."/>
@@ -555,9 +555,9 @@
 				</InventorBag>
 			</xsl:for-each>
 			<AssigneeBag>
-				<xsl:for-each select="$assignees/*:assignee[fn:namespace-uri() eq '']">
+				<xsl:for-each select="$assignees/*:assignee">
 					<Assignee>
-						<xsl:for-each select="*:addressbook[fn:namespace-uri() eq '']">
+						<xsl:for-each select="*:addressbook">
 							<xsl:variable name="var7_resultof_ST__address_bookToST__PublicationContact" as="node()?">
 								<xsl:call-template name="WIPO:ST36address-bookToST96PublicationContact">
 									<xsl:with-param name="addressbook" as="node()">
@@ -576,15 +576,15 @@
 					</Assignee>
 				</xsl:for-each>
 			</AssigneeBag>
-			<xsl:for-each select="$parties/*:agents[fn:namespace-uri() eq '']">
+			<xsl:for-each select="$parties/*:agents">
 				<xsl:variable name="var10_cur" as="node()" select="."/>
 				<RegisteredPractitionerBag>
-					<xsl:for-each select="*:agent[fn:namespace-uri() eq '']">
+					<xsl:for-each select="*:agent">
 						<RegisteredPractitioner>
 							<xsl:for-each select="@sequence">
 								<xsl:attribute name="com:sequenceNumber" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" select="fn:string(.)"/>
 							</xsl:for-each>
-							<xsl:for-each select="$var10_cur/*:customer-number[fn:namespace-uri() eq '']">
+							<xsl:for-each select="$var10_cur/*:customer-number">
 								<RegisteredPractitionerRegistrationNumber>
 									<xsl:sequence select="fn:string(.)"/>
 								</RegisteredPractitionerRegistrationNumber>
@@ -601,7 +601,7 @@
 									</RegisteredPractitionerCategory>
 								</xsl:for-each>
 							</xsl:for-each>
-							<xsl:for-each select="*:addressbook[fn:namespace-uri() eq '']">
+							<xsl:for-each select="*:addressbook">
 								<xsl:variable name="var9_resultof_ST__address_bookToST__PublicationContact" as="node()?">
 									<xsl:call-template name="WIPO:ST36address-bookToST96PublicationContact">
 										<xsl:with-param name="addressbook" as="node()">
@@ -617,9 +617,27 @@
 									</com:PublicationContact>
 								</xsl:for-each>
 							</xsl:for-each>
+                            <xsl:for-each select="agency/name">
+                                <com:PublicationContact xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common">
+                                    <com:Name>
+                                        <com:EntityName>
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </com:EntityName>
+                                    </com:Name>
+                                </com:PublicationContact>
+                            </xsl:for-each>
+                            <xsl:for-each select="name">
+                                <com:PublicationContact xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common">
+                                    <com:Name>
+                                        <com:EntityName>
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </com:EntityName>
+                                    </com:Name>
+                                </com:PublicationContact>
+                            </xsl:for-each>
 						</RegisteredPractitioner>
 					</xsl:for-each>
-					<xsl:for-each select="($var14_authorized_officer/*:name[fn:namespace-uri() eq ''])[fn:exists((./@name-type)[(fn:string(.) = 'legal')])]">
+					<xsl:for-each select="($var14_authorized_officer/*:name)[fn:exists((./@name-type)[(fn:string(.) = 'legal')])]">
 						<RegisteredPractitioner>
 							<xsl:sequence select="()"/>
 						</RegisteredPractitioner>
@@ -966,7 +984,7 @@
 					</AuthorizedOfficer>
 				</xsl:for-each>
 			</ExaminerBag>
-			<xsl:for-each select="$parties/*:correspondence-address[fn:namespace-uri() eq '']">
+			<xsl:for-each select="$parties/*:correspondence-address">
 				<com:CorrespondenceAddress xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common">
 					<xsl:for-each select="*:customer-number[fn:namespace-uri() eq '']">
 						<com:PartyIdentifier>

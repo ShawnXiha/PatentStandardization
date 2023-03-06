@@ -1,4 +1,5 @@
 import re
+import json
 element_pattern = r'<!ELEMENT\s+([\w-]+)'
 def cn_start_element_check(dtd_file):
     cn_starts = dict()
@@ -21,9 +22,11 @@ def replace_csv(s_csv, t_csv, replace_dict):
 if __name__ == '__main__':
     dtd_file = 'data/中文专利xml标准/cn_old.dtd'
     cn_dict = cn_start_element_check(dtd_file)
-    e_file = 'data/mapping_table/element_mapping.csv'
-    v_file = 'data/mapping_table/element_value_mapping.csv'
-    e_file_cn = 'data/mapping_table/element_mapping_cn_old.csv'
-    v_file_cn = 'data/mapping_table/element_value_mapping_cn_old.csv'
-    replace_csv(e_file, e_file_cn, cn_dict)
-    replace_csv(v_file, v_file_cn, cn_dict)
+    with open("data/中文专利xml标准/cn_old_element_diff.json", "w") as f:
+        json.dump(cn_dict, f)
+    # e_file = 'data/mapping_table/element_mapping.csv'
+    # v_file = 'data/mapping_table/element_value_mapping.csv'
+    # e_file_cn = 'data/mapping_table/element_mapping_cn_old.csv'
+    # v_file_cn = 'data/mapping_table/element_value_mapping_cn_old.csv'
+    # replace_csv(e_file, e_file_cn, cn_dict)
+    # replace_csv(v_file, v_file_cn, cn_dict)

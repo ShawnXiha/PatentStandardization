@@ -1,0 +1,54 @@
+kind	pat:ApplicationFilingCategory	national	National
+kind	pat:ApplicationFilingCategory	regional	Regional
+kind	pat:ApplicationFilingCategory	international	PCT
+subset	pat:subsetIndicator	yes	true
+subset	pat:subsetIndicator	no	false
+rep-type	pat:RegisteredPractitionerCategory	agent	Agent
+rep-type	pat:RegisteredPractitionerCategory	attorney	Attorney
+rep-type	pat:RegisteredPractitionerCategory	common-representative	Common representative
+text()	pat:citingPartyCategory	cited by applicant	Applicant
+text()	pat:citingPartyCategory	cited by examiner	Examiner
+appl-type	pat:InventionSubjectMatterCategory	utility	Utility
+email-purpose	com:emailAddressPurposeCategory	informal	Informal
+email-purpose	com:emailAddressPurposeCategory	general	General
+email-purpose	com:emailAddressPurposeCategory	advanced	Advanced
+email-purpose	com:emailAddressPurposeCategory	main	Main
+app-type	pat:ApplicantCategory	applicant-inventor	Applicant_Inventor
+app-type	pat:ApplicantCategory	legal-representative	
+app-type	pat:ApplicantCategory	otherwise	Applicant
+kind	pat:SuccessorCategory	heir	Heir
+kind	pat:SuccessorCategory	heiress	Heiress
+kind	pat:SuccessorCategory	executor	Executor
+kind	pat:SuccessorCategory	executrix	Executrix
+kind	pat:SuccessorCategory	estate	Estate
+kind	pat:SuccessorCategory	legal-representative	Legal representative
+kind	pat:SuccessorCategory	administrator	Administrator
+kind	pat:SuccessorCategory	administratrix	Administratrix
+kind	pat:SuccessorCategory	legal-representatives	Legal representatives
+kind	pat:SuccessorCategory	heirs	Heirs
+kind	pat:SuccessorCategory	executors	Executors
+kind	pat:SuccessorCategory	legal-heirs	Legal heirs
+designation	pat:DesignationCategory	all	All
+designation	pat:DesignationCategory	all-except-us	All except US
+designation	pat:DesignationCategory	us-only	US only
+designation	pat:DesignationCategory	as-indicated	As indicated
+type	com:ImageFormatCategory	jpg	JPEG
+type	com:ImageFormatCategory	tif	TIFF
+type	com:ImageFormatCategory	pdf	GIF
+color	com:ColourModeCategory	bw	Black and white
+color	com:ColourModeCategory	color	Colour
+orientation	com:orientationCategory	portrait	Portrait
+orientation	com:orientationCategory	landscape	Landscape
+img-content	com:imageContentCategory	drawing	Drawing
+img-content	com:imageContentCategory	photograph	Photograph
+img-content	com:imageContentCategory	character	Character
+img-content	com:imageContentCategory	dna	DNA
+img-content	com:imageContentCategory	chem	Chemistry
+img-content	com:imageContentCategory	math	Math
+img-content	com:imageContentCategory	table	Table
+img-content	com:imageContentCategory	program-listing	Program listing
+img-content	com:imageContentCategory	flowchart	Flowchart
+img-content	com:imageContentCategory	graph	Graph
+img-format	com:ImageFormatCategory	jpg	JPEG
+img-format	com:ImageFormatCategory	tif	TIFF
+inline	com:imageWrappingStyleCategory	yes	Inline
