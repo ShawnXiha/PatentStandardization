@@ -431,7 +431,7 @@
 		<xsl:variable name="var14_authorized_officer" as="node()*" select="$examiners/authorized-officer"/>
 		<pat:PartyBag>
 			<ApplicantBag>
-				<xsl:for-each select="//*:applicant">
+				<xsl:for-each select="//*:cn-applicant">
 					<xsl:variable name="var4_sequence" as="node()?" select="@sequence"/>
 					<Applicant>
 						<xsl:for-each select="$var4_sequence">
@@ -510,7 +510,7 @@
 				</xsl:for-each>
 			</ApplicantBag>
 			<InventorBag>
-				<xsl:for-each select="//*:inventor">
+				<xsl:for-each select="//*:cn-inventor">
 					<xsl:variable name="var6_cur" as="node()?" select="."/>
 					<Inventor>
 						<xsl:for-each select="@sequence">
@@ -584,7 +584,7 @@
 			</AssigneeBag>
 			<xsl:variable name="var10_cur" as="node()?" select="."/>
 			<RegisteredPractitionerBag>
-				<xsl:for-each select="//*:agent">
+				<xsl:for-each select="//*:cn-agent">
 					<RegisteredPractitioner>
 						<xsl:for-each select="@sequence">
 							<xsl:attribute name="com:sequenceNumber" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" select="fn:string(.)"/>
@@ -7237,7 +7237,7 @@
 		</xsl:choose>
 	</xsl:template>
 	<xsl:template match="/">
-		<xsl:variable name="var382_application_body" as="node()?" select="//patent-document"/>
+		<xsl:variable name="var382_application_body" as="node()?" select="//cn-patent-document"/>
 		<xsl:variable name="var381_doc_page_of_application_body" as="node()*" select="$var382_application_body/doc-page"/>
 		<pat:PatentPublication xmlns:pat="http://www.wipo.int/standards/XMLSchema/ST96/Patent" xmlns:tbl="http://www.oasis-open.org/tables/exchange/1.0" xmlns:mathml="http://www.w3.org/1998/Math/MathML3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common">
 			<xsl:attribute name="xsi:schemaLocation" namespace="http://www.w3.org/2001/XMLSchema-instance" select="'http://www.wipo.int/standards/XMLSchema/ST96/Patent ../../Schemas/ST96Schema/ST96XMLSchema_Current_Flattened/ApplicationBody_V6_0.xsd'"/>
@@ -7260,7 +7260,7 @@
 				<xsl:attribute name="pat:applicationBodyStatus" select="fn:string(.)"/>
 			</xsl:for-each>
 			<xsl:attribute name="com:st96Version" select="'V6_0'"/>
-			<xsl:variable name="var64_bibliographic_data" as="node()?" select="//bibliographic-data"/>
+			<xsl:variable name="var64_bibliographic_data" as="node()?" select="//cn-bibliographic-data"/>
 			<pat:BibliographicData>
 				<xsl:for-each select="$var64_bibliographic_data">
 					<xsl:for-each select="@id">
@@ -7273,7 +7273,7 @@
 				</xsl:for-each>
 				<xsl:for-each select="$var64_bibliographic_data">
 					<xsl:variable name="var63_cur" as="node()?" select="."/>
-					<xsl:variable name="var2_publication_reference" as="node()?" select="publication-reference"/>
+					<xsl:variable name="var2_publication_reference" as="node()?" select="cn-publication-reference"/>
 					<xsl:variable name="var1_document_id" as="node()?" select="$var2_publication_reference/document-id"/>
 					<pat:PatentPublicationIdentification>
 						<xsl:for-each select="$var2_publication_reference/@id">
@@ -7916,7 +7916,7 @@
 							</xsl:for-each>
 						</pat:FigureBag>
 					</xsl:for-each>
-					<xsl:for-each select="related-documents">
+					<xsl:for-each select="cn-related-documents">
 						<pat:RelatedDocumentBag>
 							<xsl:for-each select="addition">
 								<xsl:variable name="var19_relation" as="node()?" select="relation"/>
@@ -8180,7 +8180,7 @@
 									<xsl:sequence select="()"/>
 								</pat:Correction>
 							</xsl:for-each>
-							<xsl:for-each select="related-publication">
+							<xsl:for-each select="cn-related-publication">
 								<xsl:variable name="var28_document_id" as="node()?" select="document-id"/>
 								<pat:RelatedPublication>
 									<pat:PatentDocumentIdentification>
@@ -8207,7 +8207,7 @@
 							</xsl:for-each>
 						</pat:RelatedDocumentBag>
 					</xsl:for-each>
-					<xsl:variable name="var31_parties" as="node()?" select="parties"/>
+					<xsl:variable name="var31_parties" as="node()?" select="cn-parties"/>
 					<xsl:for-each select="assignees">
 						<xsl:variable name="var30_cur" as="node()?" select="."/>
 						<xsl:for-each select="$var63_cur/examiners">
