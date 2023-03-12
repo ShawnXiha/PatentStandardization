@@ -7237,7 +7237,7 @@
 		</xsl:choose>
 	</xsl:template>
 	<xsl:template match="/">
-		<xsl:variable name="var382_application_body" as="node()?" select="//patent-document"/>
+		<xsl:variable name="var382_application_body" as="node()?" select="//jp-official-gazette"/>
 		<xsl:variable name="var381_doc_page_of_application_body" as="node()*" select="$var382_application_body/doc-page"/>
 		<pat:PatentPublication xmlns:pat="http://www.wipo.int/standards/XMLSchema/ST96/Patent" xmlns:tbl="http://www.oasis-open.org/tables/exchange/1.0" xmlns:mathml="http://www.w3.org/1998/Math/MathML3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common">
 			<xsl:attribute name="xsi:schemaLocation" namespace="http://www.w3.org/2001/XMLSchema-instance" select="'http://www.wipo.int/standards/XMLSchema/ST96/Patent ../../Schemas/ST96Schema/ST96XMLSchema_Current_Flattened/ApplicationBody_V6_0.xsd'"/>

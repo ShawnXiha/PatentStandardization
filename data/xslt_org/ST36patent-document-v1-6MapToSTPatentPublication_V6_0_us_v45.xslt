@@ -431,7 +431,7 @@
 		<xsl:variable name="var14_authorized_officer" as="node()*" select="$examiners/authorized-officer"/>
 		<pat:PartyBag>
 			<pat:ApplicantBag>
-				<xsl:for-each select="//*:applicant">
+				<xsl:for-each select="//*:us-applicant">
 					<xsl:variable name="var4_sequence" as="node()?" select="@sequence"/>
 					<pat:Applicant>
 						<xsl:for-each select="$var4_sequence">
@@ -482,7 +482,7 @@
 								<xsl:sequence select="fn:string(.)"/>
 							</com:ResidenceCountryCode>
 						</xsl:for-each>
-						<xsl:for-each select="*:rights">
+						<xsl:for-each select="*:us-rights">
 							<pat:SuccessorRights>
 								<xsl:for-each select="$var4_sequence">
 									<xsl:attribute name="applicantSequenceNumberReference" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Patent" select="fn:string(.)"/>
@@ -2976,7 +2976,7 @@
 			<xsl:if test="fn:exists($var2_num)">
 				<xsl:attribute name="com:mathNumber" select="fn:string($var2_num)"/>
 			</xsl:if>
-			<xsl:for-each select="$maths/*:math">
+			<xsl:for-each select="$maths/*:us-math">
 				<mathml:math>
 					<xsl:apply-templates/>
 				</mathml:math>
@@ -7237,7 +7237,7 @@
 		</xsl:choose>
 	</xsl:template>
 	<xsl:template match="/">
-		<xsl:variable name="var382_application_body" as="node()?" select="//patent-document"/>
+		<xsl:variable name="var382_application_body" as="node()?" select="//us-patent-application"/>
 		<xsl:variable name="var381_doc_page_of_application_body" as="node()*" select="$var382_application_body/doc-page"/>
 		<pat:PatentPublication xmlns:pat="http://www.wipo.int/standards/XMLSchema/ST96/Patent" xmlns:tbl="http://www.oasis-open.org/tables/exchange/1.0" xmlns:mathml="http://www.w3.org/1998/Math/MathML3" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common">
 			<xsl:attribute name="xsi:schemaLocation" namespace="http://www.w3.org/2001/XMLSchema-instance" select="'http://www.wipo.int/standards/XMLSchema/ST96/Patent ../../Schemas/ST96Schema/ST96XMLSchema_Current_Flattened/ApplicationBody_V6_0.xsd'"/>
@@ -7638,9 +7638,9 @@
 							</pat:InventionTitle>
 						</xsl:for-each>
 					</pat:InventionTitleBag>
-					<xsl:for-each select="references-cited">
+					<xsl:for-each select="us-references-cited">
 						<pat:ReferenceCitationBag>
-							<xsl:for-each select="citation">
+							<xsl:for-each select="us-citation">
 								<pat:ReferenceCitation>
 									<xsl:for-each select="@id">
 										<xsl:attribute name="com:id" select="fn:string(.)"/>
@@ -7916,10 +7916,10 @@
 							</xsl:for-each>
 						</pat:FigureBag>
 					</xsl:for-each>
-					<xsl:for-each select="related-documents">
+					<xsl:for-each select="us-related-documents">
 						<pat:RelatedDocumentBag>
 							<xsl:for-each select="addition">
-								<xsl:variable name="var19_relation" as="node()?" select="relation"/>
+								<xsl:variable name="var19_relation" as="node()?" select="us-relation"/>
 								<pat:Addition>
 									<xsl:variable name="var15_parent_doc" as="node()?" select="$var19_relation/parent-doc"/>
 									<xsl:variable name="var14_parent_grant_document" as="node()?" select="$var15_parent_doc/parent-grant-document"/>
@@ -8049,7 +8049,7 @@
 								</pat:Division>
 							</xsl:for-each>
 							<xsl:for-each select="continuation">
-								<xsl:variable name="var22_relation" as="node()?" select="relation"/>
+								<xsl:variable name="var22_relation" as="node()?" select="us-relation"/>
 								<pat:Continuation>
 									<xsl:variable name="var20_document_id" as="node()?" select="$var22_relation/parent-doc/document-id"/>
 									<pat:ParentDocument>
@@ -8084,7 +8084,7 @@
 								</pat:Continuation>
 							</xsl:for-each>
 							<xsl:for-each select="continuation-in-part">
-								<xsl:variable name="var27_relation" as="node()?" select="relation"/>
+								<xsl:variable name="var27_relation" as="node()?" select="us-relation"/>
 								<pat:PartialContinuation>
 									<xsl:variable name="var25_parent_doc" as="node()?" select="$var27_relation/parent-doc"/>
 									<pat:ParentDocument>
@@ -8207,7 +8207,7 @@
 							</xsl:for-each>
 						</pat:RelatedDocumentBag>
 					</xsl:for-each>
-					<xsl:variable name="var31_parties" as="node()?" select="parties"/>
+					<xsl:variable name="var31_parties" as="node()?" select="us-parties"/>
 					<xsl:for-each select="assignees">
 						<xsl:variable name="var30_cur" as="node()?" select="."/>
 						<xsl:for-each select="$var63_cur/examiners">

@@ -26,11 +26,11 @@
 			</xsl:for-each>
 			<xsl:for-each select="$var3_depositary">
 				<xsl:variable name="var2_address" as="node()*" select="*:address"/>
-				<BioDepositDepositary>
-					<PostalAddressBag>
-						<PostalAddress>
+				<com:BioDepositDepositary>
+					<com:PostalAddressBag>
+						<com:PostalAddress>
 							<xsl:for-each select="$var2_address">
-								<PostalStructuredAddress>
+								<com:PostalStructuredAddress>
 									<xsl:for-each select="*:address-1">
 										<AddressLineText>
 											<xsl:attribute name="sequenceNumber" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" select="xs:string(xs:decimal('1'))"/>
@@ -38,88 +38,88 @@
 										</AddressLineText>
 									</xsl:for-each>
 									<xsl:for-each select="*:address-5">
-										<AddressLineText>
+										<com:AddressLineText>
 											<xsl:attribute name="sequenceNumber" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" select="xs:string(xs:decimal('4'))"/>
 											<xsl:sequence select="fn:string(.)"/>
-										</AddressLineText>
+										</com:AddressLineText>
 									</xsl:for-each>
 									<xsl:for-each select="*:address-4">
-										<AddressLineText>
+										<com:AddressLineText>
 											<xsl:attribute name="sequenceNumber" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" select="xs:string(xs:decimal('5'))"/>
 											<xsl:sequence select="fn:string(.)"/>
-										</AddressLineText>
+										</com:AddressLineText>
 									</xsl:for-each>
 									<xsl:for-each select="*:address-3">
-										<AddressLineText>
+										<com:AddressLineText>
 											<xsl:attribute name="sequenceNumber" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" select="xs:string(xs:decimal('3'))"/>
 											<xsl:sequence select="fn:string(.)"/>
-										</AddressLineText>
+										</com:AddressLineText>
 									</xsl:for-each>
 									<xsl:for-each select="*:address-2">
-										<AddressLineText>
+										<com:AddressLineText>
 											<xsl:attribute name="sequenceNumber" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" select="xs:string(xs:decimal('2'))"/>
 											<xsl:sequence select="fn:string(.)"/>
-										</AddressLineText>
+										</com:AddressLineText>
 									</xsl:for-each>
 									<xsl:for-each select="*:city">
-										<CityName>
+										<com:CityName>
 											<xsl:sequence select="fn:string(.)"/>
-										</CityName>
+										</com:CityName>
 									</xsl:for-each>
 									<xsl:for-each select="*:county">
-										<CountryCode>
+										<com:CountryCode>
 											<xsl:sequence select="fn:string(.)"/>
-										</CountryCode>
+										</com:CountryCode>
 									</xsl:for-each>
 									<xsl:for-each select="*:postcode">
-										<PostalCode>
+										<com:PostalCode>
 											<xsl:sequence select="fn:string(.)"/>
-										</PostalCode>
+										</com:PostalCode>
 									</xsl:for-each>
 									<xsl:for-each select="*:mailcode">
-										<PostalCode>
+										<com:PostalCode>
 											<xsl:sequence select="fn:string(.)"/>
-										</PostalCode>
+										</com:PostalCode>
 									</xsl:for-each>
-								</PostalStructuredAddress>
+								</com:PostalStructuredAddress>
 							</xsl:for-each>
 							<xsl:for-each select="$var2_address">
 								<xsl:variable name="var1_cur" as="node()?" select="."/>
 								<xsl:for-each select="*:text">
-									<PostalAddressText>
+									<com:PostalAddressText>
 										<xsl:for-each select="$var1_cur/*:country">
 											<xsl:attribute name="languageCode" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" select="fn:string(.)"/>
 										</xsl:for-each>
 										<xsl:sequence select="fn:string(.)"/>
-									</PostalAddressText>
+									</com:PostalAddressText>
 								</xsl:for-each>
 							</xsl:for-each>
-						</PostalAddress>
-					</PostalAddressBag>
-				</BioDepositDepositary>
+						</com:PostalAddress>
+					</com:PostalAddressBag>
+				</com:BioDepositDepositary>
 			</xsl:for-each>
 			<xsl:for-each select="$biodeposit/*:bio-accno">
-				<BiologicalAccessionNumber>
+				<com:BiologicalAccessionNumber>
 					<xsl:sequence select="fn:string(.)"/>
-				</BiologicalAccessionNumber>
+				</com:BiologicalAccessionNumber>
 			</xsl:for-each>
 			<xsl:for-each select="$biodeposit/*:date">
-				<BioDepositDate>
+				<com:BioDepositDate>
 					<xsl:sequence select="fn:string(.)"/>
-				</BioDepositDate>
+				</com:BioDepositDate>
 			</xsl:for-each>
 			<xsl:for-each select="$biodeposit/*:term">
-				<BioDepositTermText>
+				<com:BioDepositTermText>
 					<xsl:for-each select="$var3_depositary/*:address/*:text">
 						<xsl:attribute name="languageCode" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" select="fn:string(.)"/>
 					</xsl:for-each>
 					<xsl:sequence select="fn:string(.)"/>
-				</BioDepositTermText>
+				</com:BioDepositTermText>
 			</xsl:for-each>
 			<xsl:for-each select="$biodeposit/*:dtext">
-				<BioDepositText>
+				<com:BioDepositText>
 					<xsl:sequence select="fn:string(.)"/>
-				</BioDepositText>
+				</com:BioDepositText>
 			</xsl:for-each>
 		</com:BioDeposit>
 	</xsl:template>
@@ -430,10 +430,10 @@
 		<xsl:param name="examiners" select="()"/>
 		<xsl:variable name="var14_authorized_officer" as="node()*" select="$examiners/authorized-officer"/>
 		<pat:PartyBag>
-			<ApplicantBag>
+			<pat:ApplicantBag>
 				<xsl:for-each select="//*:cn-applicant">
 					<xsl:variable name="var4_sequence" as="node()?" select="@sequence"/>
-					<Applicant>
+					<pat:Applicant>
 						<xsl:for-each select="$var4_sequence">
 							<xsl:attribute name="com:sequenceNumber" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" select="fn:string(.)"/>
 						</xsl:for-each>
@@ -454,11 +454,11 @@
 							</xsl:for-each>
 						</xsl:for-each>
 						<xsl:for-each select="@app-type">
-							<ApplicantCategory>
+							<pat:ApplicantCategory>
 								<xsl:call-template name="vmf:vmf_bibiliographic_6_inputtoresult">
 									<xsl:with-param name="input" select="fn:string(.)" as="xs:string"/>
 								</xsl:call-template>
-							</ApplicantCategory>
+							</pat:ApplicantCategory>
 						</xsl:for-each>
 						<xsl:for-each select="*:nationality/*:country">
 							<com:NationalityCode xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common">
@@ -472,9 +472,9 @@
 								</xsl:call-template>
 							</xsl:variable>
 							<xsl:for-each select="$var2_resultof_vmf__inputtoresult">
-								<DesignationCategory>
+								<pat:DesignationCategory>
 									<xsl:sequence select="."/>
-								</DesignationCategory>
+								</pat:DesignationCategory>
 							</xsl:for-each>
 						</xsl:for-each>
 						<xsl:for-each select="*:residence/*:country">
@@ -482,15 +482,15 @@
 								<xsl:sequence select="fn:string(.)"/>
 							</com:ResidenceCountryCode>
 						</xsl:for-each>
-						<xsl:for-each select="*:us-rights">
-							<SuccessorRights>
+						<xsl:for-each select="*:rights">
+							<pat:SuccessorRights>
 								<xsl:for-each select="$var4_sequence">
 									<xsl:attribute name="applicantSequenceNumberReference" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Patent" select="fn:string(.)"/>
 								</xsl:for-each>
 								<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-									<SuccessorRightsText>
+									<pat:SuccessorRightsText>
 										<xsl:sequence select="fn:string(.)"/>
-									</SuccessorRightsText>
+									</pat:SuccessorRightsText>
 								</xsl:for-each>
 								<xsl:for-each select="@kind">
 									<xsl:variable name="var3_resultof_vmf__inputtoresult" as="xs:string?">
@@ -499,20 +499,20 @@
 										</xsl:call-template>
 									</xsl:variable>
 									<xsl:for-each select="$var3_resultof_vmf__inputtoresult">
-										<SuccessorCategory>
+										<pat:SuccessorCategory>
 											<xsl:sequence select="."/>
-										</SuccessorCategory>
+										</pat:SuccessorCategory>
 									</xsl:for-each>
 								</xsl:for-each>
-							</SuccessorRights>
+							</pat:SuccessorRights>
 						</xsl:for-each>
-					</Applicant>
+					</pat:Applicant>
 				</xsl:for-each>
-			</ApplicantBag>
-			<InventorBag>
+			</pat:ApplicantBag>
+			<pat:InventorBag>
 				<xsl:for-each select="//*:cn-inventor">
 					<xsl:variable name="var6_cur" as="node()?" select="."/>
-					<Inventor>
+					<pat:Inventor>
 						<xsl:for-each select="@sequence">
 							<xsl:attribute name="com:sequenceNumber" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" select="fn:string(.)"/>
 						</xsl:for-each>
@@ -533,7 +533,7 @@
 							</xsl:for-each>
 						</xsl:for-each>
 						<xsl:for-each select="*:designated-states">
-							<StateDesignation>
+							<pat:StateDesignation>
 								<xsl:for-each select="$var6_cur/@designation">
 									<NewDesignationCountryCode>
 										<xsl:sequence select="fn:string(.)"/>
@@ -547,22 +547,22 @@
 									</NationalDesignation>
 								</xsl:for-each>
 								<xsl:for-each select="*:region">
-									<RegionalDesignation>
+									<pat:RegionalDesignation>
 										<xsl:for-each select="*:country">
 											<com:DesignatedCountryCode xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common">
 												<xsl:sequence select="fn:string(.)"/>
 											</com:DesignatedCountryCode>
 										</xsl:for-each>
-									</RegionalDesignation>
+									</pat:RegionalDesignation>
 								</xsl:for-each>
-							</StateDesignation>
+							</pat:StateDesignation>
 						</xsl:for-each>
-					</Inventor>
+					</pat:Inventor>
 				</xsl:for-each>
-			</InventorBag>
-			<AssigneeBag>
+			</pat:InventorBag>
+			<pat:AssigneeBag>
 				<xsl:for-each select="$assignees/*:assignee">
-					<Assignee>
+					<pat:Assignee>
 						<xsl:for-each select="*:addressbook">
 							<xsl:variable name="var7_resultof_ST__address_bookToST__PublicationContact" as="node()?">
 								<xsl:call-template name="WIPO:ST36address-bookToST96PublicationContact">
@@ -579,20 +579,20 @@
 								</com:PublicationContact>
 							</xsl:for-each>
 						</xsl:for-each>
-					</Assignee>
+					</pat:Assignee>
 				</xsl:for-each>
-			</AssigneeBag>
+			</pat:AssigneeBag>
 			<xsl:variable name="var10_cur" as="node()?" select="."/>
-			<RegisteredPractitionerBag>
+			<pat:RegisteredPractitionerBag>
 				<xsl:for-each select="//*:cn-agent">
-					<RegisteredPractitioner>
+					<pat:RegisteredPractitioner>
 						<xsl:for-each select="@sequence">
 							<xsl:attribute name="com:sequenceNumber" namespace="http://www.wipo.int/standards/XMLSchema/ST96/Common" select="fn:string(.)"/>
 						</xsl:for-each>
 						<xsl:for-each select="$var10_cur/*:customer-number">
-							<RegisteredPractitionerRegistrationNumber>
+							<pat:RegisteredPractitionerRegistrationNumber>
 								<xsl:sequence select="fn:string(.)"/>
-							</RegisteredPractitionerRegistrationNumber>
+							</pat:RegisteredPractitionerRegistrationNumber>
 						</xsl:for-each>
 						<xsl:for-each select="@rep-type">
 							<xsl:variable name="var8_resultof_vmf__inputtoresult" as="xs:string?">
@@ -601,9 +601,9 @@
 								</xsl:call-template>
 							</xsl:variable>
 							<xsl:for-each select="$var8_resultof_vmf__inputtoresult">
-								<RegisteredPractitionerCategory>
+								<pat:RegisteredPractitionerCategory>
 									<xsl:sequence select="."/>
-								</RegisteredPractitionerCategory>
+								</pat:RegisteredPractitionerCategory>
 							</xsl:for-each>
 						</xsl:for-each>
 						<xsl:for-each select="*:addressbook">
@@ -640,14 +640,14 @@
 								</com:Name>
 							</com:PublicationContact>
 						</xsl:for-each>
-					</RegisteredPractitioner>
+					</pat:RegisteredPractitioner>
 				</xsl:for-each>
 				<xsl:for-each select="($var14_authorized_officer/*:name)[fn:exists((./@name-type)[(fn:string(.) = 'legal')])]">
 					<RegisteredPractitioner>
 						<xsl:sequence select="()"/>
 					</RegisteredPractitioner>
 				</xsl:for-each>
-			</RegisteredPractitionerBag>
+			</pat:RegisteredPractitionerBag>
 			<ExaminerBag>
 				<xsl:for-each select="$examiners/*:primary-examiner">
 					<xsl:variable name="var11_name" as="node()*" select="*:name"/>

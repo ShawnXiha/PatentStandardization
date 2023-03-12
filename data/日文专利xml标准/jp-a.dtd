@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="EUC-JP" ?>
+<!--****************************************-->
+<!--DTD Version:V4.7-01-01,DATE 2020.01.01  -->
+<!--****************************************-->
+<!ENTITY % gat-a-com SYSTEM "gat-a-com.dtd">
+%gat-a-com;
+
+<!ELEMENT jp-official-gazette (
+		bibliographic-data,
+		jp:image-of-bibliographic-data,
+		jp:image-of-chosen-drawing?,
+		jp:abstract-correction?,
+		description,
+		claims,
+		abstract?,
+		drawings?,
+		jp:reference-file-article?,
+		jp:written-amendment-group?,
+		jp:overflow?,
+		jp:foreign-language-body?) >
+<!ATTLIST jp-official-gazette kind-of-jp   (A | U) #REQUIRED
+                              kind-of-st16 (A | U) #REQUIRED
+                              lang         CDATA   #REQUIRED
+                              dtd-version  CDATA   #IMPLIED
+                              file         CDATA   #IMPLIED
+                              status       CDATA   #IMPLIED
+                              id           ID      #IMPLIED
+                              country      CDATA   #REQUIRED
+                              xmlns:jp     CDATA   #FIXED    "http://www.jpo.go.jp" >
