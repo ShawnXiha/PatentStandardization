@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE business:PatentDocumentAndRelated SYSTEM "/DTDS/ExternalStandards/ipphdb-entities.dtd"[]>
+<business:PatentDocumentAndRelated xmlns:base="http://www.sipo.gov.cn/XMLSchema/base" xmlns:business="http://www.sipo.gov.cn/XMLSchema/business" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:tbl="http://oasis-open.org/specs/soextblx" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sipo.gov.cn/XMLSchema/business /DTDS/PatentDocument/Elements/OtherElements.xsd" xsdVersion="V2.2.1" file="CN102015000481495CN00001152124630AFULZH20221021CN00D.XML" dateProduced="20221016" status="C" lang="zh" country="CN" docNumber="115212463" kind="A" datePublication="20221021">
+  <business:BibliographicData>
+    <business:PublicationReference dataFormat="original" sequence="1" sourceDB="national office">
+      <base:DocumentID>
+        <base:WIPOST3Code>CN</base:WIPOST3Code>
+        <base:DocNumber>115212463</base:DocNumber>
+        <base:Kind>A</base:Kind>
+        <base:Date>20221021</base:Date>
+      </base:DocumentID>
+    </business:PublicationReference>
+    <business:PublicationReference dataFormat="standard" sequence="1">
+      <base:DocumentID>
+        <base:WIPOST3Code>CN</base:WIPOST3Code>
+        <base:DocNumber>115212463</base:DocNumber>
+        <base:Kind>A</base:Kind>
+        <base:Date>20221021</base:Date>
+      </base:DocumentID>
+    </business:PublicationReference>
+    <business:PublicAvailabilityDate>
+      <business:GazetteReference>
+        <business:GazetteNumber>38-4202</business:GazetteNumber>
+        <base:Date>20221021</base:Date>
+      </business:GazetteReference>
+    </business:PublicAvailabilityDate>
+    <business:ApplicationReference applType="10" dataFormat="original" sequence="1" sourceDB="national office">
+      <base:DocumentID>
+        <base:WIPOST3Code>CN</base:WIPOST3Code>
+        <base:DocNumber>201510481495.9</base:DocNumber>
+        <base:Date>20150807</base:Date>
+      </base:DocumentID>
+    </business:ApplicationReference>
+    <business:ApplicationReference applType="10" dataFormat="standard" sequence="1">
+      <base:DocumentID>
+        <base:WIPOST3Code>CN</base:WIPOST3Code>
+        <base:DocNumber>102015000481495</base:DocNumber>
+        <base:Date>20150807</base:Date>
+      </base:DocumentID>
+    </business:ApplicationReference>
+    <business:ClassificationIPCRDetails creator="03" processingType="original">
+      <business:ClassificationIPCR sequence="1">
+        <business:IPCVersionDate>20060101</business:IPCVersionDate>
+        <business:Section>A</business:Section>
+        <business:MainClass>61</business:MainClass>
+        <business:Subclass>N</business:Subclass>
+        <business:MainGroup>5</business:MainGroup>
+        <business:Subgroup>00</business:Subgroup>
+        <business:GeneratingOffice>
+          <base:WIPOST3Code>CN</base:WIPOST3Code>
+        </business:GeneratingOffice>
+        <business:ClassificationDataSource>H</business:ClassificationDataSource>
+        <base:Text>A61N    5/00    (2006.01)</base:Text>
+      </business:ClassificationIPCR>
+    </business:ClassificationIPCRDetails>
+    <business:InventionTitle lang="zh" dataFormat="original" sourceDB="national office" processingType="original" creator="03">一种医用放射治疗装置</business:InventionTitle>
+    <business:Parties>
+      <business:ApplicantDetails representative="1">
+        <business:Applicant sequence="1" appType="applicant" dataFormat="original" sourceDB="national office" lang="zh" creator="03" processingType="original">
+          <base:AddressBook lang="zh">
+            <base:Name>北京大基康明医疗设备有限公司</base:Name>
+            <base:Address>
+              <base:AddressLine>0</base:AddressLine>
+              <base:AddressMailCode>0</base:AddressMailCode>
+              <base:PostBox>0</base:PostBox>
+              <base:AddressRoom>0</base:AddressRoom>
+              <base:AddressFloor>0</base:AddressFloor>
+              <base:AddressBuilding>0</base:AddressBuilding>
+              <base:Street>0</base:Street>
+              <base:AddressCity>0</base:AddressCity>
+              <base:County>大兴区</base:County>
+              <base:City>北京市</base:City>
+              <base:Province>北京市</base:Province>
+              <base:PostCode>100176</base:PostCode>
+              <base:WIPOST3Code>CN</base:WIPOST3Code>
+              <base:Text>100176 北京市经济技术开发区永昌北路11号</base:Text>
+            </base:Address>
+          </base:AddressBook>
+          <business:OrganizationCode createDate="00000000" creator="00">0000000000</business:OrganizationCode>
+        </business:Applicant>
+      </business:ApplicantDetails>
+      <business:InventorDetails>
+        <business:Inventor sequence="1" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+          <base:AddressBook lang="zh">
+            <base:Name>曹凯</base:Name>
+          </base:AddressBook>
+        </business:Inventor>
+        <business:Inventor sequence="2" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+          <base:AddressBook lang="zh">
+            <base:Name>张圈世</base:Name>
+          </base:AddressBook>
+        </business:Inventor>
+        <business:Inventor sequence="3" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+          <base:AddressBook lang="zh">
+            <base:Name>许亚飞</base:Name>
+          </base:AddressBook>
+        </business:Inventor>
+        <business:Inventor sequence="4" dataFormat="original" sourceDB="national office" lang="zh" publicationMark="0" creator="03" processingType="original">
+          <base:AddressBook lang="zh">
+            <base:Name>王亮</base:Name>
+          </base:AddressBook>
+        </business:Inventor>
+      </business:InventorDetails>
+      <business:AgentDetails>
+        <business:CustomerNumber>11243</business:CustomerNumber>
+        <business:Agent sequence="1" lang="zh" dataFormat="original" sourceDB="national office" repType="agent" processingType="original" creator="03">
+          <business:Agency>
+            <base:AddressBook lang="zh">
+              <base:OrganizationName>北京银龙知识产权代理有限公司 11243</base:OrganizationName>
+            </base:AddressBook>
+          </business:Agency>
+          <base:AddressBook lang="zh">
+            <base:Name>许静</base:Name>
+          </base:AddressBook>
+        </business:Agent>
+        <business:Agent sequence="2" lang="zh" dataFormat="original" sourceDB="national office" repType="agent" processingType="original" creator="03">
+          <business:Agency>
+            <base:AddressBook lang="zh">
+              <base:OrganizationName>北京银龙知识产权代理有限公司 11243</base:OrganizationName>
+            </base:AddressBook>
+          </business:Agency>
+          <base:AddressBook lang="zh">
+            <base:Name>安利霞</base:Name>
+          </base:AddressBook>
+        </business:Agent>
+      </business:AgentDetails>
+    </business:Parties>
+  </business:BibliographicData>
+  <business:Abstract dataFormat="original" lang="zh" sourceDB="national office" processingType="original" creator="03">
+    <base:Paragraphs num="0001">本发明提供一种医用放射治疗装置，涉及加速器放射治疗技术领域，解决传统医用放射治疗装置在需要放射治疗时，需要人工进行摆位以及人工调整治疗头姿态位置，不仅使得效率低，而且对操作人员可能带来不必要辐射伤害的问题。其中所述医用放射治疗装置包括：机体；支撑所述机体的机架，所述机架包括设置于所述机体上的固定机架及至少部分滑动地设置于所述机体上的移动机架，其中所述移动机架与所述固定机架分离单独设置；设置有床板的机械臂，其中所述机械臂包括第一滑轨以及与所述第一滑轨连接的机座；连接于所述机架上的第一驱动机构；连接于所述机械臂上的第二驱动机构。这样不需要人工操作，也提高了使用治疗设备的工作效率。</base:Paragraphs>
+    <business:AbstractFigure>
+      <base:Figure num="0001">
+        <base:Image he="867" wi="1000" file="201510481495.JPG" imgContent="undefined" imgFormat="JPEG" />
+      </base:Figure>
+    </business:AbstractFigure>
+  </business:Abstract>
+  <business:Description lang="zh" dataFormat="original" sourceDB="national office" creator="03">
+    <business:InventionTitle id="title1">一种医用放射治疗装置</business:InventionTitle>
+    <business:TechnicalField id="technical-field001">
+      <base:Paragraphs id="p0001">技术领域</base:Paragraphs>
+      <base:Paragraphs id="p0002" num="n0001">本发明涉及加速器放射治疗技术领域，特别是涉及一种医用放射治疗装置。</base:Paragraphs>
+    </business:TechnicalField>
+    <business:BackgroundArt id="background-art001">
+      <base:Paragraphs id="p0003">背景技术</base:Paragraphs>
+      <base:Paragraphs id="p0004" num="n0002">全身放疗，就是对全身的所有部位进行放射治疗。一般常见的全身放疗用于恶性肿瘤的晚期治疗，如淋巴瘤的晚期治疗，在放疗时要确保病人全身能够获得照射，且保护身体的重要器官以降低放疗的副作用。加速器设备较为昂贵，为了满足治疗的需要要求其除具备等中心照射外还要具有全身放疗的可能性。</base:Paragraphs>
+    </business:BackgroundArt>
+    <business:Disclosure id="disclosure001">
+      <base:Paragraphs id="p0005">发明内容</base:Paragraphs>
+      <base:Paragraphs id="p0006" num="n0003">本发明实施例的目的在于提供一种医用放射治疗装置，以解决传统医用放射治疗装置在需要放射治疗时，需要人工进行摆位以及人工调整治疗头姿态位置，不仅使得效率低，而且对操作人员可能带来不必要辐射伤害的问题。</base:Paragraphs>
+      <base:Paragraphs id="p0007" num="n0004">为了实现上述目的，本发明实施例提供的一种医用放射治疗装置，包括：</base:Paragraphs>
+      <base:Paragraphs id="p0008" num="n0005">机体；</base:Paragraphs>
+      <base:Paragraphs id="p0009" num="n0006">支撑所述机体的机架，所述机架包括设置于所述机体上的固定机架及至少部分滑动地设置于所述机体上的移动机架，其中所述移动机架与所述固定机架分离单独设置；</base:Paragraphs>
+      <base:Paragraphs id="p0010" num="n0007">设置有床板的机械臂，其中所述机械臂包括第一滑轨以及与所述第一滑轨连接的机座；</base:Paragraphs>
+      <base:Paragraphs id="p0011" num="n0008">连接于所述机架上的第一驱动机构；</base:Paragraphs>
+      <base:Paragraphs id="p0012" num="n0009">连接于所述机械臂上的第二驱动机构；</base:Paragraphs>
+      <base:Paragraphs id="p0013" num="n0010">其中所述医用放射治疗装置的工作状态包括通过所述第一驱动机构驱动所述移动机架位于正对所述固定机架的第一位置，并且通过所述第二驱动机构驱动所述机座连接的第一滑轨运动，所述机械臂带动所述床板移动至所述机体内部的第一工作状态；</base:Paragraphs>
+      <base:Paragraphs id="p0014" num="n0011">或者通过所述第一驱动机构驱动，所述移动机架相对于所述机体滑动，大于或者等于所述床板的长度距离，偏离所述第一位置的位置，并且通过所述第二驱动机构驱动所述机座连接的第一滑轨运动，所述机械臂带动所述床板移动至所述机体外侧与所述移动机架之间位置的第二工作状态。</base:Paragraphs>
+      <base:Paragraphs id="p0015" num="n0012">进一步的，所述机体包括设置于所述机体外侧的第二滑轨，其中所述移动机架与所述第二滑轨连接。</base:Paragraphs>
+      <base:Paragraphs id="p0016" num="n0013">进一步的，所述移动机架包括设置于所述移动机架上、沿第一预设滑道滑动的机架凸起。</base:Paragraphs>
+      <base:Paragraphs id="p0017" num="n0014">进一步的，所述第一驱动机构包括设置于所述移动机架上的第一电机或第一液压缸；</base:Paragraphs>
+      <base:Paragraphs id="p0018" num="n0015">所述第二驱动机构包括设置于所述机座上的第二电机或第二液压缸。</base:Paragraphs>
+      <base:Paragraphs id="p0019" num="n0016">进一步的，所述机体包括第一旋转机体以及设置有发出放射线的治疗头的第二旋转机体，其中所述第二旋转机体套设于所述第一旋转机体内部，且所述第一旋转机体不转动，所述第二旋转机体相对于所述第一旋转机体旋转。</base:Paragraphs>
+      <base:Paragraphs id="p0020" num="n0017">进一步的，所述第一旋转机体包括固定面以及与所述固定面连接的移动面，其中所述移动面滑动地套设于所述固定面内；</base:Paragraphs>
+      <base:Paragraphs id="p0021" num="n0018">其中所述第一旋转机体的工作状态包括所述移动面相对突出于所述固定面，所述移动面与所述固定面之间形成封闭的第一状态；或者所述移动面滑动与所述固定面重合，所述移动面与所述固定面之间形成缺口，所述第二旋转机体的治疗头旋转至相对于所述缺口位置的第二状态。</base:Paragraphs>
+      <base:Paragraphs id="p0022" num="n0019">其中上述的医用放射治疗装置，还包括：</base:Paragraphs>
+      <base:Paragraphs id="p0023" num="n0020">连接于所述机体的第三驱动机构，其中所述第三驱动机构包括设置于第一旋转机体上的第三电机以及设置于所述第二旋转机体上的第四电机。</base:Paragraphs>
+      <base:Paragraphs id="p0024" num="n0021">进一步的，所述机械臂包括：一端与所述机座连接的移动臂以及所述移动臂的另一端与所述床板连接，其中所述移动臂包括多个转动轴，多个转动轴之间依次连接，且每个转动轴上设置有360度转动或180度转动的转动头。</base:Paragraphs>
+      <base:Paragraphs id="p0025" num="n0022">进一步的，所述第二移动机构包括：每个转动轴对应设置的一个伺服电机。</base:Paragraphs>
+      <base:Paragraphs id="p0026" num="n0023">进一步的，所述床板包括支撑面以及设置于所述支撑面上的凸起。</base:Paragraphs>
+      <base:Paragraphs id="p0027" num="n0024">所述凸起的第一截面为三角形，其中所述第一截面为沿所述支撑面长度方向的截面。</base:Paragraphs>
+      <base:Paragraphs id="p0028" num="n0025">进一步的，所述凸起的第二截面为矩形，其中所述第二截面为沿所述支撑面长度方向的截面，且所述凸起位于所述床板长度方向的一端。</base:Paragraphs>
+      <base:Paragraphs id="p0029" num="n0026">本发明实施例的上述技术方案的有益效果如下：</base:Paragraphs>
+      <base:Paragraphs id="p0030" num="n0027">本发明实施例的方案中，通过控制连接于机械臂上的第二驱动机构驱动第一滑轨运动，并且控制连接于机架上的第一驱动机构驱动移动机架滑动，从而使得机械臂带动床板移动，不需要人工操作，这样将原来的人工作业方式改为自动化作业方式，也避免操作人员因频繁出入治疗室进行操作，由于治疗室的残留辐射而受到辐射伤害，也提高了使用治疗设备的工作效率。</base:Paragraphs>
+    </business:Disclosure>
+    <business:DrawingsDescription id="description-of-drawings001">
+      <base:Paragraphs id="p0031">附图说明</base:Paragraphs>
+      <base:Paragraphs id="p0032" num="n0028">图1为本发明实施例的医用放射治疗装置的结构示意图之一；</base:Paragraphs>
+      <base:Paragraphs id="p0033" num="n0029">图2为本发明实施例的医用放射治疗装置的结构示意图之一；</base:Paragraphs>
+      <base:Paragraphs id="p0034" num="n0030">图3为本发明实施例的医用放射治疗装置的普通放射治疗的结构示意图；</base:Paragraphs>
+      <base:Paragraphs id="p0035" num="n0031">图4为本发明实施例的医用放射治疗装置的结构示意图之一；</base:Paragraphs>
+      <base:Paragraphs id="p0036" num="n0032">图5为本发明实施例的医用放射治疗装置的全身放射治疗的结构示意图；</base:Paragraphs>
+      <base:Paragraphs id="p0037" num="n0033">图6为本发明实施例的机械臂的结构连接简图；</base:Paragraphs>
+      <base:Paragraphs id="p0038" num="n0034">图7为本发明实施例的平躺式全身放射治疗的床板示意图之一；</base:Paragraphs>
+      <base:Paragraphs id="p0039" num="n0035">图8为本发明实施例的平躺式全身放射治疗的床板示意图之一；</base:Paragraphs>
+      <base:Paragraphs id="p0040" num="n0036">图9为本发明实施例的平躺式全身放射治疗的床板示意图之一；</base:Paragraphs>
+      <base:Paragraphs id="p0041" num="n0037">图10为本发明实施例的坐式全身放射治疗的床板示意图之一；</base:Paragraphs>
+      <base:Paragraphs id="p0042" num="n0038">图11为本发明实施例的坐式全身放射治疗的床板示意图之一；</base:Paragraphs>
+      <base:Paragraphs id="p0043" num="n0039">图12为本发明实施例的坐式全身放射治疗的床板示意图之一。</base:Paragraphs>
+      <base:Paragraphs id="p0044" num="n0040">附图标记说明：</base:Paragraphs>
+      <base:Paragraphs id="p0045" num="n0041">1-机体，11-第一旋转机体，111-固定面，112-移动面，12-第二旋转机体，121-治疗头，2-机架，21-固定机架，22-移动机架，221-机架凸起，3-机械臂，31-机座，311-第一滑轨，32-第一转动轴，33-第二转动轴，34-第三转动轴，35-第四转动轴，36-第五转动轴，37-第六转动轴，38-第七转动轴，4-床板，41-支撑面，42-凸起。</base:Paragraphs>
+    </business:DrawingsDescription>
+    <business:InventionMode id="mode-for-invention001">
+      <base:Paragraphs id="p0046">具体实施方式</base:Paragraphs>
+      <base:Paragraphs id="p0047" num="n0042">为使本发明要解决的技术问题、技术方案和优点更加清楚，下面将结合附图及具体实施例进行详细描述。</base:Paragraphs>
+      <base:Paragraphs id="p0048" num="n0043">本发明实施例针对现有技术中传统医用放射治疗装置在需要放射治疗时，需要人工进行摆位以及人工调整治疗头姿态位置，不仅使用效率低，而且对操作人员可能带来不必要辐射伤害的问题，提供一种医用放射治疗装置，在需要进行放射治疗时，通过控制移动机架上及机械臂上的电机，调节移动机架及机械臂进行移动，这样不需要人工参与设备的移动，将原来的人工作业方式改为自动化作业方式，也避免操作人员因频繁出入治疗室进行操作，由于治疗室的残留辐射而受到辐射伤害，又能提高使用治疗设备的工作效率。</base:Paragraphs>
+      <base:Paragraphs id="p0049" num="n0044">如图1至图5所示，本发明实施例一种医用放射治疗装置，包括：</base:Paragraphs>
+      <base:Paragraphs id="p0050" num="n0045">一机体1；</base:Paragraphs>
+      <base:Paragraphs id="p0051" num="n0046">支撑所述机体1的机架2，所述机架2包括设置于所述机体1上的固定机架21及至少部分滑动地设置于所述机体1上的移动机架22，其中所述移动机架22与所述固定机架21分离单独设置；</base:Paragraphs>
+      <base:Paragraphs id="p0052" num="n0047">设置有床板4的机械臂3，其中所述机械臂3包括第一滑轨311以及与所述第一滑轨311连接的机座31；</base:Paragraphs>
+      <base:Paragraphs id="p0053" num="n0048">连接于所述机架2上的第一驱动机构；</base:Paragraphs>
+      <base:Paragraphs id="p0054" num="n0049">连接于所述机械臂3上的第二驱动机构；</base:Paragraphs>
+      <base:Paragraphs id="p0055" num="n0050">其中所述医用放射治疗装置的工作状态包括通过所述第一驱动机构驱动所述移动机架22位于正对所述固定机架21的第一位置，并且通过所述第二驱动机构驱动所述机座31连接的第一滑轨311运动，所述机械臂3带动所述床板4移动至所述机体1内部的第一工作状态；</base:Paragraphs>
+      <base:Paragraphs id="p0056" num="n0051">或者通过所述第一驱动机构驱动，所述移动机架22相对于所述机体1滑动，大于或者等于所述床板4的长度距离，偏离所述第一位置的位置，并且通过所述第二驱动机构驱动所述机座31连接的第一滑轨311运动，所述机械臂3带动所述床板4移动至所述机体1外侧与所述移动机架22之间位置的第二工作状态。</base:Paragraphs>
+      <base:Paragraphs id="p0057" num="n0052">本发明实施例中，通过控制连接于机械臂3上的所述第二驱动机构驱动第一滑轨311运动，并且控制连接于机架2上的所述第一驱动机构驱动移动机架22滑动，从而使得机械臂3带动床板4移动，不需要人工操作，这样将原来的人工作业方式改为自动化作业方式，也避免操作人员因频繁出入治疗室进行操作，由于治疗室的残留辐射而受到辐射伤害，也提高了使用治疗设备的工作效率。</base:Paragraphs>
+      <base:Paragraphs id="p0058" num="n0053">需要说明的是：为了能够使得移动机架22及机械臂3的机座31进行移动，所述第一驱动机构包括设置于所述移动机架21上的第一电机或第一液压缸；</base:Paragraphs>
+      <base:Paragraphs id="p0059" num="n0054">所述第二驱动机构包括设置于所述机座31上的第二电机或第二液压缸。</base:Paragraphs>
+      <base:Paragraphs id="p0060" num="n0055">其中，当所述第一驱动机构包括设置于所述移动机架21上的第一电机时，上述第一电机与外接的终端连接，通过终端给第一电机输入控制指令，使得第一电机控制上述移动机架22进行运动，其中上述第一电机与终端通过线路进行连接；同理，所述第一液压缸是通过控制将液压能转换为机械能的执行元件，当然以上第一驱动机构并不限于以上两种驱动方式，任何能够实现对移动机架21的驱动方式，均属于本发明实施例的保护范围。</base:Paragraphs>
+      <base:Paragraphs id="p0061" num="n0056">还有，所述第二驱动机构包括设置于所述机座31上的第二电机时，上述第二电机与外接的终端连接，通过终端给第二电机输入控制指令，使得第二电机控制上述机械臂3的机座31进行运动，其中上述第二电机与终端通过线路进行连接。同理，所述第二液压缸是通过控制将液压能转换为机械能的执行元件，当然以上第二驱动机构并不限于以上两种驱动方式，任何能够实现对机械臂3的机座31的驱动方式，均属于本发明实施例的保护范围。本发明实施例优选的，所述第二电机驱动所述机座31沿所述第一滑轨311上进行运动，方便了机械臂3整体的移动。</base:Paragraphs>
+      <base:Paragraphs id="p0062" num="n0057">另外，上述机座31连接的第一滑轨311，可沿第二预设滑道滑动，其中所述第二预设滑道为人为预先测量在地上设置一个固定的滑道或者是根据用户需求进行设定，这样方便了机械臂3进行移动，本发明实施例优选的，所述第二预设滑道设置于所述机体1的前方地面上。</base:Paragraphs>
+      <base:Paragraphs id="p0063" num="n0058">为了能够使得移动机架22相对机体1进行滑动，本发明实施例的医用放射治疗装置中，所述机体1包括设置于所述机体1外侧的第二滑轨，其中所述移动机架22与所述第二滑轨连接。</base:Paragraphs>
+      <base:Paragraphs id="p0064" num="n0059">本发明实施例中，移动机架22按照第二滑轨的轨道滑动，不仅由于第二滑轨的存在，防止了移动机架22直接相对机体1滑动，长时间使用产生的损耗的问题，而且沿着第二滑轮的轨道滑动，防止了移动机架22偏离了机体1滑动，造成支撑机体1不稳定的问题，提高了移动的效率。</base:Paragraphs>
+      <base:Paragraphs id="p0065" num="n0060">为了能够使得移动机架22进行移动，本发明实施例的医用放射治疗装置中，所述移动机架22包括设置于所述移动机架22上、沿第一预设滑道滑动的机架凸起221。</base:Paragraphs>
+      <base:Paragraphs id="p0066" num="n0061">需要说明的是：其中所述第一预设滑道为人为预先测量在地上设置一个固定的滑道或者是根据用户需求进行设定，这样方便了移动机架22的上述机架凸起221进行移动。具体的，所述机架凸起221设置于所述移动机架22的正下方，与所述第一预设滑道相抵接。</base:Paragraphs>
+      <base:Paragraphs id="p0067" num="n0062">还有，所述机体1包括限位结构，其中所述限位结构设置于所述机体1的边缘处的一限位长条，对应于上述移动机架22包括一个限位凹陷长条，为了不仅防止出现上述移动机架22滑动脱落于上述机体1，影响对机体1的支撑效果的问题，而且增加了通过移动机架22的限位结构及滑动结构，提高了上述机体1与上述移动机架22的相对滑动的效率。</base:Paragraphs>
+      <base:Paragraphs id="p0068" num="n0063">为了提高移动的效率，通过轴轮使得移动机架22更容易转动，所述移动机架22包括设置于所述移动机架22下方的轴轮。</base:Paragraphs>
+      <base:Paragraphs id="p0069" num="n0064">为了在移动机架22及机械臂3移动后，能够实现普通的放射治疗，本发明实施例的医用放射治疗装置中，所述机体1包括第一旋转机体11以及设置有发出放射线的治疗头121的第二旋转机体12，其中所述第二旋转机体12套设于所述第一旋转机体11内部，且所述第一旋转机体11不转动，所述第二旋转机体12相对于所述第一旋转机体11旋转。</base:Paragraphs>
+      <base:Paragraphs id="p0070" num="n0065">本发明实施例中，在医用放射治疗装置处于第一工作状态时，第一驱动机构驱动移动机架22位于正对固定机架21的第一位置，并且通过第二驱动机构驱动机座31连接的第一滑轨311运动，机械臂3带动床板4移动至机体1内部，由于具有治疗头121的第二旋转机体12套设于第一旋转机体11内部，而且相对于上述第一旋转机体11旋转，这样可以将治疗头121设置在与机体1内部的床板4上相对的位置处，为了能够给床板4上的待治疗目标进行治疗，不仅方便了待治疗目标的治疗，而且不需要人工操作，简化了操作者在治疗过程中的操作。</base:Paragraphs>
+      <base:Paragraphs id="p0071" num="n0066">需要说明的是：上述第二旋转机体12可以旋转，针对待治疗目标的不同需求进行治疗，由于处于机体1内部，属于局部的普通放射治疗(即上述第一工作状态)。</base:Paragraphs>
+      <base:Paragraphs id="p0072" num="n0067">还有，如图3所示，医用放射治疗装置进行局部的普通放射治疗，上述第一旋转机体11旋转时，由于上述床板4处于机体1内部(一般设置于所述机体1内部的位置为上述旋转机体1的旋转中心轴线部分)，此时第一旋转机体11可以以所述床板4为中心进行旋转，附图中的虚线反应了照射野的照射范围。。</base:Paragraphs>
+      <base:Paragraphs id="p0073" num="n0068">所述机架2、治疗头121及旋转机体1，主要是产生放疗所需的束流。</base:Paragraphs>
+      <base:Paragraphs id="p0074" num="n0069">对于全身放射治疗，与治疗头121之间的距离有关系，因此本发明实施例的医用放射治疗装置中，所述第一旋转机体11包括固定面111以及与所述固定面111连接的移动面112，其中所述移动面112滑动地套设于所述固定面111内；</base:Paragraphs>
+      <base:Paragraphs id="p0075" num="n0070">其中所述第一旋转机体11的工作状态包括所述移动面112相对突出于所述固定面111，所述移动面112与所述固定面111之间形成一封闭的第一状态；或者所述移动面112滑动与所述固定面111重合，所述移动面112与所述固定面111之间形成一缺口，所述第二旋转机体12的治疗头121旋转至相对于所述缺口位置的第二状态。</base:Paragraphs>
+      <base:Paragraphs id="p0076" num="n0071">本发明实施例中，在医用放射治疗装置处于第二工作状态时，通过第一驱动机构驱动，所述移动机架22相对于所述机体1滑动，大于或者等于所述床板4的长度距离，偏离所述第一位置的位置，并且通过第二驱动机构驱动所述机座31连接的第一滑轨311运动，所述机械臂3带动所述床板4至所述机体1外侧与所述移动机架22之间位置，由于具有治疗头121的第二旋转机体12套设于第一旋转机体11内部，而且相对于上述第一旋转机体11旋转，并且所述第一旋转机体11可以相对的封闭(第一状态)及打开(第二状态)这样可以通过治疗头121与对机体1内部的床板4上相对设置，为床板4上的待治疗目标进行治疗，不仅方便了待治疗目标的治疗，而且不需要人工操作，简化了操作者在治疗过程中的操作，也可以是实现全身放射治疗与普通放射治疗的功能。</base:Paragraphs>
+      <base:Paragraphs id="p0077" num="n0072">需要说明的是：所述医用放射治疗装置处于第二工作状态是指全身放射治疗，对治疗头121而言，所述机械臂3带动的床板4相对于位于所述机体1侧面时，所述治疗头121与床板4之间的距离，大于机械臂3带动的床板4相对位于所述机体1内部时，所述治疗头121与床板4之间的距离，这样可以实现全身放射治疗，一般本发明实施例优选所述治疗头121与机械臂3带动的床板4之间的距离一般在2米至3米的范围内。</base:Paragraphs>
+      <base:Paragraphs id="p0078" num="n0073">还有，如图1和图2所示，医用放射治疗装置进行全身放射治疗，床板4在医用放射治疗装置的一侧(即所述移动机架22移开后的位置处)，附图中的虚线反应了照射野的照射范围。</base:Paragraphs>
+      <base:Paragraphs id="p0079" num="n0074">本发明实施例的具体应用过程的举例说明：</base:Paragraphs>
+      <base:Paragraphs id="p0080" num="n0075">步骤1，若需要全身放射治疗，需要先扫描人体参数；</base:Paragraphs>
+      <base:Paragraphs id="p0081" num="n0076">步骤2，根据所述人体参数给机械臂3、机体1及移动机架22选择路径等参数；</base:Paragraphs>
+      <base:Paragraphs id="p0082" num="n0077">步骤3，在人体扫描之后，向终端输入该参数，通过终端来控制实现，由于机械臂3、机体1及移动机架22均有电机驱动操作，并将移动的参数反馈给终端，终端控制所有的操作，使得机械臂3、移动机架22及机体1进行转动。</base:Paragraphs>
+      <base:Paragraphs id="p0083" num="n0078">为了能够让机体1中的第一旋转机体11及第二旋转机体12的运动，本发明实施例的医用放射治疗装置，还包括：</base:Paragraphs>
+      <base:Paragraphs id="p0084" num="n0079">连接于所述机体(1)的第三驱动机构，其中所述第三驱动机构包括设置于第一旋转机体(11)上的第三电机以及设置于所述第二旋转机体(12)上的第四电机。</base:Paragraphs>
+      <base:Paragraphs id="p0085" num="n0080">需要说明的是，上述第三电机与外接的终端连接，通过终端给第三电机输入控制指令，使得第三电机控制第一旋转机体11进行运动，其中上述第三电机与终端通过线路进行连接。</base:Paragraphs>
+      <base:Paragraphs id="p0086" num="n0081">上述第四电机与外接的终端连接，通过终端给第四电机输入控制指令，使得第四电机控制第二旋转机体12进行运动，其中上述第四电机与终端通过线路进行连接。</base:Paragraphs>
+      <base:Paragraphs id="p0087" num="n0082">为了能够让床板4与机械臂3之间灵活转动与移动，本发明实施例的所述的医用放射治疗装置中，所述机械臂3包括：一端与所述机座31连接的移动臂以及所述移动臂的另一端与所述床板4连接，其中所述移动臂包括多个转动轴，多个转动轴之间依次连接，且每个转动轴上设置有360度转动或180度转动的转动头。</base:Paragraphs>
+      <base:Paragraphs id="p0088" num="n0083">本发明实施例中，由于移动臂是通过多个转动轴相互连接，通过每个转动轴的转动头，使得机械臂3的自由度极高，能够进行多方位的转动，这样治疗床在机械臂3的带动下位移，可以实现精确定位和快速的位置调整(让床板4竖直、水平以及侧翻)，在具体治疗过程中，让床板4稍微倾斜，使得治疗头121照射在床板4上的待治疗目标上，完成治疗，也不需要人工进行操作床板4，简化了操作者在治疗过程中的操作。</base:Paragraphs>
+      <base:Paragraphs id="p0089" num="n0084">需要说明的是：本发明实施例中，所述多个转动轴的数目可以为4个，也可以为5个，也可以为6个，为了提高机械臂3的自由度，实现机械臂3的多方位的转动，本发明实施例优选地，如图6所示，上述多个转动轴的数目是6个或者7个，所述多个转动轴包括第一转动轴32，第二转动轴33，第三转动轴34，第四转动轴35，第五转动轴36、第六转动轴37和/或第七转动轴，其中上述第二转动轴33，上述第三转动轴34，上述第四转动轴35，上述第五转动轴36及上述第六转动轴37依次连接，并设置于上述机座31与上述床板4之间，上述所述第七转动轴设置于所述机座31上；</base:Paragraphs>
+      <base:Paragraphs id="p0090" num="n0085">其中上述第一转动轴32、上述第四转动轴35及上述第六转动轴37的一端均设置有360度(即正负180度)的转动头，上述第二转动轴33、上述第三转动轴34、上述第五转动轴36及第七转动轴的一端均设置有180度(即正负90度)的转动头，通过多个转动轴的相互连接提高了机械臂3的自由度，保证了床板4可以灵活在所述机械臂3上多个方向上的转动。</base:Paragraphs>
+      <base:Paragraphs id="p0091" num="n0086">为了能够控制床板4与机械臂3的多个转动轴之间灵活转动与移动，本发明实施例的医用放射治疗装置中，所述第二移动机构包括：每个转动轴对应设置的一个伺服电机。</base:Paragraphs>
+      <base:Paragraphs id="p0092" num="n0087">本发明实施例中，上述第一转动轴32，上述第二转动轴33，第三转动轴34，上述第四转动轴35，上述第五转动轴36、上述第六转动轴37及上述第七转动轴上，均连接一个伺服电机，其中一个转动轴对应设置一个伺服电机，可以实现对各自转动轴的控制，从而实现了床板4可以灵活在所述机械臂3上多个方向上的转动。</base:Paragraphs>
+      <base:Paragraphs id="p0093" num="n0088">需要说明的是：上述每个转动轴对应设置的一个伺服电机，并不是每个转动轴上设置同一个电机，可以根据各自转动轴的需求，设置不同类型的电机。</base:Paragraphs>
+      <base:Paragraphs id="p0094" num="n0089">还有，每个伺服电机与外接的终端连接，通过终端给伺服电机输入控制指令，使得伺服电机控制各个转动轴进行运动，其中上述伺服电机与终端通过线路进行连接。</base:Paragraphs>
+      <base:Paragraphs id="p0095" num="n0090">为了实现平躺待治疗目标的定位或者支撑，本发明实施例的医用放射治疗装置中，所述床板4包括支撑面41以及设置于所述支撑面41上的凸起42。</base:Paragraphs>
+      <base:Paragraphs id="p0096" num="n0091">本发明实施例中，待治疗目标将腿及臀部紧贴在凸起42上，这样可以实现待治疗目标在床板4上的位置，避免由于待治疗目标的偏移及待治疗目标的转动给放射治疗带来误差，提高了放射治疗的准确率，避免了操作人员的指导及操作，也提高了用户体验效果。</base:Paragraphs>
+      <base:Paragraphs id="p0097" num="n0092">如图7至图9所示，为了能够实现待治疗目标可以以平躺式在床板4上，本发明实施例的医用放射治疗装置中，所述凸起42的第一截面为三角形，其中所述第一截面为沿所述支撑面41长度方向的截面。</base:Paragraphs>
+      <base:Paragraphs id="p0098" num="n0093">本发明实施例的具体应用中，一般老人喜欢平躺，则选择有三角形凸起42的治疗床。</base:Paragraphs>
+      <base:Paragraphs id="p0099" num="n0094">如图10至图12所示，为了给用户提供多种选择，可以以坐式在床板4的装置，需要有支撑作用，本发明实施例的医用放射治疗装置中，所述凸起42的第二截面为矩形，其中所述第二截面为沿所述支撑面41长度方向的截面，且所述凸起42位于所述床板4长度方向的一端。</base:Paragraphs>
+      <base:Paragraphs id="p0100" num="n0095">本发明实施例的具体应用中，一般小孩喜欢坐着，则选择矩形凸起42的治疗床。</base:Paragraphs>
+      <base:Paragraphs id="p0101" num="n0096">对于待治疗目标躺卧在治疗床上或者坐在治疗椅上，待治疗目标姿势确定后需要利用绑带(为了防止人动，固定未定，保证放射效果)等进行固定，可以根据待治疗目标的身体特征选择合适的治疗姿势，并在需要保护的部位添加合适的屏蔽防护层(为了避免对局部良性器官的过度照射，如果仅仅腿有问题，进行放疗，就会将腹腔等部位遮住)。</base:Paragraphs>
+      <base:Paragraphs id="p0102" num="n0097">采用机械臂3连接的床板4完成治疗病人工作位置的调整，床板4(由于床板4是用来承载待治疗目标的人，因此也可以称为治疗床)可以根据治疗需要及病人的体貌特征等进行距离的调整，采用能够移动机架22来满足全身放疗的需要，所述治疗头121处于水平时直径的一端(位于所述机体1上)上，为全身放疗时治疗头121的工作位置。</base:Paragraphs>
+      <base:Paragraphs id="p0103" num="n0098">以上所述是本发明的优选实施方式，应当指出，对于本技术领域的普通技术人员来说，在不脱离本发明所述原理的前提下，还可以作出若干改进和润饰，这些改进和润饰也应视为本发明的保护范围。</base:Paragraphs>
+    </business:InventionMode>
+  </business:Description>
+  <business:Drawings lang="zh" sourceDB="national office">
+    <base:Figure id="f0001" num="0001" figureLabels="图1">
+      <base:Image id="ifi0001" he="861" wi="1000" file="HDA0000776902750000011.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0002" num="0002" figureLabels="图2">
+      <base:Image id="ifi0002" he="731" wi="1000" file="HDA0000776902750000012.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0003" num="0003" figureLabels="图3">
+      <base:Image id="ifi0003" he="940" wi="1000" file="HDA0000776902750000021.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0004" num="0004" figureLabels="图4">
+      <base:Image id="ifi0004" he="997" wi="1000" file="HDA0000776902750000031.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0005" num="0005" figureLabels="图5">
+      <base:Image id="ifi0005" he="1000" wi="950" file="HDA0000776902750000041.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0006" num="0006" figureLabels="图6">
+      <base:Image id="ifi0006" he="1000" wi="916" file="HDA0000776902750000051.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0007" num="0007" figureLabels="图7">
+      <base:Image id="ifi0007" he="406" wi="1000" file="HDA0000776902750000052.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0008" num="0008" figureLabels="图8">
+      <base:Image id="ifi0008" he="410" wi="1000" file="HDA0000776902750000061.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0009" num="0009" figureLabels="图9">
+      <base:Image id="ifi0009" he="697" wi="1000" file="HDA0000776902750000062.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0010" num="0010" figureLabels="图10">
+      <base:Image id="ifi0010" he="1000" wi="690" file="HDA0000776902750000071.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0011" num="0011" figureLabels="图11">
+      <base:Image id="ifi0011" he="467" wi="873" file="HDA0000776902750000072.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+    <base:Figure id="f0012" num="0012" figureLabels="图12">
+      <base:Image id="ifi0012" he="1000" wi="700" file="HDA0000776902750000081.JPG" imgContent="drawing" imgFormat="JPEG" orientation="portrait" inline="no" />
+    </base:Figure>
+  </business:Drawings>
+  <business:Claims lang="zh" dataFormat="original" sourceDB="national office" creator="03">
+    <business:Claim id="cl0001" num="0001">
+      <business:ClaimText>1.一种医用放射治疗装置，其特征在于，包括：</business:ClaimText>
+      <business:ClaimText>机体(1)；</business:ClaimText>
+      <business:ClaimText>支撑所述机体(1)的机架(2)，所述机架(2)包括设置于所述机体(1)上的固定机架(21)及至少部分滑动地设置于所述机体(1)上的移动机架(22)，其中所述移动机架(22)与所述固定机架(21)分离单独设置；</business:ClaimText>
+      <business:ClaimText>设置有床板(4)的机械臂(3)，其中所述机械臂(3)包括第一滑轨(311)以及与所述第一滑轨(311)连接的机座(31)；</business:ClaimText>
+      <business:ClaimText>连接于所述机架(2)上的第一驱动机构；</business:ClaimText>
+      <business:ClaimText>连接于所述机械臂(3)上的第二驱动机构；</business:ClaimText>
+      <business:ClaimText>其中所述医用放射治疗装置的工作状态包括通过所述第一驱动机构驱动所述移动机架(22)位于正对所述固定机架(21)的第一位置，并且通过所述第二驱动机构驱动所述机座(31)连接的第一滑轨(311)运动，所述机械臂(3)带动所述床板(4)移动至所述机体(1)内部的第一工作状态；</business:ClaimText>
+      <business:ClaimText>或者通过所述第一驱动机构驱动，所述移动机架(22)相对于所述机体(1)滑动，大于或者等于所述床板(4)的长度距离，偏离所述第一位置的位置，并且通过所述第二驱动机构驱动所述机座(31)连接的第一滑轨(311)运动，所述机械臂(3)带动所述床板(4)移动至所述机体(1)外侧与所述移动机架(22)之间位置的第二工作状态。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0002" num="0002">
+      <business:ClaimText>2.根据权利要求1所述的医用放射治疗装置，其特征在于，</business:ClaimText>
+      <business:ClaimText>所述机体(1)包括设置于所述机体(1)外侧的第二滑轨，其中所述移动机架(22)与所述第二滑轨连接。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0003" num="0003">
+      <business:ClaimText>3.根据权利要求1所述的医用放射治疗装置，其特征在于，</business:ClaimText>
+      <business:ClaimText>所述移动机架(22)包括设置于所述移动机架(22)上、沿第一预设滑道滑动的机架凸起(221)。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0004" num="0004">
+      <business:ClaimText>4.根据权利要求1所述的医用放射治疗装置，其特征在于，</business:ClaimText>
+      <business:ClaimText>所述第一驱动机构包括设置于所述移动机架(21)上的第一电机或第一液压缸；</business:ClaimText>
+      <business:ClaimText>所述第二驱动机构包括设置于所述机座(31)上的第二电机或第二液压缸。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0005" num="0005">
+      <business:ClaimText>5.根据权利要求1至4任一项所述的医用放射治疗装置，其特征在于，</business:ClaimText>
+      <business:ClaimText>所述机体(1)包括第一旋转机体(11)以及设置有发出放射线的治疗头(121)的第二旋转机体(12)，其中所述第二旋转机体(12)套设于所述第一旋转机体(11)内部，且所述第一旋转机体(11)不转动，所述第二旋转机体(12)相对于所述第一旋转机体(11)旋转。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0006" num="0006">
+      <business:ClaimText>6.根据权利要求5所述的医用放射治疗装置，其特征在于，</business:ClaimText>
+      <business:ClaimText>所述第一旋转机体(11)包括固定面(111)以及与所述固定面(111)连接的移动面(112)，其中所述移动面(112)滑动地套设于所述固定面(111)内；</business:ClaimText>
+      <business:ClaimText>其中所述第一旋转机体(11)的工作状态包括所述移动面(112)相对突出于所述固定面(111)，所述移动面(112)与所述固定面(111)之间形成封闭的第一状态；或者所述移动面(112)滑动与所述固定面(111)重合，所述移动面(112)与所述固定面(111)之间形成缺口，所述第二旋转机体(12)的治疗头(121)旋转至相对于所述缺口位置的第二状态。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0007" num="0007">
+      <business:ClaimText>7.根据权利要求6所述的医用放射治疗装置，其特征在于，还包括：</business:ClaimText>
+      <business:ClaimText>连接于所述机体(1)的第三驱动机构，其中所述第三驱动机构包括设置于第一旋转机体(11)上的第三电机以及设置于所述第二旋转机体(12)上的第四电机。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0008" num="0008">
+      <business:ClaimText>8.根据权利要求1至4任一项所述的医用放射治疗装置，其特征在于，</business:ClaimText>
+      <business:ClaimText>所述机械臂(3)包括：一端与所述机座(31)连接的移动臂以及所述移动臂的另一端与所述床板(4)连接，其中所述移动臂包括多个转动轴，多个转动轴之间依次连接，且每个转动轴上设置有360度转动或180度转动的转动头。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0009" num="0009">
+      <business:ClaimText>9.根据权利要求8所述的医用放射治疗装置，其特征在于，</business:ClaimText>
+      <business:ClaimText>所述第二移动机构包括：每个转动轴对应设置的一个伺服电机。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0010" num="0010">
+      <business:ClaimText>10.根据权利要求1至4任一项所述的医用放射治疗装置，其特征在于，</business:ClaimText>
+      <business:ClaimText>所述床板(4)包括支撑面(41)以及设置于所述支撑面(41)上的凸起(42)。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0011" num="0011">
+      <business:ClaimText>11.根据权利要求10所述的医用放射治疗装置，其特征在于，</business:ClaimText>
+      <business:ClaimText>所述凸起(42)的第一截面为三角形，其中所述第一截面为沿所述支撑面(41)长度方向的截面。</business:ClaimText>
+    </business:Claim>
+    <business:Claim id="cl0012" num="0012">
+      <business:ClaimText>12.根据权利要求10所述的医用放射治疗装置，其特征在于，</business:ClaimText>
+      <business:ClaimText>所述凸起(42)的第二截面为矩形，其中所述第二截面为沿所述支撑面(41)长度方向的截面，且所述凸起(42)位于所述床板(4)长度方向的一端。</business:ClaimText>
+    </business:Claim>
+  </business:Claims>
+</business:PatentDocumentAndRelated>

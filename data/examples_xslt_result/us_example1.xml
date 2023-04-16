@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pat:PatentPublication xmlns="http://www.wipo.int/standards/XMLSchema/ST96/Patent"
+                        xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common"
+                        xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+                        xmlns:pat="http://www.wipo.int/standards/XMLSchema/ST96/Patent"
+                        xmlns:tbl="http://www.oasis-open.org/tables/exchange/1.0"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        com:languageCode="en"
+                        com:st96Version="V3_1"
+                        xsi:schemaLocation="http://www.wipo.int/standards/XMLSchema/ST96/Patent /data/xq/st96/schema/ST96XMLSchema_V3_1_Flattened_Updated/PatentPublication_V3_1.xsd"
+                        com:id="us-patent-application"
+                        com:documentFileName="US20210049351A1-20210218.XML">
+   <com:IPOfficeCode>US</com:IPOfficeCode>
+   <pat:BibliographicData com:st96Version="V3_1" com:officeCode="US">
+      <pat:PatentPublicationIdentification>
+         <com:IPOfficeCode>US</com:IPOfficeCode>
+         <pat:PublicationNumber>20210049351</pat:PublicationNumber>
+         <com:PatentDocumentKindCode>A1</com:PatentDocumentKindCode>
+         <com:PublicationDate>20210218</com:PublicationDate>
+      </pat:PatentPublicationIdentification>
+      <pat:ApplicationIdentification>
+         <com:IPOfficeCode>US</com:IPOfficeCode>
+         <com:ApplicationNumber>
+            <com:IPOfficeCode>US</com:IPOfficeCode>
+            <com:ApplicationNumberText>17043275</com:ApplicationNumberText>
+         </com:ApplicationNumber>
+         <pat:InventionSubjectMatterCategory>Utility</pat:InventionSubjectMatterCategory>
+         <pat:FilingDate>20180413</pat:FilingDate>
+      </pat:ApplicationIdentification>
+      <pat:PatentClassificationBag>
+         <pat:IPCRClassificationBag>
+            <pat:IPCRClassification>
+               <pat:ClassificationVersionDate>20060101</pat:ClassificationVersionDate>
+               <pat:PatentClassificationLevelCode>A</pat:PatentClassificationLevelCode>
+               <com:SymbolPositionCode>F</com:SymbolPositionCode>
+               <pat:IPCClassificationValueCode>I</pat:IPCClassificationValueCode>
+               <pat:ActionDate>20210218</pat:ActionDate>
+               <pat:IPCClassificationStatusCode>B</pat:IPCClassificationStatusCode>
+               <pat:PatentClassificationDataSourceCode>H</pat:PatentClassificationDataSourceCode>
+               <pat:GeneratingOfficeCode>US</pat:GeneratingOfficeCode>
+               <pat:Section>G</pat:Section>
+               <pat:Class>06</pat:Class>
+               <pat:Subclass>K</pat:Subclass>
+               <pat:MainGroup>9</pat:MainGroup>
+               <pat:Subgroup>00</pat:Subgroup>
+            </pat:IPCRClassification>
+            <pat:IPCRClassification>
+               <pat:ClassificationVersionDate>20060101</pat:ClassificationVersionDate>
+               <pat:PatentClassificationLevelCode>A</pat:PatentClassificationLevelCode>
+               <com:SymbolPositionCode>L</com:SymbolPositionCode>
+               <pat:IPCClassificationValueCode>I</pat:IPCClassificationValueCode>
+               <pat:ActionDate>20210218</pat:ActionDate>
+               <pat:IPCClassificationStatusCode>B</pat:IPCClassificationStatusCode>
+               <pat:PatentClassificationDataSourceCode>H</pat:PatentClassificationDataSourceCode>
+               <pat:GeneratingOfficeCode>US</pat:GeneratingOfficeCode>
+               <pat:Section>G</pat:Section>
+               <pat:Class>06</pat:Class>
+               <pat:Subclass>K</pat:Subclass>
+               <pat:MainGroup>9</pat:MainGroup>
+               <pat:Subgroup>62</pat:Subgroup>
+            </pat:IPCRClassification>
+            <pat:IPCRClassification>
+               <pat:ClassificationVersionDate>20060101</pat:ClassificationVersionDate>
+               <pat:PatentClassificationLevelCode>A</pat:PatentClassificationLevelCode>
+               <com:SymbolPositionCode>L</com:SymbolPositionCode>
+               <pat:IPCClassificationValueCode>I</pat:IPCClassificationValueCode>
+               <pat:ActionDate>20210218</pat:ActionDate>
+               <pat:IPCClassificationStatusCode>B</pat:IPCClassificationStatusCode>
+               <pat:PatentClassificationDataSourceCode>H</pat:PatentClassificationDataSourceCode>
+               <pat:GeneratingOfficeCode>US</pat:GeneratingOfficeCode>
+               <pat:Section>G</pat:Section>
+               <pat:Class>06</pat:Class>
+               <pat:Subclass>N</pat:Subclass>
+               <pat:MainGroup>20</pat:MainGroup>
+               <pat:Subgroup>00</pat:Subgroup>
+            </pat:IPCRClassification>
+         </pat:IPCRClassificationBag>
+      </pat:PatentClassificationBag>
+      <pat:InventionTitleBag>
+         <pat:InventionTitle com:id="d2e43">ACTION RECOGNITION APPARATUS, ACTION RECOGNITION METHOD, AND COMPUTER-READABLE RECORDING MEDIUM</pat:InventionTitle>
+      </pat:InventionTitleBag>
+      <pat:PartyBag>
+         <pat:ApplicantBag>
+            <pat:Applicant com:sequenceNumber="00">
+               <com:PublicationContact>
+                  <com:Name>
+                     <com:OrganizationName>
+                        <com:OrganizationStandardName>NEC Corporation</com:OrganizationStandardName>
+                     </com:OrganizationName>
+                  </com:Name>
+                  <com:CityName>Minato-ku, Tokyo</com:CityName>
+                  <com:CountryCode>JP</com:CountryCode>
+               </com:PublicationContact>
+               <pat:ApplicantCategory>Applicant</pat:ApplicantCategory>
+               <pat:DesignationCategory>US only</pat:DesignationCategory>
+               <com:ResidenceCountryCode>JP</com:ResidenceCountryCode>
+            </pat:Applicant>
+         </pat:ApplicantBag>
+         <pat:InventorBag>
+            <pat:Inventor com:sequenceNumber="00">
+               <com:PublicationContact>
+                  <com:Name>
+                     <com:PersonName>
+                        <com:PersonStructuredName>
+                           <com:FirstName>Toshinori</com:FirstName>
+                           <com:LastName>HOSOI</com:LastName>
+                        </com:PersonStructuredName>
+                     </com:PersonName>
+                  </com:Name>
+                  <com:CityName>Tokyo</com:CityName>
+                  <com:CountryCode>JP</com:CountryCode>
+               </com:PublicationContact>
+            </pat:Inventor>
+            <pat:Inventor com:sequenceNumber="01">
+               <com:PublicationContact>
+                  <com:Name>
+                     <com:PersonName>
+                        <com:PersonStructuredName>
+                           <com:FirstName>Ryo</com:FirstName>
+                           <com:LastName>KAWAI</com:LastName>
+                        </com:PersonStructuredName>
+                     </com:PersonName>
+                  </com:Name>
+                  <com:CityName>Tokyo</com:CityName>
+                  <com:CountryCode>JP</com:CountryCode>
+               </com:PublicationContact>
+            </pat:Inventor>
+         </pat:InventorBag>
+      </pat:PartyBag>
+   </pat:BibliographicData>
+   <pat:Description com:id="description">
+      <pat:InventionSummary>
+         <com:Heading com:id="h-0001" com:headingLevelCode="H1">TECHNICAL FIELD</com:Heading>
+         <com:P com:id="p-0002" com:pNumber="0001">The present invention relates to an action recognition apparatus, an action recognition method, and a computer-readable recording medium for recognizing actions of a target object.</com:P>
+         <com:Heading com:id="h-0002" com:headingLevelCode="H1">BACKGROUND ART</com:Heading>
+         <com:P com:id="p-0003" com:pNumber="0002">Examples of methods for recognizing actions of a target object include a method for recognizing actions of a target object by using features extracted from a plurality of images captured by an image capturing apparatus.</com:P>
+         <com:P com:id="p-0004" com:pNumber="0003">Also, a technology called “Two-Stream ConvNets (Two-Stream Convolutional Networks for Action Recognition in Videos)”, which is a sort of deep learning is disclosed as a method for recognizing actions of a target object. See Non-Patent Document 1. According to this technology, there are a CNN (Convolutional Neural Network) in the spatial direction, which extracts features of an object and the background by using images input thereto, and a CNN in the time-series direction, which extracts features related to actions of the object by using a series of horizontal components and a series of vertical components of an optical flow input thereto. Actions of the target object are accurately recognized by integrating the features extracted by these CNNs.</com:P>
+         <com:Heading com:id="h-0003" com:headingLevelCode="H1">LIST OF PRIOR ART DOCUMENTS</com:Heading>
+         <com:Heading com:id="h-0004" com:headingLevelCode="H1">Non-Patent Document</com:Heading>
+         <com:P com:id="p-0005" com:pNumber="0000">
+            <com:UL com:id="ul0001" com:ulStyle="None">
+               <com:LI com:id="ul0001-0001" com:liNumber="0004">Non-Patent Document 1: Karen Simonyan, Andrew Zisserman  “Two-Stream Convolutional Networks for Action Recognition in Videos” [online], Jun. 9, 2014, Visual Geometry Group, University of Oxford, [searched on Oct. 3, 2005], the Internet &lt;URL: https://papers.nips.cc/paper/5353-two-stream-convolutional-networks-for-action-recognition-in-videos.pdf&gt;</com:LI>
+            </com:UL>
+         </com:P>
+         <com:Heading com:id="h-0005" com:headingLevelCode="H1">SUMMARY OF INVENTION</com:Heading>
+         <com:Heading com:id="h-0006" com:headingLevelCode="H1">Technical Problems</com:Heading>
+         <com:P com:id="p-0006" com:pNumber="0005">However, with Two-Stream ConvNets disclosed in Non-Patent Document 1, actions of a target object cannot be accurately recognized when an image other than a target object image that corresponds to the target object captured in an image overlaps, or is adjacent to, the target object image.</com:P>
+         <com:P com:id="p-0007" com:pNumber="0006">An example object of the present invention is to provide an action recognition apparatus, an action recognition method, and a computer-readable recording medium for improving accuracy in recognition of actions of a target object.</com:P>
+         <com:Heading com:id="h-0007" com:headingLevelCode="H1">Solution to the Problems</com:Heading>
+         <com:P com:id="p-0008" com:pNumber="0007">To achieve the above-described object, an action recognition apparatus according to one aspect of the present invention includes:</com:P>
+         <com:P com:id="p-0009" com:pNumber="0008">a generation unit that generates an addition image by adding a preset setting image to a target object image corresponding to a target object;</com:P>
+         <com:P com:id="p-0010" com:pNumber="0009">an action recognition and estimation unit that performs action recognition regarding the target object by using the addition image, outputs action recognition information indicating a result of action recognition, estimates the setting image by using the addition image, and outputs estimation information indicating a result of estimation;</com:P>
+         <com:P com:id="p-0011" com:pNumber="0010">an action recognition loss calculation unit that calculates an action recognition loss by using reference action recognition information generated in advance based on the addition image, and the action recognition information;</com:P>
+         <com:P com:id="p-0012" com:pNumber="0011">an estimation loss calculation unit that calculates an estimation loss by using reference estimation information generated in advance based on the addition image, and the estimation information; and</com:P>
+         <com:P com:id="p-0013" com:pNumber="0012">a learning parameter updating unit that updates learning parameters by using the action recognition loss and the estimation loss.</com:P>
+         <com:P com:id="p-0014" com:pNumber="0013">Also, to achieve the above-described object, an action recognition method according to one aspect of the present invention includes:</com:P>
+         <com:P com:id="p-0015" com:pNumber="0014">(A) a step of generating an addition image by adding a preset setting image to a target object image corresponding to a target object;</com:P>
+         <com:P com:id="p-0016" com:pNumber="0015">(B) a step of performing action recognition regarding the target object by using the addition image, outputting action recognition information indicating a result of action recognition, estimating the setting image by using the addition image, and outputting estimation information indicating a result of estimation;</com:P>
+         <com:P com:id="p-0017" com:pNumber="0016">(C) a step of calculating an action recognition loss by using reference action recognition information generated in advance based on the addition image, and the action recognition information;</com:P>
+         <com:P com:id="p-0018" com:pNumber="0017">(D) a step of calculating an estimation loss by using reference estimation information generated in advance based on the addition image, and the estimation information; and</com:P>
+         <com:P com:id="p-0019" com:pNumber="0018">(E) a step of updating learning parameters by using the action recognition loss and the estimation loss.</com:P>
+         <com:P com:id="p-0020" com:pNumber="0019">Furthermore, to achieve the above-described object, a program stored in a computer-readable recording medium according to one aspect of the present invention causes a computer to carry out:</com:P>
+         <com:P com:id="p-0021" com:pNumber="0020">(A) a step of generating an addition image by adding a preset setting image to a target object image corresponding to a target object;</com:P>
+         <com:P com:id="p-0022" com:pNumber="0021">(B) a step of performing action recognition regarding the target object by using the addition image, outputting action recognition information indicating a result of action recognition, estimating the setting image by using the addition image, and outputting estimation information indicating a result of estimation;</com:P>
+         <com:P com:id="p-0023" com:pNumber="0022">(C) a step of calculating an action recognition loss by using reference action recognition information generated in advance based on the addition image, and the action recognition information;</com:P>
+         <com:P com:id="p-0024" com:pNumber="0023">(D) a step of calculating an estimation loss by using reference estimation information generated in advance based on the addition image, and the estimation information; and</com:P>
+         <com:P com:id="p-0025" com:pNumber="0024">(E) a step of updating learning parameters by using the action recognition loss and the estimation loss.</com:P>
+         <com:Heading com:id="h-0008" com:headingLevelCode="H1">Advantageous Effects of the Invention</com:Heading>
+         <com:P com:id="p-0026" com:pNumber="0025">As described above, according to the present invention, it is possible to improve accuracy in recognition of actions of a target object.</com:P>
+      </pat:InventionSummary>
+      <pat:DrawingDescription>
+         <com:Heading com:id="h-0009" com:headingLevelCode="H1">BRIEF DESCRIPTION OF THE DRAWINGS</com:Heading>
+         <com:P com:id="p-0027" com:pNumber="0026">
+            <com:FigureReference com:idrefs="DRAWINGS">FIG. 1</com:FigureReference> is a diagram showing an example of an action recognition apparatus in a case where learning is to be performed.</com:P>
+         <com:P com:id="p-0028" com:pNumber="0027">
+            <com:FigureReference com:idrefs="DRAWINGS">FIG. 2</com:FigureReference> is a diagram showing an example of an action recognition system that includes the action recognition apparatus in a case where learning is to be performed.</com:P>
+         <com:P com:id="p-0029" com:pNumber="0028">
+            <com:FigureReference com:idrefs="DRAWINGS">FIG. 3</com:FigureReference> is a diagram showing examples of a target object image, setting images, and an addition image.</com:P>
+         <com:P com:id="p-0030" com:pNumber="0029">
+            <com:FigureReference com:idrefs="DRAWINGS">FIG. 4</com:FigureReference> is a diagram showing examples of the action recognition apparatus after learning and a system that includes the action recognition apparatus.</com:P>
+         <com:P com:id="p-0031" com:pNumber="0030">
+            <com:FigureReference com:idrefs="DRAWINGS">FIG. 5</com:FigureReference> is a diagram showing examples of operations of the action recognition apparatus in a case where learning is to be performed.</com:P>
+         <com:P com:id="p-0032" com:pNumber="0031">
+            <com:FigureReference com:idrefs="DRAWINGS">FIG. 6</com:FigureReference> is a diagram showing an example of a computer that realizes the action recognition apparatus is realized.</com:P>
+      </pat:DrawingDescription>
+      <pat:EmbodimentDescription>
+         <com:Heading com:id="h-0010" com:headingLevelCode="H1">EXAMPLE EMBODIMENT</com:Heading>
+         <com:P com:id="p-0033" com:pNumber="0032">The following describes an action recognition apparatus in an example embodiment of the present invention with reference to <com:FigureReference com:idrefs="DRAWINGS">FIGS. 1 to 6</com:FigureReference>.</com:P>
+         <com:P com:id="p-0034" com:pNumber="0033">Apparatus Configuration</com:P>
+         <com:P com:id="p-0035" com:pNumber="0034">First, a configuration of an action recognition apparatus in the present example embodiment will be described with reference to <com:FigureReference com:idrefs="DRAWINGS">FIG. 1</com:FigureReference>. <com:FigureReference com:idrefs="DRAWINGS">FIG. 1</com:FigureReference> is a diagram showing an example of an action recognition apparatus in a case where learning is to be performed.</com:P>
+         <com:P com:id="p-0036" com:pNumber="0035">As shown in <com:FigureReference com:idrefs="DRAWINGS">FIG. 1</com:FigureReference>, an action recognition apparatus <com:B>1</com:B> is an apparatus that accurately recognize actions of a target object. The action recognition apparatus <com:B>1</com:B> includes a generation unit <com:B>2</com:B>, an action recognition and estimation unit <com:B>3</com:B>, an action recognition loss calculation unit <com:B>4</com:B>, an estimation loss calculation unit <com:B>5</com:B>, and a learning parameter updating unit <com:B>6</com:B>.</com:P>
+         <com:P com:id="p-0037" com:pNumber="0036">Among these units, the generation unit <com:B>2</com:B> generates an addition image by adding a preset setting image to a target object image corresponding to a target object. A target object is an object that is a target of action recognition, such as a human body, a human body part, a non-human creature, a machine, or the like. A target object image is an image corresponding to a target object in an image (e.g. an image in a video) captured by an image capturing apparatus. A setting image is an image that is set in learning, for example, in order to make it difficult to recognize a target object image from an image in which the target object is captured. In addition, a setting image is an image corresponding to a still life, a building, or the like, in addition to the above-described target object. An addition image is an image only including a target object image or an image including a target object image and setting images. An addition image is an image formed by placing setting images on the front side, the back side, or both front and back sides of the target object image.</com:P>
+         <com:P com:id="p-0038" com:pNumber="0037">Next, the action recognition and estimation unit <com:B>3</com:B> performs action recognition regarding the target object by using the addition image, outputs action recognition information indicating the result of action recognition, estimates the setting image by using the addition image, and outputs estimation information indicating the result of estimation.</com:P>
+         <com:P com:id="p-0039" com:pNumber="0038">Next, the action recognition loss calculation unit <com:B>4</com:B> calculates an action recognition loss by using reference action recognition information generated in advance based on the addition image, and the action recognition information. The estimation loss calculation unit <com:B>5</com:B> also calculates an estimation loss by using reference estimation information generated in advance based on the addition image, and the estimation information. The learning parameter updating unit <com:B>6</com:B> updates learning parameters by using the action recognition loss and the estimation loss.</com:P>
+         <com:P com:id="p-0040" com:pNumber="0039">As described above, in the present example embodiment, various target object images and setting images are prepared, a large number of addition images in different patterns are generated, and the action recognition apparatus <com:B>1</com:B> can be trained using a large number of addition images. Therefore, it is possible to improve accuracy in action recognition performed by the action recognition apparatus <com:B>1</com:B>. That is to say, the action recognition apparatus <com:B>1</com:B> is trained using a large number of addition images generated by utilizing a computer or the like, instead of using actually captured images as in conventional art, and therefore it is possible to improve accuracy in action recognition performed by the action recognition apparatus <com:B>1</com:B>. All of the addition images may be generated using computer graphics. For example, two-dimensional (2D) model or three-dimensional (3D) model may be used to generate addition images.</com:P>
+         <com:P com:id="p-0041" com:pNumber="0040">Note that learning performed by the action recognition apparatus <com:B>1</com:B> is machine learning or the like. Specifically, deep learning or the like is used. Updating of learning parameters means to update learning parameters for a neural network in deep learning.</com:P>
+         <com:P com:id="p-0042" com:pNumber="0041">Also, in the present example embodiment, when the action recognition apparatus <com:B>1</com:B> is to be trained, the action recognition apparatus <com:B>1</com:B> is trained regarding recognition of actions of a target object by using a large number of addition images generated in advance, and is also trained regarding estimation of setting images. That is to say, when the action recognition apparatus <com:B>1</com:B> is to be trained, the action recognition apparatus <com:B>1</com:B> performs learning regarding action recognition and learning regarding estimation of setting images at the same time. Furthermore, formulization is performed so that learning can be performed with a focus on action recognition rather than estimation of setting images. As a result, it is possible to establish an action recognition apparatus <com:B>1</com:B> that can perform accurate action recognition to recognize actions of a target object, after the setting images are removed from the addition images. In other words, the action recognition apparatus <com:B>1</com:B> can perform learning so as to improve accuracy in action recognition in its entirety even though estimation of setting images is inaccurate.</com:P>
+         <com:P com:id="p-0043" com:pNumber="0042">Specifically, when detecting a suspicious person from a surveillance video that captures a crowd such as in a street, it is possible to detect actions of the suspicious person by removing the images captured on the front side, the back side, or both front and back sides of the target object image corresponding to the suspicious person, from the surveillance video, by using the action recognition apparatus <com:B>1</com:B> to which the above-described accurate action recognition model has been applied.</com:P>
+         <com:P com:id="p-0044" com:pNumber="0043">Next, the configuration of the action recognition apparatus <com:B>1</com:B> in the present example embodiment will be specifically described with reference to <com:FigureReference com:idrefs="DRAWINGS">FIGS. 2 and 3</com:FigureReference>. <com:FigureReference com:idrefs="DRAWINGS">FIG. 2</com:FigureReference> is a diagram showing an example of an action recognition system that includes the action recognition apparatus in a case where learning is performed. <com:FigureReference com:idrefs="DRAWINGS">FIG. 3</com:FigureReference> is a diagram showing examples of a target object image, setting images, and an addition image.</com:P>
+         <com:P com:id="p-0045" com:pNumber="0044">As shown in <com:FigureReference com:idrefs="DRAWINGS">FIG. 2</com:FigureReference>, the action recognition apparatus <com:B>1</com:B> in the present example embodiment includes a target object image storage unit <com:B>21</com:B>, an addition image storage unit <com:B>22</com:B>, an action feature extraction unit <com:B>23</com:B>, and a feature extraction unit <com:B>24</com:B> in addition to the generation unit <com:B>2</com:B>, the action recognition and estimation unit <com:B>3</com:B>, the action recognition loss calculation unit <com:B>4</com:B>, the estimation loss calculation unit <com:B>5</com:B>, the learning parameter updating unit <com:B>6</com:B>. The action recognition and estimation unit <com:B>3</com:B> includes an action recognition unit <com:B>25</com:B> (a discriminator), an estimation unit <com:B>26</com:B> (an estimator), and a holding unit <com:B>27</com:B>.</com:P>
+         <com:P com:id="p-0046" com:pNumber="0045">The generation unit <com:B>2</com:B> acquires an image including a target object image corresponding to a target object, and generates an addition image by adding setting images to the acquired image.</com:P>
+         <com:P com:id="p-0047" com:pNumber="0046">Specifically, the generation unit <com:B>2</com:B> first acquires an image or a video stored in the target object image storage unit <com:B>21</com:B> and in which only the target object is captured. A video is constituted by images captured in time series, for example. Next, the generation unit <com:B>2</com:B> adds setting images to the acquired image that includes the target object image. For example, the generation unit <com:B>2</com:B> generates an addition image <com:B>35</com:B> by adding setting images S1_IMG, S2_IMG, and S3_IMG to a target object image T_IMG included in an image <com:B>31</com:B> shown in <com:FigureReference com:idrefs="DRAWINGS">FIG. 3</com:FigureReference>, or adding noise to, or filling, a portion of the image <com:B>31</com:B>. Thereafter, the generation unit <com:B>2</com:B> stores the generated addition image in the addition image storage unit <com:B>22</com:B>. Although the addition image <com:B>35</com:B> in <com:FigureReference com:idrefs="DRAWINGS">FIG. 3</com:FigureReference> is formed by adding all of the setting images S1_IMG, S2_IMG, and S3_IMG, one or two or more images of the setting images S1_IMG, S2_IMG, and S3_IMG may be combined and set.</com:P>
+         <com:P com:id="p-0048" com:pNumber="0047">Also, the target object image or the setting images may be a human body image or an image of an imitation of a human body. Also, the target object image or the setting images may each be an image formed by filling an area within the contour thereof with one or more colors. For example, silhouette images may be used. Also, the setting images may each be an image that is an imitation of a phenomenon that an image becomes white due to the influence of strong sunlight, or a phenomenon that a portion of the image becomes excessively low and becomes black, and hides a portion of the target object image. Furthermore, the setting images are not limited to being images of a physical object, and may be images of an object that transparently covers the target object, such as fog or glass.</com:P>
+         <com:P com:id="p-0049" com:pNumber="0048">The action recognition unit and estimation unit <com:B>3</com:B> includes the action recognition unit <com:B>25</com:B>, the estimation unit <com:B>26</com:B>, and the holding unit <com:B>27</com:B>. The action recognition unit <com:B>25</com:B> performs action recognition regarding the target object based on learning parameters held in the holding unit <com:B>27</com:B>, by using the addition image as an input. While the action recognition unit <com:B>25</com:B> is performing learning for action recognition, the estimation unit <com:B>26</com:B> estimates the setting images set to the addition image, based on the learning parameters held in the holding unit <com:B>27</com:B>, by using the addition image as an input.</com:P>
+         <com:P com:id="p-0050" com:pNumber="0049">Specifically, the action recognition unit <com:B>25</com:B> acquires the addition image from the addition image storage unit <com:B>22</com:B>. Next, the action recognition unit <com:B>25</com:B> performs action recognition regarding the target object based on the learning parameters held in the holding unit <com:B>27</com:B>, by using the acquired addition image as an input. Thereafter, the action recognition unit <com:B>25</com:B> outputs action recognition information indicating the result of action recognition.</com:P>
+         <com:P com:id="p-0051" com:pNumber="0050">The action recognition unit <com:B>25</com:B> outputs, as action recognition information, a label 1 when recognizing the action of walking, a label 2 when recognizing the action of running, a label 3 when recognizing the action of crouching or a crouching state, and a label 4 when recognizing the action of stopping or a stopped state, for example.</com:P>
+         <com:P com:id="p-0052" com:pNumber="0051">Also, as shown in <com:FigureReference com:idrefs="DRAWINGS">FIG. 2</com:FigureReference>, the action recognition unit <com:B>25</com:B> may perform action recognition regarding the target object by using information formed by extracting features of the target object image in the addition image, acquired via the action feature extraction unit <com:B>23</com:B>. In such a case, the action recognition unit <com:B>25</com:B> performs action recognition regarding the target object based on the learning parameters held in the holding unit <com:B>27</com:B>, by using the features of the target object image in the addition image.</com:P>
+         <com:P com:id="p-0053" com:pNumber="0052">Specifically, while the action recognition unit <com:B>25</com:B> is performing learning regarding action recognition, the estimation unit <com:B>26</com:B> acquires the addition image from the addition image storage unit <com:B>22</com:B>. Next, the action recognition unit <com:B>26</com:B> estimates the setting images based on the learning parameters held in the holding unit <com:B>27</com:B>, by using the acquired addition image as an input. Thereafter, the estimation unit <com:B>26</com:B> outputs estimation information indicating the result of estimation.</com:P>
+         <com:P com:id="p-0054" com:pNumber="0053">The estimation unit <com:B>26</com:B> may (1) estimate a plurality of joint points from the addition image in which the setting images are human body images, (2) estimate a silhouette image from the addition image in which the set images are silhouette images that are imitations of a human body, (3) estimate a filled image from the addition image in which the setting images are filled images, or (4) estimate the addition image in which the setting images are removed from the target object.</com:P>
+         <com:P com:id="p-0055" com:pNumber="0054">Also, as shown in <com:FigureReference com:idrefs="DRAWINGS">FIG. 2</com:FigureReference>, the estimation unit <com:B>26</com:B> may acquire information formed by extracting features of the setting images in the addition image, via the feature extraction unit <com:B>24</com:B>, and estimate the setting image. In such a case, the estimation unit <com:B>26</com:B> estimate the setting images based on the learning parameters held in the holding unit <com:B>27</com:B>, by using the features of the setting images extracted from the addition image.</com:P>
+         <com:P com:id="p-0056" com:pNumber="0055">Although <com:FigureReference com:idrefs="DRAWINGS">FIG. 2</com:FigureReference> shows an example in which the action feature extraction unit <com:B>23</com:B> and the feature extraction unit <com:B>24</com:B> are provided at the input stage of the action recognition unit and estimation unit <com:B>3</com:B>, these units may be omitted and the addition image may be directly input to the action recognition unit and estimation unit <com:B>3</com:B>. Alternatively, only one of the action feature extraction unit <com:B>23</com:B> and the feature extraction unit <com:B>24</com:B> may be used.</com:P>
+         <com:P com:id="p-0057" com:pNumber="0056">Also, although the addition image is stored in the addition image storage unit <com:B>22</com:B> in <com:FigureReference com:idrefs="DRAWINGS">FIG. 2</com:FigureReference>, the addition image may be directly output from the generation unit <com:B>2</com:B> to the action recognition and estimation unit <com:B>3</com:B> or to the action feature extraction unit <com:B>23</com:B> and the feature extraction unit <com:B>24</com:B>, without the addition image storage unit <com:B>22</com:B> being interposed therebetween.</com:P>
+         <com:P com:id="p-0058" com:pNumber="0057">The action recognition loss calculation unit <com:B>4</com:B> calculates an action recognition loss by using reference action recognition information generated in advance based on the addition image, and the action recognition information acquired from the action recognition unit <com:B>25</com:B>.</com:P>
+         <com:P com:id="p-0059" com:pNumber="0058">Specifically, the action recognition loss calculation unit <com:B>4</com:B> compares the action recognition information output from the action recognition unit <com:B>25</com:B> with the reference action recognition information, and sets a smaller value to the action recognition loss as the difference from the reference action recognition information decreases, and sets a larger value to the action recognition loss as the difference increases.</com:P>
+         <com:P com:id="p-0060" com:pNumber="0059">For example, the following describes a case in which, as action recognition information, a label 1 is associated with the action of walking, a label 2 is associated with the action of running, a label 3 is associated with the action of crouching or a crouching state, and a label 4 is associated with the action of stopping or a stopped state. In the above-described case, for example, when the label of reference action recognition information matches the label of the action recognition information, the action recognition loss calculation unit <com:B>4</com:B> may set 0.0 to the action recognition loss, and in the case of a mismatch, the action recognition loss calculation unit <com:B>4</com:B> may set 1.0 to the action recognition loss.</com:P>
+         <com:P com:id="p-0061" com:pNumber="0060">Also, if the above-described four labels, namely the labels 1 to 4, are set, four scores are output from the action recognition unit <com:B>25</com:B>. Therefore, these four scores are converted using the SoftMax function. The vector distance between the score {0.1,0.0,0.9,0.1} converted from the four scores and the label {0,0,1,0} of the reference action recognition information may be calculated as a loss.</com:P>
+         <com:P com:id="p-0062" com:pNumber="0061">The estimation loss calculation unit <com:B>5</com:B> calculates an estimation loss by using the reference estimation information generated by the generation unit <com:B>2</com:B> in advance based on the addition image, and the estimation information acquired from the estimation unit <com:B>26</com:B>.</com:P>
+         <com:P com:id="p-0063" com:pNumber="0062">Specifically, the estimation loss calculation unit <com:B>5</com:B> compares the estimation information output from the estimation unit <com:B>26</com:B> with the reference estimation information generated by the generation unit <com:B>2</com:B>, and sets a smaller value to the estimation loss as the difference from the reference estimation information decreases, and sets a larger value to the estimation loss as the difference increases.</com:P>
+         <com:P com:id="p-0064" com:pNumber="0063">The following describes an estimation loss in the cases where the estimation information shown in the above-described (1) to (4) is used.</com:P>
+         <com:P com:id="p-0065" com:pNumber="0064">(1) The Case in which Joint Points are Used as Estimation Information</com:P>
+         <com:P com:id="p-0066" com:pNumber="0065">In the case where a plurality of joint points of a human body are used to calculate the estimation loss, the estimation loss calculation unit <com:B>5</com:B> first acquires coordinates corresponding to joint points that are associated with the addition image generated by the generation unit <com:B>2</com:B>, in the generated addition image. Next, the estimation loss calculation unit <com:B>5</com:B> calculates, for each of the joint points, the distance between the coordinates corresponding to the reference joint point and the coordinates corresponding to the joint point estimated from the addition image indicated by the estimation information output from the estimation unit <com:B>26</com:B>. Thereafter, the estimation loss calculation unit <com:B>5</com:B> calculates the sum of the distances calculated for the joint points, divides the calculated sum by the size of the human body (the area of the target object image in the addition image), and determines the result of division as the estimation loss.</com:P>
+         <com:P com:id="p-0067" com:pNumber="0066">(2) The Case in which a Silhouette Image is Used as Estimation Information</com:P>
+         <com:P com:id="p-0068" com:pNumber="0067">In the case where a silhouette image is used to calculate the estimation loss, the estimation loss calculation unit <com:B>5</com:B> first acquires the coordinates and the area of the addition image generated by the generation unit <com:B>2</com:B>, in which a silhouette image that is associated with the generated addition image and that serves as a reference image in the generated addition image is placed (for example, the area is the number of pixels of the silhouette image on the addition image and the like). Next, the estimation loss calculation unit <com:B>5</com:B> calculates the overlapping area of the reference silhouette image and the silhouette image estimated from the addition image indicated by the estimation information output from the estimation unit <com:B>26</com:B>. Thereafter, the estimation loss calculation unit <com:B>5</com:B> determines the inverse of the value obtained by dividing the overlapping area by the area of the reference silhouette image, as the estimation loss.</com:P>
+         <com:P com:id="p-0069" com:pNumber="0068">(3) The Case in which a Filled Image is Used as Estimation Information</com:P>
+         <com:P com:id="p-0070" com:pNumber="0069">In the case where a filled image is used to calculate the estimation loss, the estimation loss calculation unit <com:B>5</com:B> first acquires the coordinates and the area of the addition image generated by the generation unit <com:B>2</com:B>, in which a filled image that is associated with the generated addition image and that serves as a reference image in the generated addition image is placed (for example, the area is the area is the number of pixels of the filled image on the addition image and the like). Next, the estimation loss calculation unit <com:B>5</com:B> calculates the overlapping area of the reference filled image and the filled image estimated from the addition image indicated by the estimation information output from the estimation unit <com:B>26</com:B>. Thereafter, the estimation loss calculation unit <com:B>5</com:B> determines the inverse of the value obtained by dividing the overlapping area by the area of the reference filled image, as the estimation loss.</com:P>
+         <com:P com:id="p-0071" com:pNumber="0070">(4) In the Case where an Image Formed by Removing the Setting Images from the Addition Image is Used as Estimation Information</com:P>
+         <com:P com:id="p-0072" com:pNumber="0071">In the case where an image formed by removing the setting images is used to calculate the estimation loss, the estimation loss calculation unit <com:B>5</com:B> first acquires an image formed by removing the setting image associated with the addition image generated by the generation unit <com:B>2</com:B> and serves as a reference image in the generated addition image. Next, considering the image from which the reference setting image is removed and the image from which the setting image estimated from the addition image indicated by the estimation information output from the estimation unit <com:B>26</com:B> is removed, as vectors, the estimation loss calculation unit <com:B>5</com:B> determines the normalized correlation between the vectors or the distance between the vectors as the estimation loss.</com:P>
+         <com:P com:id="p-0073" com:pNumber="0072">The learning parameter updating unit <com:B>7</com:B> updates the learning parameters held in the holding unit <com:B>27</com:B> included in the action recognition and estimation unit <com:B>3</com:B>, by using the action recognition loss and the estimation loss. The holding unit <com:B>27</com:B> may use a storage unit included in the action recognition apparatus <com:B>1</com:B> or provided outside the action recognition apparatus <com:B>1</com:B>.</com:P>
+         <com:P com:id="p-0074" com:pNumber="0073">Specifically, the learning parameter updating unit <com:B>7</com:B> acquires the action recognition loss output from the action recognition loss calculation unit <com:B>4</com:B> and the estimation loss output from the estimation loss calculation unit <com:B>5</com:B>, derives updating parameters using, for example, the backpropagation method used in machine learning, and updates the updating parameters in the holding unit <com:B>7</com:B>.</com:P>
+         <com:P com:id="p-0075" com:pNumber="0074">The following describes action recognition performed by the action recognition apparatus <com:B>1</com:B> after learning. <com:FigureReference com:idrefs="DRAWINGS">FIG. 4</com:FigureReference> is a diagram showing examples of the action recognition apparatus after learning and a system that includes the action recognition apparatus. The system shown in <com:FigureReference com:idrefs="DRAWINGS">FIG. 4</com:FigureReference> includes an image capturing apparatus <com:B>41</com:B>, the action recognition apparatus <com:B>1</com:B>, and an output unit <com:B>42</com:B>. Specifically, the system is a system that is applied to an image surveillance system.</com:P>
+         <com:P com:id="p-0076" com:pNumber="0075">The image capturing apparatus <com:B>41</com:B> is, for example, a video camera, a digital camera, or the like. Specifically, the image capturing apparatus <com:B>41</com:B> transmits a captured surveillance video to the action recognition apparatus <com:B>1</com:B> that has performed learning.</com:P>
+         <com:P com:id="p-0077" com:pNumber="0076">The action recognition apparatus <com:B>1</com:B> actually performs action recognition by using the surveillance video, and outputs action recognition information. When actually performing action recognition, the action recognition apparatus <com:B>1</com:B> performs action recognition using the action recognition and estimation unit <com:B>3</com:B> as shown in <com:FigureReference com:idrefs="DRAWINGS">FIG. 4</com:FigureReference>. At this time, the action recognition unit <com:B>25</com:B> included in the action recognition and estimation unit <com:B>3</com:B> outputs action recognition information and the estimation unit <com:B>26</com:B> also outputs estimation information. However, only the action recognition information needs to be used.</com:P>
+         <com:P com:id="p-0078" com:pNumber="0077">Specifically, in the case of detecting a suspicious person, the action recognition apparatus <com:B>1</com:B> removes images captured on the front side, the back side, or both front and back sides of the target object image corresponding to the suspicious person, from the surveillance video, to detect the actions of the suspicious person.</com:P>
+         <com:P com:id="p-0079" com:pNumber="0078">For example, when the output unit <com:B>42</com:B> acquires information formed by converting action recognition information into a format that can be output by the output unit <com:B>42</com:B>, the output unit <com:B>42</com:B> outputs the result of action recognition indicated by the action recognition information. The output unit <com:B>42</com:B> is, for example, a display apparatus, an audio output apparatus, or the like.</com:P>
+         <com:P com:id="p-0080" com:pNumber="0079">Apparatus Operations</com:P>
+         <com:P com:id="p-0081" com:pNumber="0080">Next, operations of the action recognition apparatus in the example embodiment of the present invention will be described with reference to <com:FigureReference com:idrefs="DRAWINGS">FIG. 5</com:FigureReference>. <com:FigureReference com:idrefs="DRAWINGS">FIG. 5</com:FigureReference> is a diagram showing examples of operations of the action recognition apparatus in a case where learning is to be performed. In the following description, <com:FigureReference com:idrefs="DRAWINGS">FIGS. 1 to 4</com:FigureReference> are referenced as necessary. In the present example embodiment, an action recognition method is carried out by operating the action recognition apparatus. Therefore, the following description of operations of the action recognition apparatus substitutes for a description of the action recognition method in the present example embodiment.</com:P>
+         <com:P com:id="p-0082" com:pNumber="0081">As shown in <com:FigureReference com:idrefs="DRAWINGS">FIG. 5</com:FigureReference>, first, the generation unit <com:B>2</com:B> generates an addition image by adding a preset setting image to a target object image corresponding to the target object (step A<com:B>1</com:B>). Next, the action recognition and estimation unit <com:B>3</com:B> performs action recognition regarding the target object by using the addition image, outputs action recognition information indicating the result of action recognition, estimates the setting image, and outputs estimation information indicating the result of estimation (step A<com:B>2</com:B>). Next, the action recognition loss calculation unit <com:B>4</com:B> calculates an action recognition loss by using reference action recognition information generated in advance based on the addition image, and the action recognition information (step A<com:B>3</com:B>). Also, the estimation loss calculation unit <com:B>5</com:B> calculates an estimation loss by using reference estimation information generated in advance based on the addition image, and the estimation information (step A<com:B>4</com:B>). Learning parameters are updated using the learning parameter updating unit <com:B>6</com:B> and the action recognition loss and the estimation loss (step A<com:B>5</com:B>).</com:P>
+         <com:P com:id="p-0083" com:pNumber="0082">Next, steps A<com:B>1</com:B> to A<com:B>5</com:B> shown in <com:FigureReference com:idrefs="DRAWINGS">FIG. 5</com:FigureReference> will be described in detail.</com:P>
+         <com:P com:id="p-0084" com:pNumber="0083">First, before the action recognition apparatus <com:B>1</com:B> starts learning, initial parameters are set to the holding unit <com:B>27</com:B>. Next, in step A<com:B>1</com:B>, the generation unit <com:B>2</com:B> acquires an image or a video stored in the target object image storage unit <com:B>21</com:B> and in which only the target object is captured. Next, the generation unit <com:B>2</com:B> adds setting images to the acquired image that includes the target object image. The generation unit <com:B>2</com:B> generates the addition image <com:B>35</com:B> by adding the setting images S1_IMG, S2_IMG, and S3_IMG to the target object image T_IMG included in the image <com:B>31</com:B> shown in <com:FigureReference com:idrefs="DRAWINGS">FIG. 3</com:FigureReference>, for example. Thereafter, the generation unit <com:B>2</com:B> stores the generated addition image in the addition image storage unit <com:B>22</com:B>.</com:P>
+         <com:P com:id="p-0085" com:pNumber="0084">In step A<com:B>2</com:B>, the action recognition unit and estimation unit <com:B>3</com:B> acquires the addition image. Next, the action recognition unit and estimation unit <com:B>3</com:B> performs action recognition regarding the target object based on the learning parameters held in the holding unit <com:B>27</com:B>, by using the acquired addition image as an input. Thereafter, the action recognition unit and estimation unit <com:B>3</com:B> outputs action recognition information indicating the result of action recognition.</com:P>
+         <com:P com:id="p-0086" com:pNumber="0085">Also, while performing learning regarding action recognition, the action recognition unit and estimation unit <com:B>3</com:B> acquires the addition image. Next, the action recognition unit <com:B>26</com:B> estimates the setting images based on the learning parameters held in the holding unit <com:B>27</com:B>, by using the acquired addition image as an input. Thereafter, the estimation unit <com:B>26</com:B> outputs estimation information indicating the result of estimation.</com:P>
+         <com:P com:id="p-0087" com:pNumber="0086">Preferably, the action recognition unit and estimation unit <com:B>3</com:B> learns action recognition information and estimation information regarding the setting images by using the same addition image.</com:P>
+         <com:P com:id="p-0088" com:pNumber="0087">In step A<com:B>3</com:B>, the action recognition loss calculation unit <com:B>4</com:B> calculates an action recognition loss relative to the reference action recognition information by using the action recognition information output from the action recognition unit <com:B>25</com:B> and the reference action recognition information generated by the generation unit <com:B>2</com:B> in advance.</com:P>
+         <com:P com:id="p-0089" com:pNumber="0088">In step A<com:B>4</com:B>, the estimation loss calculation unit <com:B>5</com:B> calculates an estimation loss relative to the reference estimation information by using the estimation information output from the estimation unit <com:B>26</com:B> and the reference estimation information generated by the generation unit <com:B>2</com:B>.</com:P>
+         <com:P com:id="p-0090" com:pNumber="0089">In step A<com:B>5</com:B>, the learning parameter updating unit <com:B>7</com:B> acquires the action recognition loss output from the action recognition loss calculation unit <com:B>4</com:B> and the estimation loss output from the estimation loss calculation unit <com:B>5</com:B>, derives updating parameters using, for example, the backpropagation method used in machine learning, and updates the updating parameters in the holding unit <com:B>7</com:B>.</com:P>
+         <com:P com:id="p-0091" com:pNumber="0090">In step A<com:B>6</com:B>, the action recognition apparatus <com:B>1</com:B> determines whether or not to terminate learning. For example, when the processing indicated by steps A<com:B>1</com:B> to A<com:B>5</com:B> has been performed on all of the target object images or predetermined target object images stored in the target object image storage unit <com:B>21</com:B> (step A<com:B>6</com:B>: Yes), the action recognition apparatus <com:B>1</com:B> terminates learning. If there is a target object image stored in the target object image storage unit <com:B>21</com:B> (step A<com:B>6</com:B>: No), the action recognition apparatus <com:B>1</com:B> performs the processing in step A<com:B>1</com:B> again.</com:P>
+         <com:P com:id="p-0092" com:pNumber="0091">Note that, in step A<com:B>1</com:B>, the generation unit <com:B>2</com:B> generates an addition image while increasing the size of the portion that overlaps a target object image, of a setting image, as updating progresses. In step A<com:B>2</com:B>, the action recognition and estimation unit <com:B>3</com:B> updates the updating parameters based on the results of action recognition and setting image estimation by using these addition images.</com:P>
+         <com:P com:id="p-0093" com:pNumber="0092">Specifically, addition images are generated such that the ratio between the area where the setting image overlaps the target object image and the area of the target object image is small. Thereafter, the ratio is gradually increased while the processing in steps A<com:B>1</com:B> to A<com:B>6</com:B> is iterated. For example, in the first iteration, an addition image is generated with the ratio being set to 10%, and in the tenth iteration, the ratio is set to 20%. In the 100<com:Sup>th </com:Sup>iteration, the ratio is set to 40%.</com:P>
+         <com:P com:id="p-0094" com:pNumber="0093">In this way, in the initial stage, an additional image in which the overlap between the target object image and the setting image is minimized is used, and the area of the overlap in the additional image to be used is gradually increased. Thus, it is possible to establish an accurate learning model. When the action recognition apparatus <com:B>1</com:B> performs learning, if an addition image from which setting images cannot be easily estimated is used in the initial stage, learning accuracy regarding action recognition decreases. Therefore, it is preferable that an addition image from which setting images cannot be easily estimated is used in the initial stage.</com:P>
+         <com:P com:id="p-0095" com:pNumber="0094">If the estimation loss is large, the learning parameters are updated without using an addition image with a large estimation loss. Specifically, learning is performed again after excluding addition images with a large estimation loss. Also, in step A<com:B>4</com:B>, if the estimation loss calculation unit <com:B>5</com:B> determines that the loss is large, the estimation loss calculation unit <com:B>5</com:B> instructs the learning parameter updating unit <com:B>6</com:B> not to update the parameters in the holding unit <com:B>27</com:B>.</com:P>
+         <com:P com:id="p-0096" com:pNumber="0095">This is because, when the action recognition apparatus <com:B>1</com:B> performs learning, if an addition image from which setting images cannot be easily estimated is used, learning accuracy regarding action recognition decreases. Therefore, it is preferable that an addition image from which setting images cannot be easily estimated is used. This is particularly effective when applied to the initial stage.</com:P>
+         <com:Heading com:id="h-0011" com:headingLevelCode="H1">Effects of Embodiment</com:Heading>
+         <com:P com:id="p-0097" com:pNumber="0096">As described above, according to the present example embodiment, various target object images and setting images are prepared, a large number of addition images in different patterns are prepared, and the action recognition apparatus <com:B>1</com:B> can be trained using a large number of addition images. Therefore, it is possible to improve accuracy in action recognition performed by the action recognition apparatus <com:B>1</com:B>. That is to say, the action recognition apparatus <com:B>1</com:B> is trained using a large number of addition images generated by utilizing a computer or the like, instead of using actually captured images as in conventional art, and therefore it is possible to improve accuracy in action recognition performed by the action recognition apparatus <com:B>1</com:B>.</com:P>
+         <com:P com:id="p-0098" com:pNumber="0097">Also, in the present example embodiment, when the action recognition apparatus <com:B>1</com:B> is to be trained, the action recognition apparatus <com:B>1</com:B> is trained regarding recognition of actions of a target object by using a large number of addition images generated in advance, and is also trained regarding estimation of setting images. That is to say, when the action recognition apparatus <com:B>1</com:B> is to be trained, the action recognition apparatus <com:B>1</com:B> performs learning regarding action recognition and learning regarding estimation of setting images at the same time. Furthermore, formulization is performed so that learning can be performed with a focus on action recognition rather than estimation of setting images. As a result, it is possible to establish an action recognition apparatus <com:B>1</com:B> that can perform accurate action recognition to recognize actions of a target object, after the setting images are removed from the addition images. In other words, the action recognition apparatus <com:B>1</com:B> can perform learning so as to improve accuracy in action recognition in its entirety even though estimation of setting images is inaccurate.</com:P>
+         <com:P com:id="p-0099" com:pNumber="0098">Program</com:P>
+         <com:P com:id="p-0100" com:pNumber="0099">A program in the example embodiment of the present invention need only be a program that causes a computer to carry out the steps A<com:B>1</com:B> to A<com:B>5</com:B> shown in <com:FigureReference com:idrefs="DRAWINGS">FIG. 5</com:FigureReference>. By installing this program to a computer and executing the program, it is possible to realizes the action recognition apparatus and the action recognition method in the present example embodiment. In this case, a processor of the computer functions as the generation unit <com:B>2</com:B>, the action recognition and estimation unit <com:B>3</com:B>, the action recognition loss calculation unit <com:B>4</com:B>, the estimation loss calculation unit <com:B>5</com:B>, and the learning parameter updating unit <com:B>6</com:B>, and performs processing.</com:P>
+         <com:P com:id="p-0101" com:pNumber="0100">Also, the program in the present example embodiment may be executed by a computer system that is constituted by a plurality of computers. In this case, for example, each computer may function as any of the generation unit <com:B>2</com:B>, the action recognition and estimation unit <com:B>3</com:B>, the action recognition loss calculation unit <com:B>4</com:B>, the estimation loss calculation unit <com:B>5</com:B>, and the learning parameter updating unit <com:B>6</com:B>.</com:P>
+         <com:P com:id="p-0102" com:pNumber="0101">Physical Configuration</com:P>
+         <com:P com:id="p-0103" com:pNumber="0102">Here, a computer that realizes an action recognition apparatus by executing the program in the example embodiment will be described with reference to <com:FigureReference com:idrefs="DRAWINGS">FIG. 6</com:FigureReference>. <com:FigureReference com:idrefs="DRAWINGS">FIG. 6</com:FigureReference> is a block diagram showing an example of a computer that realizes the action recognition apparatus in the example embodiment of the present invention.</com:P>
+         <com:P com:id="p-0104" com:pNumber="0103">As shown in <com:FigureReference com:idrefs="DRAWINGS">FIG. 6</com:FigureReference>, a computer <com:B>110</com:B> includes a CPU <com:B>111</com:B>, a main memory <com:B>112</com:B>, a storage device <com:B>113</com:B>, an input interface <com:B>114</com:B>, a display controller <com:B>115</com:B>, a data reader/writer <com:B>116</com:B>, and a communication interface <com:B>117</com:B>. These units are connected so as to be able to communicate with each other via a bus <com:B>121</com:B>. Note that the computer <com:B>110</com:B> may include a GPU (Graphics Processing Unit) or an FPGA (Field-Programmable Gate Array), in addition to the CPU <com:B>111</com:B> or instead of the CPU <com:B>111</com:B>.</com:P>
+         <com:P com:id="p-0105" com:pNumber="0104">The CPU <com:B>111</com:B> performs various computational operations by loading the program (codes) in the present example embodiment that are stored in the storage device <com:B>113</com:B> to the main memory <com:B>112</com:B>, and executing these codes in predetermined order. The main memory <com:B>112</com:B> typically is a volatile storage device such as a DRAM (Dynamic Random Access Memory). The program in the present example embodiment is provided in a state of being stored in a computer-readable recording medium <com:B>120</com:B>. Note that the program in the present example embodiment may be distributed over the Internet connected via the communication interface <com:B>117</com:B>.</com:P>
+         <com:P com:id="p-0106" com:pNumber="0105">Specific examples of the storage device <com:B>113</com:B> include a semiconductor storage device such as a flash memory, in addition to a hard disk drive. The input interface <com:B>114</com:B> mediates data transmission between the CPU <com:B>111</com:B> and an input device <com:B>118</com:B> such as a keyboard or a mouse. The display controller <com:B>115</com:B> is connected to a display device <com:B>119</com:B> and controls display on the display device <com:B>119</com:B>.</com:P>
+         <com:P com:id="p-0107" com:pNumber="0106">The data reader/writer <com:B>116</com:B> mediates data transmission between the CPU <com:B>111</com:B> and the recording medium <com:B>120</com:B>, and reads out a program from the recording medium <com:B>120</com:B> and writes processing results of the computer <com:B>110</com:B> to the recording medium <com:B>120</com:B>. The communication interface <com:B>117</com:B> mediates data transmission between the CPU <com:B>111</com:B> and other computers.</com:P>
+         <com:P com:id="p-0108" com:pNumber="0107">Specific examples of the recording medium <com:B>120</com:B> include a general-purpose semiconductor storage devices such as a CF (Compact Flash (registered trademark)) card and an SD (Secure Digital) card, a magnetic recording medium such as a flexible disk, and an optical recording medium such as a CD-ROM (Compact Disk Read Only Memory).</com:P>
+         <com:P com:id="p-0109" com:pNumber="0108">Supplementary Notes</com:P>
+         <com:P com:id="p-0110" com:pNumber="0109">The following supplementary notes are further disclosed in relation to the above example embodiment. Although the example embodiment described above can be partially or wholly expressed by supplementary notes 1 to 15 described below, the present invention is not limited to the following description.</com:P>
+         <com:P com:id="p-0111" com:pNumber="0110">Supplementary Note 1</com:P>
+         <com:P com:id="p-0112" com:pNumber="0111">An action recognition apparatus including:</com:P>
+         <com:P com:id="p-0113" com:pNumber="0112">a generation unit that generates an addition image by adding a preset setting image to a target object image corresponding to a target object;</com:P>
+         <com:P com:id="p-0114" com:pNumber="0113">an action recognition and estimation unit that performs action recognition regarding the target object by using the addition image, outputs action recognition information indicating a result of action recognition, estimates the setting image by using the addition image, and outputs estimation information indicating a result of estimation;</com:P>
+         <com:P com:id="p-0115" com:pNumber="0114">an action recognition loss calculation unit that calculates an action recognition loss by using reference action recognition information generated in advance based on the addition image, and the action recognition information;</com:P>
+         <com:P com:id="p-0116" com:pNumber="0115">an estimation loss calculation unit that calculates an estimation loss by using reference estimation information generated in advance based on the addition image, and the estimation information; and</com:P>
+         <com:P com:id="p-0117" com:pNumber="0116">a learning parameter updating unit that updates learning parameters by using the action recognition loss and the estimation loss.</com:P>
+         <com:P com:id="p-0118" com:pNumber="0117">Supplementary Note 2</com:P>
+         <com:P com:id="p-0119" com:pNumber="0118">The action recognition apparatus according to Supplementary Note 1,</com:P>
+         <com:P com:id="p-0120" com:pNumber="0119">wherein the generation unit uses a human body image or an image of an imitation of a human body as the target object image or the setting image to generate the addition image.</com:P>
+         <com:P com:id="p-0121" com:pNumber="0120">Supplementary Note 3</com:P>
+         <com:P com:id="p-0122" com:pNumber="0121">The action recognition apparatus according to Supplementary Note 1 or 2,</com:P>
+         <com:P com:id="p-0123" com:pNumber="0122">wherein the generation unit uses an image formed by filling an area within a contour thereof with one or more colors as the target object image or the setting image to generate the addition image.</com:P>
+         <com:P com:id="p-0124" com:pNumber="0123">Supplementary Note 4</com:P>
+         <com:P com:id="p-0125" com:pNumber="0124">The action recognition apparatus according to any one of Supplementary Notes 1 to 3,</com:P>
+         <com:P com:id="p-0126" com:pNumber="0125">wherein the learning parameters are updated using the addition image in which the size of a portion that overlaps the target object image, of the setting image, is increased as updating progresses.</com:P>
+         <com:P com:id="p-0127" com:pNumber="0126">Supplementary Note 5</com:P>
+         <com:P com:id="p-0128" com:pNumber="0127">The action recognition apparatus according to any one of Supplementary Notes 1 to 4,</com:P>
+         <com:P com:id="p-0129" com:pNumber="0128">wherein, when the estimation loss is large, the learning parameters are updated without using the addition image with the large estimation loss.</com:P>
+         <com:P com:id="p-0130" com:pNumber="0129">Supplementary Note 6</com:P>
+         <com:P com:id="p-0131" com:pNumber="0130">An action recognition method including:</com:P>
+         <com:P com:id="p-0132" com:pNumber="0131">(A) a step of generating an addition image by adding a preset setting image to a target object image corresponding to a target object;</com:P>
+         <com:P com:id="p-0133" com:pNumber="0132">(B) a step of performing action recognition regarding the target object by using the addition image, outputting action recognition information indicating a result of action recognition, estimating the setting image by using the addition image, and outputting estimation information indicating a result of estimation;</com:P>
+         <com:P com:id="p-0134" com:pNumber="0133">(C) a step of calculating an action recognition loss by using reference action recognition information generated in advance based on the addition image, and the action recognition information;</com:P>
+         <com:P com:id="p-0135" com:pNumber="0134">(D) a step of calculating an estimation loss by using reference estimation information generated in advance based on the addition image, and the estimation information; and</com:P>
+         <com:P com:id="p-0136" com:pNumber="0135">(E) a step of updating learning parameters by using the action recognition loss and the estimation loss.</com:P>
+         <com:P com:id="p-0137" com:pNumber="0136">Supplementary Note 7</com:P>
+         <com:P com:id="p-0138" com:pNumber="0137">The action recognition method according to Supplementary Note 6,</com:P>
+         <com:P com:id="p-0139" com:pNumber="0138">wherein, in the (A) step, a human body image or an image of an imitation of a human body is used as the target object image or the setting image to generate the addition image.</com:P>
+         <com:P com:id="p-0140" com:pNumber="0139">Supplementary Note 8</com:P>
+         <com:P com:id="p-0141" com:pNumber="0140">The action recognition method according to Supplementary Note 6 or 7,</com:P>
+         <com:P com:id="p-0142" com:pNumber="0141">wherein, in the (A) step, an image formed by filling an area within a contour thereof with one or more colors is used as the target object image or the setting image to generate the addition image.</com:P>
+         <com:P com:id="p-0143" com:pNumber="0142">Supplementary Note 9</com:P>
+         <com:P com:id="p-0144" com:pNumber="0143">The action recognition method according to any one of Supplementary Notes 6 to 8,</com:P>
+         <com:P com:id="p-0145" com:pNumber="0144">wherein the learning parameters are updated using the addition image in which the size of a portion that overlaps the target object image, of the setting image, is increased as updating progresses.</com:P>
+         <com:P com:id="p-0146" com:pNumber="0145">Supplementary Note 10</com:P>
+         <com:P com:id="p-0147" com:pNumber="0146">The action recognition method according to any one of Supplementary Notes 6 to 9,</com:P>
+         <com:P com:id="p-0148" com:pNumber="0147">wherein, when the estimation loss is large, the learning parameters are updated without using the addition image with the large estimation loss.</com:P>
+         <com:P com:id="p-0149" com:pNumber="0148">Supplementary Note 11</com:P>
+         <com:P com:id="p-0150" com:pNumber="0149">A computer-readable recording medium on which an action recognition program is recorded, the action recognition program comprising instructions that cause a computer to carry out:</com:P>
+         <com:P com:id="p-0151" com:pNumber="0150">(A) a step of generating an addition image by adding a preset setting image to a target object image corresponding to a target object;</com:P>
+         <com:P com:id="p-0152" com:pNumber="0151">(B) a step of performing action recognition regarding the target object by using the addition image, outputting action recognition information indicating a result of action recognition, estimating the setting image by using the addition image, and outputting estimation information indicating a result of estimation;</com:P>
+         <com:P com:id="p-0153" com:pNumber="0152">(C) a step of calculating an action recognition loss by using reference action recognition information generated in advance based on the addition image, and the action recognition information;</com:P>
+         <com:P com:id="p-0154" com:pNumber="0153">(D) a step of calculating an estimation loss by using reference estimation information generated in advance based on the addition image, and the estimation information; and</com:P>
+         <com:P com:id="p-0155" com:pNumber="0154">(E) a step of updating learning parameters by using the action recognition loss and the estimation loss.</com:P>
+         <com:P com:id="p-0156" com:pNumber="0155">Supplementary Note 12</com:P>
+         <com:P com:id="p-0157" com:pNumber="0156">The computer-readable recording medium according to Supplementary Note 11,</com:P>
+         <com:P com:id="p-0158" com:pNumber="0157">wherein, in the (A) step, a human body image or an image of an imitation of a human body is used as the target object image or the setting image to generate the addition image.</com:P>
+         <com:P com:id="p-0159" com:pNumber="0158">Supplementary Note 13</com:P>
+         <com:P com:id="p-0160" com:pNumber="0159">The computer-readable recording medium according to Supplementary Note 11 or 12,</com:P>
+         <com:P com:id="p-0161" com:pNumber="0160">wherein, in the (A) step, an image formed by filling an area within a contour thereof with one or more colors is used as the target object image or the setting image to generate the addition image.</com:P>
+         <com:P com:id="p-0162" com:pNumber="0161">Supplementary Note 14</com:P>
+         <com:P com:id="p-0163" com:pNumber="0162">The computer-readable recording medium according to any one of Supplementary Notes 11 to 13,</com:P>
+         <com:P com:id="p-0164" com:pNumber="0163">wherein the learning parameters are updated using the addition image in which the size of a portion that overlaps the target object image, of the setting image, is increased as updating progresses.</com:P>
+         <com:P com:id="p-0165" com:pNumber="0164">Supplementary Note 15</com:P>
+         <com:P com:id="p-0166" com:pNumber="0165">The computer-readable recording medium according to any one of Supplementary Notes 11 to 14,</com:P>
+         <com:P com:id="p-0167" com:pNumber="0166">wherein, when the estimation loss is large, the learning parameters are updated without using the addition image with the large estimation loss.</com:P>
+         <com:P com:id="p-0168" com:pNumber="0167">While the present invention has been described with reference to the example embodiment, the present invention is not limited to the example embodiment described above. Various modifications that can be understood by a person skilled in the art may be applied to the configuration and the details of the present invention within the scope of the present invention.</com:P>
+         <com:Heading com:id="h-0012" com:headingLevelCode="H1">INDUSTRIAL APPLICABILITY</com:Heading>
+         <com:P com:id="p-0169" com:pNumber="0168">As described above, according to the present invention, it is possible to improve accuracy in recognition of actions of a target object. The present invention is useful in the field where it is necessary to improve accuracy in recognition of actions of a target object.</com:P>
+         <com:Heading com:id="h-0013" com:headingLevelCode="H1">LIST OF REFERENCE SIGNS</com:Heading>
+         <com:P com:id="p-0170" com:pNumber="0000">
+            <com:UL com:id="ul0002" com:ulStyle="None">
+               <com:LI com:id="ul0002-0001" com:liNumber="0000">
+                  <com:UL com:id="ul0003" com:ulStyle="None">
+                     <com:LI com:id="ul0003-0001" com:liNumber="0169">
+                        <com:B>1</com:B>: Action Recognition Apparatus</com:LI>
+                     <com:LI com:id="ul0003-0002" com:liNumber="0170">
+                        <com:B>2</com:B>: Generation Unit</com:LI>
+                     <com:LI com:id="ul0003-0003" com:liNumber="0171">
+                        <com:B>3</com:B>: Action Recognition and Estimation Unit</com:LI>
+                     <com:LI com:id="ul0003-0004" com:liNumber="0172">
+                        <com:B>4</com:B>: Action Recognition Loss Calculation Unit</com:LI>
+                     <com:LI com:id="ul0003-0005" com:liNumber="0173">
+                        <com:B>5</com:B>: Estimation Loss Calculation Unit</com:LI>
+                     <com:LI com:id="ul0003-0006" com:liNumber="0174">
+                        <com:B>6</com:B>: Learning Parameter Updating Unit</com:LI>
+                     <com:LI com:id="ul0003-0007" com:liNumber="0175">
+                        <com:B>21</com:B>: Target Object Image Storage Unit</com:LI>
+                     <com:LI com:id="ul0003-0008" com:liNumber="0176">
+                        <com:B>22</com:B>: Addition Image Storage Unit</com:LI>
+                     <com:LI com:id="ul0003-0009" com:liNumber="0177">
+                        <com:B>23</com:B>: Action Feature Extraction Unit</com:LI>
+                     <com:LI com:id="ul0003-0010" com:liNumber="0178">
+                        <com:B>24</com:B>: Feature Extraction Unit</com:LI>
+                     <com:LI com:id="ul0003-0011" com:liNumber="0179">
+                        <com:B>25</com:B>: Action Recognition Unit</com:LI>
+                     <com:LI com:id="ul0003-0012" com:liNumber="0180">
+                        <com:B>26</com:B>: Estimation Unit</com:LI>
+                     <com:LI com:id="ul0003-0013" com:liNumber="0181">
+                        <com:B>27</com:B>: Holding Unit</com:LI>
+                     <com:LI com:id="ul0003-0014" com:liNumber="0182">
+                        <com:B>110</com:B>: Computer</com:LI>
+                     <com:LI com:id="ul0003-0015" com:liNumber="0183">
+                        <com:B>111</com:B>: CPU</com:LI>
+                     <com:LI com:id="ul0003-0016" com:liNumber="0184">
+                        <com:B>112</com:B>: Main Memory</com:LI>
+                     <com:LI com:id="ul0003-0017" com:liNumber="0185">
+                        <com:B>113</com:B>: Storage Device</com:LI>
+                     <com:LI com:id="ul0003-0018" com:liNumber="0186">
+                        <com:B>114</com:B>: Input Interface</com:LI>
+                     <com:LI com:id="ul0003-0019" com:liNumber="0187">
+                        <com:B>115</com:B>: Display Controller</com:LI>
+                     <com:LI com:id="ul0003-0020" com:liNumber="0188">
+                        <com:B>116</com:B>: Data Reader/Writer</com:LI>
+                     <com:LI com:id="ul0003-0021" com:liNumber="0189">
+                        <com:B>117</com:B>: Communication Interface</com:LI>
+                     <com:LI com:id="ul0003-0022" com:liNumber="0190">
+                        <com:B>118</com:B>: Input Device</com:LI>
+                     <com:LI com:id="ul0003-0023" com:liNumber="0191">
+                        <com:B>119</com:B>: Display Device</com:LI>
+                     <com:LI com:id="ul0003-0024" com:liNumber="0192">
+                        <com:B>120</com:B>: Recording Medium</com:LI>
+                     <com:LI com:id="ul0003-0025" com:liNumber="0193">
+                        <com:B>121</com:B>: Bus</com:LI>
+                  </com:UL>
+               </com:LI>
+            </com:UL>
+         </com:P>
+      </pat:EmbodimentDescription>
+   </pat:Description>
+   <pat:Claims com:id="claims">
+      <pat:Claim com:id="CLM-00001">
+         <pat:ClaimNumber>00001</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>1</com:B>. An action recognition apparatus comprising:
+<pat:ClaimText>a generation unit that generates an addition image by adding a preset setting image to a target object image corresponding to a target object;</pat:ClaimText>
+            <pat:ClaimText>an action recognition and estimation unit that performs action recognition regarding the target object by using the addition image, outputs action recognition information indicating a result of action recognition, estimates the setting image by using the addition image, and outputs estimation information indicating a result of estimation;</pat:ClaimText>
+            <pat:ClaimText>an action recognition loss calculation unit that calculates an action recognition loss by using reference action recognition information generated in advance based on the addition image, and the action recognition information;</pat:ClaimText>
+            <pat:ClaimText>an estimation loss calculation unit that calculates an estimation loss by using reference estimation information generated in advance based on the addition image, and the estimation information; and</pat:ClaimText>
+            <pat:ClaimText>a learning parameter updating unit that updates learning parameters by using the action recognition loss and the estimation loss.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00002">
+         <pat:ClaimNumber>00002</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>2</com:B>. The action recognition apparatus according to <pat:ClaimReference com:idrefs="CLM-00001">claim 1</pat:ClaimReference>,
+<pat:ClaimText>wherein the generation unit uses a human body image or an image of an imitation of a human body as the target object image or the setting image to generate the addition image.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00003">
+         <pat:ClaimNumber>00003</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>3</com:B>. The action recognition apparatus according to <pat:ClaimReference com:idrefs="CLM-00001">claim 1</pat:ClaimReference>,
+<pat:ClaimText>wherein the generation unit uses an image formed by filling an area within a contour thereof with one or more colors as the target object image or the setting image to generate the addition image.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00004">
+         <pat:ClaimNumber>00004</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>4</com:B>. The action recognition apparatus according to <pat:ClaimReference com:idrefs="CLM-00001">claim 1</pat:ClaimReference>,
+<pat:ClaimText>wherein the learning parameters are updated using the addition image in which the size of a portion that overlaps the target object image, of the setting image is increased as updating progresses.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00005">
+         <pat:ClaimNumber>00005</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>5</com:B>. The action recognition apparatus according to <pat:ClaimReference com:idrefs="CLM-00001">claim 1</pat:ClaimReference>,
+<pat:ClaimText>wherein, when the estimation loss is large, the learning parameters are updated without using the addition image with the large estimation loss.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00006">
+         <pat:ClaimNumber>00006</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>6</com:B>. An action recognition method comprising:
+<pat:ClaimText>generating an addition image by adding a preset setting image to a target object image corresponding to a target object;</pat:ClaimText>
+            <pat:ClaimText>performing action recognition regarding the target object by using the addition image, outputting action recognition information indicating a result of action recognition, estimating the setting image by using the addition image, and outputting estimation information indicating a result of estimation;</pat:ClaimText>
+            <pat:ClaimText>calculating an action recognition loss by using reference action recognition information generated in advance based on the addition image, and the action recognition information;</pat:ClaimText>
+            <pat:ClaimText>calculating an estimation loss by using reference estimation information generated in advance based on the addition image, and the estimation information; and</pat:ClaimText>
+            <pat:ClaimText>updating learning parameters by using the action recognition loss and the estimation loss.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00007">
+         <pat:ClaimNumber>00007</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>7</com:B>. The action recognition method according to <pat:ClaimReference com:idrefs="CLM-00006">claim 6</pat:ClaimReference>,
+<pat:ClaimText>wherein a human body image or an image of an imitation of a human body is used as the target object image or the setting image to generate the addition image.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00008">
+         <pat:ClaimNumber>00008</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>8</com:B>. The action recognition method according to <pat:ClaimReference com:idrefs="CLM-00006">claim 6</pat:ClaimReference>,
+<pat:ClaimText>wherein an image formed by filling an area within a contour thereof with one or more colors is used as the target object image or the setting image to generate the addition image.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00009">
+         <pat:ClaimNumber>00009</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>9</com:B>. The action recognition method according to <pat:ClaimReference com:idrefs="CLM-00006">claim 6</pat:ClaimReference>,
+<pat:ClaimText>wherein the learning parameters are updated using the addition image in which the size of a portion that overlaps the target object image, of the setting image, is increased as updating progresses.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00010">
+         <pat:ClaimNumber>00010</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>10</com:B>. The action recognition method according to <pat:ClaimReference com:idrefs="CLM-00006">claim 6</pat:ClaimReference>,
+<pat:ClaimText>wherein, when the estimation loss is large, the learning parameters are updated without using the addition image with the large estimation loss.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00011">
+         <pat:ClaimNumber>00011</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>11</com:B>. A non-transitory computer-readable recording medium on which an action recognition program is recorded, the action recognition program comprising instructions that cause a computer to carry out:
+<pat:ClaimText>generating an addition image by adding a preset setting image to a target object image corresponding to a target object;</pat:ClaimText>
+            <pat:ClaimText>performing action recognition regarding the target object by using the addition image, outputting action recognition information indicating a result of action recognition, estimating the setting image by using the addition image, and outputting estimation information indicating a result of estimation;</pat:ClaimText>
+            <pat:ClaimText>calculating an action recognition loss by using reference action recognition information generated in advance based on the addition image, and the action recognition information;</pat:ClaimText>
+            <pat:ClaimText>calculating an estimation loss by using reference estimation information generated in advance based on the addition image, and the estimation information; and</pat:ClaimText>
+            <pat:ClaimText>updating learning parameters by using the action recognition loss and the estimation loss.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00012">
+         <pat:ClaimNumber>00012</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>12</com:B>. The non-transitory computer-readable recording medium according to <pat:ClaimReference com:idrefs="CLM-00011">claim 11</pat:ClaimReference>,
+<pat:ClaimText>wherein a human body image or an image of an imitation of a human body is used as the target object image or the setting image to generate the addition image.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00013">
+         <pat:ClaimNumber>00013</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>13</com:B>. The non-transitory computer-readable recording medium according to <pat:ClaimReference com:idrefs="CLM-00011">claim 11</pat:ClaimReference>,
+<pat:ClaimText>wherein an image formed by filling an area within a contour thereof with one or more colors is used as the target object image or the setting image to generate the addition image.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00014">
+         <pat:ClaimNumber>00014</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>14</com:B>. The non-transitory computer-readable recording medium according to <pat:ClaimReference com:idrefs="CLM-00011">claim 11</pat:ClaimReference>,
+<pat:ClaimText>wherein the learning parameters are updated using the addition image in which the size of a portion that overlaps the target object image, of the setting image, is increased as updating progresses.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+      <pat:Claim com:id="CLM-00015">
+         <pat:ClaimNumber>00015</pat:ClaimNumber>
+         <pat:ClaimText>
+            <com:B>15</com:B>. The non-transitory computer-readable recording medium according to <pat:ClaimReference com:idrefs="CLM-00011">claim 11</pat:ClaimReference>,
+<pat:ClaimText>wherein, when the estimation loss is large, the learning parameters are updated without using the addition image with the large estimation loss.</pat:ClaimText>
+         </pat:ClaimText>
+      </pat:Claim>
+   </pat:Claims>
+   <pat:Abstract com:id="abstract">
+      <com:P com:id="p-0001" com:pNumber="0000">An action recognition apparatus <com:B>1</com:B> including: a generation unit <com:B>2</com:B> that generates an addition image by adding a setting image to a target object image; an action recognition and estimation unit <com:B>3</com:B> that performs action recognition regarding the target object, outputs action recognition information indicating the result of action recognition, estimates the setting image, and outputs estimation information indicating the result of estimation; an action recognition loss calculation unit <com:B>4</com:B> that calculates an action recognition loss by using reference action recognition information generated in advance, and the action recognition information; an estimation loss calculation unit <com:B>5</com:B> that calculates an estimation loss by using reference estimation information generated in advance, and the estimation information; and a learning parameter updating unit <com:B>6</com:B> that updates learning parameters by using the action recognition loss and the estimation loss.</com:P>
+   </pat:Abstract>
+   <pat:Drawings com:id="DRAWINGS">
+      <pat:Figure com:id="Fig-EMI-D00000">
+         <pat:FigureNumber>00000</pat:FigureNumber>
+         <com:Image com:id="EMI-D00000" com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>US20210049351A1-20210218-D00000.TIF</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Px">166.37</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Px">140.29</com:WidthMeasure>
+            <com:Alt>embedded image</com:Alt>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure com:id="Fig-EMI-D00001">
+         <pat:FigureNumber>00001</pat:FigureNumber>
+         <com:Image com:id="EMI-D00001" com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>US20210049351A1-20210218-D00001.TIF</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Px">162.64</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Px">148.25</com:WidthMeasure>
+            <com:Alt>embedded image</com:Alt>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure com:id="Fig-EMI-D00002">
+         <pat:FigureNumber>00002</pat:FigureNumber>
+         <com:Image com:id="EMI-D00002"
+                     com:imageContentCategory="Drawing"
+                     com:orientationCategory="Landscape">
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>US20210049351A1-20210218-D00002.TIF</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Px">214.12</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Px">155.28</com:WidthMeasure>
+            <com:Alt>embedded image</com:Alt>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure com:id="Fig-EMI-D00003">
+         <pat:FigureNumber>00003</pat:FigureNumber>
+         <com:Image com:id="EMI-D00003" com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>US20210049351A1-20210218-D00003.TIF</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Px">233.09</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Px">164.17</com:WidthMeasure>
+            <com:Alt>embedded image</com:Alt>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure com:id="Fig-EMI-D00004">
+         <pat:FigureNumber>00004</pat:FigureNumber>
+         <com:Image com:id="EMI-D00004" com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>US20210049351A1-20210218-D00004.TIF</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Px">152.23</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Px">153.5</com:WidthMeasure>
+            <com:Alt>embedded image</com:Alt>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure com:id="Fig-EMI-D00005">
+         <pat:FigureNumber>00005</pat:FigureNumber>
+         <com:Image com:id="EMI-D00005" com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>US20210049351A1-20210218-D00005.TIF</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Px">185</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Px">150.79</com:WidthMeasure>
+            <com:Alt>embedded image</com:Alt>
+         </com:Image>
+      </pat:Figure>
+      <pat:Figure com:id="Fig-EMI-D00006">
+         <pat:FigureNumber>00006</pat:FigureNumber>
+         <com:Image com:id="EMI-D00006" com:imageContentCategory="Drawing">
+            <com:ImageFormatCategory>TIFF</com:ImageFormatCategory>
+            <com:FileName>US20210049351A1-20210218-D00006.TIF</com:FileName>
+            <com:HeightMeasure com:measureUnitCode="Px">153.5</com:HeightMeasure>
+            <com:WidthMeasure com:measureUnitCode="Px">154.01</com:WidthMeasure>
+            <com:Alt>embedded image</com:Alt>
+         </com:Image>
+      </pat:Figure>
+   </pat:Drawings>
+</pat:PatentPublication>
+
