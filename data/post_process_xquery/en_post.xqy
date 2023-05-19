@@ -1,3 +1,7 @@
+(:declare xquery 3.1 version:)
+xquery version "3.1";
+(:declare namespace:)
+
 declare namespace com = "http://www.wipo.int/standards/XMLSchema/ST96/Common";
 declare namespace pat = "http://www.wipo.int/standards/XMLSchema/ST96/Patent";
 
@@ -80,25 +84,83 @@ declare namespace pat = "http://www.wipo.int/standards/XMLSchema/ST96/Patent";
 (:		<xsd:attribute ref="com:id"/>:)
 (:	</xsd:complexType>:)
 
-let $title := {"field", "background","summar","solution","problem","industr","effect","advantage","non-patent","bibliography","paper","patent literature","patent document","patent ref","example","detail","embodiment","symbol","sign","sequence list"};
-let $doc := doc("data/examples_xslt_result/us_example1.xml);
-let $title_tag_map = map{"field":  “pat:TechnicalField", "effect":"pat:AdvantageousEffects",    "advantage":"pat:AdvantageousEffects", "non-patent":"pat:NonPatentReferences", "bibliography":"pat:NonPatentReferences", "paper":"pat:NonPatentReferences", "patent literature":"pat:PatentReferences", "patent document":"pat:PatentReferences", "patent ref":"pat:PatentReferences", "example":"pat:EmbodimentDescription", "detail":"pat:EmbodimentDescription", "embodiment":"pat:EmbodimentDescription", "symbol":"pat:Symbols", "sign":"pat:Symbols", "sequence list":"pat:SequenceListText"};
+(:<xsd:complexType name="CitationBagType">:)
+(:		<xsd:choice maxOccurs="unbounded">:)
+(:<xsd:element ref="com:Heading"/>:)
+(:<xsd:element ref="com:P"/>:)
+(:<xsd:element ref="com:PatentCitationBag"/>:)
+(:<xsd:element ref="com:NPLCitationBag"/>:)
+(:		</xsd:choice>:)
+(:		<xsd:attribute ref="com:id"/>:)
+(:	</xsd:complexType>:)
+(:	:)
 
 
-let $description := $doc//pat:Description[1];
+
+
+declare variable $doc := doc("../../data/examples_xslt_result/us_example1.xml") ;
+
+declare variable  $title_tag_map := map {"field":"pat:TechnicalField",
+                                        "effect":"pat:AdvantageousEffects",
+                                        "advantage":"pat:AdvantageousEffects",
+                                        "background":"pat:BackgroundArt",
+                                        "summar":"pat:InventionSummary",
+                                        "disclosure":"pat:InventionSummary",
+                                        "solution":"pat:TechnicalSolution",
+                                        "problem":"pat:TechnicalProblem",
+                                        "industr":"pat:IndustrialApplicability",
+                                        "non-patent":"com:NPLCitationBag",
+                                        "bibliography":"com:NPLCitationBag",
+                                        "paper":"com:NPLCitationBag",
+                                        "patent literature":"com:PatentCitationBag",
+                                        "patent document":"com:PatentCitationBag",
+                                        "patent ref":"com:PatentCitationBag",
+                                        "example":"pat:EmbodimentDescription",
+                                        "detail":"pat:EmbodimentDescription",
+                                        "embodiment":"pat:EmbodimentDescription",
+                                        "best mode":"pat:EmbodimentDescription",
+                                        "invention mode":"pat:EmbodimentDescription",
+                                        "symbol":"pat:ReferenceSignBag",
+                                        "sign":"pat:ReferenceSignBag",
+                                        "cross-reference":"com:NPLCitationBag",
+                                        "cross reference":"com:NPLCitationBag",
+                                        "drawing":"pat:DrawingDescription",
+                                        "sequence list":"pat:SequenceListText"};
+
+
+(:提取$title_tag_map的keys为title:)
+declare variable $title := map:keys($title_tag_map);
+(:citation tags include com:PatentCitationBag and com:NPLCitationBag:)
+declare variable $citation_tags := ("com:PatentCitationBag","com:NPLCitationBag");
+(:summary tags include pat:TechnicalSolution, pat:TechnicalProblem, pat:AdvantageousEffects:)
+declare variable $summary_tags := ("pat:TechnicalSolution", "pat:TechnicalProblem", "pat:AdvantageousEffects");
+
+
+declare variable $description := $doc//pat:Description[1];
 (: 找到pat:Description节点
    用一个窗口划过所有的.//com:Heading|.//com:P节点
-   如果是com:Heading节点 如果它的文本符合包含某些文本比如 包含background 则这个窗口的节点元素用pat:BackgroundArt包裹直到下一个com:Heading 满足另一个条件的时候再用对于的父元素包裹 :)
+   如果是com:Heading节点 如果它的文本符合包含某些文本比如 包含background 则这个窗口的节点元素用pat:BackgroundArt包裹直到下一个com:Heading 满足另一个条件的时候再用对于的父元素包裹 :
+   最后的结果整合为一个新的pat:Description节点 :)
 
-:)
-let $p_or_heading:= $description/(.//com:Heading|.//com:P)
-for tumbling window $w in $p_or_heading
-start $s when $s instance of com:Heading and some $t in $title satisfies contains(lower-case($s/text()), $t)
-let lowcase := lower-case($s/text())
-let
+declare function local:modify_description($p_or_heading as element()*) as element() {
 
-for $e in $elements
-let $text := lower-case($e/text())
-where some $key in map:keys($title_tag_map) satisfies contains($text, $key)
-let $tag_name := map:get($title_tag_map, (for $key in map:keys($title_tag_map) where contains($text, $key) return $key)[1])
-return element { QName(resolve-uri(substring-after($tag_name, ":"), namespace-uri-for-prefix(substring-before($tag_name, ":"), $e)), substring-after($tag_name, ":")) } { $e }
+
+     <pat:Description>
+     {
+    for tumbling window $w in $p_or_heading
+    start   $s when $s instance of com:Heading and (some $t in $title satisfies contains(lower-case($s/text()), $t))
+        let $tag := map:get($title_tag_map, $t)
+        (: if tag in citation_tags return <com:CitationBag> element $tag{$w} </com:CitationBag>
+           else if tag in summary_tags return <pat:InventionSummary> element $tag{$w}   </pat:InventionSummary>
+           else return element $tag{$w} :)
+        return
+        if  ($tag = $citation_tags) then
+            <com:CitationBag> element {$tag}{$w} </com:CitationBag>
+        else if ($tag = $summary_tags) then
+            <pat:InventionSummary> element {$tag} {$w}   </pat:InventionSummary>
+        else
+            element {$tag}{$w}
+        }
+        </pat:Description>
+}
+

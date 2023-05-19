@@ -9078,4506 +9078,4494 @@
 					</xsl:for-each>
 				</pat:DocumentURI>
 			</xsl:for-each>
-			<xsl:for-each select="//description">
-				<xsl:variable name="var364_doc_page" as="node()*" select="doc-page"/>
-				<pat:Description>
-					<xsl:for-each select="@id">
-						<xsl:attribute name="com:id" select="fn:string(.)"/>
-					</xsl:for-each>
-					<xsl:for-each select="@lang">
-						<xsl:attribute name="com:languageCode" select="fn:string(.)"/>
-					</xsl:for-each>
-					<xsl:for-each select="($var364_doc_page)[fn:not(fn:exists(@ocr))]">
-						<pat:PageImage>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="@ppf">
-								<xsl:attribute name="pat:firstPageNumber" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="@ppl">
-								<xsl:attribute name="pat:lastPageNumber" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:attribute name="com:fileLocationURI" select="xs:string(xs:anyURI(fn:string(@file)))"/>
-							<xsl:for-each select="@orientation">
-								<xsl:variable name="var4_resultof_vmf__inputtoresult" as="xs:string?">
-									<xsl:call-template name="vmf:vmf_application_body1_inputtoresult">
-										<xsl:with-param name="input" select="fn:string(.)" as="xs:string"/>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var4_resultof_vmf__inputtoresult">
-									<xsl:attribute name="com:orientationCategory" select="."/>
-								</xsl:for-each>
-							</xsl:for-each>
-							<xsl:variable name="var5_resultof_vmf__inputtoresult" as="xs:string?">
-								<xsl:call-template name="vmf:vmf_application_body2_inputtoresult">
-									<xsl:with-param name="input" select="fn:string(@type)" as="xs:string"/>
-								</xsl:call-template>
-							</xsl:variable>
-							<xsl:for-each select="$var5_resultof_vmf__inputtoresult">
-								<com:ImageFormatCategory>
-									<xsl:sequence select="."/>
-								</com:ImageFormatCategory>
-							</xsl:for-each>
-							<com:HeightMeasure>
-								<xsl:sequence select="xs:string(xs:decimal(fn:string(@he)))"/>
-							</com:HeightMeasure>
-							<com:WidthMeasure>
-								<xsl:sequence select="xs:string(xs:decimal(fn:string(@wi)))"/>
-							</com:WidthMeasure>
-							<xsl:for-each select="@alt">
-								<com:Alt>
-									<xsl:sequence select="fn:string(.)"/>
-								</com:Alt>
-							</xsl:for-each>
-							<xsl:for-each select="@color">
-								<xsl:variable name="var6_resultof_vmf__inputtoresult" as="xs:string?">
-									<xsl:call-template name="vmf:vmf_application_body3_inputtoresult">
-										<xsl:with-param name="input" select="fn:string(.)" as="xs:string"/>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var6_resultof_vmf__inputtoresult">
-									<com:ColourModeCategory>
-										<xsl:sequence select="."/>
-									</com:ColourModeCategory>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:PageImage>
-					</xsl:for-each>
-					<xsl:for-each select="($var364_doc_page)[fn:exists(@ocr)]">
-						<pat:DocumentURI>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:attribute name="com:documentFileName" select="fn:string(@file)"/>
-							<xsl:for-each select="@ppf">
-								<xsl:attribute name="pat:firstPageNumber" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="@ppl">
-								<xsl:attribute name="pat:lastPageNumber" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:attribute name="pat:pageDocumentFormatCategory" select="fn:string(@type)"/>
-							<xsl:for-each select="@ocr">
-								<xsl:attribute name="pat:ocrIndicator" select="xs:string(xs:boolean(fn:string(.)))"/>
-							</xsl:for-each>
-						</pat:DocumentURI>
-					</xsl:for-each>
-					<xsl:for-each select="invention-title">
-						<pat:InventionTitle>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="@lang">
-								<xsl:attribute name="com:languageCode" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="node()">
-								<xsl:if test="fn:boolean(self::text())">
-									<xsl:sequence select="fn:string(.)"/>
-								</xsl:if>
-								<xsl:variable name="var7_test_resultof_node_name_equal_qname" as="node()?">
-									<xsl:if test="fn:boolean(self::b)">
-										<xsl:sequence select="."/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:for-each select="$var7_test_resultof_node_name_equal_qname">
-									<xsl:variable name="var8_resultof_ST__bToST__B" as="node()*">
-										<xsl:call-template name="WIPO:ST36bToST96B">
-											<xsl:with-param name="b" as="node()?">
-												<b>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</b>
-											</xsl:with-param>
-										</xsl:call-template>
-									</xsl:variable>
-									<xsl:for-each select="$var8_resultof_ST__bToST__B">
-										<com:B>
-											<xsl:sequence select="(./@node(), ./node())"/>
-										</com:B>
-									</xsl:for-each>
-								</xsl:for-each>
-								<xsl:variable name="var9_test_resultof_node_name_equal_qname" as="node()?">
-									<xsl:if test="fn:boolean(self::i)">
-										<xsl:sequence select="."/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:for-each select="$var9_test_resultof_node_name_equal_qname">
-									<xsl:variable name="var10_resultof_ST__iToST__I" as="node()?">
-										<xsl:call-template name="WIPO:ST36iToST96I">
-											<xsl:with-param name="i" as="node()?">
-												<i>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</i>
-											</xsl:with-param>
-										</xsl:call-template>
-									</xsl:variable>
-									<xsl:for-each select="$var10_resultof_ST__iToST__I">
-										<com:I>
-											<xsl:sequence select="(./@node(), ./node())"/>
-										</com:I>
-									</xsl:for-each>
-								</xsl:for-each>
-								<xsl:variable name="var11_test_resultof_node_name_equal_qname" as="node()?">
-									<xsl:if test="fn:boolean(self::o)">
-										<xsl:sequence select="."/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:for-each select="$var11_test_resultof_node_name_equal_qname">
-									<xsl:variable name="var12_resultof_ST__oToST__O" as="node()?">
-										<xsl:call-template name="WIPO:ST36oToST96O">
-											<xsl:with-param name="o" as="node()?">
-												<o>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</o>
-											</xsl:with-param>
-										</xsl:call-template>
-									</xsl:variable>
-									<xsl:for-each select="$var12_resultof_ST__oToST__O">
-										<com:O>
-											<xsl:sequence select="(./@node(), ./node())"/>
-										</com:O>
-									</xsl:for-each>
-								</xsl:for-each>
-								<xsl:variable name="var13_test_resultof_node_name_equal_qname" as="node()?">
-									<xsl:if test="fn:boolean(self::u)">
-										<xsl:sequence select="."/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:for-each select="$var13_test_resultof_node_name_equal_qname">
-									<xsl:variable name="var14_resultof_ST__uToST__U" as="node()?">
-										<xsl:call-template name="WIPO:ST36uToST96U">
-											<xsl:with-param name="u" as="node()?">
-												<u>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</u>
-											</xsl:with-param>
-										</xsl:call-template>
-									</xsl:variable>
-									<xsl:for-each select="$var14_resultof_ST__uToST__U">
-										<com:U>
-											<xsl:sequence select="(./@node(), ./node())"/>
-										</com:U>
-									</xsl:for-each>
-								</xsl:for-each>
-								<xsl:variable name="var15_test_resultof_node_name_equal_qname" as="node()?">
-									<xsl:if test="fn:boolean(self::sub)">
-										<xsl:sequence select="."/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:for-each select="$var15_test_resultof_node_name_equal_qname">
-									<xsl:variable name="var16_resultof_ST__subToST__Sub" as="node()?">
-										<xsl:call-template name="WIPO:ST36subToST96Sub">
-											<xsl:with-param name="sub" as="node()?">
-												<sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</sub>
-											</xsl:with-param>
-										</xsl:call-template>
-									</xsl:variable>
-									<xsl:for-each select="$var16_resultof_ST__subToST__Sub">
-										<com:Sub>
-											<xsl:sequence select="(./@node(), ./node())"/>
-										</com:Sub>
-									</xsl:for-each>
-								</xsl:for-each>
-								<xsl:variable name="var17_test_resultof_node_name_equal_qname" as="node()?">
-									<xsl:if test="fn:boolean(self::sup)">
-										<xsl:sequence select="."/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:for-each select="$var17_test_resultof_node_name_equal_qname">
-									<xsl:variable name="var18_resultof_ST__supToST__Sup" as="node()?">
-										<xsl:call-template name="WIPO:ST36supToST96Sup">
-											<xsl:with-param name="sup" as="node()?">
-												<sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</sup>
-											</xsl:with-param>
-										</xsl:call-template>
-									</xsl:variable>
-									<xsl:for-each select="$var18_resultof_ST__supToST__Sup">
-										<com:Sup>
-											<xsl:sequence select="(./@node(), ./node())"/>
-										</com:Sup>
-									</xsl:for-each>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:InventionTitle>
-					</xsl:for-each>
-					<xsl:for-each select="technical-field">
-						<pat:TechnicalField>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="heading">
-								<com:Heading>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@level">
-										<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-									</xsl:for-each>
-									<xsl:for-each select="node()">
-										<xsl:if test="fn:boolean(self::text())">
-											<xsl:sequence select="fn:string(.)"/>
-										</xsl:if>
-										<xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::b)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
-												<xsl:call-template name="WIPO:ST36bToST96B">
-													<xsl:with-param name="b" as="node()?">
-														<b>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</b>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var20_resultof_ST__bToST__B">
-												<com:B>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:B>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::i)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
-												<xsl:call-template name="WIPO:ST36iToST96I">
-													<xsl:with-param name="i" as="node()?">
-														<i>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</i>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var22_resultof_ST__iToST__I">
-												<com:I>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:I>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::o)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
-												<xsl:call-template name="WIPO:ST36oToST96O">
-													<xsl:with-param name="o" as="node()?">
-														<o>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</o>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var24_resultof_ST__oToST__O">
-												<com:O>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:O>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::u)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
-												<xsl:call-template name="WIPO:ST36uToST96U">
-													<xsl:with-param name="u" as="node()?">
-														<u>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</u>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var26_resultof_ST__uToST__U">
-												<com:U>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:U>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sub)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
-												<xsl:call-template name="WIPO:ST36subToST96Sub">
-													<xsl:with-param name="sub" as="node()?">
-														<sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sub>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var28_resultof_ST__subToST__Sub">
-												<com:Sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sub>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sup)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
-												<xsl:call-template name="WIPO:ST36supToST96Sup">
-													<xsl:with-param name="sup" as="node()?">
-														<sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sup>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var30_resultof_ST__supToST__Sup">
-												<com:Sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sup>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::smallcaps)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-												<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-													<xsl:with-param name="smallcaps" as="node()?">
-														<smallcaps>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</smallcaps>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
-												<com:SmallCapital>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:SmallCapital>
-											</xsl:for-each>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:Heading>
-							</xsl:for-each>
-							<xsl:for-each select="p">
-								<xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
-									<xsl:call-template name="WIPO:ST36pToSt96P">
-										<xsl:with-param name="p" as="node()?">
-											<p>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</p>
-										</xsl:with-param>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var33_resultof_ST__pToSt__P">
-									<com:P>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</com:P>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:TechnicalField>
-					</xsl:for-each>
-					<xsl:for-each select="background-art">
-						<pat:BackgroundArt>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="heading">
-								<com:Heading>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@level">
-										<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-									</xsl:for-each>
-									<xsl:for-each select="node()">
-										<xsl:if test="fn:boolean(self::text())">
-											<xsl:sequence select="fn:string(.)"/>
-										</xsl:if>
-										<xsl:variable name="var34_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::b)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var34_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var35_resultof_ST__bToST__B" as="node()*">
-												<xsl:call-template name="WIPO:ST36bToST96B">
-													<xsl:with-param name="b" as="node()?">
-														<b>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</b>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var35_resultof_ST__bToST__B">
-												<com:B>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:B>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var36_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::i)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var36_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var37_resultof_ST__iToST__I" as="node()?">
-												<xsl:call-template name="WIPO:ST36iToST96I">
-													<xsl:with-param name="i" as="node()?">
-														<i>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</i>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var37_resultof_ST__iToST__I">
-												<com:I>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:I>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var38_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::o)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var38_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var39_resultof_ST__oToST__O" as="node()?">
-												<xsl:call-template name="WIPO:ST36oToST96O">
-													<xsl:with-param name="o" as="node()?">
-														<o>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</o>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var39_resultof_ST__oToST__O">
-												<com:O>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:O>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var40_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::u)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var40_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var41_resultof_ST__uToST__U" as="node()?">
-												<xsl:call-template name="WIPO:ST36uToST96U">
-													<xsl:with-param name="u" as="node()?">
-														<u>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</u>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var41_resultof_ST__uToST__U">
-												<com:U>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:U>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var42_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sub)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var42_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var43_resultof_ST__subToST__Sub" as="node()?">
-												<xsl:call-template name="WIPO:ST36subToST96Sub">
-													<xsl:with-param name="sub" as="node()?">
-														<sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sub>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var43_resultof_ST__subToST__Sub">
-												<com:Sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sub>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var44_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sup)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var44_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var45_resultof_ST__supToST__Sup" as="node()?">
-												<xsl:call-template name="WIPO:ST36supToST96Sup">
-													<xsl:with-param name="sup" as="node()?">
-														<sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sup>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var45_resultof_ST__supToST__Sup">
-												<com:Sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sup>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var46_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::smallcaps)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var46_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var47_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-												<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-													<xsl:with-param name="smallcaps" as="node()?">
-														<smallcaps>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</smallcaps>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var47_resultof_ST__smallcapsToST__SmallCapitals">
-												<com:SmallCapital>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:SmallCapital>
-											</xsl:for-each>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:Heading>
-							</xsl:for-each>
-							<xsl:for-each select="p">
-								<xsl:variable name="var48_resultof_ST__pToSt__P" as="node()?">
-									<xsl:call-template name="WIPO:ST36pToSt96P">
-										<xsl:with-param name="p" as="node()?">
-											<p>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</p>
-										</xsl:with-param>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var48_resultof_ST__pToSt__P">
-									<com:P>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</com:P>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:BackgroundArt>
-					</xsl:for-each>
-					<xsl:for-each select="disclosure">
-						<pat:Disclosure>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="tech-problem">
-								<pat:TechnicalProblem>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="heading">
-										<com:Heading>
-											<xsl:for-each select="@id">
-												<xsl:attribute name="com:id" select="fn:string(.)"/>
-											</xsl:for-each>
-											<xsl:for-each select="@level">
-												<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-											</xsl:for-each>
-											<xsl:for-each select="node()">
-												<xsl:if test="fn:boolean(self::text())">
-													<xsl:sequence select="fn:string(.)"/>
-												</xsl:if>
-												<xsl:variable name="var49_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::b)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var49_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var50_resultof_ST__bToST__B" as="node()*">
-														<xsl:call-template name="WIPO:ST36bToST96B">
-															<xsl:with-param name="b" as="node()?">
-																<b>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</b>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var50_resultof_ST__bToST__B">
-														<com:B>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:B>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var51_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::i)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var51_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var52_resultof_ST__iToST__I" as="node()?">
-														<xsl:call-template name="WIPO:ST36iToST96I">
-															<xsl:with-param name="i" as="node()?">
-																<i>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</i>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var52_resultof_ST__iToST__I">
-														<com:I>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:I>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var53_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::o)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var53_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var54_resultof_ST__oToST__O" as="node()?">
-														<xsl:call-template name="WIPO:ST36oToST96O">
-															<xsl:with-param name="o" as="node()?">
-																<o>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</o>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var54_resultof_ST__oToST__O">
-														<com:O>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:O>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var55_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::u)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var55_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var56_resultof_ST__uToST__U" as="node()?">
-														<xsl:call-template name="WIPO:ST36uToST96U">
-															<xsl:with-param name="u" as="node()?">
-																<u>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</u>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var56_resultof_ST__uToST__U">
-														<com:U>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:U>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var57_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sub)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var57_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var58_resultof_ST__subToST__Sub" as="node()?">
-														<xsl:call-template name="WIPO:ST36subToST96Sub">
-															<xsl:with-param name="sub" as="node()?">
-																<sub>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sub>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var58_resultof_ST__subToST__Sub">
-														<com:Sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sub>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var59_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sup)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var59_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var60_resultof_ST__supToST__Sup" as="node()?">
-														<xsl:call-template name="WIPO:ST36supToST96Sup">
-															<xsl:with-param name="sup" as="node()?">
-																<sup>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sup>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var60_resultof_ST__supToST__Sup">
-														<com:Sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sup>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var61_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::smallcaps)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var61_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var62_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-														<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-															<xsl:with-param name="smallcaps" as="node()?">
-																<smallcaps>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</smallcaps>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var62_resultof_ST__smallcapsToST__SmallCapitals">
-														<com:SmallCapital>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:SmallCapital>
-													</xsl:for-each>
-												</xsl:for-each>
-											</xsl:for-each>
-										</com:Heading>
-									</xsl:for-each>
-									<xsl:for-each select="p">
-										<xsl:variable name="var63_resultof_ST__pToSt__P" as="node()?">
-											<xsl:call-template name="WIPO:ST36pToSt96P">
-												<xsl:with-param name="p" as="node()?">
-													<p>
-														<xsl:sequence select="(./@node(), ./node())"/>
-													</p>
-												</xsl:with-param>
-											</xsl:call-template>
-										</xsl:variable>
-										<xsl:for-each select="$var63_resultof_ST__pToSt__P">
-											<com:P>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</com:P>
-										</xsl:for-each>
-									</xsl:for-each>
-								</pat:TechnicalProblem>
-							</xsl:for-each>
-							<xsl:for-each select="tech-solution">
-								<pat:TechnicalSolution>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="heading">
-										<com:Heading>
-											<xsl:for-each select="@id">
-												<xsl:attribute name="com:id" select="fn:string(.)"/>
-											</xsl:for-each>
-											<xsl:for-each select="@level">
-												<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-											</xsl:for-each>
-											<xsl:for-each select="node()">
-												<xsl:if test="fn:boolean(self::text())">
-													<xsl:sequence select="fn:string(.)"/>
-												</xsl:if>
-												<xsl:variable name="var64_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::b)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var64_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var65_resultof_ST__bToST__B" as="node()*">
-														<xsl:call-template name="WIPO:ST36bToST96B">
-															<xsl:with-param name="b" as="node()?">
-																<b>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</b>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var65_resultof_ST__bToST__B">
-														<com:B>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:B>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var66_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::i)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var66_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var67_resultof_ST__iToST__I" as="node()?">
-														<xsl:call-template name="WIPO:ST36iToST96I">
-															<xsl:with-param name="i" as="node()?">
-																<i>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</i>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var67_resultof_ST__iToST__I">
-														<com:I>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:I>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var68_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::o)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var68_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var69_resultof_ST__oToST__O" as="node()?">
-														<xsl:call-template name="WIPO:ST36oToST96O">
-															<xsl:with-param name="o" as="node()?">
-																<o>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</o>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var69_resultof_ST__oToST__O">
-														<com:O>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:O>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var70_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::u)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var70_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var71_resultof_ST__uToST__U" as="node()?">
-														<xsl:call-template name="WIPO:ST36uToST96U">
-															<xsl:with-param name="u" as="node()?">
-																<u>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</u>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var71_resultof_ST__uToST__U">
-														<com:U>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:U>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var72_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sub)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var72_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var73_resultof_ST__subToST__Sub" as="node()?">
-														<xsl:call-template name="WIPO:ST36subToST96Sub">
-															<xsl:with-param name="sub" as="node()?">
-																<sub>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sub>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var73_resultof_ST__subToST__Sub">
-														<com:Sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sub>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var74_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sup)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var74_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var75_resultof_ST__supToST__Sup" as="node()?">
-														<xsl:call-template name="WIPO:ST36supToST96Sup">
-															<xsl:with-param name="sup" as="node()?">
-																<sup>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sup>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var75_resultof_ST__supToST__Sup">
-														<com:Sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sup>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var76_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::smallcaps)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var76_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var77_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-														<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-															<xsl:with-param name="smallcaps" as="node()?">
-																<smallcaps>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</smallcaps>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var77_resultof_ST__smallcapsToST__SmallCapitals">
-														<com:SmallCapital>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:SmallCapital>
-													</xsl:for-each>
-												</xsl:for-each>
-											</xsl:for-each>
-										</com:Heading>
-									</xsl:for-each>
-									<xsl:for-each select="p">
-										<xsl:variable name="var78_resultof_ST__pToSt__P" as="node()?">
-											<xsl:call-template name="WIPO:ST36pToSt96P">
-												<xsl:with-param name="p" as="node()?">
-													<p>
-														<xsl:sequence select="(./@node(), ./node())"/>
-													</p>
-												</xsl:with-param>
-											</xsl:call-template>
-										</xsl:variable>
-										<xsl:for-each select="$var78_resultof_ST__pToSt__P">
-											<com:P>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</com:P>
-										</xsl:for-each>
-									</xsl:for-each>
-								</pat:TechnicalSolution>
-							</xsl:for-each>
-							<xsl:for-each select="advantageous-effects">
-								<pat:AdvantageousEffects>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="heading">
-										<com:Heading>
-											<xsl:for-each select="@id">
-												<xsl:attribute name="com:id" select="fn:string(.)"/>
-											</xsl:for-each>
-											<xsl:for-each select="@level">
-												<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-											</xsl:for-each>
-											<xsl:for-each select="node()">
-												<xsl:if test="fn:boolean(self::text())">
-													<xsl:sequence select="fn:string(.)"/>
-												</xsl:if>
-												<xsl:variable name="var79_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::b)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var79_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var80_resultof_ST__bToST__B" as="node()*">
-														<xsl:call-template name="WIPO:ST36bToST96B">
-															<xsl:with-param name="b" as="node()?">
-																<b>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</b>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var80_resultof_ST__bToST__B">
-														<com:B>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:B>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var81_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::i)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var81_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var82_resultof_ST__iToST__I" as="node()?">
-														<xsl:call-template name="WIPO:ST36iToST96I">
-															<xsl:with-param name="i" as="node()?">
-																<i>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</i>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var82_resultof_ST__iToST__I">
-														<com:I>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:I>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var83_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::o)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var83_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var84_resultof_ST__oToST__O" as="node()?">
-														<xsl:call-template name="WIPO:ST36oToST96O">
-															<xsl:with-param name="o" as="node()?">
-																<o>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</o>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var84_resultof_ST__oToST__O">
-														<com:O>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:O>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var85_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::u)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var85_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var86_resultof_ST__uToST__U" as="node()?">
-														<xsl:call-template name="WIPO:ST36uToST96U">
-															<xsl:with-param name="u" as="node()?">
-																<u>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</u>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var86_resultof_ST__uToST__U">
-														<com:U>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:U>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var87_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sub)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var87_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var88_resultof_ST__subToST__Sub" as="node()?">
-														<xsl:call-template name="WIPO:ST36subToST96Sub">
-															<xsl:with-param name="sub" as="node()?">
-																<sub>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sub>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var88_resultof_ST__subToST__Sub">
-														<com:Sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sub>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var89_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sup)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var89_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var90_resultof_ST__supToST__Sup" as="node()?">
-														<xsl:call-template name="WIPO:ST36supToST96Sup">
-															<xsl:with-param name="sup" as="node()?">
-																<sup>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sup>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var90_resultof_ST__supToST__Sup">
-														<com:Sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sup>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var91_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::smallcaps)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var91_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var92_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-														<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-															<xsl:with-param name="smallcaps" as="node()?">
-																<smallcaps>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</smallcaps>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var92_resultof_ST__smallcapsToST__SmallCapitals">
-														<com:SmallCapital>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:SmallCapital>
-													</xsl:for-each>
-												</xsl:for-each>
-											</xsl:for-each>
-										</com:Heading>
-									</xsl:for-each>
-									<xsl:for-each select="p">
-										<xsl:variable name="var93_resultof_ST__pToSt__P" as="node()?">
-											<xsl:call-template name="WIPO:ST36pToSt96P">
-												<xsl:with-param name="p" as="node()?">
-													<p>
-														<xsl:sequence select="(./@node(), ./node())"/>
-													</p>
-												</xsl:with-param>
-											</xsl:call-template>
-										</xsl:variable>
-										<xsl:for-each select="$var93_resultof_ST__pToSt__P">
-											<com:P>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</com:P>
-										</xsl:for-each>
-									</xsl:for-each>
-								</pat:AdvantageousEffects>
-							</xsl:for-each>
-							<xsl:for-each select="heading">
-								<com:Heading>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@level">
-										<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-									</xsl:for-each>
-									<xsl:for-each select="node()">
-										<xsl:if test="fn:boolean(self::text())">
-											<xsl:sequence select="fn:string(.)"/>
-										</xsl:if>
-										<xsl:variable name="var94_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::b)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var94_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var95_resultof_ST__bToST__B" as="node()*">
-												<xsl:call-template name="WIPO:ST36bToST96B">
-													<xsl:with-param name="b" as="node()?">
-														<b>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</b>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var95_resultof_ST__bToST__B">
-												<com:B>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:B>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var96_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::i)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var96_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var97_resultof_ST__iToST__I" as="node()?">
-												<xsl:call-template name="WIPO:ST36iToST96I">
-													<xsl:with-param name="i" as="node()?">
-														<i>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</i>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var97_resultof_ST__iToST__I">
-												<com:I>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:I>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var98_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::o)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var98_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var99_resultof_ST__oToST__O" as="node()?">
-												<xsl:call-template name="WIPO:ST36oToST96O">
-													<xsl:with-param name="o" as="node()?">
-														<o>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</o>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var99_resultof_ST__oToST__O">
-												<com:O>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:O>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var100_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::u)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var100_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var101_resultof_ST__uToST__U" as="node()?">
-												<xsl:call-template name="WIPO:ST36uToST96U">
-													<xsl:with-param name="u" as="node()?">
-														<u>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</u>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var101_resultof_ST__uToST__U">
-												<com:U>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:U>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var102_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sub)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var102_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var103_resultof_ST__subToST__Sub" as="node()?">
-												<xsl:call-template name="WIPO:ST36subToST96Sub">
-													<xsl:with-param name="sub" as="node()?">
-														<sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sub>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var103_resultof_ST__subToST__Sub">
-												<com:Sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sub>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var104_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sup)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var104_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var105_resultof_ST__supToST__Sup" as="node()?">
-												<xsl:call-template name="WIPO:ST36supToST96Sup">
-													<xsl:with-param name="sup" as="node()?">
-														<sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sup>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var105_resultof_ST__supToST__Sup">
-												<com:Sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sup>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var106_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::smallcaps)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var106_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var107_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-												<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-													<xsl:with-param name="smallcaps" as="node()?">
-														<smallcaps>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</smallcaps>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var107_resultof_ST__smallcapsToST__SmallCapitals">
-												<com:SmallCapital>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:SmallCapital>
-											</xsl:for-each>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:Heading>
-							</xsl:for-each>
-							<xsl:for-each select="p">
-								<xsl:variable name="var108_resultof_ST__pToSt__P" as="node()?">
-									<xsl:call-template name="WIPO:ST36pToSt96P">
-										<xsl:with-param name="p" as="node()?">
-											<p>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</p>
-										</xsl:with-param>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var108_resultof_ST__pToSt__P">
-									<com:P>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</com:P>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:Disclosure>
-					</xsl:for-each>
-					<xsl:for-each select="summary-of-invention">
-						<pat:InventionSummary>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="tech-problem">
-								<pat:TechnicalProblem>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="heading">
-										<com:Heading>
-											<xsl:for-each select="@id">
-												<xsl:attribute name="com:id" select="fn:string(.)"/>
-											</xsl:for-each>
-											<xsl:for-each select="@level">
-												<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-											</xsl:for-each>
-											<xsl:for-each select="node()">
-												<xsl:if test="fn:boolean(self::text())">
-													<xsl:sequence select="fn:string(.)"/>
-												</xsl:if>
-												<xsl:variable name="var109_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::b)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var109_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var110_resultof_ST__bToST__B" as="node()*">
-														<xsl:call-template name="WIPO:ST36bToST96B">
-															<xsl:with-param name="b" as="node()?">
-																<b>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</b>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var110_resultof_ST__bToST__B">
-														<com:B>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:B>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var111_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::i)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var111_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var112_resultof_ST__iToST__I" as="node()?">
-														<xsl:call-template name="WIPO:ST36iToST96I">
-															<xsl:with-param name="i" as="node()?">
-																<i>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</i>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var112_resultof_ST__iToST__I">
-														<com:I>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:I>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var113_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::o)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var113_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var114_resultof_ST__oToST__O" as="node()?">
-														<xsl:call-template name="WIPO:ST36oToST96O">
-															<xsl:with-param name="o" as="node()?">
-																<o>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</o>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var114_resultof_ST__oToST__O">
-														<com:O>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:O>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var115_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::u)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var115_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var116_resultof_ST__uToST__U" as="node()?">
-														<xsl:call-template name="WIPO:ST36uToST96U">
-															<xsl:with-param name="u" as="node()?">
-																<u>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</u>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var116_resultof_ST__uToST__U">
-														<com:U>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:U>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var117_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sub)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var117_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var118_resultof_ST__subToST__Sub" as="node()?">
-														<xsl:call-template name="WIPO:ST36subToST96Sub">
-															<xsl:with-param name="sub" as="node()?">
-																<sub>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sub>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var118_resultof_ST__subToST__Sub">
-														<com:Sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sub>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var119_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sup)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var119_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var120_resultof_ST__supToST__Sup" as="node()?">
-														<xsl:call-template name="WIPO:ST36supToST96Sup">
-															<xsl:with-param name="sup" as="node()?">
-																<sup>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sup>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var120_resultof_ST__supToST__Sup">
-														<com:Sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sup>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var121_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::smallcaps)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var121_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var122_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-														<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-															<xsl:with-param name="smallcaps" as="node()?">
-																<smallcaps>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</smallcaps>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var122_resultof_ST__smallcapsToST__SmallCapitals">
-														<com:SmallCapital>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:SmallCapital>
-													</xsl:for-each>
-												</xsl:for-each>
-											</xsl:for-each>
-										</com:Heading>
-									</xsl:for-each>
-									<xsl:for-each select="p">
-										<xsl:variable name="var123_resultof_ST__pToSt__P" as="node()?">
-											<xsl:call-template name="WIPO:ST36pToSt96P">
-												<xsl:with-param name="p" as="node()?">
-													<p>
-														<xsl:sequence select="(./@node(), ./node())"/>
-													</p>
-												</xsl:with-param>
-											</xsl:call-template>
-										</xsl:variable>
-										<xsl:for-each select="$var123_resultof_ST__pToSt__P">
-											<com:P>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</com:P>
-										</xsl:for-each>
-									</xsl:for-each>
-								</pat:TechnicalProblem>
-							</xsl:for-each>
-							<xsl:for-each select="tech-solution">
-								<pat:TechnicalSolution>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="heading">
-										<com:Heading>
-											<xsl:for-each select="@id">
-												<xsl:attribute name="com:id" select="fn:string(.)"/>
-											</xsl:for-each>
-											<xsl:for-each select="@level">
-												<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-											</xsl:for-each>
-											<xsl:for-each select="node()">
-												<xsl:if test="fn:boolean(self::text())">
-													<xsl:sequence select="fn:string(.)"/>
-												</xsl:if>
-												<xsl:variable name="var124_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::b)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var124_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var125_resultof_ST__bToST__B" as="node()*">
-														<xsl:call-template name="WIPO:ST36bToST96B">
-															<xsl:with-param name="b" as="node()?">
-																<b>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</b>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var125_resultof_ST__bToST__B">
-														<com:B>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:B>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var126_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::i)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var126_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var127_resultof_ST__iToST__I" as="node()?">
-														<xsl:call-template name="WIPO:ST36iToST96I">
-															<xsl:with-param name="i" as="node()?">
-																<i>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</i>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var127_resultof_ST__iToST__I">
-														<com:I>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:I>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var128_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::o)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var128_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var129_resultof_ST__oToST__O" as="node()?">
-														<xsl:call-template name="WIPO:ST36oToST96O">
-															<xsl:with-param name="o" as="node()?">
-																<o>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</o>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var129_resultof_ST__oToST__O">
-														<com:O>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:O>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var130_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::u)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var130_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var131_resultof_ST__uToST__U" as="node()?">
-														<xsl:call-template name="WIPO:ST36uToST96U">
-															<xsl:with-param name="u" as="node()?">
-																<u>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</u>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var131_resultof_ST__uToST__U">
-														<com:U>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:U>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var132_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sub)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var132_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var133_resultof_ST__subToST__Sub" as="node()?">
-														<xsl:call-template name="WIPO:ST36subToST96Sub">
-															<xsl:with-param name="sub" as="node()?">
-																<sub>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sub>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var133_resultof_ST__subToST__Sub">
-														<com:Sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sub>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var134_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sup)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var134_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var135_resultof_ST__supToST__Sup" as="node()?">
-														<xsl:call-template name="WIPO:ST36supToST96Sup">
-															<xsl:with-param name="sup" as="node()?">
-																<sup>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sup>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var135_resultof_ST__supToST__Sup">
-														<com:Sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sup>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var136_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::smallcaps)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var136_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var137_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-														<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-															<xsl:with-param name="smallcaps" as="node()?">
-																<smallcaps>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</smallcaps>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var137_resultof_ST__smallcapsToST__SmallCapitals">
-														<com:SmallCapital>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:SmallCapital>
-													</xsl:for-each>
-												</xsl:for-each>
-											</xsl:for-each>
-										</com:Heading>
-									</xsl:for-each>
-									<xsl:for-each select="p">
-										<xsl:variable name="var138_resultof_ST__pToSt__P" as="node()?">
-											<xsl:call-template name="WIPO:ST36pToSt96P">
-												<xsl:with-param name="p" as="node()?">
-													<p>
-														<xsl:sequence select="(./@node(), ./node())"/>
-													</p>
-												</xsl:with-param>
-											</xsl:call-template>
-										</xsl:variable>
-										<xsl:for-each select="$var138_resultof_ST__pToSt__P">
-											<com:P>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</com:P>
-										</xsl:for-each>
-									</xsl:for-each>
-								</pat:TechnicalSolution>
-							</xsl:for-each>
-							<xsl:for-each select="advantageous-effects">
-								<pat:AdvantageousEffects>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="heading">
-										<com:Heading>
-											<xsl:for-each select="@id">
-												<xsl:attribute name="com:id" select="fn:string(.)"/>
-											</xsl:for-each>
-											<xsl:for-each select="@level">
-												<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-											</xsl:for-each>
-											<xsl:for-each select="node()">
-												<xsl:if test="fn:boolean(self::text())">
-													<xsl:sequence select="fn:string(.)"/>
-												</xsl:if>
-												<xsl:variable name="var139_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::b)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var139_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var140_resultof_ST__bToST__B" as="node()*">
-														<xsl:call-template name="WIPO:ST36bToST96B">
-															<xsl:with-param name="b" as="node()?">
-																<b>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</b>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var140_resultof_ST__bToST__B">
-														<com:B>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:B>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var141_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::i)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var141_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var142_resultof_ST__iToST__I" as="node()?">
-														<xsl:call-template name="WIPO:ST36iToST96I">
-															<xsl:with-param name="i" as="node()?">
-																<i>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</i>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var142_resultof_ST__iToST__I">
-														<com:I>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:I>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var143_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::o)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var143_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var144_resultof_ST__oToST__O" as="node()?">
-														<xsl:call-template name="WIPO:ST36oToST96O">
-															<xsl:with-param name="o" as="node()?">
-																<o>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</o>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var144_resultof_ST__oToST__O">
-														<com:O>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:O>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var145_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::u)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var145_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var146_resultof_ST__uToST__U" as="node()?">
-														<xsl:call-template name="WIPO:ST36uToST96U">
-															<xsl:with-param name="u" as="node()?">
-																<u>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</u>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var146_resultof_ST__uToST__U">
-														<com:U>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:U>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var147_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sub)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var147_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var148_resultof_ST__subToST__Sub" as="node()?">
-														<xsl:call-template name="WIPO:ST36subToST96Sub">
-															<xsl:with-param name="sub" as="node()?">
-																<sub>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sub>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var148_resultof_ST__subToST__Sub">
-														<com:Sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sub>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var149_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sup)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var149_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var150_resultof_ST__supToST__Sup" as="node()?">
-														<xsl:call-template name="WIPO:ST36supToST96Sup">
-															<xsl:with-param name="sup" as="node()?">
-																<sup>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sup>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var150_resultof_ST__supToST__Sup">
-														<com:Sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sup>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var151_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::smallcaps)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var151_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var152_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-														<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-															<xsl:with-param name="smallcaps" as="node()?">
-																<smallcaps>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</smallcaps>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var152_resultof_ST__smallcapsToST__SmallCapitals">
-														<com:SmallCapital>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:SmallCapital>
-													</xsl:for-each>
-												</xsl:for-each>
-											</xsl:for-each>
-										</com:Heading>
-									</xsl:for-each>
-									<xsl:for-each select="p">
-										<xsl:variable name="var153_resultof_ST__pToSt__P" as="node()?">
-											<xsl:call-template name="WIPO:ST36pToSt96P">
-												<xsl:with-param name="p" as="node()?">
-													<p>
-														<xsl:sequence select="(./@node(), ./node())"/>
-													</p>
-												</xsl:with-param>
-											</xsl:call-template>
-										</xsl:variable>
-										<xsl:for-each select="$var153_resultof_ST__pToSt__P">
-											<com:P>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</com:P>
-										</xsl:for-each>
-									</xsl:for-each>
-								</pat:AdvantageousEffects>
-							</xsl:for-each>
-							<xsl:for-each select="heading">
-								<com:Heading>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@level">
-										<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-									</xsl:for-each>
-									<xsl:for-each select="node()">
-										<xsl:if test="fn:boolean(self::text())">
-											<xsl:sequence select="fn:string(.)"/>
-										</xsl:if>
-										<xsl:variable name="var154_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::b)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var154_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var155_resultof_ST__bToST__B" as="node()*">
-												<xsl:call-template name="WIPO:ST36bToST96B">
-													<xsl:with-param name="b" as="node()?">
-														<b>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</b>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var155_resultof_ST__bToST__B">
-												<com:B>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:B>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var156_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::i)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var156_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var157_resultof_ST__iToST__I" as="node()?">
-												<xsl:call-template name="WIPO:ST36iToST96I">
-													<xsl:with-param name="i" as="node()?">
-														<i>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</i>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var157_resultof_ST__iToST__I">
-												<com:I>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:I>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var158_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::o)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var158_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var159_resultof_ST__oToST__O" as="node()?">
-												<xsl:call-template name="WIPO:ST36oToST96O">
-													<xsl:with-param name="o" as="node()?">
-														<o>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</o>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var159_resultof_ST__oToST__O">
-												<com:O>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:O>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var160_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::u)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var160_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var161_resultof_ST__uToST__U" as="node()?">
-												<xsl:call-template name="WIPO:ST36uToST96U">
-													<xsl:with-param name="u" as="node()?">
-														<u>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</u>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var161_resultof_ST__uToST__U">
-												<com:U>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:U>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var162_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sub)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var162_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var163_resultof_ST__subToST__Sub" as="node()?">
-												<xsl:call-template name="WIPO:ST36subToST96Sub">
-													<xsl:with-param name="sub" as="node()?">
-														<sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sub>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var163_resultof_ST__subToST__Sub">
-												<com:Sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sub>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var164_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sup)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var164_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var165_resultof_ST__supToST__Sup" as="node()?">
-												<xsl:call-template name="WIPO:ST36supToST96Sup">
-													<xsl:with-param name="sup" as="node()?">
-														<sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sup>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var165_resultof_ST__supToST__Sup">
-												<com:Sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sup>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var166_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::smallcaps)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var166_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var167_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-												<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-													<xsl:with-param name="smallcaps" as="node()?">
-														<smallcaps>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</smallcaps>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var167_resultof_ST__smallcapsToST__SmallCapitals">
-												<com:SmallCapital>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:SmallCapital>
-											</xsl:for-each>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:Heading>
-							</xsl:for-each>
-							<xsl:for-each select="p">
-								<xsl:variable name="var168_resultof_ST__pToSt__P" as="node()?">
-									<xsl:call-template name="WIPO:ST36pToSt96P">
-										<xsl:with-param name="p" as="node()?">
-											<p>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</p>
-										</xsl:with-param>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var168_resultof_ST__pToSt__P">
-									<com:P>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</com:P>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:InventionSummary>
-					</xsl:for-each>
-					<xsl:for-each select="description-of-drawings">
-						<pat:DrawingDescription>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="heading">
-								<com:Heading>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@level">
-										<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-									</xsl:for-each>
-									<xsl:for-each select="node()">
-										<xsl:if test="fn:boolean(self::text())">
-											<xsl:sequence select="fn:string(.)"/>
-										</xsl:if>
-										<xsl:variable name="var169_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::b)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var169_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var170_resultof_ST__bToST__B" as="node()*">
-												<xsl:call-template name="WIPO:ST36bToST96B">
-													<xsl:with-param name="b" as="node()?">
-														<b>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</b>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var170_resultof_ST__bToST__B">
-												<com:B>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:B>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var171_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::i)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var171_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var172_resultof_ST__iToST__I" as="node()?">
-												<xsl:call-template name="WIPO:ST36iToST96I">
-													<xsl:with-param name="i" as="node()?">
-														<i>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</i>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var172_resultof_ST__iToST__I">
-												<com:I>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:I>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var173_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::o)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var173_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var174_resultof_ST__oToST__O" as="node()?">
-												<xsl:call-template name="WIPO:ST36oToST96O">
-													<xsl:with-param name="o" as="node()?">
-														<o>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</o>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var174_resultof_ST__oToST__O">
-												<com:O>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:O>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var175_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::u)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var175_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var176_resultof_ST__uToST__U" as="node()?">
-												<xsl:call-template name="WIPO:ST36uToST96U">
-													<xsl:with-param name="u" as="node()?">
-														<u>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</u>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var176_resultof_ST__uToST__U">
-												<com:U>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:U>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var177_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sub)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var177_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var178_resultof_ST__subToST__Sub" as="node()?">
-												<xsl:call-template name="WIPO:ST36subToST96Sub">
-													<xsl:with-param name="sub" as="node()?">
-														<sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sub>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var178_resultof_ST__subToST__Sub">
-												<com:Sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sub>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var179_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sup)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var179_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var180_resultof_ST__supToST__Sup" as="node()?">
-												<xsl:call-template name="WIPO:ST36supToST96Sup">
-													<xsl:with-param name="sup" as="node()?">
-														<sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sup>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var180_resultof_ST__supToST__Sup">
-												<com:Sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sup>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var181_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::smallcaps)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var181_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var182_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-												<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-													<xsl:with-param name="smallcaps" as="node()?">
-														<smallcaps>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</smallcaps>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var182_resultof_ST__smallcapsToST__SmallCapitals">
-												<com:SmallCapital>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:SmallCapital>
-											</xsl:for-each>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:Heading>
-							</xsl:for-each>
-							<xsl:for-each select="p">
-								<xsl:variable name="var183_resultof_ST__pToSt__P" as="node()?">
-									<xsl:call-template name="WIPO:ST36pToSt96P">
-										<xsl:with-param name="p" as="node()?">
-											<p>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</p>
-										</xsl:with-param>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var183_resultof_ST__pToSt__P">
-									<com:P>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</com:P>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:DrawingDescription>
-					</xsl:for-each>
-					<xsl:for-each select="description-of-embodiments">
-						<pat:EmbodimentDescription>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="embodiments-example">
-								<pat:EmbodimentExample>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@ex-num">
-										<xsl:attribute name="pat:exampleNumber" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="heading">
-										<com:Heading>
-											<xsl:for-each select="@id">
-												<xsl:attribute name="com:id" select="fn:string(.)"/>
-											</xsl:for-each>
-											<xsl:for-each select="@level">
-												<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-											</xsl:for-each>
-											<xsl:for-each select="node()">
-												<xsl:if test="fn:boolean(self::text())">
-													<xsl:sequence select="fn:string(.)"/>
-												</xsl:if>
-												<xsl:variable name="var184_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::b)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var184_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var185_resultof_ST__bToST__B" as="node()*">
-														<xsl:call-template name="WIPO:ST36bToST96B">
-															<xsl:with-param name="b" as="node()?">
-																<b>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</b>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var185_resultof_ST__bToST__B">
-														<com:B>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:B>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var186_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::i)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var186_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var187_resultof_ST__iToST__I" as="node()?">
-														<xsl:call-template name="WIPO:ST36iToST96I">
-															<xsl:with-param name="i" as="node()?">
-																<i>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</i>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var187_resultof_ST__iToST__I">
-														<com:I>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:I>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var188_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::o)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var188_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var189_resultof_ST__oToST__O" as="node()?">
-														<xsl:call-template name="WIPO:ST36oToST96O">
-															<xsl:with-param name="o" as="node()?">
-																<o>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</o>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var189_resultof_ST__oToST__O">
-														<com:O>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:O>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var190_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::u)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var190_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var191_resultof_ST__uToST__U" as="node()?">
-														<xsl:call-template name="WIPO:ST36uToST96U">
-															<xsl:with-param name="u" as="node()?">
-																<u>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</u>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var191_resultof_ST__uToST__U">
-														<com:U>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:U>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var192_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sub)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var192_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var193_resultof_ST__subToST__Sub" as="node()?">
-														<xsl:call-template name="WIPO:ST36subToST96Sub">
-															<xsl:with-param name="sub" as="node()?">
-																<sub>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sub>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var193_resultof_ST__subToST__Sub">
-														<com:Sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sub>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var194_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sup)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var194_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var195_resultof_ST__supToST__Sup" as="node()?">
-														<xsl:call-template name="WIPO:ST36supToST96Sup">
-															<xsl:with-param name="sup" as="node()?">
-																<sup>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sup>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var195_resultof_ST__supToST__Sup">
-														<com:Sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sup>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var196_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::smallcaps)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var196_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var197_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-														<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-															<xsl:with-param name="smallcaps" as="node()?">
-																<smallcaps>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</smallcaps>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var197_resultof_ST__smallcapsToST__SmallCapitals">
-														<com:SmallCapital>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:SmallCapital>
-													</xsl:for-each>
-												</xsl:for-each>
-											</xsl:for-each>
-										</com:Heading>
-									</xsl:for-each>
-									<xsl:for-each select="p">
-										<xsl:variable name="var198_resultof_ST__pToSt__P" as="node()?">
-											<xsl:call-template name="WIPO:ST36pToSt96P">
-												<xsl:with-param name="p" as="node()?">
-													<p>
-														<xsl:sequence select="(./@node(), ./node())"/>
-													</p>
-												</xsl:with-param>
-											</xsl:call-template>
-										</xsl:variable>
-										<xsl:for-each select="$var198_resultof_ST__pToSt__P">
-											<com:P>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</com:P>
-										</xsl:for-each>
-									</xsl:for-each>
-								</pat:EmbodimentExample>
-							</xsl:for-each>
-							<xsl:for-each select="heading">
-								<com:Heading>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@level">
-										<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-									</xsl:for-each>
-									<xsl:for-each select="node()">
-										<xsl:if test="fn:boolean(self::text())">
-											<xsl:sequence select="fn:string(.)"/>
-										</xsl:if>
-										<xsl:variable name="var199_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::b)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var199_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var200_resultof_ST__bToST__B" as="node()*">
-												<xsl:call-template name="WIPO:ST36bToST96B">
-													<xsl:with-param name="b" as="node()?">
-														<b>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</b>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var200_resultof_ST__bToST__B">
-												<com:B>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:B>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var201_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::i)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var201_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var202_resultof_ST__iToST__I" as="node()?">
-												<xsl:call-template name="WIPO:ST36iToST96I">
-													<xsl:with-param name="i" as="node()?">
-														<i>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</i>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var202_resultof_ST__iToST__I">
-												<com:I>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:I>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var203_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::o)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var203_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var204_resultof_ST__oToST__O" as="node()?">
-												<xsl:call-template name="WIPO:ST36oToST96O">
-													<xsl:with-param name="o" as="node()?">
-														<o>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</o>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var204_resultof_ST__oToST__O">
-												<com:O>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:O>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var205_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::u)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var205_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var206_resultof_ST__uToST__U" as="node()?">
-												<xsl:call-template name="WIPO:ST36uToST96U">
-													<xsl:with-param name="u" as="node()?">
-														<u>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</u>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var206_resultof_ST__uToST__U">
-												<com:U>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:U>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var207_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sub)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var207_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var208_resultof_ST__subToST__Sub" as="node()?">
-												<xsl:call-template name="WIPO:ST36subToST96Sub">
-													<xsl:with-param name="sub" as="node()?">
-														<sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sub>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var208_resultof_ST__subToST__Sub">
-												<com:Sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sub>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var209_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sup)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var209_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var210_resultof_ST__supToST__Sup" as="node()?">
-												<xsl:call-template name="WIPO:ST36supToST96Sup">
-													<xsl:with-param name="sup" as="node()?">
-														<sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sup>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var210_resultof_ST__supToST__Sup">
-												<com:Sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sup>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var211_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::smallcaps)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var211_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var212_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-												<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-													<xsl:with-param name="smallcaps" as="node()?">
-														<smallcaps>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</smallcaps>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var212_resultof_ST__smallcapsToST__SmallCapitals">
-												<com:SmallCapital>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:SmallCapital>
-											</xsl:for-each>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:Heading>
-							</xsl:for-each>
-							<xsl:for-each select="p">
-								<xsl:variable name="var213_resultof_ST__pToSt__P" as="node()?">
-									<xsl:call-template name="WIPO:ST36pToSt96P">
-										<xsl:with-param name="p" as="node()?">
-											<p>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</p>
-										</xsl:with-param>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var213_resultof_ST__pToSt__P">
-									<com:P>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</com:P>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:EmbodimentDescription>
-					</xsl:for-each>
-					<xsl:for-each select="best-mode">
-						<pat:BestMode>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="heading">
-								<com:Heading>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@level">
-										<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-									</xsl:for-each>
-									<xsl:for-each select="node()">
-										<xsl:if test="fn:boolean(self::text())">
-											<xsl:sequence select="fn:string(.)"/>
-										</xsl:if>
-										<xsl:variable name="var214_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::b)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var214_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var215_resultof_ST__bToST__B" as="node()*">
-												<xsl:call-template name="WIPO:ST36bToST96B">
-													<xsl:with-param name="b" as="node()?">
-														<b>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</b>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var215_resultof_ST__bToST__B">
-												<com:B>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:B>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var216_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::i)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var216_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var217_resultof_ST__iToST__I" as="node()?">
-												<xsl:call-template name="WIPO:ST36iToST96I">
-													<xsl:with-param name="i" as="node()?">
-														<i>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</i>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var217_resultof_ST__iToST__I">
-												<com:I>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:I>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var218_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::o)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var218_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var219_resultof_ST__oToST__O" as="node()?">
-												<xsl:call-template name="WIPO:ST36oToST96O">
-													<xsl:with-param name="o" as="node()?">
-														<o>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</o>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var219_resultof_ST__oToST__O">
-												<com:O>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:O>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var220_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::u)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var220_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var221_resultof_ST__uToST__U" as="node()?">
-												<xsl:call-template name="WIPO:ST36uToST96U">
-													<xsl:with-param name="u" as="node()?">
-														<u>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</u>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var221_resultof_ST__uToST__U">
-												<com:U>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:U>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var222_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sub)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var222_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var223_resultof_ST__subToST__Sub" as="node()?">
-												<xsl:call-template name="WIPO:ST36subToST96Sub">
-													<xsl:with-param name="sub" as="node()?">
-														<sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sub>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var223_resultof_ST__subToST__Sub">
-												<com:Sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sub>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var224_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sup)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var224_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var225_resultof_ST__supToST__Sup" as="node()?">
-												<xsl:call-template name="WIPO:ST36supToST96Sup">
-													<xsl:with-param name="sup" as="node()?">
-														<sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sup>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var225_resultof_ST__supToST__Sup">
-												<com:Sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sup>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var226_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::smallcaps)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var226_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var227_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-												<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-													<xsl:with-param name="smallcaps" as="node()?">
-														<smallcaps>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</smallcaps>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var227_resultof_ST__smallcapsToST__SmallCapitals">
-												<com:SmallCapital>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:SmallCapital>
-											</xsl:for-each>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:Heading>
-							</xsl:for-each>
-							<xsl:for-each select="p">
-								<xsl:variable name="var228_resultof_ST__pToSt__P" as="node()?">
-									<xsl:call-template name="WIPO:ST36pToSt96P">
-										<xsl:with-param name="p" as="node()?">
-											<p>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</p>
-										</xsl:with-param>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var228_resultof_ST__pToSt__P">
-									<com:P>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</com:P>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:BestMode>
-					</xsl:for-each>
-					<xsl:for-each select="mode-for-invention">
-						<pat:InventionMode>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="heading">
-								<com:Heading>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@level">
-										<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-									</xsl:for-each>
-									<xsl:for-each select="node()">
-										<xsl:if test="fn:boolean(self::text())">
-											<xsl:sequence select="fn:string(.)"/>
-										</xsl:if>
-										<xsl:variable name="var229_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::b)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var229_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var230_resultof_ST__bToST__B" as="node()*">
-												<xsl:call-template name="WIPO:ST36bToST96B">
-													<xsl:with-param name="b" as="node()?">
-														<b>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</b>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var230_resultof_ST__bToST__B">
-												<com:B>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:B>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var231_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::i)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var231_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var232_resultof_ST__iToST__I" as="node()?">
-												<xsl:call-template name="WIPO:ST36iToST96I">
-													<xsl:with-param name="i" as="node()?">
-														<i>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</i>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var232_resultof_ST__iToST__I">
-												<com:I>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:I>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var233_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::o)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var233_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var234_resultof_ST__oToST__O" as="node()?">
-												<xsl:call-template name="WIPO:ST36oToST96O">
-													<xsl:with-param name="o" as="node()?">
-														<o>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</o>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var234_resultof_ST__oToST__O">
-												<com:O>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:O>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var235_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::u)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var235_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var236_resultof_ST__uToST__U" as="node()?">
-												<xsl:call-template name="WIPO:ST36uToST96U">
-													<xsl:with-param name="u" as="node()?">
-														<u>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</u>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var236_resultof_ST__uToST__U">
-												<com:U>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:U>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var237_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sub)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var237_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var238_resultof_ST__subToST__Sub" as="node()?">
-												<xsl:call-template name="WIPO:ST36subToST96Sub">
-													<xsl:with-param name="sub" as="node()?">
-														<sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sub>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var238_resultof_ST__subToST__Sub">
-												<com:Sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sub>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var239_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sup)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var239_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var240_resultof_ST__supToST__Sup" as="node()?">
-												<xsl:call-template name="WIPO:ST36supToST96Sup">
-													<xsl:with-param name="sup" as="node()?">
-														<sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sup>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var240_resultof_ST__supToST__Sup">
-												<com:Sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sup>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var241_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::smallcaps)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var241_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var242_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-												<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-													<xsl:with-param name="smallcaps" as="node()?">
-														<smallcaps>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</smallcaps>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var242_resultof_ST__smallcapsToST__SmallCapitals">
-												<com:SmallCapital>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:SmallCapital>
-											</xsl:for-each>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:Heading>
-							</xsl:for-each>
-							<xsl:for-each select="p">
-								<xsl:variable name="var243_resultof_ST__pToSt__P" as="node()?">
-									<xsl:call-template name="WIPO:ST36pToSt96P">
-										<xsl:with-param name="p" as="node()?">
-											<p>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</p>
-										</xsl:with-param>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var243_resultof_ST__pToSt__P">
-									<com:P>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</com:P>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:InventionMode>
-					</xsl:for-each>
-					<xsl:for-each select="industrial-applicability">
-						<pat:IndustrialApplicability>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="heading">
-								<com:Heading>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@level">
-										<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-									</xsl:for-each>
-									<xsl:for-each select="node()">
-										<xsl:if test="fn:boolean(self::text())">
-											<xsl:sequence select="fn:string(.)"/>
-										</xsl:if>
-										<xsl:variable name="var244_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::b)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var244_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var245_resultof_ST__bToST__B" as="node()*">
-												<xsl:call-template name="WIPO:ST36bToST96B">
-													<xsl:with-param name="b" as="node()?">
-														<b>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</b>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var245_resultof_ST__bToST__B">
-												<com:B>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:B>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var246_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::i)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var246_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var247_resultof_ST__iToST__I" as="node()?">
-												<xsl:call-template name="WIPO:ST36iToST96I">
-													<xsl:with-param name="i" as="node()?">
-														<i>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</i>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var247_resultof_ST__iToST__I">
-												<com:I>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:I>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var248_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::o)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var248_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var249_resultof_ST__oToST__O" as="node()?">
-												<xsl:call-template name="WIPO:ST36oToST96O">
-													<xsl:with-param name="o" as="node()?">
-														<o>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</o>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var249_resultof_ST__oToST__O">
-												<com:O>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:O>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var250_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::u)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var250_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var251_resultof_ST__uToST__U" as="node()?">
-												<xsl:call-template name="WIPO:ST36uToST96U">
-													<xsl:with-param name="u" as="node()?">
-														<u>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</u>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var251_resultof_ST__uToST__U">
-												<com:U>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:U>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var252_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sub)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var252_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var253_resultof_ST__subToST__Sub" as="node()?">
-												<xsl:call-template name="WIPO:ST36subToST96Sub">
-													<xsl:with-param name="sub" as="node()?">
-														<sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sub>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var253_resultof_ST__subToST__Sub">
-												<com:Sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sub>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var254_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sup)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var254_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var255_resultof_ST__supToST__Sup" as="node()?">
-												<xsl:call-template name="WIPO:ST36supToST96Sup">
-													<xsl:with-param name="sup" as="node()?">
-														<sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sup>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var255_resultof_ST__supToST__Sup">
-												<com:Sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sup>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var256_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::smallcaps)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var256_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var257_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-												<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-													<xsl:with-param name="smallcaps" as="node()?">
-														<smallcaps>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</smallcaps>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var257_resultof_ST__smallcapsToST__SmallCapitals">
-												<com:SmallCapital>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:SmallCapital>
-											</xsl:for-each>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:Heading>
-							</xsl:for-each>
-							<xsl:for-each select="p">
-								<xsl:variable name="var258_resultof_ST__pToSt__P" as="node()?">
-									<xsl:call-template name="WIPO:ST36pToSt96P">
-										<xsl:with-param name="p" as="node()?">
-											<p>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</p>
-										</xsl:with-param>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var258_resultof_ST__pToSt__P">
-									<com:P>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</com:P>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:IndustrialApplicability>
-					</xsl:for-each>
-					<xsl:for-each select="reference-signs-list">
-						<pat:ReferenceSignBag>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="heading">
-								<com:Heading>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@level">
-										<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-									</xsl:for-each>
-									<xsl:for-each select="node()">
-										<xsl:if test="fn:boolean(self::text())">
-											<xsl:sequence select="fn:string(.)"/>
-										</xsl:if>
-										<xsl:variable name="var259_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::b)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var259_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var260_resultof_ST__bToST__B" as="node()*">
-												<xsl:call-template name="WIPO:ST36bToST96B">
-													<xsl:with-param name="b" as="node()?">
-														<b>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</b>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var260_resultof_ST__bToST__B">
-												<com:B>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:B>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var261_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::i)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var261_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var262_resultof_ST__iToST__I" as="node()?">
-												<xsl:call-template name="WIPO:ST36iToST96I">
-													<xsl:with-param name="i" as="node()?">
-														<i>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</i>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var262_resultof_ST__iToST__I">
-												<com:I>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:I>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var263_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::o)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var263_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var264_resultof_ST__oToST__O" as="node()?">
-												<xsl:call-template name="WIPO:ST36oToST96O">
-													<xsl:with-param name="o" as="node()?">
-														<o>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</o>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var264_resultof_ST__oToST__O">
-												<com:O>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:O>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var265_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::u)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var265_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var266_resultof_ST__uToST__U" as="node()?">
-												<xsl:call-template name="WIPO:ST36uToST96U">
-													<xsl:with-param name="u" as="node()?">
-														<u>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</u>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var266_resultof_ST__uToST__U">
-												<com:U>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:U>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var267_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sub)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var267_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var268_resultof_ST__subToST__Sub" as="node()?">
-												<xsl:call-template name="WIPO:ST36subToST96Sub">
-													<xsl:with-param name="sub" as="node()?">
-														<sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sub>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var268_resultof_ST__subToST__Sub">
-												<com:Sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sub>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var269_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sup)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var269_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var270_resultof_ST__supToST__Sup" as="node()?">
-												<xsl:call-template name="WIPO:ST36supToST96Sup">
-													<xsl:with-param name="sup" as="node()?">
-														<sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sup>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var270_resultof_ST__supToST__Sup">
-												<com:Sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sup>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var271_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::smallcaps)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var271_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var272_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-												<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-													<xsl:with-param name="smallcaps" as="node()?">
-														<smallcaps>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</smallcaps>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var272_resultof_ST__smallcapsToST__SmallCapitals">
-												<com:SmallCapital>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:SmallCapital>
-											</xsl:for-each>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:Heading>
-							</xsl:for-each>
-							<xsl:for-each select="p">
-								<xsl:variable name="var273_resultof_ST__pToSt__P" as="node()?">
-									<xsl:call-template name="WIPO:ST36pToSt96P">
-										<xsl:with-param name="p" as="node()?">
-											<p>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</p>
-										</xsl:with-param>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var273_resultof_ST__pToSt__P">
-									<com:P>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</com:P>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:ReferenceSignBag>
-					</xsl:for-each>
-					<xsl:for-each select="reference-to-deposited-biological-material">
-						<pat:DepositedBiologicalMaterialReference>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="heading">
-								<com:Heading>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@level">
-										<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-									</xsl:for-each>
-									<xsl:for-each select="node()">
-										<xsl:if test="fn:boolean(self::text())">
-											<xsl:sequence select="fn:string(.)"/>
-										</xsl:if>
-										<xsl:variable name="var274_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::b)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var274_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var275_resultof_ST__bToST__B" as="node()*">
-												<xsl:call-template name="WIPO:ST36bToST96B">
-													<xsl:with-param name="b" as="node()?">
-														<b>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</b>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var275_resultof_ST__bToST__B">
-												<com:B>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:B>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var276_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::i)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var276_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var277_resultof_ST__iToST__I" as="node()?">
-												<xsl:call-template name="WIPO:ST36iToST96I">
-													<xsl:with-param name="i" as="node()?">
-														<i>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</i>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var277_resultof_ST__iToST__I">
-												<com:I>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:I>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var278_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::o)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var278_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var279_resultof_ST__oToST__O" as="node()?">
-												<xsl:call-template name="WIPO:ST36oToST96O">
-													<xsl:with-param name="o" as="node()?">
-														<o>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</o>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var279_resultof_ST__oToST__O">
-												<com:O>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:O>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var280_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::u)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var280_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var281_resultof_ST__uToST__U" as="node()?">
-												<xsl:call-template name="WIPO:ST36uToST96U">
-													<xsl:with-param name="u" as="node()?">
-														<u>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</u>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var281_resultof_ST__uToST__U">
-												<com:U>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:U>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var282_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sub)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var282_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var283_resultof_ST__subToST__Sub" as="node()?">
-												<xsl:call-template name="WIPO:ST36subToST96Sub">
-													<xsl:with-param name="sub" as="node()?">
-														<sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sub>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var283_resultof_ST__subToST__Sub">
-												<com:Sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sub>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var284_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sup)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var284_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var285_resultof_ST__supToST__Sup" as="node()?">
-												<xsl:call-template name="WIPO:ST36supToST96Sup">
-													<xsl:with-param name="sup" as="node()?">
-														<sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sup>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var285_resultof_ST__supToST__Sup">
-												<com:Sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sup>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var286_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::smallcaps)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var286_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var287_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-												<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-													<xsl:with-param name="smallcaps" as="node()?">
-														<smallcaps>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</smallcaps>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var287_resultof_ST__smallcapsToST__SmallCapitals">
-												<com:SmallCapital>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:SmallCapital>
-											</xsl:for-each>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:Heading>
-							</xsl:for-each>
-							<xsl:for-each select="p">
-								<xsl:variable name="var288_resultof_ST__pToSt__P" as="node()?">
-									<xsl:call-template name="WIPO:ST36pToSt96P">
-										<xsl:with-param name="p" as="node()?">
-											<p>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</p>
-										</xsl:with-param>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var288_resultof_ST__pToSt__P">
-									<com:P>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</com:P>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:DepositedBiologicalMaterialReference>
-					</xsl:for-each>
-					<xsl:for-each select="sequence-list-text">
-						<pat:SequenceListText>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="heading">
-								<com:Heading>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@level">
-										<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-									</xsl:for-each>
-									<xsl:for-each select="node()">
-										<xsl:if test="fn:boolean(self::text())">
-											<xsl:sequence select="fn:string(.)"/>
-										</xsl:if>
-										<xsl:variable name="var289_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::b)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var289_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var290_resultof_ST__bToST__B" as="node()*">
-												<xsl:call-template name="WIPO:ST36bToST96B">
-													<xsl:with-param name="b" as="node()?">
-														<b>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</b>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var290_resultof_ST__bToST__B">
-												<com:B>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:B>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var291_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::i)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var291_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var292_resultof_ST__iToST__I" as="node()?">
-												<xsl:call-template name="WIPO:ST36iToST96I">
-													<xsl:with-param name="i" as="node()?">
-														<i>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</i>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var292_resultof_ST__iToST__I">
-												<com:I>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:I>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var293_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::o)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var293_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var294_resultof_ST__oToST__O" as="node()?">
-												<xsl:call-template name="WIPO:ST36oToST96O">
-													<xsl:with-param name="o" as="node()?">
-														<o>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</o>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var294_resultof_ST__oToST__O">
-												<com:O>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:O>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var295_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::u)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var295_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var296_resultof_ST__uToST__U" as="node()?">
-												<xsl:call-template name="WIPO:ST36uToST96U">
-													<xsl:with-param name="u" as="node()?">
-														<u>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</u>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var296_resultof_ST__uToST__U">
-												<com:U>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:U>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var297_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sub)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var297_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var298_resultof_ST__subToST__Sub" as="node()?">
-												<xsl:call-template name="WIPO:ST36subToST96Sub">
-													<xsl:with-param name="sub" as="node()?">
-														<sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sub>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var298_resultof_ST__subToST__Sub">
-												<com:Sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sub>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var299_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sup)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var299_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var300_resultof_ST__supToST__Sup" as="node()?">
-												<xsl:call-template name="WIPO:ST36supToST96Sup">
-													<xsl:with-param name="sup" as="node()?">
-														<sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sup>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var300_resultof_ST__supToST__Sup">
-												<com:Sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sup>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var301_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::smallcaps)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var301_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var302_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-												<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-													<xsl:with-param name="smallcaps" as="node()?">
-														<smallcaps>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</smallcaps>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var302_resultof_ST__smallcapsToST__SmallCapitals">
-												<com:SmallCapital>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:SmallCapital>
-											</xsl:for-each>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:Heading>
-							</xsl:for-each>
-							<xsl:for-each select="p">
-								<xsl:variable name="var303_resultof_ST__pToSt__P" as="node()?">
-									<xsl:call-template name="WIPO:ST36pToSt96P">
-										<xsl:with-param name="p" as="node()?">
-											<p>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</p>
-										</xsl:with-param>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var303_resultof_ST__pToSt__P">
-									<com:P>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</com:P>
-								</xsl:for-each>
-							</xsl:for-each>
-						</pat:SequenceListText>
-					</xsl:for-each>
-					<xsl:for-each select="citation-list">
-						<com:CitationBag>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="heading">
-								<com:Heading>
-									<xsl:for-each select="@id">
-										<xsl:attribute name="com:id" select="fn:string(.)"/>
-									</xsl:for-each>
-									<xsl:for-each select="@level">
-										<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-									</xsl:for-each>
-									<xsl:for-each select="node()">
-										<xsl:if test="fn:boolean(self::text())">
-											<xsl:sequence select="fn:string(.)"/>
-										</xsl:if>
-										<xsl:variable name="var304_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::b)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var304_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var305_resultof_ST__bToST__B" as="node()*">
-												<xsl:call-template name="WIPO:ST36bToST96B">
-													<xsl:with-param name="b" as="node()?">
-														<b>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</b>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var305_resultof_ST__bToST__B">
-												<com:B>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:B>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var306_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::i)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var306_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var307_resultof_ST__iToST__I" as="node()?">
-												<xsl:call-template name="WIPO:ST36iToST96I">
-													<xsl:with-param name="i" as="node()?">
-														<i>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</i>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var307_resultof_ST__iToST__I">
-												<com:I>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:I>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var308_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::o)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var308_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var309_resultof_ST__oToST__O" as="node()?">
-												<xsl:call-template name="WIPO:ST36oToST96O">
-													<xsl:with-param name="o" as="node()?">
-														<o>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</o>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var309_resultof_ST__oToST__O">
-												<com:O>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:O>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var310_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::u)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var310_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var311_resultof_ST__uToST__U" as="node()?">
-												<xsl:call-template name="WIPO:ST36uToST96U">
-													<xsl:with-param name="u" as="node()?">
-														<u>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</u>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var311_resultof_ST__uToST__U">
-												<com:U>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:U>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var312_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sub)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var312_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var313_resultof_ST__subToST__Sub" as="node()?">
-												<xsl:call-template name="WIPO:ST36subToST96Sub">
-													<xsl:with-param name="sub" as="node()?">
-														<sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sub>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var313_resultof_ST__subToST__Sub">
-												<com:Sub>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sub>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var314_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::sup)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var314_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var315_resultof_ST__supToST__Sup" as="node()?">
-												<xsl:call-template name="WIPO:ST36supToST96Sup">
-													<xsl:with-param name="sup" as="node()?">
-														<sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</sup>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var315_resultof_ST__supToST__Sup">
-												<com:Sup>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:Sup>
-											</xsl:for-each>
-										</xsl:for-each>
-										<xsl:variable name="var316_test_resultof_node_name_equal_qname" as="node()?">
-											<xsl:if test="fn:boolean(self::smallcaps)">
-												<xsl:sequence select="."/>
-											</xsl:if>
-										</xsl:variable>
-										<xsl:for-each select="$var316_test_resultof_node_name_equal_qname">
-											<xsl:variable name="var317_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-												<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-													<xsl:with-param name="smallcaps" as="node()?">
-														<smallcaps>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</smallcaps>
-													</xsl:with-param>
-												</xsl:call-template>
-											</xsl:variable>
-											<xsl:for-each select="$var317_resultof_ST__smallcapsToST__SmallCapitals">
-												<com:SmallCapital>
-													<xsl:sequence select="(./@node(), ./node())"/>
-												</com:SmallCapital>
-											</xsl:for-each>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:Heading>
-							</xsl:for-each>
-							<xsl:for-each select="p">
-								<xsl:variable name="var318_resultof_ST__pToSt__P" as="node()?">
-									<xsl:call-template name="WIPO:ST36pToSt96P">
-										<xsl:with-param name="p" as="node()?">
-											<p>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</p>
-										</xsl:with-param>
-									</xsl:call-template>
-								</xsl:variable>
-								<xsl:for-each select="$var318_resultof_ST__pToSt__P">
-									<com:P>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</com:P>
-								</xsl:for-each>
-							</xsl:for-each>
-							<xsl:for-each select="patent-literature">
-								<com:PatentCitationBag>
-									<xsl:for-each select="heading">
-										<com:Heading>
-											<xsl:for-each select="@id">
-												<xsl:attribute name="com:id" select="fn:string(.)"/>
-											</xsl:for-each>
-											<xsl:for-each select="@level">
-												<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-											</xsl:for-each>
-											<xsl:for-each select="node()">
-												<xsl:if test="fn:boolean(self::text())">
-													<xsl:sequence select="fn:string(.)"/>
-												</xsl:if>
-												<xsl:variable name="var319_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::b)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var319_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var320_resultof_ST__bToST__B" as="node()*">
-														<xsl:call-template name="WIPO:ST36bToST96B">
-															<xsl:with-param name="b" as="node()?">
-																<b>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</b>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var320_resultof_ST__bToST__B">
-														<com:B>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:B>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var321_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::i)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var321_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var322_resultof_ST__iToST__I" as="node()?">
-														<xsl:call-template name="WIPO:ST36iToST96I">
-															<xsl:with-param name="i" as="node()?">
-																<i>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</i>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var322_resultof_ST__iToST__I">
-														<com:I>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:I>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var323_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::o)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var323_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var324_resultof_ST__oToST__O" as="node()?">
-														<xsl:call-template name="WIPO:ST36oToST96O">
-															<xsl:with-param name="o" as="node()?">
-																<o>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</o>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var324_resultof_ST__oToST__O">
-														<com:O>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:O>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var325_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::u)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var325_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var326_resultof_ST__uToST__U" as="node()?">
-														<xsl:call-template name="WIPO:ST36uToST96U">
-															<xsl:with-param name="u" as="node()?">
-																<u>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</u>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var326_resultof_ST__uToST__U">
-														<com:U>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:U>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var327_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sub)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var327_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var328_resultof_ST__subToST__Sub" as="node()?">
-														<xsl:call-template name="WIPO:ST36subToST96Sub">
-															<xsl:with-param name="sub" as="node()?">
-																<sub>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sub>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var328_resultof_ST__subToST__Sub">
-														<com:Sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sub>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var329_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sup)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var329_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var330_resultof_ST__supToST__Sup" as="node()?">
-														<xsl:call-template name="WIPO:ST36supToST96Sup">
-															<xsl:with-param name="sup" as="node()?">
-																<sup>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sup>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var330_resultof_ST__supToST__Sup">
-														<com:Sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sup>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var331_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::smallcaps)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var331_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var332_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-														<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-															<xsl:with-param name="smallcaps" as="node()?">
-																<smallcaps>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</smallcaps>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var332_resultof_ST__smallcapsToST__SmallCapitals">
-														<com:SmallCapital>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:SmallCapital>
-													</xsl:for-each>
-												</xsl:for-each>
-											</xsl:for-each>
-										</com:Heading>
-									</xsl:for-each>
-									<xsl:for-each select="p">
-										<xsl:variable name="var333_resultof_ST__pToSt__P" as="node()?">
-											<xsl:call-template name="WIPO:ST36pToSt96P">
-												<xsl:with-param name="p" as="node()?">
-													<p>
-														<xsl:sequence select="(./@node(), ./node())"/>
-													</p>
-												</xsl:with-param>
-											</xsl:call-template>
-										</xsl:variable>
-										<xsl:for-each select="$var333_resultof_ST__pToSt__P">
-											<com:P>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</com:P>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:PatentCitationBag>
-							</xsl:for-each>
-							<xsl:for-each select="non-patent-literature">
-								<com:NPLCitationBag>
-									<xsl:for-each select="heading">
-										<com:Heading>
-											<xsl:for-each select="@id">
-												<xsl:attribute name="com:id" select="fn:string(.)"/>
-											</xsl:for-each>
-											<xsl:for-each select="@level">
-												<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-											</xsl:for-each>
-											<xsl:for-each select="node()">
-												<xsl:if test="fn:boolean(self::text())">
-													<xsl:sequence select="fn:string(.)"/>
-												</xsl:if>
-												<xsl:variable name="var334_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::b)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var334_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var335_resultof_ST__bToST__B" as="node()*">
-														<xsl:call-template name="WIPO:ST36bToST96B">
-															<xsl:with-param name="b" as="node()?">
-																<b>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</b>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var335_resultof_ST__bToST__B">
-														<com:B>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:B>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var336_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::i)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var336_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var337_resultof_ST__iToST__I" as="node()?">
-														<xsl:call-template name="WIPO:ST36iToST96I">
-															<xsl:with-param name="i" as="node()?">
-																<i>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</i>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var337_resultof_ST__iToST__I">
-														<com:I>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:I>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var338_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::o)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var338_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var339_resultof_ST__oToST__O" as="node()?">
-														<xsl:call-template name="WIPO:ST36oToST96O">
-															<xsl:with-param name="o" as="node()?">
-																<o>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</o>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var339_resultof_ST__oToST__O">
-														<com:O>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:O>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var340_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::u)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var340_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var341_resultof_ST__uToST__U" as="node()?">
-														<xsl:call-template name="WIPO:ST36uToST96U">
-															<xsl:with-param name="u" as="node()?">
-																<u>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</u>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var341_resultof_ST__uToST__U">
-														<com:U>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:U>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var342_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sub)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var342_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var343_resultof_ST__subToST__Sub" as="node()?">
-														<xsl:call-template name="WIPO:ST36subToST96Sub">
-															<xsl:with-param name="sub" as="node()?">
-																<sub>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sub>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var343_resultof_ST__subToST__Sub">
-														<com:Sub>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sub>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var344_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::sup)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var344_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var345_resultof_ST__supToST__Sup" as="node()?">
-														<xsl:call-template name="WIPO:ST36supToST96Sup">
-															<xsl:with-param name="sup" as="node()?">
-																<sup>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</sup>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var345_resultof_ST__supToST__Sup">
-														<com:Sup>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:Sup>
-													</xsl:for-each>
-												</xsl:for-each>
-												<xsl:variable name="var346_test_resultof_node_name_equal_qname" as="node()?">
-													<xsl:if test="fn:boolean(self::smallcaps)">
-														<xsl:sequence select="."/>
-													</xsl:if>
-												</xsl:variable>
-												<xsl:for-each select="$var346_test_resultof_node_name_equal_qname">
-													<xsl:variable name="var347_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-														<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-															<xsl:with-param name="smallcaps" as="node()?">
-																<smallcaps>
-																	<xsl:sequence select="(./@node(), ./node())"/>
-																</smallcaps>
-															</xsl:with-param>
-														</xsl:call-template>
-													</xsl:variable>
-													<xsl:for-each select="$var347_resultof_ST__smallcapsToST__SmallCapitals">
-														<com:SmallCapital>
-															<xsl:sequence select="(./@node(), ./node())"/>
-														</com:SmallCapital>
-													</xsl:for-each>
-												</xsl:for-each>
-											</xsl:for-each>
-										</com:Heading>
-									</xsl:for-each>
-									<xsl:for-each select="p">
-										<xsl:variable name="var348_resultof_ST__pToSt__P" as="node()?">
-											<xsl:call-template name="WIPO:ST36pToSt96P">
-												<xsl:with-param name="p" as="node()?">
-													<p>
-														<xsl:sequence select="(./@node(), ./node())"/>
-													</p>
-												</xsl:with-param>
-											</xsl:call-template>
-										</xsl:variable>
-										<xsl:for-each select="$var348_resultof_ST__pToSt__P">
-											<com:P>
-												<xsl:sequence select="(./@node(), ./node())"/>
-											</com:P>
-										</xsl:for-each>
-									</xsl:for-each>
-								</com:NPLCitationBag>
-							</xsl:for-each>
-						</com:CitationBag>
-					</xsl:for-each>
-					<xsl:for-each select="heading">
-						<com:Heading>
-							<xsl:for-each select="@id">
-								<xsl:attribute name="com:id" select="fn:string(.)"/>
-							</xsl:for-each>
-							<xsl:for-each select="@level">
-								<xsl:attribute name="com:headingLevelCode" select="fn:concat('H', fn:string(.))"/>
-							</xsl:for-each>
-							<xsl:for-each select="node()">
-								<xsl:if test="fn:boolean(self::text())">
-									<xsl:sequence select="fn:string(.)"/>
-								</xsl:if>
-								<xsl:variable name="var349_test_resultof_node_name_equal_qname" as="node()?">
-									<xsl:if test="fn:boolean(self::b)">
-										<xsl:sequence select="."/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:for-each select="$var349_test_resultof_node_name_equal_qname">
-									<xsl:variable name="var350_resultof_ST__bToST__B" as="node()*">
-										<xsl:call-template name="WIPO:ST36bToST96B">
-											<xsl:with-param name="b" as="node()?">
-												<b>
-													<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-														<xsl:sequence select="fn:string(.)"/>
-													</xsl:for-each>
-												</b>
-											</xsl:with-param>
-										</xsl:call-template>
-									</xsl:variable>
-									<xsl:for-each select="$var350_resultof_ST__bToST__B">
-										<com:B>
-											<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-												<xsl:sequence select="fn:string(.)"/>
-											</xsl:for-each>
-										</com:B>
-									</xsl:for-each>
-								</xsl:for-each>
-								<xsl:variable name="var351_test_resultof_node_name_equal_qname" as="node()?">
-									<xsl:if test="fn:boolean(self::i)">
-										<xsl:sequence select="."/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:for-each select="$var351_test_resultof_node_name_equal_qname">
-									<xsl:variable name="var352_resultof_ST__iToST__I" as="node()?">
-										<xsl:call-template name="WIPO:ST36iToST96I">
-											<xsl:with-param name="i" as="node()?">
-												<i>
-													<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-														<xsl:sequence select="fn:string(.)"/>
-													</xsl:for-each>
-												</i>
-											</xsl:with-param>
-										</xsl:call-template>
-									</xsl:variable>
-									<xsl:for-each select="$var352_resultof_ST__iToST__I">
-										<com:I>
-											<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-												<xsl:sequence select="fn:string(.)"/>
-											</xsl:for-each>
-										</com:I>
-									</xsl:for-each>
-								</xsl:for-each>
-								<xsl:variable name="var353_test_resultof_node_name_equal_qname" as="node()?">
-									<xsl:if test="fn:boolean(self::o)">
-										<xsl:sequence select="."/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:for-each select="$var353_test_resultof_node_name_equal_qname">
-									<xsl:variable name="var354_resultof_ST__oToST__O" as="node()?">
-										<xsl:call-template name="WIPO:ST36oToST96O">
-											<xsl:with-param name="o" as="node()?">
-												<o>
-													<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-														<xsl:sequence select="fn:string(.)"/>
-													</xsl:for-each>
-												</o>
-											</xsl:with-param>
-										</xsl:call-template>
-									</xsl:variable>
-									<xsl:for-each select="$var354_resultof_ST__oToST__O">
-										<com:O>
-											<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-												<xsl:sequence select="fn:string(.)"/>
-											</xsl:for-each>
-										</com:O>
-									</xsl:for-each>
-								</xsl:for-each>
-								<xsl:variable name="var355_test_resultof_node_name_equal_qname" as="node()?">
-									<xsl:if test="fn:boolean(self::u)">
-										<xsl:sequence select="."/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:for-each select="$var355_test_resultof_node_name_equal_qname">
-									<xsl:variable name="var356_resultof_ST__uToST__U" as="node()?">
-										<xsl:call-template name="WIPO:ST36uToST96U">
-											<xsl:with-param name="u" as="node()?">
-												<u>
-													<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-														<xsl:sequence select="fn:string(.)"/>
-													</xsl:for-each>
-												</u>
-											</xsl:with-param>
-										</xsl:call-template>
-									</xsl:variable>
-									<xsl:for-each select="$var356_resultof_ST__uToST__U">
-										<com:U>
-											<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-												<xsl:sequence select="fn:string(.)"/>
-											</xsl:for-each>
-										</com:U>
-									</xsl:for-each>
-								</xsl:for-each>
-								<xsl:variable name="var357_test_resultof_node_name_equal_qname" as="node()?">
-									<xsl:if test="fn:boolean(self::sub)">
-										<xsl:sequence select="."/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:for-each select="$var357_test_resultof_node_name_equal_qname">
-									<xsl:variable name="var358_resultof_ST__subToST__Sub" as="node()?">
-										<xsl:call-template name="WIPO:ST36subToST96Sub">
-											<xsl:with-param name="sub" as="node()?">
-												<sub>
-													<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-														<xsl:sequence select="fn:string(.)"/>
-													</xsl:for-each>
-												</sub>
-											</xsl:with-param>
-										</xsl:call-template>
-									</xsl:variable>
-									<xsl:for-each select="$var358_resultof_ST__subToST__Sub">
-										<com:Sub>
-											<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-												<xsl:sequence select="fn:string(.)"/>
-											</xsl:for-each>
-										</com:Sub>
-									</xsl:for-each>
-								</xsl:for-each>
-								<xsl:variable name="var359_test_resultof_node_name_equal_qname" as="node()?">
-									<xsl:if test="fn:boolean(self::sup)">
-										<xsl:sequence select="."/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:for-each select="$var359_test_resultof_node_name_equal_qname">
-									<xsl:variable name="var360_resultof_ST__supToST__Sup" as="node()?">
-										<xsl:call-template name="WIPO:ST36supToST96Sup">
-											<xsl:with-param name="sup" as="node()?">
-												<sup>
-													<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-														<xsl:sequence select="fn:string(.)"/>
-													</xsl:for-each>
-												</sup>
-											</xsl:with-param>
-										</xsl:call-template>
-									</xsl:variable>
-									<xsl:for-each select="$var360_resultof_ST__supToST__Sup">
-										<com:Sup>
-											<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-												<xsl:sequence select="fn:string(.)"/>
-											</xsl:for-each>
-										</com:Sup>
-									</xsl:for-each>
-								</xsl:for-each>
-								<xsl:variable name="var361_test_resultof_node_name_equal_qname" as="node()?">
-									<xsl:if test="fn:boolean(self::smallcaps)">
-										<xsl:sequence select="."/>
-									</xsl:if>
-								</xsl:variable>
-								<xsl:for-each select="$var361_test_resultof_node_name_equal_qname">
-									<xsl:variable name="var362_resultof_ST__smallcapsToST__SmallCapitals" as="node()?">
-										<xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
-											<xsl:with-param name="smallcaps" as="node()?">
-												<smallcaps>
-													<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-														<xsl:sequence select="fn:string(.)"/>
-													</xsl:for-each>
-												</smallcaps>
-											</xsl:with-param>
-										</xsl:call-template>
-									</xsl:variable>
-									<xsl:for-each select="$var362_resultof_ST__smallcapsToST__SmallCapitals">
-										<com:SmallCapital>
-											<xsl:for-each select="(./node())[fn:boolean(self::text())]">
-												<xsl:sequence select="fn:string(.)"/>
-											</xsl:for-each>
-										</com:SmallCapital>
-									</xsl:for-each>
-								</xsl:for-each>
-							</xsl:for-each>
-						</com:Heading>
-					</xsl:for-each>
-					<xsl:for-each select="p">
-						<xsl:variable name="var363_resultof_ST__pToSt__P" as="node()?">
-							<xsl:call-template name="WIPO:ST36pToSt96P">
-								<xsl:with-param name="p" as="node()?">
-									<p>
-										<xsl:sequence select="(./@node(), ./node())"/>
-									</p>
-								</xsl:with-param>
-							</xsl:call-template>
-						</xsl:variable>
-						<xsl:for-each select="$var363_resultof_ST__pToSt__P">
-							<com:P>
-								<xsl:sequence select="(./@node(), ./node())"/>
-							</com:P>
-						</xsl:for-each>
-					</xsl:for-each>
-				</pat:Description>
-			</xsl:for-each>
+            <xsl:for-each select="//description">
+                <pat:Description>
+                    <xsl:for-each select="@id">
+                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                    </xsl:for-each>
+                    <xsl:for-each select="@lang">
+                        <xsl:attribute name="com:languageCode" select="fn:string(.)"/>
+                    </xsl:for-each>
+                    <xsl:for-each select="invention-title">
+                        <pat:InventionTitle>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="@lang">
+                                <xsl:attribute name="com:languageCode" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="node()">
+                                <xsl:if test="fn:boolean(self::text())">
+                                    <xsl:sequence select="fn:string(.)"/>
+                                </xsl:if>
+                                <xsl:variable name="var7_test_resultof_node_name_equal_qname" as="node()?">
+                                    <xsl:if test="fn:boolean(self::b)">
+                                        <xsl:sequence select="."/>
+                                    </xsl:if>
+                                </xsl:variable>
+                                <xsl:for-each select="$var7_test_resultof_node_name_equal_qname">
+                                    <xsl:variable name="var8_resultof_ST__bToST__B" as="node()*">
+                                        <xsl:call-template name="WIPO:ST36bToST96B">
+                                            <xsl:with-param name="b" as="node()">
+                                                <b>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </b>
+                                            </xsl:with-param>
+                                        </xsl:call-template>
+                                    </xsl:variable>
+                                    <xsl:for-each select="$var8_resultof_ST__bToST__B">
+                                        <com:B>
+                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                        </com:B>
+                                    </xsl:for-each>
+                                </xsl:for-each>
+                                <xsl:variable name="var9_test_resultof_node_name_equal_qname" as="node()?">
+                                    <xsl:if test="fn:boolean(self::i)">
+                                        <xsl:sequence select="."/>
+                                    </xsl:if>
+                                </xsl:variable>
+                                <xsl:for-each select="$var9_test_resultof_node_name_equal_qname">
+                                    <xsl:variable name="var10_resultof_ST__iToST__I" as="node()?">
+                                        <xsl:call-template name="WIPO:ST36iToST96I">
+                                            <xsl:with-param name="i" as="node()">
+                                                <i>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </i>
+                                            </xsl:with-param>
+                                        </xsl:call-template>
+                                    </xsl:variable>
+                                    <xsl:for-each select="$var10_resultof_ST__iToST__I">
+                                        <com:I>
+                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                        </com:I>
+                                    </xsl:for-each>
+                                </xsl:for-each>
+                                <xsl:variable name="var11_test_resultof_node_name_equal_qname" as="node()?">
+                                    <xsl:if test="fn:boolean(self::o)">
+                                        <xsl:sequence select="."/>
+                                    </xsl:if>
+                                </xsl:variable>
+                                <xsl:for-each select="$var11_test_resultof_node_name_equal_qname">
+                                    <xsl:variable name="var12_resultof_ST__oToST__O" as="node()?">
+                                        <xsl:call-template name="WIPO:ST36oToST96O">
+                                            <xsl:with-param name="o" as="node()">
+                                                <o>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </o>
+                                            </xsl:with-param>
+                                        </xsl:call-template>
+                                    </xsl:variable>
+                                    <xsl:for-each select="$var12_resultof_ST__oToST__O">
+                                        <com:O>
+                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                        </com:O>
+                                    </xsl:for-each>
+                                </xsl:for-each>
+                                <xsl:variable name="var13_test_resultof_node_name_equal_qname" as="node()?">
+                                    <xsl:if test="fn:boolean(self::u)">
+                                        <xsl:sequence select="."/>
+                                    </xsl:if>
+                                </xsl:variable>
+                                <xsl:for-each select="$var13_test_resultof_node_name_equal_qname">
+                                    <xsl:variable name="var14_resultof_ST__uToST__U" as="node()?">
+                                        <xsl:call-template name="WIPO:ST36uToST96U">
+                                            <xsl:with-param name="u" as="node()">
+                                                <u>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </u>
+                                            </xsl:with-param>
+                                        </xsl:call-template>
+                                    </xsl:variable>
+                                    <xsl:for-each select="$var14_resultof_ST__uToST__U">
+                                        <com:U>
+                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                        </com:U>
+                                    </xsl:for-each>
+                                </xsl:for-each>
+                                <xsl:variable name="var15_test_resultof_node_name_equal_qname" as="node()?">
+                                    <xsl:if test="fn:boolean(self::sub)">
+                                        <xsl:sequence select="."/>
+                                    </xsl:if>
+                                </xsl:variable>
+                                <xsl:for-each select="$var15_test_resultof_node_name_equal_qname">
+                                    <xsl:variable name="var16_resultof_ST__subToST__Sub" as="node()?">
+                                        <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                            <xsl:with-param name="sub" as="node()">
+                                                <sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </sub>
+                                            </xsl:with-param>
+                                        </xsl:call-template>
+                                    </xsl:variable>
+                                    <xsl:for-each select="$var16_resultof_ST__subToST__Sub">
+                                        <com:Sub>
+                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                        </com:Sub>
+                                    </xsl:for-each>
+                                </xsl:for-each>
+                                <xsl:variable name="var17_test_resultof_node_name_equal_qname" as="node()?">
+                                    <xsl:if test="fn:boolean(self::sup)">
+                                        <xsl:sequence select="."/>
+                                    </xsl:if>
+                                </xsl:variable>
+                                <xsl:for-each select="$var17_test_resultof_node_name_equal_qname">
+                                    <xsl:variable name="var18_resultof_ST__supToST__Sup" as="node()?">
+                                        <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                            <xsl:with-param name="sup" as="node()">
+                                                <sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </sup>
+                                            </xsl:with-param>
+                                        </xsl:call-template>
+                                    </xsl:variable>
+                                    <xsl:for-each select="$var18_resultof_ST__supToST__Sup">
+                                        <com:Sup>
+                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                        </com:Sup>
+                                    </xsl:for-each>
+                                </xsl:for-each>
+                            </xsl:for-each>
+                        </pat:InventionTitle>
+                    </xsl:for-each>
+                    <xsl:for-each select=".//technical-field">
+                        <pat:TechnicalField>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                        </pat:TechnicalField>
+                    </xsl:for-each>
+                    <xsl:for-each select=".//background-art">
+                        <pat:BackgroundArt>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                        </pat:BackgroundArt>
+                    </xsl:for-each>
+                    <xsl:for-each select=".//disclosure">
+                        <pat:Disclosure>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="tech-problem">
+                                <pat:TechnicalProblem>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                                </pat:TechnicalProblem>
+                            </xsl:for-each>
+                            <xsl:for-each select="tech-solution">
+                                <pat:TechnicalSolution>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                                </pat:TechnicalSolution>
+                            </xsl:for-each>
+                            <xsl:for-each select="advantageous-effects">
+                                <pat:AdvantageousEffects>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                                </pat:AdvantageousEffects>
+                            </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                        </pat:Disclosure>
+                    </xsl:for-each>
+                    <xsl:for-each select=".//summary-of-invention">
+                        <pat:InventionSummary>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="tech-problem">
+                                <pat:TechnicalProblem>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                                </pat:TechnicalProblem>
+                            </xsl:for-each>
+                            <xsl:for-each select="tech-solution">
+                                <pat:TechnicalSolution>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                                </pat:TechnicalSolution>
+                            </xsl:for-each>
+                            <xsl:for-each select="advantageous-effects">
+                                <pat:AdvantageousEffects>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                                </pat:AdvantageousEffects>
+                            </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                        </pat:InventionSummary>
+                    </xsl:for-each>
+                    <xsl:for-each select=".//description-of-drawings">
+                        <pat:DrawingDescription>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                        </pat:DrawingDescription>
+                    </xsl:for-each>
+                    <xsl:for-each select=".//description-of-embodiments|.//detailed-description">
+                        <pat:EmbodimentDescription>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="embodiments-example">
+                                <pat:EmbodimentExample>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@ex-num">
+                                        <xsl:attribute name="pat:exampleNumber" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                                </pat:EmbodimentExample>
+                            </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                        </pat:EmbodimentDescription>
+                    </xsl:for-each>
+                    <xsl:for-each select=".//best-mode">
+                        <pat:BestMode>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                        </pat:BestMode>
+                    </xsl:for-each>
+                    <xsl:for-each select=".//mode-for-invention">
+                        <pat:InventionMode>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                        </pat:InventionMode>
+                    </xsl:for-each>
+                    <xsl:for-each select=".//industrial-applicability">
+                        <pat:IndustrialApplicability>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                        </pat:IndustrialApplicability>
+                    </xsl:for-each>
+                    <xsl:for-each select=".//reference-signs-list">
+                        <pat:ReferenceSignBag>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                        </pat:ReferenceSignBag>
+                    </xsl:for-each>
+                    <xsl:for-each select=".//reference-to-deposited-biological-material">
+                        <pat:DepositedBiologicalMaterialReference>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                        </pat:DepositedBiologicalMaterialReference>
+                    </xsl:for-each>
+                    <xsl:for-each select=".//sequence-list-text">
+                        <pat:SequenceListText>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                        </pat:SequenceListText>
+                    </xsl:for-each>
+                    <xsl:for-each select=".//citation-list">
+                        <com:CitationBag>
+                            <xsl:for-each select="@id">
+                                <xsl:attribute name="com:id" select="fn:string(.)"/>
+                            </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                            <xsl:for-each select="patent-literature">
+                                <com:PatentCitationBag>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                                </com:PatentCitationBag>
+                            </xsl:for-each>
+                            <xsl:for-each select="non-patent-literature">
+                                <com:NPLCitationBag>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                                </com:NPLCitationBag>
+                            </xsl:for-each>
+                        </com:CitationBag>
+                    </xsl:for-each>
+                            <xsl:for-each select="heading|p">
+                            <xsl:if test="fn:boolean(self::heading)">
+                                <com:Heading>
+                                    <xsl:for-each select="@id">
+                                        <xsl:attribute name="com:id" select="fn:string(.)"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="@level">
+                                        <xsl:attribute name="com:headingLevelCode"
+                                                       select="fn:concat('H', fn:string(.))"/>
+                                    </xsl:for-each>
+                                    <xsl:for-each select="node()">
+                                        <xsl:if test="fn:boolean(self::text())">
+                                            <xsl:sequence select="fn:string(.)"/>
+                                        </xsl:if>
+                                        <xsl:variable name="var19_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::b)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var19_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var20_resultof_ST__bToST__B" as="node()*">
+                                                <xsl:call-template name="WIPO:ST36bToST96B">
+                                                    <xsl:with-param name="b" as="node()">
+                                                        <b>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </b>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var20_resultof_ST__bToST__B">
+                                                <com:B>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:B>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var21_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::i)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var21_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var22_resultof_ST__iToST__I" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36iToST96I">
+                                                    <xsl:with-param name="i" as="node()">
+                                                        <i>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </i>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var22_resultof_ST__iToST__I">
+                                                <com:I>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:I>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var23_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::o)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var23_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var24_resultof_ST__oToST__O" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36oToST96O">
+                                                    <xsl:with-param name="o" as="node()">
+                                                        <o>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </o>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var24_resultof_ST__oToST__O">
+                                                <com:O>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:O>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var25_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::u)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var25_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var26_resultof_ST__uToST__U" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36uToST96U">
+                                                    <xsl:with-param name="u" as="node()">
+                                                        <u>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </u>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var26_resultof_ST__uToST__U">
+                                                <com:U>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:U>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var27_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sub)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var27_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var28_resultof_ST__subToST__Sub" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36subToST96Sub">
+                                                    <xsl:with-param name="sub" as="node()">
+                                                        <sub>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sub>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var28_resultof_ST__subToST__Sub">
+                                                <com:Sub>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sub>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var29_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::sup)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var29_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var30_resultof_ST__supToST__Sup" as="node()?">
+                                                <xsl:call-template name="WIPO:ST36supToST96Sup">
+                                                    <xsl:with-param name="sup" as="node()">
+                                                        <sup>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </sup>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var30_resultof_ST__supToST__Sup">
+                                                <com:Sup>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:Sup>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                        <xsl:variable name="var31_test_resultof_node_name_equal_qname" as="node()?">
+                                            <xsl:if test="fn:boolean(self::smallcaps)">
+                                                <xsl:sequence select="."/>
+                                            </xsl:if>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$var31_test_resultof_node_name_equal_qname">
+                                            <xsl:variable name="var32_resultof_ST__smallcapsToST__SmallCapitals"
+                                                          as="node()?">
+                                                <xsl:call-template name="WIPO:ST36smallcapsToST96SmallCapitals">
+                                                    <xsl:with-param name="smallcaps" as="node()">
+                                                        <smallcaps>
+                                                            <xsl:sequence select="(./@node(), ./node())"/>
+                                                        </smallcaps>
+                                                    </xsl:with-param>
+                                                </xsl:call-template>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$var32_resultof_ST__smallcapsToST__SmallCapitals">
+                                                <com:SmallCapital>
+                                                    <xsl:sequence select="(./@node(), ./node())"/>
+                                                </com:SmallCapital>
+                                            </xsl:for-each>
+                                        </xsl:for-each>
+                                    </xsl:for-each>
+                                </com:Heading>
+                            </xsl:if>
+                            <xsl:if test="fn:boolean(self::p)">
+                                <xsl:variable name="var33_resultof_ST__pToSt__P" as="node()?">
+                                    <xsl:call-template name="WIPO:ST36pToSt96P">
+                                        <xsl:with-param name="p" as="node()">
+                                            <p>
+                                                <xsl:sequence select="(./@node(), ./node())"/>
+                                            </p>
+                                        </xsl:with-param>
+                                    </xsl:call-template>
+                                </xsl:variable>
+                                <xsl:for-each select="$var33_resultof_ST__pToSt__P">
+                                    <com:P>
+                                        <xsl:sequence select="(./@node(), ./node())"/>
+                                    </com:P>
+                                </xsl:for-each>
+                            </xsl:if>
+                            </xsl:for-each>
+                </pat:Description>
+            </xsl:for-each>
 			<xsl:for-each select="//claims">
 				<xsl:variable name="var369_doc_page" as="node()*" select="doc-page"/>
 				<pat:Claims>
