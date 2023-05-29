@@ -1,7 +1,9 @@
 (:declare xquery 3.1 version:)
 xquery version "3.1";
 (:declare namespace:)
-
+declare namespace xsd = "http://www.w3.org/2001/XMLSchema";
+declare namespace xsi = "http://www.w3.org/2001/XMLSchema-instance";
+declare namespace xdmp = "http://marklogic.com/xdmp";
 declare namespace com = "http://www.wipo.int/standards/XMLSchema/ST96/Common";
 declare namespace pat = "http://www.wipo.int/standards/XMLSchema/ST96/Patent";
 
@@ -162,5 +164,17 @@ declare function local:modify_description($p_or_heading as element()*) as elemen
             element {$tag}{$w}
         }
         </pat:Description>
-}
+};
+
+(: replace the $description of the xml with local:modify_description result and return the new xml:)
+declare function local:replace_description($xml as element()) as element() {
+    let $new_description := local:modify_description($description//com:Heading|.//com:P)
+    return
+        replace node $description with $new_description
+};
+
+(:save result to a new xml file:)
+let $new_xml := local:replace_description($doc)
+return
+    xdmp:save("/data/examples_xslt_result/us_example1_post.xml", $new_xml)
 

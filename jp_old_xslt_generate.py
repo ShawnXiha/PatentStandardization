@@ -1,4 +1,4 @@
-from cn_old_csv_generate import cn_start_element_check
+from cn_old_name_check import cn_start_element_check
 
 jp_name_mapping = {"patent-document": "jp-official-gazette"}
 

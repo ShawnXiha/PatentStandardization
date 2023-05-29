@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pat:PatentPublication xmlns="http://www.wipo.int/standards/XMLSchema/ST96/Patent"
                         xmlns:com="http://www.wipo.int/standards/XMLSchema/ST96/Common"
-                        xmlns:mathml="http://www.w3.org/1998/Math/MathML"
+                        xmlns:mathml="http://www.w3.org/1998/Math/MathML3"
                         xmlns:pat="http://www.wipo.int/standards/XMLSchema/ST96/Patent"
                         xmlns:tbl="http://www.oasis-open.org/tables/exchange/1.0"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://www.wipo.int/standards/XMLSchema/ST96/Patent ../../Schemas/ST96Schema/ST96XMLSchema_Current_Flattened/ApplicationBody_V6_0.xsd"
                         com:languageCode="zh"
-                        com:st96Version="V3_1"
-                        xsi:schemaLocation="http://www.wipo.int/standards/XMLSchema/ST96/Patent /data/xq/st96/schema/ST96XMLSchema_V3_1_Flattened_Updated/PatentPublication_V3_1.xsd">
-   <com:IPOfficeCode>CN</com:IPOfficeCode>
-   <pat:BibliographicData com:st96Version="V3_1">
+                        com:receivingOffice="CN"
+                        com:st96Version="V6_0">
+   <pat:BibliographicData com:st96Version="V6_0">
       <pat:PatentPublicationIdentification>
          <com:IPOfficeCode>CN</com:IPOfficeCode>
          <pat:PublicationNumber>104223352</pat:PublicationNumber>
@@ -43,16 +44,15 @@
       <pat:InventionTitleBag>
          <pat:InventionTitle>一种甘草发酵所得烟用香料及其应用</pat:InventionTitle>
       </pat:InventionTitleBag>
+      <pat:RelatedDocumentBag/>
       <pat:PartyBag>
          <pat:ApplicantBag>
             <pat:Applicant com:sequenceNumber="1">
                <com:PublicationContact>
                   <com:Name>
                      <com:EntityName>云南中烟工业有限责任公司</com:EntityName>
-                     <com:EntityName>650231 云南省昆明市五华区红锦路367号云烟科技园C区</com:EntityName>
                   </com:Name>
                </com:PublicationContact>
-               <pat:ApplicantCategory>Applicant</pat:ApplicantCategory>
             </pat:Applicant>
          </pat:ApplicantBag>
          <pat:InventorBag>
@@ -113,14 +113,10 @@
                </com:PublicationContact>
             </pat:Inventor>
          </pat:InventorBag>
+         <pat:AssigneeBag/>
          <pat:RegisteredPractitionerBag>
             <pat:RegisteredPractitioner com:sequenceNumber="1">
                <pat:RegisteredPractitionerCategory>Agent</pat:RegisteredPractitionerCategory>
-               <com:PublicationContact>
-                  <com:Name>
-                     <com:EntityName>昆明协立知识产权代理事务所(普通合伙) 53108</com:EntityName>
-                  </com:Name>
-               </com:PublicationContact>
                <com:PublicationContact>
                   <com:Name>
                      <com:EntityName>谢嘉</com:EntityName>
@@ -131,17 +127,21 @@
                <pat:RegisteredPractitionerCategory>Agent</pat:RegisteredPractitionerCategory>
                <com:PublicationContact>
                   <com:Name>
-                     <com:EntityName>昆明协立知识产权代理事务所(普通合伙) 53108</com:EntityName>
-                  </com:Name>
-               </com:PublicationContact>
-               <com:PublicationContact>
-                  <com:Name>
                      <com:EntityName>旃习涵</com:EntityName>
                   </com:Name>
                </com:PublicationContact>
             </pat:RegisteredPractitioner>
          </pat:RegisteredPractitionerBag>
+         <ExaminerBag/>
       </pat:PartyBag>
+      <com:BioDeposit com:sequenceNumber="biod0001">
+         <com:BioDepositDepositary>
+            <com:PostalAddressBag>
+               <com:PostalAddress/>
+            </com:PostalAddressBag>
+         </com:BioDepositDepositary>
+         <com:BiologicalAccessionNumber>2012.10.08</com:BiologicalAccessionNumber>
+      </com:BioDeposit>
    </pat:BibliographicData>
    <pat:Description>
       <pat:InventionTitle com:id="tilte1">一种甘草发酵所得烟用香料及其应用</pat:InventionTitle>
@@ -387,5 +387,20 @@
          </pat:ClaimText>
       </pat:Claim>
    </pat:Claims>
+   <pat:Abstract>
+      <com:P com:pNumber="1">本发明公开了一种甘草发酵所得烟用香料及其应用。从烤烟新鲜烟叶中分离了一株优势微生物，分类命名为长孢洛德酵母(Lodderomyces elongisporus).CGMCC 6645。将该酵母接种到以甘草为原料的培养基中进行发酵培养。培养之后的发酵产物具有天然香味，含有2,4-二羟基苯乙酮、2,4,5-三甲基苯酚、3,4-二甲基苯甲醇、苯乙醇等多种致香成分。将该烟用香料添加到烟丝中，可以增加卷烟的香气质和保润效果，改善卷烟品质。烟气的甜韵感丰富，地方性杂气和木质气减少，喉部舒适性增加，余味较为舒适，口腔收敛较强。整个生产工艺简单、实用，具有良好的应用前景。</com:P>
+      <com:P com:pNumber="bio">
+         <com:BioDeposit com:sequenceNumber="biod0001">
+            <com:BioDepositDepositary>
+               <com:PostalAddressBag>
+                  <com:PostalAddress>
+                     <com:PostalStructuredAddress/>
+                  </com:PostalAddress>
+               </com:PostalAddressBag>
+            </com:BioDepositDepositary>
+            <com:BiologicalAccessionNumber>2012.10.08</com:BiologicalAccessionNumber>
+         </com:BioDeposit>
+      </com:P>
+   </pat:Abstract>
 </pat:PatentPublication>
 

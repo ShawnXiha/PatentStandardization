@@ -7273,7 +7273,7 @@
 				</xsl:for-each>
 				<xsl:for-each select="$var64_bibliographic_data">
 					<xsl:variable name="var63_cur" as="node()?" select="."/>
-					<xsl:variable name="var2_publication_reference" as="node()?" select="publication-reference"/>
+					<xsl:variable name="var2_publication_reference" as="node()?" select="//publication-reference"/>
 					<xsl:variable name="var1_document_id" as="node()?" select="$var2_publication_reference/document-id"/>
 					<pat:PatentPublicationIdentification>
 						<xsl:for-each select="$var2_publication_reference/@id">
@@ -7332,7 +7332,7 @@
 							</pat:FilingDate>
 						</xsl:for-each>
 					</pat:ApplicationIdentification>
-					<xsl:for-each select="priority-claims">
+					<xsl:for-each select="//priority-claims">
 						<pat:PriorityClaimBag>
 							<xsl:for-each select="priority-claim">
 								<pat:PriorityClaim>
@@ -7418,7 +7418,7 @@
 						</pat:GrantTerm>
 					</xsl:for-each>
 					<pat:PatentClassificationBag>
-						<xsl:for-each select="classification-ipc">
+						<xsl:for-each select="//classification-ipc">
 							<pat:IPCClassification>
 								<xsl:for-each select="@id">
 									<xsl:attribute name="com:id" select="fn:string(.)"/>
@@ -7436,7 +7436,7 @@
 								</xsl:for-each>
 							</pat:IPCClassification>
 						</xsl:for-each>
-						<xsl:for-each select="classifications-ipcr">
+						<xsl:for-each select="//classifications-ipcr">
 							<pat:IPCRClassificationBag>
 								<xsl:for-each select="classification-ipcr">
 									<pat:IPCRClassification>
@@ -7520,7 +7520,7 @@
 								</xsl:for-each>
 							</pat:IPCRClassificationBag>
 						</xsl:for-each>
-						<xsl:for-each select="classification-national">
+						<xsl:for-each select="//classification-national">
 							<pat:NationalClassification>
 								<xsl:for-each select="@id">
 									<xsl:attribute name="com:id" select="fn:string(.)"/>
@@ -7554,7 +7554,7 @@
 								</xsl:for-each>
 							</pat:NationalClassification>
 						</xsl:for-each>
-						<xsl:for-each select="classification-locarno">
+						<xsl:for-each select="//classification-locarno">
 							<xsl:variable name="var8_edition" as="node()?" select="edition"/>
 							<com:LocarnoClassificationBag>
 								<xsl:for-each select="@id">
@@ -7638,7 +7638,7 @@
 							</pat:InventionTitle>
 						</xsl:for-each>
 					</pat:InventionTitleBag>
-					<xsl:for-each select="us-references-cited">
+					<xsl:for-each select="//us-references-cited">
 						<pat:ReferenceCitationBag>
 							<xsl:for-each select="us-citation">
 								<pat:ReferenceCitation>
@@ -7821,12 +7821,12 @@
 							</xsl:for-each>
 						</pat:ReferenceCitationBag>
 					</xsl:for-each>
-					<xsl:for-each select="number-of-claims">
+					<xsl:for-each select="//number-of-claims">
 						<pat:ClaimTotalQuantity>
 							<xsl:sequence select="xs:string(xs:integer(fn:string(.)))"/>
 						</pat:ClaimTotalQuantity>
 					</xsl:for-each>
-					<xsl:for-each select="field-of-search">
+					<xsl:for-each select="//field-of-search">
 						<pat:SearchField>
 							<pat:PatentClassificationBag>
 								<xsl:for-each select="classification-ipc">
@@ -7893,7 +7893,7 @@
 							</pat:PatentClassificationBag>
 						</pat:SearchField>
 					</xsl:for-each>
-					<xsl:for-each select="figures">
+					<xsl:for-each select="//figures">
 						<pat:FigureBag>
 							<xsl:for-each select="(./number-of-drawing-sheets/node())[fn:boolean(self::text())]">
 								<pat:DrawingSheetTotalQuantity>
@@ -7916,7 +7916,7 @@
 							</xsl:for-each>
 						</pat:FigureBag>
 					</xsl:for-each>
-					<xsl:for-each select="us-related-documents">
+					<xsl:for-each select="//us-related-documents">
 						<pat:RelatedDocumentBag>
 							<xsl:for-each select="addition">
 								<xsl:variable name="var19_relation" as="node()?" select="us-relation"/>
@@ -8207,8 +8207,8 @@
 							</xsl:for-each>
 						</pat:RelatedDocumentBag>
 					</xsl:for-each>
-					<xsl:variable name="var31_parties" as="node()?" select="us-parties"/>
-					<xsl:for-each select="assignees">
+					<xsl:variable name="var31_parties" as="node()?" select="//us-parties"/>
+					<xsl:for-each select="//assignees">
 						<xsl:variable name="var30_cur" as="node()?" select="."/>
 						<xsl:for-each select="$var63_cur/examiners">
 							<xsl:variable name="var29_resultof_ST__partiesToST__PartyBag" as="node()?">
@@ -8237,7 +8237,7 @@
 							</xsl:for-each>
 						</xsl:for-each>
 					</xsl:for-each>
-					<xsl:for-each select="pct-or-regional-filing-data">
+					<xsl:for-each select="//pct-or-regional-filing-data">
 						<xsl:variable name="var33_document_id" as="node()?" select="document-id"/>
 						<xsl:variable name="var32_country_as_string" as="xs:string" select="fn:string($var33_document_id/country)"/>
 						<pat:InternationalFilingData>
@@ -8271,7 +8271,7 @@
 							</xsl:for-each>
 						</pat:InternationalFilingData>
 					</xsl:for-each>
-					<xsl:for-each select="pct-or-regional-publishing-data">
+					<xsl:for-each select="//pct-or-regional-publishing-data">
 						<pat:InternationalPublishingData>
 							<xsl:variable name="var34_document_id" as="node()?" select="document-id"/>
 							<pat:PatentDocumentIdentification>
@@ -8319,7 +8319,7 @@
 							</xsl:for-each>
 						</pat:InternationalPublishingData>
 					</xsl:for-each>
-					<xsl:for-each select="patent-family">
+					<xsl:for-each select="//patent-family">
 						<pat:PatentFamily>
 							<xsl:for-each select="@id">
 								<xsl:attribute name="com:id" select="fn:string(.)"/>
@@ -8414,7 +8414,7 @@
 							</xsl:for-each>
 						</pat:PatentFamily>
 					</xsl:for-each>
-					<xsl:for-each select="bio-deposit">
+					<xsl:for-each select="//bio-deposit">
 						<xsl:variable name="var40_resultof_ST__bio_depositToST__BioDeposit_Bib" as="node()?">
 							<xsl:call-template name="WIPO:ST36bio-depositToST96BioDeposit-Bib">
 								<xsl:with-param name="biodeposit" as="node()?">
@@ -8430,7 +8430,7 @@
 							</com:BioDeposit>
 						</xsl:for-each>
 					</xsl:for-each>
-					<xsl:for-each select="plain-language-designation">
+					<xsl:for-each select="//plain-language-designation">
 						<pat:PlainLanguageDesignationText>
 							<xsl:for-each select="@lang">
 								<xsl:attribute name="com:languageCode" select="fn:string(.)"/>
@@ -8438,17 +8438,17 @@
 							<xsl:sequence select="fn:string(.)"/>
 						</pat:PlainLanguageDesignationText>
 					</xsl:for-each>
-					<xsl:for-each select="language-of-filing">
+					<xsl:for-each select="//language-of-filing">
 						<com:FilingLanguageCode>
 							<xsl:sequence select="fn:string(.)"/>
 						</com:FilingLanguageCode>
 					</xsl:for-each>
-					<xsl:for-each select="language-of-publication">
+					<xsl:for-each select="//language-of-publication">
 						<com:PublicationLanguageCode>
 							<xsl:sequence select="fn:string(.)"/>
 						</com:PublicationLanguageCode>
 					</xsl:for-each>
-					<xsl:for-each select="designation-of-states">
+					<xsl:for-each select="//designation-of-states">
 						<xsl:variable name="var47_designation_pct" as="node()?" select="designation-pct"/>
 						<xsl:variable name="var45_regional" as="node()*" select="$var47_designation_pct/regional"/>
 						<xsl:variable name="var46_national" as="node()?" select="$var47_designation_pct/national"/>
@@ -8531,19 +8531,19 @@
 							</xsl:for-each>
 						</pat:StateDesignation>
 					</xsl:for-each>
-					<xsl:for-each select="date-of-earliest-priority">
+					<xsl:for-each select="//date-of-earliest-priority">
 						<pat:EarliestPriorityApplication>
 							<pat:FilingDate>
 								<xsl:sequence select="()"/>
 							</pat:FilingDate>
 						</pat:EarliestPriorityApplication>
 					</xsl:for-each>
-					<xsl:for-each select="date-complete-specification-filed">
+					<xsl:for-each select="//date-complete-specification-filed">
 						<pat:CompleteSpecificationFilingDate>
 							<xsl:sequence select="()"/>
 						</pat:CompleteSpecificationFilingDate>
 					</xsl:for-each>
-					<xsl:for-each select="dates-of-public-availability">
+					<xsl:for-each select="//dates-of-public-availability">
 						<pat:PublicAvailabilityDataBag>
 							<xsl:for-each select="gazette-reference">
 								<xsl:variable name="var48_gazette_num" as="node()?" select="gazette-num"/>
@@ -8806,7 +8806,7 @@
 							</xsl:for-each>
 						</pat:PublicAvailabilityDataBag>
 					</xsl:for-each>
-					<xsl:for-each select="dates-rights-effective">
+					<xsl:for-each select="//dates-rights-effective">
 						<pat:RightsEffectiveDateBag>
 							<xsl:for-each select="request-for-examination">
 								<com:ExaminationRequestDate>
@@ -8860,7 +8860,7 @@
 							</xsl:for-each>
 						</pat:RightsEffectiveDateBag>
 					</xsl:for-each>
-					<xsl:for-each select="st50-republication">
+					<xsl:for-each select="//st50-republication">
 						<xsl:variable name="var62_modifications" as="node()?" select="modifications"/>
 						<pat:PatentDocumentRepublication>
 							<xsl:for-each select="republication-code">
@@ -8945,42 +8945,42 @@
 							</pat:GazetteReference>
 						</pat:PatentDocumentRepublication>
 					</xsl:for-each>
-					<xsl:for-each select="date-exhibition-filed">
+					<xsl:for-each select="//date-exhibition-filed">
 						<pat:ExhibitionFilingDate>
 							<xsl:sequence select="()"/>
 						</pat:ExhibitionFilingDate>
 					</xsl:for-each>
-					<xsl:for-each select="date-rights-reestablished">
+					<xsl:for-each select="//date-rights-reestablished">
 						<pat:RightsReestablishedDate>
 							<xsl:sequence select="()"/>
 						</pat:RightsReestablishedDate>
 					</xsl:for-each>
-					<xsl:for-each select="date-application-withdrawn-by-applicant">
+					<xsl:for-each select="//date-application-withdrawn-by-applicant">
 						<pat:ApplicationWithdrawnDate>
 							<xsl:sequence select="()"/>
 						</pat:ApplicationWithdrawnDate>
 					</xsl:for-each>
-					<xsl:for-each select="date-application-deemed-withdrawn">
+					<xsl:for-each select="//date-application-deemed-withdrawn">
 						<pat:ApplicationDeemedWithdrawnDate>
 							<xsl:sequence select="()"/>
 						</pat:ApplicationDeemedWithdrawnDate>
 					</xsl:for-each>
-					<xsl:for-each select="date-of-revocation">
+					<xsl:for-each select="//date-of-revocation">
 						<pat:PatentRevocationDate>
 							<xsl:sequence select="()"/>
 						</pat:PatentRevocationDate>
 					</xsl:for-each>
-					<xsl:for-each select="date-pct-article-22-39-fulfilled">
+					<xsl:for-each select="//date-pct-article-22-39-fulfilled">
 						<pat:PCTNationalPhaseEntryDate>
 							<xsl:sequence select="fn:string(date)"/>
 						</pat:PCTNationalPhaseEntryDate>
 					</xsl:for-each>
-					<xsl:for-each select="date-application-partially-withdrawn">
+					<xsl:for-each select="//date-application-partially-withdrawn">
 						<pat:ApplicationPartiallyWithdrawnDate>
 							<xsl:sequence select="fn:string(date)"/>
 						</pat:ApplicationPartiallyWithdrawnDate>
 					</xsl:for-each>
-					<xsl:for-each select="opposition-data">
+					<xsl:for-each select="//opposition-data">
 						<pat:OppositionData>
 							<xsl:sequence select="()"/>
 						</pat:OppositionData>
